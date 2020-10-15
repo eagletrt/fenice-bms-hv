@@ -1,0 +1,242 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP +TS
+D power-flag symbol
+K Power Flag Symbol
+$ENDCMP
+#
+$CMP -TS
+D power-flag symbol
+K Power Flag Symbol
+$ENDCMP
+#
+$CMP 4047
+D Monostable/Astable Multivibrator
+K CMOS monostable astable multivibrator
+F https://www.fairchildsemi.com/datasheets/CD/CD4047BC.pdf
+$ENDCMP
+#
+$CMP 4072
+D Dual 4 input OR gate
+K CMOS OR4
+F http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4071bms-72bms-75bms.pdf
+$ENDCMP
+#
+$CMP ACPL-M50L
+D Low Power, 1MBd Digital Optocoupler
+F https://4donline.ihs.com/images/VipMasterIC/IC/AVGO/AVGO-S-A0000031295/AVGO-S-A0000031295-1.pdf
+$ENDCMP
+#
+$CMP Crystal_ABS25
+D Four pin crystal, GND on pins 2 and 3
+K quartz ceramic resonator oscillator
+F ~
+$ENDCMP
+#
+$CMP Crystal_ABS25_Small
+D Four pin crystal, GND on pins 2 and 3, small symbol
+K quartz ceramic resonator oscillator
+F ~
+$ENDCMP
+#
+$CMP DPST_relay
+D Standex Meder DIP reed relay, DPST, Closing Contacts
+K Single Pole Reed Relay DPST
+F https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf
+$ENDCMP
+#
+$CMP FODM611
+D Open drain Logic Output Optocoupler
+F https://www.onsemi.com/pub/Collateral/FODM611-D.pdf
+$ENDCMP
+#
+$CMP HM2103
+D HM2103 Pulse Transformer with center tap
+F https://productfinder.pulseeng.com/doc_type/WEB301/doc_num/HM2103NL/doc_part/HM2103NL.pdf
+$ENDCMP
+#
+$CMP HTFS200-P
+D Isolated Current Transducer PCB Mount
+F https://www.lem.com/sites/default/files/products_datasheets/htfs_200_800-p.pdf
+$ENDCMP
+#
+$CMP ISOW7841
+D ISOW7841 Isolator for SPI with Power
+F http://www.ti.com/lit/ds/symlink/isow7841.pdf
+$ENDCMP
+#
+$CMP KT12-1A
+D KT Series Reed Relay
+F https://standexelectronics.com/viewer/pdfjs/web/viewer.php?file=https%3A%2F%2Fstandexelectronics.com%2Fwp-content%2Fuploads%2F2015%2F03%2FKT_V03.pdf
+$ENDCMP
+#
+$CMP LP2989
+D LP29289 Fixed 500mA Low Noise LDO
+F http://www.ti.com/lit/ds/symlink/lp2989.pdf
+$ENDCMP
+#
+$CMP LR8
+D High-Input Voltage, Adjustable, 3-Terminal, Linear Regulator
+F https://www.microchip.com/wwwproducts/en/LR8
+$ENDCMP
+#
+$CMP LT6015
+D Rail-to-Rail Dual Precision OpAmp
+F www.analog.com/media/en/technical-documentation/data-sheets/6258960fa.pdf
+$ENDCMP
+#
+$CMP LTC1865L
+D LTC1865L Dual channel SPI ADC 3 V supply
+F http://www.analog.com/media/en/technical-documentation/data-sheets/18645lfs.pdf
+$ENDCMP
+#
+$CMP LTC6259
+D Rail-to-Rail Dual Precision OpAmp
+F www.analog.com/media/en/technical-documentation/data-sheets/6258960fa.pdf
+$ENDCMP
+#
+$CMP LTC6820
+D LTC6820 IsoSPI Communication Interface IC
+K IsoSPI, linear, isolated communication
+F http://www.analog.com/media/en/technical-documentation/data-sheets/6820fb.pdf
+$ENDCMP
+#
+$CMP M24M02
+D M24M02 EEPROM I2C
+F http://www.st.com/resource/en/datasheet/m24m02-dr.pdf
+$ENDCMP
+#
+$CMP M95M56-WMN6P
+D SPI EEPROM, 256Kb (32K x 8), No Identification Page, 2.5 to 5.5V, SO8
+K SPI EEPROM
+F http://www.st.com/content/ccc/resource/technical/document/datasheet/9d/75/f0/3e/76/00/4c/0b/CD00103810.pdf/files/CD00103810.pdf/jcr:content/translations/en.CD00103810.pdf
+$ENDCMP
+#
+$CMP MAX14878AWA+
+D Isolated CAN Transceiver, SOP-8
+K CAN Isolated
+F https://datasheets.maximintegrated.com/en/ds/MAX14878-MAX14880.pdf
+$ENDCMP
+#
+$CMP MAX16053
+D Adjustable Voltage Supervisor with PP Output
+F https://www.mouser.it/datasheet/2/256/MAX16052-MAX16053-97702.pdf
+$ENDCMP
+#
+$CMP MAX6071_2048VREF
+F https://www.mouser.it/ProductDetail/Maxim-Integrated/MAX6071AAUT21%2bT?qs=sGAEpiMZZMuBck1X%252B7j9fNe77nYNWcLEUXwGdPJpM9o%3D
+$ENDCMP
+#
+$CMP MAX8515A
+D Wide-Input 0.6V Shunt Regulator
+F https://datasheets.maximintegrated.com/en/ds/MAX8515-MAX8515A.pdf
+$ENDCMP
+#
+$CMP MC74VHC1G125
+D high speed CMOS noninverting 3−state buffer
+F http://www.onsemi.com/pub/Collateral/MC74VHC1G125-D.PDF
+$ENDCMP
+#
+$CMP MCP2562
+D MCP2562 CAN Transceiver with VIO
+F http://ww1.microchip.com/downloads/en/DeviceDoc/20005167C.pdf
+$ENDCMP
+#
+$CMP MCP6001x-LT
+D 1 MHz, Low-Power Op Amp, SC-70-5
+K single opamp
+F http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf
+$ENDCMP
+#
+$CMP MCP6561x-LT
+D 1.8V Low-Power Push-Pull Output Comparator, SC-70-5
+K single comparator
+F http://ww1.microchip.com/downloads/en/DeviceDoc/22139C.pdf
+$ENDCMP
+#
+$CMP MMBTA13LT1G
+D Darlington Transistors 300mA 30V NPN
+K NPN Transistor
+F https://www.onsemi.com/pub/Collateral/MMBTA13LT1-D.PDF
+$ENDCMP
+#
+$CMP NCV5501
+D 500mA LDO Voltage Regulator
+K Voltage regulator
+F https://www.onsemi.com/pub/Collateral/NCP5500-D.PDF
+$ENDCMP
+#
+$CMP NX1029X
+D Complementary N/P Channel MOSFET
+F https://assets.nexperia.com/documents/data-sheet/NX1029X.pdf
+$ENDCMP
+#
+$CMP PDS1-S5-S12-M
+D Isolated DC/DC Converters 1W 4.5-5.5Vin 12Vout 84mA unreg Iso SMT
+F https://www.cui.com/product/resource/pds1-m.pdf
+$ENDCMP
+#
+$CMP REF2940
+D 4.096 Precision Series Voltage Reference
+F www.ti.com/lit/ds/symlink/ref2940.pdf
+$ENDCMP
+#
+$CMP REF3433
+D High precision, Low drift 3.3 V reference
+F http://www.ti.com/lit/ds/symlink/ref3433.pdf
+$ENDCMP
+#
+$CMP R_power_backplane
+D Resistor
+K R res resistor
+F ~
+$ENDCMP
+#
+$CMP SN74LVC1G123
+D Single Channel Monostable Multitivibrator
+F http://www.ti.com/lit/ds/symlink/sn74lvc1g123.pdf
+$ENDCMP
+#
+$CMP STM32F334K8
+D STM32F334 LQFP32 MCU
+F www.st.com/content/ccc/resource/technical/document/datasheet/d1/cd/3d/18/a2/2c/4e/d0/DM00097745.pdf/files/DM00097745.pdf/jcr:content/translations/en.DM00097745.pdf
+$ENDCMP
+#
+$CMP STM32G431
+D STM32G431 LQFP32 MCU
+F https://www.st.com/en/microcontrollers-microprocessors/stm32g431k8.html
+$ENDCMP
+#
+$CMP SW_Push
+D Push button switch, generic, two pins
+K switch normally-open pushbutton push-button
+$ENDCMP
+#
+$CMP TL331
+D Rail-to-Rail Dual Precision OpAmp
+F http://www.ti.com/lit/ds/symlink/tl331.pdf
+$ENDCMP
+#
+$CMP TPS3700
+D Window Comparator
+F http://www.ti.com/lit/ds/symlink/tps3700.pdf
+$ENDCMP
+#
+$CMP TS391I
+D Rail-to-Rail Dual Precision OpAmp
+F www.analog.com/media/en/technical-documentation/data-sheets/6258960fa.pdf
+$ENDCMP
+#
+$CMP TS881xCx
+D Rail-to-rail 0.9 V nanopower comparator, SC-70-5
+K single comparator
+F http://www.st.com/content/ccc/resource/technical/document/datasheet/a2/60/3e/5d/b2/c1/4a/e9/DM00057901.pdf/files/DM00057901.pdf/jcr:content/translations/en.DM00057901.pdf
+$ENDCMP
+#
+$CMP USBLC6-2SC6
+D Bidirectional ESD Protection Diode, SOT-23-6
+K usb ethernet
+F http://www2.st.com/resource/en/datasheet/CD00050750.pdf
+$ENDCMP
+#
+#End Doc Library

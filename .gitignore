@@ -4,8 +4,13 @@
 *.tsv
 *.xml
 # backup files
- *.bak
+*.bak
+*.sch-bak
+
  
 # old files
 dont_delete_me_yet/
 marked_as_bak/
+related_projects/
+CUBEMIX_CONFIG/
+
