@@ -1,6 +1,13 @@
 # MAIN BOARD
 Formula SAE - unitn
-### Repo structure
+
+## Authors
+Latest first:
+- Filippo Volpe
+- Franco Tabarelli
+- Not clear
+
+## Repo structure
 ```
 MainBoard
 |-- MainBoard.pro           # Project file

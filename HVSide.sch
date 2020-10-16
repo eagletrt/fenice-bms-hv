@@ -68,7 +68,7 @@ F 3 "" H 5350 1000 50  0001 C CNN
 	1    5350 1000
 	0    1    1    0   
 $EndComp
-Text Notes 7600 600  0    50   ~ 0
+Text Notes 7600 600  0    50   ~ 10
 UART ISOLATED PACK VOLTAGE ADC
 $Comp
 L MainBoard:+TS #PWR0185
@@ -162,7 +162,7 @@ Wire Notes Line
 	11185 3340 11185 2090
 Wire Notes Line
 	6900 2090 6900 3340
-Text Notes 6900 2050 0    59   ~ 0
+Text Notes 6900 2050 0    59   ~ 12
 ISOLATED VOLTAGE SOURCES
 Wire Notes Line
 	6900 3340 11185 3340
@@ -273,7 +273,7 @@ Text Notes 3300 3100 2    50   ~ 0
 Prominent\nIndicator
 Wire Wire Line
 	7000 4100 7250 4100
-Text Notes 6000 3350 0    50   ~ 0
+Text Notes 6000 3350 0    50   ~ 10
 HV ADC BUFFERS
 $Comp
 L power:-BATT #PWR0201
@@ -679,8 +679,8 @@ F 3 "" H 10650 2850 50  0001 C CNN
 	1    10650 2850
 	-1   0    0    1   
 $EndComp
-Text Notes 750  6100 0    50   ~ 0
-PRECHARGE STATUS
+Text Notes 500  7050 0    50   Italic 0
+PRECHARGE_STATUS = TS_exceed_60Vdc && PRECHARGE_ON\n
 Text HLabel 1250 6350 0    50   Input ~ 0
 PRECHARGE_ON
 Wire Notes Line
@@ -1545,7 +1545,7 @@ Wire Notes Line
 	1300 2650 1300 4150
 Wire Notes Line
 	4050 1350 600  1350
-Text Notes 600  1350 0    50   ~ 0
+Text Notes 600  1350 0    50   ~ 10
 PROMINENT INDICTOR
 $Comp
 L power:GND #PWR?

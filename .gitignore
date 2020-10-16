@@ -6,6 +6,7 @@
 # backup files
 *.bak
 *.sch-bak
+*.kicad_pcb-bak
 
  
 # old files
