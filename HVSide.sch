@@ -401,18 +401,6 @@ Wire Wire Line
 Connection ~ 6850 3900
 Wire Wire Line
 	6850 3900 6850 3950
-$Comp
-L MainBoard:LTC6259 U24
-U 1 1 5E18413A
-P 7500 4000
-F 0 "U24" H 7550 4150 50  0000 L CNN
-F 1 "LTC6259" H 7550 3850 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:TSOT-23-8" H 7550 3750 50  0001 L CNN
-F 3 "www.analog.com/media/en/technical-documentation/data-sheets/6258960fa.pdf" H 7500 3950 50  0001 C CNN
-F 4 "https://www.mouser.it/ProductDetail/Analog-Devices/LTC6259ITS8TRPBF?qs=u4fy%2FsgLU9NqjanGCTJjzA%3D%3D" H 7500 4000 50  0001 C CNN "Mouser"
-	1    7500 4000
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8150 4000 7850 4000
 Text Label 8150 4000 2    50   ~ 0
@@ -1022,29 +1010,6 @@ Text Label 9950 4300 2    50   ~ 0
 TSV
 Wire Wire Line
 	9650 4300 9950 4300
-$Comp
-L power:-BATT #PWR0206
-U 1 1 5E1CC103
-P 9250 4600
-F 0 "#PWR0206" H 9250 4450 50  0001 C CNN
-F 1 "-BATT" V 9250 4850 50  0000 C CNN
-F 2 "" H 9250 4600 50  0001 C CNN
-F 3 "" H 9250 4600 50  0001 C CNN
-	1    9250 4600
-	-1   0    0    1   
-$EndComp
-$Comp
-L MainBoard:LTC6259 U24
-U 2 1 5E184D16
-P 9300 4300
-F 0 "U24" H 9350 4450 50  0000 L CNN
-F 1 "LTC6259" H 9350 4150 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:TSOT-23-8" H 9350 4050 50  0001 L CNN
-F 3 "www.analog.com/media/en/technical-documentation/data-sheets/6258960fa.pdf" H 9300 4250 50  0001 C CNN
-F 4 "https://www.mouser.it/ProductDetail/Analog-Devices/LTC6259ITS8TRPBF?qs=u4fy%2FsgLU9NqjanGCTJjzA%3D%3D" H 9300 4300 50  0001 C CNN "Mouser"
-	2    9300 4300
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8700 4200 8750 4200
 Wire Wire Line
@@ -1311,11 +1276,7 @@ Wire Wire Line
 	8500 5600 8550 5600
 NoConn ~ 9300 1050
 Wire Wire Line
-	9250 4000 9250 3650
-Wire Wire Line
 	7450 3450 7450 3700
-Text Label 9250 3650 3    50   ~ 0
-5VISO
 Text Label 7450 3450 3    50   ~ 0
 5VISO
 Wire Wire Line
@@ -1864,4 +1825,37 @@ Wire Wire Line
 Wire Wire Line
 	3450 6400 3650 6400
 Connection ~ 3450 6400
+$Comp
+L Amplifier_Operational:LM358 U24
+U 1 1 5FD8D2B7
+P 7550 4000
+F 0 "U24" H 7550 4367 50  0000 C CNN
+F 1 "LM358" H 7550 4276 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TSOT-23-8" H 7550 4000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 7550 4000 50  0001 C CNN
+	1    7550 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LM358 U24
+U 2 1 5FD922D9
+P 9350 4300
+F 0 "U24" H 9350 4667 50  0000 C CNN
+F 1 "LM358" H 9350 4576 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TSOT-23-8" H 9350 4300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 9350 4300 50  0001 C CNN
+	2    9350 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LM358 U24
+U 3 1 5FD954EF
+P 7550 4000
+F 0 "U24" H 7508 4046 50  0000 L CNN
+F 1 "LM358" H 7508 3955 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:TSOT-23-8" H 7550 4000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 7550 4000 50  0001 C CNN
+	3    7550 4000
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

@@ -330,19 +330,6 @@ F 3 "~" H 3000 2450 50  0001 C CNN
 $EndComp
 Text Notes 2750 2350 0    50   ~ 0
 1%
-$Comp
-L power:GND #PWR?
-U 1 1 5DF87236
-P 2150 2500
-AR Path="/5DF87236" Ref="#PWR?"  Part="1" 
-AR Path="/5DF398FB/5DF87236" Ref="#PWR055"  Part="1" 
-F 0 "#PWR055" H 2150 2250 50  0001 C CNN
-F 1 "GND" H 2150 2350 50  0000 C CNN
-F 2 "" H 2150 2500 50  0001 C CNN
-F 3 "" H 2150 2500 50  0001 C CNN
-	1    2150 2500
-	1    0    0    -1  
-$EndComp
 Text Label 3350 2200 2    50   ~ 0
 Ip_high
 Wire Wire Line
@@ -362,19 +349,6 @@ F 1 "GND" H 3000 2450 50  0000 C CNN
 F 2 "" H 3000 2600 50  0001 C CNN
 F 3 "" H 3000 2600 50  0001 C CNN
 	1    3000 2600
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR?
-U 1 1 5DF87246
-P 2150 1900
-AR Path="/5DF87246" Ref="#PWR?"  Part="1" 
-AR Path="/5DF398FB/5DF87246" Ref="#PWR054"  Part="1" 
-F 0 "#PWR054" H 2150 1750 50  0001 C CNN
-F 1 "+5V" V 2150 2000 39  0000 L CNN
-F 2 "" H 2150 1900 50  0001 C CNN
-F 3 "" H 2150 1900 50  0001 C CNN
-	1    2150 1900
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -640,21 +614,6 @@ $EndComp
 Text Label 3300 1050 2    50   ~ 0
 Ip_low
 $Comp
-L MainBoard:LTC6259 U?
-U 1 1 5DF873B7
-P 2050 1050
-AR Path="/5B50ED38/5DF873B7" Ref="U?"  Part="1" 
-AR Path="/5DF873B7" Ref="U?"  Part="1" 
-AR Path="/5DF398FB/5DF873B7" Ref="U6"  Part="1" 
-F 0 "U6" H 2100 1200 50  0000 L CNN
-F 1 "LTC6259" H 2100 900 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:TSOT-23-8" H 2100 800 50  0001 L CNN
-F 3 "www.analog.com/media/en/technical-documentation/data-sheets/6258960fa.pdf" H 2050 1000 50  0001 C CNN
-F 4 "https://www.mouser.it/ProductDetail/Analog-Devices/LTC6259ITS8TRPBF?qs=u4fy%2FsgLU9NqjanGCTJjzA%3D%3D" H 2050 1050 50  0001 C CNN "Mouser"
-	1    2050 1050
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R?
 U 1 1 5DF873BD
 P 2950 1300
@@ -808,21 +767,6 @@ F 1 "4.7uF" V 10050 3450 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 9988 3300 50  0001 C CNN
 F 3 "~" H 9950 3450 50  0001 C CNN
 	1    9950 3450
-	1    0    0    -1  
-$EndComp
-$Comp
-L MainBoard:LTC6259 U?
-U 2 1 5DF87478
-P 2200 2200
-AR Path="/5B50ED38/5DF87478" Ref="U?"  Part="2" 
-AR Path="/5DF87478" Ref="U?"  Part="2" 
-AR Path="/5DF398FB/5DF87478" Ref="U6"  Part="2" 
-F 0 "U6" H 2250 2350 50  0000 L CNN
-F 1 "LTC6259" H 2250 2050 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:TSOT-23-8" H 2250 1950 50  0001 L CNN
-F 3 "www.analog.com/media/en/technical-documentation/data-sheets/6258960fa.pdf" H 2200 2150 50  0001 C CNN
-F 4 "https://www.mouser.it/ProductDetail/Analog-Devices/LTC6259ITS8TRPBF?qs=u4fy%2FsgLU9NqjanGCTJjzA%3D%3D" H 2200 2200 50  0001 C CNN "Mouser"
-	2    2200 2200
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1971,145 +1915,94 @@ FB_OVER_60V_12V
 Text Label 7550 2200 0    50   ~ 0
 A3
 Wire Wire Line
-	3750 7400 4500 7400
+	3900 6050 4650 6050
 Wire Wire Line
-	3750 7300 4500 7300
+	3900 6150 4650 6150
 Wire Wire Line
-	3750 7200 4500 7200
+	3900 6250 4650 6250
 Wire Wire Line
-	4500 7100 3750 7100
-Text Label 3750 7200 0    50   ~ 0
+	4650 6350 3900 6350
+Text Label 3900 6250 0    50   ~ 0
 FB_AIR-
 Wire Wire Line
-	3750 7000 4500 7000
+	3900 6450 4650 6450
 Wire Wire Line
-	3750 6900 4500 6900
+	3900 6550 4650 6550
 Wire Wire Line
-	4500 6800 3750 6800
+	4650 6650 3900 6650
 Wire Wire Line
-	3750 6700 4500 6700
+	3900 6750 4650 6750
 Wire Wire Line
-	5200 6900 5950 6900
+	4650 7150 3900 7150
 Wire Wire Line
-	5950 6800 5200 6800
+	3900 7050 4650 7050
 Wire Wire Line
-	5200 6700 5950 6700
+	4650 6950 3900 6950
 Wire Wire Line
-	5950 6600 5200 6600
-Text Label 3750 7400 0    50   ~ 0
+	3900 6850 4650 6850
+Text Label 3900 6050 0    50   ~ 0
 FB_TSAL_OVER60V
-Text Label 3750 7300 0    50   ~ 0
+Text Label 3900 6150 0    50   ~ 0
 FB_AIR+
-Text Label 3750 7100 0    50   ~ 0
+Text Label 3900 6350 0    50   ~ 0
 FB_PC_END_12V
-Text Label 3750 7000 0    50   ~ 0
+Text Label 3900 6450 0    50   ~ 0
 FB_RELAY_LV
-Text Label 3750 6900 0    50   ~ 0
+Text Label 3900 6550 0    50   ~ 0
 FB_IMD_SD
-Text Label 3750 6800 0    50   ~ 0
+Text Label 3900 6650 0    50   ~ 0
 FB_BMS_SD
-Text Label 3750 6700 0    50   ~ 0
+Text Label 3900 6750 0    50   ~ 0
 FB_TS_ON_12V
-Text Label 5950 6900 2    50   ~ 0
+Text Label 3900 7150 0    50   ~ 0
 FB_LATCH_IMD
-Text Label 5950 6800 2    50   ~ 0
+Text Label 3900 7050 0    50   ~ 0
 FB_LATCH_BMS
-Text Label 5950 6700 2    50   ~ 0
+Text Label 3900 6950 0    50   ~ 0
 FB_IMD_FAULT
-Text Label 5950 6600 2    50   ~ 0
+Text Label 3900 6850 0    50   ~ 0
 FB_BMS_12V
-Text Label 5950 6400 2    50   ~ 0
+Text Label 6400 6250 2    50   ~ 0
 ANALOG_DATA
 Wire Wire Line
-	5200 6400 5950 6400
-NoConn ~ 4500 6600
-NoConn ~ 4500 6500
-NoConn ~ 4500 7600
-Text Label 4300 7700 0    50   ~ 0
-A3
-$Comp
-L MainBoard:ADG706 U17
-U 1 1 5E60CFA9
-P 4900 7050
-F 0 "U17" H 4850 7925 50  0000 C CNN
-F 1 "ADG706" H 4850 7834 50  0000 C CNN
-F 2 "Package_SO:TSSOP-28_4.4x9.7mm_P0.65mm" H 4850 7800 50  0001 C CNN
-F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/ADG706_707.pdf" H 4850 7800 50  0001 C CNN
-F 4 "https://www.mouser.it/ProductDetail/Analog-Devices/ADG706BRUZ?qs=BpaRKvA4VqH2cYZ2xwqUpA%3D%3D" H 4900 7050 50  0001 C CNN "Mouser"
-	1    4900 7050
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3.3V #PWR?
-U 1 1 5E67EDDF
-P 5200 7400
-AR Path="/5E67EDDF" Ref="#PWR?"  Part="1" 
-AR Path="/5DF398FB/5E67EDDF" Ref="#PWR0173"  Part="1" 
-F 0 "#PWR0173" H 5200 7250 50  0001 C CNN
-F 1 "+3.3V" V 5175 7625 50  0000 C CNN
-F 2 "" H 5200 7400 50  0001 C CNN
-F 3 "" H 5200 7400 50  0001 C CNN
-	1    5200 7400
-	0    1    1    0   
-$EndComp
+	5650 6250 6400 6250
 $Comp
 L power:+3.3V #PWR?
 U 1 1 5E67E1D9
-P 4500 6400
+P 5150 5750
 AR Path="/5E67E1D9" Ref="#PWR?"  Part="1" 
 AR Path="/5DF398FB/5E67E1D9" Ref="#PWR0134"  Part="1" 
-F 0 "#PWR0134" H 4500 6250 50  0001 C CNN
-F 1 "+3.3V" V 4500 6550 50  0000 L CNN
-F 2 "" H 4500 6400 50  0001 C CNN
-F 3 "" H 4500 6400 50  0001 C CNN
-	1    4500 6400
-	0    -1   -1   0   
+F 0 "#PWR0134" H 5150 5600 50  0001 C CNN
+F 1 "+3.3V" H 5050 5900 50  0000 L CNN
+F 2 "" H 5150 5750 50  0001 C CNN
+F 3 "" H 5150 5750 50  0001 C CNN
+	1    5150 5750
+	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5E67D91C
-P 4500 7500
+P 5150 7850
 AR Path="/5E67D91C" Ref="#PWR?"  Part="1" 
 AR Path="/5DF398FB/5E67D91C" Ref="#PWR0133"  Part="1" 
-F 0 "#PWR0133" H 4500 7250 50  0001 C CNN
-F 1 "GND" V 4500 7400 50  0000 R CNN
-F 2 "" H 4500 7500 50  0001 C CNN
-F 3 "" H 4500 7500 50  0001 C CNN
-	1    4500 7500
-	0    1    1    0   
+F 0 "#PWR0133" H 5150 7600 50  0001 C CNN
+F 1 "GND" H 5200 7700 50  0000 R CNN
+F 2 "" H 5150 7850 50  0001 C CNN
+F 3 "" H 5150 7850 50  0001 C CNN
+	1    5150 7850
+	1    0    0    -1  
 $EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5E6730C8
-P 5200 6500
-AR Path="/5E6730C8" Ref="#PWR?"  Part="1" 
-AR Path="/5DF398FB/5E6730C8" Ref="#PWR0132"  Part="1" 
-F 0 "#PWR0132" H 5200 6250 50  0001 C CNN
-F 1 "GND" V 5200 6400 50  0000 R CNN
-F 2 "" H 5200 6500 50  0001 C CNN
-F 3 "" H 5200 6500 50  0001 C CNN
-	1    5200 6500
-	0    -1   -1   0   
-$EndComp
-Text Label 5550 7600 2    50   ~ 0
-A1
 Wire Wire Line
-	5200 7600 5550 7600
-Text Label 5550 7700 2    50   ~ 0
-A2
-Text Label 5550 7500 2    50   ~ 0
-A0
-Wire Wire Line
-	5200 7000 5950 7000
-Text Label 5950 7000 2    50   ~ 0
+	4650 7250 3900 7250
+Text Label 3900 7250 0    50   ~ 0
 FB_FROM_SD
 Wire Wire Line
-	5200 7200 5950 7200
-Text Label 5950 7200 2    50   ~ 0
+	4650 7450 3900 7450
+Text Label 3900 7450 0    50   ~ 0
 FB_FROM_TSMS
 Wire Wire Line
-	5200 7100 5950 7100
-Text Label 5950 7100 2    50   ~ 0
+	4650 7350 3900 7350
+Text Label 3900 7350 0    50   ~ 0
 FB_TO_TSMS
 $Comp
 L Device:C_Small C?
@@ -2153,40 +2046,40 @@ $EndComp
 $Comp
 L Device:C_Small C?
 U 1 1 5EFDCC0B
-P 3550 7050
+P 3300 7050
 AR Path="/5EFDCC0B" Ref="C?"  Part="1" 
 AR Path="/5DF398FB/5EFDCC0B" Ref="C29"  Part="1" 
-F 0 "C29" V 3450 7050 50  0000 C CNN
-F 1 "100nF" V 3650 7050 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 3588 6900 50  0001 C CNN
-F 3 "~" H 3550 7050 50  0001 C CNN
-	1    3550 7050
+F 0 "C29" V 3200 7050 50  0000 C CNN
+F 1 "100nF" V 3400 7050 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3338 6900 50  0001 C CNN
+F 3 "~" H 3300 7050 50  0001 C CNN
+	1    3300 7050
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+3.3V #PWR?
 U 1 1 5EFDCC11
-P 3550 6950
+P 3300 6950
 AR Path="/5EFDCC11" Ref="#PWR?"  Part="1" 
 AR Path="/5DF398FB/5EFDCC11" Ref="#PWR0165"  Part="1" 
-F 0 "#PWR0165" H 3550 6800 50  0001 C CNN
-F 1 "+3.3V" H 3550 7100 50  0000 C CNN
-F 2 "" H 3550 6950 50  0001 C CNN
-F 3 "" H 3550 6950 50  0001 C CNN
-	1    3550 6950
+F 0 "#PWR0165" H 3300 6800 50  0001 C CNN
+F 1 "+3.3V" H 3300 7100 50  0000 C CNN
+F 2 "" H 3300 6950 50  0001 C CNN
+F 3 "" H 3300 6950 50  0001 C CNN
+	1    3300 6950
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5EFDCC17
-P 3550 7150
+P 3300 7150
 AR Path="/5EFDCC17" Ref="#PWR?"  Part="1" 
 AR Path="/5DF398FB/5EFDCC17" Ref="#PWR0168"  Part="1" 
-F 0 "#PWR0168" H 3550 6900 50  0001 C CNN
-F 1 "GND" V 3550 7000 50  0000 R CNN
-F 2 "" H 3550 7150 50  0001 C CNN
-F 3 "" H 3550 7150 50  0001 C CNN
-	1    3550 7150
+F 0 "#PWR0168" H 3300 6900 50  0001 C CNN
+F 1 "GND" V 3300 7000 50  0000 R CNN
+F 2 "" H 3300 7150 50  0001 C CNN
+F 3 "" H 3300 7150 50  0001 C CNN
+	1    3300 7150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -2204,12 +2097,6 @@ F 3 "" H 5150 1700 50  0001 C CNN
 	1    5150 1700
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	5550 7500 5200 7500
-Wire Wire Line
-	5200 7700 5550 7700
-Wire Wire Line
-	4500 7700 4300 7700
 Text Label 2350 6250 1    50   ~ 0
 FB_TS_ON_12V
 Text Label 1950 6150 1    50   ~ 0
@@ -2405,18 +2292,16 @@ $EndComp
 $Comp
 L power:+3.3V #PWR?
 U 1 1 5E66C31A
-P 6300 7250
+P 4200 7700
 AR Path="/5E66C31A" Ref="#PWR?"  Part="1" 
 AR Path="/5DF398FB/5E66C31A" Ref="#PWR0212"  Part="1" 
-F 0 "#PWR0212" H 6300 7100 50  0001 C CNN
-F 1 "+3.3V" H 6300 7400 50  0000 C CNN
-F 2 "" H 6300 7250 50  0001 C CNN
-F 3 "" H 6300 7250 50  0001 C CNN
-	1    6300 7250
-	1    0    0    -1  
+F 0 "#PWR0212" H 4200 7550 50  0001 C CNN
+F 1 "+3.3V" V 4200 7900 50  0000 C CNN
+F 2 "" H 4200 7700 50  0001 C CNN
+F 3 "" H 4200 7700 50  0001 C CNN
+	1    4200 7700
+	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	5200 7300 5950 7300
 Wire Wire Line
 	3200 4550 2350 4550
 Wire Wire Line
@@ -2730,25 +2615,21 @@ Text Label 6800 6400 3    50   ~ 0
 A3
 Wire Wire Line
 	6800 6600 6800 6400
-Text Label 5950 7300 2    50   ~ 0
+Text Label 3900 7550 0    50   ~ 0
 CHECK_MUX
 $Comp
 L Device:R R?
 U 1 1 5F63FE54
-P 6100 7300
+P 4350 7700
 AR Path="/5F63FE54" Ref="R?"  Part="1" 
 AR Path="/5DF398FB/5F63FE54" Ref="R30"  Part="1" 
-F 0 "R30" V 6000 7300 50  0000 C CNN
-F 1 "100K" V 6100 7300 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 6030 7300 50  0001 C CNN
-F 3 "~" H 6100 7300 50  0001 C CNN
-	1    6100 7300
-	0    -1   -1   0   
+F 0 "R30" V 4250 7700 50  0000 C CNN
+F 1 "100K" V 4350 7700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4280 7700 50  0001 C CNN
+F 3 "~" H 4350 7700 50  0001 C CNN
+	1    4350 7700
+	0    1    1    0   
 $EndComp
-Wire Wire Line
-	6300 7250 6300 7300
-Wire Wire Line
-	6300 7300 6250 7300
 NoConn ~ 2350 7500
 NoConn ~ 1950 7500
 Text Label 9000 5800 0    50   ~ 0
@@ -2758,66 +2639,56 @@ SCK_2
 Text Label 9000 5400 0    50   ~ 0
 MOSI_2
 Wire Wire Line
-	5950 5150 6400 5150
-Text Label 6400 5150 2    50   ~ 0
+	6100 5000 6550 5000
+Text Label 6550 5000 2    50   ~ 0
 SPI2_SCK
-Text Label 6400 5350 2    50   ~ 0
+Text Label 6550 5200 2    50   ~ 0
 SPI2_MOSI
 Wire Wire Line
-	5950 5350 6400 5350
+	6100 5200 6550 5200
 Wire Wire Line
-	5550 5250 5000 5250
+	5700 5100 5150 5100
 Wire Wire Line
-	5950 5250 6400 5250
-Text Label 6400 5250 2    50   ~ 0
+	6100 5100 6550 5100
+Text Label 6550 5100 2    50   ~ 0
 SPI2_MISO
 Wire Wire Line
-	5000 5150 5550 5150
-NoConn ~ 5950 5450
-NoConn ~ 5550 5450
+	5150 5000 5700 5000
+NoConn ~ 6100 5300
+NoConn ~ 5700 5300
 $Comp
 L Device:R_Pack04 RN?
 U 1 1 5E9347EB
-P 5750 5350
+P 5900 5200
 AR Path="/5B045B0D/5E9347EB" Ref="RN?"  Part="1" 
 AR Path="/5DF398FB/5E9347EB" Ref="RN14"  Part="1" 
-F 0 "RN14" V 5950 5250 50  0000 L CNN
-F 1 "22" V 5450 5350 50  0000 C CNN
-F 2 "MainBoard:R_network_4x1_bourns_CAY16" V 6025 5350 50  0001 C CNN
-F 3 "https://www.mouser.it/ProductDetail/Bourns/CAY16-104J4LF?qs=sGAEpiMZZMvrmc6UYKmaNeZNuQlTB3CaDlLE%2FtUkIfI%3D" H 5750 5350 50  0001 C CNN
-F 4 "https://www.mouser.it/ProductDetail/Bourns/CAY16-220J4LF?qs=%2Fha2pyFaduiZ0L4sMv63mGf5pBIBK%2F8idqGziMhgT6dg8LEGGaORxA%3D%3D" H 5750 5350 50  0001 C CNN "Mouser"
-	1    5750 5350
+F 0 "RN14" V 6100 5100 50  0000 L CNN
+F 1 "22" V 5600 5200 50  0000 C CNN
+F 2 "MainBoard:R_network_4x1_bourns_CAY16" V 6175 5200 50  0001 C CNN
+F 3 "https://www.mouser.it/ProductDetail/Bourns/CAY16-104J4LF?qs=sGAEpiMZZMvrmc6UYKmaNeZNuQlTB3CaDlLE%2FtUkIfI%3D" H 5900 5200 50  0001 C CNN
+F 4 "https://www.mouser.it/ProductDetail/Bourns/CAY16-220J4LF?qs=%2Fha2pyFaduiZ0L4sMv63mGf5pBIBK%2F8idqGziMhgT6dg8LEGGaORxA%3D%3D" H 5900 5200 50  0001 C CNN "Mouser"
+	1    5900 5200
 	0    -1   1    0   
 $EndComp
 Wire Wire Line
-	5550 5350 5000 5350
+	5700 5200 5150 5200
 Text Label 8550 5600 2    50   ~ 0
 SCK_2
 Text Label 8550 5700 2    50   ~ 0
 MOSI_2
 Text Label 8550 5800 2    50   ~ 0
 MISO_2
-Text Label 5000 5350 0    50   ~ 0
+Text Label 5150 5200 0    50   ~ 0
 MOSI_2
-Text Label 5000 5250 0    50   ~ 0
+Text Label 5150 5100 0    50   ~ 0
 MISO_2
-Text Label 5000 5150 0    50   ~ 0
+Text Label 5150 5000 0    50   ~ 0
 SCK_2
 Wire Notes Line
 	3600 500  3600 2800
 Wire Notes Line
 	3600 2800 550  2800
-Wire Notes Line
-	4200 3800 4200 6000
-Wire Notes Line
-	4200 6000 5450 6000
-Wire Notes Line
-	5450 6000 5450 6300
-Wire Notes Line
-	5450 6300 6950 6300
-Wire Notes Line
-	6950 6300 6950 6600
-Text Notes 3600 6150 0    50   ~ 10
+Text Notes 4100 5450 0    50   ~ 10
 ANALOG MULTIPLEXING
 Text Notes 600  5700 0    50   ~ 0
 Step down
@@ -2842,7 +2713,105 @@ Wire Notes Line
 Text Notes 3550 3450 0    50   ~ 0
 selectable between can and spi
 Wire Notes Line
-	4900 4800 4900 5950
-Wire Notes Line
 	4900 4800 11200 4800
+$Comp
+L 74xx:CD74HC4067SM U17
+U 1 1 5FB800D6
+P 5150 6750
+F 0 "U17" H 4900 7650 50  0000 C CNN
+F 1 "CD74HC4067SM" V 5100 6700 50  0000 C CNN
+F 2 "Package_SO:SSOP-24_5.3x8.2mm_P0.65mm" H 6200 5750 50  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/symlink/cd74hc4067.pdf" H 4800 7600 50  0001 C CNN
+	1    5150 6750
+	-1   0    0    -1  
+$EndComp
+Text Label 5850 6750 2    50   ~ 0
+A1
+Wire Wire Line
+	5650 6750 5850 6750
+Text Label 5850 6650 2    50   ~ 0
+A2
+Text Label 5850 6850 2    50   ~ 0
+A0
+Wire Wire Line
+	5850 6650 5650 6650
+Wire Wire Line
+	5650 6850 5850 6850
+Text Label 5850 6950 2    50   ~ 0
+A3
+Wire Wire Line
+	5650 6950 5850 6950
+Wire Wire Line
+	4650 7550 4550 7550
+Wire Wire Line
+	4500 7700 4550 7700
+Wire Wire Line
+	4550 7700 4550 7550
+Connection ~ 4550 7550
+Wire Wire Line
+	4550 7550 3900 7550
+$Comp
+L power:GND #PWR?
+U 1 1 5FD47420
+P 5700 7400
+AR Path="/5FD47420" Ref="#PWR?"  Part="1" 
+AR Path="/5DF398FB/5FD47420" Ref="#PWR0132"  Part="1" 
+F 0 "#PWR0132" H 5700 7150 50  0001 C CNN
+F 1 "GND" H 5750 7250 50  0000 R CNN
+F 2 "" H 5700 7400 50  0001 C CNN
+F 3 "" H 5700 7400 50  0001 C CNN
+	1    5700 7400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 7350 5700 7350
+Wire Wire Line
+	5700 7350 5700 7400
+Wire Notes Line
+	4200 5300 5350 5300
+Wire Notes Line
+	5350 5300 5350 5750
+Wire Notes Line
+	5350 5750 6000 5750
+Wire Notes Line
+	6000 5750 6000 6100
+Wire Notes Line
+	6000 6100 6950 6100
+Wire Notes Line
+	4200 3800 4200 5300
+Wire Notes Line
+	6950 6100 6950 6600
+$Comp
+L Amplifier_Operational:LM358 U6
+U 1 1 5FD711F9
+P 2100 1050
+F 0 "U6" H 2150 1350 50  0000 C CNN
+F 1 "LM358" H 2200 1250 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TSOT-23-8" H 2100 1050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 2100 1050 50  0001 C CNN
+	1    2100 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LM358 U6
+U 2 1 5FD76EF7
+P 2250 2200
+F 0 "U6" H 2250 2450 50  0000 C CNN
+F 1 "LM358" H 2300 2350 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TSOT-23-8" H 2250 2200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 2250 2200 50  0001 C CNN
+	2    2250 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LM358 U6
+U 3 1 5FD7A752
+P 2100 1050
+F 0 "U6" H 2058 1096 50  0000 L CNN
+F 1 "LM358" H 2058 1005 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:TSOT-23-8" H 2100 1050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 2100 1050 50  0001 C CNN
+	3    2100 1050
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
