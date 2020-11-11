@@ -1718,11 +1718,11 @@ Wire Wire Line
 	8300 1700 7550 1700
 Wire Wire Line
 	9050 2850 9050 3600
-Text Label 9050 3600 1    50   ~ 0
+Text Label 7550 2100 0    50   ~ 0
 A0
 Text Label 7550 1700 0    50   ~ 0
 A1
-Text Label 7550 2100 0    50   ~ 0
+Text Label 9050 3600 1    50   ~ 0
 A2
 Wire Wire Line
 	9150 2850 9150 3500
@@ -2720,7 +2720,7 @@ U 1 1 5FB800D6
 P 5150 6750
 F 0 "U17" H 4900 7650 50  0000 C CNN
 F 1 "CD74HC4067SM" V 5100 6700 50  0000 C CNN
-F 2 "Package_SO:SSOP-24_5.3x8.2mm_P0.65mm" H 6200 5750 50  0001 C CIN
+F 2 "Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm" H 6200 5750 50  0001 C CIN
 F 3 "http://www.ti.com/lit/ds/symlink/cd74hc4067.pdf" H 4800 7600 50  0001 C CNN
 	1    5150 6750
 	-1   0    0    -1  
