@@ -1428,11 +1428,11 @@ F 3 "" H 8750 1050 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:Ferrite_Bead_Small FB1
+L Device:FerriteBead_Small FB1
 U 1 1 5E60756E
 P 10200 4100
 F 0 "FB1" H 10300 4100 50  0000 L CNN
-F 1 "Ferrite_Bead_Small" H 10300 4055 50  0001 L CNN
+F 1 "FerriteBead_Small" H 10300 4055 50  0001 L CNN
 F 2 "Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 10130 4100 50  0001 C CNN
 F 3 "~" H 10200 4100 50  0001 C CNN
 	1    10200 4100
@@ -2360,16 +2360,16 @@ F 3 "" H 4300 1050 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	4300 1650 4300 2200
+	4300 1750 4300 2200
 $Comp
-L Device:Jumper_NO_Small JP3
+L Jumper:SolderJumper_2_Open JP3
 U 1 1 5EB0119F
-P 4300 1550
-F 0 "JP3" H 4250 1500 50  0000 L CNN
-F 1 "Jumper_NO_Small" V 4345 1598 50  0001 L CNN
-F 2 "MainBoard:Jumper_SMD_0603" H 4300 1550 50  0001 C CNN
-F 3 "~" H 4300 1550 50  0001 C CNN
-	1    4300 1550
+P 4300 1600
+F 0 "JP3" H 4250 1550 50  0000 L CNN
+F 1 "SolderJumper_2_Open" V 4345 1648 50  0001 L CNN
+F 2 "MainBoard:Jumper_SMD_0603" H 4300 1600 50  0001 C CNN
+F 3 "~" H 4300 1600 50  0001 C CNN
+	1    4300 1600
 	0    -1   1    0   
 $EndComp
 Text Label 4300 2200 1    50   ~ 0
