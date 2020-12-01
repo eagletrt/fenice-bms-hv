@@ -2814,4 +2814,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 2100 1050 50  0001 C CNN
 	3    2100 1050
 	1    0    0    -1  
 $EndComp
+Text Notes 10550 1750 0    50   ~ 0
+Switch this and BOOT0 so to have it work
 $EndSCHEMATC
