@@ -1,0 +1,8 @@
+[submodule "software"]
+	path = software
+	url = git@github.com:eagletrt/fenice-bms-hv.git
+	branch = sw-master
+[submodule "hardware"]
+	path = hardware
+	url = git@github.com:eagletrt/fenice-bms-hv.git
+	branch = hw-master
