@@ -24,7 +24,6 @@ MainBoard
 |-- modules/                # Local symbol library files
 |   |-- MainBoard.pretty/   # Local footprint library files
 |   |-- packages3d/         # 3D models
-|-- datasheet/              # Datasheets
 |-- gerber/                 # Gerbers outputs
 |-- netlists/               # Netlists outputs
 |-- images/                 # Board renders and such
