@@ -7,9 +7,9 @@ Latest first:
 - Franco Tabarelli
 - Not clear
 
-## Repo structure
+## Project structure
 ```
-MainBoard
+mainboard
 |-- MainBoard.pro           # Project file
 |-- MainBoard.sch           # Schematic root
 |-- MainShutdown.sch        # Analog shutdown logic schematic
