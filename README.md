@@ -12,12 +12,12 @@ This repostory is handled through 3 main branches:
 `sw-master` Is the master branch for software: it contains firmware, dirvers etc... for the BMS.  
 `master` Is the master branch for the repo. It contains references to both hardware and software about a specific version of the BMS.
 
-When code or designs for a specifboard or software are completed and merged into the relative `[s/h]w-master` branch, then tag the relative commit with the board version number, e.g.: 
+When code or designs for a specific board or software are completed and merged into the relative `[s/h]w-master` branch, then tag the relative commit with the board version number, e.g.: 
 ```bash
-## for software
-git tag -a sw-v1.2.3 -m "Version notes"
-## for hardware
-git tag -a hw-v0.1.3 -m "Version notes"
+## for software cell board
+git tag -a sw-cb-v1.2.3 -m "Version notes"
+## for hardware main board
+git tag -a hw-mb-v0.1.3 -m "Version notes"
 ```
 **N.B.** Versioning in software and hardware are not related, working hardware-software tuples can be infered from master commits.  
 **N.B.** Never merge from or to `master`.
@@ -54,12 +54,12 @@ In `master` the maintainer must update `./software` and `./hardware` submodule r
 In branch master
 
 $ cd software/
-$ git checkout sw-v3.2.1   # Last tested version
+$ git checkout sw-mb-v3.2.1   # Last tested version
 $ cd ..
 $ git add software 
 
 $ cd hardware/
-$ git checkout hw-v1.2.3   # The board version that was running
+$ git checkout hw-cb-v1.2.3   # The board version that was running
 $ cd ..
 $ git add hardware
 
