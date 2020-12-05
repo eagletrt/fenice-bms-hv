@@ -1,0 +1,8 @@
+(module SSOP5 (layer F.Cu) (tedit 5DBABFD4)
+  (fp_text reference REF** (at 0 -2.75) (layer F.SilkS)
+    (effects (font (size 1 1) (thickness 0.153)))
+  )
+  (fp_text value SSOP5 (at 0 -3.75) (layer F.Fab)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+)

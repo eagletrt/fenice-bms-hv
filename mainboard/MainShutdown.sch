@@ -1,0 +1,1051 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Notes 6000 6375 0    39   ~ 0
+PWR163S-25-1002J
+$Comp
+L MainBoard:+TS #PWR0148
+U 1 1 5B0DE0E2
+P 5850 5950
+F 0 "#PWR0148" H 5850 5800 50  0001 C CNN
+F 1 "+TS" V 5850 6100 50  0000 L CNN
+F 2 "" H 5750 5700 50  0001 C CNN
+F 3 "" H 5850 5800 50  0001 C CNN
+	1    5850 5950
+	0    1    1    0   
+$EndComp
+Text Notes 4500 5750 0    50   ~ 10
+PRE-CHARGE CIRCUIT
+Text Notes 4850 900  0    50   ~ 10
+TRACTIVE SYSTEM CONTROL
+Wire Notes Line
+	4450 5600 4450 7550
+Wire Notes Line
+	4450 7550 6900 7550
+Wire Notes Line
+	6900 7550 6900 5600
+Wire Notes Line
+	6900 5600 4450 5600
+$Comp
+L power:+BATT #PWR0147
+U 1 1 5C2C487D
+P 5850 7125
+F 0 "#PWR0147" H 5850 6975 50  0001 C CNN
+F 1 "+BATT" H 5730 7275 50  0000 L CNN
+F 2 "" H 5850 7125 50  0001 C CNN
+F 3 "" H 5850 7125 50  0001 C CNN
+	1    5850 7125
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5850 6400 5850 6500
+Wire Wire Line
+	5850 6100 5850 5950
+Wire Wire Line
+	5850 6900 5850 7125
+$Comp
+L MainBoard:KT12-1A K1
+U 1 1 5E5A93F5
+P 5450 6700
+F 0 "K1" H 5450 7165 50  0000 C CNN
+F 1 "KT12-1A" H 5450 7074 50  0000 C CNN
+F 2 "MainBoard:KT_THT" H 5450 6350 50  0001 C CNN
+F 3 "https://standexelectronics.com/viewer/pdfjs/web/viewer.php?file=https%3A%2F%2Fstandexelectronics.com%2Fwp-content%2Fuploads%2F2015%2F03%2FKT_V03.pdf" H 5450 6700 50  0001 C CNN
+	1    5450 6700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 6200 3550 6300
+Wire Wire Line
+	3550 6300 3500 6300
+Wire Wire Line
+	1250 6300 1300 6300
+$Comp
+L MainBoard:R_power_backplane R55
+U 1 1 5DC7CE9F
+P 5850 6250
+F 0 "R55" V 5950 6250 50  0000 C CNN
+F 1 "10K" V 5850 6250 50  0000 C CNN
+F 2 "MainBoard:pwr163" V 5810 6250 50  0001 C CNN
+F 3 "~" H 5850 6250 50  0001 C CNN
+F 4 "https://www.mouser.it/ProductDetail/Bourns/PWR163S-25-1002J?qs=%2Fha2pyFadugfff1oC4vY%252Bes8I7FN4jgvWF%2FMj%252B7BM%2FJuTCfu5H9AeA%3D%3D" H 5850 6250 50  0001 C CNN "Mouser"
+	1    5850 6250
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5E2DE393
+P 3550 6200
+AR Path="/5E2DE393" Ref="#PWR?"  Part="1" 
+AR Path="/5B045B0D/5E2DE393" Ref="#PWR0136"  Part="1" 
+F 0 "#PWR0136" H 3550 6050 50  0001 C CNN
+F 1 "+12V" V 3550 6400 50  0000 C CNN
+F 2 "" H 3550 6200 50  0001 C CNN
+F 3 "" H 3550 6200 50  0001 C CNN
+	1    3550 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5E2E4AFA
+P 1250 6300
+AR Path="/5E2E4AFA" Ref="#PWR?"  Part="1" 
+AR Path="/5B045B0D/5E2E4AFA" Ref="#PWR0140"  Part="1" 
+F 0 "#PWR0140" H 1250 6150 50  0001 C CNN
+F 1 "+12V" V 1250 6500 50  0000 C CNN
+F 2 "" H 1250 6300 50  0001 C CNN
+F 3 "" H 1250 6300 50  0001 C CNN
+	1    1250 6300
+	0    -1   -1   0   
+$EndComp
+Text HLabel 3600 6400 2    50   Input ~ 0
+AIR+_STATUS
+Text HLabel 1500 6300 2    50   Input ~ 0
+AIR-_STATUS
+Text Label 6650 6250 2    50   ~ 0
+dissipation
+Wire Wire Line
+	6100 6250 6650 6250
+NoConn ~ 6650 6250
+Text HLabel 2850 1250 0    50   Input ~ 0
+RESET_BUTTON
+$Comp
+L Device:C C33
+U 1 1 5DE6BEF2
+P 3300 1450
+F 0 "C33" V 3150 1450 50  0000 C CNN
+F 1 "1uF" V 3450 1450 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 3338 1300 50  0001 C CNN
+F 3 "~" H 3300 1450 50  0001 C CNN
+	1    3300 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 1250 3300 1300
+Wire Wire Line
+	3300 1600 3300 1650
+$Comp
+L power:GND #PWR0139
+U 1 1 5E3A9F1C
+P 3300 1650
+F 0 "#PWR0139" H 3300 1400 50  0001 C CNN
+F 1 "GND" H 3300 1500 50  0000 C CNN
+F 2 "" H 3300 1650 50  0001 C CNN
+F 3 "" H 3300 1650 50  0001 C CNN
+	1    3300 1650
+	1    0    0    -1  
+$EndComp
+Text Label 3650 1250 2    50   ~ 0
+RESET
+Wire Notes Line
+	4250 7700 4250 5550
+Wire Notes Line
+	4250 5500 600  5500
+Text Notes 600  5600 0    50   ~ 10
+AIR CONTROL CIRCUIT\n
+Text HLabel 3000 6050 0    50   Input ~ 0
+FROM_TSMS
+Text HLabel 1250 6850 0    50   Input ~ 0
+PC_ENDED
+Wire Wire Line
+	2450 6950 2500 6950
+$Comp
+L power:GND #PWR0135
+U 1 1 5B0DE170
+P 1500 5800
+F 0 "#PWR0135" H 1500 5550 50  0001 C CNN
+F 1 "GND" V 1500 5650 50  0000 R CNN
+F 2 "" H 1500 5800 50  0001 C CNN
+F 3 "" H 1500 5800 50  0001 C CNN
+	1    1500 5800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1300 5800 1200 5800
+Wire Wire Line
+	1500 5800 1400 5800
+Text HLabel 1200 5800 0    50   Input ~ 0
+FROM_TSMS
+Wire Wire Line
+	3000 6400 3000 6750
+$Comp
+L power:GND #PWR0143
+U 1 1 5E3826E4
+P 3000 7150
+F 0 "#PWR0143" H 3000 6900 50  0001 C CNN
+F 1 "GND" V 3000 7000 50  0000 R CNN
+F 2 "" H 3000 7150 50  0001 C CNN
+F 3 "" H 3000 7150 50  0001 C CNN
+	1    3000 7150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_NMOS_GSD Q1
+U 1 1 5E3976CB
+P 2900 6950
+F 0 "Q1" H 3104 6996 50  0000 L CNN
+F 1 "SSM3K361TU,LF" H 3104 6905 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 3100 7050 50  0001 C CNN
+F 3 "https://www.mouser.it/ProductDetail/Toshiba/SSM3K361TULF?qs=sGAEpiMZZMshyDBzk1%2FWi%2FD7Em5shE8qqtsfXGfVhuGHqmGZGu2Z8A%3D%3D" H 2900 6950 50  0001 C CNN
+	1    2900 6950
+	1    0    0    -1  
+$EndComp
+Text Notes 650  1000 0    50   ~ 0
+RESET BUTTON WITH PULLUP (100K) FOR AMS AND IMD FAULT \nWITH START DELAY OF 120ms (BECAUSE OF C=1uF AND\nVIH MIN OF 4044 is 8.4V AT VCC=12V)
+$Comp
+L Device:D D15
+U 1 1 5E3C4855
+P 7300 1550
+AR Path="/5E3C4855" Ref="D15"  Part="1" 
+AR Path="/5B045B0D/5E3C4855" Ref="D15"  Part="1" 
+F 0 "D15" V 7250 1350 50  0000 L CNN
+F 1 "D" V 7350 1350 50  0001 L CNN
+F 2 "MainBoard:SOD_323HE" H 7300 1550 50  0001 C CNN
+F 3 "~" H 7300 1550 50  0001 C CNN
+	1    7300 1550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7300 1400 7300 1250
+Wire Wire Line
+	7300 1250 7400 1250
+Wire Wire Line
+	7700 1850 7650 1850
+Wire Wire Line
+	7300 1850 7300 1700
+$Comp
+L Device:Q_NMOS_GSD Q2
+U 1 1 5E40BAFD
+P 7550 2350
+F 0 "Q2" H 7755 2396 50  0000 L CNN
+F 1 "TSM2312" H 7755 2305 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:TSOT-23" H 7750 2450 50  0001 C CNN
+F 3 "~" H 7550 2350 50  0001 C CNN
+	1    7550 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 2150 7650 1850
+Connection ~ 7650 1850
+Wire Wire Line
+	7650 1850 7300 1850
+$Comp
+L power:GND #PWR0151
+U 1 1 5E40D944
+P 7650 2550
+F 0 "#PWR0151" H 7650 2300 50  0001 C CNN
+F 1 "GND" V 7650 2400 50  0000 R CNN
+F 2 "" H 7650 2550 50  0001 C CNN
+F 3 "" H 7650 2550 50  0001 C CNN
+	1    7650 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5E40DC05
+P 7400 1250
+AR Path="/5E40DC05" Ref="#PWR?"  Part="1" 
+AR Path="/5B045B0D/5E40DC05" Ref="#PWR0150"  Part="1" 
+F 0 "#PWR0150" H 7400 1100 50  0001 C CNN
+F 1 "+12V" V 7400 1400 50  0000 L CNN
+F 2 "" H 7400 1250 50  0001 C CNN
+F 3 "" H 7400 1250 50  0001 C CNN
+	1    7400 1250
+	1    0    0    -1  
+$EndComp
+Connection ~ 7400 1250
+Wire Wire Line
+	7400 1250 7700 1250
+$Comp
+L Device:C C35
+U 1 1 5E3C6D35
+P 6850 1300
+F 0 "C35" V 6700 1300 50  0000 C CNN
+F 1 "100nF" V 7000 1300 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6888 1150 50  0001 C CNN
+F 3 "~" H 6850 1300 50  0001 C CNN
+	1    6850 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5E3C6D41
+P 6850 1150
+AR Path="/5E3C6D41" Ref="#PWR?"  Part="1" 
+AR Path="/5B045B0D/5E3C6D41" Ref="#PWR0166"  Part="1" 
+F 0 "#PWR0166" H 6850 1000 50  0001 C CNN
+F 1 "+12V" V 6850 1300 50  0000 L CNN
+F 2 "" H 6850 1150 50  0001 C CNN
+F 3 "" H 6850 1150 50  0001 C CNN
+	1    6850 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0163
+U 1 1 5E43C3B0
+P 6600 2500
+F 0 "#PWR0163" H 6600 2250 50  0001 C CNN
+F 1 "GND" V 6600 2350 50  0000 R CNN
+F 2 "" H 6600 2500 50  0001 C CNN
+F 3 "" H 6600 2500 50  0001 C CNN
+	1    6600 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5E43C757
+P 6600 2100
+AR Path="/5E43C757" Ref="#PWR?"  Part="1" 
+AR Path="/5B045B0D/5E43C757" Ref="#PWR0162"  Part="1" 
+F 0 "#PWR0162" H 6600 1950 50  0001 C CNN
+F 1 "+12V" V 6600 2250 50  0000 L CNN
+F 2 "" H 6600 2100 50  0001 C CNN
+F 3 "" H 6600 2100 50  0001 C CNN
+	1    6600 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4xxx_IEEE:4044 U14
+U 1 1 5E2EE2BB
+P 3200 3100
+F 0 "U14" H 3000 3550 50  0000 C CNN
+F 1 "CD4044" H 3200 2300 50  0000 C CNN
+F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 3200 3100 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/cd4044b.pdf?ts=1602690282760&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FCD4044B" H 3200 3100 50  0001 C CNN
+F 4 "https://www.mouser.it/ProductDetail/Texas-Instruments/CD4044BPWR?qs=%2Fha2pyFadug0LazJzlE5TuOBjKaObP06hW0P2o7AR4s%3D" H 3200 3100 50  0001 C CNN "Mouser"
+	1    3200 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5E2EFA40
+P 2700 2750
+AR Path="/5E2EFA40" Ref="#PWR?"  Part="1" 
+AR Path="/5B045B0D/5E2EFA40" Ref="#PWR0141"  Part="1" 
+F 0 "#PWR0141" H 2700 2600 50  0001 C CNN
+F 1 "+12V" V 2700 2900 50  0000 L CNN
+F 2 "" H 2700 2750 50  0001 C CNN
+F 3 "" H 2700 2750 50  0001 C CNN
+	1    2700 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 2750 2700 2850
+$Comp
+L power:+12V #PWR?
+U 1 1 5E2F5421
+P 3350 2500
+AR Path="/5E2F5421" Ref="#PWR?"  Part="1" 
+AR Path="/5B045B0D/5E2F5421" Ref="#PWR0144"  Part="1" 
+F 0 "#PWR0144" H 3350 2350 50  0001 C CNN
+F 1 "+12V" V 3350 2650 50  0000 L CNN
+F 2 "" H 3350 2500 50  0001 C CNN
+F 3 "" H 3350 2500 50  0001 C CNN
+	1    3350 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 2500 3350 2700
+$Comp
+L power:GND #PWR0142
+U 1 1 5E2F951A
+P 3200 2500
+F 0 "#PWR0142" H 3200 2250 50  0001 C CNN
+F 1 "GND" V 3200 2350 50  0000 R CNN
+F 2 "" H 3200 2500 50  0001 C CNN
+F 3 "" H 3200 2500 50  0001 C CNN
+	1    3200 2500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3200 2500 3200 2700
+NoConn ~ 3700 3750
+Wire Wire Line
+	2200 3500 2700 3500
+Text Label 2200 3500 0    50   ~ 0
+RESET
+Wire Wire Line
+	2200 3300 2700 3300
+Text Label 2200 3300 0    50   ~ 0
+RESET
+Text Label 4000 3550 2    50   ~ 0
+EN_IMD
+Text Label 4000 3350 2    50   ~ 0
+EN_BMS
+Text HLabel 1200 3300 0    50   Input ~ 0
+BMS_STATUS
+$Comp
+L Device:C C32
+U 1 1 5E36A347
+P 4050 2650
+F 0 "C32" V 3900 2650 50  0000 C CNN
+F 1 "100nF" V 4200 2650 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4088 2500 50  0001 C CNN
+F 3 "~" H 4050 2650 50  0001 C CNN
+	1    4050 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0138
+U 1 1 5E36A34D
+P 4050 2850
+F 0 "#PWR0138" H 4050 2600 50  0001 C CNN
+F 1 "GND" V 4050 2700 50  0000 R CNN
+F 2 "" H 4050 2850 50  0001 C CNN
+F 3 "" H 4050 2850 50  0001 C CNN
+	1    4050 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5E36A353
+P 4050 2450
+AR Path="/5E36A353" Ref="#PWR?"  Part="1" 
+AR Path="/5B045B0D/5E36A353" Ref="#PWR0137"  Part="1" 
+F 0 "#PWR0137" H 4050 2300 50  0001 C CNN
+F 1 "+12V" V 4050 2600 50  0000 L CNN
+F 2 "" H 4050 2450 50  0001 C CNN
+F 3 "" H 4050 2450 50  0001 C CNN
+	1    4050 2450
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3700 3150
+Text HLabel 2650 3600 0    50   Input ~ 0
+IMD_FAULT
+Wire Wire Line
+	3700 3550 4000 3550
+Wire Wire Line
+	2650 3600 2700 3600
+Wire Wire Line
+	1800 3400 1950 3400
+Text Label 700  3500 0    50   ~ 0
+VREF_1.5V
+Wire Wire Line
+	700  3500 1200 3500
+Wire Wire Line
+	3700 3350 4000 3350
+NoConn ~ 2700 3200
+NoConn ~ 2700 3800
+Text HLabel 7800 5700 0    50   Input ~ 0
+FROM_TSMS
+$Comp
+L power:GND #PWR0146
+U 1 1 5E047CFC
+P 8150 6100
+F 0 "#PWR0146" H 8150 5850 50  0001 C CNN
+F 1 "GND" H 8150 5950 50  0000 C CNN
+F 2 "" H 8150 6100 50  0001 C CNN
+F 3 "" H 8150 6100 50  0001 C CNN
+	1    8150 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Zener D14
+U 1 1 5E04026C
+P 8150 5900
+F 0 "D14" V 8104 5979 50  0000 L CNN
+F 1 "12V" V 8195 5979 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-323" H 8150 5900 50  0001 C CNN
+F 3 "https://www.mouser.it/ProductDetail/ON-Semiconductor/MM3Z15VST1G?qs=sGAEpiMZZMtQ8nqTKtFS%2FCgsMgr2WrG3wUrmWVpo9VY%3D" H 8150 5900 50  0001 C CNN
+F 4 "https://www.mouser.it/ProductDetail/ON-Semiconductor/MM3Z15VST1G?qs=sGAEpiMZZMtQ8nqTKtFS%2FCgsMgr2WrG3wUrmWVpo9VY%3D" H 8150 5900 50  0001 C CNN "Mouser"
+	1    8150 5900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R54
+U 1 1 5E038378
+P 7950 5700
+F 0 "R54" V 7850 5700 50  0000 C CNN
+F 1 "1M" V 7950 5700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 7880 5700 50  0001 C CNN
+F 3 "~" H 7950 5700 50  0001 C CNN
+	1    7950 5700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8100 5700 8150 5700
+Wire Wire Line
+	8150 5750 8150 5700
+Connection ~ 8150 5700
+Wire Wire Line
+	8150 6050 8150 6100
+Wire Wire Line
+	3500 6400 3600 6400
+Wire Wire Line
+	1400 6300 1500 6300
+Wire Notes Line
+	3800 650  3800 1850
+Wire Notes Line
+	3800 1850 550  1850
+Wire Notes Line
+	550  1850 550  650 
+Wire Notes Line
+	550  650  3800 650 
+Connection ~ 3300 1250
+Wire Wire Line
+	3300 1250 3650 1250
+Wire Wire Line
+	2850 1250 3300 1250
+Wire Wire Line
+	4050 2450 4050 2500
+Wire Wire Line
+	4050 2800 4050 2850
+Text Notes 650  2200 0    50   ~ 10
+LACTHING IC
+Wire Notes Line
+	600  3950 600  2050
+Wire Notes Line
+	600  2050 4400 2050
+Wire Notes Line
+	600  3950 4400 3950
+Wire Notes Line
+	4400 2050 4400 3950
+Wire Notes Line
+	4550 2900 9000 2900
+Wire Notes Line
+	9000 2900 9000 650 
+Wire Notes Line
+	9000 650  4550 650 
+Wire Notes Line
+	4550 650  4550 2900
+$Comp
+L Comparator:LM339 U13
+U 2 1 5E50D51B
+P 1500 3400
+F 0 "U13" H 1500 3767 50  0000 C CNN
+F 1 "TS3704IPT" H 1500 3676 50  0000 C CNN
+F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 1450 3500 50  0001 C CNN
+F 3 "https://www.st.com/content/ccc/resource/technical/document/datasheet/ff/2a/23/35/c2/34/44/f1/CD00000883.pdf/files/CD00000883.pdf/jcr:content/translations/en.CD00000883.pdf" H 1550 3600 50  0001 C CNN
+F 4 "https://www.mouser.it/ProductDetail/STMicroelectronics/TS3704IPT?qs=%2Fha2pyFaduiSNkEXJdEfhSjcW8AQUDGU%2FarQGS66GL8%3D" H 1500 3400 50  0001 C CNN "Mouser"
+	2    1500 3400
+	1    0    0    -1  
+$EndComp
+Text Notes 8190 5500 0    50   ~ 10
+SHUTDOWN STATUS
+Wire Notes Line
+	8180 5510 8910 5510
+Wire Wire Line
+	8150 5700 8800 5700
+$Comp
+L power:+3.3V #PWR0149
+U 1 1 5E04ADAB
+P 8800 5900
+F 0 "#PWR0149" H 8800 5750 50  0001 C CNN
+F 1 "+3.3V" V 8800 6150 50  0000 C CNN
+F 2 "" H 8800 5900 50  0001 C CNN
+F 3 "" H 8800 5900 50  0001 C CNN
+	1    8800 5900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Comparator:LM339 U13
+U 1 1 5E50C08C
+P 9100 5800
+F 0 "U13" H 9200 5950 50  0000 C CNN
+F 1 "TS3704IPT" H 9200 5600 50  0000 C CNN
+F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 9050 5900 50  0001 C CNN
+F 3 "https://www.st.com/content/ccc/resource/technical/document/datasheet/ff/2a/23/35/c2/34/44/f1/CD00000883.pdf/files/CD00000883.pdf/jcr:content/translations/en.CD00000883.pdf" H 9150 6000 50  0001 C CNN
+F 4 "https://www.mouser.it/ProductDetail/STMicroelectronics/TS3704IPT?qs=%2Fha2pyFaduiSNkEXJdEfhSjcW8AQUDGU%2FarQGS66GL8%3D" H 9100 5800 50  0001 C CNN "Mouser"
+	1    9100 5800
+	1    0    0    -1  
+$EndComp
+Text Label 5350 3850 0    50   ~ 0
+EN_BMS
+Wire Wire Line
+	5850 3950 5700 3950
+$Comp
+L power:+12V #PWR?
+U 1 1 5EDC8F46
+P 5850 4100
+AR Path="/5EDC8F46" Ref="#PWR?"  Part="1" 
+AR Path="/5B045B0D/5EDC8F46" Ref="#PWR0233"  Part="1" 
+F 0 "#PWR0233" H 5850 3950 50  0001 C CNN
+F 1 "+12V" V 5850 4250 50  0000 L CNN
+F 2 "" H 5850 4100 50  0001 C CNN
+F 3 "" H 5850 4100 50  0001 C CNN
+	1    5850 4100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0234
+U 1 1 5EDC9905
+P 7050 4100
+F 0 "#PWR0234" H 7050 3850 50  0001 C CNN
+F 1 "GND" V 7050 3950 50  0000 R CNN
+F 2 "" H 7050 4100 50  0001 C CNN
+F 3 "" H 7050 4100 50  0001 C CNN
+	1    7050 4100
+	0    -1   -1   0   
+$EndComp
+Text Label 7950 4350 2    50   ~ 0
+EN_IMD
+Text Label 5350 4350 0    50   ~ 0
+EN_IMD
+Wire Wire Line
+	5850 4250 5700 4250
+Text Label 7900 3850 2    50   ~ 0
+EN_BMS
+Text Label 5350 3950 0    50   ~ 0
+BMS_SD
+Wire Wire Line
+	7050 3850 7500 3850
+Text Label 5350 4250 0    50   ~ 0
+IMD_SD
+Text HLabel 7500 3950 2    50   Input ~ 0
+BMS_LED
+Text HLabel 7500 4250 2    50   Input ~ 0
+IMD_LED
+Text HLabel 5050 6500 0    50   Input ~ 0
+FROM_TSMS
+Wire Wire Line
+	4975 6900 5050 6900
+$Comp
+L power:GND #PWR0145
+U 1 1 5E5A93F4
+P 4975 6900
+F 0 "#PWR0145" H 4975 6650 50  0001 C CNN
+F 1 "GND" V 4975 6750 50  0000 R CNN
+F 2 "" H 4975 6900 50  0001 C CNN
+F 3 "" H 4975 6900 50  0001 C CNN
+	1    4975 6900
+	0    1    1    0   
+$EndComp
+NoConn ~ 2700 3700
+NoConn ~ 2700 3100
+$Comp
+L Relay:UMS05-1A80-75L K2
+U 1 1 5E3C77AB
+P 7900 1550
+F 0 "K2" H 8200 1500 50  0000 L CNN
+F 1 "G6DN 12V" H 8200 1600 50  0000 L CNN
+F 2 "MainBoard:G6DN-1A_DC12" H 8200 1500 50  0001 L CNN
+F 3 "https://www.mouser.it/datasheet/2/307/en-g6dn-838135.pdf" H 7900 1550 50  0001 C CNN
+	1    7900 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8100 1250 8100 1150
+Wire Wire Line
+	8100 1850 8100 1950
+Wire Wire Line
+	8100 1950 8350 1950
+Text HLabel 8350 1950 2    50   Input ~ 0
+FROM_SD
+Text HLabel 8350 1150 2    50   Input ~ 0
+TO_TSMS
+Wire Wire Line
+	8350 1150 8100 1150
+$Comp
+L power:+12V #PWR?
+U 1 1 5F4845C0
+P 3300 950
+AR Path="/5F4845C0" Ref="#PWR?"  Part="1" 
+AR Path="/5B50ED38/5F4845C0" Ref="#PWR?"  Part="1" 
+AR Path="/5B045B0D/5F4845C0" Ref="#PWR032"  Part="1" 
+F 0 "#PWR032" H 3300 800 50  0001 C CNN
+F 1 "+12V" H 3300 1100 50  0000 C CNN
+F 2 "" H 3300 950 50  0001 C CNN
+F 3 "" H 3300 950 50  0001 C CNN
+	1    3300 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 5F4845C6
+P 3300 1100
+AR Path="/5B045B0D/5F4845C6" Ref="R9"  Part="1" 
+AR Path="/5B50ED38/5F4845C6" Ref="R?"  Part="1" 
+F 0 "R9" V 3200 1100 50  0000 C CNN
+F 1 "100K" V 3300 1100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3230 1100 50  0001 C CNN
+F 3 "~" H 3300 1100 50  0001 C CNN
+	1    3300 1100
+	-1   0    0    1   
+$EndComp
+Text Label 6050 2350 0    50   ~ 0
+IMD_SD
+Text Label 6050 2450 0    50   ~ 0
+BMS_SD
+Wire Wire Line
+	6350 2350 6050 2350
+Wire Wire Line
+	6350 2450 6050 2450
+$Comp
+L Device:C C47
+U 1 1 5E9C316C
+P 4700 4100
+F 0 "C47" V 4550 4100 50  0000 C CNN
+F 1 "100nF" V 4850 4100 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4738 3950 50  0001 C CNN
+F 3 "~" H 4700 4100 50  0001 C CNN
+	1    4700 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0194
+U 1 1 5E9C3172
+P 4700 4250
+F 0 "#PWR0194" H 4700 4000 50  0001 C CNN
+F 1 "GND" V 4700 4100 50  0000 R CNN
+F 2 "" H 4700 4250 50  0001 C CNN
+F 3 "" H 4700 4250 50  0001 C CNN
+	1    4700 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5E9C3178
+P 4700 3950
+AR Path="/5E9C3178" Ref="#PWR?"  Part="1" 
+AR Path="/5B045B0D/5E9C3178" Ref="#PWR0195"  Part="1" 
+F 0 "#PWR0195" H 4700 3800 50  0001 C CNN
+F 1 "+12V" V 4700 4100 50  0000 L CNN
+F 2 "" H 4700 3950 50  0001 C CNN
+F 3 "" H 4700 3950 50  0001 C CNN
+	1    4700 3950
+	1    0    0    -1  
+$EndComp
+Text Label 1450 7050 0    50   ~ 0
+VREF_1.5V
+Wire Wire Line
+	1450 7050 1850 7050
+$Comp
+L Comparator:LM339 U13
+U 3 1 5E50DB78
+P 2150 6950
+F 0 "U13" H 2150 7317 50  0000 C CNN
+F 1 "TS3704IPT" H 2150 7226 50  0000 C CNN
+F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 2100 7050 50  0001 C CNN
+F 3 "https://www.st.com/content/ccc/resource/technical/document/datasheet/ff/2a/23/35/c2/34/44/f1/CD00000883.pdf/files/CD00000883.pdf/jcr:content/translations/en.CD00000883.pdf" H 2200 7150 50  0001 C CNN
+F 4 "https://www.mouser.it/ProductDetail/STMicroelectronics/TS3704IPT?qs=%2Fha2pyFaduiSNkEXJdEfhSjcW8AQUDGU%2FarQGS66GL8%3D" H 2150 6950 50  0001 C CNN "Mouser"
+	3    2150 6950
+	1    0    0    -1  
+$EndComp
+Text Label 3000 6750 1    50   ~ 0
+LAST_AIR
+Wire Wire Line
+	3000 6050 3000 6300
+$Comp
+L Connector_Generic:Conn_02x02_Counter_Clockwise J?
+U 1 1 5E5EF8A6
+P 3200 6300
+AR Path="/5B50ED38/5E5EF8A6" Ref="J?"  Part="1" 
+AR Path="/5B045B0D/5E5EF8A6" Ref="J10"  Part="1" 
+F 0 "J10" H 3250 6400 50  0000 C CNN
+F 1 "CONN_2X2" H 3250 6426 50  0001 C CNN
+F 2 "MainBoard:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical" H 3200 6300 50  0001 C CNN
+F 3 "~" H 3200 6300 50  0001 C CNN
+	1    3200 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x02_Counter_Clockwise J?
+U 1 1 5E5D4844
+P 1300 6100
+AR Path="/5B50ED38/5E5D4844" Ref="J?"  Part="1" 
+AR Path="/5B045B0D/5E5D4844" Ref="J6"  Part="1" 
+F 0 "J6" H 1350 6200 50  0000 C CNN
+F 1 "CONN_2X2" H 1350 6226 50  0001 C CNN
+F 2 "MainBoard:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical" H 1300 6100 50  0001 C CNN
+F 3 "~" H 1300 6100 50  0001 C CNN
+	1    1300 6100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1250 6850 1850 6850
+Text HLabel 7200 2400 3    50   Input ~ 0
+SD_OK
+Wire Wire Line
+	7200 2400 7200 2350
+Text HLabel 7500 3750 1    50   Input ~ 0
+EN_BMS
+Text HLabel 7300 4400 3    50   Input ~ 0
+EN_IMD
+Text HLabel 5700 4400 3    50   Input ~ 0
+IMD_SD
+Text HLabel 5700 3700 1    50   Input ~ 0
+BMS_SD
+Text HLabel 2500 7000 3    50   Input ~ 0
+PC_END_12V
+Wire Wire Line
+	2500 7000 2500 6950
+Text HLabel 1950 3450 3    50   Input ~ 0
+BMS_12V
+Wire Wire Line
+	1950 3450 1950 3400
+Connection ~ 1950 3400
+Wire Wire Line
+	1950 3400 2700 3400
+$Comp
+L power:GND #PWR0179
+U 1 1 5F4DB3FA
+P 9700 1600
+F 0 "#PWR0179" H 9700 1350 50  0001 C CNN
+F 1 "GND" V 9700 1400 50  0000 C CNN
+F 2 "" H 9700 1600 50  0001 C CNN
+F 3 "" H 9700 1600 50  0001 C CNN
+	1    9700 1600
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3.3V #PWR0180
+U 1 1 5F4DB6CD
+P 9600 1600
+F 0 "#PWR0180" H 9600 1450 50  0001 C CNN
+F 1 "+3.3V" V 9600 1850 50  0000 C CNN
+F 2 "" H 9600 1600 50  0001 C CNN
+F 3 "" H 9600 1600 50  0001 C CNN
+	1    9600 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9600 2000 9650 2000
+Connection ~ 9650 2000
+Wire Wire Line
+	9650 2000 9700 2000
+Text Label 9650 2600 1    50   ~ 0
+VREF_1.5V
+Wire Wire Line
+	9650 2600 9650 2000
+$Comp
+L power:+12V #PWR?
+U 1 1 5F53971E
+P 9500 1600
+AR Path="/5F53971E" Ref="#PWR?"  Part="1" 
+AR Path="/5B045B0D/5F53971E" Ref="#PWR0193"  Part="1" 
+F 0 "#PWR0193" H 9500 1450 50  0001 C CNN
+F 1 "+12V" V 9500 1750 50  0000 L CNN
+F 2 "" H 9500 1600 50  0001 C CNN
+F 3 "" H 9500 1600 50  0001 C CNN
+	1    9500 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Pack04 RN13
+U 1 1 5E68046C
+P 9700 1800
+AR Path="/5B045B0D/5E68046C" Ref="RN13"  Part="1" 
+AR Path="/5E68046C" Ref="RN?"  Part="1" 
+F 0 "RN13" H 9888 1846 50  0000 L CNN
+F 1 "100K" H 9888 1755 50  0000 L CNN
+F 2 "MainBoard:R_network_4x1_bourns_CAY16" V 9975 1800 50  0001 C CNN
+F 3 "https://www.mouser.it/ProductDetail/Bourns/CAY16-104J4LF?qs=sGAEpiMZZMvrmc6UYKmaNeZNuQlTB3CaDlLE%2FtUkIfI%3D" H 9700 1800 50  0001 C CNN
+F 4 "https://www.mouser.it/ProductDetail/Bourns/CAY16-104J4LF?qs=sGAEpiMZZMvrmc6UYKmaNeZNuQlTB3CaDlLE%2FtUkIfI%3D" H 9700 1800 50  0001 C CNN "Mouser"
+	1    9700 1800
+	1    0    0    1   
+$EndComp
+Text HLabel 9500 2000 3    50   Input ~ 0
+SD_STATUS
+Connection ~ 7200 2350
+Wire Wire Line
+	7200 2350 7350 2350
+Wire Wire Line
+	6950 2350 7200 2350
+Connection ~ 7500 3850
+Wire Wire Line
+	7500 3850 7900 3850
+Connection ~ 2500 6950
+Text Notes 10000 1600 0    50   ~ 0
+Vin=12V\nR=10K-->14.4mW\nVref_1V5\nR=100K-->0.06mW
+Text Notes 3150 6550 0    50   ~ 0
+AIR+
+Text Notes 1550 6150 1    50   ~ 0
+AIR-
+$Comp
+L MainBoard:CD4082 U15
+U 2 1 5E94A18E
+P 6600 2300
+F 0 "U15" H 6800 2550 50  0000 C CNN
+F 1 "CD4082" H 6850 2050 50  0000 C CNN
+F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 6600 2300 50  0001 C CNN
+F 3 "" H 6600 2300 50  0001 C CNN
+F 4 "https://www.mouser.it/ProductDetail/Texas-Instruments/CD4082BPW?qs=HTr%252BoA4jRilYH%252BMaT8XueA%3D%3D" H 6600 2300 50  0001 C CNN "Mouser"
+	2    6600 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 2300 6950 2300
+Wire Wire Line
+	6950 2300 6950 2350
+Wire Wire Line
+	6350 2150 6300 2150
+Text HLabel 6300 2150 0    50   Input ~ 0
+BSPD_SIG
+NoConn ~ 9800 1600
+NoConn ~ 9800 2000
+Wire Wire Line
+	5800 2250 6350 2250
+Connection ~ 5800 2250
+Wire Wire Line
+	5800 2300 5800 2250
+Text HLabel 5800 2300 3    50   Input ~ 0
+TS_ON_12V
+Wire Wire Line
+	5700 2250 5800 2250
+Text HLabel 4950 2150 0    50   Input ~ 0
+TS_ON
+Text Label 4650 2350 0    50   ~ 0
+VREF_1.5V
+Wire Wire Line
+	4650 2350 5100 2350
+Wire Wire Line
+	4950 2150 5100 2150
+$Comp
+L Comparator:LM339 U13
+U 4 1 5E50F0C9
+P 5400 2250
+F 0 "U13" H 5400 2617 50  0000 C CNN
+F 1 "TS3704IPT" H 5400 2526 50  0000 C CNN
+F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 5350 2350 50  0001 C CNN
+F 3 "https://www.st.com/content/ccc/resource/technical/document/datasheet/ff/2a/23/35/c2/34/44/f1/CD00000883.pdf/files/CD00000883.pdf/jcr:content/translations/en.CD00000883.pdf" H 5450 2450 50  0001 C CNN
+F 4 "https://www.mouser.it/ProductDetail/STMicroelectronics/TS3704IPT?qs=%2Fha2pyFaduiSNkEXJdEfhSjcW8AQUDGU%2FarQGS66GL8%3D" H 5400 2250 50  0001 C CNN "Mouser"
+	4    5400 2250
+	1    0    0    -1  
+$EndComp
+Text HLabel 10550 5800 2    50   Input ~ 0
+SD_STATUS
+Text Label 10500 5800 2    50   ~ 0
+REED_SUPPLY_STATUS
+$Comp
+L power:+12V #PWR?
+U 1 1 5E3CF86B
+P 1000 4400
+AR Path="/5E3CF86B" Ref="#PWR?"  Part="1" 
+AR Path="/5B045B0D/5E3CF86B" Ref="#PWR0152"  Part="1" 
+F 0 "#PWR0152" H 1000 4250 50  0001 C CNN
+F 1 "+12V" V 1000 4550 50  0000 L CNN
+F 2 "" H 1000 4400 50  0001 C CNN
+F 3 "" H 1000 4400 50  0001 C CNN
+	1    1000 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0153
+U 1 1 5E3CFE13
+P 1000 5000
+F 0 "#PWR0153" H 1000 4750 50  0001 C CNN
+F 1 "GND" V 1000 4850 50  0000 R CNN
+F 2 "" H 1000 5000 50  0001 C CNN
+F 3 "" H 1000 5000 50  0001 C CNN
+	1    1000 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Comparator:LM339 U13
+U 5 1 5E50FF4F
+P 1100 4700
+F 0 "U13" H 1058 4746 50  0000 L CNN
+F 1 "TS3704IPT" H 1058 4655 50  0000 L CNN
+F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 1050 4800 50  0001 C CNN
+F 3 "https://www.st.com/content/ccc/resource/technical/document/datasheet/ff/2a/23/35/c2/34/44/f1/CD00000883.pdf/files/CD00000883.pdf/jcr:content/translations/en.CD00000883.pdf" H 1150 4900 50  0001 C CNN
+F 4 "https://www.mouser.it/ProductDetail/STMicroelectronics/TS3704IPT?qs=%2Fha2pyFaduiSNkEXJdEfhSjcW8AQUDGU%2FarQGS66GL8%3D" H 1100 4700 50  0001 C CNN "Mouser"
+	5    1100 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5E445FE9
+P 1700 4550
+AR Path="/5E445FE9" Ref="#PWR?"  Part="1" 
+AR Path="/5B045B0D/5E445FE9" Ref="#PWR0158"  Part="1" 
+F 0 "#PWR0158" H 1700 4400 50  0001 C CNN
+F 1 "+12V" V 1700 4700 50  0000 L CNN
+F 2 "" H 1700 4550 50  0001 C CNN
+F 3 "" H 1700 4550 50  0001 C CNN
+	1    1700 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0159
+U 1 1 5E445FE3
+P 1700 4850
+F 0 "#PWR0159" H 1700 4600 50  0001 C CNN
+F 1 "GND" V 1700 4700 50  0000 R CNN
+F 2 "" H 1700 4850 50  0001 C CNN
+F 3 "" H 1700 4850 50  0001 C CNN
+	1    1700 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C34
+U 1 1 5E445FDD
+P 1700 4700
+F 0 "C34" V 1550 4700 50  0000 C CNN
+F 1 "100nF" V 1850 4700 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 1738 4550 50  0001 C CNN
+F 3 "~" H 1700 4700 50  0001 C CNN
+	1    1700 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9400 5800 10550 5800
+Wire Wire Line
+	2500 6950 2700 6950
+Text Notes 650  2400 0    50   ~ 0
+Saves the fault status until reset\nfrom: BMS and IMD
+$Comp
+L power:GND #PWR0167
+U 1 1 5E3C6D3B
+P 6850 1450
+F 0 "#PWR0167" H 6850 1200 50  0001 C CNN
+F 1 "GND" V 6850 1300 50  0000 R CNN
+F 2 "" H 6850 1450 50  0001 C CNN
+F 3 "" H 6850 1450 50  0001 C CNN
+	1    6850 1450
+	1    0    0    -1  
+$EndComp
+Text Notes 9650 1050 0    50   ~ 0
+TODO: no idea
+Text Notes 5900 4800 0    50   ~ 0
+TODO: still no idea\nprobably for buffering before \nsending it out through the connector\n
+$Comp
+L MainBoard:MainBoard_AD8244 U4
+U 1 1 5FDD50DE
+P 6450 4100
+F 0 "U4" H 6450 4575 50  0000 C CNN
+F 1 "MainBoard_AD8244" H 6450 4484 50  0000 C CNN
+F 2 "Package_SO:MSOP-10_3x3mm_P0.5mm" H 5500 4650 50  0001 C CNN
+F 3 "" H 5500 4650 50  0001 C CNN
+	1    6450 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 3850 7500 3750
+Wire Wire Line
+	7050 3950 7500 3950
+Wire Wire Line
+	7050 4250 7500 4250
+Wire Wire Line
+	7050 4350 7300 4350
+Wire Wire Line
+	5350 3850 5850 3850
+Wire Wire Line
+	5700 3700 5700 3950
+Connection ~ 5700 3950
+Wire Wire Line
+	5700 3950 5350 3950
+Wire Wire Line
+	5350 4350 5850 4350
+Wire Wire Line
+	5700 4400 5700 4250
+Connection ~ 5700 4250
+Wire Wire Line
+	5700 4250 5350 4250
+Wire Wire Line
+	7300 4400 7300 4350
+Connection ~ 7300 4350
+Wire Wire Line
+	7300 4350 7950 4350
+$EndSCHEMATC
