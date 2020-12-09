@@ -1156,7 +1156,7 @@ Wire Wire Line
 	8300 2500 7800 2500
 Text Label 8850 700  3    50   ~ 0
 CAN_TX
-Text Label 8950 700  3    50   ~ 0
+Text Label 10450 1700 2    50   ~ 0
 CAN_RX
 Wire Wire Line
 	7200 2050 7200 2000
@@ -1423,7 +1423,7 @@ SWO
 Wire Wire Line
 	9450 1000 9450 1050
 Wire Wire Line
-	8950 1050 8950 700 
+	10100 1700 10450 1700
 Wire Wire Line
 	9250 1000 9250 1050
 Wire Wire Line
@@ -1617,7 +1617,7 @@ Text Label 11200 2100 2    50   ~ 0
 SPI2_MOSI
 Wire Wire Line
 	10100 2400 11200 2400
-Text HLabel 10100 1700 2    50   Input ~ 0
+Text HLabel 8950 1050 1    50   Input ~ 0
 PC_ENDED
 Text HLabel 10100 1800 2    50   Input ~ 0
 TS_ON
@@ -2603,14 +2603,14 @@ Text Label 6600 6400 3    50   ~ 0
 A1
 Wire Wire Line
 	6600 6600 6600 6400
-Text Label 6700 6400 3    50   ~ 0
-A2
 Text Label 6500 6400 3    50   ~ 0
+A2
+Text Label 6700 6400 3    50   ~ 0
 A0
 Wire Wire Line
-	6500 6400 6500 6600
+	6700 6400 6700 6600
 Wire Wire Line
-	6700 6600 6700 6400
+	6500 6600 6500 6400
 Text Label 6800 6400 3    50   ~ 0
 A3
 Wire Wire Line
@@ -2814,6 +2814,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 2100 1050 50  0001 C CNN
 	3    2100 1050
 	1    0    0    -1  
 $EndComp
-Text Notes 10550 1750 0    50   ~ 0
-Switch this and BOOT0 so to have it work
+Text Notes 6350 800  0    50   ~ 0
+PB8-BOOT0 pin configuration:\nLOW: normal, boot from user flash\nHIGH: boot from system memory, bootloader
 $EndSCHEMATC
