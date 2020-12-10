@@ -2816,4 +2816,30 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 2100 1050 50  0001 C CNN
 $EndComp
 Text Notes 6350 800  0    50   ~ 0
 PB8-BOOT0 pin configuration:\nLOW: normal, boot from user flash\nHIGH: boot from system memory, bootloader
+Text HLabel 6800 850  0    50   Input ~ 0
+PC_ENDED
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5FD436DF
+P 7100 850
+AR Path="/5FD436DF" Ref="#PWR?"  Part="1" 
+AR Path="/5DF398FB/5FD436DF" Ref="#PWR016"  Part="1" 
+F 0 "#PWR016" H 7100 700 50  0001 C CNN
+F 1 "+3.3V" V 7100 1000 50  0000 L CNN
+F 2 "" H 7100 850 50  0001 C CNN
+F 3 "" H 7100 850 50  0001 C CNN
+	1    7100 850 
+	0    1    1    0   
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP4
+U 1 1 5FD45CCD
+P 6950 850
+F 0 "JP4" H 6900 750 50  0000 L CNN
+F 1 "SolderJumper_2_Open" V 6995 898 50  0001 L CNN
+F 2 "MainBoard:Jumper_SMD_0603" H 6950 850 50  0001 C CNN
+F 3 "~" H 6950 850 50  0001 C CNN
+	1    6950 850 
+	-1   0    0    -1  
+$EndComp
 $EndSCHEMATC
