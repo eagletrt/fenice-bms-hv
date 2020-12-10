@@ -207,6 +207,11 @@ D STM32G431 LQFP32 MCU
 F https://www.st.com/en/microcontrollers-microprocessors/stm32g431k8.html
 $ENDCMP
 #
+$CMP STM32G474R
+D STMICROELECTRONICS - STM32G474RBT3 - ARM MCU, STM32 Family STM32G4 Series Microcontrollers, ARM Cortex-M4F, 32bit, 170 MHz, 128 KB
+F https://www.st.com/resource/en/datasheet/stm32g473re.pdf
+$ENDCMP
+#
 $CMP SW_Push
 D Push button switch, generic, two pins
 K switch normally-open pushbutton push-button
