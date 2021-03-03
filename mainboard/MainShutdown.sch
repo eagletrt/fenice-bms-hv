@@ -150,8 +150,6 @@ $EndComp
 Text Label 3650 1250 2    50   ~ 0
 RESET
 Wire Notes Line
-	4250 7700 4250 5550
-Wire Notes Line
 	4250 5500 600  5500
 Text Notes 600  5600 0    50   ~ 10
 AIR CONTROL CIRCUIT\n
@@ -1048,4 +1046,6 @@ Wire Wire Line
 Connection ~ 7300 4350
 Wire Wire Line
 	7300 4350 7950 4350
+Wire Notes Line
+	4250 5500 4250 7700
 $EndSCHEMATC

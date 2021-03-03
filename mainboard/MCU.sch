@@ -1924,67 +1924,51 @@ Vin=3V3\nR=100K-->0.11mW\nR=1K---->11mW
 $Comp
 L Device:R_Pack04 RN?
 U 1 1 5F5FCEBB
-P 6600 6800
+P 6350 7300
 AR Path="/5B045B0D/5F5FCEBB" Ref="RN?"  Part="1" 
 AR Path="/5DF398FB/5F5FCEBB" Ref="RN10"  Part="1" 
-F 0 "RN10" H 6788 6846 50  0000 L CNN
-F 1 "100K" H 6788 6755 50  0000 L CNN
-F 2 "MainBoard:R_network_4x1_bourns_CAY16" V 6875 6800 50  0001 C CNN
-F 3 "https://www.mouser.it/ProductDetail/Bourns/CAY16-104J4LF?qs=sGAEpiMZZMvrmc6UYKmaNeZNuQlTB3CaDlLE%2FtUkIfI%3D" H 6600 6800 50  0001 C CNN
-F 4 "https://www.mouser.it/ProductDetail/Bourns/CAY16-104J4LF?qs=sGAEpiMZZMvrmc6UYKmaNeZNuQlTB3CaDlLE%2FtUkIfI%3D" H 6600 6800 50  0001 C CNN "Mouser"
-	1    6600 6800
+F 0 "RN10" H 6538 7346 50  0000 L CNN
+F 1 "100K" H 6538 7255 50  0000 L CNN
+F 2 "MainBoard:R_network_4x1_bourns_CAY16" V 6625 7300 50  0001 C CNN
+F 3 "https://www.mouser.it/ProductDetail/Bourns/CAY16-104J4LF?qs=sGAEpiMZZMvrmc6UYKmaNeZNuQlTB3CaDlLE%2FtUkIfI%3D" H 6350 7300 50  0001 C CNN
+F 4 "https://www.mouser.it/ProductDetail/Bourns/CAY16-104J4LF?qs=sGAEpiMZZMvrmc6UYKmaNeZNuQlTB3CaDlLE%2FtUkIfI%3D" H 6350 7300 50  0001 C CNN "Mouser"
+	1    6350 7300
 	-1   0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5F602093
-P 6650 7100
+P 6400 7600
 AR Path="/5F602093" Ref="#PWR?"  Part="1" 
 AR Path="/5DF398FB/5F602093" Ref="#PWR0241"  Part="1" 
-F 0 "#PWR0241" H 6650 6850 50  0001 C CNN
-F 1 "GND" V 6650 6950 50  0000 R CNN
-F 2 "" H 6650 7100 50  0001 C CNN
-F 3 "" H 6650 7100 50  0001 C CNN
-	1    6650 7100
+F 0 "#PWR0241" H 6400 7350 50  0001 C CNN
+F 1 "GND" H 6400 7450 50  0000 C CNN
+F 2 "" H 6400 7600 50  0001 C CNN
+F 3 "" H 6400 7600 50  0001 C CNN
+	1    6400 7600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6500 7050 6500 7000
+	6250 7550 6250 7500
 Wire Wire Line
-	6800 7050 6800 7000
+	6550 7550 6550 7500
 Wire Wire Line
-	6500 7050 6600 7050
+	6250 7550 6350 7550
 Wire Wire Line
-	6650 7100 6650 7050
-Connection ~ 6650 7050
+	6400 7600 6400 7550
+Connection ~ 6400 7550
 Wire Wire Line
-	6650 7050 6700 7050
+	6400 7550 6450 7550
 Wire Wire Line
-	6600 7000 6600 7050
-Connection ~ 6600 7050
+	6350 7500 6350 7550
+Connection ~ 6350 7550
 Wire Wire Line
-	6600 7050 6650 7050
+	6350 7550 6400 7550
 Wire Wire Line
-	6700 7000 6700 7050
-Connection ~ 6700 7050
+	6450 7500 6450 7550
+Connection ~ 6450 7550
 Wire Wire Line
-	6700 7050 6800 7050
-Text Label 6600 6400 3    50   ~ 0
-A1
-Wire Wire Line
-	6600 6600 6600 6400
-Text Label 6500 6400 3    50   ~ 0
-A2
-Text Label 6700 6400 3    50   ~ 0
-A0
-Wire Wire Line
-	6700 6400 6700 6600
-Wire Wire Line
-	6500 6600 6500 6400
-Text Label 6800 6400 3    50   ~ 0
-A3
-Wire Wire Line
-	6800 6600 6800 6400
+	6450 7550 6550 7550
 Text Label 3900 7550 0    50   ~ 0
 CHECK_MUX
 $Comp
@@ -2085,22 +2069,14 @@ F 3 "http://www.ti.com/lit/ds/symlink/cd74hc4067.pdf" H 4800 7600 50  0001 C CNN
 	1    5150 6750
 	-1   0    0    -1  
 $EndComp
-Text Label 5850 6750 2    50   ~ 0
+Text Label 6850 6750 2    50   ~ 0
 A1
-Wire Wire Line
-	5650 6750 5850 6750
-Text Label 5850 6650 2    50   ~ 0
+Text Label 6850 6850 2    50   ~ 0
 A2
-Text Label 5850 6850 2    50   ~ 0
+Text Label 6850 6650 2    50   ~ 0
 A0
-Wire Wire Line
-	5850 6650 5650 6650
-Wire Wire Line
-	5650 6850 5850 6850
-Text Label 5850 6950 2    50   ~ 0
+Text Label 6850 6950 2    50   ~ 0
 A3
-Wire Wire Line
-	5650 6950 5850 6950
 Wire Wire Line
 	4650 7550 4550 7550
 Wire Wire Line
@@ -2427,8 +2403,6 @@ Wire Wire Line
 Connection ~ 6250 2150
 Text HLabel 7600 2550 0    50   Input ~ 0
 NRST
-Text Notes 7650 750  0    50   ~ 0
-CHECK:\nIMD_PWM: moved from PA12 to PA10, ask soft\nTS_ON: moved from PA10 to PB9\n
 Text Label 10450 3350 2    50   ~ 0
 CS_CARD
 Text Label 10450 3050 2    50   ~ 0
@@ -2455,4 +2429,34 @@ Text HLabel 8350 3900 3    50   Input ~ 0
 MISO
 Text HLabel 8450 3900 3    50   Input ~ 0
 MOSI
+Wire Wire Line
+	5650 6650 6250 6650
+Wire Wire Line
+	5650 6750 6350 6750
+Wire Wire Line
+	5650 6850 6450 6850
+Wire Wire Line
+	5650 6950 6550 6950
+Wire Wire Line
+	6550 7100 6550 6950
+Connection ~ 6550 6950
+Wire Wire Line
+	6550 6950 6850 6950
+Wire Wire Line
+	6450 7100 6450 6850
+Connection ~ 6450 6850
+Wire Wire Line
+	6450 6850 6850 6850
+Wire Wire Line
+	6350 7100 6350 6750
+Connection ~ 6350 6750
+Wire Wire Line
+	6350 6750 6850 6750
+Wire Wire Line
+	6250 7100 6250 6650
+Connection ~ 6250 6650
+Wire Wire Line
+	6250 6650 6850 6650
+Text Notes 7000 6650 0    50   ~ 0
+AMS: Automatic Moaning System
 $EndSCHEMATC
