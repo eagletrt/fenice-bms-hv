@@ -269,8 +269,8 @@ Wire Wire Line
 	950  2500 1050 2500
 Wire Wire Line
 	1050 3100 950  3100
-Text Notes 4650 1000 2    50   ~ 0
-Prominent\nIndicator
+Text Notes 4250 1000 0    50   ~ 0
+Prominent\nIndicator\n25mA
 Wire Wire Line
 	7000 4100 7250 4100
 Text Notes 6000 3450 0    50   ~ 10
@@ -1119,32 +1119,32 @@ F 3 "~" H 10650 2700 50  0001 C CNN
 $EndComp
 Text HLabel 8200 1100 2    50   Input ~ 0
 si890x_reset
-Text Label 1950 1300 0    50   ~ 0
+Text Label 1950 1150 0    50   ~ 0
 5V_FROM_CELL
 $Comp
 L Device:C C17
 U 1 1 5E5BFB93
-P 2350 1450
-F 0 "C17" H 2465 1496 50  0000 L CNN
-F 1 "1uF" H 2465 1405 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 2388 1300 50  0001 C CNN
-F 3 "https://www.mouser.it/ProductDetail/AVX/12102C105KAZ2A?qs=sGAEpiMZZMs0AnBnWHyRQN7%2FAA2D2lPPDCdjTtfSValCgVFFyRxU%2FQ%3D%3D" H 2350 1450 50  0001 C CNN
-	1    2350 1450
+P 2350 1300
+F 0 "C17" H 2465 1346 50  0000 L CNN
+F 1 "1uF" H 2465 1255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 2388 1150 50  0001 C CNN
+F 3 "https://www.mouser.it/ProductDetail/AVX/12102C105KAZ2A?qs=sGAEpiMZZMs0AnBnWHyRQN7%2FAA2D2lPPDCdjTtfSValCgVFFyRxU%2FQ%3D%3D" H 2350 1300 50  0001 C CNN
+	1    2350 1300
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:-BATT #PWR0104
 U 1 1 5E5C001A
-P 2350 1600
-F 0 "#PWR0104" H 2350 1450 50  0001 C CNN
-F 1 "-BATT" H 2350 1750 50  0000 C CNN
-F 2 "" H 2350 1600 50  0001 C CNN
-F 3 "" H 2350 1600 50  0001 C CNN
-	1    2350 1600
+P 2350 1450
+F 0 "#PWR0104" H 2350 1300 50  0001 C CNN
+F 1 "-BATT" H 2350 1600 50  0000 C CNN
+F 2 "" H 2350 1450 50  0001 C CNN
+F 3 "" H 2350 1450 50  0001 C CNN
+	1    2350 1450
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	1950 1300 2350 1300
+	1950 1150 2350 1150
 $Comp
 L Device:C C26
 U 1 1 5E652CB4
@@ -1174,23 +1174,23 @@ PROMINENT+
 $Comp
 L MainBoard:DCDC_ISO_12V_ISO U10
 U 1 1 5E5FCD5F
-P 1500 1300
-F 0 "U10" H 1525 1565 50  0000 C CNN
-F 1 "DCDC_ISO_5V_ISO" H 1525 1474 50  0000 C CNN
-F 2 "MainBoard:DC_DC_ISO_ROExxxx" H 1500 1300 50  0001 C CNN
-F 3 "" H 1500 1300 50  0001 C CNN
-	1    1500 1300
+P 1500 1150
+F 0 "U10" H 1525 1415 50  0000 C CNN
+F 1 "DCDC_ISO_5V_ISO" H 1525 1324 50  0000 C CNN
+F 2 "MainBoard:DC_DC_ISO_ROExxxx" H 1500 1150 50  0001 C CNN
+F 3 "" H 1500 1150 50  0001 C CNN
+	1    1500 1150
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:-BATT #PWR0106
 U 1 1 5E616F05
-P 1950 1450
-F 0 "#PWR0106" H 1950 1300 50  0001 C CNN
-F 1 "-BATT" H 1950 1600 50  0000 C CNN
-F 2 "" H 1950 1450 50  0001 C CNN
-F 3 "" H 1950 1450 50  0001 C CNN
-	1    1950 1450
+P 1950 1300
+F 0 "#PWR0106" H 1950 1150 50  0001 C CNN
+F 1 "-BATT" H 1950 1450 50  0000 C CNN
+F 2 "" H 1950 1300 50  0001 C CNN
+F 3 "" H 1950 1300 50  0001 C CNN
+	1    1950 1300
 	1    0    0    1   
 $EndComp
 $Comp
@@ -1399,7 +1399,7 @@ Text Notes 6200 1300 0    50   ~ 0
 IMD_TS-
 Text Notes 5800 1300 0    50   ~ 0
 IMD_TS+
-Text Notes 1050 950  0    50   ~ 0
+Text Notes 1900 550  0    50   ~ 0
 EXT_POWER&PROMIMENT
 Text Notes 4650 5200 0    50   ~ 0
 isoCAN/SPI
@@ -1428,14 +1428,14 @@ Text Label 700  700  0    50   ~ 0
 EXT_GND
 Text Label 2300 800  2    50   ~ 0
 EXT_5V
-Text Label 650  1450 0    50   ~ 0
+Text Label 650  1300 0    50   ~ 0
 EXT_GND
 Wire Wire Line
-	1100 1300 650  1300
-Text Label 650  1300 0    50   ~ 0
+	1100 1150 650  1150
+Text Label 650  1150 0    50   ~ 0
 EXT_5V
 Wire Wire Line
-	650  1450 1100 1450
+	650  1300 1100 1300
 Wire Notes Line
 	4150 650  4150 1200
 Wire Notes Line
@@ -2344,4 +2344,8 @@ Text Notes 4250 7750 1    50   Italic 0
 HV
 Text Notes 4050 7750 1    50   Italic 0
 LV
+Text Notes 550  1750 0    50   ~ 0
+Supply from the first cell to be \nsure the prominent is powered.\nONLY CONNECT THE FIRST CELL\n BECAUSE OF BOARD CLEARANCES
+Text Notes 6950 3300 0    50   ~ 0
+Isolated power supply to power the \nHV-side elements from the BMS-side 5V
 $EndSCHEMATC
