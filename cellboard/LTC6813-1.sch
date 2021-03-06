@@ -1,0 +1,1482 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 10
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	9650 4900 10000 4900
+Text Label 9750 2950 0    50   ~ 0
+0V
+Wire Wire Line
+	9700 2950 9950 2950
+Wire Wire Line
+	9100 3050 9200 2950
+$Comp
+L CellsBoard:GND #PWR0104
+U 1 1 5DEB8034
+P 9100 3050
+F 0 "#PWR0104" H 9100 2800 50  0001 C CNN
+F 1 "GND" H 9105 2877 50  0000 C CNN
+F 2 "" H 9100 3050 50  0001 C CNN
+F 3 "" H 9100 3050 50  0001 C CNN
+	1    9100 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L CellsBoard:+5V #PWR0105
+U 1 1 5DEB8040
+P 9600 3600
+F 0 "#PWR0105" H 9600 3450 50  0001 C CNN
+F 1 "+5V" H 9615 3773 50  0000 C CNN
+F 2 "" H 9600 3600 50  0001 C CNN
+F 3 "" H 9600 3600 50  0001 C CNN
+	1    9600 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9600 3600 9800 3600
+Wire Wire Line
+	8700 2100 8800 2000
+$Comp
+L CellsBoard:GND #PWR0108
+U 1 1 5DEB8058
+P 8700 2100
+F 0 "#PWR0108" H 8700 1850 50  0001 C CNN
+F 1 "GND" H 8705 1927 50  0000 C CNN
+F 2 "" H 8700 2100 50  0001 C CNN
+F 3 "" H 8700 2100 50  0001 C CNN
+	1    8700 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 1150 8850 1050
+$Comp
+L CellsBoard:GND #PWR0111
+U 1 1 5DEB806C
+P 8750 1150
+F 0 "#PWR0111" H 8750 900 50  0001 C CNN
+F 1 "GND" H 8755 977 50  0000 C CNN
+F 2 "" H 8750 1150 50  0001 C CNN
+F 3 "" H 8750 1150 50  0001 C CNN
+	1    8750 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L CellsBoard:GND #PWR0113
+U 1 1 5DEB8079
+P 10100 6250
+F 0 "#PWR0113" H 10100 6000 50  0001 C CNN
+F 1 "GND" H 10105 6077 50  0000 C CNN
+F 2 "" H 10100 6250 50  0001 C CNN
+F 3 "" H 10100 6250 50  0001 C CNN
+	1    10100 6250
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 6200 10100 6250
+$Comp
+L CellsBoard:GND #PWR0118
+U 1 1 5DEB809C
+P 9650 4900
+F 0 "#PWR0118" H 9650 4650 50  0001 C CNN
+F 1 "GND" H 9655 4727 50  0000 C CNN
+F 2 "" H 9650 4900 50  0001 C CNN
+F 3 "" H 9650 4900 50  0001 C CNN
+	1    9650 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9800 3250 9950 3100
+Connection ~ 9800 3600
+Wire Wire Line
+	9800 3250 9800 3600
+Wire Wire Line
+	10450 900  10450 1000
+Wire Wire Line
+	9600 2800 9950 2800
+Text Label 9600 2800 0    50   ~ 0
+DRIVE
+Wire Wire Line
+	10200 900  10450 900 
+Wire Wire Line
+	10200 1200 10450 1200
+Wire Wire Line
+	10200 2150 10450 2150
+Wire Wire Line
+	10200 1850 10450 1850
+Text Label 9600 4650 0    50   ~ 0
+SCL
+Wire Wire Line
+	9600 4650 10000 4650
+Text Label 9600 4750 0    50   ~ 0
+SDA
+Wire Wire Line
+	9600 4750 10000 4750
+Text Label 9600 2650 0    50   ~ 0
+CB18
+Wire Wire Line
+	9600 2650 9950 2650
+$Sheet
+S 9950 2550 900  600 
+U 5DEB81A3
+F0 "DCDC_80Vto5V" 50
+F1 "PowerSupply.sch" 50
+F2 "CB18" B L 9950 2650 50 
+F3 "0V" B L 9950 2950 50 
+F4 "+5V" O L 9950 3100 50 
+F5 "DRIVE" I L 9950 2800 50 
+$EndSheet
+NoConn ~ 9600 2000
+NoConn ~ 9600 1050
+Wire Wire Line
+	10450 1850 10450 1950
+Wire Wire Line
+	10450 2150 10450 2050
+Wire Wire Line
+	10200 2150 10200 2100
+Wire Wire Line
+	10200 1850 10200 1900
+NoConn ~ 10200 1050
+Wire Wire Line
+	10450 1100 10450 1200
+Wire Wire Line
+	10200 900  10200 950 
+Wire Wire Line
+	10200 1200 10200 1150
+Wire Wire Line
+	8300 2050 8600 2050
+Wire Wire Line
+	8300 1950 8600 1950
+Wire Wire Line
+	8300 1100 8600 1100
+Wire Wire Line
+	8300 1000 8600 1000
+Text Label 8300 2050 0    50   ~ 0
+IMA
+Text Label 8300 1950 0    50   ~ 0
+IPA
+Text Label 8300 1100 0    50   ~ 0
+IMB
+Text Label 8300 1000 0    50   ~ 0
+IPB
+Wire Wire Line
+	8600 1400 8600 1100
+Wire Wire Line
+	8600 700  8600 1000
+Wire Wire Line
+	9500 700  9500 950 
+Wire Wire Line
+	9500 1150 9500 1400
+Wire Wire Line
+	9250 1100 9250 1050
+Connection ~ 9250 1050
+Wire Wire Line
+	9250 1050 9250 1000
+Wire Wire Line
+	9500 950  9600 950 
+Wire Wire Line
+	9600 1150 9500 1150
+Wire Wire Line
+	8600 2350 8600 2050
+Wire Wire Line
+	8600 1650 8600 1950
+Wire Wire Line
+	9500 1650 9500 1900
+Wire Wire Line
+	9500 2100 9500 2350
+Wire Wire Line
+	9250 2050 9250 2000
+Connection ~ 9250 2000
+Wire Wire Line
+	9250 2000 9250 1950
+NoConn ~ 10200 2000
+Wire Wire Line
+	9500 1900 9600 1900
+Wire Wire Line
+	9600 2100 9500 2100
+Wire Wire Line
+	9600 4500 10000 4500
+Text Label 9600 4500 0    50   ~ 0
+DRIVE
+Wire Wire Line
+	9800 3900 10000 3900
+Wire Wire Line
+	9800 3600 9800 3900
+Connection ~ 9250 2350
+Wire Wire Line
+	9250 2350 9500 2350
+Connection ~ 9250 1650
+Wire Wire Line
+	9250 1650 9500 1650
+Connection ~ 9250 700 
+Wire Wire Line
+	9250 700  9500 700 
+Connection ~ 9250 1400
+Wire Wire Line
+	9250 1400 9500 1400
+Wire Wire Line
+	8600 1400 9250 1400
+Wire Wire Line
+	8600 700  9250 700 
+Wire Wire Line
+	8600 1650 9250 1650
+Wire Wire Line
+	8600 2350 9250 2350
+Wire Wire Line
+	9100 2000 9250 2000
+Wire Wire Line
+	9150 1050 9250 1050
+Wire Wire Line
+	9200 2950 9250 2950
+Connection ~ 9250 2950
+Wire Wire Line
+	9250 2950 9400 2950
+$Comp
+L CellsBoard:TestPoint TP?
+U 1 1 5E0D0476
+P 9250 2950
+AR Path="/5DECF668/5DEB8198/5E0D0476" Ref="TP?"  Part="1" 
+AR Path="/5DECF668/5DEB81A3/5E0D0476" Ref="TP?"  Part="1" 
+AR Path="/5DECF668/5E0D0476" Ref="TP2"  Part="1" 
+F 0 "TP2" V 9250 3138 50  0000 L CNN
+F 1 "TestPoint" V 9295 3138 50  0001 L CNN
+F 2 "CellsBoard:Test_point" H 9450 2950 50  0001 C CNN
+F 3 "~" H 9450 2950 50  0001 C CNN
+	1    9250 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J19
+U 1 1 5DEB81BD
+P 10650 1100
+F 0 "J19" H 10650 900 50  0000 C CNN
+F 1 "CONN_1X02" V 10750 1050 50  0001 C CNN
+F 2 "CellsBoard:Molex_Micro-Fit_3.0_43650-0215_1x02_P3.00mm_Vertical" H 10650 1100 50  0001 C CNN
+F 3 "~" H 10650 1100 50  0001 C CNN
+	1    10650 1100
+	1    0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J20
+U 1 1 5DEB8292
+P 10650 2050
+F 0 "J20" H 10650 1850 50  0000 C CNN
+F 1 "CONN_1X02" V 10750 2000 50  0001 C CNN
+F 2 "CellsBoard:Molex_Micro-Fit_3.0_43650-0215_1x02_P3.00mm_Vertical" H 10650 2050 50  0001 C CNN
+F 3 "~" H 10650 2050 50  0001 C CNN
+	1    10650 2050
+	1    0    0    1   
+$EndComp
+$Comp
+L CellsBoard:HM2103 U4
+U 1 1 5DEB82A2
+P 9900 2000
+F 0 "U4" H 9900 2325 50  0000 C CNN
+F 1 "HM2103" H 9900 2234 50  0000 C CNN
+F 2 "CellsBoard:HM2103" H 9900 1800 50  0001 C CNN
+F 3 "https://productfinder.pulseeng.com/doc_type/WEB301/doc_num/HM2103NL/doc_part/HM2103NL.pdf" H 10000 1950 50  0001 C CNN
+	1    9900 2000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L CellsBoard:R R29
+U 1 1 5DEB828C
+P 9250 1800
+F 0 "R29" V 9150 1800 50  0000 C CNN
+F 1 "150" V 9250 1800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 9180 1800 50  0001 C CNN
+F 3 "~" H 9250 1800 50  0001 C CNN
+	1    9250 1800
+	-1   0    0    -1  
+$EndComp
+$Comp
+L CellsBoard:R R28
+U 1 1 5DEB8283
+P 9250 2200
+F 0 "R28" V 9150 2200 50  0000 C CNN
+F 1 "150" V 9250 2200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 9180 2200 50  0001 C CNN
+F 3 "~" H 9250 2200 50  0001 C CNN
+	1    9250 2200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L CellsBoard:C C9
+U 1 1 5DEB827A
+P 8950 2000
+F 0 "C9" V 8800 2000 50  0000 C CNN
+F 1 "10nF" V 9100 2000 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 8988 1850 50  0001 C CNN
+F 3 "~" H 8950 2000 50  0001 C CNN
+	1    8950 2000
+	0    -1   1    0   
+$EndComp
+$Comp
+L CellsBoard:R R31
+U 1 1 5DEB826A
+P 9250 850
+F 0 "R31" V 9150 850 50  0000 C CNN
+F 1 "150" V 9250 850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 9180 850 50  0001 C CNN
+F 3 "~" H 9250 850 50  0001 C CNN
+	1    9250 850 
+	-1   0    0    -1  
+$EndComp
+$Comp
+L CellsBoard:R R30
+U 1 1 5DEB8261
+P 9250 1250
+F 0 "R30" V 9150 1250 50  0000 C CNN
+F 1 "150" V 9250 1250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 9180 1250 50  0001 C CNN
+F 3 "~" H 9250 1250 50  0001 C CNN
+	1    9250 1250
+	-1   0    0    -1  
+$EndComp
+$Comp
+L CellsBoard:C C8
+U 1 1 5DEB8258
+P 9000 1050
+F 0 "C8" V 8850 1050 50  0000 C CNN
+F 1 "10nF" V 9150 1050 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 9038 900 50  0001 C CNN
+F 3 "~" H 9000 1050 50  0001 C CNN
+	1    9000 1050
+	0    -1   1    0   
+$EndComp
+$Comp
+L CellsBoard:HM2103 U3
+U 1 1 5DEB81B6
+P 9900 1050
+F 0 "U3" H 9900 1375 50  0000 C CNN
+F 1 "HM2103" H 9900 1284 50  0000 C CNN
+F 2 "CellsBoard:HM2103" H 9900 850 50  0001 C CNN
+F 3 "https://productfinder.pulseeng.com/doc_type/WEB301/doc_num/HM2103NL/doc_part/HM2103NL.pdf" H 10000 1000 50  0001 C CNN
+	1    9900 1050
+	-1   0    0    -1  
+$EndComp
+$Comp
+L CellsBoard:RF_shield_multiple_pieces S1
+U 1 1 5DEB80CF
+P 10100 5800
+F 0 "S1" H 10050 5900 50  0000 L CNN
+F 1 "RF_Shield_One_Piece" H 9750 6150 50  0000 L CNN
+F 2 "CellsBoard:Harwin_shield_30x30mm_right_angle_clips" H 10100 5700 50  0001 C CNN
+F 3 "~" H 10100 5700 50  0001 C CNN
+	1    10100 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L CellsBoard:I2C_Jumper JP19
+U 1 1 5DEB803A
+P 9550 2950
+F 0 "JP19" H 9550 3050 50  0000 C CNN
+F 1 "GND_connection" H 9550 2850 50  0000 C CNN
+F 2 "CellsBoard:I2C_JUMPER_CONNECTION" H 9550 2950 50  0001 C CNN
+F 3 "~" H 9550 2950 50  0001 C CNN
+	1    9550 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10550 4000 10850 4000
+Text Label 10850 4000 2    50   ~ 0
+CLK
+Text Label 10850 4100 2    50   ~ 0
+~CS~
+Text Label 10850 4200 2    50   ~ 0
+MISO
+Text Label 10850 4300 2    50   ~ 0
+MOSI
+$Sheet
+S 10000 3800 550  1200
+U 5DEB8198
+F0 "Temperature" 50
+F1 "Temperature section.sch" 50
+F2 "AGND" B L 10000 4900 50 
+F3 "+5V" B L 10000 3900 50 
+F4 "SCL" B L 10000 4650 50 
+F5 "SDA" B L 10000 4750 50 
+F6 "WAKE_UP" I L 10000 4500 50 
+F7 "SPI_SCK" I R 10550 4000 50 
+F8 "SPI_CS" I R 10550 4100 50 
+F9 "SPI_MISO" I R 10550 4200 50 
+F10 "SPI_MOSI" I R 10550 4300 50 
+$EndSheet
+Wire Wire Line
+	10550 4100 10850 4100
+Wire Wire Line
+	10550 4200 10850 4200
+Wire Wire Line
+	10550 4300 10850 4300
+Text Notes 11050 2050 2    50   ~ 0
+isoSPI_A
+Text Notes 10750 1100 0    50   ~ 0
+isoSPI_B
+Wire Wire Line
+	4200 3850 4450 3850
+Text Label 4300 3850 0    50   ~ 0
+WDT
+Wire Wire Line
+	4850 3800 4800 3850
+$Comp
+L CellsBoard:+5V #PWR0102
+U 1 1 5DEB7FDF
+P 4850 3800
+F 0 "#PWR0102" H 4850 3650 50  0001 C CNN
+F 1 "+5V" H 4865 3973 50  0000 C CNN
+F 2 "" H 4850 3800 50  0001 C CNN
+F 3 "" H 4850 3800 50  0001 C CNN
+	1    4850 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L CellsBoard:GND #PWR0114
+U 1 1 5DEB8080
+P 5350 5000
+F 0 "#PWR0114" H 5350 4750 50  0001 C CNN
+F 1 "GND" H 5355 4827 50  0000 C CNN
+F 2 "" H 5350 5000 50  0001 C CNN
+F 3 "" H 5350 5000 50  0001 C CNN
+	1    5350 5000
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 4950 5350 5000
+$Comp
+L CellsBoard:GND #PWR0115
+U 1 1 5DEB8087
+P 4900 5150
+F 0 "#PWR0115" H 4900 4900 50  0001 C CNN
+F 1 "GND" H 4905 4977 50  0000 C CNN
+F 2 "" H 4900 5150 50  0001 C CNN
+F 3 "" H 4900 5150 50  0001 C CNN
+	1    4900 5150
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 5100 4900 5150
+Wire Wire Line
+	5500 4350 5350 4350
+$Comp
+L CellsBoard:GND #PWR0117
+U 1 1 5DEB8095
+P 5500 4350
+F 0 "#PWR0117" H 5500 4100 50  0001 C CNN
+F 1 "GND" H 5505 4177 50  0000 C CNN
+F 2 "" H 5500 4350 50  0001 C CNN
+F 3 "" H 5500 4350 50  0001 C CNN
+	1    5500 4350
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 4500 5150 4500
+Wire Wire Line
+	4500 4200 4200 4200
+Text Label 4500 4200 2    50   ~ 0
+DRIVE
+Wire Wire Line
+	2650 750  2650 800 
+Wire Wire Line
+	2650 750  3050 750 
+Wire Wire Line
+	2600 750  2650 750 
+Connection ~ 2650 750 
+Text Label 3050 750  2    50   ~ 0
+V+
+Text Label 2550 3900 0    50   ~ 0
+Cell10
+Text Label 2550 3600 0    50   ~ 0
+Cell11
+Text Label 2550 3300 0    50   ~ 0
+Cell12
+Text Label 2550 4200 0    50   ~ 0
+Cell9
+Text Label 2550 4500 0    50   ~ 0
+Cell8
+Text Label 2550 4800 0    50   ~ 0
+Cell7
+Text Label 2550 5100 0    50   ~ 0
+Cell6
+Text Label 2550 5400 0    50   ~ 0
+Cell5
+Text Label 2550 6900 0    50   ~ 0
+Cell0
+Text Label 2550 6600 0    50   ~ 0
+Cell1
+Text Label 2550 6300 0    50   ~ 0
+Cell2
+Text Label 2550 6000 0    50   ~ 0
+Cell3
+Text Label 2550 5700 0    50   ~ 0
+Cell4
+Text Label 4900 4800 2    50   ~ 0
+VRef2
+Text Label 4900 4650 2    50   ~ 0
+VRef1
+Wire Wire Line
+	2550 3300 3150 3300
+Wire Wire Line
+	2550 3600 3150 3600
+Wire Wire Line
+	2550 3900 3150 3900
+Wire Wire Line
+	2550 4200 3150 4200
+Wire Wire Line
+	2550 4500 3150 4500
+Wire Wire Line
+	2550 4800 3150 4800
+Wire Wire Line
+	2550 5100 3150 5100
+Wire Wire Line
+	2550 5400 3150 5400
+Wire Wire Line
+	2550 5700 3150 5700
+Wire Wire Line
+	2550 6000 3150 6000
+Wire Wire Line
+	2550 6300 3150 6300
+Wire Wire Line
+	2550 6600 3150 6600
+Wire Wire Line
+	2550 6900 3150 6900
+Text HLabel 3050 4050 0    50   Input ~ 0
+S10
+Text HLabel 3050 4350 0    50   Input ~ 0
+S9
+Text HLabel 3050 4650 0    50   Input ~ 0
+S8
+Text HLabel 3050 4950 0    50   Input ~ 0
+S7
+Text HLabel 3050 5250 0    50   Input ~ 0
+S6
+Text HLabel 3050 5550 0    50   Input ~ 0
+S5
+Text HLabel 3050 5850 0    50   Input ~ 0
+S4
+Text HLabel 3050 6150 0    50   Input ~ 0
+S3
+Text HLabel 3050 3150 0    50   Input ~ 0
+S13
+Text HLabel 3050 3450 0    50   Input ~ 0
+S12
+Text HLabel 3050 3750 0    50   Input ~ 0
+S11
+Text HLabel 3050 6450 0    50   Input ~ 0
+S2
+Text HLabel 3050 6750 0    50   Input ~ 0
+S1
+Wire Wire Line
+	3050 3150 3150 3150
+Wire Wire Line
+	3050 3450 3150 3450
+Wire Wire Line
+	3050 3750 3150 3750
+Wire Wire Line
+	3050 4050 3150 4050
+Wire Wire Line
+	3050 4350 3150 4350
+Wire Wire Line
+	3050 4650 3150 4650
+Wire Wire Line
+	3050 4950 3150 4950
+Wire Wire Line
+	3050 5250 3150 5250
+Wire Wire Line
+	3050 5550 3150 5550
+Wire Wire Line
+	3050 5850 3150 5850
+Wire Wire Line
+	3050 6150 3150 6150
+Wire Wire Line
+	3050 6450 3150 6450
+Wire Wire Line
+	3050 6750 3150 6750
+Wire Wire Line
+	4200 6300 4550 6300
+Wire Wire Line
+	4200 6450 4550 6450
+Text Label 4550 6300 2    50   ~ 0
+SDA
+Text Label 4550 6450 2    50   ~ 0
+SCL
+Wire Wire Line
+	4800 3850 4800 4350
+Connection ~ 4800 3850
+$Comp
+L CellsBoard:GND #PWR0124
+U 1 1 5D5755F4
+P 4500 5400
+F 0 "#PWR0124" H 4500 5150 50  0001 C CNN
+F 1 "GND" H 4505 5227 50  0000 C CNN
+F 2 "" H 4500 5400 50  0001 C CNN
+F 3 "" H 4500 5400 50  0001 C CNN
+	1    4500 5400
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 5100 4500 5050
+Wire Wire Line
+	4200 4800 4900 4800
+Wire Wire Line
+	4200 4650 5350 4650
+$Comp
+L CellsBoard:+5V #PWR0123
+U 1 1 5D68374E
+P 4500 5000
+F 0 "#PWR0123" H 4500 4850 50  0001 C CNN
+F 1 "+5V" H 4515 5173 50  0000 C CNN
+F 2 "" H 4500 5000 50  0001 C CNN
+F 3 "" H 4500 5000 50  0001 C CNN
+	1    4500 5000
+	1    0    0    -1  
+$EndComp
+Connection ~ 4500 5050
+Wire Wire Line
+	4800 4350 4950 4350
+Wire Wire Line
+	4750 3850 4800 3850
+Wire Wire Line
+	4500 5050 4200 5050
+Wire Wire Line
+	4200 5050 4200 4950
+NoConn ~ 4200 6900
+NoConn ~ 4200 6750
+NoConn ~ 4200 6600
+NoConn ~ 4200 6150
+NoConn ~ 4200 6000
+NoConn ~ 4200 5850
+NoConn ~ 4200 5700
+Wire Wire Line
+	3050 2850 3150 2850
+Wire Wire Line
+	3050 2550 3150 2550
+Wire Wire Line
+	3050 2250 3150 2250
+Wire Wire Line
+	3050 1950 3150 1950
+Wire Wire Line
+	3050 1650 3150 1650
+Text HLabel 3050 2850 0    50   Input ~ 0
+S14
+Text HLabel 3050 2550 0    50   Input ~ 0
+S15
+Text HLabel 3050 2250 0    50   Input ~ 0
+S16
+Text HLabel 3050 1950 0    50   Input ~ 0
+S17
+Text HLabel 3050 1650 0    50   Input ~ 0
+S18
+Wire Wire Line
+	2550 3000 3150 3000
+Wire Wire Line
+	2550 2700 3150 2700
+Wire Wire Line
+	2550 2400 3150 2400
+Wire Wire Line
+	2550 2100 3150 2100
+Wire Wire Line
+	2550 1800 3150 1800
+Wire Wire Line
+	2550 1500 3150 1500
+Wire Wire Line
+	4200 2100 4450 2100
+Wire Wire Line
+	5350 2550 5400 2550
+Wire Wire Line
+	4200 2550 5050 2550
+Wire Wire Line
+	4200 2400 5250 2400
+Wire Wire Line
+	5250 2400 5400 2550
+Connection ~ 5400 2550
+Wire Wire Line
+	5400 2650 5400 2550
+Text Label 4500 1350 2    50   ~ 0
+IPB
+Wire Wire Line
+	4200 1350 4500 1350
+Text Label 4500 1500 2    50   ~ 0
+IMB
+Wire Wire Line
+	4200 1500 4500 1500
+Text Label 5450 1850 2    50   ~ 0
+IPA
+Wire Wire Line
+	5150 1850 5450 1850
+Text Label 5450 1950 2    50   ~ 0
+IMA
+Wire Wire Line
+	5150 1950 5450 1950
+Wire Wire Line
+	4200 1950 4250 1950
+Wire Wire Line
+	4250 1950 4450 2100
+Wire Wire Line
+	4250 2250 4200 2250
+Connection ~ 4450 2100
+Wire Wire Line
+	4450 2100 4250 2250
+Text Label 2550 2700 0    50   ~ 0
+Cell14
+Text Label 2550 3000 0    50   ~ 0
+Cell13
+Text Label 2550 2400 0    50   ~ 0
+Cell15
+Text Label 2550 2100 0    50   ~ 0
+Cell16
+Text Label 2550 1800 0    50   ~ 0
+Cell17
+Text Label 2550 1500 0    50   ~ 0
+Cell18
+Wire Wire Line
+	5400 2950 5400 3000
+Text Label 4250 2400 0    50   ~ 0
+ICMP
+Text Label 4250 2550 0    50   ~ 0
+IBIAS
+Wire Wire Line
+	3050 1250 3150 1350
+Wire Wire Line
+	3050 750  3050 1250
+$Comp
+L CellsBoard:GND #PWR0116
+U 1 1 5DEB808E
+P 5400 3000
+F 0 "#PWR0116" H 5400 2750 50  0001 C CNN
+F 1 "GND" H 5405 2827 50  0000 C CNN
+F 2 "" H 5400 3000 50  0001 C CNN
+F 3 "" H 5400 3000 50  0001 C CNN
+	1    5400 3000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L CellsBoard:GND #PWR0112
+U 1 1 5DEB8073
+P 4550 2100
+F 0 "#PWR0112" H 4550 1850 50  0001 C CNN
+F 1 "GND" H 4555 1927 50  0000 C CNN
+F 2 "" H 4550 2100 50  0001 C CNN
+F 3 "" H 4550 2100 50  0001 C CNN
+	1    4550 2100
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 2100 4450 2100
+Wire Wire Line
+	2650 1100 2650 1150
+$Comp
+L CellsBoard:GND #PWR0110
+U 1 1 5DEB8064
+P 2650 1150
+F 0 "#PWR0110" H 2650 900 50  0001 C CNN
+F 1 "GND" H 2655 977 50  0000 C CNN
+F 2 "" H 2650 1150 50  0001 C CNN
+F 3 "" H 2650 1150 50  0001 C CNN
+	1    2650 1150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L CellsBoard:+5V #PWR0106
+U 1 1 5DEB8048
+P 5100 2900
+F 0 "#PWR0106" H 5100 2750 50  0001 C CNN
+F 1 "+5V" H 5115 3073 50  0000 C CNN
+F 2 "" H 5100 2900 50  0001 C CNN
+F 3 "" H 5100 2900 50  0001 C CNN
+	1    5100 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 2700 4950 3100
+Wire Wire Line
+	2000 750  2300 750 
+Text Label 2000 750  0    50   ~ 0
+CB18
+$Comp
+L CellsBoard:R R25
+U 1 1 5DEB7F9A
+P 5200 2550
+F 0 "R25" V 5100 2550 50  0000 C CNN
+F 1 "604" V 5200 2550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5130 2550 50  0001 C CNN
+F 3 "~" H 5200 2550 50  0001 C CNN
+	1    5200 2550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CellsBoard:C C5
+U 1 1 5DEB811F
+P 2650 950
+F 0 "C5" V 2500 950 50  0000 C CNN
+F 1 "100nF_HV" V 2800 950 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 2688 800 50  0001 C CNN
+F 3 "~" H 2650 950 50  0001 C CNN
+	1    2650 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L CellsBoard:LTC6813-1 U1
+U 1 1 5DEB8188
+P 3700 4200
+F 0 "U1" H 3675 7315 50  0000 C CNN
+F 1 "LTC6813-1" H 3675 7224 50  0000 C CNN
+F 2 "CellsBoard:LTC6813-1_minimal" H 3300 7200 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/LTC6813-1.pdf" H 3300 7200 50  0001 C CNN
+	1    3700 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L CellsBoard:R R24
+U 1 1 5DEB82B0
+P 5400 2800
+F 0 "R24" V 5300 2800 50  0000 C CNN
+F 1 "1k4" V 5400 2800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5330 2800 50  0001 C CNN
+F 3 "~" H 5400 2800 50  0001 C CNN
+	1    5400 2800
+	-1   0    0    1   
+$EndComp
+$Comp
+L CellsBoard:C C10
+U 1 1 5D55D008
+P 4500 5250
+F 0 "C10" V 4350 5250 50  0000 C CNN
+F 1 "100nF" V 4650 5250 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4538 5100 50  0001 C CNN
+F 3 "~" H 4500 5250 50  0001 C CNN
+	1    4500 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L CellsBoard:C C7
+U 1 1 5DEB82A8
+P 4900 4950
+F 0 "C7" V 4750 4950 50  0000 C CNN
+F 1 "1uF" V 5050 4950 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4938 4800 50  0001 C CNN
+F 3 "~" H 4900 4950 50  0001 C CNN
+	1    4900 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L CellsBoard:R R27
+U 1 1 5DEB8125
+P 2450 750
+F 0 "R27" V 2350 750 50  0000 C CNN
+F 1 "100" V 2450 750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2380 750 50  0001 C CNN
+F 3 "~" H 2450 750 50  0001 C CNN
+	1    2450 750 
+	0    1    1    0   
+$EndComp
+$Comp
+L CellsBoard:SolderJumper_3_Open JP20
+U 1 1 5DEB80C8
+P 5150 4350
+F 0 "JP20" H 5150 4574 50  0000 C CNN
+F 1 "DTEN" H 5150 4483 50  0000 C CNN
+F 2 "CellsBoard:Jumper_adafruit" H 5150 4350 50  0001 C CNN
+F 3 "~" H 5150 4350 50  0001 C CNN
+	1    5150 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L CellsBoard:R R26
+U 1 1 5DEB7FE5
+P 4600 3850
+F 0 "R26" V 4500 3850 50  0000 C CNN
+F 1 "1M" V 4600 3850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4530 3850 50  0001 C CNN
+F 3 "Optional" H 4600 3850 50  0001 C CNN
+	1    4600 3850
+	0    -1   1    0   
+$EndComp
+$Comp
+L CellsBoard:C C6
+U 1 1 5DEB812B
+P 5350 4800
+F 0 "C6" V 5200 4800 50  0000 C CNN
+F 1 "1uF" V 5500 4800 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5388 4650 50  0001 C CNN
+F 3 "~" H 5350 4800 50  0001 C CNN
+	1    5350 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L CellsBoard:SolderJumper_3_Open JP25
+U 1 1 5E690E39
+P 5100 3100
+F 0 "JP25" H 5100 3200 50  0000 C CNN
+F 1 "SPI" H 5250 3250 50  0001 C CNN
+F 2 "CellsBoard:Jumper_adafruit" H 5100 3100 50  0001 C CNN
+F 3 "~" H 5100 3100 50  0001 C CNN
+	1    5100 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L CellsBoard:GND #PWR0146
+U 1 1 5E70508D
+P 5100 3300
+F 0 "#PWR0146" H 5100 3050 50  0001 C CNN
+F 1 "GND" H 5105 3127 50  0000 C CNN
+F 2 "" H 5100 3300 50  0001 C CNN
+F 3 "" H 5100 3300 50  0001 C CNN
+	1    5100 3300
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 2700 4950 2700
+Wire Wire Line
+	5150 1400 5450 1400
+Wire Wire Line
+	5150 1500 5450 1500
+Text Label 5450 1400 2    50   ~ 0
+CLK
+Text Label 5450 1500 2    50   ~ 0
+~CS~
+Text Label 4450 2850 2    50   ~ 0
+MISO
+Text Label 4450 3000 2    50   ~ 0
+MOSI
+$Comp
+L Device:R_Pack02 RN15
+U 1 1 5E96F471
+P 4950 1400
+F 0 "RN15" V 4725 1400 50  0000 C CNN
+F 1 "0 ohm" V 4724 1400 50  0001 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_2x0603" V 5125 1400 50  0001 C CNN
+F 3 "~" H 4950 1400 50  0001 C CNN
+	1    4950 1400
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	4200 1650 4600 1650
+$Comp
+L Device:R_Pack02 RN16
+U 1 1 5E9E8C6C
+P 4950 1950
+F 0 "RN16" V 4725 1950 50  0000 C CNN
+F 1 "0 ohm" V 4724 1950 50  0001 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_2x0603" V 5125 1950 50  0001 C CNN
+F 3 "~" H 4950 1950 50  0001 C CNN
+	1    4950 1950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4650 1400 4650 1650
+Wire Wire Line
+	4200 1800 4550 1800
+Wire Wire Line
+	4700 1500 4700 1800
+Wire Wire Line
+	4750 1500 4700 1500
+Wire Wire Line
+	4650 1400 4750 1400
+Wire Wire Line
+	4750 1850 4600 1850
+Wire Wire Line
+	4600 1850 4600 1650
+Connection ~ 4600 1650
+Wire Wire Line
+	4600 1650 4650 1650
+Wire Wire Line
+	4750 1950 4550 1950
+Wire Wire Line
+	4550 1950 4550 1800
+Connection ~ 4550 1800
+Wire Wire Line
+	4550 1800 4700 1800
+Wire Wire Line
+	4200 2850 4450 2850
+Wire Wire Line
+	4200 3000 4450 3000
+Text Label 700  4500 0    50   ~ 0
+Cell18
+Text Label 700  4600 0    50   ~ 0
+Cell17
+Text Label 700  4700 0    50   ~ 0
+Cell16
+Text Label 700  4800 0    50   ~ 0
+Cell15
+Wire Wire Line
+	1000 4500 700  4500
+Wire Wire Line
+	1000 4600 700  4600
+Wire Wire Line
+	1000 4700 700  4700
+Wire Wire Line
+	1000 4800 700  4800
+Text Label 1700 4500 2    50   ~ 0
+Cell17
+Text Label 1700 4600 2    50   ~ 0
+Cell16
+Text Label 1700 4700 2    50   ~ 0
+Cell15
+Wire Wire Line
+	1400 4500 1700 4500
+Wire Wire Line
+	1400 4600 1700 4600
+Wire Wire Line
+	1400 4700 1700 4700
+Text Label 1700 4800 2    50   ~ 0
+Cell14
+Wire Wire Line
+	1400 4800 1700 4800
+Text Label 700  5450 0    50   ~ 0
+Cell11
+Text Label 700  5350 0    50   ~ 0
+Cell12
+Text Label 700  5250 0    50   ~ 0
+Cell13
+Text Label 700  5150 0    50   ~ 0
+Cell14
+Wire Wire Line
+	1000 5150 700  5150
+Wire Wire Line
+	1000 5250 700  5250
+Wire Wire Line
+	1000 5350 700  5350
+Wire Wire Line
+	1000 5450 700  5450
+Text Label 1700 5350 2    50   ~ 0
+Cell11
+Text Label 1700 5250 2    50   ~ 0
+Cell12
+Text Label 1700 5150 2    50   ~ 0
+Cell13
+Wire Wire Line
+	1400 5150 1700 5150
+Wire Wire Line
+	1400 5250 1700 5250
+Wire Wire Line
+	1400 5350 1700 5350
+Text Label 1700 6100 2    50   ~ 0
+Cell6
+Text Label 1700 7200 2    50   ~ 0
+Cell0
+Text Label 1700 7100 2    50   ~ 0
+Cell1
+Text Label 1700 6000 2    50   ~ 0
+Cell7
+Text Label 1700 5900 2    50   ~ 0
+Cell8
+Text Label 1700 5800 2    50   ~ 0
+Cell9
+Wire Wire Line
+	1400 7100 1700 7100
+Wire Wire Line
+	1400 7200 1700 7200
+Wire Wire Line
+	1400 6100 1700 6100
+Wire Wire Line
+	1400 5800 1700 5800
+Wire Wire Line
+	1400 5900 1700 5900
+Wire Wire Line
+	1400 6000 1700 6000
+Text Label 700  7200 0    50   ~ 0
+Cell1
+Text Label 700  7100 0    50   ~ 0
+Cell2
+Text Label 700  6100 0    50   ~ 0
+Cell7
+Text Label 700  6000 0    50   ~ 0
+Cell8
+Text Label 700  5900 0    50   ~ 0
+Cell9
+Text Label 700  5800 0    50   ~ 0
+Cell10
+Wire Wire Line
+	1000 7100 700  7100
+Wire Wire Line
+	1000 7200 700  7200
+Wire Wire Line
+	1000 5800 700  5800
+Wire Wire Line
+	1000 5900 700  5900
+Wire Wire Line
+	1000 6000 700  6000
+Wire Wire Line
+	1000 6100 700  6100
+Text Label 1700 5450 2    50   ~ 0
+Cell10
+Wire Wire Line
+	1400 5450 1700 5450
+Wire Wire Line
+	1000 6750 700  6750
+Wire Wire Line
+	1000 6650 700  6650
+Wire Wire Line
+	1000 6550 700  6550
+Wire Wire Line
+	1000 6450 700  6450
+Text Label 700  6650 0    50   ~ 0
+Cell4
+Text Label 700  6750 0    50   ~ 0
+Cell3
+Text Label 700  6550 0    50   ~ 0
+Cell5
+Text Label 700  6450 0    50   ~ 0
+Cell6
+Wire Wire Line
+	1400 6650 1700 6650
+Wire Wire Line
+	1400 6550 1700 6550
+Wire Wire Line
+	1400 6450 1700 6450
+Wire Wire Line
+	1400 6750 1700 6750
+Text Label 1700 6550 2    50   ~ 0
+Cell4
+Text Label 1700 6650 2    50   ~ 0
+Cell3
+Text Label 1700 6750 2    50   ~ 0
+Cell2
+Text Label 1700 6450 2    50   ~ 0
+Cell5
+$Comp
+L CellsBoard:GND #PWR0185
+U 1 1 5ED7CD42
+P 800 7400
+F 0 "#PWR0185" H 800 7150 50  0001 C CNN
+F 1 "GND" H 805 7227 50  0000 C CNN
+F 2 "" H 800 7400 50  0001 C CNN
+F 3 "" H 800 7400 50  0001 C CNN
+	1    800  7400
+	-1   0    0    -1  
+$EndComp
+Text Label 700  7300 0    50   ~ 0
+Cell0
+Wire Wire Line
+	1000 7300 700  7300
+Wire Wire Line
+	950  3750 1000 3750
+Connection ~ 950  3750
+Wire Wire Line
+	900  3750 950  3750
+Wire Wire Line
+	950  3750 950  3800
+Wire Wire Line
+	1400 3850 1400 4000
+Connection ~ 1000 4000
+Wire Wire Line
+	1000 4000 1400 4000
+Wire Wire Line
+	1000 3850 1000 4000
+Wire Wire Line
+	1000 3850 950  3800
+Wire Wire Line
+	1400 1900 1700 1900
+Wire Wire Line
+	1400 1800 1700 1800
+Wire Wire Line
+	1400 1700 1700 1700
+Wire Wire Line
+	1400 1600 1700 1600
+Wire Wire Line
+	1400 2550 1700 2550
+Wire Wire Line
+	1400 2450 1700 2450
+Wire Wire Line
+	1400 2350 1700 2350
+Wire Wire Line
+	1400 2250 1700 2250
+Wire Wire Line
+	1400 3200 1700 3200
+Wire Wire Line
+	1400 3100 1700 3100
+Wire Wire Line
+	1400 3000 1700 3000
+Wire Wire Line
+	1400 2900 1700 2900
+Wire Wire Line
+	1400 3750 1700 3750
+Wire Wire Line
+	1400 3650 1700 3650
+Wire Wire Line
+	1400 3550 1700 3550
+Text Label 1700 2250 2    50   ~ 0
+Cell10
+Text Label 1700 2350 2    50   ~ 0
+Cell9
+Text Label 1700 2450 2    50   ~ 0
+Cell8
+Text Label 1700 2550 2    50   ~ 0
+Cell7
+Wire Wire Line
+	1400 1250 1700 1250
+Wire Wire Line
+	1400 1150 1700 1150
+Wire Wire Line
+	1400 1050 1700 1050
+Wire Wire Line
+	1400 950  1700 950 
+Text Label 1700 3100 2    50   ~ 0
+Cell4
+Text Label 1700 3200 2    50   ~ 0
+Cell3
+Text Label 1700 3550 2    50   ~ 0
+Cell2
+Text Label 1700 3650 2    50   ~ 0
+Cell1
+Text Label 1700 3750 2    50   ~ 0
+Cell0
+Text Label 1700 3000 2    50   ~ 0
+Cell5
+Text Label 1700 2900 2    50   ~ 0
+Cell6
+Text Label 1700 1600 2    50   ~ 0
+Cell14
+Text Label 1700 1700 2    50   ~ 0
+Cell13
+Text Label 1700 1800 2    50   ~ 0
+Cell12
+Text Label 1700 1900 2    50   ~ 0
+Cell11
+Text Label 1700 1250 2    50   ~ 0
+Cell15
+Text Label 1700 1150 2    50   ~ 0
+Cell16
+Text Label 1700 1050 2    50   ~ 0
+Cell17
+Text Label 1700 950  2    50   ~ 0
+Cell18
+Text HLabel 900  3650 0    50   Input ~ 0
+CB1
+Text HLabel 900  3750 0    50   Input ~ 0
+CB0
+Text HLabel 900  3550 0    50   Input ~ 0
+CB2
+Text HLabel 900  3200 0    50   Input ~ 0
+CB3
+Text HLabel 900  3100 0    50   Input ~ 0
+CB4
+Text HLabel 900  3000 0    50   Input ~ 0
+CB5
+Text HLabel 900  2900 0    50   Input ~ 0
+CB6
+Text HLabel 900  2550 0    50   Input ~ 0
+CB7
+Text HLabel 900  2450 0    50   Input ~ 0
+CB8
+Text HLabel 900  2350 0    50   Input ~ 0
+CB9
+Text HLabel 900  2250 0    50   Input ~ 0
+CB10
+Text HLabel 900  1900 0    50   Input ~ 0
+CB11
+Text HLabel 900  1800 0    50   Input ~ 0
+CB12
+Text HLabel 900  1700 0    50   Input ~ 0
+CB13
+Text HLabel 900  1600 0    50   Input ~ 0
+CB14
+Text HLabel 900  1250 0    50   Input ~ 0
+CB15
+Text HLabel 900  1150 0    50   Input ~ 0
+CB16
+Text HLabel 900  950  0    50   Input ~ 0
+CB18
+Text HLabel 900  1050 0    50   Input ~ 0
+CB17
+Wire Wire Line
+	900  3100 1000 3100
+Wire Wire Line
+	900  2350 1000 2350
+Wire Wire Line
+	900  2450 1000 2450
+Wire Wire Line
+	900  2550 1000 2550
+Wire Wire Line
+	900  2900 1000 2900
+Wire Wire Line
+	900  3000 1000 3000
+Wire Wire Line
+	900  3200 1000 3200
+Wire Wire Line
+	900  3550 1000 3550
+Wire Wire Line
+	900  3650 1000 3650
+Wire Wire Line
+	900  1900 1000 1900
+Wire Wire Line
+	900  2250 1000 2250
+Wire Wire Line
+	900  1700 1000 1700
+Wire Wire Line
+	900  1800 1000 1800
+Wire Wire Line
+	900  1250 1000 1250
+Wire Wire Line
+	900  1600 1000 1600
+Wire Wire Line
+	900  1050 1000 1050
+Wire Wire Line
+	900  1150 1000 1150
+Wire Wire Line
+	900  950  1000 950 
+$Comp
+L CellsBoard:GND #PWR0109
+U 1 1 5DEB805E
+P 1000 4050
+F 0 "#PWR0109" H 1000 3800 50  0001 C CNN
+F 1 "GND" H 1005 3877 50  0000 C CNN
+F 2 "" H 1000 4050 50  0001 C CNN
+F 3 "" H 1000 4050 50  0001 C CNN
+	1    1000 4050
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 4000 1000 4050
+Wire Wire Line
+	1400 7300 1450 7300
+Wire Wire Line
+	1450 7300 1450 7400
+Wire Wire Line
+	1450 7400 1400 7400
+$Comp
+L Device:R_Pack04 RN10
+U 1 1 5D65AEAD
+P 1200 3750
+F 0 "RN10" V 900 3700 50  0000 C CNN
+F 1 "39" V 1400 3750 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0603" V 1475 3750 50  0001 C CNN
+F 3 "~" H 1200 3750 50  0001 C CNN
+	1    1200 3750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Pack04 RN9
+U 1 1 5D6413CB
+P 1200 3100
+F 0 "RN9" V 900 3050 50  0000 C CNN
+F 1 "39" V 1400 3100 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0603" V 1475 3100 50  0001 C CNN
+F 3 "~" H 1200 3100 50  0001 C CNN
+	1    1200 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Pack04 RN8
+U 1 1 5D6279F2
+P 1200 2450
+F 0 "RN8" V 900 2400 50  0000 C CNN
+F 1 "39" V 1400 2450 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0603" V 1475 2450 50  0001 C CNN
+F 3 "~" H 1200 2450 50  0001 C CNN
+	1    1200 2450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Pack04 RN7
+U 1 1 5D60E12C
+P 1200 1800
+F 0 "RN7" V 900 1750 50  0000 C CNN
+F 1 "39" V 1400 1800 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0603" V 1475 1800 50  0001 C CNN
+F 3 "~" H 1200 1800 50  0001 C CNN
+	1    1200 1800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Pack04 RN6
+U 1 1 5D5F3FB2
+P 1200 1150
+F 0 "RN6" V 900 1100 50  0000 C CNN
+F 1 "39" V 1400 1150 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0603" V 1475 1150 50  0001 C CNN
+F 3 "~" H 1200 1150 50  0001 C CNN
+	1    1200 1150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Pack04 CN5
+U 1 1 5E95A7DA
+P 1200 7200
+F 0 "CN5" V 1400 7200 50  0000 C CNN
+F 1 "10nF_array" V 850 7200 50  0000 C TNN
+F 2 "CellsBoard:C_4Array_1206" V 1475 7200 50  0001 C CNN
+F 3 "CA064X103K1RACTU" H 1200 7200 50  0001 C CNN
+	1    1200 7200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Pack04 CN4
+U 1 1 5E942E8D
+P 1200 6550
+F 0 "CN4" V 1400 6550 50  0000 C CNN
+F 1 "10nF_array" V 850 6550 50  0000 C TNN
+F 2 "CellsBoard:C_4Array_1206" V 1475 6550 50  0001 C CNN
+F 3 "CA064X103K1RACTU" H 1200 6550 50  0001 C CNN
+	1    1200 6550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Pack04 CN3
+U 1 1 5E942E87
+P 1200 5900
+F 0 "CN3" V 1400 5900 50  0000 C CNN
+F 1 "10nF_array" V 850 5900 50  0000 C TNN
+F 2 "CellsBoard:C_4Array_1206" V 1475 5900 50  0001 C CNN
+F 3 "CA064X103K1RACTU" H 1200 5900 50  0001 C CNN
+	1    1200 5900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Pack04 CN2
+U 1 1 5E92AE2D
+P 1200 5250
+F 0 "CN2" V 1400 5250 50  0000 C CNN
+F 1 "10nF_array" V 850 5250 50  0000 C TNN
+F 2 "CellsBoard:C_4Array_1206" V 1475 5250 50  0001 C CNN
+F 3 "CA064X103K1RACTU" H 1200 5250 50  0001 C CNN
+	1    1200 5250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Pack04 CN1
+U 1 1 5E92A532
+P 1200 4600
+F 0 "CN1" V 1400 4600 50  0000 C CNN
+F 1 "10nF_array" V 850 4600 50  0000 C TNN
+F 2 "CellsBoard:C_4Array_1206" V 1475 4600 50  0001 C CNN
+F 3 "CA064X103K1RACTU" H 1200 4600 50  0001 C CNN
+	1    1200 4600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	800  7400 1000 7400
+$Comp
+L CellsBoard:GND #PWR0140
+U 1 1 5F31E25F
+P 1650 7400
+F 0 "#PWR0140" H 1650 7150 50  0001 C CNN
+F 1 "GND" H 1655 7227 50  0000 C CNN
+F 2 "" H 1650 7400 50  0001 C CNN
+F 3 "" H 1650 7400 50  0001 C CNN
+	1    1650 7400
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 7400 1450 7400
+Connection ~ 1450 7400
+Connection ~ 1000 3850
+Text Notes 2250 7450 0    100  ~ 20
+If SPI is needed RN15 populated instead of RN16
+Text Notes 650  750  0    100  ~ 20
+RC FILTER
+Wire Notes Line
+	1900 500  1900 7750
+Wire Wire Line
+	4500 5000 4500 5050
+$EndSCHEMATC

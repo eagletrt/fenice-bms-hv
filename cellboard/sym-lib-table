@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name CellsBoard)(type Legacy)(uri ${KIPRJMOD}/library/CellsBoard.lib)(options "")(descr ""))
+  (lib (name CellsBoard-rescue)(type Legacy)(uri ${KIPRJMOD}/CellsBoard-rescue.lib)(options "")(descr ""))
+)

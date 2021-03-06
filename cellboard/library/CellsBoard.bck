@@ -1,0 +1,134 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP +5V
+D Power flag, +5V
+K power-flag
+$ENDCMP
+#
+$CMP +5VA
+D Power flag, +5VA
+K power-flag
+$ENDCMP
+#
+$CMP ADG728
+D Single 8-to-1 CMOS Low Voltage 2-Wire Serially Controlled, Matrix Switches
+K analog switch selector multiplexer TWI I2C IIC 8-to-1
+F http://www.analog.com/media/en/technical-documentation/data-sheets/ADG728_729.pdf
+$ENDCMP
+#
+$CMP ATtiny828
+D 20MHz, 8kB Flash, 512B SRAM, 256B EEPROM, debugWIRE, QFN-32
+K AVR 8bit Microcontroller tinyAVR
+F http://ww1.microchip.com/downloads/en/DeviceDoc/doc8371.pdf
+$ENDCMP
+#
+$CMP C
+D Unpolarized capacitor
+K cap capacitor
+F ~
+$ENDCMP
+#
+$CMP D
+D Diode
+K diode
+F ~
+$ENDCMP
+#
+$CMP Enable
+D Generic connector, double row, 02x01, this symbol is compatible with counter-clockwise, top-bottom and odd-even numbering schemes., script generated (kicad-library-utils/schlib/autogen/connector/)
+K connector
+F ~
+$ENDCMP
+#
+$CMP Ferrite_Bead
+D Ferrite bead, small symbol
+K L ferrite bead inductor filter
+F ~
+$ENDCMP
+#
+$CMP Flex_TE_Connector_5P
+F https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7F2328702%7F5%7Fpdf%7FEnglish%7FENG_CD_2328702_5.pdf%7F2328702-8
+$ENDCMP
+#
+$CMP Flex_TE_Connector_6P
+F https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7F2328702%7F5%7Fpdf%7FEnglish%7FENG_CD_2328702_5.pdf%7F2328702-8
+$ENDCMP
+#
+$CMP Flex_TE_Connector_8P
+F https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7F2328702%7F5%7Fpdf%7FEnglish%7FENG_CD_2328702_5.pdf%7F2328702-8
+$ENDCMP
+#
+$CMP Fuse
+D Fuse
+K fuse
+F ~
+$ENDCMP
+#
+$CMP GND
+D Power flag, ground
+K power-flag
+$ENDCMP
+#
+$CMP GNDA
+D Power flag, analog ground
+K power-flag
+$ENDCMP
+#
+$CMP HM2103
+D HM2103 Pulse Transformer with center tap
+F https://productfinder.pulseeng.com/doc_type/WEB301/doc_num/HM2103NL/doc_part/HM2103NL.pdf
+$ENDCMP
+#
+$CMP I2C_Jumper
+D Solder Jumper, 2-pole, closed/bridged
+K solder jumper SPST
+F ~
+$ENDCMP
+#
+$CMP L
+D Inductor
+K inductor choke coil reactor magnetic
+F ~
+$ENDCMP
+#
+$CMP LTC6804
+D LTC6804-2 Battery Stack Monitoring IC
+K battery, bms, linear
+F http://www.analog.com/media/en/technical-documentation/data-sheets/680412fc.pdf
+$ENDCMP
+#
+$CMP MCP181X
+F https://www.mouser.it/datasheet/2/268/MCP1811A-11B-12A-12B-Family-Data-Sheet-DS20006088A-1488740.pdf
+$ENDCMP
+#
+$CMP R
+D Resistor
+K R res resistor
+F ~
+$ENDCMP
+#
+$CMP RF_shield_multiple_pieces
+D Two-piece EMI RF shielding cabinet
+K RF EMI shielding cabinet
+F ~
+$ENDCMP
+#
+$CMP SolderJumper_3_Open
+D Solder Jumper, 3-pole, open
+K Solder Jumper SPDT
+F ~
+$ENDCMP
+#
+$CMP TestPoint
+D test point
+K test point tp
+F ~
+$ENDCMP
+#
+$CMP flex_Sensor
+D Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)
+K connector
+F ~
+$ENDCMP
+#
+#End Doc Library

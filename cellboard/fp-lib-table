@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name CellsBoard)(type KiCad)(uri "$(KIPRJMOD)/modules/CellsBoard.pretty")(options "")(descr ""))
+  (lib (name simbolo_E-Agle)(type KiCad)(uri "$(KIPRJMOD)/modules/simbolo_E-Agle.pretty")(options "")(descr ""))
+)
