@@ -333,7 +333,7 @@ F 3 "" H 900 3300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Jumper_NC_Small JP15
+L CellsBoard:Jumper_NC_Small JP15
 U 1 1 5E68F5DB
 P 7050 2150
 F 0 "JP15" H 6850 2200 50  0000 C CNN
@@ -344,7 +344,7 @@ F 3 "~" H 7050 2150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Jumper_NC_Small JP16
+L CellsBoard:Jumper_NC_Small JP16
 U 1 1 5E68F5E1
 P 7050 2050
 F 0 "JP16" H 6850 2100 50  0000 C CNN
@@ -355,7 +355,7 @@ F 3 "~" H 7050 2050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Jumper_NC_Small JP13
+L CellsBoard:Jumper_NC_Small JP13
 U 1 1 5E68F5E7
 P 7050 2350
 F 0 "JP13" H 6850 2400 50  0000 C CNN
@@ -366,7 +366,7 @@ F 3 "~" H 7050 2350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Jumper_NC_Small JP14
+L CellsBoard:Jumper_NC_Small JP14
 U 1 1 5E68F5ED
 P 7050 2250
 F 0 "JP14" H 6850 2300 50  0000 C CNN
@@ -377,7 +377,7 @@ F 3 "~" H 7050 2250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Jumper_NC_Small JP17
+L CellsBoard:Jumper_NC_Small JP17
 U 1 1 5E68F5F3
 P 7050 1950
 F 0 "JP17" H 6850 2000 50  0000 C CNN
@@ -388,7 +388,7 @@ F 3 "~" H 7050 1950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Jumper_NC_Small JP18
+L CellsBoard:Jumper_NC_Small JP18
 U 1 1 5E68F5F9
 P 7050 1850
 F 0 "JP18" H 6850 1900 50  0000 C CNN
@@ -399,7 +399,7 @@ F 3 "~" H 7050 1850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Jumper_NC_Small JP9
+L CellsBoard:Jumper_NC_Small JP9
 U 1 1 5E69CC76
 P 7050 2750
 F 0 "JP9" H 6850 2800 50  0000 C CNN
@@ -410,7 +410,7 @@ F 3 "~" H 7050 2750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Jumper_NC_Small JP10
+L CellsBoard:Jumper_NC_Small JP10
 U 1 1 5E69CC7C
 P 7050 2650
 F 0 "JP10" H 6850 2700 50  0000 C CNN
@@ -421,7 +421,7 @@ F 3 "~" H 7050 2650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Jumper_NC_Small JP7
+L CellsBoard:Jumper_NC_Small JP7
 U 1 1 5E69CC82
 P 7050 2950
 F 0 "JP7" H 6850 3000 50  0000 C CNN
@@ -432,7 +432,7 @@ F 3 "~" H 7050 2950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Jumper_NC_Small JP8
+L CellsBoard:Jumper_NC_Small JP8
 U 1 1 5E69CC88
 P 7050 2850
 F 0 "JP8" H 6850 2900 50  0000 C CNN
@@ -443,7 +443,7 @@ F 3 "~" H 7050 2850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Jumper_NC_Small JP11
+L CellsBoard:Jumper_NC_Small JP11
 U 1 1 5E69CC8E
 P 7050 2550
 F 0 "JP11" H 6850 2600 50  0000 C CNN
@@ -454,7 +454,7 @@ F 3 "~" H 7050 2550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Jumper_NC_Small JP12
+L CellsBoard:Jumper_NC_Small JP12
 U 1 1 5E69CC94
 P 7050 2450
 F 0 "JP12" H 6850 2500 50  0000 C CNN
@@ -465,7 +465,7 @@ F 3 "~" H 7050 2450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Jumper_NC_Small JP3
+L CellsBoard:Jumper_NC_Small JP3
 U 1 1 5E6A3AFC
 P 7050 3350
 F 0 "JP3" H 6850 3400 50  0000 C CNN
@@ -476,7 +476,7 @@ F 3 "~" H 7050 3350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Jumper_NC_Small JP4
+L CellsBoard:Jumper_NC_Small JP4
 U 1 1 5E6A3B02
 P 7050 3250
 F 0 "JP4" H 6850 3300 50  0000 C CNN
@@ -487,7 +487,7 @@ F 3 "~" H 7050 3250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Jumper_NC_Small JP1
+L CellsBoard:Jumper_NC_Small JP1
 U 1 1 5E6A3B08
 P 7050 3550
 F 0 "JP1" H 6850 3600 50  0000 C CNN
@@ -498,7 +498,7 @@ F 3 "~" H 7050 3550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Jumper_NC_Small JP2
+L CellsBoard:Jumper_NC_Small JP2
 U 1 1 5E6A3B0E
 P 7050 3450
 F 0 "JP2" H 6850 3500 50  0000 C CNN
@@ -509,7 +509,7 @@ F 3 "~" H 7050 3450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Jumper_NC_Small JP5
+L CellsBoard:Jumper_NC_Small JP5
 U 1 1 5E6A3B14
 P 7050 3150
 F 0 "JP5" H 6850 3200 50  0000 C CNN
@@ -520,7 +520,7 @@ F 3 "~" H 7050 3150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Jumper_NC_Small JP6
+L CellsBoard:Jumper_NC_Small JP6
 U 1 1 5E6A3B1A
 P 7050 3050
 F 0 "JP6" H 6850 3100 50  0000 C CNN

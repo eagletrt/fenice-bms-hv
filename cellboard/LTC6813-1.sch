@@ -59,7 +59,7 @@ F 3 "" H 8700 2100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8750 1150 8850 1050
+	8750 1050 8850 1050
 $Comp
 L CellsBoard:GND #PWR0111
 U 1 1 5DEB806C
@@ -1479,4 +1479,6 @@ Wire Notes Line
 	1900 500  1900 7750
 Wire Wire Line
 	4500 5000 4500 5050
+Wire Wire Line
+	8750 1050 8750 1150
 $EndSCHEMATC

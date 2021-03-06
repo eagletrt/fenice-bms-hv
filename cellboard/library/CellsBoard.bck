@@ -1,5 +1,15 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP +3.3V
+D Power symbol creates a global label with name "+3.3V"
+K power-flag
+$ENDCMP
+#
+$CMP +3V3
+D Power symbol creates a global label with name "+3V3"
+K power-flag
+$ENDCMP
+#
 $CMP +5V
 D Power flag, +5V
 K power-flag
@@ -8,6 +18,12 @@ $ENDCMP
 $CMP +5VA
 D Power flag, +5VA
 K power-flag
+$ENDCMP
+#
+$CMP ADC128D818
+D 12-Bit, 8-Channel, ADC System Monitor With Temperature Sensor, I2C Interface, TSSOP-16
+K ADC 8 Channels TSSOP I2C
+F http://www.ti.com/lit/ds/symlink/adc128d818.pdf
 $ENDCMP
 #
 $CMP ADG728
@@ -25,6 +41,12 @@ $ENDCMP
 $CMP C
 D Unpolarized capacitor
 K cap capacitor
+F ~
+$ENDCMP
+#
+$CMP Conn_02x08
+D Generic connector, double row, 02x08, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)
+K connector
 F ~
 $ENDCMP
 #
@@ -99,6 +121,12 @@ $ENDCMP
 #
 $CMP MCP181X
 F https://www.mouser.it/datasheet/2/268/MCP1811A-11B-12A-12B-Family-Data-Sheet-DS20006088A-1488740.pdf
+$ENDCMP
+#
+$CMP Q_PMOS_GDS
+D P-MOSFET transistor, gate/drain/source
+K transistor PMOS P-MOS P-MOSFET
+F ~
 $ENDCMP
 #
 $CMP R

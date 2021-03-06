@@ -665,7 +665,7 @@ Wire Wire Line
 Wire Wire Line
 	5900 5000 5500 5000
 $Comp
-L CellsBoard-rescue:M95M56-WMN6P-Memory_EEPROM U10
+L Memory_EEPROM:M95256-WMN6P U10
 U 1 1 5E6762DB
 P 7200 1300
 AR Path="/5E6762DB" Ref="U10"  Part="1" 
