@@ -1,0 +1,14 @@
+
+# export files for BOM
+*.csv
+*.tsv
+*.xml
+*.txt
+# backup files
+*.bak
+*.sch-bak
+*.kicad_pcb-bak
+
+
+# other files
+other/
