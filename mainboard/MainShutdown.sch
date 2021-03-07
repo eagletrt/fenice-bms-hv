@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 4
 Title ""
-Date ""
-Rev ""
+Date "2020-12-10"
+Rev "v1.1_wip"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -70,8 +70,6 @@ Wire Wire Line
 	3550 6200 3550 6300
 Wire Wire Line
 	3550 6300 3500 6300
-Wire Wire Line
-	1250 6300 1300 6300
 $Comp
 L MainBoard:R_power_backplane R55
 U 1 1 5DC7CE9F
@@ -100,19 +98,19 @@ $EndComp
 $Comp
 L power:+12V #PWR?
 U 1 1 5E2E4AFA
-P 1250 6300
+P 1150 5950
 AR Path="/5E2E4AFA" Ref="#PWR?"  Part="1" 
 AR Path="/5B045B0D/5E2E4AFA" Ref="#PWR0140"  Part="1" 
-F 0 "#PWR0140" H 1250 6150 50  0001 C CNN
-F 1 "+12V" V 1250 6500 50  0000 C CNN
-F 2 "" H 1250 6300 50  0001 C CNN
-F 3 "" H 1250 6300 50  0001 C CNN
-	1    1250 6300
+F 0 "#PWR0140" H 1150 5800 50  0001 C CNN
+F 1 "+12V" V 1150 6150 50  0000 C CNN
+F 2 "" H 1150 5950 50  0001 C CNN
+F 3 "" H 1150 5950 50  0001 C CNN
+	1    1150 5950
 	0    -1   -1   0   
 $EndComp
 Text HLabel 3600 6400 2    50   Input ~ 0
 AIR+_STATUS
-Text HLabel 1500 6300 2    50   Input ~ 0
+Text HLabel 1100 6050 0    50   Input ~ 0
 AIR-_STATUS
 Text Label 6650 6250 2    50   ~ 0
 dissipation
@@ -150,8 +148,6 @@ $EndComp
 Text Label 3650 1250 2    50   ~ 0
 RESET
 Wire Notes Line
-	4250 7700 4250 5550
-Wire Notes Line
 	4250 5500 600  5500
 Text Notes 600  5600 0    50   ~ 10
 AIR CONTROL CIRCUIT\n
@@ -164,19 +160,19 @@ Wire Wire Line
 $Comp
 L power:GND #PWR0135
 U 1 1 5B0DE170
-P 1500 5800
-F 0 "#PWR0135" H 1500 5550 50  0001 C CNN
-F 1 "GND" V 1500 5650 50  0000 R CNN
-F 2 "" H 1500 5800 50  0001 C CNN
-F 3 "" H 1500 5800 50  0001 C CNN
-	1    1500 5800
+P 1800 6050
+F 0 "#PWR0135" H 1800 5800 50  0001 C CNN
+F 1 "GND" V 1800 5900 50  0000 R CNN
+F 2 "" H 1800 6050 50  0001 C CNN
+F 3 "" H 1800 6050 50  0001 C CNN
+	1    1800 6050
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	1300 5800 1200 5800
+	1700 5950 1800 5950
 Wire Wire Line
-	1500 5800 1400 5800
-Text HLabel 1200 5800 0    50   Input ~ 0
+	1800 6050 1700 6050
+Text HLabel 1800 5950 2    50   Input ~ 0
 FROM_TSMS
 Wire Wire Line
 	3000 6400 3000 6750
@@ -196,8 +192,8 @@ L Device:Q_NMOS_GSD Q1
 U 1 1 5E3976CB
 P 2900 6950
 F 0 "Q1" H 3104 6996 50  0000 L CNN
-F 1 "SSM3K361TU,LF" H 3104 6905 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 3100 7050 50  0001 C CNN
+F 1 "NTR4003N" H 3104 6905 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 3100 7050 50  0001 C CNN
 F 3 "https://www.mouser.it/ProductDetail/Toshiba/SSM3K361TULF?qs=sGAEpiMZZMshyDBzk1%2FWi%2FD7Em5shE8qqtsfXGfVhuGHqmGZGu2Z8A%3D%3D" H 2900 6950 50  0001 C CNN
 	1    2900 6950
 	1    0    0    -1  
@@ -484,7 +480,7 @@ Wire Wire Line
 Wire Wire Line
 	3500 6400 3600 6400
 Wire Wire Line
-	1400 6300 1500 6300
+	1200 6050 1100 6050
 Wire Notes Line
 	3800 650  3800 1850
 Wire Notes Line
@@ -753,15 +749,15 @@ $EndComp
 $Comp
 L Connector_Generic:Conn_02x02_Counter_Clockwise J?
 U 1 1 5E5D4844
-P 1300 6100
+P 1400 5950
 AR Path="/5B50ED38/5E5D4844" Ref="J?"  Part="1" 
 AR Path="/5B045B0D/5E5D4844" Ref="J6"  Part="1" 
-F 0 "J6" H 1350 6200 50  0000 C CNN
-F 1 "CONN_2X2" H 1350 6226 50  0001 C CNN
-F 2 "MainBoard:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical" H 1300 6100 50  0001 C CNN
-F 3 "~" H 1300 6100 50  0001 C CNN
-	1    1300 6100
-	0    -1   -1   0   
+F 0 "J6" H 1450 6050 50  0000 C CNN
+F 1 "CONN_2X2" H 1450 6076 50  0001 C CNN
+F 2 "MainBoard:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical" H 1400 5950 50  0001 C CNN
+F 3 "~" H 1400 5950 50  0001 C CNN
+	1    1400 5950
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	1250 6850 1850 6850
@@ -850,7 +846,7 @@ Text HLabel 9500 2000 3    50   Input ~ 0
 SD_STATUS
 Connection ~ 7200 2350
 Wire Wire Line
-	7200 2350 7350 2350
+	7200 2350 7300 2350
 Wire Wire Line
 	6950 2350 7200 2350
 Connection ~ 7500 3850
@@ -861,7 +857,7 @@ Text Notes 10000 1600 0    50   ~ 0
 Vin=12V\nR=10K-->14.4mW\nVref_1V5\nR=100K-->0.06mW
 Text Notes 3150 6550 0    50   ~ 0
 AIR+
-Text Notes 1550 6150 1    50   ~ 0
+Text Notes 1350 6200 0    50   ~ 0
 AIR-
 $Comp
 L MainBoard:CD4082 U15
@@ -900,8 +896,6 @@ Text Label 4650 2350 0    50   ~ 0
 VREF_1.5V
 Wire Wire Line
 	4650 2350 5100 2350
-Wire Wire Line
-	4950 2150 5100 2150
 $Comp
 L Comparator:LM339 U13
 U 4 1 5E50F0C9
@@ -1048,4 +1042,42 @@ Wire Wire Line
 Connection ~ 7300 4350
 Wire Wire Line
 	7300 4350 7950 4350
+Wire Notes Line
+	4250 5500 4250 7700
+$Comp
+L Connector:TestPoint TP?
+U 1 1 6059EB75
+P 7300 2550
+F 0 "TP?" H 7242 2576 50  0000 R CNN
+F 1 "SD_OK" H 7242 2667 50  0000 R CNN
+F 2 "" H 7500 2550 50  0001 C CNN
+F 3 "~" H 7500 2550 50  0001 C CNN
+	1    7300 2550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7300 2550 7300 2350
+Connection ~ 7300 2350
+Wire Wire Line
+	7300 2350 7350 2350
+$Comp
+L Connector:TestPoint TP?
+U 1 1 605A3994
+P 5000 2000
+F 0 "TP?" V 5195 2072 50  0000 C CNN
+F 1 "TS_ON" V 5104 2072 50  0000 C CNN
+F 2 "" H 5200 2000 50  0001 C CNN
+F 3 "~" H 5200 2000 50  0001 C CNN
+	1    5000 2000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4950 2150 5000 2150
+Wire Wire Line
+	5000 2000 5000 2150
+Connection ~ 5000 2150
+Wire Wire Line
+	5000 2150 5100 2150
+Wire Wire Line
+	1150 5950 1200 5950
 $EndSCHEMATC

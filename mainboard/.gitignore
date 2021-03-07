@@ -7,7 +7,9 @@
 *.bak
 *.sch-bak
 *.kicad_pcb-bak
-
+#
+/output/MainBoard.step
+\#*.dxf
  
 # old files
 dont_delete_me_yet/
