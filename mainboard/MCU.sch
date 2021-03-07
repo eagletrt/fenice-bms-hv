@@ -596,14 +596,14 @@ $EndComp
 $Comp
 L Device:C_Small C?
 U 1 1 5E1247F7
-P 6650 4250
+P 7000 4250
 AR Path="/5E1247F7" Ref="C?"  Part="1" 
 AR Path="/5DF398FB/5E1247F7" Ref="C20"  Part="1" 
-F 0 "C20" V 6550 4250 50  0000 C CNN
-F 1 "100nF" V 6750 4250 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 6688 4100 50  0001 C CNN
-F 3 "~" H 6650 4250 50  0001 C CNN
-	1    6650 4250
+F 0 "C20" V 6900 4250 50  0000 C CNN
+F 1 "100nF" V 7100 4250 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7038 4100 50  0001 C CNN
+F 3 "~" H 7000 4250 50  0001 C CNN
+	1    7000 4250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -820,40 +820,40 @@ ISO_CAN_RX
 $Comp
 L power:GND #PWR?
 U 1 1 5DF87343
-P 6250 4400
+P 6600 4400
 AR Path="/5DF87343" Ref="#PWR?"  Part="1" 
 AR Path="/5DF398FB/5DF87343" Ref="#PWR0110"  Part="1" 
-F 0 "#PWR0110" H 6250 4150 50  0001 C CNN
-F 1 "GND" H 6250 4250 50  0000 C CNN
-F 2 "" H 6250 4400 50  0001 C CNN
-F 3 "" H 6250 4400 50  0001 C CNN
-	1    6250 4400
+F 0 "#PWR0110" H 6600 4150 50  0001 C CNN
+F 1 "GND" H 6600 4250 50  0000 C CNN
+F 2 "" H 6600 4400 50  0001 C CNN
+F 3 "" H 6600 4400 50  0001 C CNN
+	1    6600 4400
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C_Small C?
 U 1 1 5DF87349
-P 6250 4250
+P 6600 4250
 AR Path="/5DF87349" Ref="C?"  Part="1" 
 AR Path="/5DF398FB/5DF87349" Ref="C25"  Part="1" 
-F 0 "C25" V 6100 4250 50  0000 C CNN
-F 1 "1uF" V 6400 4250 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 6288 4100 50  0001 C CNN
-F 3 "~" H 6250 4250 50  0001 C CNN
-	1    6250 4250
+F 0 "C25" V 6450 4250 50  0000 C CNN
+F 1 "1uF" V 6750 4250 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6638 4100 50  0001 C CNN
+F 3 "~" H 6600 4250 50  0001 C CNN
+	1    6600 4250
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:+3.3V #PWR?
 U 1 1 5E60753C
-P 5700 4150
+P 6050 4150
 AR Path="/5E60753C" Ref="#PWR?"  Part="1" 
 AR Path="/5DF398FB/5E60753C" Ref="#PWR0118"  Part="1" 
-F 0 "#PWR0118" H 5700 4000 50  0001 C CNN
-F 1 "+3.3V" V 5700 4300 50  0000 L CNN
-F 2 "" H 5700 4150 50  0001 C CNN
-F 3 "" H 5700 4150 50  0001 C CNN
-	1    5700 4150
+F 0 "#PWR0118" H 6050 4000 50  0001 C CNN
+F 1 "+3.3V" V 6050 4300 50  0000 L CNN
+F 2 "" H 6050 4150 50  0001 C CNN
+F 3 "" H 6050 4150 50  0001 C CNN
+	1    6050 4150
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -872,25 +872,25 @@ $EndComp
 $Comp
 L Device:FerriteBead_Small FB1
 U 1 1 5E60756E
-P 5850 4150
-F 0 "FB1" H 5950 4150 50  0000 L CNN
-F 1 "FerriteBead_Small" H 5950 4105 50  0001 L CNN
-F 2 "Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 5780 4150 50  0001 C CNN
-F 3 "~" H 5850 4150 50  0001 C CNN
-	1    5850 4150
+P 6200 4150
+F 0 "FB1" H 6300 4150 50  0000 L CNN
+F 1 "FerriteBead_Small" H 6300 4105 50  0001 L CNN
+F 2 "Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 6130 4150 50  0001 C CNN
+F 3 "~" H 6200 4150 50  0001 C CNN
+	1    6200 4150
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	5950 4150 6250 4150
+	6300 4150 6600 4150
 Wire Wire Line
-	6250 4150 6650 4150
+	6600 4150 7000 4150
 Wire Wire Line
-	5700 4150 5750 4150
+	6050 4150 6100 4150
 Wire Wire Line
-	6250 4350 6250 4400
-Text Label 6650 4150 2    50   ~ 0
+	6600 4350 6600 4400
+Text Label 7000 4150 2    50   ~ 0
 3V3_FT
-Connection ~ 6250 4150
+Connection ~ 6600 4150
 Wire Wire Line
 	10050 2250 10400 2250
 $Comp
@@ -1049,18 +1049,18 @@ FROM_SD
 $Comp
 L power:GND #PWR?
 U 1 1 5E572A92
-P 6650 4400
+P 7000 4400
 AR Path="/5E572A92" Ref="#PWR?"  Part="1" 
 AR Path="/5DF398FB/5E572A92" Ref="#PWR0103"  Part="1" 
-F 0 "#PWR0103" H 6650 4150 50  0001 C CNN
-F 1 "GND" H 6650 4250 50  0000 C CNN
-F 2 "" H 6650 4400 50  0001 C CNN
-F 3 "" H 6650 4400 50  0001 C CNN
-	1    6650 4400
+F 0 "#PWR0103" H 7000 4150 50  0001 C CNN
+F 1 "GND" H 7000 4250 50  0000 C CNN
+F 2 "" H 7000 4400 50  0001 C CNN
+F 3 "" H 7000 4400 50  0001 C CNN
+	1    7000 4400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6650 4350 6650 4400
+	7000 4350 7000 4400
 Text HLabel 8250 1450 1    50   Input ~ 0
 TS_ON
 Text HLabel 10050 2450 2    50   Input ~ 0
@@ -1520,28 +1520,28 @@ FB_BMS_12V
 $Comp
 L power:GND #PWR?
 U 1 1 5E86FDC4
-P 4800 1700
+P 4950 1700
 AR Path="/5E86FDC4" Ref="#PWR?"  Part="1" 
 AR Path="/5DF398FB/5E86FDC4" Ref="#PWR0157"  Part="1" 
-F 0 "#PWR0157" H 4800 1450 50  0001 C CNN
-F 1 "GND" V 4800 1550 50  0000 R CNN
-F 2 "" H 4800 1700 50  0001 C CNN
-F 3 "" H 4800 1700 50  0001 C CNN
-	1    4800 1700
-	1    0    0    -1  
+F 0 "#PWR0157" H 4950 1450 50  0001 C CNN
+F 1 "GND" V 4950 1550 50  0000 R CNN
+F 2 "" H 4950 1700 50  0001 C CNN
+F 3 "" H 4950 1700 50  0001 C CNN
+	1    4950 1700
+	-1   0    0    -1  
 $EndComp
 $Comp
 L Device:LED_Small D?
 U 1 1 5E86FDCA
-P 4800 1600
+P 4950 1600
 AR Path="/5E86FDCA" Ref="D?"  Part="1" 
 AR Path="/5DF398FB/5E86FDCA" Ref="D8"  Part="1" 
-F 0 "D8" V 4800 1500 50  0000 C CNN
-F 1 "LED_Small" H 4800 1744 50  0001 C CNN
-F 2 "MainBoard:LED_REVERSE_MOUNT_cilindrical" V 4800 1600 50  0001 C CNN
-F 3 "~" V 4800 1600 50  0001 C CNN
-	1    4800 1600
-	0    -1   -1   0   
+F 0 "D8" V 4950 1500 50  0000 C CNN
+F 1 "LED_Small" H 4950 1744 50  0001 C CNN
+F 2 "MainBoard:LED_REVERSE_MOUNT_cilindrical" V 4950 1600 50  0001 C CNN
+F 3 "~" V 4950 1600 50  0001 C CNN
+	1    4950 1600
+	0    1    -1   0   
 $EndComp
 Wire Wire Line
 	6750 5600 7000 5600
@@ -1590,8 +1590,6 @@ Text Label 4950 750  3    50   ~ 0
 LED_2
 Wire Wire Line
 	4950 750  4950 1050
-NoConn ~ 4850 1050
-NoConn ~ 4850 1450
 $Comp
 L Device:R R?
 U 1 1 5E75F8C6
@@ -1630,7 +1628,7 @@ $Comp
 L Jumper:SolderJumper_2_Open JP3
 U 1 1 5EB0119F
 P 4300 1600
-F 0 "JP3" H 4250 1550 50  0000 L CNN
+F 0 "JP3" H 4300 1500 50  0000 C CNN
 F 1 "SolderJumper_2_Open" V 4345 1648 50  0001 L CNN
 F 2 "MainBoard:Jumper_SMD_0603" H 4300 1600 50  0001 C CNN
 F 3 "~" H 4300 1600 50  0001 C CNN
@@ -1909,8 +1907,6 @@ F 4 "https://www.mouser.it/ProductDetail/Bourns/CAY16-104J4LF?qs=sGAEpiMZZMvrmc6
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	4800 1500 4950 1500
-Wire Wire Line
 	4950 1500 4950 1450
 Connection ~ 7000 5600
 Wire Wire Line
@@ -2152,30 +2148,28 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 2100 1050 50  0001 C CNN
 $EndComp
 Text Notes 3700 2550 0    50   ~ 0
 PB8-BOOT0 pin configuration:\nLOW: normal, boot from user flash\nHIGH: boot from system memory, bootloader
-Text HLabel 4150 2600 0    50   Input ~ 0
-PC_ENDED
 $Comp
 L power:+3.3V #PWR?
 U 1 1 5FD436DF
-P 4450 2600
+P 4450 2650
 AR Path="/5FD436DF" Ref="#PWR?"  Part="1" 
 AR Path="/5DF398FB/5FD436DF" Ref="#PWR016"  Part="1" 
-F 0 "#PWR016" H 4450 2450 50  0001 C CNN
-F 1 "+3.3V" V 4450 2750 50  0000 L CNN
-F 2 "" H 4450 2600 50  0001 C CNN
-F 3 "" H 4450 2600 50  0001 C CNN
-	1    4450 2600
+F 0 "#PWR016" H 4450 2500 50  0001 C CNN
+F 1 "+3.3V" V 4450 2800 50  0000 L CNN
+F 2 "" H 4450 2650 50  0001 C CNN
+F 3 "" H 4450 2650 50  0001 C CNN
+	1    4450 2650
 	0    1    1    0   
 $EndComp
 $Comp
-L Jumper:SolderJumper_2_Open JP4
+L Jumper:SolderJumper_2_Open B-H
 U 1 1 5FD45CCD
-P 4300 2600
-F 0 "JP4" H 4250 2500 50  0000 L CNN
-F 1 "SolderJumper_2_Open" V 4345 2648 50  0001 L CNN
-F 2 "MainBoard:Jumper_SMD_0603" H 4300 2600 50  0001 C CNN
-F 3 "~" H 4300 2600 50  0001 C CNN
-	1    4300 2600
+P 4300 2650
+F 0 "B-H" H 4300 2550 50  0000 C CNN
+F 1 "SolderJumper_2_Open" V 4345 2698 50  0001 L CNN
+F 2 "MainBoard:Jumper_SMD_0603" H 4300 2650 50  0001 C CNN
+F 3 "~" H 4300 2650 50  0001 C CNN
+	1    4300 2650
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -2245,7 +2239,7 @@ Wire Wire Line
 	8650 1400 8650 1450
 Wire Wire Line
 	8750 1400 8750 1450
-Text HLabel 8350 1450 1    50   Input ~ 0
+Text HLabel 10050 2650 2    50   Input ~ 0
 PC_ENDED
 Text Label 9350 900  3    50   ~ 0
 ~HOLD~
@@ -2397,12 +2391,12 @@ F 3 "" H 7600 3350 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Text HLabel 6350 2150 2    50   Input ~ 0
-NRST
+~RST~
 Wire Wire Line
 	6250 2150 6350 2150
 Connection ~ 6250 2150
 Text HLabel 7600 2550 0    50   Input ~ 0
-NRST
+~RST~
 Text Label 10450 3350 2    50   ~ 0
 CS_CARD
 Text Label 10450 3050 2    50   ~ 0
@@ -2459,4 +2453,57 @@ Wire Wire Line
 	6250 6650 6850 6650
 Text Notes 7000 6650 0    50   ~ 0
 AMS: Automatic Moaning System
+Text Label 8350 1100 3    50   ~ 0
+BOOT0
+Wire Wire Line
+	8350 1100 8350 1450
+NoConn ~ 8950 1450
+NoConn ~ 9050 1450
+NoConn ~ 9150 1450
+NoConn ~ 9250 1450
+NoConn ~ 7600 2650
+NoConn ~ 7600 2750
+NoConn ~ 7600 2850
+NoConn ~ 7600 2950
+NoConn ~ 8550 3900
+NoConn ~ 8650 3900
+NoConn ~ 10050 2950
+NoConn ~ 10050 2750
+NoConn ~ 10050 2850
+Text Label 3900 2650 0    50   ~ 0
+BOOT0
+Wire Wire Line
+	3900 2650 4150 2650
+Text Label 4850 750  3    50   ~ 0
+BOOT0
+Wire Wire Line
+	4850 750  4850 1050
+$Comp
+L power:GND #PWR?
+U 1 1 6057F2A0
+P 4750 1500
+AR Path="/6057F2A0" Ref="#PWR?"  Part="1" 
+AR Path="/5DF398FB/6057F2A0" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 4750 1250 50  0001 C CNN
+F 1 "GND" V 4750 1350 50  0000 R CNN
+F 2 "" H 4750 1500 50  0001 C CNN
+F 3 "" H 4750 1500 50  0001 C CNN
+	1    4750 1500
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 1500 4850 1500
+Wire Wire Line
+	4850 1500 4850 1450
+$Comp
+L Connector:TestPoint TP?
+U 1 1 60590C21
+P 8950 4550
+F 0 "TP?" H 8892 4576 50  0000 R CNN
+F 1 "ANALOG_DATA" H 8892 4667 50  0000 R CNN
+F 2 "" H 9150 4550 50  0001 C CNN
+F 3 "~" H 9150 4550 50  0001 C CNN
+	1    8950 4550
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC

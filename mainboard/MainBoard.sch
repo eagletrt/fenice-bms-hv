@@ -1404,7 +1404,7 @@ Linear regulator from the main 12V
 Text Notes 10100 1450 0    50   ~ 0
 Linear regulated 3.3V \nfrom the 5V rail
 Text Notes 7150 4850 0    50   ~ 10
-TODO: comment me
+IMD connector
 Text Notes 2300 850  0    50   ~ 10
 COMUNICATION CONNECTORS
 Text Notes 10250 2900 0    50   ~ 10
@@ -1432,11 +1432,7 @@ Wire Notes Line
 Wire Notes Line
 	500  3450 4050 3450
 Wire Notes Line
-	11150 4250 10100 4250
-Wire Notes Line
-	10100 4250 10100 2950
-Wire Notes Line
-	10100 2950 7450 2950
+	8700 2950 7450 2950
 Wire Notes Line
 	7450 2950 7450 600 
 Wire Wire Line
@@ -1471,7 +1467,7 @@ F9 "TX_DEBUGGER" I L 1250 6150 50
 F10 "RX_DEBUGGER" I L 1250 6050 50 
 F11 "SWDIO" I L 1250 5850 50 
 F12 "SWCLK" I L 1250 5950 50 
-F13 "NRST" I L 1250 5750 50 
+F13 "~RST~" I L 1250 5750 50 
 F14 "IMD_PWM" I L 1250 5150 50 
 F15 "CAN-" I L 1250 4600 50 
 F16 "ADC_TX" I R 3150 6450 50 
@@ -1500,4 +1496,127 @@ F38 "SCK" I R 3150 5900 50
 F39 "MISO" I R 3150 6000 50 
 F40 "MOSI" I R 3150 6100 50 
 $EndSheet
+Text Notes 7800 5000 0    50   ~ 0
+IMD_Fault:\nNormally HIGH 12V\nFault LOW
+Text Label 5000 2100 0    50   ~ 0
+FROM_SD
+Text Label 5000 2200 0    50   ~ 0
+FROM_TSMS
+Text Label 5000 2300 0    50   ~ 0
+TO_TSMS
+$Comp
+L Connector:TestPoint TP?
+U 1 1 605C7740
+P 5500 2100
+F 0 "TP?" V 5454 2288 50  0000 L CNN
+F 1 "FORM_SD" V 5450 2450 50  0000 L CNN
+F 2 "" H 5700 2100 50  0001 C CNN
+F 3 "~" H 5700 2100 50  0001 C CNN
+	1    5500 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 605C7DFE
+P 5500 2200
+F 0 "TP?" V 5454 2388 50  0000 L CNN
+F 1 "FROM_TSMS" V 5450 2550 50  0000 L CNN
+F 2 "" H 5700 2200 50  0001 C CNN
+F 3 "~" H 5700 2200 50  0001 C CNN
+	1    5500 2200
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 605C7FA8
+P 5500 2300
+F 0 "TP?" V 5454 2488 50  0000 L CNN
+F 1 "TO_TSMS" V 5450 2650 50  0000 L CNN
+F 2 "" H 5700 2300 50  0001 C CNN
+F 3 "~" H 5700 2300 50  0001 C CNN
+	1    5500 2300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5000 2100 5500 2100
+Wire Wire Line
+	5500 2200 5000 2200
+Wire Wire Line
+	5000 2300 5500 2300
+$Comp
+L Connector:TestPoint TP?
+U 1 1 6060C55B
+P 9700 3350
+F 0 "TP?" H 9750 3550 50  0000 R CNN
+F 1 "3V3" H 9750 3650 50  0000 R CNN
+F 2 "" H 9900 3350 50  0001 C CNN
+F 3 "~" H 9900 3350 50  0001 C CNN
+	1    9700 3350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 6060CEE1
+P 9500 3350
+F 0 "TP?" H 9550 3550 50  0000 R CNN
+F 1 "5V" H 9550 3650 50  0000 R CNN
+F 2 "" H 9700 3350 50  0001 C CNN
+F 3 "~" H 9700 3350 50  0001 C CNN
+	1    9500 3350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 6060D124
+P 9300 3350
+F 0 "TP?" H 9350 3550 50  0000 R CNN
+F 1 "12V" H 9350 3650 50  0000 R CNN
+F 2 "" H 9500 3350 50  0001 C CNN
+F 3 "~" H 9500 3350 50  0001 C CNN
+	1    9300 3350
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 6061F869
+P 9300 3350
+AR Path="/6061F869" Ref="#PWR?"  Part="1" 
+AR Path="/5DE633EC/6061F869" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 9300 3200 50  0001 C CNN
+F 1 "+12V" V 9300 3550 50  0000 C CNN
+F 2 "" H 9300 3350 50  0001 C CNN
+F 3 "" H 9300 3350 50  0001 C CNN
+	1    9300 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 6061F86F
+P 9500 3350
+AR Path="/6061F86F" Ref="#PWR?"  Part="1" 
+AR Path="/5DE633EC/6061F86F" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 9500 3200 50  0001 C CNN
+F 1 "+5V" V 9500 3500 50  0000 L CNN
+F 2 "" H 9500 3350 50  0001 C CNN
+F 3 "" H 9500 3350 50  0001 C CNN
+	1    9500 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 6061F875
+P 9700 3350
+AR Path="/6061F875" Ref="#PWR?"  Part="1" 
+AR Path="/5DE633EC/6061F875" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 9700 3200 50  0001 C CNN
+F 1 "+3.3V" V 9700 3500 50  0000 L CNN
+F 2 "" H 9700 3350 50  0001 C CNN
+F 3 "" H 9700 3350 50  0001 C CNN
+	1    9700 3350
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	8700 4200 11100 4200
+Wire Notes Line
+	8700 2950 8700 4200
 $EndSCHEMATC
