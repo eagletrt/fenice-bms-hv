@@ -795,8 +795,6 @@ Text HLabel 9800 4950 3    50   Input ~ 0
 SD_STATUS
 Connection ~ 6850 4250
 Wire Wire Line
-	6850 4250 6950 4250
-Wire Wire Line
 	6600 4250 6850 4250
 Connection ~ 2500 6950
 Text Notes 10300 4550 0    50   ~ 0
@@ -854,10 +852,8 @@ F 4 "https://www.mouser.it/ProductDetail/STMicroelectronics/TS3704IPT?qs=%2Fha2p
 	4    5050 4150
 	1    0    0    -1  
 $EndComp
-Text HLabel 10550 5800 2    50   Input ~ 0
+Text HLabel 9400 5800 2    50   Output ~ 0
 SD_STATUS
-Text Label 10500 5800 2    50   ~ 0
-REED_SUPPLY_STATUS
 $Comp
 L power:+12V #PWR?
 U 1 1 5E3CF86B
@@ -930,8 +926,6 @@ F 3 "~" H 1700 4700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9400 5800 10550 5800
-Wire Wire Line
 	2500 6950 2700 6950
 Text Notes 550  850  0    50   ~ 0
 Saves the fault status until reset\nfrom: BMS and IMD
@@ -946,50 +940,14 @@ F 3 "" H 6500 3350 50  0001 C CNN
 	1    6500 3350
 	1    0    0    -1  
 $EndComp
-Text Notes 9950 4000 0    50   ~ 0
-TODO: no idea
 Text Notes 4750 1300 0    50   ~ 0
-Buffering signals, CD4044 can't \nsource/sink mode than 1mA
+Buffering signals, CD4044 can't \nsource/sink more than 1mA
 Wire Wire Line
 	5950 1750 6150 1750
 Wire Wire Line
 	5950 2050 6150 2050
 Wire Notes Line
 	4250 5500 4250 7700
-$Comp
-L Connector:TestPoint TP?
-U 1 1 6059EB75
-P 6950 4450
-F 0 "TP?" H 6892 4476 50  0000 R CNN
-F 1 "SD_OK" H 6892 4567 50  0000 R CNN
-F 2 "" H 7150 4450 50  0001 C CNN
-F 3 "~" H 7150 4450 50  0001 C CNN
-	1    6950 4450
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	6950 4450 6950 4250
-Connection ~ 6950 4250
-Wire Wire Line
-	6950 4250 7000 4250
-$Comp
-L Connector:TestPoint TP?
-U 1 1 605A3994
-P 4650 3900
-F 0 "TP?" V 4845 3972 50  0000 C CNN
-F 1 "TS_ON" V 4754 3972 50  0000 C CNN
-F 2 "" H 4850 3900 50  0001 C CNN
-F 3 "~" H 4850 3900 50  0001 C CNN
-	1    4650 3900
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	4600 4050 4650 4050
-Wire Wire Line
-	4650 3900 4650 4050
-Connection ~ 4650 4050
-Wire Wire Line
-	4650 4050 4750 4050
 Wire Wire Line
 	1150 5950 1200 5950
 Wire Wire Line
@@ -1434,4 +1392,8 @@ E3 C9 C0 18 2B 83 62 34 A9 CE BE 28 22 22 22 22 22 22 D9 4A D9 15 B3 43 36 64 3E
 9F 00 00 00 00 49 45 4E 44 AE 42 60 82 
 EndData
 $EndBitmap
+Wire Wire Line
+	6850 4250 7000 4250
+Wire Wire Line
+	4600 4050 4750 4050
 $EndSCHEMATC
