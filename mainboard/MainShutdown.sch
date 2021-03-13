@@ -67,9 +67,7 @@ F 3 "https://standexelectronics.com/viewer/pdfjs/web/viewer.php?file=https%3A%2F
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3550 6200 3550 6300
-Wire Wire Line
-	3550 6300 3500 6300
+	3600 6300 3550 6300
 $Comp
 L MainBoard:R_power_backplane R55
 U 1 1 5DC7CE9F
@@ -85,32 +83,32 @@ $EndComp
 $Comp
 L power:+12V #PWR?
 U 1 1 5E2DE393
-P 3550 6200
+P 3600 6300
 AR Path="/5E2DE393" Ref="#PWR?"  Part="1" 
 AR Path="/5B045B0D/5E2DE393" Ref="#PWR0136"  Part="1" 
-F 0 "#PWR0136" H 3550 6050 50  0001 C CNN
-F 1 "+12V" V 3550 6400 50  0000 C CNN
-F 2 "" H 3550 6200 50  0001 C CNN
-F 3 "" H 3550 6200 50  0001 C CNN
-	1    3550 6200
-	1    0    0    -1  
+F 0 "#PWR0136" H 3600 6150 50  0001 C CNN
+F 1 "+12V" V 3600 6500 50  0000 C CNN
+F 2 "" H 3600 6300 50  0001 C CNN
+F 3 "" H 3600 6300 50  0001 C CNN
+	1    3600 6300
+	0    1    1    0   
 $EndComp
 $Comp
 L power:+12V #PWR?
 U 1 1 5E2E4AFA
-P 1150 5950
+P 1600 6200
 AR Path="/5E2E4AFA" Ref="#PWR?"  Part="1" 
 AR Path="/5B045B0D/5E2E4AFA" Ref="#PWR0140"  Part="1" 
-F 0 "#PWR0140" H 1150 5800 50  0001 C CNN
-F 1 "+12V" V 1150 6150 50  0000 C CNN
-F 2 "" H 1150 5950 50  0001 C CNN
-F 3 "" H 1150 5950 50  0001 C CNN
-	1    1150 5950
-	0    -1   -1   0   
+F 0 "#PWR0140" H 1600 6050 50  0001 C CNN
+F 1 "+12V" V 1600 6400 50  0000 C CNN
+F 2 "" H 1600 6200 50  0001 C CNN
+F 3 "" H 1600 6200 50  0001 C CNN
+	1    1600 6200
+	0    1    -1   0   
 $EndComp
 Text HLabel 3600 6400 2    50   Input ~ 0
 AIR+_STATUS
-Text HLabel 1100 6050 0    50   Input ~ 0
+Text HLabel 1600 6300 2    50   Input ~ 0
 AIR-_STATUS
 Text Label 6650 6250 2    50   ~ 0
 dissipation
@@ -151,29 +149,12 @@ Wire Notes Line
 	4250 5500 600  5500
 Text Notes 600  5600 0    50   ~ 10
 AIR CONTROL CIRCUIT\n
-Text HLabel 3000 6050 0    50   Input ~ 0
+Text HLabel 3000 6300 0    50   Input ~ 0
 FROM_TSMS
 Text HLabel 1250 6850 0    50   Input ~ 0
 PC_ENDED
 Wire Wire Line
 	2450 6950 2500 6950
-$Comp
-L power:GND #PWR0135
-U 1 1 5B0DE170
-P 1800 6050
-F 0 "#PWR0135" H 1800 5800 50  0001 C CNN
-F 1 "GND" V 1800 5900 50  0000 R CNN
-F 2 "" H 1800 6050 50  0001 C CNN
-F 3 "" H 1800 6050 50  0001 C CNN
-	1    1800 6050
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	1700 5950 1800 5950
-Wire Wire Line
-	1800 6050 1700 6050
-Text HLabel 1800 5950 2    50   Input ~ 0
-FROM_TSMS
 Wire Wire Line
 	3000 6400 3000 6750
 $Comp
@@ -226,17 +207,6 @@ Wire Wire Line
 Connection ~ 7300 3750
 Wire Wire Line
 	7300 3750 6950 3750
-$Comp
-L power:GND #PWR0151
-U 1 1 5E40D944
-P 7300 4450
-F 0 "#PWR0151" H 7300 4200 50  0001 C CNN
-F 1 "GND" V 7300 4300 50  0000 R CNN
-F 2 "" H 7300 4450 50  0001 C CNN
-F 3 "" H 7300 4450 50  0001 C CNN
-	1    7300 4450
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:+12V #PWR?
 U 1 1 5E40DC05
@@ -457,9 +427,7 @@ Connection ~ 8150 5700
 Wire Wire Line
 	8150 6050 8150 6100
 Wire Wire Line
-	3500 6400 3600 6400
-Wire Wire Line
-	1200 6050 1100 6050
+	3550 6400 3600 6400
 Wire Notes Line
 	3750 2450 3750 3650
 Wire Notes Line
@@ -676,34 +644,30 @@ F 4 "https://www.mouser.it/ProductDetail/STMicroelectronics/TS3704IPT?qs=%2Fha2p
 	3    2150 6950
 	1    0    0    -1  
 $EndComp
-Text Label 3000 6750 1    50   ~ 0
-LAST_AIR
-Wire Wire Line
-	3000 6050 3000 6300
 $Comp
 L Connector_Generic:Conn_02x02_Counter_Clockwise J?
 U 1 1 5E5EF8A6
-P 3200 6300
+P 3250 6300
 AR Path="/5B50ED38/5E5EF8A6" Ref="J?"  Part="1" 
 AR Path="/5B045B0D/5E5EF8A6" Ref="J10"  Part="1" 
-F 0 "J10" H 3250 6400 50  0000 C CNN
-F 1 "CONN_2X2" H 3250 6426 50  0001 C CNN
-F 2 "MainBoard:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical" H 3200 6300 50  0001 C CNN
-F 3 "~" H 3200 6300 50  0001 C CNN
-	1    3200 6300
+F 0 "J10" H 3300 6400 50  0000 C CNN
+F 1 "AIR+" H 3300 6100 50  0000 C CNN
+F 2 "MainBoard:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical" H 3250 6300 50  0001 C CNN
+F 3 "~" H 3250 6300 50  0001 C CNN
+	1    3250 6300
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector_Generic:Conn_02x02_Counter_Clockwise J?
 U 1 1 5E5D4844
-P 1400 5950
+P 1250 6200
 AR Path="/5B50ED38/5E5D4844" Ref="J?"  Part="1" 
 AR Path="/5B045B0D/5E5D4844" Ref="J6"  Part="1" 
-F 0 "J6" H 1450 6050 50  0000 C CNN
-F 1 "CONN_2X2" H 1450 6076 50  0001 C CNN
-F 2 "MainBoard:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical" H 1400 5950 50  0001 C CNN
-F 3 "~" H 1400 5950 50  0001 C CNN
-	1    1400 5950
+F 0 "J6" H 1300 6300 50  0000 C CNN
+F 1 "AIR-" H 1300 6000 50  0000 C CNN
+F 2 "MainBoard:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical" H 1250 6200 50  0001 C CNN
+F 3 "~" H 1250 6200 50  0001 C CNN
+	1    1250 6200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -788,10 +752,6 @@ Wire Wire Line
 Connection ~ 2500 6950
 Text Notes 10300 4550 0    50   ~ 0
 Vin=12V\nR=10K-->14.4mW\nVref_1V5\nR=100K-->0.06mW
-Text Notes 3150 6550 0    50   ~ 0
-AIR+
-Text Notes 1350 6200 0    50   ~ 0
-AIR-
 $Comp
 L MainBoard:CD4082 U15
 U 2 1 5E94A18E
@@ -938,7 +898,7 @@ Wire Wire Line
 Wire Notes Line
 	4250 5500 4250 7700
 Wire Wire Line
-	1150 5950 1200 5950
+	1600 6200 1550 6200
 Wire Wire Line
 	4250 2050 4750 2050
 Wire Wire Line
@@ -1396,4 +1356,40 @@ F 3 "https://www.mouser.it/ProductDetail/Toshiba/SSM3K361TULF?qs=sGAEpiMZZMshyDB
 	1    7200 4250
 	1    0    0    -1  
 $EndComp
+$Comp
+L power:GND #PWR0151
+U 1 1 5E40D944
+P 7300 4450
+F 0 "#PWR0151" H 7300 4200 50  0001 C CNN
+F 1 "GND" V 7300 4300 50  0000 R CNN
+F 2 "" H 7300 4450 50  0001 C CNN
+F 3 "" H 7300 4450 50  0001 C CNN
+	1    7300 4450
+	1    0    0    -1  
+$EndComp
+Text Notes 600  5850 0    50   ~ 0
+AIR connector:\nPIN 1,2: Main coil\nPIN 3,4: NO contact, closed when energized
+Text HLabel 1000 6200 0    50   Input ~ 0
+FROM_TSMS
+$Comp
+L power:GND #PWR0135
+U 1 1 5B0DE170
+P 1000 6300
+F 0 "#PWR0135" H 1000 6050 50  0001 C CNN
+F 1 "GND" V 1000 6150 50  0000 R CNN
+F 2 "" H 1000 6300 50  0001 C CNN
+F 3 "" H 1000 6300 50  0001 C CNN
+	1    1000 6300
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	1000 6300 1050 6300
+Wire Wire Line
+	1050 6200 1000 6200
+Wire Wire Line
+	1600 6300 1550 6300
+Wire Wire Line
+	3000 6400 3050 6400
+Wire Wire Line
+	3050 6300 3000 6300
 $EndSCHEMATC
