@@ -169,29 +169,6 @@ Wire Notes Line
 Wire Notes Line
 	6900 2090 11185 2090
 $Comp
-L 4xxx:4072 U23
-U 3 1 5DEE756A
-P 10500 5750
-F 0 "U23" H 10730 5796 50  0000 L CNN
-F 1 "CD4072BPW" H 10730 5705 50  0000 L CNN
-F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 10500 5750 50  0001 C CNN
-F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4071bms-72bms-75bms.pdf" H 10500 5750 50  0001 C CNN
-F 4 "https://www.mouser.it/ProductDetail/Texas-Instruments/CD4072BPW?qs=HTr%252BoA4jRild%2FUl27Cy93g%3D%3D" H 10500 5750 50  0001 C CNN "Mouser"
-	3    10500 5750
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0214
-U 1 1 5DEF1B3F
-P 10500 6250
-F 0 "#PWR0214" H 10500 6000 50  0001 C CNN
-F 1 "GND" H 10500 6100 50  0000 C CNN
-F 2 "" H 10500 6250 50  0001 C CNN
-F 3 "" H 10500 6250 50  0001 C CNN
-	1    10500 6250
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector_Generic:Conn_02x02_Odd_Even J17
 U 1 1 5B550BA0
 P 5900 750
@@ -532,61 +509,9 @@ F 3 "" H 8500 1000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10100 5900 10100 6000
-Wire Wire Line
-	10100 5500 10100 5600
-$Comp
-L Device:C C41
-U 1 1 5DE9D4DB
-P 10100 5750
-F 0 "C41" V 9950 5750 50  0000 C CNN
-F 1 "100nF" V 10250 5750 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 10138 5600 50  0001 C CNN
-F 3 "~" H 10100 5750 50  0001 C CNN
-	1    10100 5750
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+12V #PWR?
-U 1 1 5DE9D4D5
-P 10100 5500
-AR Path="/5DE9D4D5" Ref="#PWR?"  Part="1" 
-AR Path="/5B50ED38/5DE9D4D5" Ref="#PWR0207"  Part="1" 
-F 0 "#PWR0207" H 10100 5350 50  0001 C CNN
-F 1 "+12V" H 10100 5650 50  0000 C CNN
-F 2 "" H 10100 5500 50  0001 C CNN
-F 3 "" H 10100 5500 50  0001 C CNN
-	1    10100 5500
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0208
-U 1 1 5DE9D4CF
-P 10100 6000
-F 0 "#PWR0208" H 10100 5750 50  0001 C CNN
-F 1 "GND" H 10100 5850 50  0000 C CNN
-F 2 "" H 10100 6000 50  0001 C CNN
-F 3 "" H 10100 6000 50  0001 C CNN
-	1    10100 6000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
 	5700 650  5600 650 
 Wire Wire Line
 	6200 650  6300 650 
-$Comp
-L power:+12V #PWR?
-U 1 1 5E20F503
-P 10500 5250
-AR Path="/5E20F503" Ref="#PWR?"  Part="1" 
-AR Path="/5B50ED38/5E20F503" Ref="#PWR0213"  Part="1" 
-F 0 "#PWR0213" H 10500 5100 50  0001 C CNN
-F 1 "+12V" H 10500 5400 50  0000 C CNN
-F 2 "" H 10500 5250 50  0001 C CNN
-F 3 "" H 10500 5250 50  0001 C CNN
-	1    10500 5250
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:-BATT #PWR0176
 U 1 1 5E00FBC5
@@ -1562,7 +1487,7 @@ Text HLabel 8000 5600 0    50   Input ~ 0
 AIR-_STATUS
 Text HLabel 8000 5500 0    50   Input ~ 0
 AIR+_STATUS
-Text HLabel 9350 5550 2    50   Output ~ 0
+Text HLabel 9250 5550 2    50   Output ~ 0
 LED_INDICATOR
 Text Label 7350 5700 0    50   ~ 0
 TS_exceed_60Vdc
@@ -1571,7 +1496,7 @@ Wire Wire Line
 Text HLabel 4800 2600 2    50   Input ~ 0
 TS_OVER_60V
 Wire Wire Line
-	9200 5550 9350 5550
+	9200 5550 9250 5550
 Wire Wire Line
 	8150 1300 8200 1300
 Wire Wire Line
@@ -1590,8 +1515,6 @@ F 4 "https://www.mouser.it/ProductDetail/Texas-Instruments/CD4072BPW?qs=HTr%252B
 	1    8900 6100
 	1    0    0    1   
 $EndComp
-Wire Wire Line
-	9200 6100 9250 6100
 $Comp
 L MainBoard:4072 U23
 U 2 1 5F37AA51
@@ -1607,46 +1530,31 @@ $EndComp
 $Comp
 L Device:R R?
 U 1 1 5F653520
-P 9550 6250
+P 10050 5450
 AR Path="/5DE633EC/5F653520" Ref="R?"  Part="1" 
 AR Path="/5F653520" Ref="R?"  Part="1" 
 AR Path="/5B50ED38/5F653520" Ref="R27"  Part="1" 
-F 0 "R27" V 9630 6250 50  0000 C CNN
-F 1 "10K" V 9550 6250 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 9480 6250 50  0001 C CNN
-F 3 "~" H 9550 6250 50  0001 C CNN
-	1    9550 6250
+F 0 "R27" V 10130 5450 50  0000 C CNN
+F 1 "10K" V 10050 5450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 9980 5450 50  0001 C CNN
+F 3 "~" H 10050 5450 50  0001 C CNN
+	1    10050 5450
 	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5F653527
-P 9550 6400
-AR Path="/5F653527" Ref="#PWR?"  Part="1" 
-AR Path="/5B50ED38/5F653527" Ref="#PWR03"  Part="1" 
-F 0 "#PWR03" H 9550 6150 50  0001 C CNN
-F 1 "GND" H 9550 6250 50  0000 C CNN
-F 2 "" H 9550 6400 50  0001 C CNN
-F 3 "" H 9550 6400 50  0001 C CNN
-	1    9550 6400
-	1    0    0    -1  
 $EndComp
 $Comp
 L Device:LED_Small D?
 U 1 1 5F65351A
-P 9350 6100
+P 10050 5700
 AR Path="/5DE633EC/5F65351A" Ref="D?"  Part="1" 
 AR Path="/5F65351A" Ref="D?"  Part="1" 
 AR Path="/5B50ED38/5F65351A" Ref="D4"  Part="1" 
-F 0 "D4" V 9350 6000 50  0000 C CNN
-F 1 "LED_Small" H 9350 6244 50  0001 C CNN
-F 2 "LED_SMD:LED_0603_1608Metric_Castellated" V 9350 6100 50  0001 C CNN
-F 3 "~" V 9350 6100 50  0001 C CNN
-	1    9350 6100
-	-1   0    0    1   
+F 0 "D4" V 10050 5600 50  0000 C CNN
+F 1 "LED_Small" H 10050 5844 50  0001 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric_Castellated" V 10050 5700 50  0001 C CNN
+F 3 "~" V 10050 5700 50  0001 C CNN
+	1    10050 5700
+	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	9450 6100 9550 6100
 $Comp
 L Device:R R29
 U 1 1 5F73B5A9
@@ -2429,4 +2337,138 @@ F 3 "~" H 1350 2800 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1250 2800 1800 2800
+$Comp
+L Device:Q_NMOS_GSD Q?
+U 1 1 60503C80
+P 9700 6100
+AR Path="/5B045B0D/60503C80" Ref="Q?"  Part="1" 
+AR Path="/5B50ED38/60503C80" Ref="Q?"  Part="1" 
+F 0 "Q?" H 9904 6146 50  0000 L CNN
+F 1 "NTR4003N" H 9904 6055 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 9900 6200 50  0001 C CNN
+F 3 "https://www.mouser.it/ProductDetail/Toshiba/SSM3K361TULF?qs=sGAEpiMZZMshyDBzk1%2FWi%2FD7Em5shE8qqtsfXGfVhuGHqmGZGu2Z8A%3D%3D" H 9700 6100 50  0001 C CNN
+	1    9700 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60519B24
+P 9350 6100
+AR Path="/5DE633EC/60519B24" Ref="R?"  Part="1" 
+AR Path="/60519B24" Ref="R?"  Part="1" 
+AR Path="/5B50ED38/60519B24" Ref="R?"  Part="1" 
+F 0 "R?" V 9430 6100 50  0000 C CNN
+F 1 "22" V 9350 6100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 9280 6100 50  0001 C CNN
+F 3 "~" H 9350 6100 50  0001 C CNN
+	1    9350 6100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6053D78D
+P 9800 6300
+AR Path="/6053D78D" Ref="#PWR?"  Part="1" 
+AR Path="/5B50ED38/6053D78D" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 9800 6050 50  0001 C CNN
+F 1 "GND" H 9800 6150 50  0000 C CNN
+F 2 "" H 9800 6300 50  0001 C CNN
+F 3 "" H 9800 6300 50  0001 C CNN
+	1    9800 6300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9800 5900 9800 5850
+Wire Wire Line
+	9800 5850 10050 5850
+Wire Wire Line
+	10050 5850 10050 5800
+$Comp
+L power:+12V #PWR?
+U 1 1 60561AF7
+P 10050 5300
+AR Path="/60561AF7" Ref="#PWR?"  Part="1" 
+AR Path="/5B50ED38/60561AF7" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 10050 5150 50  0001 C CNN
+F 1 "+12V" H 10050 5450 50  0000 C CNN
+F 2 "" H 10050 5300 50  0001 C CNN
+F 3 "" H 10050 5300 50  0001 C CNN
+	1    10050 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5E20F503
+P 6700 6550
+AR Path="/5E20F503" Ref="#PWR?"  Part="1" 
+AR Path="/5B50ED38/5E20F503" Ref="#PWR0213"  Part="1" 
+F 0 "#PWR0213" H 6700 6400 50  0001 C CNN
+F 1 "+12V" H 6700 6700 50  0000 C CNN
+F 2 "" H 6700 6550 50  0001 C CNN
+F 3 "" H 6700 6550 50  0001 C CNN
+	1    6700 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0208
+U 1 1 5DE9D4CF
+P 6250 7350
+F 0 "#PWR0208" H 6250 7100 50  0001 C CNN
+F 1 "GND" H 6250 7200 50  0000 C CNN
+F 2 "" H 6250 7350 50  0001 C CNN
+F 3 "" H 6250 7350 50  0001 C CNN
+	1    6250 7350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5DE9D4D5
+P 6250 6850
+AR Path="/5DE9D4D5" Ref="#PWR?"  Part="1" 
+AR Path="/5B50ED38/5DE9D4D5" Ref="#PWR0207"  Part="1" 
+F 0 "#PWR0207" H 6250 6700 50  0001 C CNN
+F 1 "+12V" H 6250 7000 50  0000 C CNN
+F 2 "" H 6250 6850 50  0001 C CNN
+F 3 "" H 6250 6850 50  0001 C CNN
+	1    6250 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C41
+U 1 1 5DE9D4DB
+P 6250 7100
+F 0 "C41" V 6100 7100 50  0000 C CNN
+F 1 "100nF" V 6400 7100 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6288 6950 50  0001 C CNN
+F 3 "~" H 6250 7100 50  0001 C CNN
+	1    6250 7100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 6850 6250 6950
+Wire Wire Line
+	6250 7250 6250 7350
+$Comp
+L power:GND #PWR0214
+U 1 1 5DEF1B3F
+P 6700 7550
+F 0 "#PWR0214" H 6700 7300 50  0001 C CNN
+F 1 "GND" H 6700 7400 50  0000 C CNN
+F 2 "" H 6700 7550 50  0001 C CNN
+F 3 "" H 6700 7550 50  0001 C CNN
+	1    6700 7550
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4xxx:4072 U23
+U 3 1 5DEE756A
+P 6700 7050
+F 0 "U23" H 6930 7096 50  0000 L CNN
+F 1 "CD4072BPW" H 6930 7005 50  0000 L CNN
+F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 6700 7050 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4071bms-72bms-75bms.pdf" H 6700 7050 50  0001 C CNN
+F 4 "https://www.mouser.it/ProductDetail/Texas-Instruments/CD4072BPW?qs=HTr%252BoA4jRild%2FUl27Cy93g%3D%3D" H 6700 7050 50  0001 C CNN "Mouser"
+	3    6700 7050
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
