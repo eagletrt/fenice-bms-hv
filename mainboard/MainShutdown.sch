@@ -13,17 +13,17 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Notes 6000 6375 0    39   ~ 0
+Text Notes 6200 6375 0    39   ~ 0
 PWR163S-25-1002J
 $Comp
 L MainBoard:+TS #PWR0148
 U 1 1 5B0DE0E2
-P 5850 5950
-F 0 "#PWR0148" H 5850 5800 50  0001 C CNN
-F 1 "+TS" V 5850 6100 50  0000 L CNN
-F 2 "" H 5750 5700 50  0001 C CNN
-F 3 "" H 5850 5800 50  0001 C CNN
-	1    5850 5950
+P 6050 5950
+F 0 "#PWR0148" H 6050 5800 50  0001 C CNN
+F 1 "+TS" V 6050 6100 50  0000 L CNN
+F 2 "" H 5950 5700 50  0001 C CNN
+F 3 "" H 6050 5800 50  0001 C CNN
+	1    6050 5950
 	0    1    1    0   
 $EndComp
 Text Notes 4500 5750 0    50   ~ 10
@@ -41,29 +41,29 @@ Wire Notes Line
 $Comp
 L power:+BATT #PWR0147
 U 1 1 5C2C487D
-P 5850 7125
-F 0 "#PWR0147" H 5850 6975 50  0001 C CNN
-F 1 "+BATT" H 5730 7275 50  0000 L CNN
-F 2 "" H 5850 7125 50  0001 C CNN
-F 3 "" H 5850 7125 50  0001 C CNN
-	1    5850 7125
+P 6050 7125
+F 0 "#PWR0147" H 6050 6975 50  0001 C CNN
+F 1 "+BATT" H 5930 7275 50  0000 L CNN
+F 2 "" H 6050 7125 50  0001 C CNN
+F 3 "" H 6050 7125 50  0001 C CNN
+	1    6050 7125
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	5850 6400 5850 6500
+	6050 6400 6050 6500
 Wire Wire Line
-	5850 6100 5850 5950
+	6050 6100 6050 5950
 Wire Wire Line
-	5850 6900 5850 7125
+	6050 6900 6050 7125
 $Comp
 L MainBoard:KT12-1A K1
 U 1 1 5E5A93F5
-P 5450 6700
-F 0 "K1" H 5450 7165 50  0000 C CNN
-F 1 "KT12-1A" H 5450 7074 50  0000 C CNN
-F 2 "MainBoard:KT_THT" H 5450 6350 50  0001 C CNN
-F 3 "https://standexelectronics.com/viewer/pdfjs/web/viewer.php?file=https%3A%2F%2Fstandexelectronics.com%2Fwp-content%2Fuploads%2F2015%2F03%2FKT_V03.pdf" H 5450 6700 50  0001 C CNN
-	1    5450 6700
+P 5650 6700
+F 0 "K1" H 5650 7165 50  0000 C CNN
+F 1 "KT12-1A" H 5650 7074 50  0000 C CNN
+F 2 "MainBoard:KT_THT" H 5650 6350 50  0001 C CNN
+F 3 "https://standexelectronics.com/viewer/pdfjs/web/viewer.php?file=https%3A%2F%2Fstandexelectronics.com%2Fwp-content%2Fuploads%2F2015%2F03%2FKT_V03.pdf" H 5650 6700 50  0001 C CNN
+	1    5650 6700
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -71,13 +71,13 @@ Wire Wire Line
 $Comp
 L MainBoard:R_power_backplane R55
 U 1 1 5DC7CE9F
-P 5850 6250
-F 0 "R55" V 5950 6250 50  0000 C CNN
-F 1 "10K" V 5850 6250 50  0000 C CNN
-F 2 "MainBoard:pwr163" V 5810 6250 50  0001 C CNN
-F 3 "~" H 5850 6250 50  0001 C CNN
-F 4 "https://www.mouser.it/ProductDetail/Bourns/PWR163S-25-1002J?qs=%2Fha2pyFadugfff1oC4vY%252Bes8I7FN4jgvWF%2FMj%252B7BM%2FJuTCfu5H9AeA%3D%3D" H 5850 6250 50  0001 C CNN "Mouser"
-	1    5850 6250
+P 6050 6250
+F 0 "R55" V 6150 6250 50  0000 C CNN
+F 1 "10K" V 6050 6250 50  0000 C CNN
+F 2 "MainBoard:pwr163" V 6010 6250 50  0001 C CNN
+F 3 "~" H 6050 6250 50  0001 C CNN
+F 4 "https://www.mouser.it/ProductDetail/Bourns/PWR163S-25-1002J?qs=%2Fha2pyFadugfff1oC4vY%252Bes8I7FN4jgvWF%2FMj%252B7BM%2FJuTCfu5H9AeA%3D%3D" H 6050 6250 50  0001 C CNN "Mouser"
+	1    6050 6250
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -110,11 +110,11 @@ Text HLabel 3600 6400 2    50   Input ~ 0
 AIR+_STATUS
 Text HLabel 1600 6300 2    50   Input ~ 0
 AIR-_STATUS
-Text Label 6650 6250 2    50   ~ 0
+Text Label 6850 6250 2    50   ~ 0
 dissipation
 Wire Wire Line
-	6100 6250 6650 6250
-NoConn ~ 6650 6250
+	6300 6250 6850 6250
+NoConn ~ 6850 6250
 Text HLabel 2800 3050 0    50   Input ~ 0
 RESET_BUTTON
 $Comp
@@ -528,8 +528,6 @@ Text HLabel 6150 2050 2    50   Output ~ 0
 IMD_LED
 Text HLabel 5050 6500 0    50   Input ~ 0
 FROM_TSMS
-Wire Wire Line
-	4975 6900 5050 6900
 $Comp
 L power:GND #PWR0145
 U 1 1 5E5A93F4
@@ -1392,4 +1390,33 @@ Wire Wire Line
 	3000 6400 3050 6400
 Wire Wire Line
 	3050 6300 3000 6300
+$Comp
+L Device:D D?
+U 1 1 60603EB1
+P 5150 6700
+AR Path="/60603EB1" Ref="D?"  Part="1" 
+AR Path="/5B045B0D/60603EB1" Ref="D?"  Part="1" 
+F 0 "D?" V 5100 6500 50  0000 L CNN
+F 1 "D" V 5200 6500 50  0001 L CNN
+F 2 "MainBoard:SOD_323HE" H 5150 6700 50  0001 C CNN
+F 3 "~" H 5150 6700 50  0001 C CNN
+	1    5150 6700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4975 6900 5150 6900
+Wire Wire Line
+	5150 6850 5150 6900
+Connection ~ 5150 6900
+Wire Wire Line
+	5150 6900 5250 6900
+Wire Wire Line
+	5050 6500 5150 6500
+Wire Wire Line
+	5150 6500 5150 6550
+Wire Wire Line
+	5250 6500 5150 6500
+Connection ~ 5150 6500
+Text Notes 4500 7550 0    50   ~ 0
+The diode should not be \nnecessary because the \nAIRs internal suppression \ncircuit don't want an external \nsuppression circuit, however \nit's dangerous not to \nput this diode.
 $EndSCHEMATC
