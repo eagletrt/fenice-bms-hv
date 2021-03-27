@@ -1417,6 +1417,8 @@ Wire Wire Line
 Wire Wire Line
 	5250 6500 5150 6500
 Connection ~ 5150 6500
-Text Notes 4500 7550 0    50   ~ 0
-The diode should not be \nnecessary because the \nAIRs internal suppression \ncircuit don't want an external \nsuppression circuit, however \nit's dangerous not to \nput this diode.
+Text Notes 4500 7250 0    50   ~ 0
+Populate this diode only\nfor testing with the AIRs \ndisconnected.
+Text Notes 2650 5900 0    50   ~ 0
+The AIRs have internal \nsuppression that caps at 55V, \ndon't diodes on the \nFROM_TSMS line that clips it lower.
 $EndSCHEMATC
