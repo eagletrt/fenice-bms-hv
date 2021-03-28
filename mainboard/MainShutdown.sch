@@ -1420,5 +1420,5 @@ Connection ~ 5150 6500
 Text Notes 4500 7250 0    50   ~ 0
 Populate this diode only\nfor testing with the AIRs \ndisconnected.
 Text Notes 2650 5900 0    50   ~ 0
-The AIRs have internal \nsuppression that caps at 55V, \ndon't diodes on the \nFROM_TSMS line that clips it lower.
+The AIRs have internal \nsuppression that caps at 55V, \ndon't put flyback diodes on the \nFROM_TSMS line that clips it lower.
 $EndSCHEMATC
