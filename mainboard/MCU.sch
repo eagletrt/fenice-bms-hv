@@ -870,9 +870,11 @@ F 3 "" H 10050 1950 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:FerriteBead_Small FB1
+L Device:Ferrite_Bead_Small FB1
 U 1 1 5E60756E
 P 6200 4150
+AR Path="/5E60756E" Ref="FB1"  Part="1" 
+AR Path="/5DF398FB/5E60756E" Ref="FB1"  Part="1" 
 F 0 "FB1" H 6300 4150 50  0000 L CNN
 F 1 "FerriteBead_Small" H 6300 4105 50  0001 L CNN
 F 2 "Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 6130 4150 50  0001 C CNN

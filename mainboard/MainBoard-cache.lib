@@ -594,11 +594,11 @@ X A 2 100 0 70 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_FerriteBead_Small
+# Device_Ferrite_Bead_Small
 #
-DEF Device_FerriteBead_Small FB 0 0 N Y 1 F N
+DEF Device_Ferrite_Bead_Small FB 0 0 N Y 1 F N
 F0 "FB" 75 50 50 H V L CNN
-F1 "Device_FerriteBead_Small" 75 -50 50 H V L CNN
+F1 "Device_Ferrite_Bead_Small" 75 -50 50 H V L CNN
 F2 "" -70 0 50 V I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
