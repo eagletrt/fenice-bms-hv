@@ -813,36 +813,36 @@ Wire Wire Line
 	3400 3050 3100 3050
 Wire Wire Line
 	2650 2550 3200 2550
-Text Label 2900 1150 0    50   ~ 0
+Text Label 4500 1350 2    50   ~ 0
 5V_USB
 $Comp
 L power:GND #PWR0116
 U 1 1 5E56B74E
-P 3500 1250
+P 3500 1050
 AR Path="/5E56B74E" Ref="#PWR0116"  Part="1" 
 AR Path="/5DE633EC/5E56B74E" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0116" H 3500 1000 50  0001 C CNN
-F 1 "GND" V 3500 1100 50  0000 R CNN
-F 2 "" H 3500 1250 50  0001 C CNN
-F 3 "" H 3500 1250 50  0001 C CNN
-	1    3500 1250
+F 0 "#PWR0116" H 3500 800 50  0001 C CNN
+F 1 "GND" V 3500 900 50  0000 R CNN
+F 2 "" H 3500 1050 50  0001 C CNN
+F 3 "" H 3500 1050 50  0001 C CNN
+	1    3500 1050
 	0    1    -1   0   
 $EndComp
 Wire Wire Line
-	4500 1450 4000 1450
-Wire Wire Line
 	4500 1150 4000 1150
 Wire Wire Line
-	4500 1250 4000 1250
+	3000 1250 3500 1250
 Wire Wire Line
-	2900 1350 3500 1350
-Text Label 4500 1450 2    50   ~ 0
-NRST_MCU
+	3000 1150 3500 1150
+Wire Wire Line
+	4500 1450 4000 1450
 Text Label 4500 1150 2    50   ~ 0
+NRST_MCU
+Text Label 3000 1250 0    50   ~ 0
 SWDIO_MCU
-Text Label 4500 1250 2    50   ~ 0
+Text Label 3000 1150 0    50   ~ 0
 SWCLK_MCU
-Text Label 2900 1350 0    50   ~ 0
+Text Label 4500 1450 2    50   ~ 0
 RX_MCU
 Wire Wire Line
 	550  5950 1250 5950
@@ -917,10 +917,10 @@ Text Label 550  5650 0    50   ~ 0
 SWO_MCU
 Wire Wire Line
 	550  5650 1250 5650
-Text Label 4500 1350 2    50   ~ 0
+Text Label 4500 1250 2    50   ~ 0
 SWO_MCU
 Wire Wire Line
-	4500 1350 4000 1350
+	4500 1250 4000 1250
 $Sheet
 S 4100 5650 1900 2000
 U 5B50ED38
@@ -944,20 +944,20 @@ F16 "MISO" I L 4100 6000 50
 F17 "MOSI" I L 4100 6100 50 
 $EndSheet
 $Comp
-L Connector_Generic:Conn_02x04_Top_Bottom J5
+L Connector_Generic:Conn_02x05_Top_Bottom J5
 U 1 1 5E5F21A9
 P 3700 1250
 F 0 "J5" H 3750 1450 50  0000 C CNN
 F 1 "SWDEBUG_CONNECTOR" H 3750 950 50  0000 C CNN
-F 2 "MainBoard:Molex_Nano-Fit_105310-xx08_2x04_P2.50mm_Vertical" H 3700 1250 50  0001 C CNN
+F 2 "MainBoard:Molex_Nano-Fit_105310-xx08_2x05_P2.50mm_Vertical" H 3700 1250 50  0001 C CNN
 F 3 "~" H 3700 1250 50  0001 C CNN
 	1    3700 1250
 	1    0    0    -1  
 $EndComp
-Text Label 2900 1450 0    50   ~ 0
+Text Label 3000 1450 0    50   ~ 0
 TX_MCU
 Wire Wire Line
-	2900 1450 3500 1450
+	3000 1450 3500 1450
 $Comp
 L Connector_Generic:Conn_02x03_Top_Bottom J2
 U 1 1 5E612070
@@ -1356,7 +1356,7 @@ Wire Wire Line
 Wire Wire Line
 	11050 1400 11050 1500
 Wire Wire Line
-	2900 1150 3500 1150
+	4500 1350 4000 1350
 $Comp
 L power:GND #PWR0239
 U 1 1 5F77155B
@@ -1646,4 +1646,30 @@ F 3 "~" H 5800 1300 50  0001 C CNN
 $EndComp
 Text Notes 5150 950  0    50   ~ 0
 TODO: add big mechanical \nground test point on board\nalso for alligator clips
+$Comp
+L power:GND #PWR?
+U 1 1 6081955F
+P 4000 1050
+AR Path="/6081955F" Ref="#PWR?"  Part="1" 
+AR Path="/5DE633EC/6081955F" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 4000 800 50  0001 C CNN
+F 1 "GND" V 4000 900 50  0000 R CNN
+F 2 "" H 4000 1050 50  0001 C CNN
+F 3 "" H 4000 1050 50  0001 C CNN
+	1    4000 1050
+	0    -1   1    0   
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 608528CD
+P 3500 1350
+AR Path="/608528CD" Ref="#PWR?"  Part="1" 
+AR Path="/5DE633EC/608528CD" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 3500 1200 50  0001 C CNN
+F 1 "+3.3V" V 3500 1500 50  0000 L CNN
+F 2 "" H 3500 1350 50  0001 C CNN
+F 3 "" H 3500 1350 50  0001 C CNN
+	1    3500 1350
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC
