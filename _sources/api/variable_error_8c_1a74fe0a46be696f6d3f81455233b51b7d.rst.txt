@@ -1,0 +1,13 @@
+.. _exhale_variable_error_8c_1a74fe0a46be696f6d3f81455233b51b7d:
+
+Variable error_timeouts
+=======================
+
+- Defined in :ref:`file_mainboard_Src_error_error.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: error_timeouts

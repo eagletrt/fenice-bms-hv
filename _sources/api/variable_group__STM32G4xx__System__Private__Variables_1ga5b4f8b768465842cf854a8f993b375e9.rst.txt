@@ -1,0 +1,13 @@
+.. _exhale_variable_group__STM32G4xx__System__Private__Variables_1ga5b4f8b768465842cf854a8f993b375e9:
+
+Variable APBPrescTable
+======================
+
+- Defined in :ref:`file_mainboard_Src_system_stm32g4xx.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: APBPrescTable

@@ -1,0 +1,13 @@
+.. _exhale_function_mainboard_2Src_2main_8c_1a840291bc02cba5474a4cb46a9b9566fe:
+
+Function main(void)
+===================
+
+- Defined in :ref:`file_mainboard_Src_main.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: main(void)

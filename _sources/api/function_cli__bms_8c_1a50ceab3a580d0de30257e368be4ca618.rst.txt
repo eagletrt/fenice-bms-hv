@@ -1,0 +1,13 @@
+.. _exhale_function_cli__bms_8c_1a50ceab3a580d0de30257e368be4ca618:
+
+Function _cli_volts_all
+=======================
+
+- Defined in :ref:`file_mainboard_Src_cli_bms.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: _cli_volts_all(uint16_t, char **, char *)

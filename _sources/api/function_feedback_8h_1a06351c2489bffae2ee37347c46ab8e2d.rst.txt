@@ -1,0 +1,13 @@
+.. _exhale_function_feedback_8h_1a06351c2489bffae2ee37347c46ab8e2d:
+
+Function feedback_read(feedback_t)
+==================================
+
+- Defined in :ref:`file_mainboard_Inc_feedback.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: feedback_read(feedback_t)

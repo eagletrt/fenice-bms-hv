@@ -1,0 +1,13 @@
+.. _exhale_function_error_8c_1a6b6d15a1320459e59cdcda802d6584ff:
+
+Function get_timeout_delta
+==========================
+
+- Defined in :ref:`file_mainboard_Src_error_error.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: get_timeout_delta(error_t *)

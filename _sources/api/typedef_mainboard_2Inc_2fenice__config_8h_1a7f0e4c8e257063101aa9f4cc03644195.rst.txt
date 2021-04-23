@@ -1,0 +1,13 @@
+.. _exhale_typedef_mainboard_2Inc_2fenice__config_8h_1a7f0e4c8e257063101aa9f4cc03644195:
+
+Typedef temperature_t
+=====================
+
+- Defined in :ref:`file_mainboard_Inc_fenice_config.h`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: temperature_t

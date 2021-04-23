@@ -1,0 +1,13 @@
+.. _exhale_variable_cli__bms_8c_1a70d6a509a5b8d0c0e34a5390c0a24607:
+
+Variable feedback_names
+=======================
+
+- Defined in :ref:`file_mainboard_Src_cli_bms.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: feedback_names

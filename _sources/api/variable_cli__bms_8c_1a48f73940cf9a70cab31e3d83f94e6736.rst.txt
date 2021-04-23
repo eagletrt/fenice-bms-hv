@@ -1,0 +1,13 @@
+.. _exhale_variable_cli__bms_8c_1a48f73940cf9a70cab31e3d83f94e6736:
+
+Variable _cli_volts
+===================
+
+- Defined in :ref:`file_mainboard_Src_cli_bms.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: _cli_volts

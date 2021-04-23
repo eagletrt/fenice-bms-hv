@@ -1,0 +1,13 @@
+.. _exhale_function_ltc6813_8h_1a0bec3562f269146e996d92958a025eb3:
+
+Function _ltc6813_adcv(SPI_HandleTypeDef \*, bool)
+==================================================
+
+- Defined in :ref:`file_mainboard_Inc_peripherals_ltc6813.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: _ltc6813_adcv(SPI_HandleTypeDef *, bool)

@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Src_2main_8c_1a16edec1b754ced802e83b10006e0942c:
+
+Define TEMPS_READ_INTERVAL
+==========================
+
+- Defined in :ref:`file_mainboard_Src_main.c`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: TEMPS_READ_INTERVAL

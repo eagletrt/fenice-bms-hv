@@ -1,0 +1,22 @@
+.. _dir_mainboard_Inc_peripherals:
+
+
+Directory peripherals
+=====================
+
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Inc>` (``mainboard/Inc``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+*Directory path:* ``mainboard/Inc/peripherals``
+
+
+Files
+-----
+
+- :ref:`file_mainboard_Inc_peripherals_ltc6813.h`
+- :ref:`file_mainboard_Inc_peripherals_ltc6813_utils.h`
+- :ref:`file_mainboard_Inc_peripherals_si8900.h`
+
+

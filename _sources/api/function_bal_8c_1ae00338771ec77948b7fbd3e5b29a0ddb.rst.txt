@@ -1,0 +1,13 @@
+.. _exhale_function_bal_8c_1ae00338771ec77948b7fbd3e5b29a0ddb:
+
+Function _max_index
+===================
+
+- Defined in :ref:`file_mainboard_Src_bal.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: _max_index(uint16_t, size_t)

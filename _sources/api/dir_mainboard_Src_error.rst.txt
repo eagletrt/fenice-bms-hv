@@ -1,0 +1,21 @@
+.. _dir_mainboard_Src_error:
+
+
+Directory error
+===============
+
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Src>` (``mainboard/Src``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+*Directory path:* ``mainboard/Src/error``
+
+
+Files
+-----
+
+- :ref:`file_mainboard_Src_error_error.c`
+- :ref:`file_mainboard_Src_error_error_list_ref.c`
+
+

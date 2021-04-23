@@ -1,0 +1,13 @@
+.. _exhale_define_cellboard_2Inc_2main_8h_1aae451289f2eda1c04e3bf6d6120b6c0b:
+
+Define USART_RX_GPIO_Port
+=========================
+
+- Defined in :ref:`file_cellboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: USART_RX_GPIO_Port

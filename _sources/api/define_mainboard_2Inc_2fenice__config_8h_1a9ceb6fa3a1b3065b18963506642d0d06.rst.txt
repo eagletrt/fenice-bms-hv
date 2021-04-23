@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2fenice__config_8h_1a9ceb6fa3a1b3065b18963506642d0d06:
+
+Define PACK_MAX_CURRENT
+=======================
+
+- Defined in :ref:`file_mainboard_Inc_fenice_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: PACK_MAX_CURRENT

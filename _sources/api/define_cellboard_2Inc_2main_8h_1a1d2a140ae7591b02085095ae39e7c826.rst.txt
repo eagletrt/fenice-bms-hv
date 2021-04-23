@@ -1,0 +1,13 @@
+.. _exhale_define_cellboard_2Inc_2main_8h_1a1d2a140ae7591b02085095ae39e7c826:
+
+Define I2C_SDA_GPIO_Port
+========================
+
+- Defined in :ref:`file_cellboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: I2C_SDA_GPIO_Port

@@ -1,0 +1,13 @@
+.. _exhale_variable_ltc6813_8c_1ac30b1212b5737f9e4b04846f76902bd2:
+
+Variable GPIO_CONFIG
+====================
+
+- Defined in :ref:`file_mainboard_Src_peripherals_ltc6813.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: GPIO_CONFIG

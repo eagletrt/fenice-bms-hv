@@ -1,0 +1,34 @@
+
+.. _program_listing_file_mainboard_Inc_bal.h:
+
+Program Listing for File bal.h
+==============================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_mainboard_Inc_bal.h>` (``mainboard/Inc/bal.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   #ifndef BAL_H
+   #define BAL_H
+   
+   #include <inttypes.h>
+   #include <stdbool.h>
+   
+   #include "fenice_config.h"
+   
+   #define BAL_NULL_INDEX UINT8_MAX
+   
+   typedef struct bal_handle {
+       bool enable;
+       uint16_t threshold;
+       uint8_t slot_time;
+   } bal_handle;
+   
+   void bal_init(bal_handle *bal);
+   
+   uint8_t bal_compute_indexes(uint16_t volts[PACK_CELL_COUNT], uint8_t indexes[PACK_CELL_COUNT], uint16_t threshold);
+   
+   #endif

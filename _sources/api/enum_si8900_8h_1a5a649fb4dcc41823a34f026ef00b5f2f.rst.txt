@@ -1,0 +1,13 @@
+.. _exhale_enum_si8900_8h_1a5a649fb4dcc41823a34f026ef00b5f2f:
+
+Enum SI8900_CHANNEL
+===================
+
+- Defined in :ref:`file_mainboard_Inc_peripherals_si8900.h`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: SI8900_CHANNEL

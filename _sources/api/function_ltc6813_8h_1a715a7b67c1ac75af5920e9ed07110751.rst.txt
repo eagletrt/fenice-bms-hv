@@ -1,0 +1,13 @@
+.. _exhale_function_ltc6813_8h_1a715a7b67c1ac75af5920e9ed07110751:
+
+Function ltc6813_wrcomm_i2c_r
+=============================
+
+- Defined in :ref:`file_mainboard_Inc_peripherals_ltc6813.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ltc6813_wrcomm_i2c_r(SPI_HandleTypeDef *, uint8_t)

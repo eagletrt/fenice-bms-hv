@@ -1,0 +1,192 @@
+
+.. _file_mainboard_Inc_fenice_config.h:
+
+File fenice_config.h
+====================
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Inc>` (``mainboard/Inc``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+This file contains configuration settings for Chimera Evoluzione. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Inc/fenice_config.h``)
+----------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Inc_fenice_config.h.rst
+
+
+
+Detailed Description
+--------------------
+
+Oct 07, 2019 
+
+Matteo Bonora [matteo.bonora@studenti.unitn.it] 
+
+Simone Ruffini [simone.ruffini@studenti.unitn.it] 
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``inttypes.h``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_mainboard_Inc_bal.h`
+
+- :ref:`file_mainboard_Inc_pack.h`
+
+- :ref:`file_mainboard_Inc_feedback.h`
+
+
+
+
+Enums
+-----
+
+
+- :ref:`exhale_enum_mainboard_2Inc_2fenice__config_8h_1a06fc87d81c62e9abb8790b6e5713c55b`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a55973ed2194879bd45f5a2f5dc8e705c`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1adc1c18c9a78fa76194e88a6e067a5bf7`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a609c654690c5e70aa9713a972641874e`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1ab25af29e5cc6b462115ce9382dc13bb9`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a2e03ebbeabe73c0a49141f4eedc27b91`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a9266f6c7baa20287949711f808b1dab5`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1ad36e907430b027eb6067e1a40edcfa75`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a6518732d47d3c62703bb81d1cc4f7bdc`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a967e38a47e1ae71543e1903555d28abf`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a04107a61d000fd6656664fde5401d334`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1af313533a4eb32bafcbddd19b5e2154cc`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1ac6c25dcc28c3841d095287674c262136`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a9912a7389caf6887b3ad3ceea19cf9b6`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1afeade4a3aa68e8a17d4b6653dd118f3c`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a89fc54d810ffb4e44df4694793d80863`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1aacb1f83a54dd505fedda5ae061986c76`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1afc031ad8d471245104a20627db9c5242`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a17279386c8315cbc09ae36214e765674`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a1f337074220e345427c393e4dfe72c9d`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a28406ab7a2ebc1b2fd97b655b173dbfa`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a0c42839ebbedb7b0a4722a0c89f2768e`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1ae96f45706c849a95b8912193be3a6cee`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a1b9c0102efa9b5f2ba6e0ec6ca959e8a`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a6eb87d577456b165cca34c87be6e4c17`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1ad25baf1309e63341af5a37332165047b`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a779ec931683e9dc628d7aee263a22fa1`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a3133a13843f98869bb1359d9e8f4bb54`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a35bb2e9e977e1567a262f45cac9bf265`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a92f30c622832ad6c2dfc95f932c21d4e`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a60d95021fa7515f639603ef6dae74626`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1abf2cacfdd7c50f4779e617c0d28750b1`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a375f74cc5a3700baa1b746a2fcc60190`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1ae9b75689e590b0a702f6c24100f04693`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a9ceb6fa3a1b3065b18963506642d0d06`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1ab4ac28b6065c859687ae8a9d0c6ce9f4`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1ae0749bc3a20fd01dea3168777acdb529`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a5e2a19a0e90ed9912932dd358475c976`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a67720b9c5621001851dae7a32777194a`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a8d894a48d348f81c893d78ecabb942d2`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1aa3d96ce23725ae50959615d694e13e4f`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a9f31035b77acd470741a7e2fe533f175`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1aabde0ed9a71a7df4aa5b0b1630130d81`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a7106675a03b716a4eaed676ecac40431`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a269b2ac5a85295f75c79d8897ac7d556`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1ab56779ef7e65f077c58a13f09dcbbc85`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a2d81c780b1c83db6f5aadca8139c4dee`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a13dcd03a2565a2c6038ce21d73d0e974`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a90f72c040a242c1ea3bf9bf6d2413cc1`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1aa398e83b4f84621e9d677b0896d72c6c`
+
+
+Typedefs
+--------
+
+
+- :ref:`exhale_typedef_mainboard_2Inc_2fenice__config_8h_1a10dbe1ad50d7aed2fe64419786f3ea77`
+
+- :ref:`exhale_typedef_mainboard_2Inc_2fenice__config_8h_1a7f0e4c8e257063101aa9f4cc03644195`
+
+- :ref:`exhale_typedef_mainboard_2Inc_2fenice__config_8h_1a919cc27d97b06cf5d67cf5a9bc181dc2`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_mainboard_2Inc_2fenice__config_8h_1a2ebaa70891a638df88e485e7e05317a5`
+

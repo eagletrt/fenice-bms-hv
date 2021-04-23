@@ -1,0 +1,44 @@
+
+.. _file_mainboard_Src_stm32g4xx_hal_msp.c:
+
+File stm32g4xx_hal_msp.c
+========================
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Src>` (``mainboard/Src``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Src/stm32g4xx_hal_msp.c``)
+--------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Src_stm32g4xx_hal_msp.c.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
+
+
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_stm32g4xx__hal__msp_8c_1ae4fb8e66865c87d0ebab74a726a6891f`
+

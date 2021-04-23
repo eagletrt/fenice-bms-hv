@@ -1,0 +1,13 @@
+.. _exhale_variable_cli__bms_8c_1a652260a7b604db4237651c4d177b9594:
+
+Variable _cli_status
+====================
+
+- Defined in :ref:`file_mainboard_Src_cli_bms.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: _cli_status

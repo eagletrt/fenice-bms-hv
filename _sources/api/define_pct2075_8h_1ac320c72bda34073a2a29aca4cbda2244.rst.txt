@@ -1,0 +1,13 @@
+.. _exhale_define_pct2075_8h_1ac320c72bda34073a2a29aca4cbda2244:
+
+Define PCT2075_CONV_TEMP
+========================
+
+- Defined in :ref:`file_cellboard_Inc_pct2075.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: PCT2075_CONV_TEMP

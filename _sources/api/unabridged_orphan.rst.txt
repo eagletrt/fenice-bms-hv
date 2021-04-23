@@ -1,0 +1,313 @@
+:orphan:
+
+
+Full API
+========
+
+Directories
+***********
+
+
+.. toctree::
+   :maxdepth: 5
+
+   dir_cellboard.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir_cellboard_Inc.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir_cellboard_Src.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir_mainboard.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir_mainboard_Inc.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir_mainboard_Inc_error.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir_mainboard_Inc_peripherals.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir_mainboard_Src.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir_mainboard_Src_error.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir_mainboard_Src_peripherals.rst
+
+Files
+*****
+
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Src_bal.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Inc_bal.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Src_cli_bms.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Inc_cli_bms.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Src_error_error.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Inc_error_error.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Src_error_error_list_ref.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Inc_error_error_list_ref.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Src_fdcan.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Inc_fdcan.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Src_feedback.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Inc_feedback.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Inc_fenice_config.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_cellboard_Inc_fenice_config.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Src_fsm_bms.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Inc_fsm_bms.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Src_gpio.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Inc_gpio.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Src_peripherals_ltc6813.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Inc_peripherals_ltc6813.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Src_peripherals_ltc6813_utils.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Inc_peripherals_ltc6813_utils.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Src_main.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_cellboard_Src_main.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Inc_main.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_cellboard_Inc_main.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Src_pack.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Inc_pack.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_cellboard_Src_pct2075.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_cellboard_Inc_pct2075.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Src_peripherals_si8900.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Inc_peripherals_si8900.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Src_spi.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Inc_spi.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_cellboard_Inc_stm32f4xx_hal_conf.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_cellboard_Src_stm32f4xx_hal_msp.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_cellboard_Src_stm32f4xx_it.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_cellboard_Inc_stm32f4xx_it.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Inc_stm32g4xx_hal_conf.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Src_stm32g4xx_hal_msp.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Src_stm32g4xx_it.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Inc_stm32g4xx_it.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_cellboard_Src_system_stm32f4xx.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Src_system_stm32g4xx.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_cellboard_Src_temperature.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_cellboard_Inc_temperature.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Src_tim.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Inc_tim.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Src_usart.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Inc_usart.h.rst

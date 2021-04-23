@@ -1,0 +1,79 @@
+
+.. _file_mainboard_Inc_cli_bms.h:
+
+File cli_bms.h
+==============
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Inc>` (``mainboard/Inc``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+cli instance for bms 
+
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Inc/cli_bms.h``)
+----------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Inc_cli_bms.h.rst
+
+
+
+Detailed Description
+--------------------
+
+Mar 29,2020
+
+Matteo Bonora [matteo.bonora@studenti.unitn.it] 
+
+Simone Ruffini [simone.ruffini@studenti.unitn.it] 
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``cli.h``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_mainboard_Src_cli_bms.c`
+
+- :ref:`file_mainboard_Src_main.c`
+
+- :ref:`file_mainboard_Src_usart.c`
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_cli__bms_8h_1aef592962b002638da2102cf18e9587e7`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_cli__bms_8h_1ae97f49f74719578ca4823d58d8e74c19`
+

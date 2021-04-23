@@ -1,0 +1,13 @@
+.. _exhale_function_error_8c_1a344c68273636b72c77da957d1086a5ee:
+
+Function error_init()
+=====================
+
+- Defined in :ref:`file_mainboard_Src_error_error.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: error_init()

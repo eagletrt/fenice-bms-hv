@@ -1,0 +1,13 @@
+.. _exhale_variable_si8900_8c_1aa9a0893302e24fafcd1a44d7b1c4f81e:
+
+Variable si8900_ready
+=====================
+
+- Defined in :ref:`file_mainboard_Src_peripherals_si8900.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: si8900_ready

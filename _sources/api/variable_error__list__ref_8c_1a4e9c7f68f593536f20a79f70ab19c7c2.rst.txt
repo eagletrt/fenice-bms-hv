@@ -1,0 +1,13 @@
+.. _exhale_variable_error__list__ref_8c_1a4e9c7f68f593536f20a79f70ab19c7c2:
+
+Variable error_feedback_hard
+============================
+
+- Defined in :ref:`file_mainboard_Src_error_error_list_ref.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: error_feedback_hard

@@ -1,0 +1,13 @@
+.. _exhale_function_mainboard_2Src_2main_8c_1a70af21c671abfcc773614a9a4f63d920:
+
+Function SystemClock_Config(void)
+=================================
+
+- Defined in :ref:`file_mainboard_Src_main.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: SystemClock_Config(void)

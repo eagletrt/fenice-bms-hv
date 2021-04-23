@@ -1,0 +1,13 @@
+.. _exhale_function_usart_8c_1a0e0456ea96d55db31de947fb3e954f18:
+
+Function HAL_UART_ErrorCallback
+===============================
+
+- Defined in :ref:`file_mainboard_Src_usart.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: HAL_UART_ErrorCallback(UART_HandleTypeDef *)

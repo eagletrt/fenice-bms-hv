@@ -1,0 +1,13 @@
+.. _exhale_define_pack_8c_1aa7ea986bc4c9a1c93ff64f92a0fdd296:
+
+Define CURRENT_ARRAY_LENGTH
+===========================
+
+- Defined in :ref:`file_mainboard_Src_pack.c`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CURRENT_ARRAY_LENGTH

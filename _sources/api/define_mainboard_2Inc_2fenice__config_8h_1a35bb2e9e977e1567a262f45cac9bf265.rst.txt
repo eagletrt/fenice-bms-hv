@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2fenice__config_8h_1a35bb2e9e977e1567a262f45cac9bf265:
+
+Define LTC6813_COUNT
+====================
+
+- Defined in :ref:`file_mainboard_Inc_fenice_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: LTC6813_COUNT

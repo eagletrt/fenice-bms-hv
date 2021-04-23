@@ -1,0 +1,13 @@
+.. _exhale_define_cellboard_2Inc_2fenice__config_8h_1a90f72c040a242c1ea3bf9bf6d2413cc1:
+
+Define TEMP_SENSORS_PER_STRIP
+=============================
+
+- Defined in :ref:`file_cellboard_Inc_fenice_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: TEMP_SENSORS_PER_STRIP

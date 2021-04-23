@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2main_8h_1a51aa75562b6afccdf2ec4c693fad8c2f:
+
+Define IP_HIGH_GPIO_Port
+========================
+
+- Defined in :ref:`file_mainboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: IP_HIGH_GPIO_Port

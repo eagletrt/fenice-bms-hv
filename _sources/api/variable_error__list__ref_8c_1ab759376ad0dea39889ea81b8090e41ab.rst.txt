@@ -1,0 +1,13 @@
+.. _exhale_variable_error__list__ref_8c_1ab759376ad0dea39889ea81b8090e41ab:
+
+Variable error_list_ref_current
+===============================
+
+- Defined in :ref:`file_mainboard_Src_error_error_list_ref.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: error_list_ref_current

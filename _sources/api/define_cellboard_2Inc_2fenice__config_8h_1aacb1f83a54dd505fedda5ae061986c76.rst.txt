@@ -1,0 +1,13 @@
+.. _exhale_define_cellboard_2Inc_2fenice__config_8h_1aacb1f83a54dd505fedda5ae061986c76:
+
+Define FEEDBACK_IMD_SHUTDOWN
+============================
+
+- Defined in :ref:`file_cellboard_Inc_fenice_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: FEEDBACK_IMD_SHUTDOWN

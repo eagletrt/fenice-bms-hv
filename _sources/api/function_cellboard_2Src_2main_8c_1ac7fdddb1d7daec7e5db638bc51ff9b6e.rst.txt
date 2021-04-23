@@ -1,0 +1,13 @@
+.. _exhale_function_cellboard_2Src_2main_8c_1ac7fdddb1d7daec7e5db638bc51ff9b6e:
+
+Function get_temp_maxmin
+========================
+
+- Defined in :ref:`file_cellboard_Src_main.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: get_temp_maxmin()

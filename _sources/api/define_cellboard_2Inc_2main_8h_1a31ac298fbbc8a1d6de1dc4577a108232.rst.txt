@@ -1,0 +1,13 @@
+.. _exhale_define_cellboard_2Inc_2main_8h_1a31ac298fbbc8a1d6de1dc4577a108232:
+
+Define B1_Pin
+=============
+
+- Defined in :ref:`file_cellboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: B1_Pin

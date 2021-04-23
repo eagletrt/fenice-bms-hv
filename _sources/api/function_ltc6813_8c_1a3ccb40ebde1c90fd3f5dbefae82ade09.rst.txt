@@ -1,0 +1,13 @@
+.. _exhale_function_ltc6813_8c_1a3ccb40ebde1c90fd3f5dbefae82ade09:
+
+Function ltc6813_wrcfg(SPI_HandleTypeDef \*, bool, uint8_t)
+===========================================================
+
+- Defined in :ref:`file_mainboard_Src_peripherals_ltc6813.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ltc6813_wrcfg(SPI_HandleTypeDef *, bool, uint8_t)

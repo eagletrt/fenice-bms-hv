@@ -1,0 +1,13 @@
+.. _exhale_define_cellboard_2Inc_2main_8h_1ac93b92f1334823df872908c845c71afc:
+
+Define USART_RX_Pin
+===================
+
+- Defined in :ref:`file_cellboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: USART_RX_Pin

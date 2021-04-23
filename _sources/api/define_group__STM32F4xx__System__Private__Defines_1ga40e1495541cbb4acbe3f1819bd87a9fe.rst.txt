@@ -1,0 +1,13 @@
+.. _exhale_define_group__STM32F4xx__System__Private__Defines_1ga40e1495541cbb4acbe3f1819bd87a9fe:
+
+Define VECT_TAB_OFFSET
+======================
+
+- Defined in :ref:`file_cellboard_Src_system_stm32f4xx.c`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: VECT_TAB_OFFSET

@@ -1,0 +1,13 @@
+.. _exhale_variable_error__list__ref_8c_1a8af44e0ba60a74354ed515cdc9fae7f2:
+
+Variable error_int_voltage_mismatch
+===================================
+
+- Defined in :ref:`file_mainboard_Src_error_error_list_ref.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: error_int_voltage_mismatch

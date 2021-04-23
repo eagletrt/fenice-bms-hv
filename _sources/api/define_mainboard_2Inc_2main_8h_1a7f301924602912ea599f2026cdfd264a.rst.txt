@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2main_8h_1a7f301924602912ea599f2026cdfd264a:
+
+Define MUX_A2_Pin
+=================
+
+- Defined in :ref:`file_mainboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MUX_A2_Pin

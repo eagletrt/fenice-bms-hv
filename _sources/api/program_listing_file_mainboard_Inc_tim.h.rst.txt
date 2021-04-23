@@ -1,0 +1,47 @@
+
+.. _program_listing_file_mainboard_Inc_tim.h:
+
+Program Listing for File tim.h
+==============================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_mainboard_Inc_tim.h>` (``mainboard/Inc/tim.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   /* Define to prevent recursive inclusion -------------------------------------*/
+   #ifndef __TIM_H__
+   #define __TIM_H__
+   
+   #ifdef __cplusplus
+   extern "C" {
+   #endif
+   
+   /* Includes ------------------------------------------------------------------*/
+   #include "main.h"
+   
+   /* USER CODE BEGIN Includes */
+   
+   /* USER CODE END Includes */
+   
+   extern TIM_HandleTypeDef htim2;
+   
+   /* USER CODE BEGIN Private defines */
+   
+   /* USER CODE END Private defines */
+   
+   void MX_TIM2_Init(void);
+   
+   /* USER CODE BEGIN Prototypes */
+   
+   /* USER CODE END Prototypes */
+   
+   #ifdef __cplusplus
+   }
+   #endif
+   
+   #endif /* __TIM_H__ */
+   
+   /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

@@ -1,0 +1,13 @@
+.. _exhale_define_stm32f4xx__hal__conf_8h_1a7833d885caa7e29abbebfb90a4b96f86:
+
+Define PHY_LOOPBACK
+===================
+
+- Defined in :ref:`file_cellboard_Inc_stm32f4xx_hal_conf.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: PHY_LOOPBACK

@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2main_8h_1ac7e8838bf05988b9dfbea1295b0e9ab1:
+
+Define CHARGE_Pin
+=================
+
+- Defined in :ref:`file_mainboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CHARGE_Pin

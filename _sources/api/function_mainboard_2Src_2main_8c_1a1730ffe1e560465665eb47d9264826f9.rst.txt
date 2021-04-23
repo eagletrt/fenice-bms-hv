@@ -1,0 +1,13 @@
+.. _exhale_function_mainboard_2Src_2main_8c_1a1730ffe1e560465665eb47d9264826f9:
+
+Function Error_Handler(void)
+============================
+
+- Defined in :ref:`file_mainboard_Src_main.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: Error_Handler(void)

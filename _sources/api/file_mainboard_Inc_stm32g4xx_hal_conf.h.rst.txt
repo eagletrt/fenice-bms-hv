@@ -1,0 +1,194 @@
+
+.. _file_mainboard_Inc_stm32g4xx_hal_conf.h:
+
+File stm32g4xx_hal_conf.h
+=========================
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Inc>` (``mainboard/Inc``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+HAL configuration file. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Inc/stm32g4xx_hal_conf.h``)
+---------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Inc_stm32g4xx_hal_conf.h.rst
+
+
+
+Detailed Description
+--------------------
+
+MCD Application Team 
+
+
+
+ Copyright (c) 2019 STMicroelectronics. All rights reserved.
+
+
+This software component is licensed by ST under BSD 3-Clause license, the "License"; You may not use this file except in compliance with the License. You may obtain a copy of the License at: opensource.org/licenses/BSD-3-Clause 
+
+
+
+
+Includes
+--------
+
+
+- ``stm32g4xx_hal_cortex.h``
+
+- ``stm32g4xx_hal_dma.h``
+
+- ``stm32g4xx_hal_exti.h``
+
+- ``stm32g4xx_hal_fdcan.h``
+
+- ``stm32g4xx_hal_flash.h``
+
+- ``stm32g4xx_hal_gpio.h``
+
+- ``stm32g4xx_hal_pwr.h``
+
+- ``stm32g4xx_hal_rcc.h``
+
+- ``stm32g4xx_hal_spi.h``
+
+- ``stm32g4xx_hal_tim.h``
+
+- ``stm32g4xx_hal_uart.h``
+
+
+
+
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a631dea7b230e600555f979c62af1de21`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a5b4c32a40cf49b06c0d761e385949a6b`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a8c47c935e91e70569098b41718558648`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1aa9b5a3a425901e097de70092dbe31e0f`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a6552186102a1131b2849ac55a582945d`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1aeb359e861d8a92c233c3229657dbcd74`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a52b8d9123261d716ad98a5c3db52c2ed`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a7112575efe3740911f19a13e6b170fee`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a86165f80d6078719ee0715afe13febf5`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a877ae99e8c47a609ea97c888912bf75f`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1ab51923c3716977d7923f49cc9d081aa8`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1ac3dd74314ed62ac8575e2f9f48b3ac48`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a8ad4712bf4add56892d057778e826e0c`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a23382b8f04b3e6db2c59dfa1ef5ea4a2`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a167269406e73327b95c3bb7b9cfe6d89`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a68ecbc9b0a1a40a1ec9d18d5e9747c4f`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1aeafcff4f57440c60e64812dddd13e7cb`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a47f01e5e3f2edfa94bf74c08835f3875`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1aaa8c76e274d0f6dd2cefb5d0b17fbc37`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a3379989d46599c7e19a43f42e9145a4a`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a85e6fc812dc26f7161a04be2568a5462`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a7bbb9d19e5189a6ccd0fb6fa6177d20d`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a4872023e65449c0506aac3ea6bec99e9`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a13fc0d5e7bb925385c0cc0772ba6a391`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1ae27809d4959b9fd5b5d974e3e1c77d2e`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1acc33abd5393affd16cc4a1397839dfe4`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a94f0f5f870b8e45eab42cfe77e4210ed`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a382744674caee964d227d41574fe2b73`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1aab15bfcb9198618bda3d7e914193b466`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1af9580ae862dcc02cee7822030c48d6b8`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1aa51881ed9e9d2aaa7d6f0d598d723e46`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a5d191a50c40ac4b4e38f9f614e37e48c`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a34a796bea8a48187716b99c6f14b14f2`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a0c281b7bdebecbe9715d556f0f374fea`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a99be773f7f62b6277d1c87658e085725`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a1bdc791c35b20c7188b3d74fd6c30ebf`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a4a459bcaa046998e6939fc66b0831e96`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a5b148dcae2bf8f576fc69a349794df4c`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a80498b459859528918535b88fed54b28`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a7b38c01bd6621f3da5993d71eb5ff42e`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a2c51d4e89cd75f4629092d46ca26a750`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1afd18c04aa4a4a54446df8083be875a00`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a95cbcf73c2ae3aea55fb62502ed224a2`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a9b01c64d19f0d4839b7da08bd61c7ff7`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a54badbcdb096ce802d2eed981cbbc31a`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a0e2ac47c259fc72ef188c0406a2af803`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a43bb2335641440326db0f05526c1bff9`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a74cae3ff25398b4a06a579a7164a8518`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a8d8be2d7e4ed5bfc7b64f60ba604c749`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a5c7c04d57c22f5301f1ea589abc6f35f`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a5ef4d67cd7630f6e2e67d17370fbffdb`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a68c6c7c633e6cb378824020ef00a5701`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1ac79983d623c7f760c5077618a453561b`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a6879802837c27d8761d8a8fdab626891`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1ad048ac737242c2c2cb9f4a72953d10ce`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1a4c6fab687afc7ba4469b1b2d34472358`
+
+- :ref:`exhale_define_stm32g4xx__hal__conf_8h_1aae550dad9f96d52cfce5e539adadbbb4`
+

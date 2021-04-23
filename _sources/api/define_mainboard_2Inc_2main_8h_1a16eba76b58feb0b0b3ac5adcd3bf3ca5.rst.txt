@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2main_8h_1a16eba76b58feb0b0b3ac5adcd3bf3ca5:
+
+Define CHARGE_GPIO_Port
+=======================
+
+- Defined in :ref:`file_mainboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CHARGE_GPIO_Port

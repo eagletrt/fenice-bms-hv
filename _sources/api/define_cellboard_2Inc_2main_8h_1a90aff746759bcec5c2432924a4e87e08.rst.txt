@@ -1,0 +1,13 @@
+.. _exhale_define_cellboard_2Inc_2main_8h_1a90aff746759bcec5c2432924a4e87e08:
+
+Define I2C_SCL_Pin
+==================
+
+- Defined in :ref:`file_cellboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: I2C_SCL_Pin

@@ -1,0 +1,23 @@
+
+.. _program_listing_file_mainboard_Inc_cli_bms.h:
+
+Program Listing for File cli_bms.h
+==================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_mainboard_Inc_cli_bms.h>` (``mainboard/Inc/cli_bms.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   #ifndef CLI_BMS_H
+   #define CLI_BMS_H
+   
+   #include "cli.h"
+   
+   extern cli_t cli_bms;
+   
+   void cli_bms_init();
+   
+   #endif

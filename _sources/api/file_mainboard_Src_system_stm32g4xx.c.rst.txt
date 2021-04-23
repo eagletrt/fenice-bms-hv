@@ -1,0 +1,141 @@
+
+.. _file_mainboard_Src_system_stm32g4xx.c:
+
+File system_stm32g4xx.c
+=======================
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Src>` (``mainboard/Src``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+CMSIS Cortex-M4 Device Peripheral Access Layer System Source File. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Src/system_stm32g4xx.c``)
+-------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Src_system_stm32g4xx.c.rst
+
+
+
+Detailed Description
+--------------------
+
+MCD Application Team This file provides two functions and one global variable to be called from user application:
+
+- :ref:`exhale_function_group__STM32G4xx__System__Private__Functions_1ga93f514700ccf00d08dbdcff7f1224eb2`: This function is called at startup just after reset and before branch to main program. This call is made inside the "startup_stm32g4xx.s" file.
+
+- SystemCoreClock variable: Contains the core clock (HCLK), it can be used by the user application to setup the SysTick timer or configure other parameters.
+
+- :ref:`exhale_function_group__STM32G4xx__System__Private__Functions_1gae0c36a9591fe6e9c45ecb21a794f0f0f`: Updates the variable SystemCoreClock and must be called whenever the core clock is changed during program execution.
+
+
+
+After each device reset the HSI (16 MHz) is used as system clock source. Then :ref:`exhale_function_group__STM32G4xx__System__Private__Functions_1ga93f514700ccf00d08dbdcff7f1224eb2` function is called, in "startup_stm32g4xx.s" file, to configure the system clock before to branch to main program.
+
+
+This file configures the system clock as follows:
+
+
+
+
+System Clock source                    | HSI
+
+
+SYSCLK(Hz)                             | 16000000
+
+
+HCLK(Hz)                               | 16000000
+
+
+AHB Prescaler                          | 1
+
+
+APB1 Prescaler                         | 1
+
+
+APB2 Prescaler                         | 1
+
+
+PLL_M                                  | 1
+
+
+PLL_N                                  | 16
+
+
+PLL_P                                  | 7
+
+
+PLL_Q                                  | 2
+
+
+PLL_R                                  | 2
+
+
+Require 48MHz for RNG                  | Disabled
+
+=============================================================================
+
+
+
+ Copyright (c) 2019 STMicroelectronics. All rights reserved.
+
+
+This software component is licensed by ST under BSD 3-Clause license, the "License"; You may not use this file except in compliance with the License. You may obtain a copy of the License at: opensource.org/licenses/BSD-3-Clause 
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``stm32g4xx.h``
+
+
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_group__STM32G4xx__System__Private__Functions_1gae0c36a9591fe6e9c45ecb21a794f0f0f`
+
+- :ref:`exhale_function_group__STM32G4xx__System__Private__Functions_1ga93f514700ccf00d08dbdcff7f1224eb2`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_group__STM32G4xx__System__Private__Includes_1gaeafcff4f57440c60e64812dddd13e7cb`
+
+- :ref:`exhale_define_group__STM32G4xx__System__Private__Includes_1gaaa8c76e274d0f6dd2cefb5d0b17fbc37`
+
+- :ref:`exhale_define_group__STM32G4xx__System__Private__Defines_1ga40e1495541cbb4acbe3f1819bd87a9fe`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_group__STM32G4xx__System__Private__Variables_1ga6e1d9cd666f0eacbfde31e9932a93466`
+
+- :ref:`exhale_variable_group__STM32G4xx__System__Private__Variables_1ga5b4f8b768465842cf854a8f993b375e9`
+
+- :ref:`exhale_variable_group__STM32G4xx__System__Private__Variables_1gaa3cd3e43291e81e795d642b79b6088e6`
+

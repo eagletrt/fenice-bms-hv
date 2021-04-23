@@ -1,0 +1,13 @@
+.. _exhale_function_error_8h_1a5f13743cb35edb95159816f9deff4be8:
+
+Function compare_timeouts
+=========================
+
+- Defined in :ref:`file_mainboard_Inc_error_error.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: compare_timeouts(error_t *, error_t *)

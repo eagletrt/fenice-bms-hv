@@ -1,0 +1,13 @@
+.. _exhale_define_feedback_8h_1aa0da3aea328b174db9ea189b4194c08a:
+
+Define FEEDBACK_TO_PRECHARGE_MASK
+=================================
+
+- Defined in :ref:`file_mainboard_Inc_feedback.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: FEEDBACK_TO_PRECHARGE_MASK

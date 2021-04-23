@@ -1,0 +1,71 @@
+
+.. _file_mainboard_Src_tim.c:
+
+File tim.c
+==========
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Src>` (``mainboard/Src``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+This file provides code for the configuration of the TIM instances. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Src/tim.c``)
+------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Src_tim.c.rst
+
+
+
+Detailed Description
+--------------------
+
+
+
+ Copyright (c) 2020 STMicroelectronics. All rights reserved.
+
+
+This software component is licensed by ST under BSD 3-Clause license, the "License"; You may not use this file except in compliance with the License. You may obtain a copy of the License at: opensource.org/licenses/BSD-3-Clause 
+
+
+
+
+Includes
+--------
+
+
+- ``tim.h`` (:ref:`file_mainboard_Inc_tim.h`)
+
+
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_tim_8c_1adee8ed7d3ebb3a217c27ac10af86ce2f`
+
+- :ref:`exhale_function_tim_8c_1a59716af159bfbbb6023b31354fb23af8`
+
+- :ref:`exhale_function_tim_8c_1a4b8ff887fd3fdf26605e35927e4ff202`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_tim_8c_1a2c80fd5510e2990a59a5c90d745c716c`
+

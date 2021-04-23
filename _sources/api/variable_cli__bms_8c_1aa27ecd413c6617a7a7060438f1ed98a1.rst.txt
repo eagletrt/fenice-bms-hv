@@ -1,0 +1,13 @@
+.. _exhale_variable_cli__bms_8c_1aa27ecd413c6617a7a7060438f1ed98a1:
+
+Variable _cli_temps_all
+=======================
+
+- Defined in :ref:`file_mainboard_Src_cli_bms.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: _cli_temps_all

@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2main_8h_1af253fc2c0b960fab7613c2079d4f601f:
+
+Define BMS_FAULT_GPIO_Port
+==========================
+
+- Defined in :ref:`file_mainboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: BMS_FAULT_GPIO_Port

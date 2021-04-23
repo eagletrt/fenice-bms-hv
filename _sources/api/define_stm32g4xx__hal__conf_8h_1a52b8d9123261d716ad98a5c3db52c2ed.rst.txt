@@ -1,0 +1,13 @@
+.. _exhale_define_stm32g4xx__hal__conf_8h_1a52b8d9123261d716ad98a5c3db52c2ed:
+
+Define HAL_FDCAN_MODULE_ENABLED
+===============================
+
+- Defined in :ref:`file_mainboard_Inc_stm32g4xx_hal_conf.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: HAL_FDCAN_MODULE_ENABLED

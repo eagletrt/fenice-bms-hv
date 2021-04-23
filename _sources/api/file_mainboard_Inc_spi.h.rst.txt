@@ -1,0 +1,83 @@
+
+.. _file_mainboard_Inc_spi.h:
+
+File spi.h
+==========
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Inc>` (``mainboard/Inc``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+This file contains all the function prototypes for the :ref:`file_mainboard_Src_spi.c` file. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Inc/spi.h``)
+------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Inc_spi.h.rst
+
+
+
+Detailed Description
+--------------------
+
+
+
+ Copyright (c) 2020 STMicroelectronics. All rights reserved.
+
+
+This software component is licensed by ST under BSD 3-Clause license, the "License"; You may not use this file except in compliance with the License. You may obtain a copy of the License at: opensource.org/licenses/BSD-3-Clause 
+
+
+
+
+Includes
+--------
+
+
+- ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_mainboard_Src_main.c`
+
+- :ref:`file_mainboard_Src_spi.c`
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_spi_8h_1af81398f9775695df0b172367651ca3e6`
+
+- :ref:`exhale_function_spi_8h_1aea85daa666c03d85fd59edef711ebb08`
+
+- :ref:`exhale_function_spi_8h_1ad59b1470e3c09d41c88aecf7ae0ca806`
+
+- :ref:`exhale_function_spi_8h_1acc2dc237744eb00a139b6385c837d35c`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_spi_8h_1a9c6222bae4d0328dd843ae099623b40b`
+
+- :ref:`exhale_variable_spi_8h_1ab9da65f935e805137e2eb4e18c5ab224`
+

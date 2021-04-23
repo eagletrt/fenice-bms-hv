@@ -1,0 +1,121 @@
+
+.. _file_cellboard_Src_main.c:
+
+File main.c
+===========
+
+|exhale_lsh| :ref:`Parent directory <dir_cellboard_Src>` (``cellboard/Src``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+: Main program body 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``cellboard/Src/main.c``)
+-------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_cellboard_Src_main.c.rst
+
+
+
+Detailed Description
+--------------------
+
+
+
+ Copyright (c) 2019 STMicroelectronics. All rights reserved.
+
+
+This software component is licensed by ST under BSD 3-Clause license, the "License"; You may not use this file except in compliance with the License. You may obtain a copy of the License at: opensource.org/licenses/BSD-3-Clause 
+
+
+
+
+Includes
+--------
+
+
+- ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
+
+- ``math.h``
+
+- ``stdio.h``
+
+- ``stdlib.h``
+
+- ``string.h``
+
+- ``temperature.h`` (:ref:`file_cellboard_Inc_temperature.h`)
+
+
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_cellboard_2Src_2main_8c_1a1730ffe1e560465665eb47d9264826f9`
+
+- :ref:`exhale_function_cellboard_2Src_2main_8c_1a9769ee8710b70b63cf39cab88d62f838`
+
+- :ref:`exhale_function_cellboard_2Src_2main_8c_1ac7fdddb1d7daec7e5db638bc51ff9b6e`
+
+- :ref:`exhale_function_cellboard_2Src_2main_8c_1a3b2a6a0ff585d8e529a73ba7d291c92d`
+
+- :ref:`exhale_function_cellboard_2Src_2main_8c_1a4d5338cd64a656dfdc4154773bc4f05d`
+
+- :ref:`exhale_function_cellboard_2Src_2main_8c_1a22544d1e6a14392cd5fe41e4e4f4cc96`
+
+- :ref:`exhale_function_cellboard_2Src_2main_8c_1ae23a5b1ce68867c35093ff2b5931e9a0`
+
+- :ref:`exhale_function_cellboard_2Src_2main_8c_1a7e086b3ee67187ea072aec6fb4d52aad`
+
+- :ref:`exhale_function_cellboard_2Src_2main_8c_1a840291bc02cba5474a4cb46a9b9566fe`
+
+- :ref:`exhale_function_cellboard_2Src_2main_8c_1ae89fdd15729ad41a66911190fcbab23a`
+
+- :ref:`exhale_function_cellboard_2Src_2main_8c_1a4230d11f81d0b16e112f1cc3f40cb42f`
+
+- :ref:`exhale_function_cellboard_2Src_2main_8c_1af71812af4fbb9ebbe0f681165b657433`
+
+- :ref:`exhale_function_cellboard_2Src_2main_8c_1a4990b1c13cc4573981034104cc9d0cb7`
+
+- :ref:`exhale_function_cellboard_2Src_2main_8c_1a6db1014d713f6f5c0f52a13299ee0733`
+
+- :ref:`exhale_function_cellboard_2Src_2main_8c_1a70af21c671abfcc773614a9a4f63d920`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_cellboard_2Src_2main_8c_1aff31312fb16705aa73c53b945a1a6b30`
+
+- :ref:`exhale_variable_cellboard_2Src_2main_8c_1af7b2c26e44dadaaa798a5c3d82914ba7`
+
+- :ref:`exhale_variable_cellboard_2Src_2main_8c_1ac379bcc152d860f08b1279fd3e232295`
+
+- :ref:`exhale_variable_cellboard_2Src_2main_8c_1aa9479c261d65eecedd3d9582f7f0f89c`
+
+- :ref:`exhale_variable_cellboard_2Src_2main_8c_1aa2146da9811399cd856abaef0c545957`
+
+- :ref:`exhale_variable_cellboard_2Src_2main_8c_1ad311f87da4f2cec4671720dd982302f4`
+
+- :ref:`exhale_variable_cellboard_2Src_2main_8c_1a511fa687532c113f458fb02786eb63c1`
+
+- :ref:`exhale_variable_cellboard_2Src_2main_8c_1a1593ff46e3c9ddcc410344bdbf0d7907`
+
+- :ref:`exhale_variable_cellboard_2Src_2main_8c_1a104a126b75d6326f3d7a6739d7bab444`
+

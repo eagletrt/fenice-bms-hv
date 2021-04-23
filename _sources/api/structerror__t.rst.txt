@@ -1,0 +1,16 @@
+.. _exhale_struct_structerror__t:
+
+Struct error_t
+==============
+
+- Defined in :ref:`file_mainboard_Inc_error_error.h`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: error_t
+   :members:
+   :protected-members:
+   :undoc-members:

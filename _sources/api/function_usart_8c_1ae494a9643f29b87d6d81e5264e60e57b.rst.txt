@@ -1,0 +1,13 @@
+.. _exhale_function_usart_8c_1ae494a9643f29b87d6d81e5264e60e57b:
+
+Function HAL_UART_RxCpltCallback
+================================
+
+- Defined in :ref:`file_mainboard_Src_usart.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: HAL_UART_RxCpltCallback(UART_HandleTypeDef *)

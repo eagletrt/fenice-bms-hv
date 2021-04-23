@@ -1,0 +1,13 @@
+.. _exhale_variable_error__list__ref_8c_1a5aa1a5f10700c4a83f5767f7af6a57d2:
+
+Variable error_list_ref_voltages
+================================
+
+- Defined in :ref:`file_mainboard_Src_error_error_list_ref.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: error_list_ref_voltages

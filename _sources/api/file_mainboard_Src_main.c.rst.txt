@@ -1,0 +1,98 @@
+
+.. _file_mainboard_Src_main.c:
+
+File main.c
+===========
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Src>` (``mainboard/Src``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Src/main.c``)
+-------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Src_main.c.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``cli_bms.h`` (:ref:`file_mainboard_Inc_cli_bms.h`)
+
+- ``error/error.h`` (:ref:`file_mainboard_Inc_error_error.h`)
+
+- ``fdcan.h`` (:ref:`file_mainboard_Inc_fdcan.h`)
+
+- ``fenice_config.h`` (:ref:`file_mainboard_Inc_fenice_config.h`)
+
+- ``fsm_bms.h`` (:ref:`file_mainboard_Inc_fsm_bms.h`)
+
+- ``gpio.h`` (:ref:`file_mainboard_Inc_gpio.h`)
+
+- ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
+
+- ``si8900.h`` (:ref:`file_mainboard_Inc_peripherals_si8900.h`)
+
+- ``spi.h`` (:ref:`file_mainboard_Inc_spi.h`)
+
+- ``tim.h`` (:ref:`file_mainboard_Inc_tim.h`)
+
+- ``usart.h`` (:ref:`file_mainboard_Inc_usart.h`)
+
+
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_mainboard_2Src_2main_8c_1a3ed7f44fca3a6f9df9f4cec4b62876ca`
+
+- :ref:`exhale_function_mainboard_2Src_2main_8c_1a1730ffe1e560465665eb47d9264826f9`
+
+- :ref:`exhale_function_mainboard_2Src_2main_8c_1a840291bc02cba5474a4cb46a9b9566fe`
+
+- :ref:`exhale_function_mainboard_2Src_2main_8c_1a4990b1c13cc4573981034104cc9d0cb7`
+
+- :ref:`exhale_function_mainboard_2Src_2main_8c_1aa37e75086b51ff3285a728e2503da04a`
+
+- :ref:`exhale_function_mainboard_2Src_2main_8c_1a6a685456398dbe1476716961676530ad`
+
+- :ref:`exhale_function_mainboard_2Src_2main_8c_1a70af21c671abfcc773614a9a4f63d920`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_mainboard_2Src_2main_8c_1a16edec1b754ced802e83b10006e0942c`
+
+- :ref:`exhale_define_mainboard_2Src_2main_8c_1aa28d3201210f230c3d1bf3265318a70f`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_mainboard_2Src_2main_8c_1a1c126854bb1813d31ab4776b21dcc51f`
+
+- :ref:`exhale_variable_mainboard_2Src_2main_8c_1a58b94d8446d83cebee1aadaa5ed0690e`
+
+- :ref:`exhale_variable_mainboard_2Src_2main_8c_1ab9b1f9b2a9bed288beffd8ce1d7d6406`
+
+- :ref:`exhale_variable_mainboard_2Src_2main_8c_1a8f4d519a00c097f0327f9c45e486301f`
+

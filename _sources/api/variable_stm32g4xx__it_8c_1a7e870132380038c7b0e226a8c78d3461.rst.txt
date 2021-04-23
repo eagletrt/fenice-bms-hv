@@ -1,0 +1,13 @@
+.. _exhale_variable_stm32g4xx__it_8c_1a7e870132380038c7b0e226a8c78d3461:
+
+Variable hfdcan1
+================
+
+- Defined in :ref:`file_mainboard_Src_stm32g4xx_it.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: hfdcan1

@@ -1,0 +1,13 @@
+.. _exhale_function_error_8c_1a3b6a9c78bb29ca0f757779c0bdb37e3c:
+
+Function error_equals
+=====================
+
+- Defined in :ref:`file_mainboard_Src_error_error.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: error_equals(llist_node, llist_node)

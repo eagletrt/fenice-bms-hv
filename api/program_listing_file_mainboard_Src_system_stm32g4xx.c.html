@@ -1,0 +1,302 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Program Listing for File system_stm32g4xx.c &mdash; Fenice BMS HV 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Fenice BMS HV
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Software</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Fenice BMS HV</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Program Listing for File system_stm32g4xx.c</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/api/program_listing_file_mainboard_Src_system_stm32g4xx.c.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="program-listing-for-file-system-stm32g4xx-c">
+<span id="program-listing-file-mainboard-src-system-stm32g4xx-c"></span><h1>Program Listing for File system_stm32g4xx.c<a class="headerlink" href="#program-listing-for-file-system-stm32g4xx-c" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_mainboard_Src_system_stm32g4xx.c.html#file-mainboard-src-system-stm32g4xx-c"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">mainboard/Src/system_stm32g4xx.c</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;stm32g4xx.h&quot;</span><span class="cp"></span>
+
+<span class="cp">#if !defined  (HSE_VALUE)</span>
+  <span class="cp">#define HSE_VALUE     8000000U</span>
+<span class="cp">#endif </span><span class="cm">/* HSE_VALUE */</span><span class="cp"></span>
+
+<span class="cp">#if !defined  (HSI_VALUE)</span>
+  <span class="cp">#define HSI_VALUE    16000000U</span>
+<span class="cp">#endif </span><span class="cm">/* HSI_VALUE */</span><span class="cp"></span>
+
+<span class="cm">/************************* Miscellaneous Configuration ************************/</span>
+<span class="cm">/* #define VECT_TAB_SRAM */</span>
+<span class="cp">#define VECT_TAB_OFFSET  0x00UL</span>
+<span class="cm">/******************************************************************************/</span>
+
+  <span class="cm">/* The SystemCoreClock variable is updated in three ways:</span>
+<span class="cm">      1) by calling CMSIS function SystemCoreClockUpdate()</span>
+<span class="cm">      2) by calling HAL API function HAL_RCC_GetHCLKFreq()</span>
+<span class="cm">      3) each time HAL_RCC_ClockConfig() is called to configure the system clock frequency</span>
+<span class="cm">         Note: If you use this function to configure the system clock; then there</span>
+<span class="cm">               is no need to call the 2 first functions listed above, since SystemCoreClock</span>
+<span class="cm">               variable is updated automatically.</span>
+<span class="cm">  */</span>
+  <span class="kt">uint32_t</span> <span class="n">SystemCoreClock</span> <span class="o">=</span> <span class="n">HSI_VALUE</span><span class="p">;</span>
+
+  <span class="k">const</span> <span class="kt">uint8_t</span> <span class="n">AHBPrescTable</span><span class="p">[</span><span class="mi">16</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0U</span><span class="p">,</span> <span class="mi">0U</span><span class="p">,</span> <span class="mi">0U</span><span class="p">,</span> <span class="mi">0U</span><span class="p">,</span> <span class="mi">0U</span><span class="p">,</span> <span class="mi">0U</span><span class="p">,</span> <span class="mi">0U</span><span class="p">,</span> <span class="mi">0U</span><span class="p">,</span> <span class="mi">1U</span><span class="p">,</span> <span class="mi">2U</span><span class="p">,</span> <span class="mi">3U</span><span class="p">,</span> <span class="mi">4U</span><span class="p">,</span> <span class="mi">6U</span><span class="p">,</span> <span class="mi">7U</span><span class="p">,</span> <span class="mi">8U</span><span class="p">,</span> <span class="mi">9U</span><span class="p">};</span>
+  <span class="k">const</span> <span class="kt">uint8_t</span> <span class="n">APBPrescTable</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="o">=</span>  <span class="p">{</span><span class="mi">0U</span><span class="p">,</span> <span class="mi">0U</span><span class="p">,</span> <span class="mi">0U</span><span class="p">,</span> <span class="mi">0U</span><span class="p">,</span> <span class="mi">1U</span><span class="p">,</span> <span class="mi">2U</span><span class="p">,</span> <span class="mi">3U</span><span class="p">,</span> <span class="mi">4U</span><span class="p">};</span>
+
+<span class="kt">void</span> <span class="nf">SystemInit</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="cm">/* FPU settings ------------------------------------------------------------*/</span>
+  <span class="cp">#if (__FPU_PRESENT == 1) &amp;&amp; (__FPU_USED == 1)</span>
+    <span class="n">SCB</span><span class="o">-&gt;</span><span class="n">CPACR</span> <span class="o">|=</span> <span class="p">((</span><span class="mi">3UL</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="mi">10</span><span class="o">*</span><span class="mi">2</span><span class="p">))</span><span class="o">|</span><span class="p">(</span><span class="mi">3UL</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="mi">11</span><span class="o">*</span><span class="mi">2</span><span class="p">)));</span>  <span class="cm">/* set CP10 and CP11 Full Access */</span>
+  <span class="cp">#endif</span>
+
+  <span class="cm">/* Configure the Vector Table location add offset address ------------------*/</span>
+<span class="cp">#ifdef VECT_TAB_SRAM</span>
+  <span class="n">SCB</span><span class="o">-&gt;</span><span class="n">VTOR</span> <span class="o">=</span> <span class="n">SRAM_BASE</span> <span class="o">|</span> <span class="n">VECT_TAB_OFFSET</span><span class="p">;</span> <span class="cm">/* Vector Table Relocation in Internal SRAM */</span>
+<span class="cp">#else</span>
+  <span class="n">SCB</span><span class="o">-&gt;</span><span class="n">VTOR</span> <span class="o">=</span> <span class="n">FLASH_BASE</span> <span class="o">|</span> <span class="n">VECT_TAB_OFFSET</span><span class="p">;</span> <span class="cm">/* Vector Table Relocation in Internal FLASH */</span>
+<span class="cp">#endif</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">SystemCoreClockUpdate</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">uint32_t</span> <span class="n">tmp</span><span class="p">,</span> <span class="n">pllvco</span><span class="p">,</span> <span class="n">pllr</span><span class="p">,</span> <span class="n">pllsource</span><span class="p">,</span> <span class="n">pllm</span><span class="p">;</span>
+
+  <span class="cm">/* Get SYSCLK source -------------------------------------------------------*/</span>
+  <span class="k">switch</span> <span class="p">(</span><span class="n">RCC</span><span class="o">-&gt;</span><span class="n">CFGR</span> <span class="o">&amp;</span> <span class="n">RCC_CFGR_SWS</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="k">case</span> <span class="mh">0x04</span><span class="o">:</span>  <span class="cm">/* HSI used as system clock source */</span>
+      <span class="n">SystemCoreClock</span> <span class="o">=</span> <span class="n">HSI_VALUE</span><span class="p">;</span>
+      <span class="k">break</span><span class="p">;</span>
+
+    <span class="k">case</span> <span class="mh">0x08</span><span class="o">:</span>  <span class="cm">/* HSE used as system clock source */</span>
+      <span class="n">SystemCoreClock</span> <span class="o">=</span> <span class="n">HSE_VALUE</span><span class="p">;</span>
+      <span class="k">break</span><span class="p">;</span>
+
+    <span class="k">case</span> <span class="mh">0x0C</span><span class="o">:</span>  <span class="cm">/* PLL used as system clock  source */</span>
+      <span class="cm">/* PLL_VCO = (HSE_VALUE or HSI_VALUE / PLLM) * PLLN</span>
+<span class="cm">         SYSCLK = PLL_VCO / PLLR</span>
+<span class="cm">         */</span>
+      <span class="n">pllsource</span> <span class="o">=</span> <span class="p">(</span><span class="n">RCC</span><span class="o">-&gt;</span><span class="n">PLLCFGR</span> <span class="o">&amp;</span> <span class="n">RCC_PLLCFGR_PLLSRC</span><span class="p">);</span>
+      <span class="n">pllm</span> <span class="o">=</span> <span class="p">((</span><span class="n">RCC</span><span class="o">-&gt;</span><span class="n">PLLCFGR</span> <span class="o">&amp;</span> <span class="n">RCC_PLLCFGR_PLLM</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1U</span> <span class="p">;</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">pllsource</span> <span class="o">==</span> <span class="mh">0x02UL</span><span class="p">)</span> <span class="cm">/* HSI used as PLL clock source */</span>
+      <span class="p">{</span>
+        <span class="n">pllvco</span> <span class="o">=</span> <span class="p">(</span><span class="n">HSI_VALUE</span> <span class="o">/</span> <span class="n">pllm</span><span class="p">);</span>
+      <span class="p">}</span>
+      <span class="k">else</span>                   <span class="cm">/* HSE used as PLL clock source */</span>
+      <span class="p">{</span>
+        <span class="n">pllvco</span> <span class="o">=</span> <span class="p">(</span><span class="n">HSE_VALUE</span> <span class="o">/</span> <span class="n">pllm</span><span class="p">);</span>
+      <span class="p">}</span>
+      <span class="n">pllvco</span> <span class="o">=</span> <span class="n">pllvco</span> <span class="o">*</span> <span class="p">((</span><span class="n">RCC</span><span class="o">-&gt;</span><span class="n">PLLCFGR</span> <span class="o">&amp;</span> <span class="n">RCC_PLLCFGR_PLLN</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">);</span>
+      <span class="n">pllr</span> <span class="o">=</span> <span class="p">(((</span><span class="n">RCC</span><span class="o">-&gt;</span><span class="n">PLLCFGR</span> <span class="o">&amp;</span> <span class="n">RCC_PLLCFGR_PLLR</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="mi">25</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1U</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2U</span><span class="p">;</span>
+      <span class="n">SystemCoreClock</span> <span class="o">=</span> <span class="n">pllvco</span><span class="o">/</span><span class="n">pllr</span><span class="p">;</span>
+      <span class="k">break</span><span class="p">;</span>
+
+    <span class="k">default</span><span class="o">:</span>
+      <span class="k">break</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="cm">/* Compute HCLK clock frequency --------------------------------------------*/</span>
+  <span class="cm">/* Get HCLK prescaler */</span>
+  <span class="n">tmp</span> <span class="o">=</span> <span class="n">AHBPrescTable</span><span class="p">[((</span><span class="n">RCC</span><span class="o">-&gt;</span><span class="n">CFGR</span> <span class="o">&amp;</span> <span class="n">RCC_CFGR_HPRE</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="mi">4</span><span class="p">)];</span>
+  <span class="cm">/* HCLK clock frequency */</span>
+  <span class="n">SystemCoreClock</span> <span class="o">&gt;&gt;=</span> <span class="n">tmp</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="cm">/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, E-Agle TRT.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

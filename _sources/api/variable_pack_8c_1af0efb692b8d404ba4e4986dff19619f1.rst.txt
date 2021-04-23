@@ -1,0 +1,13 @@
+.. _exhale_variable_pack_8c_1af0efb692b8d404ba4e4986dff19619f1:
+
+Variable current_50
+===================
+
+- Defined in :ref:`file_mainboard_Src_pack.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: current_50

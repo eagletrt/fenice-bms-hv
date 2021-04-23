@@ -1,0 +1,73 @@
+
+.. _file_mainboard_Src_fdcan.c:
+
+File fdcan.c
+============
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Src>` (``mainboard/Src``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+This file provides code for the configuration of the FDCAN instances. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Src/fdcan.c``)
+--------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Src_fdcan.c.rst
+
+
+
+Detailed Description
+--------------------
+
+
+
+ Copyright (c) 2020 STMicroelectronics. All rights reserved.
+
+
+This software component is licensed by ST under BSD 3-Clause license, the "License"; You may not use this file except in compliance with the License. You may obtain a copy of the License at: opensource.org/licenses/BSD-3-Clause 
+
+
+
+
+Includes
+--------
+
+
+- ``fdcan.h`` (:ref:`file_mainboard_Inc_fdcan.h`)
+
+
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_fdcan_8c_1ae2a6f4e8e6114683e701020368b67326`
+
+- :ref:`exhale_function_fdcan_8c_1a7c1e54efb942c6aa706dbfc9f35914f9`
+
+- :ref:`exhale_function_fdcan_8c_1a93a2756cf80884d125eecad39c785c5d`
+
+- :ref:`exhale_function_fdcan_8c_1af122e1c28b11c5b8771e82328e10fa2c`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_fdcan_8c_1a7e870132380038c7b0e226a8c78d3461`
+

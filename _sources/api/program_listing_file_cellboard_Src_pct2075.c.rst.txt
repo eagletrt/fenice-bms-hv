@@ -1,0 +1,22 @@
+
+.. _program_listing_file_cellboard_Src_pct2075.c:
+
+Program Listing for File pct2075.c
+==================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_cellboard_Src_pct2075.c>` (``cellboard/Src/pct2075.c``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   #include "pct2075.h"
+   
+   uint16_t pct2075_read(I2C_HandleTypeDef *hi2c, uint8_t coding) {
+       uint8_t recv[2] = {0};
+       HAL_I2C_Master_Receive(hi2c, pct2075_address[coding], recv, 2, 10);
+   
+       uint16_t temp = ((uint16_t)recv[0]) << 3 | recv[1] >> 5;
+       return PCT2075_CONV_TEMP(temp);
+   }

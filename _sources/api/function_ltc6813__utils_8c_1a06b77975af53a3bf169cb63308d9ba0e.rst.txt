@@ -1,0 +1,13 @@
+.. _exhale_function_ltc6813__utils_8c_1a06b77975af53a3bf169cb63308d9ba0e:
+
+Function ltc6813_read_temperatures(SPI_HandleTypeDef \*, temperature_t, temperature_t)
+======================================================================================
+
+- Defined in :ref:`file_mainboard_Src_peripherals_ltc6813_utils.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ltc6813_read_temperatures(SPI_HandleTypeDef *, temperature_t, temperature_t)

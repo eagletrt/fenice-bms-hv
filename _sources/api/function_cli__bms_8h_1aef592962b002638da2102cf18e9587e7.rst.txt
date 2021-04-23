@@ -1,0 +1,13 @@
+.. _exhale_function_cli__bms_8h_1aef592962b002638da2102cf18e9587e7:
+
+Function cli_bms_init()
+=======================
+
+- Defined in :ref:`file_mainboard_Inc_cli_bms.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: cli_bms_init()

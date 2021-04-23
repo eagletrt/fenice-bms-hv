@@ -1,0 +1,13 @@
+.. _exhale_function_cellboard_2Src_2main_8c_1a7e086b3ee67187ea072aec6fb4d52aad:
+
+Function HAL_I2C_SlaveTxCpltCallback
+====================================
+
+- Defined in :ref:`file_cellboard_Src_main.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: HAL_I2C_SlaveTxCpltCallback(I2C_HandleTypeDef *)

@@ -1,0 +1,13 @@
+.. _exhale_define_cellboard_2Inc_2fenice__config_8h_1ae0749bc3a20fd01dea3168777acdb529:
+
+Define PRECHARGE_TIMEOUT
+========================
+
+- Defined in :ref:`file_cellboard_Inc_fenice_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: PRECHARGE_TIMEOUT

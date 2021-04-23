@@ -1,0 +1,13 @@
+.. _exhale_define_cellboard_2Inc_2main_8h_1a4a98730d4a379ba4633ee9dec6a85aa2:
+
+Define I2C_SCL_GPIO_Port
+========================
+
+- Defined in :ref:`file_cellboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: I2C_SCL_GPIO_Port

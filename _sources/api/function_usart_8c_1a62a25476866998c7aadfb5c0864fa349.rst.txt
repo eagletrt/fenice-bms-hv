@@ -1,0 +1,13 @@
+.. _exhale_function_usart_8c_1a62a25476866998c7aadfb5c0864fa349:
+
+Function HAL_UART_MspInit(UART_HandleTypeDef \*)
+================================================
+
+- Defined in :ref:`file_mainboard_Src_usart.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: HAL_UART_MspInit(UART_HandleTypeDef *)

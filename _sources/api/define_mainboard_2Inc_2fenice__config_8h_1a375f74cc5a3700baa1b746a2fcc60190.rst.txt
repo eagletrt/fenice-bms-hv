@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2fenice__config_8h_1a375f74cc5a3700baa1b746a2fcc60190:
+
+Define LTC6813_TEMP_ADDRESS
+===========================
+
+- Defined in :ref:`file_mainboard_Inc_fenice_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: LTC6813_TEMP_ADDRESS

@@ -1,0 +1,13 @@
+.. _exhale_variable_mainboard_2Src_2main_8c_1ab9b1f9b2a9bed288beffd8ce1d7d6406:
+
+Variable timer_temps
+====================
+
+- Defined in :ref:`file_mainboard_Src_main.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: timer_temps

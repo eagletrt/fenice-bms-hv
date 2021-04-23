@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2main_8h_1a2f3325686c5be80b98b6b33558a5a2c6:
+
+Define IP_HIGH_Pin
+==================
+
+- Defined in :ref:`file_mainboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: IP_HIGH_Pin

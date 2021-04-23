@@ -1,0 +1,13 @@
+.. _exhale_typedef_feedback_8h_1af31f74762bbbbb2cdd1f2ee74ba4b97b:
+
+Typedef feedback_t
+==================
+
+- Defined in :ref:`file_mainboard_Inc_feedback.h`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: feedback_t

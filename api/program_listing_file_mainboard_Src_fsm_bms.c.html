@@ -1,0 +1,402 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Program Listing for File fsm_bms.c &mdash; Fenice BMS HV 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Fenice BMS HV
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Software</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Fenice BMS HV</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Program Listing for File fsm_bms.c</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/api/program_listing_file_mainboard_Src_fsm_bms.c.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="program-listing-for-file-fsm-bms-c">
+<span id="program-listing-file-mainboard-src-fsm-bms-c"></span><h1>Program Listing for File fsm_bms.c<a class="headerlink" href="#program-listing-for-file-fsm-bms-c" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_mainboard_Src_fsm_bms.c.html#file-mainboard-src-fsm-bms-c"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">mainboard/Src/fsm_bms.c</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;fsm_bms.h&quot;</span><span class="cp"></span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;inttypes.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp"></span>
+
+<span class="cp">#include</span> <span class="cpf">&quot;error.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;main.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;pack.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;tim.h&quot;</span><span class="cp"></span>
+
+<span class="c1">//------------------------------Declarations------------------------------------------</span>
+<span class="kt">uint16_t</span> <span class="nf">do_init</span><span class="p">(</span><span class="n">fsm</span> <span class="o">*</span><span class="n">FSM</span><span class="p">);</span>
+<span class="kt">uint16_t</span> <span class="nf">do_ts_off</span><span class="p">(</span><span class="n">fsm</span> <span class="o">*</span><span class="n">FSM</span><span class="p">);</span>
+<span class="kt">uint16_t</span> <span class="nf">do_idle</span><span class="p">(</span><span class="n">fsm</span> <span class="o">*</span><span class="n">FSM</span><span class="p">);</span>
+<span class="kt">uint16_t</span> <span class="nf">do_precharge_start</span><span class="p">(</span><span class="n">fsm</span> <span class="o">*</span><span class="n">FSM</span><span class="p">);</span>
+<span class="kt">uint16_t</span> <span class="nf">do_precharge</span><span class="p">(</span><span class="n">fsm</span> <span class="o">*</span><span class="n">FSM</span><span class="p">);</span>
+<span class="kt">uint16_t</span> <span class="nf">do_precharge_end</span><span class="p">(</span><span class="n">fsm</span> <span class="o">*</span><span class="n">FSM</span><span class="p">);</span>
+<span class="kt">uint16_t</span> <span class="nf">do_run</span><span class="p">(</span><span class="n">fsm</span> <span class="o">*</span><span class="n">FSM</span><span class="p">);</span>
+<span class="kt">uint16_t</span> <span class="nf">do_charge</span><span class="p">(</span><span class="n">fsm</span> <span class="o">*</span><span class="n">FSM</span><span class="p">);</span>
+<span class="kt">uint16_t</span> <span class="nf">do_to_halt</span><span class="p">(</span><span class="n">fsm</span> <span class="o">*</span><span class="n">FSM</span><span class="p">);</span>
+<span class="kt">uint16_t</span> <span class="nf">do_halt</span><span class="p">(</span><span class="n">fsm</span> <span class="o">*</span><span class="n">FSM</span><span class="p">);</span>
+
+<span class="n">fsm</span> <span class="n">fsm_bms</span><span class="p">;</span>
+
+<span class="kt">uint32_t</span> <span class="n">timer_precharge</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">fsm_bms_init</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">fsm_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">fsm_bms</span><span class="p">,</span> <span class="n">BMS_NUM_STATES</span><span class="p">);</span>
+
+    <span class="n">fsm_bms</span><span class="p">.</span><span class="n">state_table</span><span class="p">[</span><span class="n">BMS_INIT</span><span class="p">]</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">do_init</span><span class="p">;</span>
+    <span class="n">fsm_bms</span><span class="p">.</span><span class="n">state_table</span><span class="p">[</span><span class="n">BMS_SET_TS_OFF</span><span class="p">]</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">do_ts_off</span><span class="p">;</span>
+    <span class="n">fsm_bms</span><span class="p">.</span><span class="n">state_table</span><span class="p">[</span><span class="n">BMS_IDLE</span><span class="p">]</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">do_idle</span><span class="p">;</span>
+    <span class="n">fsm_bms</span><span class="p">.</span><span class="n">state_table</span><span class="p">[</span><span class="n">BMS_PRECHARGE_START</span><span class="p">]</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">do_precharge_start</span><span class="p">;</span>
+    <span class="n">fsm_bms</span><span class="p">.</span><span class="n">state_table</span><span class="p">[</span><span class="n">BMS_PRECHARGE</span><span class="p">]</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">do_precharge</span><span class="p">;</span>
+    <span class="n">fsm_bms</span><span class="p">.</span><span class="n">state_table</span><span class="p">[</span><span class="n">BMS_PRECHARGE_END</span><span class="p">]</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">do_precharge_end</span><span class="p">;</span>
+    <span class="n">fsm_bms</span><span class="p">.</span><span class="n">state_table</span><span class="p">[</span><span class="n">BMS_RUN</span><span class="p">]</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">do_run</span><span class="p">;</span>
+    <span class="n">fsm_bms</span><span class="p">.</span><span class="n">state_table</span><span class="p">[</span><span class="n">BMS_CHARGE</span><span class="p">]</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">do_charge</span><span class="p">;</span>
+    <span class="n">fsm_bms</span><span class="p">.</span><span class="n">state_table</span><span class="p">[</span><span class="n">BMS_TO_HALT</span><span class="p">]</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">do_to_halt</span><span class="p">;</span>
+    <span class="n">fsm_bms</span><span class="p">.</span><span class="n">state_table</span><span class="p">[</span><span class="n">BMS_HALT</span><span class="p">]</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">do_halt</span><span class="p">;</span>
+
+    <span class="c1">// state_function *bms_states_tab[BMS_NUM_STATES][BMS_NUM_STATES] = {</span>
+    <span class="c1">//  {do_init, to_idle, to_precharge, NULL, NULL, to_halt},     // from init</span>
+    <span class="c1">//  {NULL, do_idle, to_precharge, NULL, NULL, to_halt},        // from idle</span>
+    <span class="c1">//  {NULL, to_idle, do_precharge, to_on, to_charge, to_halt},  // from precharge</span>
+    <span class="c1">//  {NULL, to_idle, NULL, do_on, NULL, to_halt},               // from on</span>
+    <span class="c1">//  {NULL, to_idle, NULL, NULL, do_charge, to_halt},           // from charge</span>
+    <span class="c1">//  {NULL, NULL, NULL, NULL, NULL, do_halt}};                  // from halt</span>
+
+    <span class="c1">// char *bms_states_names[BMS_NUM_STATES] = {[BMS_INIT] = &quot;init&quot;,</span>
+    <span class="c1">//                                        [BMS_IDLE] = &quot;idle&quot;,</span>
+    <span class="c1">//                                        [BMS_PRECHARGE] = &quot;pre-charge&quot;,</span>
+    <span class="c1">//                                        [BMS_RUN] = &quot;on&quot;,</span>
+    <span class="c1">//                                        [BMS_CHARGE] = &quot;charge&quot;,</span>
+    <span class="c1">//                                        [BMS_HALT] = &quot;halt&quot;};</span>
+
+    <span class="c1">// fsm_bms.state_table = (state_function ***)malloc(BMS_NUM_STATES * sizeof(state_function **));</span>
+    <span class="c1">// for (uint8_t i = 0; i &lt; BMS_NUM_STATES; i++) {</span>
+    <span class="c1">//  fsm_bms.state_table[i] = (state_function **)malloc(BMS_NUM_STATES * sizeof(state_function *));</span>
+    <span class="c1">//  for (uint8_t j = 0; j &lt; BMS_NUM_STATES; j++) {</span>
+    <span class="c1">//      fsm_bms.state_table[i][j] = bms_states_tab[i][j];</span>
+    <span class="c1">//  }</span>
+    <span class="c1">// }</span>
+
+    <span class="c1">// fsm_bms.state_names = (char **)malloc(sizeof(char **) * BMS_NUM_STATES);</span>
+    <span class="c1">// for (uint8_t i = 0; i &lt; BMS_NUM_STATES; i++) {</span>
+    <span class="c1">//  fsm_bms.state_names[i] = (char *)malloc(sizeof(bms_states_names[i]));</span>
+    <span class="c1">//  strcpy(fsm_bms.state_names[i], bms_states_names[i]);</span>
+    <span class="c1">// }</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">HAL_TIM_PeriodElapsedCallback</span><span class="p">(</span><span class="n">TIM_HandleTypeDef</span> <span class="o">*</span><span class="n">htim</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">htim</span> <span class="o">==</span> <span class="o">&amp;</span><span class="n">htim_Err</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">//htim_Err is a #define to htim2 (barely a substition) so tim.h must be included</span>
+        <span class="n">HAL_TIM_Base_Stop_IT</span><span class="p">(</span><span class="n">htim</span><span class="p">);</span>
+
+        <span class="n">fsm_set_state</span><span class="p">(</span><span class="o">&amp;</span><span class="n">fsm_bms</span><span class="p">,</span> <span class="n">BMS_TO_HALT</span><span class="p">);</span>
+        <span class="n">fsm_run</span><span class="p">(</span><span class="o">&amp;</span><span class="n">fsm_bms</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">uint16_t</span> <span class="nf">do_init</span><span class="p">(</span><span class="n">fsm</span> <span class="o">*</span><span class="n">FSM</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">pack_init</span><span class="p">();</span>
+    <span class="k">return</span> <span class="n">BMS_IDLE</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">uint16_t</span> <span class="nf">do_ts_off</span><span class="p">(</span><span class="n">fsm</span> <span class="o">*</span><span class="n">FSM</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">pack_set_ts_off</span><span class="p">();</span>
+
+    <span class="c1">// can_send(&amp;hcan, CAN_ID_BMS, CAN_MSG_TS_OFF, 8);</span>
+    <span class="k">return</span> <span class="n">BMS_IDLE</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">uint16_t</span> <span class="nf">do_idle</span><span class="p">(</span><span class="n">fsm</span> <span class="o">*</span><span class="n">FSM</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Check CAN</span>
+    <span class="c1">//if (data-&gt;can_rx.StdId == CAN_ID_ECU) {</span>
+    <span class="c1">//  if (data-&gt;can_rx.Data[0] == CAN_IN_TS_ON) {</span>
+    <span class="c1">//  TS On message received</span>
+    <span class="c1">//      if (pack_feedback_check(FEEDBACK_IDLE_TS_ON_TRIGGER_MASK,FEEDBACK_IDLE_TS_ON_TRIGGER_VALUE,ERROR_FEEDBACK_HARD)) {</span>
+    <span class="c1">//          return BMS_PRECHARGE;</span>
+    <span class="c1">//      }</span>
+    <span class="c1">//  }</span>
+    <span class="c1">//}</span>
+
+    <span class="c1">// Do state-specific stuff</span>
+
+    <span class="c1">// Return</span>
+    <span class="k">return</span> <span class="n">BMS_IDLE</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">uint16_t</span> <span class="nf">do_precharge_start</span><span class="p">(</span><span class="n">fsm</span> <span class="o">*</span><span class="n">FSM</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Precharge</span>
+    <span class="c1">// bms_precharge_start(&amp;data-&gt;bms);</span>
+    <span class="n">pack_set_pc_start</span><span class="p">();</span>
+    <span class="n">timer_precharge</span> <span class="o">=</span> <span class="n">HAL_GetTick</span><span class="p">();</span>
+
+    <span class="k">return</span> <span class="n">BMS_PRECHARGE</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">uint16_t</span> <span class="nf">do_precharge</span><span class="p">(</span><span class="n">fsm</span> <span class="o">*</span><span class="n">FSM</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">bms_states</span> <span class="n">return_state</span> <span class="o">=</span> <span class="n">BMS_PRECHARGE</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">HAL_GetTick</span><span class="p">()</span> <span class="o">-</span> <span class="n">timer_precharge</span> <span class="o">&lt;</span> <span class="n">PRECHARGE_TIMEOUT</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// TODO: move this in precharge_end</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">pack_get_bus_voltage</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="n">pack_get_int_voltage</span><span class="p">()</span> <span class="o">*</span> <span class="n">PRECHARGE_VOLTAGE_THRESHOLD</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">pack_set_precharge_end</span><span class="p">();</span>
+            <span class="n">return_state</span> <span class="o">=</span> <span class="n">BMS_PRECHARGE_END</span><span class="p">;</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">HAL_GPIO_ReadPin</span><span class="p">(</span><span class="n">CHARGE_GPIO_Port</span><span class="p">,</span> <span class="n">CHARGE_Pin</span><span class="p">))</span> <span class="p">{</span>
+                <span class="n">return_state</span> <span class="o">=</span> <span class="n">BMS_CHARGE</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="c1">// If the precharge takes too long, we shut down and start from idle</span>
+        <span class="n">return_state</span> <span class="o">=</span> <span class="n">BMS_SET_TS_OFF</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">return_state</span><span class="p">;</span>
+
+    <span class="cm">/*</span>
+<span class="cm">    if (pd_get_bus_voltage() &gt;= pd_get_adc_voltage() * PRECHARGE_VOLTAGE_THRESHOLD) {</span>
+<span class="cm">        pack_set_precharge_end();</span>
+
+<span class="cm">        if (HAL_GPIO_ReadPin(CHARGE_GPIO_Port, CHARGE_Pin)) {</span>
+<span class="cm">            return_state = BMS_CHARGE;</span>
+<span class="cm">        }</span>
+<span class="cm">        return BMS_RUN;</span>
+<span class="cm">    }</span>
+
+<span class="cm">    if (HAL_GetTick() - timer_precharge &gt;= PRECHARGE_TIMEOUT) {</span>
+<span class="cm">        // TODO: set some sort of error</span>
+<span class="cm">        return BMS_IDLE;</span>
+
+<span class="cm">        return BMS_CHARGE;</span>
+<span class="cm">    }</span>
+<span class="cm">    */</span>
+<span class="p">}</span>
+
+<span class="kt">uint16_t</span> <span class="nf">do_precharge_end</span><span class="p">(</span><span class="n">fsm</span> <span class="o">*</span><span class="n">FSM</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// bms_precharge_end(&amp;data-&gt;bms);</span>
+    <span class="c1">// HAL_CAN_ConfigFilter(&amp;hcan, &amp;CAN_FILTER_NORMAL);</span>
+    <span class="c1">// can_send(&amp;hcan, CAN_ID_BMS, CAN_MSG_TS_ON, 8);</span>
+
+    <span class="k">return</span> <span class="n">BMS_RUN</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">uint16_t</span> <span class="nf">do_run</span><span class="p">(</span><span class="n">fsm</span> <span class="o">*</span><span class="n">FSM</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// if (data-&gt;can_rx.StdId == CAN_ID_ECU) {</span>
+    <span class="c1">//  if (data-&gt;can_rx.Data[0] == CAN_IN_TS_OFF) {</span>
+    <span class="c1">//      return BMS_IDLE;</span>
+    <span class="c1">//  }</span>
+    <span class="c1">// }</span>
+
+    <span class="k">return</span> <span class="n">BMS_RUN</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">uint16_t</span> <span class="nf">do_charge</span><span class="p">(</span><span class="n">fsm</span> <span class="o">*</span><span class="n">FSM</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">BMS_CHARGE</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">uint16_t</span> <span class="nf">do_to_halt</span><span class="p">(</span><span class="n">fsm</span> <span class="o">*</span><span class="n">FSM</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// bms_set_ts_off(&amp;data-&gt;bms);</span>
+    <span class="c1">// bms_set_fault(&amp;data-&gt;bms);</span>
+
+    <span class="c1">// can_send_error(&amp;hcan, data-&gt;error, data-&gt;error_index, &amp;data-&gt;pack);</span>
+    <span class="k">return</span> <span class="n">BMS_HALT</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">uint16_t</span> <span class="nf">do_halt</span><span class="p">(</span><span class="n">fsm</span> <span class="o">*</span><span class="n">FSM</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">BMS_HALT</span><span class="p">;</span> <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, E-Agle TRT.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

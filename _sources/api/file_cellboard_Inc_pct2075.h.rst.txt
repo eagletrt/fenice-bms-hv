@@ -1,0 +1,83 @@
+
+.. _file_cellboard_Inc_pct2075.h:
+
+File pct2075.h
+==============
+
+|exhale_lsh| :ref:`Parent directory <dir_cellboard_Inc>` (``cellboard/Inc``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+This file contains the functions to measure cell temperatures. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``cellboard/Inc/pct2075.h``)
+----------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_cellboard_Inc_pct2075.h.rst
+
+
+
+Detailed Description
+--------------------
+
+Jan 30, 2020 
+
+Matteo Bonora [matteo.bonora@studenti.unitn.it] 
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``inttypes.h``
+
+- ``stm32f4xx_hal.h``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_cellboard_Src_pct2075.c`
+
+- :ref:`file_cellboard_Src_temperature.c`
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_pct2075_8h_1a408919f8423b2e060be8447b0f84509f`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_pct2075_8h_1ac320c72bda34073a2a29aca4cbda2244`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_pct2075_8h_1a4d78f8525339dc3c136b3daff9747671`
+

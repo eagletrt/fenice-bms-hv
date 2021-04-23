@@ -1,0 +1,13 @@
+.. _exhale_variable_cellboard_2Src_2main_8c_1a511fa687532c113f458fb02786eb63c1:
+
+Variable temp_buffer_i
+======================
+
+- Defined in :ref:`file_cellboard_Src_main.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: temp_buffer_i

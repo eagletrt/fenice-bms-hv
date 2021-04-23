@@ -1,0 +1,92 @@
+
+.. _file_mainboard_Src_error_error.c:
+
+File error.c
+============
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Src_error>` (``mainboard/Src/error``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+This file contains the functions to handle errors. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Src/error/error.c``)
+--------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Src_error_error.c.rst
+
+
+
+Detailed Description
+--------------------
+
+May 1, 2019 
+
+Matteo Bonora [matteo.bonora@studenti.unitn.it] 
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``error/error.h`` (:ref:`file_mainboard_Inc_error_error.h`)
+
+- ``error/error_list_ref.h`` (:ref:`file_mainboard_Inc_error_error_list_ref.h`)
+
+- ``stdlib.h``
+
+- ``tim.h`` (:ref:`file_mainboard_Inc_tim.h`)
+
+
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_error_8c_1a6d4fa5acedb7f22a6df926bf45720eec`
+
+- :ref:`exhale_function_error_8c_1a0b2c9424f2b45fadeabe0f7b6d999ac1`
+
+- :ref:`exhale_function_error_8c_1ae0da17dfc49f7b7b8bf6093efc28700c`
+
+- :ref:`exhale_function_error_8c_1a3b6a9c78bb29ca0f757779c0bdb37e3c`
+
+- :ref:`exhale_function_error_8c_1a344c68273636b72c77da957d1086a5ee`
+
+- :ref:`exhale_function_error_8c_1a366492838020f38e468861b2034b90ba`
+
+- :ref:`exhale_function_error_8c_1ac902639c33be815867c0fb48c167293d`
+
+- :ref:`exhale_function_error_8c_1ab141b610cef83979b66d4e1e158ea8fa`
+
+- :ref:`exhale_function_error_8c_1afb94a3a257e2bdafbc186960699bc5a3`
+
+- :ref:`exhale_function_error_8c_1a6b6d15a1320459e59cdcda802d6584ff`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_error_8c_1a5803d617be0399f8f39913e58a7671eb`
+
+- :ref:`exhale_variable_error_8c_1a74fe0a46be696f6d3f81455233b51b7d`
+

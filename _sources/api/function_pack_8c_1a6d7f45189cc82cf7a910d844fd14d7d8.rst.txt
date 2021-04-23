@@ -1,0 +1,13 @@
+.. _exhale_function_pack_8c_1a6d7f45189cc82cf7a910d844fd14d7d8:
+
+Function pack_update_voltage_stats(voltage_t \*, voltage_t \*, voltage_t \*)
+============================================================================
+
+- Defined in :ref:`file_mainboard_Src_pack.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: pack_update_voltage_stats(voltage_t *, voltage_t *, voltage_t *)

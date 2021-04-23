@@ -1,0 +1,13 @@
+.. _exhale_function_fsm__bms_8c_1a3f6cc531bdf9a0b2174fd5f580bb4678:
+
+Function do_halt
+================
+
+- Defined in :ref:`file_mainboard_Src_fsm_bms.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: do_halt(fsm *)

@@ -1,0 +1,13 @@
+.. _exhale_function_pack_8h_1ab2b35f6b2db327d1614bc09d976bc482:
+
+Function pack_update_temperature_stats()
+========================================
+
+- Defined in :ref:`file_mainboard_Inc_pack.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: pack_update_temperature_stats()

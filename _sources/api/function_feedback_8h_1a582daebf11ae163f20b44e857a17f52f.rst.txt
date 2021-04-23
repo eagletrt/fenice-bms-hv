@@ -1,0 +1,13 @@
+.. _exhale_function_feedback_8h_1a582daebf11ae163f20b44e857a17f52f:
+
+Function feedback_check_charge
+==============================
+
+- Defined in :ref:`file_mainboard_Inc_feedback.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: feedback_check_charge()

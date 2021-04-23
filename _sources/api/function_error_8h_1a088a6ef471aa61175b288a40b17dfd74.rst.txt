@@ -1,0 +1,13 @@
+.. _exhale_function_error_8h_1a088a6ef471aa61175b288a40b17dfd74:
+
+Function error_set(error_id, uint8_t, uint32_t)
+===============================================
+
+- Defined in :ref:`file_mainboard_Inc_error_error.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: error_set(error_id, uint8_t, uint32_t)

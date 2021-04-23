@@ -1,0 +1,95 @@
+
+.. _file_mainboard_Inc_peripherals_si8900.h:
+
+File si8900.h
+=============
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Inc_peripherals>` (``mainboard/Inc/peripherals``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+This file contains the functions to read bus and total pack voltages. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Inc/peripherals/si8900.h``)
+---------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Inc_peripherals_si8900.h.rst
+
+
+
+Detailed Description
+--------------------
+
+Gen 09, 2020 
+
+Matteo Bonora [matteo.bonora@studenti.unitn.it] 
+
+Simone Ruffini [simone.ruffini@tutanota.com] 
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``inttypes.h``
+
+- ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
+
+- ``stdbool.h``
+
+- ``stm32g4xx_hal.h``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_mainboard_Src_main.c`
+
+- :ref:`file_mainboard_Src_pack.c`
+
+- :ref:`file_mainboard_Src_peripherals_si8900.c`
+
+
+
+
+Enums
+-----
+
+
+- :ref:`exhale_enum_si8900_8h_1a5a649fb4dcc41823a34f026ef00b5f2f`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_si8900_8h_1a842353447aaacce27c3c313220cff96a`
+
+- :ref:`exhale_function_si8900_8h_1a73f7452e5f52d7e8acae5c5112f8335b`
+
+- :ref:`exhale_function_si8900_8h_1ac2cd280986f2937e02967e6e85e69932`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_si8900_8h_1aa0d543873071d781ea27796eeb1b7cab`
+

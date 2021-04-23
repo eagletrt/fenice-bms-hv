@@ -1,0 +1,13 @@
+.. _exhale_function_ltc6813__utils_8h_1a1a8bc6c6ffe4f38f80b257e16e94b653:
+
+Function ltc6813_convert_voltage(uint8_t)
+=========================================
+
+- Defined in :ref:`file_mainboard_Inc_peripherals_ltc6813_utils.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ltc6813_convert_voltage(uint8_t)

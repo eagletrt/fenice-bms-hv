@@ -1,0 +1,13 @@
+.. _exhale_define_error_8h_1a295720948f007ad4e61cd6c1734e59a9:
+
+Define error_toggle_check
+=========================
+
+- Defined in :ref:`file_mainboard_Inc_error_error.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: error_toggle_check

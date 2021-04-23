@@ -1,0 +1,13 @@
+.. _exhale_define_cellboard_2Inc_2main_8h_1a1541f23b870848a43f0274857badd175:
+
+Define TCK_GPIO_Port
+====================
+
+- Defined in :ref:`file_cellboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: TCK_GPIO_Port

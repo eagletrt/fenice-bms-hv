@@ -1,0 +1,39 @@
+.. _dir_mainboard_Src:
+
+
+Directory Src
+=============
+
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard>` (``mainboard``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+*Directory path:* ``mainboard/Src``
+
+Subdirectories
+--------------
+
+- :ref:`dir_mainboard_Src_error`
+- :ref:`dir_mainboard_Src_peripherals`
+
+
+Files
+-----
+
+- :ref:`file_mainboard_Src_bal.c`
+- :ref:`file_mainboard_Src_cli_bms.c`
+- :ref:`file_mainboard_Src_fdcan.c`
+- :ref:`file_mainboard_Src_feedback.c`
+- :ref:`file_mainboard_Src_fsm_bms.c`
+- :ref:`file_mainboard_Src_gpio.c`
+- :ref:`file_mainboard_Src_main.c`
+- :ref:`file_mainboard_Src_pack.c`
+- :ref:`file_mainboard_Src_spi.c`
+- :ref:`file_mainboard_Src_stm32g4xx_hal_msp.c`
+- :ref:`file_mainboard_Src_stm32g4xx_it.c`
+- :ref:`file_mainboard_Src_system_stm32g4xx.c`
+- :ref:`file_mainboard_Src_tim.c`
+- :ref:`file_mainboard_Src_usart.c`
+
+

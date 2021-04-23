@@ -1,0 +1,13 @@
+.. _exhale_function_gpio_8h_1ae89fdd15729ad41a66911190fcbab23a:
+
+Function MX_GPIO_Init(void)
+===========================
+
+- Defined in :ref:`file_mainboard_Inc_gpio.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: MX_GPIO_Init(void)

@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2fenice__config_8h_1a2e03ebbeabe73c0a49141f4eedc27b91:
+
+Define CELL_MIN_VOLTAGE
+=======================
+
+- Defined in :ref:`file_mainboard_Inc_fenice_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CELL_MIN_VOLTAGE

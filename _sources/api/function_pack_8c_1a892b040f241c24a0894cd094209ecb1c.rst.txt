@@ -1,0 +1,13 @@
+.. _exhale_function_pack_8c_1a892b040f241c24a0894cd094209ecb1c:
+
+Function pack_set_precharge_end()
+=================================
+
+- Defined in :ref:`file_mainboard_Src_pack.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: pack_set_precharge_end()

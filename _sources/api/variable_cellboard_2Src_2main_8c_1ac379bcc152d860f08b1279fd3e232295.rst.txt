@@ -1,0 +1,13 @@
+.. _exhale_variable_cellboard_2Src_2main_8c_1ac379bcc152d860f08b1279fd3e232295:
+
+Variable hi2c2
+==============
+
+- Defined in :ref:`file_cellboard_Src_main.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: hi2c2

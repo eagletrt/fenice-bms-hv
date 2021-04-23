@@ -1,0 +1,114 @@
+
+.. _file_mainboard_Inc_feedback.h:
+
+File feedback.h
+===============
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Inc>` (``mainboard/Inc``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+Feedback parsing utilities. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Inc/feedback.h``)
+-----------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Inc_feedback.h.rst
+
+
+
+Detailed Description
+--------------------
+
+Mar 16, 2021 
+
+Matteo Bonora [matteo.bonora@studenti.unitn.it] 
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``error.h`` (:ref:`file_mainboard_Inc_error_error.h`)
+
+- ``fenice_config.h`` (:ref:`file_mainboard_Inc_fenice_config.h`)
+
+- ``inttypes.h``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_mainboard_Src_feedback.c`
+
+- :ref:`file_mainboard_Src_pack.c`
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_feedback_8h_1a11c9b5dab785327e001b6db1cfd922c8`
+
+- :ref:`exhale_function_feedback_8h_1a582daebf11ae163f20b44e857a17f52f`
+
+- :ref:`exhale_function_feedback_8h_1a233b031ae8b1689d0ab71c32afae3d2e`
+
+- :ref:`exhale_function_feedback_8h_1a47cc14bb422c2c618f51a27bf708d7f1`
+
+- :ref:`exhale_function_feedback_8h_1a06351c2489bffae2ee37347c46ab8e2d`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_feedback_8h_1a4619c2dd34ea61bef213fdcbd01f3d94`
+
+- :ref:`exhale_define_feedback_8h_1a06c1426a4eb70820354b7d48da771b98`
+
+- :ref:`exhale_define_feedback_8h_1a3a0b7ba137ef727f147136ccf2057934`
+
+- :ref:`exhale_define_feedback_8h_1a57c36d488a2206d263f9376d1f597f03`
+
+- :ref:`exhale_define_feedback_8h_1aa0da3aea328b174db9ea189b4194c08a`
+
+- :ref:`exhale_define_feedback_8h_1a7a24db70ee6b8e872e7afca72fcbb536`
+
+- :ref:`exhale_define_feedback_8h_1a72194c3f60b2be52883873a649796e9d`
+
+- :ref:`exhale_define_feedback_8h_1a1bbdce9c6c40d309e6a925042bf15d31`
+
+
+Typedefs
+--------
+
+
+- :ref:`exhale_typedef_feedback_8h_1af31f74762bbbbb2cdd1f2ee74ba4b97b`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_feedback_8h_1a5e5173cd981b462b8d91fe38f3e48057`
+

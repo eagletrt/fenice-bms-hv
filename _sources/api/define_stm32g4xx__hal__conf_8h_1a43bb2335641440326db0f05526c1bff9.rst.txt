@@ -1,0 +1,13 @@
+.. _exhale_define_stm32g4xx__hal__conf_8h_1a43bb2335641440326db0f05526c1bff9:
+
+Define USE_HAL_SMARTCARD_REGISTER_CALLBACKS
+===========================================
+
+- Defined in :ref:`file_mainboard_Inc_stm32g4xx_hal_conf.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: USE_HAL_SMARTCARD_REGISTER_CALLBACKS

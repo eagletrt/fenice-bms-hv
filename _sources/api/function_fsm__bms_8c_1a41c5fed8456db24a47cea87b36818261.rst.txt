@@ -1,0 +1,13 @@
+.. _exhale_function_fsm__bms_8c_1a41c5fed8456db24a47cea87b36818261:
+
+Function do_precharge
+=====================
+
+- Defined in :ref:`file_mainboard_Src_fsm_bms.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: do_precharge(fsm *)

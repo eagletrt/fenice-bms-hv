@@ -1,0 +1,13 @@
+.. _exhale_function_fsm__bms_8c_1a327a54b2549a62e234ffb074084e8add:
+
+Function do_init
+================
+
+- Defined in :ref:`file_mainboard_Src_fsm_bms.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: do_init(fsm *)

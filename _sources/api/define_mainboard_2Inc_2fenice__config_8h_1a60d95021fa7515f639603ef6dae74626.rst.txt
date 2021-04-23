@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2fenice__config_8h_1a60d95021fa7515f639603ef6dae74626:
+
+Define LTC6813_REG_CELL_COUNT
+=============================
+
+- Defined in :ref:`file_mainboard_Inc_fenice_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: LTC6813_REG_CELL_COUNT

@@ -1,0 +1,359 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Program Listing for File fenice_config.h &mdash; Fenice BMS HV 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Fenice BMS HV
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Software</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Fenice BMS HV</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Program Listing for File fenice_config.h</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/api/program_listing_file_mainboard_Inc_fenice_config.h.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="program-listing-for-file-fenice-config-h">
+<span id="program-listing-file-mainboard-inc-fenice-config-h"></span><h1>Program Listing for File fenice_config.h<a class="headerlink" href="#program-listing-for-file-fenice-config-h" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_mainboard_Inc_fenice_config.h.html#file-mainboard-inc-fenice-config-h"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">mainboard/Inc/fenice_config.h</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifndef FENICE_CONFIG_H</span>
+<span class="cp">#define FENICE_CONFIG_H</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;inttypes.h&gt;</span><span class="cp"></span>
+
+<span class="c1">//===========================================================================</span>
+<span class="c1">//=================================== General ===============================</span>
+<span class="c1">//===========================================================================</span>
+
+<span class="cp">#define htim_Err htim2</span>
+
+<span class="c1">//===========================================================================</span>
+<span class="c1">//=================================== LTC6813 ===============================</span>
+<span class="c1">//===========================================================================</span>
+
+<span class="c1">// Set to 1 to emulate the LTC daisy chain</span>
+<span class="cp">#define LTC6813_EMU 0</span>
+
+<span class="cp">#define LTC6813_COUNT 1</span>
+
+<span class="cp">#define LTC6813_CELL_COUNT 18</span>
+
+<span class="cp">#define LTC6813_REG_COUNT 6</span>
+
+<span class="cp">#define LTC6813_REG_CELL_COUNT 3</span>
+
+<span class="cp">#define LTC6813_TEMP_ADDRESS 69</span>
+
+<span class="c1">//===========================================================================</span>
+<span class="c1">//================================= Temperature =============================</span>
+<span class="c1">//===========================================================================</span>
+
+<span class="cp">#define TEMP_READ_INTERVAL 100</span>
+
+<span class="cp">#define TEMP_SAMPLE_COUNT 4</span>
+
+<span class="cp">#define TEMP_BUS_COUNT 1</span>
+
+<span class="cp">#define TEMP_STRIPS_PER_BUS 1</span>
+
+<span class="cp">#define TEMP_SENSORS_PER_STRIP 6</span>
+
+<span class="cp">#define TEMP_SENSOR_COUNT (TEMP_BUS_COUNT * TEMP_STRIPS_PER_BUS * TEMP_SENSORS_PER_STRIP)</span>
+
+<span class="k">static</span> <span class="k">const</span> <span class="kt">uint8_t</span> <span class="n">TEMP_SENSOR_ADDRESS_CODING</span><span class="p">[</span><span class="n">TEMP_SENSORS_PER_STRIP</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="mo">000</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mo">010</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="mo">020</span><span class="p">,</span> <span class="mi">120</span><span class="p">};</span>
+
+<span class="c1">//===========================================================================</span>
+<span class="c1">//================================ Pack Settings ============================</span>
+<span class="c1">//===========================================================================</span>
+
+<span class="cp">#define PACK_CELL_COUNT (LTC6813_COUNT * LTC6813_CELL_COUNT)</span>
+
+<span class="cp">#define PACK_TEMP_COUNT (TEMP_SENSOR_COUNT * LTC6813_COUNT)</span>
+
+<span class="cp">#define PACK_MAX_CURRENT 2000</span>
+
+<span class="cp">#define CELL_WARN_VOLTAGE 28000</span>
+<span class="cp">#define CELL_MIN_VOLTAGE 25000</span>
+<span class="cp">#define CELL_MAX_VOLTAGE 42250</span>
+
+<span class="cp">#define CELL_MAX_TEMPERATURE 6000</span>
+
+<span class="c1">// @section Balancing</span>
+
+<span class="cp">#define BAL_MAX_VOLTAGE_THRESHOLD 100</span>
+
+<span class="cp">#define BAL_CYCLE_LENGTH 120000</span>
+
+<span class="cp">#define PRECHARGE_TIMEOUT 10000</span>
+<span class="cp">#define PRECHARGE_VOLTAGE_THRESHOLD 0.95</span>
+
+<span class="k">typedef</span> <span class="kt">uint16_t</span> <span class="n">voltage_t</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="kt">uint8_t</span> <span class="n">temperature_t</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="kt">int16_t</span> <span class="n">current_t</span><span class="p">;</span>
+
+<span class="k">enum</span> <span class="p">{</span>
+    <span class="n">FEEDBACK_VREF_POS</span><span class="p">,</span>
+    <span class="n">FEEDBACK_FROM_TSMS_POS</span><span class="p">,</span>
+    <span class="n">FEEDBACK_TO_TSMS_POS</span><span class="p">,</span>
+    <span class="n">FEEDBACK_FROM_SHUTDOWN_POS</span><span class="p">,</span>
+    <span class="n">FEEDBACK_LATCH_IMD_POS</span><span class="p">,</span>
+    <span class="n">FEEDBACK_LATCH_BMS_POS</span><span class="p">,</span>
+    <span class="n">FEEDBACK_IMD_FAULT_POS</span><span class="p">,</span>
+    <span class="n">FEEDBACK_BMS_FAULT_POS</span><span class="p">,</span>
+    <span class="n">FEEDBACK_TSAL_HV_POS</span><span class="p">,</span>
+    <span class="n">FEEDBACK_AIR_POSITIVE_POS</span><span class="p">,</span>
+    <span class="n">FEEDBACK_AIR_NEGATIVE_POS</span><span class="p">,</span>
+    <span class="n">FEEDBACK_PC_END_POS</span><span class="p">,</span>
+    <span class="n">FEEDBACK_RELAY_LV_POS</span><span class="p">,</span>
+    <span class="n">FEEDBACK_IMD_SHUTDOWN_POS</span><span class="p">,</span>
+    <span class="n">FEEDBACK_BMS_SHUTDOWN_POS</span><span class="p">,</span>
+    <span class="n">FEEDBACK_TS_ON_POS</span><span class="p">,</span>
+
+    <span class="c1">//do not move FEEDBACK_N</span>
+    <span class="n">FEEDBACK_N</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="cp">#define FEEDBACK_NULL 0</span>
+<span class="cp">#define FEEDBACK_VREF ((feedback_t)1 &lt;&lt; FEEDBACK_VREF_POS)</span>
+<span class="cp">#define FEEDBACK_FROM_TSMS ((feedback_t)1 &lt;&lt; FEEDBACK_FROM_TSMS_POS)</span>
+<span class="cp">#define FEEDBACK_TO_TSMS ((feedback_t)1 &lt;&lt; FEEDBACK_TO_TSMS_POS)</span>
+<span class="cp">#define FEEDBACK_FROM_SHUTDOWN ((feedback_t)1 &lt;&lt; FEEDBACK_FROM_SHUTDOWN_POS)</span>
+<span class="cp">#define FEEDBACK_LATCH_IMD ((feedback_t)1 &lt;&lt; FEEDBACK_LATCH_IMD_POS)</span>
+<span class="cp">#define FEEDBACK_LATCH_BMS ((feedback_t)1 &lt;&lt; FEEDBACK_LATCH_BMS_POS)</span>
+<span class="cp">#define FEEDBACK_IMD_FAULT ((feedback_t)1 &lt;&lt; FEEDBACK_IMD_FAULT_POS)</span>
+<span class="cp">#define FEEDBACK_BMS_FAULT ((feedback_t)1 &lt;&lt; FEEDBACK_BMS_FAULT_POS)</span>
+<span class="cp">#define FEEDBACK_TSAL_HV ((feedback_t)1 &lt;&lt; FEEDBACK_TSAL_HV_POS)</span>
+<span class="cp">#define FEEDBACK_AIR_POSITIVE ((feedback_t)1 &lt;&lt; FEEDBACK_AIR_POSITIVE_POS)</span>
+<span class="cp">#define FEEDBACK_AIR_NEGATIVE ((feedback_t)1 &lt;&lt; FEEDBACK_AIR_NEGATIVE_POS)</span>
+<span class="cp">#define FEEDBACK_PC_END ((feedback_t)1 &lt;&lt; FEEDBACK_PC_END_POS)</span>
+<span class="cp">#define FEEDBACK_RELAY_LV ((feedback_t)1 &lt;&lt; FEEDBACK_RELAY_LV_POS)</span>
+<span class="cp">#define FEEDBACK_IMD_SHUTDOWN ((feedback_t)1 &lt;&lt; FEEDBACK_IMD_SHUTDOWN_POS)</span>
+<span class="cp">#define FEEDBACK_BMS_SHUTDOWN ((feedback_t)1 &lt;&lt; FEEDBACK_BMS_SHUTDOWN_POS)</span>
+<span class="cp">#define FEEDBACK_TS_ON ((feedback_t)1 &lt;&lt; FEEDBACK_TS_ON_POS)</span>
+<span class="cp">#define FEEDBACK_ALL (feedback_t)(((feedback_t)1 &lt;&lt; FEEDBACK_N) - 1)</span>
+
+<span class="c1">//===========================================================================</span>
+<span class="c1">//=============================== SI8900 Settings ===========================</span>
+<span class="c1">//===========================================================================</span>
+
+<span class="c1">// 0A voltage level</span>
+<span class="cp">#define S160_OFFSET (3.33 / 2)</span>
+
+<span class="c1">// Sensitivity of the 50A sensor</span>
+<span class="cp">#define S160_50A_SENS 6.67</span>
+
+<span class="c1">//Sensitivity of the 300A sensor</span>
+<span class="cp">#define S160_300A_SENS 40</span>
+
+<span class="c1">//===========================================================================</span>
+<span class="c1">//=============================== SI8900 Settings ===========================</span>
+<span class="c1">//===========================================================================</span>
+
+<span class="cp">#define SI8900_INIT_TIMEOUT 1000</span>
+
+<span class="cp">#define SI8900_TIMEOUT 5</span>
+
+<span class="cp">#define SI8900_VREF 3.33</span>
+
+<span class="cm">/*</span>
+<span class="cm"> * If the cli should echo the input</span>
+<span class="cm">*/</span>
+<span class="cp">#define CLI_ECHO 1</span>
+
+<span class="cp">#endif </span><span class="cm">/* FENICE_CONFIG_H_ */</span><span class="cp"></span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, E-Agle TRT.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

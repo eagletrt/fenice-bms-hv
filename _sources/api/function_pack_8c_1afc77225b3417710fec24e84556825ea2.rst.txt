@@ -1,0 +1,13 @@
+.. _exhale_function_pack_8c_1afc77225b3417710fec24e84556825ea2:
+
+Function pack_get_min_temperature()
+===================================
+
+- Defined in :ref:`file_mainboard_Src_pack.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: pack_get_min_temperature()

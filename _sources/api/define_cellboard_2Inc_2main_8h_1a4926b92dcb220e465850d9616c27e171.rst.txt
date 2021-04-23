@@ -1,0 +1,13 @@
+.. _exhale_define_cellboard_2Inc_2main_8h_1a4926b92dcb220e465850d9616c27e171:
+
+Define B1_GPIO_Port
+===================
+
+- Defined in :ref:`file_cellboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: B1_GPIO_Port

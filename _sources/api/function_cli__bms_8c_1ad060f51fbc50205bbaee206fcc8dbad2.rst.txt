@@ -1,0 +1,13 @@
+.. _exhale_function_cli__bms_8c_1ad060f51fbc50205bbaee206fcc8dbad2:
+
+Function _cli_taba
+==================
+
+- Defined in :ref:`file_mainboard_Src_cli_bms.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: _cli_taba(uint16_t, char **, char *)

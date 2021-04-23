@@ -1,0 +1,13 @@
+.. _exhale_define_stm32f4xx__hal__conf_8h_1a13fc0d5e7bb925385c0cc0772ba6a391:
+
+Define PREFETCH_ENABLE
+======================
+
+- Defined in :ref:`file_cellboard_Inc_stm32f4xx_hal_conf.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: PREFETCH_ENABLE

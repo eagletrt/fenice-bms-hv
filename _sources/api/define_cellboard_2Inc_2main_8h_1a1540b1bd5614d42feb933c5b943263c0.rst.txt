@@ -1,0 +1,13 @@
+.. _exhale_define_cellboard_2Inc_2main_8h_1a1540b1bd5614d42feb933c5b943263c0:
+
+Define SWO_GPIO_Port
+====================
+
+- Defined in :ref:`file_cellboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: SWO_GPIO_Port

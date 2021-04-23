@@ -1,0 +1,13 @@
+.. _exhale_define_cellboard_2Inc_2main_8h_1af17a94dd613cff35c699b06c7c6a2820:
+
+Define LD2_Pin
+==============
+
+- Defined in :ref:`file_cellboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: LD2_Pin

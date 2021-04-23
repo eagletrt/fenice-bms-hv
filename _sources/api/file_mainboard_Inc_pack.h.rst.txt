@@ -1,0 +1,121 @@
+
+.. _file_mainboard_Inc_pack.h:
+
+File pack.h
+===========
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Inc>` (``mainboard/Inc``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+This file contains the functions to manage the battery pack. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Inc/pack.h``)
+-------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Inc_pack.h.rst
+
+
+
+Detailed Description
+--------------------
+
+Apr 11, 2019 
+
+Matteo Bonora [matteo.bonora@studenti.unitn.it] 
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``bal.h`` (:ref:`file_mainboard_Inc_bal.h`)
+
+- ``error/error.h`` (:ref:`file_mainboard_Inc_error_error.h`)
+
+- ``fenice_config.h`` (:ref:`file_mainboard_Inc_fenice_config.h`)
+
+- ``inttypes.h``
+
+- ``peripherals/ltc6813_utils.h`` (:ref:`file_mainboard_Inc_peripherals_ltc6813_utils.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_mainboard_Inc_main.h`
+
+- :ref:`file_mainboard_Inc_peripherals_ltc6813_utils.h`
+
+- :ref:`file_mainboard_Src_fsm_bms.c`
+
+- :ref:`file_mainboard_Src_pack.c`
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_pack_8h_1ae8f765f62104756b8e1f7fac9c7d8296`
+
+- :ref:`exhale_function_pack_8h_1a05e05a56e1e19d3bdbb650a57e14ae7b`
+
+- :ref:`exhale_function_pack_8h_1a62b44ad3586608b81dce6a617b3e7f31`
+
+- :ref:`exhale_function_pack_8h_1aa4a76377c7d04fce76cb12e4daecb87a`
+
+- :ref:`exhale_function_pack_8h_1a0e3de3b0a68560c145c795f7debfb95d`
+
+- :ref:`exhale_function_pack_8h_1a818a31883355a6379662b84884e4d8e4`
+
+- :ref:`exhale_function_pack_8h_1a8449975cb2e30ea9d8a723cfbd837e6b`
+
+- :ref:`exhale_function_pack_8h_1a26d540cfe0798ce6ee7e3e1c98ebf91e`
+
+- :ref:`exhale_function_pack_8h_1afc77225b3417710fec24e84556825ea2`
+
+- :ref:`exhale_function_pack_8h_1a72b388852db07771e836901e5561503e`
+
+- :ref:`exhale_function_pack_8h_1a51f16a179823be9e0b981fa7ccdaa7dd`
+
+- :ref:`exhale_function_pack_8h_1a91acae66b5ea4b819e36a88c776baf3f`
+
+- :ref:`exhale_function_pack_8h_1a9d97a0ffd5453bbe2b7e55b73eb0131a`
+
+- :ref:`exhale_function_pack_8h_1a11b76b127aed2ee361e2615bd9ba6d1a`
+
+- :ref:`exhale_function_pack_8h_1a892b040f241c24a0894cd094209ecb1c`
+
+- :ref:`exhale_function_pack_8h_1a2f41a2ff4246719c3c4d066a2f399540`
+
+- :ref:`exhale_function_pack_8h_1a3782000773cedf437a76f81240856dd7`
+
+- :ref:`exhale_function_pack_8h_1ab2b35f6b2db327d1614bc09d976bc482`
+
+- :ref:`exhale_function_pack_8h_1a773a6a93c82094e37b85c0e139e67018`
+
+- :ref:`exhale_function_pack_8h_1a02f9bbdcac77d9a17e6ea2fa7484b694`
+
+- :ref:`exhale_function_pack_8h_1a182c1da5d0bad07df594abc7f4d3c81d`
+
+- :ref:`exhale_function_pack_8h_1a08455a4cb9e36189817909bc4b3c41d9`
+

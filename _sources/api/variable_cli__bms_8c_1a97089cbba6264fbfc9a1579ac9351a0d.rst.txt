@@ -1,0 +1,13 @@
+.. _exhale_variable_cli__bms_8c_1a97089cbba6264fbfc9a1579ac9351a0d:
+
+Variable _cli_errors
+====================
+
+- Defined in :ref:`file_mainboard_Src_cli_bms.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: _cli_errors

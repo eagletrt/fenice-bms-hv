@@ -1,0 +1,13 @@
+.. _exhale_variable_feedback_8h_1a5e5173cd981b462b8d91fe38f3e48057:
+
+Variable feedback
+=================
+
+- Defined in :ref:`file_mainboard_Inc_feedback.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: feedback

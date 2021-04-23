@@ -1,0 +1,13 @@
+.. _exhale_typedef_mainboard_2Inc_2fenice__config_8h_1a10dbe1ad50d7aed2fe64419786f3ea77:
+
+Typedef current_t
+=================
+
+- Defined in :ref:`file_mainboard_Inc_fenice_config.h`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: current_t

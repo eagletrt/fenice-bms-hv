@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2fenice__config_8h_1a967e38a47e1ae71543e1903555d28abf:
+
+Define FEEDBACK_AIR_POSITIVE
+============================
+
+- Defined in :ref:`file_mainboard_Inc_fenice_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: FEEDBACK_AIR_POSITIVE

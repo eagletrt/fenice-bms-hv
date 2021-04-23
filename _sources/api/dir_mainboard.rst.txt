@@ -1,0 +1,17 @@
+.. _dir_mainboard:
+
+
+Directory mainboard
+===================
+
+
+*Directory path:* ``mainboard``
+
+Subdirectories
+--------------
+
+- :ref:`dir_mainboard_Inc`
+- :ref:`dir_mainboard_Src`
+
+
+

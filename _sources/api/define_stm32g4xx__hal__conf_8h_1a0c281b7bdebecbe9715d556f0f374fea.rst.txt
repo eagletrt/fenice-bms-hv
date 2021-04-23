@@ -1,0 +1,13 @@
+.. _exhale_define_stm32g4xx__hal__conf_8h_1a0c281b7bdebecbe9715d556f0f374fea:
+
+Define USE_HAL_HRTIM_REGISTER_CALLBACKS
+=======================================
+
+- Defined in :ref:`file_mainboard_Inc_stm32g4xx_hal_conf.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: USE_HAL_HRTIM_REGISTER_CALLBACKS

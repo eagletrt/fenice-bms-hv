@@ -1,0 +1,13 @@
+.. _exhale_variable_mainboard_2Inc_2fenice__config_8h_1a2ebaa70891a638df88e485e7e05317a5:
+
+Variable TEMP_SENSOR_ADDRESS_CODING
+===================================
+
+- Defined in :ref:`file_mainboard_Inc_fenice_config.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: TEMP_SENSOR_ADDRESS_CODING

@@ -1,0 +1,13 @@
+.. _exhale_function_pack_8h_1a62b44ad3586608b81dce6a617b3e7f31:
+
+Function pack_get_bus_voltage()
+===============================
+
+- Defined in :ref:`file_mainboard_Inc_pack.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: pack_get_bus_voltage()

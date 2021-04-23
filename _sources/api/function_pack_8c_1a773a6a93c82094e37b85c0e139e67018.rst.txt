@@ -1,0 +1,13 @@
+.. _exhale_function_pack_8c_1a773a6a93c82094e37b85c0e139e67018:
+
+Function pack_update_temperatures(SPI_HandleTypeDef \*)
+=======================================================
+
+- Defined in :ref:`file_mainboard_Src_pack.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: pack_update_temperatures(SPI_HandleTypeDef *)

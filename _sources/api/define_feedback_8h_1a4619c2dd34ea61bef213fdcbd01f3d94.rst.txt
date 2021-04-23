@@ -1,0 +1,13 @@
+.. _exhale_define_feedback_8h_1a4619c2dd34ea61bef213fdcbd01f3d94:
+
+Define FEEDBACK_IDLE_TS_ON_TRIGGER_MASK
+=======================================
+
+- Defined in :ref:`file_mainboard_Inc_feedback.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: FEEDBACK_IDLE_TS_ON_TRIGGER_MASK

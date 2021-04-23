@@ -1,0 +1,13 @@
+.. _exhale_define_stm32g4xx__hal__conf_8h_1a5c7c04d57c22f5301f1ea589abc6f35f:
+
+Define USE_HAL_SRAM_REGISTER_CALLBACKS
+======================================
+
+- Defined in :ref:`file_mainboard_Inc_stm32g4xx_hal_conf.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: USE_HAL_SRAM_REGISTER_CALLBACKS

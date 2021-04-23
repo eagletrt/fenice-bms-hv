@@ -1,0 +1,13 @@
+.. _exhale_define_group__STM32F4xx__System__Private__Includes_1gaaa8c76e274d0f6dd2cefb5d0b17fbc37:
+
+Define HSI_VALUE
+================
+
+- Defined in :ref:`file_cellboard_Src_system_stm32f4xx.c`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: HSI_VALUE

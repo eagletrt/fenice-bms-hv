@@ -1,0 +1,13 @@
+.. _exhale_variable_ltc6813_8h_1ab6a59f2ef3e4da098be70548c2c05304:
+
+Variable crcTable
+=================
+
+- Defined in :ref:`file_mainboard_Inc_peripherals_ltc6813.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: crcTable

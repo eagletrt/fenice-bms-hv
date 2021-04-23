@@ -1,0 +1,13 @@
+.. _exhale_define_ltc6813_8h_1a5dde0d932a792b2d7f934a606a9335a4:
+
+Define GPIO_I2C_MODE
+====================
+
+- Defined in :ref:`file_mainboard_Inc_peripherals_ltc6813.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: GPIO_I2C_MODE

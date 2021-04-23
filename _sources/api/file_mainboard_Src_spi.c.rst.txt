@@ -1,0 +1,79 @@
+
+.. _file_mainboard_Src_spi.c:
+
+File spi.c
+==========
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Src>` (``mainboard/Src``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+This file provides code for the configuration of the SPI instances. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Src/spi.c``)
+------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Src_spi.c.rst
+
+
+
+Detailed Description
+--------------------
+
+
+
+ Copyright (c) 2020 STMicroelectronics. All rights reserved.
+
+
+This software component is licensed by ST under BSD 3-Clause license, the "License"; You may not use this file except in compliance with the License. You may obtain a copy of the License at: opensource.org/licenses/BSD-3-Clause 
+
+
+
+
+Includes
+--------
+
+
+- ``spi.h`` (:ref:`file_mainboard_Inc_spi.h`)
+
+
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_spi_8c_1af9af6cae4cb9386b709196d3a3ab4f78`
+
+- :ref:`exhale_function_spi_8c_1a8e1dadd744299fa6f8bca0e1bcbd2c00`
+
+- :ref:`exhale_function_spi_8c_1af81398f9775695df0b172367651ca3e6`
+
+- :ref:`exhale_function_spi_8c_1aea85daa666c03d85fd59edef711ebb08`
+
+- :ref:`exhale_function_spi_8c_1ad59b1470e3c09d41c88aecf7ae0ca806`
+
+- :ref:`exhale_function_spi_8c_1acc2dc237744eb00a139b6385c837d35c`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_spi_8c_1a9c6222bae4d0328dd843ae099623b40b`
+
+- :ref:`exhale_variable_spi_8c_1ab9da65f935e805137e2eb4e18c5ab224`
+

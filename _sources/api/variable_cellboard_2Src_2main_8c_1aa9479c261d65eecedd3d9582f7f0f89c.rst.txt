@@ -1,0 +1,13 @@
+.. _exhale_variable_cellboard_2Src_2main_8c_1aa9479c261d65eecedd3d9582f7f0f89c:
+
+Variable huart2
+===============
+
+- Defined in :ref:`file_cellboard_Src_main.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: huart2

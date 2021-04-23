@@ -1,0 +1,13 @@
+.. _exhale_define_cellboard_2Inc_2fenice__config_8h_1aa398e83b4f84621e9d677b0896d72c6c:
+
+Define TEMP_STRIPS_PER_BUS
+==========================
+
+- Defined in :ref:`file_cellboard_Inc_fenice_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: TEMP_STRIPS_PER_BUS

@@ -1,0 +1,13 @@
+.. _exhale_variable_error__list__ref_8c_1ab74e53c48afd6db98a4d6f5857d0f3ba:
+
+Variable error_adc_init
+=======================
+
+- Defined in :ref:`file_mainboard_Src_error_error_list_ref.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: error_adc_init

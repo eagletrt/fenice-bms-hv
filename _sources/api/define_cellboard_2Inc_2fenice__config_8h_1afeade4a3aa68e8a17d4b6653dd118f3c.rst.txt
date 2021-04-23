@@ -1,0 +1,13 @@
+.. _exhale_define_cellboard_2Inc_2fenice__config_8h_1afeade4a3aa68e8a17d4b6653dd118f3c:
+
+Define FEEDBACK_FROM_TSMS
+=========================
+
+- Defined in :ref:`file_cellboard_Inc_fenice_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: FEEDBACK_FROM_TSMS

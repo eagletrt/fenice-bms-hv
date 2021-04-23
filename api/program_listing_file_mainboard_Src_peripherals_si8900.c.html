@@ -1,0 +1,289 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Program Listing for File si8900.c &mdash; Fenice BMS HV 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Fenice BMS HV
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Software</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Fenice BMS HV</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Program Listing for File si8900.c</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/api/program_listing_file_mainboard_Src_peripherals_si8900.c.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="program-listing-for-file-si8900-c">
+<span id="program-listing-file-mainboard-src-peripherals-si8900-c"></span><h1>Program Listing for File si8900.c<a class="headerlink" href="#program-listing-for-file-si8900-c" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_mainboard_Src_peripherals_si8900.c.html#file-mainboard-src-peripherals-si8900-c"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">mainboard/Src/peripherals/si8900.c</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;peripherals/si8900.h&quot;</span><span class="cp"></span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp"></span>
+
+<span class="cp">#include</span> <span class="cpf">&quot;error/error.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;fenice_config.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;usart.h&quot;</span><span class="cp"></span>
+
+<span class="kt">bool</span> <span class="n">si8900_ready</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+
+<span class="kt">bool</span> <span class="nf">si8900_init</span><span class="p">(</span><span class="n">UART_HandleTypeDef</span> <span class="o">*</span><span class="n">huart</span><span class="p">,</span> <span class="n">GPIO_TypeDef</span> <span class="o">*</span><span class="n">reset_gpio</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="n">reset_pin</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">uint8_t</span> <span class="n">recv</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">uint8_t</span> <span class="n">tx</span> <span class="o">=</span> <span class="mh">0xAA</span><span class="p">;</span>
+
+    <span class="kt">bool</span> <span class="n">timeout</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="kt">bool</span> <span class="n">code_receive</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="kt">bool</span> <span class="n">code_confirm</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+
+    <span class="n">HAL_GPIO_TogglePin</span><span class="p">(</span><span class="n">ADC_SIN_GPIO_Port</span><span class="p">,</span> <span class="n">ADC_SIN_Pin</span><span class="p">);</span>
+    <span class="n">HAL_Delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="n">HAL_GPIO_TogglePin</span><span class="p">(</span><span class="n">ADC_SIN_GPIO_Port</span><span class="p">,</span> <span class="n">ADC_SIN_Pin</span><span class="p">);</span>
+
+    <span class="kt">uint32_t</span> <span class="n">time</span> <span class="o">=</span> <span class="n">HAL_GetTick</span><span class="p">();</span>
+
+    <span class="n">HAL_UART_Transmit</span><span class="p">(</span><span class="n">huart</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">tx</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+
+    <span class="k">while</span> <span class="p">((</span><span class="o">!</span><span class="n">code_receive</span> <span class="o">||</span> <span class="o">!</span><span class="n">code_confirm</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">timeout</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">HAL_UART_Receive</span><span class="p">(</span><span class="n">huart</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">recv</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">recv</span> <span class="o">==</span> <span class="mh">0x55</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">code_receive</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">code_confirm</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+                <span class="n">si8900_ready</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">code_receive</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">code_receive</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+            <span class="n">code_confirm</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">HAL_UART_Transmit</span><span class="p">(</span><span class="n">huart</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">tx</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+
+        <span class="n">timeout</span> <span class="o">=</span> <span class="p">(</span><span class="n">HAL_GetTick</span><span class="p">()</span> <span class="o">-</span> <span class="n">time</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">SI8900_INIT_TIMEOUT</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">timeout</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">error_set</span><span class="p">(</span><span class="n">ERROR_ADC_INIT</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">HAL_GetTick</span><span class="p">());</span>
+        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">error_unset</span><span class="p">(</span><span class="n">ERROR_ADC_INIT</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">bool</span> <span class="nf">si8900_read_channel</span><span class="p">(</span><span class="n">UART_HandleTypeDef</span> <span class="o">*</span><span class="n">huart</span><span class="p">,</span> <span class="n">SI8900_CHANNEL</span> <span class="n">ch</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="o">*</span><span class="n">voltage</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">si8900_ready</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">uint8_t</span> <span class="n">conf</span> <span class="o">=</span> <span class="n">si8900_cnfg_0</span> <span class="o">|</span> <span class="p">(</span><span class="n">ch</span> <span class="o">&lt;&lt;</span> <span class="mi">4</span><span class="p">);</span>
+
+        <span class="n">HAL_UART_Transmit</span><span class="p">(</span><span class="n">huart</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">conf</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+
+        <span class="kt">uint8_t</span> <span class="n">recv</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">HAL_UART_Receive</span><span class="p">(</span><span class="n">huart</span><span class="p">,</span> <span class="n">recv</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
+            <span class="o">*</span><span class="n">voltage</span> <span class="o">=</span> <span class="n">si8900_convert_voltage</span><span class="p">(</span><span class="n">recv</span><span class="p">);</span>
+            <span class="n">error_unset</span><span class="p">(</span><span class="n">ERROR_ADC_TIMEOUT</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+            <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">error_set</span><span class="p">(</span><span class="n">ERROR_ADC_TIMEOUT</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">HAL_GetTick</span><span class="p">());</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">uint16_t</span> <span class="nf">si8900_convert_voltage</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">adc_hl</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="p">{</span>
+    <span class="c1">// MSB | LSB</span>
+    <span class="kt">uint16_t</span> <span class="n">dig</span> <span class="o">=</span>
+        <span class="p">((</span><span class="n">adc_hl</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&amp;</span> <span class="mi">0</span><span class="n">b00001111</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="mi">6</span><span class="p">)</span> <span class="o">|</span> <span class="p">((</span><span class="n">adc_hl</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&amp;</span> <span class="mi">0</span><span class="n">b01111110</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="p">((</span><span class="n">SI8900_VREF</span> <span class="o">*</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">dig</span><span class="p">)</span> <span class="o">/</span> <span class="mi">1024</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, E-Agle TRT.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+.. _exhale_function_cellboard_2Src_2main_8c_1a4230d11f81d0b16e112f1cc3f40cb42f:
+
+Function MX_I2C1_Init
+=====================
+
+- Defined in :ref:`file_cellboard_Src_main.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: MX_I2C1_Init(void)

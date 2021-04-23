@@ -1,0 +1,13 @@
+.. _exhale_function_spi_8c_1af9af6cae4cb9386b709196d3a3ab4f78:
+
+Function HAL_SPI_MspDeInit
+==========================
+
+- Defined in :ref:`file_mainboard_Src_spi.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: HAL_SPI_MspDeInit(SPI_HandleTypeDef *)

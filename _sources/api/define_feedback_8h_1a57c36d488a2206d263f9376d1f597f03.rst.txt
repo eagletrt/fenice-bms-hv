@@ -1,0 +1,13 @@
+.. _exhale_define_feedback_8h_1a57c36d488a2206d263f9376d1f597f03:
+
+Define FEEDBACK_ON_VAL
+======================
+
+- Defined in :ref:`file_mainboard_Inc_feedback.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: FEEDBACK_ON_VAL

@@ -1,0 +1,13 @@
+.. _exhale_variable_cellboard_2Src_2main_8c_1aa2146da9811399cd856abaef0c545957:
+
+Variable rx
+===========
+
+- Defined in :ref:`file_cellboard_Src_main.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: rx

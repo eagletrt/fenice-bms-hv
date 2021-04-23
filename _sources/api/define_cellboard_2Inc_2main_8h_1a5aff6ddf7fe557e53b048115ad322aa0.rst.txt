@@ -1,0 +1,13 @@
+.. _exhale_define_cellboard_2Inc_2main_8h_1a5aff6ddf7fe557e53b048115ad322aa0:
+
+Define LD2_GPIO_Port
+====================
+
+- Defined in :ref:`file_cellboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: LD2_GPIO_Port

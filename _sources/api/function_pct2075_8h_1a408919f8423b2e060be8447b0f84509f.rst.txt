@@ -1,0 +1,13 @@
+.. _exhale_function_pct2075_8h_1a408919f8423b2e060be8447b0f84509f:
+
+Function pct2075_read(I2C_HandleTypeDef \*, uint8_t)
+====================================================
+
+- Defined in :ref:`file_cellboard_Inc_pct2075.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: pct2075_read(I2C_HandleTypeDef *, uint8_t)

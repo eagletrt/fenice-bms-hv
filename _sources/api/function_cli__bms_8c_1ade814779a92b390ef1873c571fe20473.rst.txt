@@ -1,0 +1,13 @@
+.. _exhale_function_cli__bms_8c_1ade814779a92b390ef1873c571fe20473:
+
+Function _cli_balance
+=====================
+
+- Defined in :ref:`file_mainboard_Src_cli_bms.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: _cli_balance(uint16_t, char **, char *)

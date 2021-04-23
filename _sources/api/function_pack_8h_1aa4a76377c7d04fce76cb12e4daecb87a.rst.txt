@@ -1,0 +1,13 @@
+.. _exhale_function_pack_8h_1aa4a76377c7d04fce76cb12e4daecb87a:
+
+Function pack_get_current()
+===========================
+
+- Defined in :ref:`file_mainboard_Inc_pack.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: pack_get_current()

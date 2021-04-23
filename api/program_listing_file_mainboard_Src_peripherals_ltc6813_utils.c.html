@@ -1,0 +1,458 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Program Listing for File ltc6813_utils.c &mdash; Fenice BMS HV 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Fenice BMS HV
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Software</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Fenice BMS HV</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Program Listing for File ltc6813_utils.c</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/api/program_listing_file_mainboard_Src_peripherals_ltc6813_utils.c.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="program-listing-for-file-ltc6813-utils-c">
+<span id="program-listing-file-mainboard-src-peripherals-ltc6813-utils-c"></span><h1>Program Listing for File ltc6813_utils.c<a class="headerlink" href="#program-listing-for-file-ltc6813-utils-c" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_mainboard_Src_peripherals_ltc6813_utils.c.html#file-mainboard-src-peripherals-ltc6813-utils-c"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">mainboard/Src/peripherals/ltc6813_utils.c</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;peripherals/ltc6813_utils.h&quot;</span><span class="cp"></span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;math.h&gt;</span><span class="cp"></span>
+
+<span class="cp">#include</span> <span class="cpf">&quot;main.h&quot;</span><span class="cp"></span>
+
+<span class="k">enum</span> <span class="n">ltc6813_i2c_ctrl</span> <span class="p">{</span>
+    <span class="n">I2C_READ</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">I2C_WRITE</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="n">I2C_START</span> <span class="o">=</span> <span class="mi">0</span><span class="n">b01100000</span><span class="p">,</span>
+    <span class="n">I2C_STOP</span> <span class="o">=</span> <span class="mi">0</span><span class="n">b00010000</span><span class="p">,</span>
+    <span class="n">I2C_BLANK</span> <span class="o">=</span> <span class="mi">0</span><span class="n">b00000000</span><span class="p">,</span>
+    <span class="n">I2C_NO_TRANSMIT</span> <span class="o">=</span> <span class="mi">0</span><span class="n">b01110000</span><span class="p">,</span>
+    <span class="n">I2C_MASTER_ACK</span> <span class="o">=</span> <span class="mi">0</span><span class="n">b00000000</span><span class="p">,</span>
+    <span class="n">I2C_MASTER_NACK</span> <span class="o">=</span> <span class="mi">0</span><span class="n">b00001000</span><span class="p">,</span>
+    <span class="n">I2C_MASTER_NACK_STOP</span> <span class="o">=</span> <span class="mi">0</span><span class="n">b00001001</span>
+<span class="p">};</span>
+
+<span class="kt">size_t</span> <span class="nf">ltc6813_read_voltages</span><span class="p">(</span><span class="n">SPI_HandleTypeDef</span> <span class="o">*</span><span class="n">hspi</span><span class="p">,</span> <span class="n">voltage_t</span> <span class="o">*</span><span class="n">volts</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">uint8_t</span> <span class="n">cmd</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span>
+    <span class="kt">uint16_t</span> <span class="n">cmd_pec</span><span class="p">;</span>
+    <span class="kt">uint8_t</span> <span class="n">data</span><span class="p">[</span><span class="mi">8</span> <span class="o">*</span> <span class="n">LTC6813_COUNT</span><span class="p">];</span>
+
+    <span class="n">cmd</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>  <span class="c1">// Broadcast</span>
+
+    <span class="kt">uint8_t</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>  <span class="c1">// counts the cells</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">uint8_t</span> <span class="n">reg</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">reg</span> <span class="o">&lt;</span> <span class="n">LTC6813_REG_COUNT</span><span class="p">;</span> <span class="n">reg</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">cmd</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">uint8_t</span><span class="p">)</span><span class="n">rdcv_cmd</span><span class="p">[</span><span class="n">reg</span><span class="p">];</span>
+        <span class="n">cmd_pec</span> <span class="o">=</span> <span class="n">ltc6813_pec15</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">cmd</span><span class="p">);</span>
+        <span class="n">cmd</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">uint8_t</span><span class="p">)(</span><span class="n">cmd_pec</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">);</span>
+        <span class="n">cmd</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">uint8_t</span><span class="p">)(</span><span class="n">cmd_pec</span><span class="p">);</span>
+
+        <span class="n">ltc6813_wakeup_idle</span><span class="p">(</span><span class="n">hspi</span><span class="p">);</span>
+        <span class="n">ltc6813_enable_cs</span><span class="p">(</span><span class="n">hspi</span><span class="p">,</span> <span class="n">CS_LTC_GPIO_Port</span><span class="p">,</span> <span class="n">CS_LTC_Pin</span><span class="p">);</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">HAL_SPI_Transmit</span><span class="p">(</span><span class="n">hspi</span><span class="p">,</span> <span class="n">cmd</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// goto End;</span>
+        <span class="p">}</span>
+        <span class="n">HAL_SPI_Receive</span><span class="p">(</span><span class="n">hspi</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="mi">8</span> <span class="o">*</span> <span class="n">LTC6813_COUNT</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
+
+        <span class="n">ltc6813_disable_cs</span><span class="p">(</span><span class="n">hspi</span><span class="p">,</span> <span class="n">CS_LTC_GPIO_Port</span><span class="p">,</span> <span class="n">CS_LTC_Pin</span><span class="p">);</span>
+
+<span class="cp">#if LTC6813_EMU == 1</span>
+        <span class="c1">// Writes 3.6v to each cell</span>
+
+        <span class="kt">uint8_t</span> <span class="n">emu_i</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">emu_i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">emu_i</span> <span class="o">&lt;</span> <span class="n">LTC6813_REG_CELL_COUNT</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span> <span class="n">emu_i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// 36000</span>
+            <span class="n">data</span><span class="p">[</span><span class="n">emu_i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="n">b10100000</span><span class="p">;</span>
+            <span class="n">data</span><span class="p">[</span><span class="o">++</span><span class="n">emu_i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="n">b10001100</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="kt">uint16_t</span> <span class="n">emu_pec</span> <span class="o">=</span> <span class="n">ltc6813_pec15</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="n">data</span><span class="p">);</span>
+        <span class="n">data</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">uint8_t</span><span class="p">)(</span><span class="n">emu_pec</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">);</span>
+        <span class="n">data</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">uint8_t</span><span class="p">)</span><span class="n">emu_pec</span><span class="p">;</span>
+<span class="cp">#endif</span>
+
+        <span class="k">for</span> <span class="p">(</span><span class="kt">uint8_t</span> <span class="n">ltc</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">ltc</span> <span class="o">&lt;</span> <span class="n">LTC6813_COUNT</span><span class="p">;</span> <span class="n">ltc</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">ltc6813_pec15</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="kt">uint16_t</span><span class="p">)(</span><span class="n">data</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">*</span> <span class="mi">256</span> <span class="o">+</span> <span class="n">data</span><span class="p">[</span><span class="mi">7</span><span class="p">]))</span> <span class="p">{</span>
+                <span class="n">error_unset</span><span class="p">(</span><span class="n">ERROR_LTC_PEC_ERROR</span><span class="p">,</span> <span class="n">ltc</span><span class="p">);</span>
+
+                <span class="c1">// For every cell in the register</span>
+                <span class="k">for</span> <span class="p">(</span><span class="kt">uint8_t</span> <span class="n">cell</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">cell</span> <span class="o">&lt;</span> <span class="n">LTC6813_REG_CELL_COUNT</span><span class="p">;</span> <span class="n">cell</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="c1">// offset by register (3 slots) + offset by ltc (18 slots) + cell</span>
+                    <span class="kt">uint16_t</span> <span class="n">index</span> <span class="o">=</span> <span class="p">(</span><span class="n">reg</span> <span class="o">*</span> <span class="n">LTC6813_REG_CELL_COUNT</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">ltc</span> <span class="o">*</span> <span class="n">LTC6813_CELL_COUNT</span><span class="p">)</span> <span class="o">+</span> <span class="n">cell</span><span class="p">;</span>
+
+                    <span class="n">volts</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">ltc6813_convert_voltage</span><span class="p">(</span><span class="o">&amp;</span><span class="n">data</span><span class="p">[</span><span class="k">sizeof</span><span class="p">(</span><span class="n">voltage_t</span><span class="p">)</span> <span class="o">*</span> <span class="n">cell</span><span class="p">]);</span>
+                    <span class="n">ltc6813_check_voltage</span><span class="p">(</span><span class="n">volts</span><span class="p">[</span><span class="n">index</span><span class="p">],</span> <span class="n">index</span><span class="p">);</span>
+
+                    <span class="n">count</span><span class="o">++</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="n">error_set</span><span class="p">(</span><span class="n">ERROR_LTC_PEC_ERROR</span><span class="p">,</span> <span class="n">ltc</span><span class="p">,</span> <span class="n">HAL_GetTick</span><span class="p">());</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">count</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">ltc6813_temp_set_register</span><span class="p">(</span><span class="n">SPI_HandleTypeDef</span> <span class="o">*</span><span class="n">hspi</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">address</span><span class="p">,</span>
+                               <span class="kt">uint8_t</span> <span class="n">reg</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">uint8_t</span> <span class="n">comm</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+
+    <span class="n">comm</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">I2C_START</span> <span class="o">|</span> <span class="p">(</span><span class="n">address</span> <span class="o">&gt;&gt;</span> <span class="mi">3</span><span class="p">);</span>
+    <span class="n">comm</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">address</span> <span class="o">&lt;&lt;</span> <span class="mi">5</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;&lt;</span> <span class="mi">4</span><span class="p">)</span> <span class="o">|</span> <span class="n">I2C_MASTER_ACK</span><span class="p">;</span>
+
+    <span class="n">comm</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">I2C_BLANK</span> <span class="o">|</span> <span class="p">(</span><span class="n">reg</span> <span class="o">&gt;&gt;</span> <span class="mi">4</span><span class="p">);</span>
+    <span class="n">comm</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">reg</span> <span class="o">&lt;&lt;</span> <span class="mi">4</span><span class="p">)</span> <span class="o">|</span> <span class="n">I2C_MASTER_ACK</span><span class="p">;</span>
+
+    <span class="n">comm</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="n">I2C_START</span> <span class="o">|</span> <span class="p">(</span><span class="n">address</span> <span class="o">&gt;&gt;</span> <span class="mi">3</span><span class="p">);</span>
+    <span class="n">comm</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">address</span> <span class="o">&lt;&lt;</span> <span class="mi">5</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">4</span><span class="p">)</span> <span class="o">|</span> <span class="n">I2C_MASTER_ACK</span><span class="p">;</span>
+
+    <span class="kt">uint16_t</span> <span class="n">pec</span> <span class="o">=</span> <span class="n">ltc6813_pec15</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="n">comm</span><span class="p">);</span>
+    <span class="n">comm</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">uint8_t</span><span class="p">)(</span><span class="n">pec</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">);</span>
+    <span class="n">comm</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">uint8_t</span><span class="p">)(</span><span class="n">pec</span><span class="p">);</span>
+
+    <span class="n">ltc6813_wrcomm_i2c</span><span class="p">(</span><span class="n">hspi</span><span class="p">,</span> <span class="n">comm</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">ltc6813_temp_get</span><span class="p">(</span><span class="n">SPI_HandleTypeDef</span> <span class="o">*</span><span class="n">hspi</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">address</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">uint8_t</span> <span class="n">comm</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+
+    <span class="n">comm</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">I2C_BLANK</span> <span class="o">|</span> <span class="p">(</span><span class="mh">0xFF</span> <span class="o">&gt;&gt;</span> <span class="mi">4</span><span class="p">);</span>
+    <span class="n">comm</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mh">0xF</span> <span class="o">&lt;&lt;</span> <span class="mi">4</span><span class="p">)</span> <span class="o">|</span> <span class="n">I2C_MASTER_ACK</span><span class="p">;</span>
+
+    <span class="n">comm</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">I2C_BLANK</span> <span class="o">|</span> <span class="p">(</span><span class="mh">0xFF</span> <span class="o">&gt;&gt;</span> <span class="mi">4</span><span class="p">);</span>
+    <span class="n">comm</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">uint8_t</span><span class="p">)(</span><span class="mh">0xFF</span> <span class="o">&lt;&lt;</span> <span class="mi">4</span><span class="p">)</span> <span class="o">|</span> <span class="n">I2C_MASTER_ACK</span><span class="p">;</span>
+
+    <span class="n">comm</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="n">I2C_BLANK</span> <span class="o">|</span> <span class="p">(</span><span class="mh">0xFF</span> <span class="o">&gt;&gt;</span> <span class="mi">4</span><span class="p">);</span>
+    <span class="n">comm</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">uint8_t</span><span class="p">)(</span><span class="mh">0xFF</span> <span class="o">&lt;&lt;</span> <span class="mi">4</span><span class="p">)</span> <span class="o">|</span> <span class="n">I2C_MASTER_NACK_STOP</span><span class="p">;</span>
+
+    <span class="kt">uint16_t</span> <span class="n">pec</span> <span class="o">=</span> <span class="n">ltc6813_pec15</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="n">comm</span><span class="p">);</span>
+    <span class="n">comm</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">uint8_t</span><span class="p">)(</span><span class="n">pec</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">);</span>
+    <span class="n">comm</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">uint8_t</span><span class="p">)(</span><span class="n">pec</span><span class="p">);</span>
+
+    <span class="c1">// HAL_Delay(1);</span>
+    <span class="n">ltc6813_wrcomm_i2c</span><span class="p">(</span><span class="n">hspi</span><span class="p">,</span> <span class="n">comm</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">ltc6813_read_temperatures</span><span class="p">(</span><span class="n">SPI_HandleTypeDef</span> <span class="o">*</span><span class="n">hspi</span><span class="p">,</span> <span class="n">temperature_t</span> <span class="n">max</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span>
+                               <span class="n">temperature_t</span> <span class="n">min</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="p">{</span>
+    <span class="kt">uint8_t</span> <span class="n">recv</span><span class="p">[</span><span class="mi">8</span> <span class="o">*</span> <span class="n">LTC6813_COUNT</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+
+    <span class="n">ltc6813_wakeup_idle</span><span class="p">(</span><span class="n">hspi</span><span class="p">);</span>
+
+    <span class="n">ltc6813_temp_set_register</span><span class="p">(</span><span class="n">hspi</span><span class="p">,</span> <span class="n">LTC6813_TEMP_ADDRESS</span><span class="p">,</span> <span class="mh">0xFF</span><span class="p">);</span>
+    <span class="n">ltc6813_stcomm_i2c</span><span class="p">(</span><span class="n">hspi</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+
+    <span class="n">ltc6813_temp_get</span><span class="p">(</span><span class="n">hspi</span><span class="p">,</span> <span class="n">LTC6813_TEMP_ADDRESS</span><span class="p">);</span>
+    <span class="n">ltc6813_stcomm_i2c</span><span class="p">(</span><span class="n">hspi</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+
+    <span class="n">ltc6813_rdcomm_i2c</span><span class="p">(</span><span class="n">hspi</span><span class="p">,</span> <span class="n">recv</span><span class="p">);</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">uint8_t</span> <span class="n">ltc</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">ltc</span> <span class="o">&lt;</span> <span class="n">LTC6813_COUNT</span><span class="p">;</span> <span class="n">ltc</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// For each ltc we skip 8 bits (6 data + 2 pec);</span>
+        <span class="kt">uint8_t</span> <span class="n">base_index</span> <span class="o">=</span> <span class="n">ltc</span> <span class="o">*</span> <span class="p">(</span><span class="n">LTC6813_COUNT</span> <span class="o">+</span> <span class="mi">2</span><span class="p">);</span>
+
+        <span class="kt">uint8_t</span> <span class="n">d0</span> <span class="o">=</span> <span class="p">(</span><span class="n">recv</span><span class="p">[</span><span class="mi">0</span> <span class="o">+</span> <span class="n">base_index</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="mi">4</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">recv</span><span class="p">[</span><span class="mi">1</span> <span class="o">+</span> <span class="n">base_index</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="mi">4</span><span class="p">);</span>
+        <span class="kt">uint8_t</span> <span class="n">d1</span> <span class="o">=</span> <span class="p">(</span><span class="n">recv</span><span class="p">[</span><span class="mi">2</span> <span class="o">+</span> <span class="n">base_index</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="mi">4</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">recv</span><span class="p">[</span><span class="mi">3</span> <span class="o">+</span> <span class="n">base_index</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="mi">4</span><span class="p">);</span>
+        <span class="kt">uint8_t</span> <span class="n">d2</span> <span class="o">=</span> <span class="p">(</span><span class="n">recv</span><span class="p">[</span><span class="mi">4</span> <span class="o">+</span> <span class="n">base_index</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="mi">4</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">recv</span><span class="p">[</span><span class="mi">5</span> <span class="o">+</span> <span class="n">base_index</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="mi">4</span><span class="p">);</span>
+
+        <span class="n">max</span><span class="p">[</span><span class="n">ltc</span> <span class="o">*</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">d0</span> <span class="o">&gt;&gt;</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="n">max</span><span class="p">[</span><span class="mi">1</span> <span class="o">+</span> <span class="n">ltc</span> <span class="o">*</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">d0</span> <span class="o">&amp;</span> <span class="mi">0</span><span class="n">b00000011</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="mi">4</span> <span class="o">|</span> <span class="n">d1</span> <span class="o">&gt;&gt;</span> <span class="mi">4</span><span class="p">;</span>
+
+        <span class="n">min</span><span class="p">[</span><span class="n">ltc</span> <span class="o">*</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">d1</span> <span class="o">&amp;</span> <span class="mi">0</span><span class="n">b00001111</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span> <span class="o">|</span> <span class="n">d2</span> <span class="o">&gt;&gt;</span> <span class="mi">6</span><span class="p">;</span>
+        <span class="n">min</span><span class="p">[</span><span class="mi">1</span> <span class="o">+</span> <span class="n">ltc</span> <span class="o">*</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">d2</span> <span class="o">&amp;</span> <span class="mi">0</span><span class="n">b00111111</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">ltc6813_read_all_temps</span><span class="p">(</span><span class="n">SPI_HandleTypeDef</span> <span class="o">*</span><span class="n">hspi</span><span class="p">,</span> <span class="n">temperature_t</span> <span class="o">*</span><span class="n">temps</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">uint8_t</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">ltc6813_wakeup_idle</span><span class="p">(</span><span class="n">hspi</span><span class="p">);</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">uint8_t</span> <span class="n">sens</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">sens</span> <span class="o">&lt;</span> <span class="n">ceil</span><span class="p">((</span><span class="kt">float</span><span class="p">)</span><span class="n">TEMP_SENSOR_COUNT</span> <span class="o">/</span> <span class="mi">4</span><span class="p">);</span> <span class="n">sens</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">uint8_t</span> <span class="n">recv</span><span class="p">[</span><span class="mi">8</span> <span class="o">*</span> <span class="n">LTC6813_COUNT</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+
+        <span class="n">ltc6813_temp_set_register</span><span class="p">(</span><span class="n">hspi</span><span class="p">,</span> <span class="n">LTC6813_TEMP_ADDRESS</span><span class="p">,</span> <span class="n">sens</span><span class="p">);</span>
+        <span class="n">ltc6813_stcomm_i2c</span><span class="p">(</span><span class="n">hspi</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+
+        <span class="n">ltc6813_temp_get</span><span class="p">(</span><span class="n">hspi</span><span class="p">,</span> <span class="n">LTC6813_TEMP_ADDRESS</span><span class="p">);</span>
+        <span class="n">ltc6813_stcomm_i2c</span><span class="p">(</span><span class="n">hspi</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+
+        <span class="n">ltc6813_rdcomm_i2c</span><span class="p">(</span><span class="n">hspi</span><span class="p">,</span> <span class="n">recv</span><span class="p">);</span>
+
+        <span class="k">for</span> <span class="p">(</span><span class="kt">uint8_t</span> <span class="n">ltc</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">ltc</span> <span class="o">&lt;</span> <span class="n">LTC6813_COUNT</span><span class="p">;</span> <span class="n">ltc</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">uint8_t</span> <span class="n">base_index</span> <span class="o">=</span> <span class="n">ltc</span> <span class="o">*</span> <span class="p">(</span><span class="n">LTC6813_COUNT</span> <span class="o">+</span> <span class="mi">2</span><span class="p">);</span>
+
+            <span class="kt">uint8_t</span> <span class="n">d0</span> <span class="o">=</span> <span class="p">(</span><span class="n">recv</span><span class="p">[</span><span class="mi">0</span> <span class="o">+</span> <span class="n">base_index</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="mi">4</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">recv</span><span class="p">[</span><span class="mi">1</span> <span class="o">+</span> <span class="n">base_index</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="mi">4</span><span class="p">);</span>
+            <span class="kt">uint8_t</span> <span class="n">d1</span> <span class="o">=</span> <span class="p">(</span><span class="n">recv</span><span class="p">[</span><span class="mi">2</span> <span class="o">+</span> <span class="n">base_index</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="mi">4</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">recv</span><span class="p">[</span><span class="mi">3</span> <span class="o">+</span> <span class="n">base_index</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="mi">4</span><span class="p">);</span>
+            <span class="kt">uint8_t</span> <span class="n">d2</span> <span class="o">=</span> <span class="p">(</span><span class="n">recv</span><span class="p">[</span><span class="mi">4</span> <span class="o">+</span> <span class="n">base_index</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="mi">4</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">recv</span><span class="p">[</span><span class="mi">5</span> <span class="o">+</span> <span class="n">base_index</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="mi">4</span><span class="p">);</span>
+
+            <span class="n">temps</span><span class="p">[</span><span class="n">count</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">d0</span> <span class="o">&gt;&gt;</span> <span class="mi">2</span><span class="p">;</span>
+            <span class="n">temps</span><span class="p">[</span><span class="n">count</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">d0</span> <span class="o">&amp;</span> <span class="mi">0</span><span class="n">b00000011</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="mi">4</span> <span class="o">|</span> <span class="n">d1</span> <span class="o">&gt;&gt;</span> <span class="mi">4</span><span class="p">;</span>
+            <span class="n">temps</span><span class="p">[</span><span class="n">count</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">d1</span> <span class="o">&amp;</span> <span class="mi">0</span><span class="n">b00001111</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span> <span class="o">|</span> <span class="n">d2</span> <span class="o">&gt;&gt;</span> <span class="mi">6</span><span class="p">;</span>
+            <span class="n">temps</span><span class="p">[</span><span class="n">count</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">d2</span> <span class="o">&amp;</span> <span class="mi">0</span><span class="n">b00111111</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">ltc6813_check_voltage</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">volts</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">index</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">volts</span> <span class="o">&lt;</span> <span class="n">CELL_MIN_VOLTAGE</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">error_set</span><span class="p">(</span><span class="n">ERROR_CELL_UNDER_VOLTAGE</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">HAL_GetTick</span><span class="p">());</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">error_unset</span><span class="p">(</span><span class="n">ERROR_CELL_UNDER_VOLTAGE</span><span class="p">,</span> <span class="n">index</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">volts</span> <span class="o">&gt;</span> <span class="n">CELL_MAX_VOLTAGE</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">error_set</span><span class="p">(</span><span class="n">ERROR_CELL_OVER_VOLTAGE</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">HAL_GetTick</span><span class="p">());</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">error_unset</span><span class="p">(</span><span class="n">ERROR_CELL_OVER_VOLTAGE</span><span class="p">,</span> <span class="n">index</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">ltc6813_check_temperature</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">temps</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">index</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">temps</span> <span class="o">&gt;=</span> <span class="n">CELL_MAX_TEMPERATURE</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">error_set</span><span class="p">(</span><span class="n">ERROR_CELL_OVER_TEMPERATURE</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">HAL_GetTick</span><span class="p">());</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">error_unset</span><span class="p">(</span><span class="n">ERROR_CELL_OVER_TEMPERATURE</span><span class="p">,</span> <span class="n">index</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">ltc6813_set_dcc</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">indexes</span><span class="p">[],</span> <span class="kt">uint8_t</span> <span class="n">cfgar</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="kt">uint8_t</span> <span class="n">cfgbr</span><span class="p">[</span><span class="mi">8</span><span class="p">])</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">uint8_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">PACK_CELL_COUNT</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">indexes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">8</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">cfgar</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">+=</span> <span class="n">dcc</span><span class="p">[</span><span class="n">indexes</span><span class="p">[</span><span class="n">i</span><span class="p">]];</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">indexes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">8</span> <span class="o">&amp;&amp;</span> <span class="n">indexes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">12</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">cfgar</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">+=</span> <span class="n">dcc</span><span class="p">[</span><span class="n">indexes</span><span class="p">[</span><span class="n">i</span><span class="p">]];</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">indexes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">12</span> <span class="o">&amp;&amp;</span> <span class="n">indexes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">16</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">cfgbr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+=</span> <span class="n">dcc</span><span class="p">[</span><span class="n">indexes</span><span class="p">[</span><span class="n">i</span><span class="p">]];</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">indexes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">16</span> <span class="o">&amp;&amp;</span> <span class="n">indexes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">cfgbr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="n">dcc</span><span class="p">[</span><span class="n">indexes</span><span class="p">[</span><span class="n">i</span><span class="p">]];</span>
+        <span class="p">}</span>
+
+        <span class="kt">uint16_t</span> <span class="n">pec</span> <span class="o">=</span> <span class="n">ltc6813_pec15</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="n">cfgar</span><span class="p">);</span>
+        <span class="n">cfgar</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">uint8_t</span><span class="p">)(</span><span class="n">pec</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">);</span>
+        <span class="n">cfgar</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">uint8_t</span><span class="p">)(</span><span class="n">pec</span><span class="p">);</span>
+
+        <span class="n">pec</span> <span class="o">=</span> <span class="n">ltc6813_pec15</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="n">cfgbr</span><span class="p">);</span>
+        <span class="n">cfgbr</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">uint8_t</span><span class="p">)(</span><span class="n">pec</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">);</span>
+        <span class="n">cfgbr</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">uint8_t</span><span class="p">)(</span><span class="n">pec</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">ltc6813_set_balancing</span><span class="p">(</span><span class="n">SPI_HandleTypeDef</span> <span class="o">*</span><span class="n">hspi</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="o">*</span><span class="n">indexes</span><span class="p">,</span>
+                           <span class="kt">int</span> <span class="n">dcto</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">uint8_t</span> <span class="n">cfgar</span><span class="p">[</span><span class="n">LTC6813_COUNT</span><span class="p">][</span><span class="mi">8</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+    <span class="kt">uint8_t</span> <span class="n">cfgbr</span><span class="p">[</span><span class="n">LTC6813_COUNT</span><span class="p">][</span><span class="mi">8</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">uint8_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">LTC6813_COUNT</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// cfgbr[i][1] += 0b00001000; // set DTMEN</span>
+        <span class="n">cfgar</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">0</span><span class="n">b00000010</span><span class="p">;</span>  <span class="c1">// set DTEN</span>
+        <span class="n">cfgar</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span> <span class="o">+=</span> <span class="n">dcto</span> <span class="o">&lt;&lt;</span> <span class="mi">4</span><span class="p">;</span>   <span class="c1">// Set timer</span>
+
+        <span class="c1">// For each LTC we set the correct cfgr</span>
+        <span class="n">ltc6813_set_dcc</span><span class="p">(</span><span class="n">indexes</span><span class="p">,</span> <span class="n">cfgar</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">cfgbr</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+    <span class="p">}</span>
+    <span class="n">ltc6813_wakeup_idle</span><span class="p">(</span><span class="n">hspi</span><span class="p">);</span>
+
+    <span class="n">ltc6813_wrcfg</span><span class="p">(</span><span class="n">hspi</span><span class="p">,</span> <span class="nb">true</span><span class="p">,</span> <span class="n">cfgar</span><span class="p">);</span>
+    <span class="n">ltc6813_wrcfg</span><span class="p">(</span><span class="n">hspi</span><span class="p">,</span> <span class="nb">false</span><span class="p">,</span> <span class="n">cfgbr</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">uint16_t</span> <span class="nf">ltc6813_convert_voltage</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">v_data</span><span class="p">[])</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">v_data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">v_data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, E-Agle TRT.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

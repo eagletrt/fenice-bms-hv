@@ -1,0 +1,13 @@
+.. _exhale_function_fsm__bms_8c_1a76b65fd166830d7a3110b498a51c88db:
+
+Function do_charge
+==================
+
+- Defined in :ref:`file_mainboard_Src_fsm_bms.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: do_charge(fsm *)

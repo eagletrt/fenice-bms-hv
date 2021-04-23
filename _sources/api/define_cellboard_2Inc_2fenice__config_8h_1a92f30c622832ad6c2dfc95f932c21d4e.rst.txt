@@ -1,0 +1,13 @@
+.. _exhale_define_cellboard_2Inc_2fenice__config_8h_1a92f30c622832ad6c2dfc95f932c21d4e:
+
+Define LTC6813_EMU
+==================
+
+- Defined in :ref:`file_cellboard_Inc_fenice_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: LTC6813_EMU

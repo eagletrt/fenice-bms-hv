@@ -1,0 +1,310 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Program Listing for File main.h &mdash; Fenice BMS HV 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Fenice BMS HV
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Software</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Fenice BMS HV</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Program Listing for File main.h</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/api/program_listing_file_mainboard_Inc_main.h.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="program-listing-for-file-main-h">
+<span id="program-listing-file-mainboard-inc-main-h"></span><h1>Program Listing for File main.h<a class="headerlink" href="#program-listing-for-file-main-h" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_mainboard_Inc_main.h.html#file-mainboard-inc-main-h"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">mainboard/Inc/main.h</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/* USER CODE BEGIN Header */</span>
+<span class="cm">/* USER CODE END Header */</span>
+
+<span class="cm">/* Define to prevent recursive inclusion -------------------------------------*/</span>
+<span class="cp">#ifndef __MAIN_H</span>
+<span class="cp">#define __MAIN_H</span>
+
+<span class="cp">#ifdef __cplusplus</span>
+<span class="k">extern</span> <span class="s">&quot;C&quot;</span> <span class="p">{</span>
+<span class="cp">#endif</span>
+
+<span class="cm">/* Includes ------------------------------------------------------------------*/</span>
+<span class="cp">#include</span> <span class="cpf">&quot;stm32g4xx_hal.h&quot;</span><span class="cp"></span>
+
+<span class="cm">/* Private includes ----------------------------------------------------------*/</span>
+<span class="cm">/* USER CODE BEGIN Includes */</span>
+<span class="cp">#include</span> <span class="cpf">&quot;error/error.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;pack.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;stm32g4xx_ll_usart.h&quot;</span><span class="cp"></span>
+<span class="cm">/* USER CODE END Includes */</span>
+
+<span class="cm">/* Exported types ------------------------------------------------------------*/</span>
+<span class="cm">/* USER CODE BEGIN ET */</span>
+
+<span class="cm">/* USER CODE END ET */</span>
+
+<span class="cm">/* Exported constants --------------------------------------------------------*/</span>
+<span class="cm">/* USER CODE BEGIN EC */</span>
+
+<span class="cm">/* USER CODE END EC */</span>
+
+<span class="cm">/* Exported macro ------------------------------------------------------------*/</span>
+<span class="cm">/* USER CODE BEGIN EM */</span>
+
+<span class="cm">/* USER CODE END EM */</span>
+
+<span class="cm">/* Exported functions prototypes ---------------------------------------------*/</span>
+<span class="kt">void</span> <span class="n">Error_Handler</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+<span class="cm">/* USER CODE BEGIN EFP */</span>
+<span class="kt">void</span> <span class="nf">check_timers</span><span class="p">();</span>
+<span class="kt">void</span> <span class="nf">read_volts</span><span class="p">();</span>
+<span class="kt">void</span> <span class="nf">read_temps</span><span class="p">();</span>
+<span class="cm">/* USER CODE END EFP */</span>
+
+<span class="cm">/* Private defines -----------------------------------------------------------*/</span>
+<span class="cp">#define ANALOG_DATA_Pin GPIO_PIN_13</span>
+<span class="cp">#define ANALOG_DATA_GPIO_Port GPIOC</span>
+<span class="cp">#define IP_LOW_Pin GPIO_PIN_14</span>
+<span class="cp">#define IP_LOW_GPIO_Port GPIOC</span>
+<span class="cp">#define IP_HIGH_Pin GPIO_PIN_15</span>
+<span class="cp">#define IP_HIGH_GPIO_Port GPIOC</span>
+<span class="cp">#define CS_EEPROM_Pin GPIO_PIN_0</span>
+<span class="cp">#define CS_EEPROM_GPIO_Port GPIOF</span>
+<span class="cp">#define CARD_INSERT_Pin GPIO_PIN_1</span>
+<span class="cp">#define CARD_INSERT_GPIO_Port GPIOF</span>
+<span class="cp">#define MUX_A2_Pin GPIO_PIN_0</span>
+<span class="cp">#define MUX_A2_GPIO_Port GPIOA</span>
+<span class="cp">#define MUX_A3_Pin GPIO_PIN_1</span>
+<span class="cp">#define MUX_A3_GPIO_Port GPIOA</span>
+<span class="cp">#define CS_LTC_Pin GPIO_PIN_4</span>
+<span class="cp">#define CS_LTC_GPIO_Port GPIOA</span>
+<span class="cp">#define ADC_SIN_Pin GPIO_PIN_0</span>
+<span class="cp">#define ADC_SIN_GPIO_Port GPIOB</span>
+<span class="cp">#define MUX_A1_Pin GPIO_PIN_1</span>
+<span class="cp">#define MUX_A1_GPIO_Port GPIOB</span>
+<span class="cp">#define MUX_A0_Pin GPIO_PIN_2</span>
+<span class="cp">#define MUX_A0_GPIO_Port GPIOB</span>
+<span class="cp">#define CS_SD_Pin GPIO_PIN_12</span>
+<span class="cp">#define CS_SD_GPIO_Port GPIOB</span>
+<span class="cp">#define BMS_FAULT_Pin GPIO_PIN_9</span>
+<span class="cp">#define BMS_FAULT_GPIO_Port GPIOA</span>
+<span class="cp">#define TS_ON_Pin GPIO_PIN_10</span>
+<span class="cp">#define TS_ON_GPIO_Port GPIOA</span>
+<span class="cp">#define PC_ENDED_Pin GPIO_PIN_11</span>
+<span class="cp">#define PC_ENDED_GPIO_Port GPIOA</span>
+<span class="cp">#define PWM_IMD_Pin GPIO_PIN_12</span>
+<span class="cp">#define PWM_IMD_GPIO_Port GPIOA</span>
+<span class="cp">#define HOLD_Pin GPIO_PIN_15</span>
+<span class="cp">#define HOLD_GPIO_Port GPIOA</span>
+<span class="cp">#define CHARGE_Pin GPIO_PIN_5</span>
+<span class="cp">#define CHARGE_GPIO_Port GPIOB</span>
+<span class="cp">#define LED_2_Pin GPIO_PIN_6</span>
+<span class="cp">#define LED_2_GPIO_Port GPIOB</span>
+<span class="cp">#define LED_1_Pin GPIO_PIN_7</span>
+<span class="cp">#define LED_1_GPIO_Port GPIOB</span>
+<span class="cm">/* USER CODE BEGIN Private defines */</span>
+
+<span class="cm">/* USER CODE END Private defines */</span>
+
+<span class="cp">#ifdef __cplusplus</span>
+<span class="p">}</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#endif </span><span class="cm">/* __MAIN_H */</span><span class="cp"></span>
+
+<span class="cm">/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, E-Agle TRT.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

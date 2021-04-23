@@ -1,0 +1,13 @@
+.. _exhale_define_cellboard_2Inc_2fenice__config_8h_1a269b2ac5a85295f75c79d8897ac7d556:
+
+Define TEMP_BUS_COUNT
+=====================
+
+- Defined in :ref:`file_cellboard_Inc_fenice_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: TEMP_BUS_COUNT

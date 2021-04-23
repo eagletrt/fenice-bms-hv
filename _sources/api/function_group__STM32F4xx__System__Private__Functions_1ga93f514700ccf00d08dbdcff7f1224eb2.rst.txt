@@ -1,0 +1,13 @@
+.. _exhale_function_group__STM32F4xx__System__Private__Functions_1ga93f514700ccf00d08dbdcff7f1224eb2:
+
+Function SystemInit(void)
+=========================
+
+- Defined in :ref:`file_cellboard_Src_system_stm32f4xx.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: SystemInit(void)

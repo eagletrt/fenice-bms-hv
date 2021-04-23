@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2main_8h_1a22a10f34fc09698876b2ece832209d7d:
+
+Define CS_LTC_GPIO_Port
+=======================
+
+- Defined in :ref:`file_mainboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CS_LTC_GPIO_Port

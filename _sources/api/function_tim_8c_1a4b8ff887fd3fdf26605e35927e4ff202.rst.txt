@@ -1,0 +1,13 @@
+.. _exhale_function_tim_8c_1a4b8ff887fd3fdf26605e35927e4ff202:
+
+Function MX_TIM2_Init(void)
+===========================
+
+- Defined in :ref:`file_mainboard_Src_tim.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: MX_TIM2_Init(void)

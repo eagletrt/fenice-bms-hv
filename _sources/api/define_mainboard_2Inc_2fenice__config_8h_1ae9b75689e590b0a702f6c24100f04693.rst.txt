@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2fenice__config_8h_1ae9b75689e590b0a702f6c24100f04693:
+
+Define PACK_CELL_COUNT
+======================
+
+- Defined in :ref:`file_mainboard_Inc_fenice_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: PACK_CELL_COUNT

@@ -1,0 +1,13 @@
+.. _exhale_function_cellboard_2Src_2main_8c_1a9769ee8710b70b63cf39cab88d62f838:
+
+Function fourtemps_threebytes
+=============================
+
+- Defined in :ref:`file_cellboard_Src_main.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: fourtemps_threebytes(uint8_t, uint8_t)

@@ -1,0 +1,13 @@
+.. _exhale_define_stm32f4xx__hal__conf_8h_1a9d356ada86535630c403690bef0fb887:
+
+Define PHY_READ_TO
+==================
+
+- Defined in :ref:`file_cellboard_Inc_stm32f4xx_hal_conf.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: PHY_READ_TO

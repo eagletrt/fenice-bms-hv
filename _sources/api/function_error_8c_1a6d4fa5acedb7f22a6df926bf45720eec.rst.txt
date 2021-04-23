@@ -1,0 +1,13 @@
+.. _exhale_function_error_8c_1a6d4fa5acedb7f22a6df926bf45720eec:
+
+Function error_compare
+======================
+
+- Defined in :ref:`file_mainboard_Src_error_error.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: error_compare(llist_node, llist_node)

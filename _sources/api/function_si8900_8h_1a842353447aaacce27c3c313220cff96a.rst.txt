@@ -1,0 +1,13 @@
+.. _exhale_function_si8900_8h_1a842353447aaacce27c3c313220cff96a:
+
+Function si8900_convert_voltage(uint8_t)
+========================================
+
+- Defined in :ref:`file_mainboard_Inc_peripherals_si8900.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: si8900_convert_voltage(uint8_t)

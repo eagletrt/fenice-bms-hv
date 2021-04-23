@@ -1,0 +1,13 @@
+.. _exhale_function_cellboard_2Src_2main_8c_1ae23a5b1ce68867c35093ff2b5931e9a0:
+
+Function HAL_I2C_SlaveRxCpltCallback
+====================================
+
+- Defined in :ref:`file_cellboard_Src_main.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: HAL_I2C_SlaveRxCpltCallback(I2C_HandleTypeDef *)

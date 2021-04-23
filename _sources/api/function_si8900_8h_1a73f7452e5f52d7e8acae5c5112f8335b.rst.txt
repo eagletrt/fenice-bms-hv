@@ -1,0 +1,13 @@
+.. _exhale_function_si8900_8h_1a73f7452e5f52d7e8acae5c5112f8335b:
+
+Function si8900_init(UART_HandleTypeDef \*, GPIO_TypeDef \*, uint16_t)
+======================================================================
+
+- Defined in :ref:`file_mainboard_Inc_peripherals_si8900.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: si8900_init(UART_HandleTypeDef *, GPIO_TypeDef *, uint16_t)

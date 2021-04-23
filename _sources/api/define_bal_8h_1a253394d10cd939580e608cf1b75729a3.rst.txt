@@ -1,0 +1,13 @@
+.. _exhale_define_bal_8h_1a253394d10cd939580e608cf1b75729a3:
+
+Define BAL_NULL_INDEX
+=====================
+
+- Defined in :ref:`file_mainboard_Inc_bal.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: BAL_NULL_INDEX

@@ -1,0 +1,138 @@
+
+.. _file_mainboard_Src_cli_bms.c:
+
+File cli_bms.c
+==============
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Src>` (``mainboard/Src``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+cli instance for bms 
+
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Src/cli_bms.c``)
+----------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Src_cli_bms.c.rst
+
+
+
+Detailed Description
+--------------------
+
+Mar 29,2020
+
+Matteo Bonora [matteo.bonora@studenti.unitn.it] 
+
+Simone Ruffini [simone.ruffini@studenti.unitn.it] 
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``bal.h`` (:ref:`file_mainboard_Inc_bal.h`)
+
+- ``cli_bms.h`` (:ref:`file_mainboard_Inc_cli_bms.h`)
+
+- ``error/error.h`` (:ref:`file_mainboard_Inc_error_error.h`)
+
+- ``fsm_bms.h`` (:ref:`file_mainboard_Inc_fsm_bms.h`)
+
+- ``stdio.h``
+
+- ``stdlib.h``
+
+- ``string.h``
+
+- ``usart.h`` (:ref:`file_mainboard_Inc_usart.h`)
+
+
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_cli__bms_8c_1ade814779a92b390ef1873c571fe20473`
+
+- :ref:`exhale_function_cli__bms_8c_1aad34c4a4aa15033a1912e6d41d00081b`
+
+- :ref:`exhale_function_cli__bms_8c_1ad04d99b2a03909941b3b382f228567ca`
+
+- :ref:`exhale_function_cli__bms_8c_1a7ba9ba49b642bd02c233395a98117ee5`
+
+- :ref:`exhale_function_cli__bms_8c_1ad060f51fbc50205bbaee206fcc8dbad2`
+
+- :ref:`exhale_function_cli__bms_8c_1a46815f4fde575ed887a9d99ca0b927a5`
+
+- :ref:`exhale_function_cli__bms_8c_1aa381264cefd6a2a056151ae7cde00492`
+
+- :ref:`exhale_function_cli__bms_8c_1a40ccc4ec8554c5a2ee2ad9fb73d97397`
+
+- :ref:`exhale_function_cli__bms_8c_1a50ceab3a580d0de30257e368be4ca618`
+
+- :ref:`exhale_function_cli__bms_8c_1aef592962b002638da2102cf18e9587e7`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_cli__bms_8c_1a334bd4ca132e782e27b285e15365cb0a`
+
+- :ref:`exhale_define_cli__bms_8c_1aad1cc3126c4d8414ef36c3f5c2bb6d42`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_cli__bms_8c_1acc100851880dc789b4632223edc5a941`
+
+- :ref:`exhale_variable_cli__bms_8c_1a97089cbba6264fbfc9a1579ac9351a0d`
+
+- :ref:`exhale_variable_cli__bms_8c_1ae9e5758c24518e7a2b34810bd2f7e0e7`
+
+- :ref:`exhale_variable_cli__bms_8c_1a652260a7b604db4237651c4d177b9594`
+
+- :ref:`exhale_variable_cli__bms_8c_1a0fa24683c5b8a47f20defc967072a493`
+
+- :ref:`exhale_variable_cli__bms_8c_1a4d6657de753b0137c4e808ee4b701095`
+
+- :ref:`exhale_variable_cli__bms_8c_1aa27ecd413c6617a7a7060438f1ed98a1`
+
+- :ref:`exhale_variable_cli__bms_8c_1a48f73940cf9a70cab31e3d83f94e6736`
+
+- :ref:`exhale_variable_cli__bms_8c_1af9ca4b92032fdedb065045d56ae0b78b`
+
+- :ref:`exhale_variable_cli__bms_8c_1ae97f49f74719578ca4823d58d8e74c19`
+
+- :ref:`exhale_variable_cli__bms_8c_1a946dc4526269fcac47dbf193d7b9c072`
+
+- :ref:`exhale_variable_cli__bms_8c_1a2dd3fcce88950e27326ce8bafee1a363`
+
+- :ref:`exhale_variable_cli__bms_8c_1ac2a46744405dcf0fbb95105514066043`
+
+- :ref:`exhale_variable_cli__bms_8c_1a70d6a509a5b8d0c0e34a5390c0a24607`
+
+- :ref:`exhale_variable_cli__bms_8c_1a51ca6460673bd23b69c7f4408bda56b8`
+

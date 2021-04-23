@@ -1,0 +1,13 @@
+.. _exhale_variable_group__STM32F4xx__System__Private__Variables_1ga6e1d9cd666f0eacbfde31e9932a93466:
+
+Variable AHBPrescTable
+======================
+
+- Defined in :ref:`file_cellboard_Src_system_stm32f4xx.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: AHBPrescTable

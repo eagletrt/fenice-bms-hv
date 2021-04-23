@@ -1,0 +1,13 @@
+.. _exhale_function_ltc6813_8c_1af2a9a52cd5267f063f1d3c91721e4030:
+
+Function ltc6813_disable_cs(SPI_HandleTypeDef \*, GPIO_TypeDef \*, uint16_t)
+============================================================================
+
+- Defined in :ref:`file_mainboard_Src_peripherals_ltc6813.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ltc6813_disable_cs(SPI_HandleTypeDef *, GPIO_TypeDef *, uint16_t)

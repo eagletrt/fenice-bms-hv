@@ -1,0 +1,13 @@
+.. _exhale_define_cellboard_2Inc_2main_8h_1a9e21d9bed16b0275ff16a864ffb2ab6e:
+
+Define TCK_Pin
+==============
+
+- Defined in :ref:`file_cellboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: TCK_Pin

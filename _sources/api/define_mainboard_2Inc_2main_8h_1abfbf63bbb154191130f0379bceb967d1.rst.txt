@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2main_8h_1abfbf63bbb154191130f0379bceb967d1:
+
+Define IP_LOW_Pin
+=================
+
+- Defined in :ref:`file_mainboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: IP_LOW_Pin

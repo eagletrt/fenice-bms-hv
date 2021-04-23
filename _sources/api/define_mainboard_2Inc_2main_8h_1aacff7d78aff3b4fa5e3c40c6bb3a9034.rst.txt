@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2main_8h_1aacff7d78aff3b4fa5e3c40c6bb3a9034:
+
+Define HOLD_GPIO_Port
+=====================
+
+- Defined in :ref:`file_mainboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: HOLD_GPIO_Port

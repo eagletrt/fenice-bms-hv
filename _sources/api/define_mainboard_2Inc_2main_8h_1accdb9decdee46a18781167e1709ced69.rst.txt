@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2main_8h_1accdb9decdee46a18781167e1709ced69:
+
+Define ADC_SIN_GPIO_Port
+========================
+
+- Defined in :ref:`file_mainboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: ADC_SIN_GPIO_Port

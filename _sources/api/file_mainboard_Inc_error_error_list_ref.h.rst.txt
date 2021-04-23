@@ -1,0 +1,92 @@
+
+.. _file_mainboard_Inc_error_error_list_ref.h:
+
+File error_list_ref.h
+=====================
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Inc_error>` (``mainboard/Inc/error``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+This file contains variables that reference node_t in error_list: error list reference/s. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Inc/error/error_list_ref.h``)
+-----------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Inc_error_error_list_ref.h.rst
+
+
+
+Detailed Description
+--------------------
+
+This file contains variables that reference node_t in error_list: error list reference/s @deatails This file is a "database" of all variables concerning errors. **ERRORS ARE NOT CONTAINED IN THESE VARIABLES** These variables reference positions in the error_list DatStruct. Their main purpose is to give access in O(1) complexity to errors they are representing. The way these error_list_ref_X variables are called is by the use of the error_list_reference array, indexed by the error type (error_type_t) and an offset (for error types that can have multiple instances).
+
+This file is a "database" of all variables concerning errors. **ERRORS ARE NOT CONTAINED IN THESE VARIABLES** These variables reference positions in the error_list DatStruct. Their main purpose is to give access in O(1) complexity to errors they are representing. The way these error_list_ref_X variables are called is by the use of the error_list_reference array, indexed by the error type (error_type_t) and an offset (for error types that can have multiple instances).
+
+March 12, 2019
+
+Matteo Bonora [matteo.bonora@studenti.unitn.it] 
+
+Simone Ruffini [simone.ruffini@studenti.unitn.it]
+
+March 12, 2019
+
+Matteo Bonora [matteo.bonora@studenti.unitn.it] 
+
+Simone Ruffini [simone.ruffini@studenti.unitn.it] 
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``error/error.h`` (:ref:`file_mainboard_Inc_error_error.h`)
+
+- ``fenice_config.h`` (:ref:`file_mainboard_Inc_fenice_config.h`)
+
+- ``llist.h``
+
+- ``stdio.h``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_mainboard_Src_error_error.c`
+
+- :ref:`file_mainboard_Src_error_error_list_ref.c`
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_error__list__ref_8h_1a15d1d25a509bfc4df69959c281373295`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_error__list__ref_8h_1ae8bdbe4c365032b5f0bfed0d120a0497`
+

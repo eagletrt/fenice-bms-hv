@@ -1,0 +1,13 @@
+.. _exhale_enum_error_8h_1a29af8b317c2926569605c08d7ef294a5:
+
+Enum error_id
+=============
+
+- Defined in :ref:`file_mainboard_Inc_error_error.h`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: error_id

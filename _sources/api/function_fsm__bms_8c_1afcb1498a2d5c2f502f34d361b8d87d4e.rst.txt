@@ -1,0 +1,13 @@
+.. _exhale_function_fsm__bms_8c_1afcb1498a2d5c2f502f34d361b8d87d4e:
+
+Function do_run
+===============
+
+- Defined in :ref:`file_mainboard_Src_fsm_bms.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: do_run(fsm *)

@@ -1,0 +1,13 @@
+.. _exhale_function_feedback_8h_1a47cc14bb422c2c618f51a27bf708d7f1:
+
+Function feedback_check_precharge
+=================================
+
+- Defined in :ref:`file_mainboard_Inc_feedback.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: feedback_check_precharge()

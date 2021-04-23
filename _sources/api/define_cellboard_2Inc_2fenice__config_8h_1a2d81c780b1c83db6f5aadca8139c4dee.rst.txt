@@ -1,0 +1,13 @@
+.. _exhale_define_cellboard_2Inc_2fenice__config_8h_1a2d81c780b1c83db6f5aadca8139c4dee:
+
+Define TEMP_SAMPLE_COUNT
+========================
+
+- Defined in :ref:`file_cellboard_Inc_fenice_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: TEMP_SAMPLE_COUNT

@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2fenice__config_8h_1a609c654690c5e70aa9713a972641874e:
+
+Define CELL_MAX_TEMPERATURE
+===========================
+
+- Defined in :ref:`file_mainboard_Inc_fenice_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CELL_MAX_TEMPERATURE

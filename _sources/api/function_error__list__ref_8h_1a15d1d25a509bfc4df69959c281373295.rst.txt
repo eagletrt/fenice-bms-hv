@@ -1,0 +1,13 @@
+.. _exhale_function_error__list__ref_8h_1a15d1d25a509bfc4df69959c281373295:
+
+Function error_list_ref_array_element(uint16_t, uint16_t)
+=========================================================
+
+- Defined in :ref:`file_mainboard_Inc_error_error_list_ref.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: error_list_ref_array_element(uint16_t, uint16_t)

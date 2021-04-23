@@ -1,0 +1,13 @@
+.. _exhale_function_stm32g4xx__it_8h_1a59ccd2a37918f52fc0b80607d37652c2:
+
+Function FDCAN1_IT0_IRQHandler(void)
+====================================
+
+- Defined in :ref:`file_mainboard_Inc_stm32g4xx_it.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: FDCAN1_IT0_IRQHandler(void)

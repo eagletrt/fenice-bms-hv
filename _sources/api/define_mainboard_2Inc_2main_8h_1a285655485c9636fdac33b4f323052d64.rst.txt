@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2main_8h_1a285655485c9636fdac33b4f323052d64:
+
+Define BMS_FAULT_Pin
+====================
+
+- Defined in :ref:`file_mainboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: BMS_FAULT_Pin

@@ -1,0 +1,13 @@
+.. _exhale_function_cellboard_2Src_2main_8c_1a4d5338cd64a656dfdc4154773bc4f05d:
+
+Function HAL_I2C_ErrorCallback
+==============================
+
+- Defined in :ref:`file_cellboard_Src_main.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: HAL_I2C_ErrorCallback(I2C_HandleTypeDef *)

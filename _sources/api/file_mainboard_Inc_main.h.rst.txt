@@ -1,0 +1,167 @@
+
+.. _file_mainboard_Inc_main.h:
+
+File main.h
+===========
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Inc>` (``mainboard/Inc``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Inc/main.h``)
+-------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Inc_main.h.rst
+
+
+
+Detailed Description
+--------------------
+
+Oct 9, 2019
+
+Matteo Bonora [matteo.bonora@studenti.unitn.it] 
+
+Simone Ruffini [simone.ruffini@studenti.unitn.it] 
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``error/error.h`` (:ref:`file_mainboard_Inc_error_error.h`)
+
+- ``pack.h`` (:ref:`file_mainboard_Inc_pack.h`)
+
+- ``stm32g4xx_hal.h``
+
+- ``stm32g4xx_ll_usart.h``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_mainboard_Inc_fdcan.h`
+
+- :ref:`file_mainboard_Inc_gpio.h`
+
+- :ref:`file_mainboard_Inc_spi.h`
+
+- :ref:`file_mainboard_Inc_tim.h`
+
+- :ref:`file_mainboard_Inc_usart.h`
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_mainboard_2Inc_2main_8h_1a3ed7f44fca3a6f9df9f4cec4b62876ca`
+
+- :ref:`exhale_function_mainboard_2Inc_2main_8h_1a1730ffe1e560465665eb47d9264826f9`
+
+- :ref:`exhale_function_mainboard_2Inc_2main_8h_1aa37e75086b51ff3285a728e2503da04a`
+
+- :ref:`exhale_function_mainboard_2Inc_2main_8h_1a6a685456398dbe1476716961676530ad`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1accdb9decdee46a18781167e1709ced69`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1a87141a384eb63c4285df10738dd3a80a`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1a3473a118e9ce5aed47ddf47e157003e6`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1ae9ca6a50747f52211889a8d9d96fe0b6`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1af253fc2c0b960fab7613c2079d4f601f`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1a285655485c9636fdac33b4f323052d64`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1a4ae52a5eb5e26c7229a6c490a8f48344`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1a590c671ed75af4fd9fd0ee3954da954c`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1a16eba76b58feb0b0b3ac5adcd3bf3ca5`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1ac7e8838bf05988b9dfbea1295b0e9ab1`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1ac3ee411c53b204e98bc8564c9fa32052`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1a76d05aba0077117fa8a80de50df24246`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1a22a10f34fc09698876b2ece832209d7d`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1ad518f3d0596238f1e9813a412c283a27`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1a604d99dd47155d5381e1769a57edc340`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1abe4b9412e3e0d754e23e652bfe9d098d`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1aacff7d78aff3b4fa5e3c40c6bb3a9034`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1a2b73acee9fa4bda9aa0cecbfc1616597`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1a51aa75562b6afccdf2ec4c693fad8c2f`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1a2f3325686c5be80b98b6b33558a5a2c6`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1a3d60f850458ac7c44437d4e232d9815e`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1abfbf63bbb154191130f0379bceb967d1`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1a81c03b4b960de6c291739156b52be7f5`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1abf9c15ce1f17dded9340882dbf82d7b1`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1a8210a06ad8599ec66538b4e8c22bfdae`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1a17f93fd494f5c87a5a6518109976d543`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1a684cc367c1fa4fa31ad4bd1e18b2a7c5`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1afed727020c7d20654a3f01189fffd27c`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1a7dc00c02efcdc23dc5eb8e0be9a49e3c`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1a3de7916f8cb74ad5892cf776dfaf6f25`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1a29c7ded282ae5068bbfb72aa72518c31`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1a7f301924602912ea599f2026cdfd264a`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1ad6e7f26e5693818cf2ee0324d6c3daef`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1ac5c5ed3bc1a902fb387cb6f66cdec657`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1a68371129457df9c10a31c132e6442fcc`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1a23c93488d7448458b0028d910f6bfc05`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1a7c2faf2329be979af95a4f91b70ab609`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1ae06f05687726cedb29ca46eec7ee6972`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1a4a3c49306e5c017f831615741baaca45`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1a3815740f0030ede13a073428cca3d75e`
+

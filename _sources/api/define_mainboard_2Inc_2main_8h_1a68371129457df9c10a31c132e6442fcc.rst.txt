@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2main_8h_1a68371129457df9c10a31c132e6442fcc:
+
+Define PC_ENDED_GPIO_Port
+=========================
+
+- Defined in :ref:`file_mainboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: PC_ENDED_GPIO_Port

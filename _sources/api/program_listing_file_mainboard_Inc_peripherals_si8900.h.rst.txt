@@ -1,0 +1,38 @@
+
+.. _program_listing_file_mainboard_Inc_peripherals_si8900.h:
+
+Program Listing for File si8900.h
+=================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_mainboard_Inc_peripherals_si8900.h>` (``mainboard/Inc/peripherals/si8900.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   #ifndef SI8902_H
+   #define SI8902_H
+   
+   #include <inttypes.h>
+   #include <stdbool.h>
+   #include <stm32g4xx_hal.h>
+   
+   #include "main.h"
+   
+   static const uint8_t si8900_cnfg_0 = 0b11000011;
+   
+   typedef enum {
+       SI8900_AIN0 = 0,
+       SI8900_AIN1 = 1,
+       SI8900_AIN2 = 2
+   } SI8900_CHANNEL;
+   
+   bool si8900_init(UART_HandleTypeDef *huart, GPIO_TypeDef *reset_gpio, uint16_t reset_pin);
+   
+   bool si8900_read_channel(UART_HandleTypeDef *huart, SI8900_CHANNEL ch,
+                            uint16_t *voltage);
+   
+   uint16_t si8900_convert_voltage(uint8_t adc_hl[2]);
+   
+   #endif

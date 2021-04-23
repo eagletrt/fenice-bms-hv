@@ -1,0 +1,344 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Program Listing for File error.c &mdash; Fenice BMS HV 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Fenice BMS HV
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Software</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Fenice BMS HV</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Program Listing for File error.c</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/api/program_listing_file_mainboard_Src_error_error.c.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="program-listing-for-file-error-c">
+<span id="program-listing-file-mainboard-src-error-error-c"></span><h1>Program Listing for File error.c<a class="headerlink" href="#program-listing-for-file-error-c" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_mainboard_Src_error_error.c.html#file-mainboard-src-error-error-c"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">mainboard/Src/error/error.c</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;error/error.h&quot;</span><span class="cp"></span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+
+<span class="cp">#include</span> <span class="cpf">&quot;error/error_list_ref.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;tim.h&quot;</span><span class="cp"></span>
+
+<span class="k">const</span> <span class="n">error_timeout</span> <span class="n">error_timeouts</span><span class="p">[</span><span class="n">ERROR_NUM_ERRORS</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">[</span><span class="n">ERROR_LTC_PEC_ERROR</span><span class="p">]</span> <span class="o">=</span> <span class="n">SOFT</span><span class="p">,</span>
+    <span class="p">[</span><span class="n">ERROR_CELL_UNDER_VOLTAGE</span><span class="p">]</span> <span class="o">=</span> <span class="n">SHORT</span><span class="p">,</span>
+    <span class="p">[</span><span class="n">ERROR_CELL_OVER_VOLTAGE</span><span class="p">]</span> <span class="o">=</span> <span class="n">SHORT</span><span class="p">,</span>
+    <span class="p">[</span><span class="n">ERROR_CELL_OVER_TEMPERATURE</span><span class="p">]</span> <span class="o">=</span> <span class="n">REGULAR</span><span class="p">,</span>
+    <span class="p">[</span><span class="n">ERROR_OVER_CURRENT</span><span class="p">]</span> <span class="o">=</span> <span class="n">SHORT</span><span class="p">,</span>
+    <span class="p">[</span><span class="n">ERROR_CAN</span><span class="p">]</span> <span class="o">=</span> <span class="n">REGULAR</span><span class="p">,</span>
+    <span class="p">[</span><span class="n">ERROR_ADC_INIT</span><span class="p">]</span> <span class="o">=</span> <span class="n">SOFT</span><span class="p">,</span>
+    <span class="p">[</span><span class="n">ERROR_ADC_TIMEOUT</span><span class="p">]</span> <span class="o">=</span> <span class="n">SOFT</span><span class="p">,</span>
+    <span class="p">[</span><span class="n">ERROR_INT_VOLTAGE_MISMATCH</span><span class="p">]</span> <span class="o">=</span> <span class="n">SOFT</span><span class="p">,</span>
+    <span class="p">[</span><span class="n">ERROR_FEEDBACK_HARD</span><span class="p">]</span> <span class="o">=</span> <span class="n">INSTANT</span><span class="p">,</span>
+    <span class="p">[</span><span class="n">ERROR_FEEDBACK_SOFT</span><span class="p">]</span> <span class="o">=</span> <span class="n">SOFT</span><span class="p">};</span>
+
+<span class="n">llist</span> <span class="n">er_list</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+
+<span class="kt">uint32_t</span> <span class="nf">get_timeout_delta</span><span class="p">(</span><span class="n">error_t</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">uint32_t</span> <span class="n">delta</span> <span class="o">=</span> <span class="n">error</span><span class="o">-&gt;</span><span class="n">timestamp</span> <span class="o">+</span> <span class="n">error_timeouts</span><span class="p">[</span><span class="n">error</span><span class="o">-&gt;</span><span class="n">id</span><span class="p">]</span> <span class="o">-</span> <span class="n">HAL_GetTick</span><span class="p">();</span>
+    <span class="k">return</span> <span class="n">delta</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">?</span> <span class="nl">delta</span> <span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">bool</span> <span class="nf">error_equals</span><span class="p">(</span><span class="n">llist_node</span> <span class="n">a</span><span class="p">,</span> <span class="n">llist_node</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">((</span><span class="n">error_t</span> <span class="o">*</span><span class="p">)</span><span class="n">a</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">id</span> <span class="o">==</span> <span class="p">((</span><span class="n">error_t</span> <span class="o">*</span><span class="p">)</span><span class="n">b</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">id</span> <span class="o">&amp;&amp;</span> <span class="p">((</span><span class="n">error_t</span> <span class="o">*</span><span class="p">)</span><span class="n">a</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">offset</span> <span class="o">==</span> <span class="p">((</span><span class="n">error_t</span> <span class="o">*</span><span class="p">)</span><span class="n">b</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">offset</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int8_t</span> <span class="nf">error_compare</span><span class="p">(</span><span class="n">llist_node</span> <span class="n">a</span><span class="p">,</span> <span class="n">llist_node</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">get_timeout_delta</span><span class="p">((</span><span class="n">error_t</span> <span class="o">*</span><span class="p">)</span><span class="n">a</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">get_timeout_delta</span><span class="p">((</span><span class="n">error_t</span> <span class="o">*</span><span class="p">)</span><span class="n">b</span><span class="p">))</span>
+        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">get_timeout_delta</span><span class="p">((</span><span class="n">error_t</span> <span class="o">*</span><span class="p">)</span><span class="n">a</span><span class="p">)</span> <span class="o">==</span> <span class="n">get_timeout_delta</span><span class="p">((</span><span class="n">error_t</span> <span class="o">*</span><span class="p">)</span><span class="n">b</span><span class="p">))</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">bool</span> <span class="nf">error_set_timer</span><span class="p">(</span><span class="n">error_t</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">HAL_TIM_Base_Stop_IT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim_Err</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">!=</span> <span class="nb">NULL</span> <span class="o">&amp;&amp;</span> <span class="n">error</span><span class="o">-&gt;</span><span class="n">state</span> <span class="o">==</span> <span class="n">ERROR_ACTIVE</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Set counter period register to the delta</span>
+        <span class="n">htim_Err</span><span class="p">.</span><span class="n">Instance</span><span class="o">-&gt;</span><span class="n">ARR</span> <span class="o">=</span> <span class="n">get_timeout_delta</span><span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="n">HAL_TIM_Base_Start_IT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim_Err</span><span class="p">);</span>
+
+        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">error_init</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">er_list</span> <span class="o">=</span> <span class="n">llist_init</span><span class="p">(</span><span class="n">error_compare</span><span class="p">,</span> <span class="n">error_equals</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">error_init_error</span><span class="p">(</span><span class="n">error_t</span> <span class="o">*</span><span class="n">error</span><span class="p">,</span> <span class="n">error_id</span> <span class="n">id</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">offset</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">timestamp</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">error</span><span class="o">-&gt;</span><span class="n">id</span> <span class="o">=</span> <span class="n">id</span><span class="p">;</span>
+    <span class="n">error</span><span class="o">-&gt;</span><span class="n">offset</span> <span class="o">=</span> <span class="n">offset</span><span class="p">;</span>
+    <span class="n">error</span><span class="o">-&gt;</span><span class="n">state</span> <span class="o">=</span> <span class="n">ERROR_ACTIVE</span><span class="p">;</span>
+    <span class="n">error</span><span class="o">-&gt;</span><span class="n">timestamp</span> <span class="o">=</span> <span class="n">timestamp</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">bool</span> <span class="nf">error_set</span><span class="p">(</span><span class="n">error_id</span> <span class="n">id</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">offset</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">timestamp</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Check if error exists</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="n">error_list_ref_array_element</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">offset</span><span class="p">)</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">error_t</span> <span class="o">*</span><span class="n">error</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">error_t</span><span class="p">));</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="n">error_init_error</span><span class="p">(</span><span class="n">error</span><span class="p">,</span> <span class="n">id</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">timestamp</span><span class="p">);</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">llist_insert_priority</span><span class="p">(</span><span class="n">er_list</span><span class="p">,</span> <span class="p">(</span><span class="n">llist_node</span><span class="p">)</span><span class="n">error</span><span class="p">)</span> <span class="o">!=</span> <span class="n">LLIST_SUCCESS</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">//ERROR_GET_REF(id, offset) = (llist_node)error;</span>
+        <span class="p">(</span><span class="o">*</span><span class="n">error_list_ref_array_element</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">offset</span><span class="p">))</span> <span class="o">=</span> <span class="p">(</span><span class="n">llist_node</span><span class="p">)</span><span class="n">error</span><span class="p">;</span>
+        <span class="c1">//error_list_ref_array[id][offset] = (llist_node)error;</span>
+        <span class="c1">// Re-set timer if first in list</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">error_equals</span><span class="p">(</span><span class="n">llist_get_head</span><span class="p">(</span><span class="n">er_list</span><span class="p">),</span> <span class="n">error</span><span class="p">))</span> <span class="p">{</span>
+            <span class="n">error_set_timer</span><span class="p">(</span><span class="n">error</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">bool</span> <span class="nf">error_unset</span><span class="p">(</span><span class="n">error_id</span> <span class="n">id</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">offset</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="n">error_list_ref_array_element</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">offset</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">error_t</span> <span class="o">*</span><span class="n">error</span> <span class="o">=</span> <span class="p">(</span><span class="n">error_t</span> <span class="o">*</span><span class="p">)(</span><span class="o">*</span><span class="n">error_list_ref_array_element</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">offset</span><span class="p">));</span>
+
+        <span class="c1">// Check if error is fatal; in that case do not remove it, but deactivate it</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">error</span><span class="o">-&gt;</span><span class="n">state</span> <span class="o">==</span> <span class="n">ERROR_FATAL</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">//error-&gt;state = ERROR_NOT_ACTIVE;</span>
+            <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// If we are removing the first error, re-set the timer to the second error</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">error_equals</span><span class="p">(</span><span class="n">llist_get_head</span><span class="p">(</span><span class="n">er_list</span><span class="p">),</span> <span class="p">(</span><span class="n">llist_node</span><span class="p">)</span><span class="n">error</span><span class="p">))</span> <span class="p">{</span>
+            <span class="n">error_t</span> <span class="o">*</span><span class="n">tmp</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+
+            <span class="c1">// No need to check llist_get output because passing NULL to error_set_timer is legal</span>
+            <span class="n">llist_get</span><span class="p">(</span><span class="n">er_list</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="n">llist_node</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">tmp</span><span class="p">);</span>
+            <span class="n">error_set_timer</span><span class="p">(</span><span class="n">tmp</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">llist_remove_by_node</span><span class="p">(</span><span class="n">er_list</span><span class="p">,</span> <span class="p">(</span><span class="n">llist_node</span><span class="p">)</span><span class="n">error</span><span class="p">)</span> <span class="o">!=</span> <span class="n">LLIST_SUCCESS</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">//ERROR_GET_REF(id, offset) = NULL;</span>
+        <span class="p">(</span><span class="o">*</span><span class="n">error_list_ref_array_element</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">offset</span><span class="p">))</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+        <span class="c1">//error_list_ref_array[id][offset] = NULL;</span>
+        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// TODO: Remove</span>
+<span class="kt">uint8_t</span> <span class="nf">error_count</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">llist_size</span><span class="p">(</span><span class="n">er_list</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">error_dump</span><span class="p">(</span><span class="n">error_t</span> <span class="n">errors</span><span class="p">[])</span> <span class="p">{</span>
+    <span class="n">llist_export</span><span class="p">(</span><span class="n">er_list</span><span class="p">,</span> <span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="p">)</span><span class="n">errors</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">error_t</span><span class="p">));</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, E-Agle TRT.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

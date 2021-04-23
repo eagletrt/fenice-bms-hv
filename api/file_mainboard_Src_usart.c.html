@@ -1,0 +1,261 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>File usart.c &mdash; Fenice BMS HV 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Fenice BMS HV
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Software</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Fenice BMS HV</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>File usart.c</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/api/file_mainboard_Src_usart.c.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div class="libGraph"><img src="png/usart_8c__incl.png" alt="depGraph" style="position:relative;left: 5%;"></div><div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="file-usart-c">
+<span id="file-mainboard-src-usart-c"></span><h1>File usart.c<a class="headerlink" href="#file-usart-c" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="dir_mainboard_Src.html#dir-mainboard-src"><span class="std std-ref">Parent directory</span></a> (<code class="docutils literal notranslate"><span class="pre">mainboard/Src</span></code>)</p>
+<p>This file provides code for the configuration of the USART instances.</p>
+<div class="contents local topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#definition-mainboard-src-usart-c" id="id1">Definition (<code class="docutils literal notranslate"><span class="pre">mainboard/Src/usart.c</span></code>)</a></li>
+<li><a class="reference internal" href="#detailed-description" id="id2">Detailed Description</a></li>
+<li><a class="reference internal" href="#includes" id="id3">Includes</a></li>
+<li><a class="reference internal" href="#functions" id="id4">Functions</a></li>
+<li><a class="reference internal" href="#variables" id="id5">Variables</a></li>
+</ul>
+</div>
+<div class="section" id="definition-mainboard-src-usart-c">
+<h2>Definition (<code class="docutils literal notranslate"><span class="pre">mainboard/Src/usart.c</span></code>)<a class="headerlink" href="#definition-mainboard-src-usart-c" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="program_listing_file_mainboard_Src_usart.c.html">Program Listing for File usart.c</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="detailed-description">
+<h2>Detailed Description<a class="headerlink" href="#detailed-description" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>Copyright (c) 2020 STMicroelectronics. All rights reserved.</div></blockquote>
+<p>This software component is licensed by ST under BSD 3-Clause license, the “License”; You may not use this file except in compliance with the License. You may obtain a copy of the License at: opensource.org/licenses/BSD-3-Clause</p>
+</div>
+<div class="section" id="includes">
+<h2>Includes<a class="headerlink" href="#includes" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">cli_bms.h</span></code> (<a class="reference internal" href="file_mainboard_Inc_cli_bms.h.html#file-mainboard-inc-cli-bms-h"><span class="std std-ref">File cli_bms.h</span></a>)</li>
+<li><code class="docutils literal notranslate"><span class="pre">usart.h</span></code> (<a class="reference internal" href="file_mainboard_Inc_usart.h.html#file-mainboard-inc-usart-h"><span class="std std-ref">File usart.h</span></a>)</li>
+</ul>
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="function_usart_8c_1a0e0456ea96d55db31de947fb3e954f18.html#exhale-function-usart-8c-1a0e0456ea96d55db31de947fb3e954f18"><span class="std std-ref">Function HAL_UART_ErrorCallback</span></a></li>
+<li><a class="reference internal" href="function_usart_8c_1a94cd2c58add4f2549895a03bf267622e.html#exhale-function-usart-8c-1a94cd2c58add4f2549895a03bf267622e"><span class="std std-ref">Function HAL_UART_MspDeInit(UART_HandleTypeDef *)</span></a></li>
+<li><a class="reference internal" href="function_usart_8c_1a62a25476866998c7aadfb5c0864fa349.html#exhale-function-usart-8c-1a62a25476866998c7aadfb5c0864fa349"><span class="std std-ref">Function HAL_UART_MspInit(UART_HandleTypeDef *)</span></a></li>
+<li><a class="reference internal" href="function_usart_8c_1ae494a9643f29b87d6d81e5264e60e57b.html#exhale-function-usart-8c-1ae494a9643f29b87d6d81e5264e60e57b"><span class="std std-ref">Function HAL_UART_RxCpltCallback</span></a></li>
+<li><a class="reference internal" href="function_usart_8c_1a052088fe5bb3f807a4b2502e664fd4fd.html#exhale-function-usart-8c-1a052088fe5bb3f807a4b2502e664fd4fd"><span class="std std-ref">Function MX_USART2_UART_Init(void)</span></a></li>
+<li><a class="reference internal" href="function_usart_8c_1a3d04b903a77089f6ce08dd0bf1c81a81.html#exhale-function-usart-8c-1a3d04b903a77089f6ce08dd0bf1c81a81"><span class="std std-ref">Function MX_USART3_UART_Init(void)</span></a></li>
+</ul>
+</div>
+<div class="section" id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="variable_usart_8c_1aa9479c261d65eecedd3d9582f7f0f89c.html#exhale-variable-usart-8c-1aa9479c261d65eecedd3d9582f7f0f89c"><span class="std std-ref">Variable huart2</span></a></li>
+<li><a class="reference internal" href="variable_usart_8c_1ab7c63c1b0f65db92b6a4ea19edf957e1.html#exhale-variable-usart-8c-1ab7c63c1b0f65db92b6a4ea19edf957e1"><span class="std std-ref">Variable huart3</span></a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, E-Agle TRT.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

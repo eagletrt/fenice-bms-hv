@@ -1,0 +1,73 @@
+
+.. _file_mainboard_Src_bal.c:
+
+File bal.c
+==========
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Src>` (``mainboard/Src``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+This file contains the balancing functions. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Src/bal.c``)
+------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Src_bal.c.rst
+
+
+
+Detailed Description
+--------------------
+
+Oct 28, 2019
+
+Matteo Bonora [matteo.bonora@studenti.unitn.it] 
+
+Simone Ruffini [simone.ruffini@studenti.unitn.it] 
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``bal.h`` (:ref:`file_mainboard_Inc_bal.h`)
+
+- ``stdio.h``
+
+
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_bal_8c_1a895873c36da91db9c896648e8cef00c0`
+
+- :ref:`exhale_function_bal_8c_1ae00338771ec77948b7fbd3e5b29a0ddb`
+
+- :ref:`exhale_function_bal_8c_1af778468a1695088a03972c1964922276`
+
+- :ref:`exhale_function_bal_8c_1a949bd6aae2409dc009f91ee631120876`
+
+- :ref:`exhale_function_bal_8c_1aa6bd11fcc753f0813d3763b4eaec4e0f`
+
+- :ref:`exhale_function_bal_8c_1a338063b4a0f01cb455e163840ebcabc2`
+

@@ -1,0 +1,13 @@
+.. _exhale_variable_error_8c_1a5803d617be0399f8f39913e58a7671eb:
+
+Variable er_list
+================
+
+- Defined in :ref:`file_mainboard_Src_error_error.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: er_list

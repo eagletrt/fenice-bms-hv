@@ -1,0 +1,13 @@
+.. _exhale_variable_fdcan_8h_1a7e870132380038c7b0e226a8c78d3461:
+
+Variable hfdcan1
+================
+
+- Defined in :ref:`file_mainboard_Inc_fdcan.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: hfdcan1

@@ -1,0 +1,65 @@
+
+.. _file_cellboard_Src_temperature.c:
+
+File temperature.c
+==================
+
+|exhale_lsh| :ref:`Parent directory <dir_cellboard_Src>` (``cellboard/Src``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+This file contains the functions to manage the cellboard temperature. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``cellboard/Src/temperature.c``)
+--------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_cellboard_Src_temperature.c.rst
+
+
+
+Detailed Description
+--------------------
+
+Feb 03, 2020 
+
+Matteo Bonora [matteo.bonora@studenti.unitn.it] 
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``pct2075.h`` (:ref:`file_cellboard_Inc_pct2075.h`)
+
+- ``temperature.h`` (:ref:`file_cellboard_Inc_temperature.h`)
+
+
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_temperature_8c_1a8100629669aaaec504d11d774f1011e4`
+
+- :ref:`exhale_function_temperature_8c_1a8e51dc2da655bcb0ea1690371fe10bb7`
+
+- :ref:`exhale_function_temperature_8c_1a11e1b6884f668ef752078d35db919268`
+

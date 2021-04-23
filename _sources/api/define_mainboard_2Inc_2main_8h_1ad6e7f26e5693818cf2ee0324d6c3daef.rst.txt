@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2main_8h_1ad6e7f26e5693818cf2ee0324d6c3daef:
+
+Define MUX_A3_GPIO_Port
+=======================
+
+- Defined in :ref:`file_mainboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MUX_A3_GPIO_Port

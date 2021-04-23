@@ -1,0 +1,16 @@
+.. _exhale_struct_structtemperature:
+
+Struct temperature
+==================
+
+- Defined in :ref:`file_cellboard_Inc_temperature.h`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: temperature
+   :members:
+   :protected-members:
+   :undoc-members:

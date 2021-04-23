@@ -1,0 +1,13 @@
+.. _exhale_define_feedback_8h_1a06c1426a4eb70820354b7d48da771b98:
+
+Define FEEDBACK_IDLE_TS_ON_TRIGGER_VAL
+======================================
+
+- Defined in :ref:`file_mainboard_Inc_feedback.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: FEEDBACK_IDLE_TS_ON_TRIGGER_VAL

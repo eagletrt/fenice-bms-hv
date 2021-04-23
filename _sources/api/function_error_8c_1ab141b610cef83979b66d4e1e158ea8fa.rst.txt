@@ -1,0 +1,13 @@
+.. _exhale_function_error_8c_1ab141b610cef83979b66d4e1e158ea8fa:
+
+Function error_set_timer
+========================
+
+- Defined in :ref:`file_mainboard_Src_error_error.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: error_set_timer(error_t *)

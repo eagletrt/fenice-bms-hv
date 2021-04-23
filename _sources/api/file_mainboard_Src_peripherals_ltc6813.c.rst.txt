@@ -1,0 +1,86 @@
+
+.. _file_mainboard_Src_peripherals_ltc6813.c:
+
+File ltc6813.c
+==============
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Src_peripherals>` (``mainboard/Src/peripherals``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+This file contains the functions to communicate with the LTCs. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Src/peripherals/ltc6813.c``)
+----------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Src_peripherals_ltc6813.c.rst
+
+
+
+Detailed Description
+--------------------
+
+Oct 08, 2019 
+
+Matteo Bonora [matteo.bonora@studenti.unitn.it] 
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
+
+- ``peripherals/ltc6813.h`` (:ref:`file_mainboard_Inc_peripherals_ltc6813.h`)
+
+
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_ltc6813_8c_1a23ba75ea09d41fd70d20dfa9f5d70178`
+
+- :ref:`exhale_function_ltc6813_8c_1ab543e90701ab1e4afd4c21b3f8233baf`
+
+- :ref:`exhale_function_ltc6813_8c_1af2a9a52cd5267f063f1d3c91721e4030`
+
+- :ref:`exhale_function_ltc6813_8c_1ade831b2366f31cc00e651c22be2de383`
+
+- :ref:`exhale_function_ltc6813_8c_1ac72103c440cfafe6d24a3486fad3591c`
+
+- :ref:`exhale_function_ltc6813_8c_1af263e1ab16243d3885947d4308b2e945`
+
+- :ref:`exhale_function_ltc6813_8c_1aacb24606a92e6ea069a67fac5cee6847`
+
+- :ref:`exhale_function_ltc6813_8c_1a42aba48d195e0902bd54f238e9693aa6`
+
+- :ref:`exhale_function_ltc6813_8c_1a3ccb40ebde1c90fd3f5dbefae82ade09`
+
+- :ref:`exhale_function_ltc6813_8c_1ab67829d27d81bf5fbb65cf13d0d5448c`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_ltc6813_8c_1ac30b1212b5737f9e4b04846f76902bd2`
+

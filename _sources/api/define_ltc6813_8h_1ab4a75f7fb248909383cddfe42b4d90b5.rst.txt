@@ -1,0 +1,13 @@
+.. _exhale_define_ltc6813_8h_1ab4a75f7fb248909383cddfe42b4d90b5:
+
+Define GPIO_VOID
+================
+
+- Defined in :ref:`file_mainboard_Inc_peripherals_ltc6813.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: GPIO_VOID

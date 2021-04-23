@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2main_8h_1a87141a384eb63c4285df10738dd3a80a:
+
+Define ADC_SIN_Pin
+==================
+
+- Defined in :ref:`file_mainboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: ADC_SIN_Pin

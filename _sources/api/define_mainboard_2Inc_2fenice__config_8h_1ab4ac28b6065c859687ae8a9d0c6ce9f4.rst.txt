@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2fenice__config_8h_1ab4ac28b6065c859687ae8a9d0c6ce9f4:
+
+Define PACK_TEMP_COUNT
+======================
+
+- Defined in :ref:`file_mainboard_Inc_fenice_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: PACK_TEMP_COUNT

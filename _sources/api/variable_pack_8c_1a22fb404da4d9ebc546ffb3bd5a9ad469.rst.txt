@@ -1,0 +1,13 @@
+.. _exhale_variable_pack_8c_1a22fb404da4d9ebc546ffb3bd5a9ad469:
+
+Variable cells
+==============
+
+- Defined in :ref:`file_mainboard_Src_pack.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: cells

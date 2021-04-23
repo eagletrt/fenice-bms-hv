@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2main_8h_1ad518f3d0596238f1e9813a412c283a27:
+
+Define CS_LTC_Pin
+=================
+
+- Defined in :ref:`file_mainboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CS_LTC_Pin

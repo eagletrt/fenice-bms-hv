@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2fenice__config_8h_1a13dcd03a2565a2c6038ce21d73d0e974:
+
+Define TEMP_SENSOR_COUNT
+========================
+
+- Defined in :ref:`file_mainboard_Inc_fenice_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: TEMP_SENSOR_COUNT

@@ -1,0 +1,13 @@
+.. _exhale_variable_si8900_8h_1aa0d543873071d781ea27796eeb1b7cab:
+
+Variable si8900_cnfg_0
+======================
+
+- Defined in :ref:`file_mainboard_Inc_peripherals_si8900.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: si8900_cnfg_0

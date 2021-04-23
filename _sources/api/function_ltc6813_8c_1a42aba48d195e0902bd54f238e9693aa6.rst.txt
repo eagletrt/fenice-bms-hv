@@ -1,0 +1,13 @@
+.. _exhale_function_ltc6813_8c_1a42aba48d195e0902bd54f238e9693aa6:
+
+Function ltc6813_wakeup_idle(SPI_HandleTypeDef \*)
+==================================================
+
+- Defined in :ref:`file_mainboard_Src_peripherals_ltc6813.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ltc6813_wakeup_idle(SPI_HandleTypeDef *)

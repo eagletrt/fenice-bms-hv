@@ -1,0 +1,13 @@
+.. _exhale_function_ltc6813__utils_8h_1a0f0a2a353d27e37ce2b7465786d2e387:
+
+Function ltc6813_temp_get(SPI_HandleTypeDef \*, uint8_t)
+========================================================
+
+- Defined in :ref:`file_mainboard_Inc_peripherals_ltc6813_utils.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ltc6813_temp_get(SPI_HandleTypeDef *, uint8_t)

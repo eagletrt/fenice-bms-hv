@@ -1,0 +1,13 @@
+.. _exhale_function_tim_8c_1adee8ed7d3ebb3a217c27ac10af86ce2f:
+
+Function HAL_TIM_Base_MspDeInit
+===============================
+
+- Defined in :ref:`file_mainboard_Src_tim.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef *)

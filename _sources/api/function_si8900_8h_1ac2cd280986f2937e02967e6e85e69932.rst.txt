@@ -1,0 +1,13 @@
+.. _exhale_function_si8900_8h_1ac2cd280986f2937e02967e6e85e69932:
+
+Function si8900_read_channel(UART_HandleTypeDef \*, SI8900_CHANNEL, uint16_t \*)
+================================================================================
+
+- Defined in :ref:`file_mainboard_Inc_peripherals_si8900.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: si8900_read_channel(UART_HandleTypeDef *, SI8900_CHANNEL, uint16_t *)

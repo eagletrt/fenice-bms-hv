@@ -1,0 +1,13 @@
+.. _exhale_define_cellboard_2Inc_2fenice__config_8h_1adc1c18c9a78fa76194e88a6e067a5bf7:
+
+Define BAL_MAX_VOLTAGE_THRESHOLD
+================================
+
+- Defined in :ref:`file_cellboard_Inc_fenice_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: BAL_MAX_VOLTAGE_THRESHOLD

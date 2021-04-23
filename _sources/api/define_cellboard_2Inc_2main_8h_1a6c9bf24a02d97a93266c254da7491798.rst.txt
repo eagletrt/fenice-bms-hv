@@ -1,0 +1,13 @@
+.. _exhale_define_cellboard_2Inc_2main_8h_1a6c9bf24a02d97a93266c254da7491798:
+
+Define I2C_SDA_Pin
+==================
+
+- Defined in :ref:`file_cellboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: I2C_SDA_Pin

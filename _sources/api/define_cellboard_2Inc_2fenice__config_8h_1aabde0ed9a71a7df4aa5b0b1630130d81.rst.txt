@@ -1,0 +1,13 @@
+.. _exhale_define_cellboard_2Inc_2fenice__config_8h_1aabde0ed9a71a7df4aa5b0b1630130d81:
+
+Define SI8900_TIMEOUT
+=====================
+
+- Defined in :ref:`file_cellboard_Inc_fenice_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: SI8900_TIMEOUT

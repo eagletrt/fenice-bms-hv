@@ -1,0 +1,13 @@
+.. _exhale_function_mainboard_2Src_2main_8c_1a4990b1c13cc4573981034104cc9d0cb7:
+
+Function MX_NVIC_Init(void)
+===========================
+
+- Defined in :ref:`file_mainboard_Src_main.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: MX_NVIC_Init(void)

@@ -1,0 +1,47 @@
+
+.. _program_listing_file_mainboard_Inc_fdcan.h:
+
+Program Listing for File fdcan.h
+================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_mainboard_Inc_fdcan.h>` (``mainboard/Inc/fdcan.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   /* Define to prevent recursive inclusion -------------------------------------*/
+   #ifndef __FDCAN_H__
+   #define __FDCAN_H__
+   
+   #ifdef __cplusplus
+   extern "C" {
+   #endif
+   
+   /* Includes ------------------------------------------------------------------*/
+   #include "main.h"
+   
+   /* USER CODE BEGIN Includes */
+   
+   /* USER CODE END Includes */
+   
+   extern FDCAN_HandleTypeDef hfdcan1;
+   
+   /* USER CODE BEGIN Private defines */
+   
+   /* USER CODE END Private defines */
+   
+   void MX_FDCAN1_Init(void);
+   
+   /* USER CODE BEGIN Prototypes */
+   void FDCAN1_Init(void);
+   /* USER CODE END Prototypes */
+   
+   #ifdef __cplusplus
+   }
+   #endif
+   
+   #endif /* __FDCAN_H__ */
+   
+   /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

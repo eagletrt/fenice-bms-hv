@@ -1,0 +1,13 @@
+.. _exhale_function_spi_8c_1acc2dc237744eb00a139b6385c837d35c:
+
+Function spi_enable_cs(SPI_HandleTypeDef \*, GPIO_TypeDef \*, uint16_t)
+=======================================================================
+
+- Defined in :ref:`file_mainboard_Src_spi.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: spi_enable_cs(SPI_HandleTypeDef *, GPIO_TypeDef *, uint16_t)

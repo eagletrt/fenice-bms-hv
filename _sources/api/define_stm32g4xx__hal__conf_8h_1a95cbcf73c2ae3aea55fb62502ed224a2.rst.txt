@@ -1,0 +1,13 @@
+.. _exhale_define_stm32g4xx__hal__conf_8h_1a95cbcf73c2ae3aea55fb62502ed224a2:
+
+Define USE_HAL_QSPI_REGISTER_CALLBACKS
+======================================
+
+- Defined in :ref:`file_mainboard_Inc_stm32g4xx_hal_conf.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: USE_HAL_QSPI_REGISTER_CALLBACKS

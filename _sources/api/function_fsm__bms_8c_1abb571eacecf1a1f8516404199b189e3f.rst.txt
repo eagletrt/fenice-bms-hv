@@ -1,0 +1,13 @@
+.. _exhale_function_fsm__bms_8c_1abb571eacecf1a1f8516404199b189e3f:
+
+Function do_idle
+================
+
+- Defined in :ref:`file_mainboard_Src_fsm_bms.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: do_idle(fsm *)

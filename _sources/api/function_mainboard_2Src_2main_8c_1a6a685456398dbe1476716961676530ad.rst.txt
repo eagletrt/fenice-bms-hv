@@ -1,0 +1,13 @@
+.. _exhale_function_mainboard_2Src_2main_8c_1a6a685456398dbe1476716961676530ad:
+
+Function read_volts()
+=====================
+
+- Defined in :ref:`file_mainboard_Src_main.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: read_volts()

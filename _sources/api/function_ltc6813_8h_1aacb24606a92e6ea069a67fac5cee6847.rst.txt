@@ -1,0 +1,13 @@
+.. _exhale_function_ltc6813_8h_1aacb24606a92e6ea069a67fac5cee6847:
+
+Function ltc6813_stcomm_i2c(SPI_HandleTypeDef \*, uint8_t)
+==========================================================
+
+- Defined in :ref:`file_mainboard_Inc_peripherals_ltc6813.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ltc6813_stcomm_i2c(SPI_HandleTypeDef *, uint8_t)

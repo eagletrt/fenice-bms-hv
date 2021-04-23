@@ -1,0 +1,44 @@
+
+.. _program_listing_file_mainboard_Inc_gpio.h:
+
+Program Listing for File gpio.h
+===============================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_mainboard_Inc_gpio.h>` (``mainboard/Inc/gpio.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   /* Define to prevent recursive inclusion -------------------------------------*/
+   #ifndef __GPIO_H__
+   #define __GPIO_H__
+   
+   #ifdef __cplusplus
+   extern "C" {
+   #endif
+   
+   /* Includes ------------------------------------------------------------------*/
+   #include "main.h"
+   
+   /* USER CODE BEGIN Includes */
+   
+   /* USER CODE END Includes */
+   
+   /* USER CODE BEGIN Private defines */
+   
+   /* USER CODE END Private defines */
+   
+   void MX_GPIO_Init(void);
+   
+   /* USER CODE BEGIN Prototypes */
+   
+   /* USER CODE END Prototypes */
+   
+   #ifdef __cplusplus
+   }
+   #endif
+   #endif /*__ GPIO_H__ */
+   
+   /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

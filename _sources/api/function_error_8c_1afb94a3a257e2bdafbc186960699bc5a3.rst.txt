@@ -1,0 +1,13 @@
+.. _exhale_function_error_8c_1afb94a3a257e2bdafbc186960699bc5a3:
+
+Function error_unset(error_id, uint8_t)
+=======================================
+
+- Defined in :ref:`file_mainboard_Src_error_error.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: error_unset(error_id, uint8_t)

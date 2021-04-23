@@ -1,0 +1,37 @@
+
+.. _program_listing_file_mainboard_Inc_fsm_bms.h:
+
+Program Listing for File fsm_bms.h
+==================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_mainboard_Inc_fsm_bms.h>` (``mainboard/Inc/fsm_bms.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   #ifndef FSM_BMS_H
+   #define FSM_BMS_H
+   
+   #include "fsm.h"
+   
+   typedef enum {
+       BMS_INIT,
+       BMS_SET_TS_OFF,
+       BMS_IDLE,
+       BMS_PRECHARGE_START,
+       BMS_PRECHARGE,
+       BMS_PRECHARGE_END,
+       BMS_RUN,
+       BMS_CHARGE,
+       BMS_TO_HALT,
+       BMS_HALT,
+       BMS_NUM_STATES
+   } bms_states;
+   
+   extern fsm fsm_bms;
+   
+   void fsm_bms_init();
+   
+   #endif

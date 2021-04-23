@@ -1,0 +1,49 @@
+
+.. _program_listing_file_mainboard_Inc_usart.h:
+
+Program Listing for File usart.h
+================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_mainboard_Inc_usart.h>` (``mainboard/Inc/usart.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   /* Define to prevent recursive inclusion -------------------------------------*/
+   #ifndef __USART_H__
+   #define __USART_H__
+   
+   #ifdef __cplusplus
+   extern "C" {
+   #endif
+   
+   /* Includes ------------------------------------------------------------------*/
+   #include "main.h"
+   
+   /* USER CODE BEGIN Includes */
+   
+   /* USER CODE END Includes */
+   
+   extern UART_HandleTypeDef huart2;
+   extern UART_HandleTypeDef huart3;
+   
+   /* USER CODE BEGIN Private defines */
+   
+   /* USER CODE END Private defines */
+   
+   void MX_USART2_UART_Init(void);
+   void MX_USART3_UART_Init(void);
+   
+   /* USER CODE BEGIN Prototypes */
+   
+   /* USER CODE END Prototypes */
+   
+   #ifdef __cplusplus
+   }
+   #endif
+   
+   #endif /* __USART_H__ */
+   
+   /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

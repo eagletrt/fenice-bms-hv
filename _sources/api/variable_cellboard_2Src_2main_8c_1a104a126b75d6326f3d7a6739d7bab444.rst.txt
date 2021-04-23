@@ -1,0 +1,13 @@
+.. _exhale_variable_cellboard_2Src_2main_8c_1a104a126b75d6326f3d7a6739d7bab444:
+
+Variable temps
+==============
+
+- Defined in :ref:`file_cellboard_Src_main.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: temps

@@ -1,0 +1,13 @@
+.. _exhale_function_error_8c_1ae0da17dfc49f7b7b8bf6093efc28700c:
+
+Function error_dump(error_t)
+============================
+
+- Defined in :ref:`file_mainboard_Src_error_error.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: error_dump(error_t)

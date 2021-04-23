@@ -1,0 +1,13 @@
+.. _exhale_define_feedback_8h_1a7a24db70ee6b8e872e7afca72fcbb536:
+
+Define FEEDBACK_TO_PRECHARGE_VAL
+================================
+
+- Defined in :ref:`file_mainboard_Inc_feedback.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: FEEDBACK_TO_PRECHARGE_VAL

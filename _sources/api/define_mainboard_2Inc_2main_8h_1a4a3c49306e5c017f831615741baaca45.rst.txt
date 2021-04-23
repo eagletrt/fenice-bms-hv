@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2main_8h_1a4a3c49306e5c017f831615741baaca45:
+
+Define TS_ON_GPIO_Port
+======================
+
+- Defined in :ref:`file_mainboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: TS_ON_GPIO_Port

@@ -1,0 +1,13 @@
+.. _exhale_function_feedback_8h_1a11c9b5dab785327e001b6db1cfd922c8:
+
+Function feedback_check(feedback_t, feedback_t, error_id)
+=========================================================
+
+- Defined in :ref:`file_mainboard_Inc_feedback.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: feedback_check(feedback_t, feedback_t, error_id)

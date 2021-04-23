@@ -1,0 +1,13 @@
+.. _exhale_define_feedback_8h_1a3a0b7ba137ef727f147136ccf2057934:
+
+Define FEEDBACK_ON_MASK
+=======================
+
+- Defined in :ref:`file_mainboard_Inc_feedback.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: FEEDBACK_ON_MASK

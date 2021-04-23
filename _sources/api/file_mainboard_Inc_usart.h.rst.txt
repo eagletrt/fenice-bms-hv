@@ -1,0 +1,83 @@
+
+.. _file_mainboard_Inc_usart.h:
+
+File usart.h
+============
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Inc>` (``mainboard/Inc``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+This file contains all the function prototypes for the :ref:`file_mainboard_Src_usart.c` file. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Inc/usart.h``)
+--------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Inc_usart.h.rst
+
+
+
+Detailed Description
+--------------------
+
+
+
+ Copyright (c) 2020 STMicroelectronics. All rights reserved.
+
+
+This software component is licensed by ST under BSD 3-Clause license, the "License"; You may not use this file except in compliance with the License. You may obtain a copy of the License at: opensource.org/licenses/BSD-3-Clause 
+
+
+
+
+Includes
+--------
+
+
+- ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_mainboard_Src_cli_bms.c`
+
+- :ref:`file_mainboard_Src_main.c`
+
+- :ref:`file_mainboard_Src_peripherals_si8900.c`
+
+- :ref:`file_mainboard_Src_usart.c`
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_usart_8h_1a6db1014d713f6f5c0f52a13299ee0733`
+
+- :ref:`exhale_function_usart_8h_1a3d04b903a77089f6ce08dd0bf1c81a81`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_usart_8h_1aa9479c261d65eecedd3d9582f7f0f89c`
+
+- :ref:`exhale_variable_usart_8h_1ab7c63c1b0f65db92b6a4ea19edf957e1`
+

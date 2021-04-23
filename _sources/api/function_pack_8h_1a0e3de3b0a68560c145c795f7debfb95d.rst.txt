@@ -1,0 +1,13 @@
+.. _exhale_function_pack_8h_1a0e3de3b0a68560c145c795f7debfb95d:
+
+Function pack_get_int_voltage()
+===============================
+
+- Defined in :ref:`file_mainboard_Inc_pack.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: pack_get_int_voltage()

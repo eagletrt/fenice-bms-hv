@@ -1,0 +1,13 @@
+.. _exhale_define_cellboard_2Inc_2fenice__config_8h_1ab25af29e5cc6b462115ce9382dc13bb9:
+
+Define CELL_MAX_VOLTAGE
+=======================
+
+- Defined in :ref:`file_cellboard_Inc_fenice_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CELL_MAX_VOLTAGE

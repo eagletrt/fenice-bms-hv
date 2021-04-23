@@ -1,0 +1,98 @@
+
+.. _file_mainboard_Inc_bal.h:
+
+File bal.h
+==========
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Inc>` (``mainboard/Inc``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+This file contains the balancing functions. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Inc/bal.h``)
+------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Inc_bal.h.rst
+
+
+
+Detailed Description
+--------------------
+
+Oct 28, 2019
+
+Matteo Bonora [matteo.bonora@studenti.unitn.it] 
+
+Simone Ruffini [simone.ruffini@studenti.unitn.it] 
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``fenice_config.h`` (:ref:`file_mainboard_Inc_fenice_config.h`)
+
+- ``inttypes.h``
+
+- ``stdbool.h``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_mainboard_Inc_pack.h`
+
+- :ref:`file_mainboard_Src_bal.c`
+
+- :ref:`file_mainboard_Src_cli_bms.c`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structbal__handle`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_bal_8h_1a25b28d7deb35112d1edaa5562ed39476`
+
+- :ref:`exhale_function_bal_8h_1a338063b4a0f01cb455e163840ebcabc2`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_bal_8h_1a253394d10cd939580e608cf1b75729a3`
+
+
+Typedefs
+--------
+
+
+- :ref:`exhale_typedef_bal_8h_1ad40d8d4a13383d7f7bbd075b834a60d1`
+

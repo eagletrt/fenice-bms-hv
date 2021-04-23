@@ -1,0 +1,13 @@
+.. _exhale_variable_error__list__ref_8c_1ad6eb4aa93796659970eedf302cce80a8:
+
+Variable error_list_ref_ltc
+===========================
+
+- Defined in :ref:`file_mainboard_Src_error_error_list_ref.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: error_list_ref_ltc

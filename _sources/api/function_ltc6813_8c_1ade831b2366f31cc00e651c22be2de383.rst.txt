@@ -1,0 +1,13 @@
+.. _exhale_function_ltc6813_8c_1ade831b2366f31cc00e651c22be2de383:
+
+Function ltc6813_enable_cs(SPI_HandleTypeDef \*, GPIO_TypeDef \*, uint16_t)
+===========================================================================
+
+- Defined in :ref:`file_mainboard_Src_peripherals_ltc6813.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ltc6813_enable_cs(SPI_HandleTypeDef *, GPIO_TypeDef *, uint16_t)

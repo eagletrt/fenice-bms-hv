@@ -1,0 +1,72 @@
+
+.. _file_mainboard_Src_feedback.c:
+
+File feedback.c
+===============
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Src>` (``mainboard/Src``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+Feedback parsing utilities. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Src/feedback.c``)
+-----------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Src_feedback.c.rst
+
+
+
+Detailed Description
+--------------------
+
+Mar 16, 2021 
+
+Matteo Bonora [matteo.bonora@studenti.unitn.it] 
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``feedback.h`` (:ref:`file_mainboard_Inc_feedback.h`)
+
+- ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
+
+- ``stm32g4xx_hal.h``
+
+
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_feedback_8c_1a11c9b5dab785327e001b6db1cfd922c8`
+
+- :ref:`exhale_function_feedback_8c_1a06351c2489bffae2ee37347c46ab8e2d`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_feedback_8c_1a5e5173cd981b462b8d91fe38f3e48057`
+

@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2fenice__config_8h_1a9f31035b77acd470741a7e2fe533f175:
+
+Define SI8900_INIT_TIMEOUT
+==========================
+
+- Defined in :ref:`file_mainboard_Inc_fenice_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: SI8900_INIT_TIMEOUT

@@ -1,0 +1,13 @@
+.. _exhale_variable_stm32f4xx__it_8c_1af7b2c26e44dadaaa798a5c3d82914ba7:
+
+Variable hi2c1
+==============
+
+- Defined in :ref:`file_cellboard_Src_stm32f4xx_it.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: hi2c1

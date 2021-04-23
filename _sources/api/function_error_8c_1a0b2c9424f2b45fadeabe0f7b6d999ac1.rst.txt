@@ -1,0 +1,13 @@
+.. _exhale_function_error_8c_1a0b2c9424f2b45fadeabe0f7b6d999ac1:
+
+Function error_count()
+======================
+
+- Defined in :ref:`file_mainboard_Src_error_error.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: error_count()

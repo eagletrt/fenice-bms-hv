@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2fenice__config_8h_1a9266f6c7baa20287949711f808b1dab5:
+
+Define CELL_WARN_VOLTAGE
+========================
+
+- Defined in :ref:`file_mainboard_Inc_fenice_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CELL_WARN_VOLTAGE
