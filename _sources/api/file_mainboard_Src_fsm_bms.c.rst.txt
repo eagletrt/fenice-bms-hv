@@ -56,6 +56,8 @@ Includes
 
 - ``pack.h`` (:ref:`file_mainboard_Inc_pack.h`)
 
+- ``peripherals/can.h`` (:ref:`file_mainboard_Inc_peripherals_can.h`)
+
 - ``stdio.h``
 
 - ``stdlib.h``
@@ -94,6 +96,10 @@ Functions
 - :ref:`exhale_function_fsm__bms_8c_1aa22565902e9c8145670fa00f3d199ae4`
 
 - :ref:`exhale_function_fsm__bms_8c_1a44d2899c50265c562b9ee5695112b7a4`
+
+- :ref:`exhale_function_fsm__bms_8c_1a1d01528432bc843cf9541517e6858767`
+
+- :ref:`exhale_function_fsm__bms_8c_1a6885f1cd99bf8746e06a09f4d6e6838e`
 
 - :ref:`exhale_function_fsm__bms_8c_1a8a3b0ad512a6e6c6157440b68d395eac`
 

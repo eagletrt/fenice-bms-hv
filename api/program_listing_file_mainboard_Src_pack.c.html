@@ -369,10 +369,7 @@
     <span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">TS_ON_GPIO_Port</span><span class="p">,</span> <span class="n">TS_ON_Pin</span><span class="p">,</span> <span class="n">GPIO_PIN_RESET</span><span class="p">);</span>
 
     <span class="n">feedback_read</span><span class="p">(</span><span class="n">FEEDBACK_TS_OFF_MASK</span><span class="p">);</span>
-    <span class="n">feedback_check</span><span class="p">(</span><span class="n">FEEDBACK_TS_OFF_MASK</span><span class="p">,</span> <span class="n">FEEDBACK_TS_OFF_VAL</span><span class="p">,</span> <span class="n">ERROR_FEEDBACK_HARD</span><span class="p">);</span>
-
-    <span class="c1">// TODO: return something meaningful, or void</span>
-    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">feedback_check</span><span class="p">(</span><span class="n">FEEDBACK_TS_OFF_MASK</span><span class="p">,</span> <span class="n">FEEDBACK_TS_OFF_VAL</span><span class="p">,</span> <span class="n">ERROR_FEEDBACK_HARD</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="kt">bool</span> <span class="nf">pack_set_pc_start</span><span class="p">()</span> <span class="p">{</span>
@@ -381,10 +378,7 @@
 
     <span class="c1">// Check feedback</span>
     <span class="n">feedback_read</span><span class="p">(</span><span class="n">FEEDBACK_TO_PRECHARGE_MASK</span><span class="p">);</span>
-    <span class="n">feedback_check</span><span class="p">(</span><span class="n">FEEDBACK_TO_PRECHARGE_MASK</span><span class="p">,</span> <span class="n">FEEDBACK_TO_PRECHARGE_VAL</span><span class="p">,</span> <span class="n">ERROR_FEEDBACK_HARD</span><span class="p">);</span>
-
-    <span class="c1">// TODO: return something meaningful, or void</span>
-    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">feedback_check</span><span class="p">(</span><span class="n">FEEDBACK_TO_PRECHARGE_MASK</span><span class="p">,</span> <span class="n">FEEDBACK_TO_PRECHARGE_VAL</span><span class="p">,</span> <span class="n">ERROR_FEEDBACK_HARD</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="kt">bool</span> <span class="nf">pack_set_precharge_end</span><span class="p">()</span> <span class="p">{</span>

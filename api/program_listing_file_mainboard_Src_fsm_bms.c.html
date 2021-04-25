@@ -172,6 +172,7 @@
 <span class="cp">#include</span> <span class="cpf">&quot;error.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;main.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;pack.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;peripherals/can.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;tim.h&quot;</span><span class="cp"></span>
 
 <span class="c1">//------------------------------Declarations------------------------------------------</span>
@@ -243,6 +244,35 @@
     <span class="p">}</span>
 <span class="p">}</span>
 
+<span class="cm">/*</span>
+<span class="cm">    Event Handlers</span>
+<span class="cm">*/</span>
+<span class="kt">void</span> <span class="nf">fsm_bms_ts_off_handler</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">switch</span> <span class="p">(</span><span class="n">fsm_get_state</span><span class="p">(</span><span class="o">&amp;</span><span class="n">fsm_bms</span><span class="p">))</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="nl">BMS_PRECHARGE_START</span><span class="p">:</span>
+        <span class="k">case</span> <span class="nl">BMS_PRECHARGE</span><span class="p">:</span>
+        <span class="k">case</span> <span class="nl">BMS_PRECHARGE_END</span><span class="p">:</span>
+        <span class="k">case</span> <span class="nl">BMS_RUN</span><span class="p">:</span>
+        <span class="k">case</span> <span class="nl">BMS_CHARGE</span><span class="p">:</span>
+            <span class="n">fsm_set_state</span><span class="p">(</span><span class="o">&amp;</span><span class="n">fsm_bms</span><span class="p">,</span> <span class="n">BMS_SET_TS_OFF</span><span class="p">);</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">default</span><span class="o">:</span>
+            <span class="n">can_send</span><span class="p">(</span><span class="n">ID_TS_STATUS</span><span class="p">);</span>
+            <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">fsm_bms_ts_on_handler</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">switch</span> <span class="p">(</span><span class="n">fsm_get_state</span><span class="p">(</span><span class="o">&amp;</span><span class="n">fsm_bms</span><span class="p">))</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="nl">BMS_IDLE</span><span class="p">:</span>
+            <span class="n">fsm_set_state</span><span class="p">(</span><span class="o">&amp;</span><span class="n">fsm_bms</span><span class="p">,</span> <span class="n">BMS_PRECHARGE_START</span><span class="p">);</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">default</span><span class="o">:</span>
+            <span class="n">can_send</span><span class="p">(</span><span class="n">ID_TS_STATUS</span><span class="p">);</span>
+            <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
 <span class="kt">uint16_t</span> <span class="nf">do_init</span><span class="p">(</span><span class="n">fsm</span> <span class="o">*</span><span class="n">FSM</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">pack_init</span><span class="p">();</span>
     <span class="k">return</span> <span class="n">BMS_IDLE</span><span class="p">;</span>
@@ -251,30 +281,18 @@
 <span class="kt">uint16_t</span> <span class="nf">do_ts_off</span><span class="p">(</span><span class="n">fsm</span> <span class="o">*</span><span class="n">FSM</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">pack_set_ts_off</span><span class="p">();</span>
 
-    <span class="c1">// can_send(&amp;hcan, CAN_ID_BMS, CAN_MSG_TS_OFF, 8);</span>
+    <span class="n">can_send</span><span class="p">(</span><span class="n">ID_TS_STATUS</span><span class="p">);</span>
     <span class="k">return</span> <span class="n">BMS_IDLE</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kt">uint16_t</span> <span class="nf">do_idle</span><span class="p">(</span><span class="n">fsm</span> <span class="o">*</span><span class="n">FSM</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// Check CAN</span>
-    <span class="c1">//if (data-&gt;can_rx.StdId == CAN_ID_ECU) {</span>
-    <span class="c1">//  if (data-&gt;can_rx.Data[0] == CAN_IN_TS_ON) {</span>
-    <span class="c1">//  TS On message received</span>
-    <span class="c1">//      if (pack_feedback_check(FEEDBACK_IDLE_TS_ON_TRIGGER_MASK,FEEDBACK_IDLE_TS_ON_TRIGGER_VALUE,ERROR_FEEDBACK_HARD)) {</span>
-    <span class="c1">//          return BMS_PRECHARGE;</span>
-    <span class="c1">//      }</span>
-    <span class="c1">//  }</span>
-    <span class="c1">//}</span>
+    <span class="c1">// Zzz</span>
 
-    <span class="c1">// Do state-specific stuff</span>
-
-    <span class="c1">// Return</span>
     <span class="k">return</span> <span class="n">BMS_IDLE</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kt">uint16_t</span> <span class="nf">do_precharge_start</span><span class="p">(</span><span class="n">fsm</span> <span class="o">*</span><span class="n">FSM</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// Precharge</span>
-    <span class="c1">// bms_precharge_start(&amp;data-&gt;bms);</span>
     <span class="n">pack_set_pc_start</span><span class="p">();</span>
     <span class="n">timer_precharge</span> <span class="o">=</span> <span class="n">HAL_GetTick</span><span class="p">();</span>
 
@@ -287,12 +305,7 @@
     <span class="k">if</span> <span class="p">(</span><span class="n">HAL_GetTick</span><span class="p">()</span> <span class="o">-</span> <span class="n">timer_precharge</span> <span class="o">&lt;</span> <span class="n">PRECHARGE_TIMEOUT</span><span class="p">)</span> <span class="p">{</span>
         <span class="c1">// TODO: move this in precharge_end</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">pack_get_bus_voltage</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="n">pack_get_int_voltage</span><span class="p">()</span> <span class="o">*</span> <span class="n">PRECHARGE_VOLTAGE_THRESHOLD</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">pack_set_precharge_end</span><span class="p">();</span>
-            <span class="n">return_state</span> <span class="o">=</span> <span class="n">BMS_PRECHARGE_END</span><span class="p">;</span>
-
-            <span class="k">if</span> <span class="p">(</span><span class="n">HAL_GPIO_ReadPin</span><span class="p">(</span><span class="n">CHARGE_GPIO_Port</span><span class="p">,</span> <span class="n">CHARGE_Pin</span><span class="p">))</span> <span class="p">{</span>
-                <span class="n">return_state</span> <span class="o">=</span> <span class="n">BMS_CHARGE</span><span class="p">;</span>
-            <span class="p">}</span>
+            <span class="k">return</span> <span class="n">BMS_PRECHARGE_END</span><span class="p">;</span>
         <span class="p">}</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
         <span class="c1">// If the precharge takes too long, we shut down and start from idle</span>
@@ -321,20 +334,15 @@
 <span class="p">}</span>
 
 <span class="kt">uint16_t</span> <span class="nf">do_precharge_end</span><span class="p">(</span><span class="n">fsm</span> <span class="o">*</span><span class="n">FSM</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// bms_precharge_end(&amp;data-&gt;bms);</span>
-    <span class="c1">// HAL_CAN_ConfigFilter(&amp;hcan, &amp;CAN_FILTER_NORMAL);</span>
-    <span class="c1">// can_send(&amp;hcan, CAN_ID_BMS, CAN_MSG_TS_ON, 8);</span>
+    <span class="n">pack_set_precharge_end</span><span class="p">();</span>
 
+    <span class="k">if</span> <span class="p">(</span><span class="n">HAL_GPIO_ReadPin</span><span class="p">(</span><span class="n">CHARGE_GPIO_Port</span><span class="p">,</span> <span class="n">CHARGE_Pin</span><span class="p">))</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">BMS_CHARGE</span><span class="p">;</span>
+    <span class="p">}</span>
     <span class="k">return</span> <span class="n">BMS_RUN</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kt">uint16_t</span> <span class="nf">do_run</span><span class="p">(</span><span class="n">fsm</span> <span class="o">*</span><span class="n">FSM</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// if (data-&gt;can_rx.StdId == CAN_ID_ECU) {</span>
-    <span class="c1">//  if (data-&gt;can_rx.Data[0] == CAN_IN_TS_OFF) {</span>
-    <span class="c1">//      return BMS_IDLE;</span>
-    <span class="c1">//  }</span>
-    <span class="c1">// }</span>
-
     <span class="k">return</span> <span class="n">BMS_RUN</span><span class="p">;</span>
 <span class="p">}</span>
 
@@ -345,6 +353,7 @@
 <span class="kt">uint16_t</span> <span class="nf">do_to_halt</span><span class="p">(</span><span class="n">fsm</span> <span class="o">*</span><span class="n">FSM</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// bms_set_ts_off(&amp;data-&gt;bms);</span>
     <span class="c1">// bms_set_fault(&amp;data-&gt;bms);</span>
+    <span class="n">pack_set_ts_off</span><span class="p">();</span>
 
     <span class="c1">// can_send_error(&amp;hcan, data-&gt;error, data-&gt;error_index, &amp;data-&gt;pack);</span>
     <span class="k">return</span> <span class="n">BMS_HALT</span><span class="p">;</span>

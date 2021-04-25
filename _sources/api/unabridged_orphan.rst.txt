@@ -75,6 +75,16 @@ Files
 .. toctree::
    :maxdepth: 5
 
+   file_mainboard_Src_peripherals_can.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Inc_peripherals_can.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
    file_mainboard_Src_cli_bms.c.rst
 
 .. toctree::

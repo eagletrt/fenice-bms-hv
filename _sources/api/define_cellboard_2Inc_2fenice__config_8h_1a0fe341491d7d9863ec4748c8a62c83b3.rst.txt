@@ -1,0 +1,13 @@
+.. _exhale_define_cellboard_2Inc_2fenice__config_8h_1a0fe341491d7d9863ec4748c8a62c83b3:
+
+Define CAN_MAX_PAYLOAD_LENGTH
+=============================
+
+- Defined in :ref:`file_cellboard_Inc_fenice_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CAN_MAX_PAYLOAD_LENGTH

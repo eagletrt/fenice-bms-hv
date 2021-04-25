@@ -56,8 +56,8 @@ Program Listing for File cli_bms.c
        [ERROR_ADC_INIT] = "adc init",
        [ERROR_ADC_TIMEOUT] = "adc timeout",
        [ERROR_INT_VOLTAGE_MISMATCH] = "internal voltage mismatch",
-       [ERROR_FEEDBACK_HARD] = "soft feedback",
-       [ERROR_FEEDBACK_SOFT] = "hard feedback"};
+       [ERROR_FEEDBACK_HARD] = "hard feedback",
+       [ERROR_FEEDBACK_SOFT] = "soft feedback"};
    
    char const *const feedback_names[FEEDBACK_N] = {
        [FEEDBACK_VREF_POS] = "VREF",
@@ -215,9 +215,8 @@ Program Listing for File cli_bms.c
        sprintf(out, "total %u\r\n", count);
        for (uint16_t i = 0; i < count; i++) {
            sprintf(out + strlen(out),
-                   "\r\n"
-                   "id..........%u (%s)\r\n"
-                   "timestamp...%lu (%lums ago)\r\n"
+                   "\r\ntype........%s\r\n"
+                   "timestamp...T+%lu (%lums ago)\r\n"
                    "offset......%u\r\n"
                    "state.......%u\r\n",
                    errors[i].id, error_names[errors[i].id], errors[i].timestamp, now - errors[i].timestamp, errors[i].offset, errors[i].state);

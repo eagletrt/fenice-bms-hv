@@ -86,6 +86,8 @@ Defines
 
 - :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1adc1c18c9a78fa76194e88a6e067a5bf7`
 
+- :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1a0fe341491d7d9863ec4748c8a62c83b3`
+
 - :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1a609c654690c5e70aa9713a972641874e`
 
 - :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1ab25af29e5cc6b462115ce9382dc13bb9`

@@ -68,6 +68,8 @@ Included By
 
 - :ref:`file_mainboard_Src_pack.c`
 
+- :ref:`file_mainboard_Src_peripherals_can.c`
+
 
 
 

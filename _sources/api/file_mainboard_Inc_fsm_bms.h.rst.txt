@@ -60,6 +60,8 @@ Included By
 
 - :ref:`file_mainboard_Src_main.c`
 
+- :ref:`file_mainboard_Src_peripherals_can.c`
+
 
 
 
@@ -75,6 +77,10 @@ Functions
 
 
 - :ref:`exhale_function_fsm__bms_8h_1a44d2899c50265c562b9ee5695112b7a4`
+
+- :ref:`exhale_function_fsm__bms_8h_1a1d01528432bc843cf9541517e6858767`
+
+- :ref:`exhale_function_fsm__bms_8h_1a6885f1cd99bf8746e06a09f4d6e6838e`
 
 
 Variables

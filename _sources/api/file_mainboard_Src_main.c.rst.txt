@@ -43,6 +43,8 @@ Includes
 
 - ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
 
+- ``peripherals/can.h`` (:ref:`file_mainboard_Inc_peripherals_can.h`)
+
 - ``si8900.h`` (:ref:`file_mainboard_Inc_peripherals_si8900.h`)
 
 - ``spi.h`` (:ref:`file_mainboard_Inc_spi.h`)

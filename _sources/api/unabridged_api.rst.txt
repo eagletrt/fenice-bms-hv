@@ -207,6 +207,26 @@ Functions
 .. toctree::
    :maxdepth: 5
 
+   function_can_8h_1a1619e4e36842ab2508b1a3c18cb60ae3.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_can_8c_1a1619e4e36842ab2508b1a3c18cb60ae3.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_can_8h_1aae59d8aa22ab4a13257a2260699cb7cd.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_can_8c_1aae59d8aa22ab4a13257a2260699cb7cd.rst
+
+.. toctree::
+   :maxdepth: 5
+
    function_mainboard_2Inc_2main_8h_1a3ed7f44fca3a6f9df9f4cec4b62876ca.rst
 
 .. toctree::
@@ -487,6 +507,26 @@ Functions
 .. toctree::
    :maxdepth: 5
 
+   function_fsm__bms_8h_1a1d01528432bc843cf9541517e6858767.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_fsm__bms_8c_1a1d01528432bc843cf9541517e6858767.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_fsm__bms_8h_1a6885f1cd99bf8746e06a09f4d6e6838e.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_fsm__bms_8c_1a6885f1cd99bf8746e06a09f4d6e6838e.rst
+
+.. toctree::
+   :maxdepth: 5
+
    function_cellboard_2Src_2main_8c_1ac7fdddb1d7daec7e5db638bc51ff9b6e.rst
 
 .. toctree::
@@ -503,6 +543,11 @@ Functions
    :maxdepth: 5
 
    function_fdcan_8c_1a93a2756cf80884d125eecad39c785c5d.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_can_8c_1a37d92c0f4f667c4dd4cbc9c3b5d5dad4.rst
 
 .. toctree::
    :maxdepth: 5
@@ -1883,6 +1928,11 @@ Variables
 
    variable_mainboard_2Src_2main_8c_1a8f4d519a00c097f0327f9c45e486301f.rst
 
+.. toctree::
+   :maxdepth: 5
+
+   variable_can_8c_1a4143b3a95437289c3bc5b0b73303b463.rst
+
 Defines
 *******
 
@@ -1961,6 +2011,16 @@ Defines
    :maxdepth: 5
 
    define_mainboard_2Inc_2main_8h_1a285655485c9636fdac33b4f323052d64.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_mainboard_2Inc_2fenice__config_8h_1a0fe341491d7d9863ec4748c8a62c83b3.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_cellboard_2Inc_2fenice__config_8h_1a0fe341491d7d9863ec4748c8a62c83b3.rst
 
 .. toctree::
    :maxdepth: 5

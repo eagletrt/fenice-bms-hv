@@ -174,9 +174,17 @@
 <span class="cm">/* TIM2 init function */</span>
 <span class="kt">void</span> <span class="nf">MX_TIM2_Init</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
+
+  <span class="cm">/* USER CODE BEGIN TIM2_Init 0 */</span>
+
+  <span class="cm">/* USER CODE END TIM2_Init 0 */</span>
+
   <span class="n">TIM_ClockConfigTypeDef</span> <span class="n">sClockSourceConfig</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
   <span class="n">TIM_MasterConfigTypeDef</span> <span class="n">sMasterConfig</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
 
+  <span class="cm">/* USER CODE BEGIN TIM2_Init 1 */</span>
+
+  <span class="cm">/* USER CODE END TIM2_Init 1 */</span>
   <span class="n">htim2</span><span class="p">.</span><span class="n">Instance</span> <span class="o">=</span> <span class="n">TIM2</span><span class="p">;</span>
   <span class="n">htim2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Prescaler</span> <span class="o">=</span> <span class="mi">16999</span><span class="p">;</span>
   <span class="n">htim2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">CounterMode</span> <span class="o">=</span> <span class="n">TIM_COUNTERMODE_UP</span><span class="p">;</span>
@@ -198,6 +206,9 @@
   <span class="p">{</span>
     <span class="n">Error_Handler</span><span class="p">();</span>
   <span class="p">}</span>
+  <span class="cm">/* USER CODE BEGIN TIM2_Init 2 */</span>
+
+  <span class="cm">/* USER CODE END TIM2_Init 2 */</span>
 
 <span class="p">}</span>
 

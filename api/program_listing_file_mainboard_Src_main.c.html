@@ -179,6 +179,7 @@
 <span class="cp">#include</span> <span class="cpf">&quot;fdcan.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;fenice_config.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;fsm_bms.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;peripherals/can.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;si8900.h&quot;</span><span class="cp"></span>
 <span class="cm">/* USER CODE END Includes */</span>
 
@@ -225,6 +226,7 @@
         <span class="n">timer_temps</span> <span class="o">=</span> <span class="n">tick</span><span class="p">;</span>
 
         <span class="n">read_temps</span><span class="p">();</span>
+        <span class="n">can_send</span><span class="p">(</span><span class="n">ID_HV_CURRENT</span><span class="p">);</span>
     <span class="p">}</span>
 
     <span class="c1">// Read and send voltages and current</span>
@@ -232,6 +234,7 @@
         <span class="n">timer_volts</span> <span class="o">=</span> <span class="n">tick</span><span class="p">;</span>
 
         <span class="n">read_volts</span><span class="p">();</span>
+        <span class="n">can_send</span><span class="p">(</span><span class="n">ID_HV_VOLTAGE</span><span class="p">);</span>
     <span class="p">}</span>
 
     <span class="k">if</span> <span class="p">(</span><span class="n">tick</span> <span class="o">-</span> <span class="n">timer_bal</span> <span class="o">&gt;=</span> <span class="n">BAL_CYCLE_LENGTH</span> <span class="o">+</span> <span class="mi">5000</span><span class="p">)</span> <span class="p">{</span>
@@ -287,10 +290,13 @@
     <span class="n">MX_NVIC_Init</span><span class="p">();</span>
     <span class="cm">/* USER CODE BEGIN 2 */</span>
     <span class="n">FDCAN1_Init</span><span class="p">();</span>
+    <span class="n">HAL_FDCAN_ActivateNotification</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hfdcan1</span><span class="p">,</span> <span class="n">FDCAN_IT_RX_FIFO0_NEW_MESSAGE</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="n">HAL_FDCAN_Start</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hfdcan1</span><span class="p">);</span>
 
     <span class="n">error_init</span><span class="p">();</span>
     <span class="n">fsm_bms_init</span><span class="p">();</span>
     <span class="n">cli_bms_init</span><span class="p">();</span>
+    <span class="n">can_init</span><span class="p">();</span>
 
     <span class="k">if</span> <span class="p">(</span><span class="n">si8900_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart3</span><span class="p">,</span> <span class="n">ADC_SIN_GPIO_Port</span><span class="p">,</span> <span class="n">ADC_SIN_Pin</span><span class="p">))</span> <span class="p">{</span>
         <span class="n">cli_print</span><span class="p">(</span><span class="o">&amp;</span><span class="n">cli_bms</span><span class="p">,</span> <span class="s">&quot;SI8900 INITIALIZED</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>
