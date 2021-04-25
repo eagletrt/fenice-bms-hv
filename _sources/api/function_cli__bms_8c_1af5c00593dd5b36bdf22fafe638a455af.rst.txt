@@ -1,0 +1,13 @@
+.. _exhale_function_cli__bms_8c_1af5c00593dd5b36bdf22fafe638a455af:
+
+Function _cli_dmesg
+===================
+
+- Defined in :ref:`file_mainboard_Src_cli_bms.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: _cli_dmesg(uint16_t, char **, char *)

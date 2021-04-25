@@ -20,4 +20,6 @@ Program Listing for File cli_bms.h
    
    void cli_bms_init();
    
+   void cli_bms_debug(char *text, size_t length);
+   
    #endif

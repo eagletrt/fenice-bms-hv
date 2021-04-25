@@ -169,6 +169,7 @@
 <span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp"></span>
 
+<span class="cp">#include</span> <span class="cpf">&quot;cli_bms.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;error.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;main.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;pack.h&quot;</span><span class="cp"></span>
@@ -248,6 +249,7 @@
 <span class="cm">    Event Handlers</span>
 <span class="cm">*/</span>
 <span class="kt">void</span> <span class="nf">fsm_bms_ts_off_handler</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">cli_bms_debug</span><span class="p">(</span><span class="s">&quot;FSM: got TS OFF event&quot;</span><span class="p">,</span> <span class="mi">22</span><span class="p">);</span>
     <span class="k">switch</span> <span class="p">(</span><span class="n">fsm_get_state</span><span class="p">(</span><span class="o">&amp;</span><span class="n">fsm_bms</span><span class="p">))</span> <span class="p">{</span>
         <span class="k">case</span> <span class="nl">BMS_PRECHARGE_START</span><span class="p">:</span>
         <span class="k">case</span> <span class="nl">BMS_PRECHARGE</span><span class="p">:</span>
@@ -263,6 +265,7 @@
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">fsm_bms_ts_on_handler</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">cli_bms_debug</span><span class="p">(</span><span class="s">&quot;CAN: got TS ON event&quot;</span><span class="p">,</span> <span class="mi">22</span><span class="p">);</span>
     <span class="k">switch</span> <span class="p">(</span><span class="n">fsm_get_state</span><span class="p">(</span><span class="o">&amp;</span><span class="n">fsm_bms</span><span class="p">))</span> <span class="p">{</span>
         <span class="k">case</span> <span class="nl">BMS_IDLE</span><span class="p">:</span>
             <span class="n">fsm_set_state</span><span class="p">(</span><span class="o">&amp;</span><span class="n">fsm_bms</span><span class="p">,</span> <span class="n">BMS_PRECHARGE_START</span><span class="p">);</span>
@@ -303,7 +306,6 @@
     <span class="n">bms_states</span> <span class="n">return_state</span> <span class="o">=</span> <span class="n">BMS_PRECHARGE</span><span class="p">;</span>
 
     <span class="k">if</span> <span class="p">(</span><span class="n">HAL_GetTick</span><span class="p">()</span> <span class="o">-</span> <span class="n">timer_precharge</span> <span class="o">&lt;</span> <span class="n">PRECHARGE_TIMEOUT</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">// TODO: move this in precharge_end</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">pack_get_bus_voltage</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="n">pack_get_int_voltage</span><span class="p">()</span> <span class="o">*</span> <span class="n">PRECHARGE_VOLTAGE_THRESHOLD</span><span class="p">)</span> <span class="p">{</span>
             <span class="k">return</span> <span class="n">BMS_PRECHARGE_END</span><span class="p">;</span>
         <span class="p">}</span>
@@ -313,24 +315,6 @@
     <span class="p">}</span>
 
     <span class="k">return</span> <span class="n">return_state</span><span class="p">;</span>
-
-    <span class="cm">/*</span>
-<span class="cm">    if (pd_get_bus_voltage() &gt;= pd_get_adc_voltage() * PRECHARGE_VOLTAGE_THRESHOLD) {</span>
-<span class="cm">        pack_set_precharge_end();</span>
-
-<span class="cm">        if (HAL_GPIO_ReadPin(CHARGE_GPIO_Port, CHARGE_Pin)) {</span>
-<span class="cm">            return_state = BMS_CHARGE;</span>
-<span class="cm">        }</span>
-<span class="cm">        return BMS_RUN;</span>
-<span class="cm">    }</span>
-
-<span class="cm">    if (HAL_GetTick() - timer_precharge &gt;= PRECHARGE_TIMEOUT) {</span>
-<span class="cm">        // TODO: set some sort of error</span>
-<span class="cm">        return BMS_IDLE;</span>
-
-<span class="cm">        return BMS_CHARGE;</span>
-<span class="cm">    }</span>
-<span class="cm">    */</span>
 <span class="p">}</span>
 
 <span class="kt">uint16_t</span> <span class="nf">do_precharge_end</span><span class="p">(</span><span class="n">fsm</span> <span class="o">*</span><span class="n">FSM</span><span class="p">)</span> <span class="p">{</span>

@@ -18,6 +18,7 @@ Program Listing for File fsm_bms.c
    #include <stdlib.h>
    #include <string.h>
    
+   #include "cli_bms.h"
    #include "error.h"
    #include "main.h"
    #include "pack.h"
@@ -97,6 +98,7 @@ Program Listing for File fsm_bms.c
        Event Handlers
    */
    void fsm_bms_ts_off_handler() {
+       cli_bms_debug("FSM: got TS OFF event", 22);
        switch (fsm_get_state(&fsm_bms)) {
            case BMS_PRECHARGE_START:
            case BMS_PRECHARGE:
@@ -112,6 +114,7 @@ Program Listing for File fsm_bms.c
    }
    
    void fsm_bms_ts_on_handler() {
+       cli_bms_debug("CAN: got TS ON event", 22);
        switch (fsm_get_state(&fsm_bms)) {
            case BMS_IDLE:
                fsm_set_state(&fsm_bms, BMS_PRECHARGE_START);
@@ -152,7 +155,6 @@ Program Listing for File fsm_bms.c
        bms_states return_state = BMS_PRECHARGE;
    
        if (HAL_GetTick() - timer_precharge < PRECHARGE_TIMEOUT) {
-           // TODO: move this in precharge_end
            if (pack_get_bus_voltage() >= pack_get_int_voltage() * PRECHARGE_VOLTAGE_THRESHOLD) {
                return BMS_PRECHARGE_END;
            }
@@ -162,24 +164,6 @@ Program Listing for File fsm_bms.c
        }
    
        return return_state;
-   
-       /*
-       if (pd_get_bus_voltage() >= pd_get_adc_voltage() * PRECHARGE_VOLTAGE_THRESHOLD) {
-           pack_set_precharge_end();
-   
-           if (HAL_GPIO_ReadPin(CHARGE_GPIO_Port, CHARGE_Pin)) {
-               return_state = BMS_CHARGE;
-           }
-           return BMS_RUN;
-       }
-   
-       if (HAL_GetTick() - timer_precharge >= PRECHARGE_TIMEOUT) {
-           // TODO: set some sort of error
-           return BMS_IDLE;
-   
-           return BMS_CHARGE;
-       }
-       */
    }
    
    uint16_t do_precharge_end(fsm *FSM) {

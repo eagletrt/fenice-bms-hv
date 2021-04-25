@@ -1,0 +1,13 @@
+.. _exhale_function_cli__bms_8h_1a16fe565bf6dc85a9ea1dbb0ab6077a6d:
+
+Function cli_bms_debug(char \*, size_t)
+=======================================
+
+- Defined in :ref:`file_mainboard_Inc_cli_bms.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: cli_bms_debug(char *, size_t)

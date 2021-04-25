@@ -57,7 +57,11 @@ Included By
 
 - :ref:`file_mainboard_Src_cli_bms.c`
 
+- :ref:`file_mainboard_Src_fsm_bms.c`
+
 - :ref:`file_mainboard_Src_main.c`
+
+- :ref:`file_mainboard_Src_peripherals_can.c`
 
 - :ref:`file_mainboard_Src_usart.c`
 
@@ -67,6 +71,8 @@ Included By
 Functions
 ---------
 
+
+- :ref:`exhale_function_cli__bms_8h_1a16fe565bf6dc85a9ea1dbb0ab6077a6d`
 
 - :ref:`exhale_function_cli__bms_8h_1aef592962b002638da2102cf18e9587e7`
 

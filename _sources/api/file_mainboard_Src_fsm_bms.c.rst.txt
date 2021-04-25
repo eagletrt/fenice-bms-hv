@@ -46,6 +46,8 @@ Includes
 --------
 
 
+- ``cli_bms.h`` (:ref:`file_mainboard_Inc_cli_bms.h`)
+
 - ``error.h`` (:ref:`file_mainboard_Inc_error_error.h`)
 
 - ``fsm_bms.h`` (:ref:`file_mainboard_Inc_fsm_bms.h`)

@@ -46,6 +46,8 @@ Includes
 
 - ``can.h`` (:ref:`file_mainboard_Inc_peripherals_can.h`)
 
+- ``cli_bms.h`` (:ref:`file_mainboard_Inc_cli_bms.h`)
+
 - ``fsm_bms.h`` (:ref:`file_mainboard_Inc_fsm_bms.h`)
 
 - ``pack.h`` (:ref:`file_mainboard_Inc_pack.h`)

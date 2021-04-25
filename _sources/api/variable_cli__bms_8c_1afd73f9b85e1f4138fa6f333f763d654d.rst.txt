@@ -1,0 +1,13 @@
+.. _exhale_variable_cli__bms_8c_1afd73f9b85e1f4138fa6f333f763d654d:
+
+Variable _cli_dmesg
+===================
+
+- Defined in :ref:`file_mainboard_Src_cli_bms.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: _cli_dmesg

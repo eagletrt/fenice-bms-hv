@@ -164,6 +164,7 @@
 <p>↰ <a class="reference internal" href="file_mainboard_Src_peripherals_can.c.html#file-mainboard-src-peripherals-can-c"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">mainboard/Src/peripherals/can.c</span></code>)</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;can.h&quot;</span><span class="cp"></span>
 
+<span class="cp">#include</span> <span class="cpf">&quot;cli_bms.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;fsm_bms.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;pack.h&quot;</span><span class="cp"></span>
 
@@ -197,8 +198,11 @@
     <span class="n">HAL_StatusTypeDef</span> <span class="n">status</span> <span class="o">=</span> <span class="n">HAL_FDCAN_AddMessageToTxFifoQ</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hfdcan1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">tx_header</span><span class="p">,</span> <span class="n">buffer</span><span class="p">);</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">status</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">error_set</span><span class="p">(</span><span class="n">ERROR_CAN</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">HAL_GetTick</span><span class="p">());</span>
+        <span class="n">cli_bms_debug</span><span class="p">(</span><span class="s">&quot;CAN: Error sending message&quot;</span><span class="p">,</span> <span class="mi">27</span><span class="p">);</span>
+
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
         <span class="n">error_unset</span><span class="p">(</span><span class="n">ERROR_CAN</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+        <span class="n">cli_bms_debug</span><span class="p">(</span><span class="s">&quot;CAN: Sent message&quot;</span><span class="p">,</span> <span class="mi">18</span><span class="p">);</span>
     <span class="p">}</span>
 
     <span class="k">return</span> <span class="n">status</span><span class="p">;</span>
@@ -212,6 +216,7 @@
 
         <span class="k">if</span> <span class="p">(</span><span class="n">HAL_FDCAN_GetRxMessage</span><span class="p">(</span><span class="n">hfdcan</span><span class="p">,</span> <span class="n">FDCAN_RX_FIFO0</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">rx_header</span><span class="p">,</span> <span class="n">rx_data</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
             <span class="n">error_set</span><span class="p">(</span><span class="n">ERROR_CAN</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">HAL_GetTick</span><span class="p">());</span>
+            <span class="n">cli_bms_debug</span><span class="p">(</span><span class="s">&quot;CAN: Error receiving message&quot;</span><span class="p">,</span> <span class="mi">29</span><span class="p">);</span>
             <span class="k">return</span><span class="p">;</span>
         <span class="p">}</span>
         <span class="n">error_unset</span><span class="p">(</span><span class="n">ERROR_CAN</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>

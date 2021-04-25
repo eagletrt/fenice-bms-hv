@@ -74,6 +74,8 @@ Functions
 
 - :ref:`exhale_function_cli__bms_8c_1ade814779a92b390ef1873c571fe20473`
 
+- :ref:`exhale_function_cli__bms_8c_1af5c00593dd5b36bdf22fafe638a455af`
+
 - :ref:`exhale_function_cli__bms_8c_1aad34c4a4aa15033a1912e6d41d00081b`
 
 - :ref:`exhale_function_cli__bms_8c_1ad04d99b2a03909941b3b382f228567ca`
@@ -89,6 +91,8 @@ Functions
 - :ref:`exhale_function_cli__bms_8c_1a40ccc4ec8554c5a2ee2ad9fb73d97397`
 
 - :ref:`exhale_function_cli__bms_8c_1a50ceab3a580d0de30257e368be4ca618`
+
+- :ref:`exhale_function_cli__bms_8c_1a16fe565bf6dc85a9ea1dbb0ab6077a6d`
 
 - :ref:`exhale_function_cli__bms_8c_1aef592962b002638da2102cf18e9587e7`
 
@@ -108,6 +112,8 @@ Variables
 
 - :ref:`exhale_variable_cli__bms_8c_1acc100851880dc789b4632223edc5a941`
 
+- :ref:`exhale_variable_cli__bms_8c_1afd73f9b85e1f4138fa6f333f763d654d`
+
 - :ref:`exhale_variable_cli__bms_8c_1a97089cbba6264fbfc9a1579ac9351a0d`
 
 - :ref:`exhale_variable_cli__bms_8c_1ae9e5758c24518e7a2b34810bd2f7e0e7`
@@ -126,9 +132,11 @@ Variables
 
 - :ref:`exhale_variable_cli__bms_8c_1ae97f49f74719578ca4823d58d8e74c19`
 
-- :ref:`exhale_variable_cli__bms_8c_1a946dc4526269fcac47dbf193d7b9c072`
+- :ref:`exhale_variable_cli__bms_8c_1a187b601bcca70eb7eea2b86761221079`
 
-- :ref:`exhale_variable_cli__bms_8c_1a2dd3fcce88950e27326ce8bafee1a363`
+- :ref:`exhale_variable_cli__bms_8c_1a60cfc8074233814ab2f714ce15ebdc36`
+
+- :ref:`exhale_variable_cli__bms_8c_1a0f73a38703f79ee46de42bb0eed53d2e`
 
 - :ref:`exhale_variable_cli__bms_8c_1ac2a46744405dcf0fbb95105514066043`
 
