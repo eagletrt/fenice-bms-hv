@@ -173,7 +173,8 @@
 <span class="cp">#include</span> <span class="cpf">&quot;fsm_bms.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;usart.h&quot;</span><span class="cp"></span>
 
-<span class="cp">#define N_COMMANDS 8</span>
+<span class="c1">// TODO: don&#39;t count manually</span>
+<span class="cp">#define N_COMMANDS 9</span>
 
 <span class="n">cli_command_func_t</span> <span class="n">_cli_volts</span><span class="p">;</span>
 <span class="n">cli_command_func_t</span> <span class="n">_cli_volts_all</span><span class="p">;</span>
@@ -183,6 +184,7 @@
 <span class="n">cli_command_func_t</span> <span class="n">_cli_balance</span><span class="p">;</span>
 <span class="n">cli_command_func_t</span> <span class="n">_cli_errors</span><span class="p">;</span>
 <span class="n">cli_command_func_t</span> <span class="n">_cli_dmesg</span><span class="p">;</span>
+<span class="n">cli_command_func_t</span> <span class="n">_cli_reset</span><span class="p">;</span>
 <span class="n">cli_command_func_t</span> <span class="n">_cli_help</span><span class="p">;</span>
 <span class="n">cli_command_func_t</span> <span class="n">_cli_taba</span><span class="p">;</span>
 
@@ -230,10 +232,10 @@
     <span class="p">[</span><span class="n">FEEDBACK_TS_ON_POS</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;TS ON&quot;</span><span class="p">};</span>
 
 <span class="kt">char</span> <span class="o">*</span><span class="n">command_names</span><span class="p">[</span><span class="n">N_COMMANDS</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s">&quot;volt&quot;</span><span class="p">,</span> <span class="s">&quot;temp&quot;</span><span class="p">,</span> <span class="s">&quot;status&quot;</span><span class="p">,</span> <span class="s">&quot;errors&quot;</span><span class="p">,</span> <span class="s">&quot;bal&quot;</span><span class="p">,</span> <span class="s">&quot;dmesg&quot;</span><span class="p">,</span> <span class="s">&quot;?&quot;</span><span class="p">,</span> <span class="s">&quot;</span><span class="se">\t</span><span class="s">a&quot;</span><span class="p">};</span>
+    <span class="s">&quot;volt&quot;</span><span class="p">,</span> <span class="s">&quot;temp&quot;</span><span class="p">,</span> <span class="s">&quot;status&quot;</span><span class="p">,</span> <span class="s">&quot;errors&quot;</span><span class="p">,</span> <span class="s">&quot;bal&quot;</span><span class="p">,</span> <span class="s">&quot;dmesg&quot;</span><span class="p">,</span> <span class="s">&quot;reset&quot;</span><span class="p">,</span> <span class="s">&quot;?&quot;</span><span class="p">,</span> <span class="s">&quot;</span><span class="se">\t</span><span class="s">a&quot;</span><span class="p">};</span>
 
 <span class="n">cli_command_func_t</span> <span class="o">*</span><span class="n">commands</span><span class="p">[</span><span class="n">N_COMMANDS</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="o">&amp;</span><span class="n">_cli_volts</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_temps</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_status</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_errors</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_balance</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_dmesg</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_help</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_taba</span><span class="p">};</span>
+    <span class="o">&amp;</span><span class="n">_cli_volts</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_temps</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_status</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_errors</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_balance</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_dmesg</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_reset</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_help</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_taba</span><span class="p">};</span>
 
 <span class="n">cli_t</span> <span class="n">cli_bms</span><span class="p">;</span>
 <span class="kt">bool</span> <span class="n">dmesg_ena</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
@@ -260,7 +262,7 @@
     <span class="k">if</span> <span class="p">(</span><span class="n">dmesg_ena</span><span class="p">)</span> <span class="p">{</span>
         <span class="kt">char</span> <span class="n">out</span><span class="p">[</span><span class="mi">3000</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="sc">&#39;\0&#39;</span><span class="p">};</span>
         <span class="c1">// add prefix</span>
-        <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s">&quot;[%014lu] &quot;</span><span class="p">,</span> <span class="n">HAL_GetTick</span><span class="p">());</span>
+        <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s">&quot;[%.3f] &quot;</span><span class="p">,</span> <span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="n">HAL_GetTick</span><span class="p">()</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">);</span>
 
         <span class="n">strcat</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="n">text</span><span class="p">);</span>
         <span class="n">length</span> <span class="o">+=</span> <span class="n">strlen</span><span class="p">(</span><span class="n">out</span><span class="p">);</span>
@@ -274,9 +276,7 @@
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">_cli_volts</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">out</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">&quot;all&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">_cli_volts_all</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">out</span><span class="p">);</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">&quot;&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">voltage_t</span> <span class="n">max</span> <span class="o">=</span> <span class="n">pack_get_max_voltage</span><span class="p">();</span>
         <span class="n">voltage_t</span> <span class="n">min</span> <span class="o">=</span> <span class="n">pack_get_min_voltage</span><span class="p">();</span>
         <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span><span class="p">,</span>
@@ -292,6 +292,10 @@
                 <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">max</span> <span class="o">/</span> <span class="mi">10000</span><span class="p">,</span>
                 <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">min</span> <span class="o">/</span> <span class="mi">10000</span><span class="p">,</span>
                 <span class="p">(</span><span class="kt">float</span><span class="p">)(</span><span class="n">max</span> <span class="o">-</span> <span class="n">min</span><span class="p">)</span> <span class="o">/</span> <span class="mi">10000</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">&quot;all&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">_cli_volts_all</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">out</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s">&quot;Unknown parameter: %s</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
@@ -313,9 +317,7 @@
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">_cli_temps</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">out</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">&quot;all&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">_cli_temps_all</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">out</span><span class="p">);</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">&quot;&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span><span class="p">,</span>
                 <span class="s">&quot;average.....%.1f C</span><span class="se">\r\n</span><span class="s">max.........%2u &quot;</span>
                 <span class="s">&quot;C</span><span class="se">\r\n</span><span class="s">min.........%2u C</span><span class="se">\r\n</span><span class="s">&quot;</span>
@@ -323,6 +325,10 @@
                 <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">pack_get_mean_temperature</span><span class="p">()</span> <span class="o">/</span> <span class="mi">10</span><span class="p">,</span> <span class="n">pack_get_max_temperature</span><span class="p">(),</span>
                 <span class="n">pack_get_min_temperature</span><span class="p">(),</span>
                 <span class="n">pack_get_max_temperature</span><span class="p">()</span> <span class="o">-</span> <span class="n">pack_get_min_temperature</span><span class="p">());</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">&quot;all&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">_cli_temps_all</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">out</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s">&quot;Unknown parameter: %s</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
@@ -403,6 +409,10 @@
 <span class="kt">void</span> <span class="nf">_cli_dmesg</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">out</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">dmesg_ena</span> <span class="o">=</span> <span class="o">!</span><span class="n">dmesg_ena</span><span class="p">;</span>
     <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s">&quot;dmesg output is %s</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">dmesg_ena</span> <span class="o">?</span> <span class="s">&quot;enabled&quot;</span> <span class="o">:</span> <span class="s">&quot;disabled&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">_cli_reset</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">out</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">HAL_NVIC_SystemReset</span><span class="p">();</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">_cli_taba</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">out</span><span class="p">)</span> <span class="p">{</span>

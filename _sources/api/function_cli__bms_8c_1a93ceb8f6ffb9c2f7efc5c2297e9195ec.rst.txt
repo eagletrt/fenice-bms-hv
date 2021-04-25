@@ -1,0 +1,13 @@
+.. _exhale_function_cli__bms_8c_1a93ceb8f6ffb9c2f7efc5c2297e9195ec:
+
+Function _cli_reset
+===================
+
+- Defined in :ref:`file_mainboard_Src_cli_bms.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: _cli_reset(uint16_t, char **, char *)
