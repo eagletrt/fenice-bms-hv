@@ -99,16 +99,14 @@ Functions
 
 - :ref:`exhale_function_fsm__bms_8c_1a44d2899c50265c562b9ee5695112b7a4`
 
-- :ref:`exhale_function_fsm__bms_8c_1a1d01528432bc843cf9541517e6858767`
-
-- :ref:`exhale_function_fsm__bms_8c_1a6885f1cd99bf8746e06a09f4d6e6838e`
-
 - :ref:`exhale_function_fsm__bms_8c_1a8a3b0ad512a6e6c6157440b68d395eac`
 
 
 Variables
 ---------
 
+
+- :ref:`exhale_variable_fsm__bms_8c_1aecee190369124b056818e84df9c9e20e`
 
 - :ref:`exhale_variable_fsm__bms_8c_1ab6e277a466f3fb179e0c41896bb0e85c`
 

@@ -168,58 +168,57 @@
 <span class="cp">#include</span> <span class="cpf">&lt;inttypes.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;stdbool.h&gt;</span><span class="cp"></span>
 
+<span class="cp">#include</span> <span class="cpf">&quot;../../lib/can/naked_generator/Primary/c/Primary.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;llist.h&quot;</span><span class="cp"></span>
 
-<span class="cp">#define error_toggle_check(condition, error_type, index) \</span>
-<span class="cp">    if ((condition)) {                                   \</span>
-<span class="cp">        error_set((error_type), (index), HAL_GetTick()); \</span>
-<span class="cp">    } else {                                             \</span>
-<span class="cp">        error_unset((error_type), (index));              \</span>
-<span class="cp">    }</span>
+<span class="cp">#define error_toggle_check(condition, error_type, index)                       \</span>
+<span class="cp">  if ((condition)) {                                                           \</span>
+<span class="cp">    error_set((error_type), (index), HAL_GetTick());                           \</span>
+<span class="cp">  } else {                                                                     \</span>
+<span class="cp">    error_unset((error_type), (index));                                        \</span>
+<span class="cp">  }</span>
 
 <span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span>
-    <span class="n">ERROR_LTC_PEC_ERROR</span><span class="p">,</span>
+  <span class="n">ERROR_LTC_PEC_ERROR</span><span class="p">,</span>
 
-    <span class="n">ERROR_CELL_UNDER_VOLTAGE</span><span class="p">,</span>
-    <span class="n">ERROR_CELL_OVER_VOLTAGE</span><span class="p">,</span>
-    <span class="n">ERROR_CELL_OVER_TEMPERATURE</span><span class="p">,</span>
+  <span class="n">ERROR_CELL_UNDER_VOLTAGE</span><span class="p">,</span>
+  <span class="n">ERROR_CELL_OVER_VOLTAGE</span><span class="p">,</span>
+  <span class="n">ERROR_CELL_OVER_TEMPERATURE</span><span class="p">,</span>
 
-    <span class="n">ERROR_OVER_CURRENT</span><span class="p">,</span>
-    <span class="n">ERROR_CAN</span><span class="p">,</span>
+  <span class="n">ERROR_OVER_CURRENT</span><span class="p">,</span>
+  <span class="n">ERROR_CAN</span><span class="p">,</span>
 
-    <span class="n">ERROR_ADC_INIT</span><span class="p">,</span>
-    <span class="n">ERROR_ADC_TIMEOUT</span><span class="p">,</span>
-    <span class="n">ERROR_INT_VOLTAGE_MISMATCH</span><span class="p">,</span>
+  <span class="n">ERROR_ADC_INIT</span><span class="p">,</span>
+  <span class="n">ERROR_ADC_TIMEOUT</span><span class="p">,</span>
+  <span class="n">ERROR_INT_VOLTAGE_MISMATCH</span><span class="p">,</span>
 
-    <span class="n">ERROR_FEEDBACK_HARD</span><span class="p">,</span>
-    <span class="n">ERROR_FEEDBACK_SOFT</span><span class="p">,</span>
+  <span class="n">ERROR_FEEDBACK_HARD</span><span class="p">,</span>
+  <span class="n">ERROR_FEEDBACK_SOFT</span><span class="p">,</span>
 
-    <span class="n">ERROR_NUM_ERRORS</span>
+  <span class="n">ERROR_NUM_ERRORS</span>
 <span class="p">}</span> <span class="n">error_id</span><span class="p">;</span>
 
 <span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span>
-    <span class="n">SOFT</span> <span class="o">=</span> <span class="n">UINT32_MAX</span><span class="p">,</span>
-    <span class="n">SHORT</span> <span class="o">=</span> <span class="mi">500</span><span class="p">,</span>
-    <span class="n">REGULAR</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span>
-    <span class="n">INSTANT</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="n">SOFT</span> <span class="o">=</span> <span class="n">UINT32_MAX</span><span class="p">,</span>
+  <span class="n">SHORT</span> <span class="o">=</span> <span class="mi">500</span><span class="p">,</span>
+  <span class="n">REGULAR</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span>
+  <span class="n">INSTANT</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="p">}</span> <span class="n">error_timeout</span><span class="p">;</span>
 
-<span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span>
-    <span class="n">ERROR_ACTIVE</span><span class="p">,</span>
-    <span class="n">ERROR_FATAL</span>
-<span class="p">}</span> <span class="n">error_state</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span> <span class="n">ERROR_ACTIVE</span><span class="p">,</span> <span class="n">ERROR_FATAL</span> <span class="p">}</span> <span class="n">error_state</span><span class="p">;</span>
 
 <span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
-    <span class="n">error_id</span> <span class="n">id</span><span class="p">;</span>    <span class="cm">/* Defines the type of error */</span>
-    <span class="kt">uint8_t</span> <span class="n">offset</span><span class="p">;</span> <span class="cm">/* Identifies different instances of a type */</span>
-    <span class="n">error_state</span> <span class="n">state</span><span class="p">;</span>
-    <span class="kt">uint32_t</span> <span class="n">timestamp</span><span class="p">;</span> <span class="cm">/* Last time the error activated */</span>
+  <span class="n">error_id</span> <span class="n">id</span><span class="p">;</span>    <span class="cm">/* Defines the type of error */</span>
+  <span class="kt">uint8_t</span> <span class="n">offset</span><span class="p">;</span> <span class="cm">/* Identifies different instances of a type */</span>
+  <span class="n">error_state</span> <span class="n">state</span><span class="p">;</span>
+  <span class="kt">uint32_t</span> <span class="n">timestamp</span><span class="p">;</span> <span class="cm">/* Last time the error activated */</span>
 <span class="p">}</span> <span class="n">error_t</span><span class="p">;</span>
 
 <span class="k">extern</span> <span class="n">llist</span> <span class="n">er_list</span><span class="p">;</span>
 
 <span class="kt">void</span> <span class="nf">error_init</span><span class="p">();</span>
-<span class="kt">void</span> <span class="nf">error_init_error</span><span class="p">(</span><span class="n">error_t</span> <span class="o">*</span><span class="n">error</span><span class="p">,</span> <span class="n">error_id</span> <span class="n">id</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">offset</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">timestamp</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">error_init_error</span><span class="p">(</span><span class="n">error_t</span> <span class="o">*</span><span class="n">error</span><span class="p">,</span> <span class="n">error_id</span> <span class="n">id</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">offset</span><span class="p">,</span>
+                      <span class="kt">uint32_t</span> <span class="n">timestamp</span><span class="p">);</span>
 <span class="kt">bool</span> <span class="nf">error_set</span><span class="p">(</span><span class="n">error_id</span> <span class="n">type</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">offset</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">now</span><span class="p">);</span>
 <span class="kt">bool</span> <span class="nf">error_unset</span><span class="p">(</span><span class="n">error_id</span> <span class="n">type</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">offset</span><span class="p">);</span>
 

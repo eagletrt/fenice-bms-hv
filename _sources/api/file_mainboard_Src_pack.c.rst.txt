@@ -94,6 +94,8 @@ Functions
 
 - :ref:`exhale_function_pack_8c_1a72b388852db07771e836901e5561503e`
 
+- :ref:`exhale_function_pack_8c_1a7f587ce8028afdb6698f3cab085f0e18`
+
 - :ref:`exhale_function_pack_8c_1a51f16a179823be9e0b981fa7ccdaa7dd`
 
 - :ref:`exhale_function_pack_8c_1a91acae66b5ea4b819e36a88c776baf3f`

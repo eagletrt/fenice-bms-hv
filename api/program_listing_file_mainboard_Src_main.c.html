@@ -264,7 +264,8 @@
 
     <span class="cm">/* MCU Configuration--------------------------------------------------------*/</span>
 
-    <span class="cm">/* Reset of all peripherals, Initializes the Flash interface and the Systick. */</span>
+    <span class="cm">/* Reset of all peripherals, Initializes the Flash interface and the Systick.</span>
+<span class="cm">   */</span>
     <span class="n">HAL_Init</span><span class="p">();</span>
 
     <span class="cm">/* USER CODE BEGIN Init */</span>
@@ -341,7 +342,8 @@
     <span class="k">if</span> <span class="p">(</span><span class="n">HAL_RCC_OscConfig</span><span class="p">(</span><span class="o">&amp;</span><span class="n">RCC_OscInitStruct</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">Error_Handler</span><span class="p">();</span>
     <span class="p">}</span>
-    <span class="n">RCC_ClkInitStruct</span><span class="p">.</span><span class="n">ClockType</span> <span class="o">=</span> <span class="n">RCC_CLOCKTYPE_HCLK</span> <span class="o">|</span> <span class="n">RCC_CLOCKTYPE_SYSCLK</span> <span class="o">|</span> <span class="n">RCC_CLOCKTYPE_PCLK1</span> <span class="o">|</span> <span class="n">RCC_CLOCKTYPE_PCLK2</span><span class="p">;</span>
+    <span class="n">RCC_ClkInitStruct</span><span class="p">.</span><span class="n">ClockType</span> <span class="o">=</span> <span class="n">RCC_CLOCKTYPE_HCLK</span> <span class="o">|</span> <span class="n">RCC_CLOCKTYPE_SYSCLK</span> <span class="o">|</span>
+                                  <span class="n">RCC_CLOCKTYPE_PCLK1</span> <span class="o">|</span> <span class="n">RCC_CLOCKTYPE_PCLK2</span><span class="p">;</span>
     <span class="n">RCC_ClkInitStruct</span><span class="p">.</span><span class="n">SYSCLKSource</span> <span class="o">=</span> <span class="n">RCC_SYSCLKSOURCE_PLLCLK</span><span class="p">;</span>
     <span class="n">RCC_ClkInitStruct</span><span class="p">.</span><span class="n">AHBCLKDivider</span> <span class="o">=</span> <span class="n">RCC_SYSCLK_DIV1</span><span class="p">;</span>
     <span class="n">RCC_ClkInitStruct</span><span class="p">.</span><span class="n">APB1CLKDivider</span> <span class="o">=</span> <span class="n">RCC_HCLK_DIV1</span><span class="p">;</span>
@@ -350,7 +352,8 @@
     <span class="k">if</span> <span class="p">(</span><span class="n">HAL_RCC_ClockConfig</span><span class="p">(</span><span class="o">&amp;</span><span class="n">RCC_ClkInitStruct</span><span class="p">,</span> <span class="n">FLASH_LATENCY_4</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">Error_Handler</span><span class="p">();</span>
     <span class="p">}</span>
-    <span class="n">PeriphClkInit</span><span class="p">.</span><span class="n">PeriphClockSelection</span> <span class="o">=</span> <span class="n">RCC_PERIPHCLK_USART2</span> <span class="o">|</span> <span class="n">RCC_PERIPHCLK_USART3</span> <span class="o">|</span> <span class="n">RCC_PERIPHCLK_FDCAN</span><span class="p">;</span>
+    <span class="n">PeriphClkInit</span><span class="p">.</span><span class="n">PeriphClockSelection</span> <span class="o">=</span>
+        <span class="n">RCC_PERIPHCLK_USART2</span> <span class="o">|</span> <span class="n">RCC_PERIPHCLK_USART3</span> <span class="o">|</span> <span class="n">RCC_PERIPHCLK_FDCAN</span><span class="p">;</span>
     <span class="n">PeriphClkInit</span><span class="p">.</span><span class="n">Usart2ClockSelection</span> <span class="o">=</span> <span class="n">RCC_USART2CLKSOURCE_PCLK1</span><span class="p">;</span>
     <span class="n">PeriphClkInit</span><span class="p">.</span><span class="n">Usart3ClockSelection</span> <span class="o">=</span> <span class="n">RCC_USART3CLKSOURCE_PCLK1</span><span class="p">;</span>
     <span class="n">PeriphClkInit</span><span class="p">.</span><span class="n">FdcanClockSelection</span> <span class="o">=</span> <span class="n">RCC_FDCANCLKSOURCE_PLL</span><span class="p">;</span>
@@ -378,8 +381,8 @@
 <span class="kt">void</span> <span class="nf">Error_Handler</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
     <span class="cm">/* USER CODE BEGIN Error_Handler_Debug */</span>
     <span class="cm">/* User can add his own implementation to report the HAL error return</span>
-<span class="cm">     * state</span>
-<span class="cm">     */</span>
+<span class="cm">   * state</span>
+<span class="cm">   */</span>
 
     <span class="cm">/* USER CODE END Error_Handler_Debug */</span>
 <span class="p">}</span>
@@ -389,8 +392,8 @@
 <span class="kt">void</span> <span class="nf">assert_failed</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="n">file</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">line</span><span class="p">)</span> <span class="p">{</span>
     <span class="cm">/* USER CODE BEGIN 6 */</span>
     <span class="cm">/* User can add his own implementation to report the file name and line</span>
-<span class="cm">       number, tex: printf(&quot;Wrong parameters value: file %s on line %d\r\n&quot;,</span>
-<span class="cm">       file, line) */</span>
+<span class="cm">     number, tex: printf(&quot;Wrong parameters value: file %s on line %d\r\n&quot;,</span>
+<span class="cm">     file, line) */</span>
     <span class="cm">/* USER CODE END 6 */</span>
 <span class="p">}</span>
 <span class="cp">#endif </span><span class="cm">/* USE_FULL_ASSERT */</span><span class="cp"></span>

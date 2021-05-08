@@ -432,6 +432,11 @@
     <span class="k">return</span> <span class="n">current</span><span class="p">;</span>
 <span class="p">}</span>
 
+<span class="kt">int16_t</span> <span class="nf">pack_get_power</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// TODO: fix units</span>
+    <span class="k">return</span> <span class="n">current</span> <span class="o">*</span> <span class="n">cells</span><span class="p">.</span><span class="n">int_voltage</span><span class="p">;</span>
+<span class="p">}</span>
+
 <span class="n">bal_handle</span> <span class="nf">pack_get_balancing</span><span class="p">()</span> <span class="p">{</span>
     <span class="c1">// TODO: don&#39;t return the handle, create getters for each parameter</span>
     <span class="k">return</span> <span class="n">balancing</span><span class="p">;</span>
