@@ -22,6 +22,7 @@ Files
 -----
 
 - :ref:`file_mainboard_Src_bal.c`
+- :ref:`file_mainboard_Src_bal_fsm.c`
 - :ref:`file_mainboard_Src_cli_bms.c`
 - :ref:`file_mainboard_Src_fdcan.c`
 - :ref:`file_mainboard_Src_feedback.c`

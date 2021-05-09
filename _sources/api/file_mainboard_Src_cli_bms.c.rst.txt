@@ -46,7 +46,7 @@ Includes
 --------
 
 
-- ``bal.h`` (:ref:`file_mainboard_Inc_bal.h`)
+- ``bal_fsm.h`` (:ref:`file_mainboard_Inc_bal_fsm.h`)
 
 - ``cli_bms.h`` (:ref:`file_mainboard_Inc_cli_bms.h`)
 
@@ -137,6 +137,10 @@ Variables
 
 - :ref:`exhale_variable_cli__bms_8c_1af9ca4b92032fdedb065045d56ae0b78b`
 
+- :ref:`exhale_variable_cli__bms_8c_1ab3e6d0bc7a70a9e7dc40b144ec8057e4`
+
+- :ref:`exhale_variable_cli__bms_8c_1a5b79c4930a5cbbea19247cdfa1f81130`
+
 - :ref:`exhale_variable_cli__bms_8c_1ae97f49f74719578ca4823d58d8e74c19`
 
 - :ref:`exhale_variable_cli__bms_8c_1a97994c0c44928753874e891b57f04587`
@@ -148,6 +152,4 @@ Variables
 - :ref:`exhale_variable_cli__bms_8c_1ac2a46744405dcf0fbb95105514066043`
 
 - :ref:`exhale_variable_cli__bms_8c_1a70d6a509a5b8d0c0e34a5390c0a24607`
-
-- :ref:`exhale_variable_cli__bms_8c_1a51ca6460673bd23b69c7f4408bda56b8`
 

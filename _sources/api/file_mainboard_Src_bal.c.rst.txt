@@ -48,7 +48,7 @@ Includes
 
 - ``bal.h`` (:ref:`file_mainboard_Inc_bal.h`)
 
-- ``stdio.h``
+- ``stddef.h``
 
 
 
@@ -59,15 +59,20 @@ Functions
 ---------
 
 
-- :ref:`exhale_function_bal_8c_1a895873c36da91db9c896648e8cef00c0`
+- :ref:`exhale_function_bal_8c_1a3cc141067e727a6abe5476df1f7b5208`
 
 - :ref:`exhale_function_bal_8c_1ae00338771ec77948b7fbd3e5b29a0ddb`
 
 - :ref:`exhale_function_bal_8c_1af778468a1695088a03972c1964922276`
 
-- :ref:`exhale_function_bal_8c_1a949bd6aae2409dc009f91ee631120876`
+- :ref:`exhale_function_bal_8c_1a2e2d5041fd8cb7e445b90c006c982139`
 
-- :ref:`exhale_function_bal_8c_1aa6bd11fcc753f0813d3763b4eaec4e0f`
+- :ref:`exhale_function_bal_8c_1a6d07d3daa77dad54f2ff71be12b1c765`
 
-- :ref:`exhale_function_bal_8c_1a338063b4a0f01cb455e163840ebcabc2`
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_bal_8c_1a968f26b1a2e6f9cd1648581373470800`
 

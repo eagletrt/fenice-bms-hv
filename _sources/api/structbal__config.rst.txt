@@ -1,0 +1,16 @@
+.. _exhale_struct_structbal__config:
+
+Struct bal_config
+=================
+
+- Defined in :ref:`file_mainboard_Inc_bal.h`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: bal_config
+   :members:
+   :protected-members:
+   :undoc-members:

@@ -1,0 +1,13 @@
+.. _exhale_variable_bal__fsm_8c_1a8ec8f80fc861b8f08428ad5d9ca7b902:
+
+Variable discharge_start
+========================
+
+- Defined in :ref:`file_mainboard_Src_bal_fsm.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: discharge_start

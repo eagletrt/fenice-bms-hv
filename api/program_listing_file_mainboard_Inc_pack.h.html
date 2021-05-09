@@ -166,7 +166,6 @@
 
 <span class="cp">#include</span> <span class="cpf">&lt;inttypes.h&gt;</span><span class="cp"></span>
 
-<span class="cp">#include</span> <span class="cpf">&quot;bal.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;error/error.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;fenice_config.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;peripherals/ltc6813_utils.h&quot;</span><span class="cp"></span>
@@ -183,7 +182,6 @@
 <span class="kt">void</span> <span class="nf">pack_update_voltage_stats</span><span class="p">();</span>
 
 <span class="kt">void</span> <span class="nf">pack_update_temperature_stats</span><span class="p">();</span>
-<span class="kt">bool</span> <span class="nf">pack_balance_cells</span><span class="p">(</span><span class="n">SPI_HandleTypeDef</span> <span class="o">*</span><span class="n">hspi</span><span class="p">);</span>
 
 <span class="kt">bool</span> <span class="nf">pack_set_ts_off</span><span class="p">();</span>
 <span class="kt">bool</span> <span class="nf">pack_set_pc_start</span><span class="p">();</span>
@@ -200,7 +198,6 @@
 <span class="n">temperature_t</span> <span class="nf">pack_get_mean_temperature</span><span class="p">();</span>
 <span class="n">current_t</span> <span class="nf">pack_get_current</span><span class="p">();</span>
 <span class="kt">int16_t</span> <span class="nf">pack_get_power</span><span class="p">();</span>
-<span class="n">bal_handle</span> <span class="nf">pack_get_balancing</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>

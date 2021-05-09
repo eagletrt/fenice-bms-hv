@@ -44,8 +44,6 @@ Includes
 --------
 
 
-- ``bal.h`` (:ref:`file_mainboard_Inc_bal.h`)
-
 - ``error/error.h`` (:ref:`file_mainboard_Inc_error_error.h`)
 
 - ``fenice_config.h`` (:ref:`file_mainboard_Inc_fenice_config.h`)
@@ -64,6 +62,8 @@ Included By
 
 - :ref:`file_mainboard_Inc_peripherals_ltc6813_utils.h`
 
+- :ref:`file_mainboard_Src_bal_fsm.c`
+
 - :ref:`file_mainboard_Src_fsm_bms.c`
 
 - :ref:`file_mainboard_Src_pack.c`
@@ -76,10 +76,6 @@ Included By
 Functions
 ---------
 
-
-- :ref:`exhale_function_pack_8h_1ae8f765f62104756b8e1f7fac9c7d8296`
-
-- :ref:`exhale_function_pack_8h_1a05e05a56e1e19d3bdbb650a57e14ae7b`
 
 - :ref:`exhale_function_pack_8h_1a62b44ad3586608b81dce6a617b3e7f31`
 

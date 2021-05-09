@@ -52,7 +52,7 @@ Program Listing for File can.c
    
        } else {
            error_unset(ERROR_CAN, 0);
-           cli_bms_debug("CAN: Sent message", 18);
+           //cli_bms_debug("CAN: Sent message", 18);
        }
    
        return status;

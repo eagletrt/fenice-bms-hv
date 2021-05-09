@@ -1,0 +1,13 @@
+.. _exhale_function_bal__fsm_8h_1a72aadcd031bfaf567ec4aecc2d6fd818:
+
+Function bal_fsm_init()
+=======================
+
+- Defined in :ref:`file_mainboard_Inc_bal_fsm.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: bal_fsm_init()

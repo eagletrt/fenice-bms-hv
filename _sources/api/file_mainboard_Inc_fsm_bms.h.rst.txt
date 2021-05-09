@@ -46,7 +46,7 @@ Includes
 --------
 
 
-- ``fsm.h``
+- ``fsm.h`` (:ref:`file_mainboard_Inc_bal_fsm.h`)
 
 - ``stdbool.h``
 

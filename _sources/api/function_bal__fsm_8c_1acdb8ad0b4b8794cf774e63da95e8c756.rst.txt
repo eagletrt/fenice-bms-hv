@@ -1,0 +1,13 @@
+.. _exhale_function_bal__fsm_8c_1acdb8ad0b4b8794cf774e63da95e8c756:
+
+Function do_compute
+===================
+
+- Defined in :ref:`file_mainboard_Src_bal_fsm.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: do_compute(fsm *)
