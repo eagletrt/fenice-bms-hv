@@ -76,6 +76,10 @@ Functions
 
 - :ref:`exhale_function_bal__fsm_8h_1a72aadcd031bfaf567ec4aecc2d6fd818`
 
+- :ref:`exhale_function_bal__fsm_8h_1a4d4339483644c0d5124b8bb2095b923e`
+
+- :ref:`exhale_function_bal__fsm_8h_1af340160471b0034430f8d5fef743862b`
+
 
 Variables
 ---------

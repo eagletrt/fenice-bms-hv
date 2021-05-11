@@ -84,6 +84,10 @@ Program Listing for File fenice_config.h
    
    #define BAL_CYCLE_LENGTH 120000
    
+   #define BAL_COOLDOWN_DELAY 5000
+   
+   // @section Pre-charge
+   
    #define PRECHARGE_TIMEOUT 10000
    #define PRECHARGE_VOLTAGE_THRESHOLD 0.95
    

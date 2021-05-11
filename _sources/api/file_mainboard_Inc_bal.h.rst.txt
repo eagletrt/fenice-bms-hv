@@ -65,18 +65,15 @@ Included By
 
 
 
-Classes
--------
-
-
-- :ref:`exhale_struct_structbal__config`
-
-
 Functions
 ---------
 
 
-- :ref:`exhale_function_bal_8h_1a6d07d3daa77dad54f2ff71be12b1c765`
+- :ref:`exhale_function_bal_8h_1ac4fab94238cd9bd16c9f3c3d17fc035e`
+
+- :ref:`exhale_function_bal_8h_1a2c3b2ddfa164a6ec0f86cb9d6ad3ec22`
+
+- :ref:`exhale_function_bal_8h_1a6719efe50d915cc74294c060d31b92b8`
 
 
 Defines
@@ -84,18 +81,4 @@ Defines
 
 
 - :ref:`exhale_define_bal_8h_1a253394d10cd939580e608cf1b75729a3`
-
-
-Typedefs
---------
-
-
-- :ref:`exhale_typedef_bal_8h_1a1f87d60c042fd25a753e5175dfbed624`
-
-
-Variables
----------
-
-
-- :ref:`exhale_variable_bal_8h_1a968f26b1a2e6f9cd1648581373470800`
 

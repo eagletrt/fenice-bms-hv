@@ -385,8 +385,7 @@
     <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="kt">void</span> <span class="nf">ltc6813_set_balancing</span><span class="p">(</span><span class="n">SPI_HandleTypeDef</span> <span class="o">*</span><span class="n">hspi</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="o">*</span><span class="n">indexes</span><span class="p">,</span>
-                           <span class="kt">int</span> <span class="n">dcto</span><span class="p">)</span> <span class="p">{</span>
+<span class="kt">void</span> <span class="nf">ltc6813_set_balancing</span><span class="p">(</span><span class="n">SPI_HandleTypeDef</span> <span class="o">*</span><span class="n">hspi</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="o">*</span><span class="n">indexes</span><span class="p">,</span> <span class="kt">int</span> <span class="n">dcto</span><span class="p">)</span> <span class="p">{</span>
     <span class="kt">uint8_t</span> <span class="n">cfgar</span><span class="p">[</span><span class="n">LTC6813_COUNT</span><span class="p">][</span><span class="mi">8</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
     <span class="kt">uint8_t</span> <span class="n">cfgbr</span><span class="p">[</span><span class="n">LTC6813_COUNT</span><span class="p">][</span><span class="mi">8</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
 

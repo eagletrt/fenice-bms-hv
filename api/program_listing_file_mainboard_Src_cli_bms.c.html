@@ -203,8 +203,8 @@
 
 <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">bal_state_names</span><span class="p">[</span><span class="n">BAL_NUM_STATES</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
     <span class="p">[</span><span class="n">BAL_OFF</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;off&quot;</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">BAL_COMPUTING</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;computing&quot;</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">BAL_DISCHARGING</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;discharging&quot;</span><span class="p">};</span>
+    <span class="p">[</span><span class="n">BAL_COMPUTE</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;computing&quot;</span><span class="p">,</span>
+    <span class="p">[</span><span class="n">BAL_DISCHARGE</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;discharging&quot;</span><span class="p">};</span>
 
 <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span>
     <span class="n">error_names</span><span class="p">[</span><span class="n">ERROR_NUM_ERRORS</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
@@ -357,7 +357,7 @@
 <span class="cp">#define n_items 3</span>
 
     <span class="kt">char</span> <span class="n">thresh</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="sc">&#39;\0&#39;</span><span class="p">};</span>
-    <span class="n">itoa</span><span class="p">((</span><span class="kt">float</span><span class="p">)</span><span class="n">bal</span><span class="p">.</span><span class="n">threshold</span> <span class="o">/</span> <span class="mi">10</span><span class="p">,</span> <span class="n">thresh</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+    <span class="n">itoa</span><span class="p">((</span><span class="kt">float</span><span class="p">)</span><span class="n">bal_get_threshold</span><span class="p">()</span> <span class="o">/</span> <span class="mi">10</span><span class="p">,</span> <span class="n">thresh</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
 
     <span class="kt">char</span> <span class="n">er_count</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="sc">&#39;\0&#39;</span><span class="p">};</span>
     <span class="n">itoa</span><span class="p">(</span><span class="n">error_count</span><span class="p">(),</span> <span class="n">er_count</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
@@ -378,28 +378,23 @@
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">_cli_balance</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">out</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">&quot;tog&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">fsm_get_state</span><span class="p">(</span><span class="o">&amp;</span><span class="n">bal_fsm</span><span class="p">)</span> <span class="o">==</span> <span class="n">BAL_OFF</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">fsm_handle_event</span><span class="p">(</span><span class="o">&amp;</span><span class="n">bal_fsm</span><span class="p">,</span> <span class="n">BAL_COMPUTING</span><span class="p">);</span>
-            <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s">&quot;enabling balancing</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">);</span>
-        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-            <span class="n">fsm_handle_event</span><span class="p">(</span><span class="o">&amp;</span><span class="n">bal_fsm</span><span class="p">,</span> <span class="n">BAL_OFF</span><span class="p">);</span>
-            <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s">&quot;disabling balancing</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">);</span>
-        <span class="p">}</span>
-
+    <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">&quot;on&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">fsm_handle_event</span><span class="p">(</span><span class="o">&amp;</span><span class="n">bal_fsm</span><span class="p">,</span> <span class="n">BAL_COMPUTE</span><span class="p">);</span>
+        <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s">&quot;enabling balancing</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">&quot;off&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">fsm_handle_event</span><span class="p">(</span><span class="o">&amp;</span><span class="n">bal_fsm</span><span class="p">,</span> <span class="n">BAL_OFF</span><span class="p">);</span>
+        <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s">&quot;disabling balancing</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">);</span>
     <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">&quot;thr&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">bal</span><span class="p">.</span><span class="n">threshold</span> <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">*</span> <span class="mi">10</span><span class="p">;</span>
-
-            <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s">&quot;setting balancing threshold to %u mV</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">bal</span><span class="p">.</span><span class="n">threshold</span> <span class="o">/</span> <span class="mi">10</span><span class="p">);</span>
-        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-            <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s">&quot;balancing threshold is %u mV</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">bal</span><span class="p">.</span><span class="n">threshold</span> <span class="o">/</span> <span class="mi">10</span><span class="p">);</span>
+            <span class="n">bal_set_threshold</span><span class="p">(</span><span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">*</span> <span class="mi">10</span><span class="p">);</span>
         <span class="p">}</span>
+        <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s">&quot;balancing threshold is %u mV</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">bal_get_threshold</span><span class="p">()</span> <span class="o">/</span> <span class="mi">10</span><span class="p">);</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
         <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span><span class="p">,</span>
                 <span class="s">&quot;Unknown parameter: %s</span><span class="se">\r\n\n</span><span class="s">&quot;</span>
                 <span class="s">&quot;valid parameters:</span><span class="se">\r\n</span><span class="s">&quot;</span>
-                <span class="s">&quot;- tog</span><span class="se">\r\n</span><span class="s">&quot;</span>
+                <span class="s">&quot;- on</span><span class="se">\r\n</span><span class="s">&quot;</span>
+                <span class="s">&quot;- off</span><span class="se">\r\n</span><span class="s">&quot;</span>
                 <span class="s">&quot;- thr &lt;millivolts&gt;</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span>
                 <span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
     <span class="p">}</span>

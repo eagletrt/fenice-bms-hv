@@ -166,17 +166,16 @@
 
 <span class="cp">#include</span> <span class="cpf">&lt;stddef.h&gt;</span><span class="cp"></span>
 
-<span class="n">bal_config</span> <span class="n">bal</span><span class="p">;</span>
+<span class="cp">#ifndef max</span>
+<span class="cp">#define max(a, b) ((a) &gt; (b) ? (a) : (b))</span>
+<span class="cp">#endif</span>
+<span class="cp">#ifndef min</span>
+<span class="cp">#define min(a, b) ((a) &lt; (b) ? (a) : (b))</span>
+<span class="cp">#endif</span>
 
-<span class="kt">void</span> <span class="nf">_swap</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="o">*</span><span class="n">val1</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="o">*</span><span class="n">val2</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kt">uint16_t</span> <span class="n">tmp</span> <span class="o">=</span> <span class="o">*</span><span class="n">val2</span><span class="p">;</span>
-    <span class="o">*</span><span class="n">val2</span> <span class="o">=</span> <span class="o">*</span><span class="n">val1</span><span class="p">;</span>
-    <span class="o">*</span><span class="n">val1</span> <span class="o">=</span> <span class="n">tmp</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">uint8_t</span> <span class="nf">_max_index</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">data</span><span class="p">[],</span> <span class="kt">size_t</span> <span class="n">length</span><span class="p">)</span> <span class="p">{</span>
+<span class="kt">uint8_t</span> <span class="nf">_max_index</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">data</span><span class="p">[],</span> <span class="kt">size_t</span> <span class="n">count</span><span class="p">)</span> <span class="p">{</span>
     <span class="kt">uint8_t</span> <span class="n">max</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kt">uint8_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">uint8_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">count</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">data</span><span class="p">[</span><span class="n">max</span><span class="p">])</span>
             <span class="n">max</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
     <span class="p">}</span>
@@ -184,9 +183,9 @@
     <span class="k">return</span> <span class="n">max</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="kt">uint8_t</span> <span class="nf">_min_index</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">data</span><span class="p">[],</span> <span class="kt">size_t</span> <span class="n">length</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kt">uint8_t</span> <span class="n">min_value_index</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kt">uint8_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<span class="kt">uint16_t</span> <span class="nf">_min_index</span><span class="p">(</span><span class="n">voltage_t</span> <span class="n">data</span><span class="p">[],</span> <span class="kt">size_t</span> <span class="n">count</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">uint16_t</span> <span class="n">min_value_index</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">uint16_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">count</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">data</span><span class="p">[</span><span class="n">min_value_index</span><span class="p">])</span>
             <span class="n">min_value_index</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
     <span class="p">}</span>
@@ -194,47 +193,72 @@
     <span class="k">return</span> <span class="n">min_value_index</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="kt">void</span> <span class="nf">_bubble_sort</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">indexes</span><span class="p">[</span><span class="n">PACK_CELL_COUNT</span><span class="p">],</span> <span class="kt">uint16_t</span> <span class="n">values</span><span class="p">[</span><span class="n">PACK_CELL_COUNT</span><span class="p">],</span> <span class="kt">size_t</span> <span class="n">length</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// TODO: Do we need to pass length? Can&#39;t it just be a local var?</span>
-    <span class="k">while</span> <span class="p">(</span><span class="n">length</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kt">uint16_t</span> <span class="n">newn</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">uint16_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">values</span><span class="p">[</span><span class="n">indexes</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">&lt;</span> <span class="n">values</span><span class="p">[</span><span class="n">indexes</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]])</span> <span class="p">{</span>
-                <span class="n">_swap</span><span class="p">(</span><span class="o">&amp;</span><span class="n">indexes</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="o">&amp;</span><span class="n">indexes</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]);</span>
-                <span class="n">newn</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
-            <span class="p">}</span>
+<span class="kt">void</span> <span class="nf">_bal_hateville_solution</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">DP</span><span class="p">[],</span> <span class="kt">uint16_t</span> <span class="n">i</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="n">out</span><span class="p">[],</span> <span class="kt">uint16_t</span> <span class="o">*</span><span class="n">out_index</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">DP</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">out</span><span class="p">[(</span><span class="o">*</span><span class="n">out_index</span><span class="p">)</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
         <span class="p">}</span>
-        <span class="n">length</span> <span class="o">=</span> <span class="n">newn</span><span class="p">;</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">DP</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">DP</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span> <span class="p">{</span>
+        <span class="n">_bal_hateville_solution</span><span class="p">(</span><span class="n">DP</span><span class="p">,</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">out</span><span class="p">,</span> <span class="n">out_index</span><span class="p">);</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">_bal_hateville_solution</span><span class="p">(</span><span class="n">DP</span><span class="p">,</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">2</span><span class="p">,</span> <span class="n">out</span><span class="p">,</span> <span class="n">out_index</span><span class="p">);</span>
+        <span class="n">out</span><span class="p">[(</span><span class="o">*</span><span class="n">out_index</span><span class="p">)</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+
+        <span class="k">return</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="kt">uint16_t</span> <span class="nf">bal_compute_indexes</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">volts</span><span class="p">[],</span> <span class="kt">uint16_t</span> <span class="n">threshold</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="n">indexes</span><span class="p">[])</span> <span class="p">{</span>
-    <span class="kt">uint16_t</span> <span class="n">indexes_left</span> <span class="o">=</span> <span class="n">PACK_CELL_COUNT</span><span class="p">;</span>  <span class="c1">// cells to check</span>
-    <span class="kt">uint16_t</span> <span class="n">min_index</span> <span class="o">=</span> <span class="n">_min_index</span><span class="p">(</span><span class="n">volts</span><span class="p">,</span> <span class="n">PACK_CELL_COUNT</span><span class="p">);</span>
+<span class="kt">uint16_t</span> <span class="nf">_bal_hateville</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">D</span><span class="p">[],</span> <span class="kt">uint16_t</span> <span class="n">count</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="n">solution</span><span class="p">[])</span> <span class="p">{</span>
+    <span class="kt">uint16_t</span> <span class="n">DP</span><span class="p">[</span><span class="n">count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span>
 
-    <span class="k">for</span> <span class="p">(</span><span class="kt">uint16_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">PACK_CELL_COUNT</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">indexes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>  <span class="c1">// Initialize indexes</span>
+    <span class="n">DP</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">DP</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">D</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">uint16_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">DP</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">DP</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">],</span> <span class="n">DP</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">D</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]);</span>
     <span class="p">}</span>
 
-    <span class="c1">// sort all indexes by voltage</span>
-    <span class="n">_bubble_sort</span><span class="p">(</span><span class="n">indexes</span><span class="p">,</span> <span class="n">volts</span><span class="p">,</span> <span class="n">PACK_CELL_COUNT</span><span class="p">);</span>
+    <span class="kt">uint16_t</span> <span class="n">out_index</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">_bal_hateville_solution</span><span class="p">(</span><span class="n">DP</span><span class="p">,</span> <span class="n">count</span><span class="p">,</span> <span class="n">solution</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">out_index</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">out_index</span><span class="p">;</span>
+<span class="p">}</span>
 
-    <span class="k">for</span> <span class="p">(</span><span class="kt">uint16_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">PACK_CELL_COUNT</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">volts</span><span class="p">[</span><span class="n">indexes</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">&gt;</span> <span class="n">volts</span><span class="p">[</span><span class="n">min_index</span><span class="p">]</span> <span class="o">+</span> <span class="n">threshold</span><span class="p">)</span> <span class="p">{</span>
-            <span class="c1">// If current cell needs to be discahrged</span>
-            <span class="k">if</span> <span class="p">((</span><span class="n">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">indexes</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">BAL_NULL_INDEX</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="n">PACK_CELL_COUNT</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">||</span> <span class="n">indexes</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="n">BAL_NULL_INDEX</span><span class="p">))</span> <span class="p">{</span>
-                <span class="c1">// If previous cell is NULL and next cell needs to be discharged, then set next to NULL</span>
-                <span class="n">indexes</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">BAL_NULL_INDEX</span><span class="p">;</span>
-                <span class="c1">// We don&#39;t decrease indexes_left here because the cell still needs to be discharged.</span>
-            <span class="p">}</span>
-        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-            <span class="c1">// No need to balance</span>
-            <span class="n">indexes_left</span><span class="o">--</span><span class="p">;</span>
-            <span class="n">indexes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">BAL_NULL_INDEX</span><span class="p">;</span>
+<span class="cm">/* @section Public functions */</span>
+
+<span class="kt">uint16_t</span> <span class="nf">bal_get_cells_to_discharge</span><span class="p">(</span><span class="n">voltage_t</span> <span class="n">volts</span><span class="p">[],</span> <span class="kt">uint16_t</span> <span class="n">count</span><span class="p">,</span> <span class="n">voltage_t</span> <span class="n">threshold</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="n">cells</span><span class="p">[])</span> <span class="p">{</span>
+    <span class="n">voltage_t</span> <span class="n">imbalance</span><span class="p">[</span><span class="n">count</span><span class="p">];</span>
+
+    <span class="kt">uint16_t</span> <span class="n">len</span> <span class="o">=</span> <span class="n">bal_compute_imbalance</span><span class="p">(</span><span class="n">volts</span><span class="p">,</span> <span class="n">count</span><span class="p">,</span> <span class="n">threshold</span><span class="p">,</span> <span class="n">imbalance</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">len</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">bal_exclude_neighbors</span><span class="p">(</span><span class="n">imbalance</span><span class="p">,</span> <span class="n">len</span><span class="p">,</span> <span class="n">cells</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">uint16_t</span> <span class="nf">bal_compute_imbalance</span><span class="p">(</span><span class="n">voltage_t</span> <span class="n">volts</span><span class="p">[],</span> <span class="kt">uint16_t</span> <span class="n">count</span><span class="p">,</span> <span class="n">voltage_t</span> <span class="n">threshold</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="n">cells</span><span class="p">[])</span> <span class="p">{</span>
+    <span class="kt">uint16_t</span> <span class="n">indexes</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">uint16_t</span> <span class="n">min_index</span> <span class="o">=</span> <span class="n">_min_index</span><span class="p">(</span><span class="n">volts</span><span class="p">,</span> <span class="n">count</span><span class="p">);</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">uint16_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">count</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">cells</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">volts</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="p">(</span><span class="n">volts</span><span class="p">[</span><span class="n">min_index</span><span class="p">]</span> <span class="o">+</span> <span class="n">threshold</span><span class="p">));</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">cells</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">indexes</span><span class="o">++</span><span class="p">;</span>
         <span class="p">}</span>
     <span class="p">}</span>
+    <span class="k">return</span> <span class="n">indexes</span><span class="p">;</span>
+<span class="p">}</span>
 
-    <span class="k">return</span> <span class="n">indexes_left</span><span class="p">;</span>
+<span class="kt">uint16_t</span> <span class="nf">bal_exclude_neighbors</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">data</span><span class="p">[],</span> <span class="kt">uint16_t</span> <span class="n">count</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="n">cells</span><span class="p">[])</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">uint16_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">PACK_CELL_COUNT</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">cells</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">BAL_NULL_INDEX</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">_bal_hateville</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">PACK_CELL_COUNT</span><span class="p">,</span> <span class="n">cells</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>

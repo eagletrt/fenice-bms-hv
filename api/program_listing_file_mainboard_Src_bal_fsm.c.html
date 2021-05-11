@@ -172,50 +172,78 @@
 
 <span class="n">fsm</span> <span class="n">bal_fsm</span><span class="p">;</span>
 
-<span class="kt">uint32_t</span> <span class="n">discharge_start</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="kt">uint16_t</span> <span class="n">indexes</span><span class="p">[</span><span class="n">PACK_CELL_COUNT</span><span class="p">];</span>
+<span class="kt">uint16_t</span> <span class="n">threshold</span> <span class="o">=</span> <span class="n">BAL_MAX_VOLTAGE_THRESHOLD</span><span class="p">;</span>
+<span class="kt">uint32_t</span> <span class="n">cycle_length</span> <span class="o">=</span> <span class="n">BAL_CYCLE_LENGTH</span><span class="p">;</span>
 
+<span class="kt">uint32_t</span> <span class="n">discharge_start</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="kt">uint16_t</span> <span class="nf">trans_stop</span><span class="p">(</span><span class="n">fsm</span><span class="o">*</span> <span class="n">FSM</span><span class="p">);</span>
 <span class="kt">uint16_t</span> <span class="nf">do_off</span><span class="p">(</span><span class="n">fsm</span><span class="o">*</span> <span class="n">FSM</span><span class="p">);</span>
 <span class="kt">uint16_t</span> <span class="nf">do_compute</span><span class="p">(</span><span class="n">fsm</span><span class="o">*</span> <span class="n">FSM</span><span class="p">);</span>
 <span class="kt">uint16_t</span> <span class="nf">do_discharge</span><span class="p">(</span><span class="n">fsm</span><span class="o">*</span> <span class="n">FSM</span><span class="p">);</span>
+<span class="kt">uint16_t</span> <span class="nf">do_cooldown</span><span class="p">(</span><span class="n">fsm</span><span class="o">*</span> <span class="n">FSM</span><span class="p">);</span>
+
+<span class="kt">uint16_t</span> <span class="nf">bal_get_threshold</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">threshold</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">bal_set_threshold</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">thresh</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">threshold</span> <span class="o">=</span> <span class="n">thresh</span><span class="p">;</span>
+<span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">bal_fsm_init</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">bal</span><span class="p">.</span><span class="n">slot_time</span> <span class="o">=</span> <span class="n">BAL_CYCLE_LENGTH</span><span class="p">;</span>
-    <span class="n">bal</span><span class="p">.</span><span class="n">threshold</span> <span class="o">=</span> <span class="n">BAL_MAX_VOLTAGE_THRESHOLD</span><span class="p">;</span>
-
     <span class="n">fsm_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">bal_fsm</span><span class="p">,</span> <span class="n">BAL_NUM_STATES</span><span class="p">);</span>
 
     <span class="n">bal_fsm</span><span class="p">.</span><span class="n">state_table</span><span class="p">[</span><span class="n">BAL_OFF</span><span class="p">][</span><span class="n">BAL_OFF</span><span class="p">]</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">do_off</span><span class="p">;</span>
-    <span class="n">bal_fsm</span><span class="p">.</span><span class="n">state_table</span><span class="p">[</span><span class="n">BAL_OFF</span><span class="p">][</span><span class="n">BAL_COMPUTING</span><span class="p">]</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">do_compute</span><span class="p">;</span>
-    <span class="n">bal_fsm</span><span class="p">.</span><span class="n">state_table</span><span class="p">[</span><span class="n">BAL_COMPUTING</span><span class="p">][</span><span class="n">BAL_DISCHARGING</span><span class="p">]</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">do_discharge</span><span class="p">;</span>
-    <span class="n">bal_fsm</span><span class="p">.</span><span class="n">state_table</span><span class="p">[</span><span class="n">BAL_COMPUTING</span><span class="p">][</span><span class="n">BAL_OFF</span><span class="p">]</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">do_off</span><span class="p">;</span>
-    <span class="n">bal_fsm</span><span class="p">.</span><span class="n">state_table</span><span class="p">[</span><span class="n">BAL_DISCHARGING</span><span class="p">][</span><span class="n">BAL_DISCHARGING</span><span class="p">]</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">do_discharge</span><span class="p">;</span>
-    <span class="n">bal_fsm</span><span class="p">.</span><span class="n">state_table</span><span class="p">[</span><span class="n">BAL_DISCHARGING</span><span class="p">][</span><span class="n">BAL_OFF</span><span class="p">]</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">do_off</span><span class="p">;</span>
-    <span class="n">bal_fsm</span><span class="p">.</span><span class="n">state_table</span><span class="p">[</span><span class="n">BAL_DISCHARGING</span><span class="p">][</span><span class="n">BAL_COMPUTING</span><span class="p">]</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">do_compute</span><span class="p">;</span>
+    <span class="n">bal_fsm</span><span class="p">.</span><span class="n">state_table</span><span class="p">[</span><span class="n">BAL_OFF</span><span class="p">][</span><span class="n">BAL_COMPUTE</span><span class="p">]</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">do_compute</span><span class="p">;</span>
+
+    <span class="n">bal_fsm</span><span class="p">.</span><span class="n">state_table</span><span class="p">[</span><span class="n">BAL_COMPUTE</span><span class="p">][</span><span class="n">BAL_DISCHARGE</span><span class="p">]</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">do_discharge</span><span class="p">;</span>
+    <span class="n">bal_fsm</span><span class="p">.</span><span class="n">state_table</span><span class="p">[</span><span class="n">BAL_COMPUTE</span><span class="p">][</span><span class="n">BAL_OFF</span><span class="p">]</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">trans_stop</span><span class="p">;</span>
+
+    <span class="n">bal_fsm</span><span class="p">.</span><span class="n">state_table</span><span class="p">[</span><span class="n">BAL_DISCHARGE</span><span class="p">][</span><span class="n">BAL_DISCHARGE</span><span class="p">]</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">do_discharge</span><span class="p">;</span>
+    <span class="n">bal_fsm</span><span class="p">.</span><span class="n">state_table</span><span class="p">[</span><span class="n">BAL_DISCHARGE</span><span class="p">][</span><span class="n">BAL_COMPUTE</span><span class="p">]</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">do_compute</span><span class="p">;</span>
+    <span class="n">bal_fsm</span><span class="p">.</span><span class="n">state_table</span><span class="p">[</span><span class="n">BAL_DISCHARGE</span><span class="p">][</span><span class="n">BAL_OFF</span><span class="p">]</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">trans_stop</span><span class="p">;</span>
+
+    <span class="n">bal_fsm</span><span class="p">.</span><span class="n">state_table</span><span class="p">[</span><span class="n">BAL_COOLDOWN</span><span class="p">][</span><span class="n">BAL_COOLDOWN</span><span class="p">]</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">do_cooldown</span><span class="p">;</span>
+    <span class="n">bal_fsm</span><span class="p">.</span><span class="n">state_table</span><span class="p">[</span><span class="n">BAL_COOLDOWN</span><span class="p">][</span><span class="n">BAL_COMPUTE</span><span class="p">]</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">do_compute</span><span class="p">;</span>
+    <span class="n">bal_fsm</span><span class="p">.</span><span class="n">state_table</span><span class="p">[</span><span class="n">BAL_COOLDOWN</span><span class="p">][</span><span class="n">BAL_OFF</span><span class="p">]</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">trans_stop</span><span class="p">;</span>
 <span class="p">}</span>
 
+<span class="kt">uint16_t</span> <span class="nf">trans_stop</span><span class="p">(</span><span class="n">fsm</span><span class="o">*</span> <span class="n">FSM</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">uint16_t</span> <span class="n">cells</span><span class="p">[</span><span class="n">PACK_CELL_COUNT</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+    <span class="n">ltc6813_set_balancing</span><span class="p">(</span><span class="o">&amp;</span><span class="n">LTC6813_PERIPHERAL</span><span class="p">,</span> <span class="n">cells</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">BAL_OFF</span><span class="p">;</span>
+<span class="p">}</span>
 <span class="kt">uint16_t</span> <span class="nf">do_off</span><span class="p">(</span><span class="n">fsm</span><span class="o">*</span> <span class="n">FSM</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="n">BAL_OFF</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kt">uint16_t</span> <span class="nf">do_compute</span><span class="p">(</span><span class="n">fsm</span><span class="o">*</span> <span class="n">FSM</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kt">size_t</span> <span class="n">len</span> <span class="o">=</span> <span class="n">bal_compute_indexes</span><span class="p">(</span><span class="n">pack_get_voltages</span><span class="p">(),</span> <span class="n">bal</span><span class="p">.</span><span class="n">threshold</span><span class="p">,</span> <span class="n">indexes</span><span class="p">);</span>
+    <span class="kt">uint16_t</span> <span class="n">cells</span><span class="p">[</span><span class="n">PACK_CELL_COUNT</span><span class="p">];</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="n">len</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">ltc6813_set_balancing</span><span class="p">(</span><span class="o">&amp;</span><span class="n">LTC6813_PERIPHERAL</span><span class="p">,</span> <span class="n">indexes</span><span class="p">,</span> <span class="n">bal</span><span class="p">.</span><span class="n">slot_time</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">bal_get_cells_to_discharge</span><span class="p">(</span><span class="n">pack_get_voltages</span><span class="p">(),</span> <span class="n">PACK_CELL_COUNT</span><span class="p">,</span> <span class="n">threshold</span><span class="p">,</span> <span class="n">cells</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">ltc6813_set_balancing</span><span class="p">(</span><span class="o">&amp;</span><span class="n">LTC6813_PERIPHERAL</span><span class="p">,</span> <span class="n">cells</span><span class="p">,</span> <span class="n">cycle_length</span><span class="p">);</span>
         <span class="n">discharge_start</span> <span class="o">=</span> <span class="n">HAL_GetTick</span><span class="p">();</span>
+
         <span class="n">cli_bms_debug</span><span class="p">(</span><span class="s">&quot;Discharging cells&quot;</span><span class="p">,</span> <span class="mi">18</span><span class="p">);</span>
-        <span class="k">return</span> <span class="n">BAL_DISCHARGING</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">BAL_DISCHARGE</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="n">cli_bms_debug</span><span class="p">(</span><span class="s">&quot;Nothing to balance&quot;</span><span class="p">,</span> <span class="mi">19</span><span class="p">);</span>
+    <span class="n">cli_bms_debug</span><span class="p">(</span><span class="s">&quot;Non si può fare meglio di così.&quot;</span><span class="p">,</span> <span class="mi">34</span><span class="p">);</span>
     <span class="k">return</span> <span class="n">BAL_OFF</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kt">uint16_t</span> <span class="nf">do_discharge</span><span class="p">(</span><span class="n">fsm</span><span class="o">*</span> <span class="n">FSM</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">discharge_start</span> <span class="o">-</span> <span class="n">HAL_GetTick</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="n">bal</span><span class="p">.</span><span class="n">slot_time</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="n">BAL_COMPUTING</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">discharge_start</span> <span class="o">-</span> <span class="n">HAL_GetTick</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="n">cycle_length</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">BAL_COOLDOWN</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="k">return</span> <span class="n">BAL_DISCHARGING</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">BAL_DISCHARGE</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">uint16_t</span> <span class="nf">do_cooldown</span><span class="p">(</span><span class="n">fsm</span><span class="o">*</span> <span class="n">FSM</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">discharge_start</span> <span class="o">-</span> <span class="n">HAL_GetTick</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="n">cycle_length</span> <span class="o">+</span> <span class="n">BAL_COOLDOWN_DELAY</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">BAL_COMPUTE</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">BAL_COOLDOWN</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>

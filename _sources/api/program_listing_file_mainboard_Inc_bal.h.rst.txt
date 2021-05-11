@@ -21,12 +21,9 @@ Program Listing for File bal.h
    
    #define BAL_NULL_INDEX UINT8_MAX
    
-   typedef struct bal_config {
-       uint16_t threshold;
-       uint32_t slot_time;
-   } bal_config;
+   uint16_t bal_get_cells_to_discharge(voltage_t volts[], uint16_t count, voltage_t threshold, uint16_t cells[]);
    
-   extern bal_config bal;
+   uint16_t bal_compute_imbalance(voltage_t volts[], uint16_t count, voltage_t threshold, uint16_t cells[]);
    
-   uint16_t bal_compute_indexes(uint16_t volts[], uint16_t threshold, uint16_t indexes[]);
+   uint16_t bal_exclude_neighbors(uint16_t indexes[], uint16_t count, uint16_t cells[]);
    #endif
