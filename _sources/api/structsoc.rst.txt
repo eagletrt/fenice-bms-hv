@@ -1,0 +1,16 @@
+.. _exhale_struct_structsoc:
+
+Struct soc
+==========
+
+- Defined in :ref:`file_mainboard_Src_soc.c`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: soc
+   :members:
+   :protected-members:
+   :undoc-members:
