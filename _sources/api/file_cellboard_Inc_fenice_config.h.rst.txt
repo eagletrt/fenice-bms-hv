@@ -60,8 +60,6 @@ Included By
 
 - :ref:`file_mainboard_Inc_peripherals_ltc6813.h`
 
-- :ref:`file_mainboard_Src_bal_fsm.c`
-
 - :ref:`file_mainboard_Src_main.c`
 
 - :ref:`file_mainboard_Src_peripherals_si8900.c`
@@ -77,14 +75,12 @@ Enums
 -----
 
 
-- :ref:`exhale_enum_cellboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5`
+- :ref:`exhale_enum_cellboard_2Inc_2fenice__config_8h_1adf764cbdea00d65edcd07bb9953ad2b7`
 
 
 Defines
 -------
 
-
-- :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1a3b31b86957fda293852c1bf89266d6a3`
 
 - :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1a55973ed2194879bd45f5a2f5dc8e705c`
 
@@ -145,8 +141,6 @@ Defines
 - :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1a35bb2e9e977e1567a262f45cac9bf265`
 
 - :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1a92f30c622832ad6c2dfc95f932c21d4e`
-
-- :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1ab5e8a957cf8d31a73047fde2f5c65edc`
 
 - :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1a60d95021fa7515f639603ef6dae74626`
 

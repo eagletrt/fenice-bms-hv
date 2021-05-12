@@ -1,0 +1,13 @@
+.. _exhale_function_bal_8c_1a338063b4a0f01cb455e163840ebcabc2:
+
+Function bal_init(bal_handle \*)
+================================
+
+- Defined in :ref:`file_mainboard_Src_bal.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: bal_init(bal_handle *)

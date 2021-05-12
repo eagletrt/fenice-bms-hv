@@ -1,0 +1,13 @@
+.. _exhale_function_bal_8c_1a895873c36da91db9c896648e8cef00c0:
+
+Function _bubble_sort
+=====================
+
+- Defined in :ref:`file_mainboard_Src_bal.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: _bubble_sort(uint8_t, uint16_t, uint8_t)

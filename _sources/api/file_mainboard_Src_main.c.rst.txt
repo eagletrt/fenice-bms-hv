@@ -29,8 +29,6 @@ Includes
 --------
 
 
-- ``bal_fsm.h`` (:ref:`file_mainboard_Inc_bal_fsm.h`)
-
 - ``cli_bms.h`` (:ref:`file_mainboard_Inc_cli_bms.h`)
 
 - ``error/error.h`` (:ref:`file_mainboard_Inc_error_error.h`)
@@ -93,6 +91,8 @@ Variables
 
 
 - :ref:`exhale_variable_mainboard_2Src_2main_8c_1a1c126854bb1813d31ab4776b21dcc51f`
+
+- :ref:`exhale_variable_mainboard_2Src_2main_8c_1a58b94d8446d83cebee1aadaa5ed0690e`
 
 - :ref:`exhale_variable_mainboard_2Src_2main_8c_1ab9b1f9b2a9bed288beffd8ce1d7d6406`
 
