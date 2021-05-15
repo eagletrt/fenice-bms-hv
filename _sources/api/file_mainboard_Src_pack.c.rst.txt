@@ -50,6 +50,8 @@ Includes
 
 - ``peripherals/si8900.h`` (:ref:`file_mainboard_Inc_peripherals_si8900.h`)
 
+- ``soc.h`` (:ref:`file_mainboard_Inc_soc.h`)
+
 - ``stdbool.h``
 
 - ``stm32g4xx_hal.h``
@@ -143,4 +145,6 @@ Variables
 - :ref:`exhale_variable_pack_8c_1a145ff3ef9e53de3d83064acbf72f0b9f`
 
 - :ref:`exhale_variable_pack_8c_1af0efb692b8d404ba4e4986dff19619f1`
+
+- :ref:`exhale_variable_pack_8c_1a232b686d286a16d23e8f9e39d5fc346a`
 

@@ -170,6 +170,7 @@
 
 <span class="cp">#include</span> <span class="cpf">&quot;feedback.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;peripherals/si8900.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;soc.h&quot;</span><span class="cp"></span>
 <span class="cp">#define CURRENT_ARRAY_LENGTH 512</span>
 
 <span class="cp">#ifndef max</span>
@@ -197,6 +198,7 @@
 <span class="kt">uint32_t</span> <span class="n">current_50</span><span class="p">[</span><span class="n">CURRENT_ARRAY_LENGTH</span><span class="p">];</span>   <span class="c1">// TODO: move to pck_data and update DMA and generate getter no setter</span>
 <span class="kt">uint32_t</span> <span class="n">current_300</span><span class="p">[</span><span class="n">CURRENT_ARRAY_LENGTH</span><span class="p">];</span>  <span class="c1">// TODO: move to pck_data and update DMA and generate getter no setter</span>
 
+<span class="n">soc_t</span> <span class="n">soc_total</span><span class="p">;</span>
 <span class="n">cells_t</span> <span class="n">cells</span><span class="p">;</span>
 <span class="n">bal_handle</span> <span class="n">balancing</span><span class="p">;</span>  <span class="c1">// TODO: Remove bal_conf_t struct (remove enable and the rest has to be managed by the state machine with the eeprom too)</span>
 <span class="n">current_t</span> <span class="n">current</span><span class="p">;</span>
@@ -214,6 +216,7 @@
         <span class="n">cells</span><span class="p">.</span><span class="n">temperatures</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="p">}</span>
 
+    <span class="n">soc_init</span><span class="p">(</span><span class="n">soc_total</span><span class="p">);</span>
     <span class="n">bal_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">balancing</span><span class="p">);</span>
 
     <span class="c1">// LTC6813 GPIO configuration</span>
@@ -303,7 +306,9 @@
         <span class="n">current</span> <span class="o">=</span> <span class="n">current50</span><span class="p">;</span>
     <span class="p">}</span>
 
-    <span class="n">error_toggle_check</span><span class="p">(</span><span class="n">current300</span> <span class="o">&gt;</span> <span class="n">PACK_MAX_CURRENT</span><span class="p">,</span> <span class="n">ERROR_OVER_CURRENT</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="n">soc_sample_current</span><span class="p">(</span><span class="n">soc_total</span><span class="p">,</span> <span class="n">current</span><span class="p">,</span> <span class="n">pack_get_int_voltage</span><span class="p">(),</span> <span class="n">HAL_GetTick</span><span class="p">());</span>
+
+    <span class="n">error_toggle_check</span><span class="p">(</span><span class="n">current</span> <span class="o">&gt;</span> <span class="n">PACK_MAX_CURRENT</span><span class="p">,</span> <span class="n">ERROR_OVER_CURRENT</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">pack_update_voltage_stats</span><span class="p">(</span><span class="n">voltage_t</span> <span class="o">*</span><span class="n">total</span><span class="p">,</span> <span class="n">voltage_t</span> <span class="o">*</span><span class="n">maxv</span><span class="p">,</span> <span class="n">voltage_t</span> <span class="o">*</span><span class="n">minv</span><span class="p">)</span> <span class="p">{</span>

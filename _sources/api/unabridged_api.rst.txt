@@ -1946,6 +1946,11 @@ Variables
 .. toctree::
    :maxdepth: 5
 
+   variable_pack_8c_1a232b686d286a16d23e8f9e39d5fc346a.rst
+
+.. toctree::
+   :maxdepth: 5
+
    variable_cli__bms_8c_1a51ca6460673bd23b69c7f4408bda56b8.rst
 
 .. toctree::
