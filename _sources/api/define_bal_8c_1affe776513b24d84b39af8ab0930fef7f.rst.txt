@@ -1,0 +1,13 @@
+.. _exhale_define_bal_8c_1affe776513b24d84b39af8ab0930fef7f:
+
+Define max
+==========
+
+- Defined in :ref:`file_mainboard_Src_bal.c`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: max

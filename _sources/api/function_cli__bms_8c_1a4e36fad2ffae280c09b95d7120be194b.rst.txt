@@ -1,0 +1,13 @@
+.. _exhale_function_cli__bms_8c_1a4e36fad2ffae280c09b95d7120be194b:
+
+Function _cli_ts
+================
+
+- Defined in :ref:`file_mainboard_Src_cli_bms.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: _cli_ts(uint16_t, char **, char *)

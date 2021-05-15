@@ -1,0 +1,13 @@
+.. _exhale_function_bal_8c_1aa0eaba37cbea2e81fa7aab2d986019f2:
+
+Function _min_index
+===================
+
+- Defined in :ref:`file_mainboard_Src_bal.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: _min_index(voltage_t, size_t)

@@ -179,6 +179,8 @@
 <span class="c1">//=================================== LTC6813 ===============================</span>
 <span class="c1">//===========================================================================</span>
 
+<span class="cp">#define LTC6813_PERIPHERAL hspi1</span>
+
 <span class="c1">// Set to 1 to emulate the LTC daisy chain</span>
 <span class="cp">#define LTC6813_EMU 0</span>
 
@@ -232,6 +234,10 @@
 <span class="cp">#define BAL_MAX_VOLTAGE_THRESHOLD 100</span>
 
 <span class="cp">#define BAL_CYCLE_LENGTH 120000</span>
+
+<span class="cp">#define BAL_COOLDOWN_DELAY 5000</span>
+
+<span class="c1">// @section Pre-charge</span>
 
 <span class="cp">#define PRECHARGE_TIMEOUT 10000</span>
 <span class="cp">#define PRECHARGE_VOLTAGE_THRESHOLD 0.95</span>

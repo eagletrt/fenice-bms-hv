@@ -74,10 +74,6 @@ Functions
 
 - :ref:`exhale_function_pack_8c_1aa61e85cd7f306656a67272edaf145f6c`
 
-- :ref:`exhale_function_pack_8c_1ae8f765f62104756b8e1f7fac9c7d8296`
-
-- :ref:`exhale_function_pack_8c_1a05e05a56e1e19d3bdbb650a57e14ae7b`
-
 - :ref:`exhale_function_pack_8c_1a62b44ad3586608b81dce6a617b3e7f31`
 
 - :ref:`exhale_function_pack_8c_1aa4a76377c7d04fce76cb12e4daecb87a`
@@ -93,6 +89,8 @@ Functions
 - :ref:`exhale_function_pack_8c_1afc77225b3417710fec24e84556825ea2`
 
 - :ref:`exhale_function_pack_8c_1a72b388852db07771e836901e5561503e`
+
+- :ref:`exhale_function_pack_8c_1a7f587ce8028afdb6698f3cab085f0e18`
 
 - :ref:`exhale_function_pack_8c_1a51f16a179823be9e0b981fa7ccdaa7dd`
 
@@ -133,8 +131,6 @@ Defines
 Variables
 ---------
 
-
-- :ref:`exhale_variable_pack_8c_1ad78dcd438aad00de10a2c2816ce16a40`
 
 - :ref:`exhale_variable_pack_8c_1a22fb404da4d9ebc546ffb3bd5a9ad469`
 
