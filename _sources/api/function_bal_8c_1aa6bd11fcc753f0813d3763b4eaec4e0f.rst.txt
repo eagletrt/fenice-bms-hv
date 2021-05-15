@@ -1,0 +1,13 @@
+.. _exhale_function_bal_8c_1aa6bd11fcc753f0813d3763b4eaec4e0f:
+
+Function bal_compute_indexes(uint16_t, uint8_t, uint16_t)
+=========================================================
+
+- Defined in :ref:`file_mainboard_Src_bal.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: bal_compute_indexes(uint16_t, uint8_t, uint16_t)

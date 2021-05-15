@@ -19,6 +19,7 @@ Program Listing for File pack.c
    
    #include "feedback.h"
    #include "peripherals/si8900.h"
+   #include "soc.h"
    #define CURRENT_ARRAY_LENGTH 512
    
    #ifndef max
@@ -46,7 +47,9 @@ Program Listing for File pack.c
    uint32_t current_50[CURRENT_ARRAY_LENGTH];   // TODO: move to pck_data and update DMA and generate getter no setter
    uint32_t current_300[CURRENT_ARRAY_LENGTH];  // TODO: move to pck_data and update DMA and generate getter no setter
    
+   soc_t soc_total;
    cells_t cells;
+   bal_handle balancing;  // TODO: Remove bal_conf_t struct (remove enable and the rest has to be managed by the state machine with the eeprom too)
    current_t current;
    
    void pack_init() {
@@ -61,6 +64,9 @@ Program Listing for File pack.c
        for (size_t i = 0; i < PACK_TEMP_COUNT; i++) {
            cells.temperatures[i] = 0;
        }
+   
+       soc_init(soc_total);
+       bal_init(&balancing);
    
        // LTC6813 GPIO configuration
        GPIO_CONFIG = GPIO_I2C_MODE;
@@ -149,7 +155,9 @@ Program Listing for File pack.c
            current = current50;
        }
    
-       error_toggle_check(current300 > PACK_MAX_CURRENT, ERROR_OVER_CURRENT, 0);
+       soc_sample_current(soc_total, current, pack_get_int_voltage(), HAL_GetTick());
+   
+       error_toggle_check(current > PACK_MAX_CURRENT, ERROR_OVER_CURRENT, 0);
    }
    
    void pack_update_voltage_stats(voltage_t *total, voltage_t *maxv, voltage_t *minv) {
@@ -187,6 +195,27 @@ Program Listing for File pack.c
        cells.mean_temperature = (temperature_t)(avg_temperature / TEMP_SENSOR_COUNT);
        cells.max_temperature = max_temperature;
        cells.min_temperature = min(min_temperature, max_temperature);
+   }
+   
+   bool pack_balance_cells(SPI_HandleTypeDef *hspi) {
+       // TODO: Improve logging
+       if (balancing.enable) {
+           uint8_t indexes[PACK_CELL_COUNT];
+   
+           voltage_t voltages[PACK_CELL_COUNT];
+   
+           memcpy(voltages, cells.voltages, PACK_CELL_COUNT);
+   
+           size_t len = bal_compute_indexes(voltages, indexes, balancing.threshold);
+   
+           if (len > 0) {
+               ltc6813_set_balancing(hspi, indexes, balancing.slot_time);
+               return true;
+           }
+   
+           balancing.enable = false;
+       }
+       return false;
    }
    
    bool pack_set_ts_off() {
@@ -257,7 +286,7 @@ Program Listing for File pack.c
        return current;
    }
    
-   int16_t pack_get_power() {
-       // TODO: fix units
-       return current * cells.int_voltage;
+   bal_handle pack_get_balancing() {
+       // TODO: don't return the handle, create getters for each parameter
+       return balancing;
    }

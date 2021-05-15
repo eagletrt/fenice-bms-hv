@@ -15,6 +15,7 @@ Program Listing for File pack.h
    
    #include <inttypes.h>
    
+   #include "bal.h"
    #include "error/error.h"
    #include "fenice_config.h"
    #include "peripherals/ltc6813_utils.h"
@@ -31,6 +32,7 @@ Program Listing for File pack.h
    void pack_update_voltage_stats();
    
    void pack_update_temperature_stats();
+   bool pack_balance_cells(SPI_HandleTypeDef *hspi);
    
    bool pack_set_ts_off();
    bool pack_set_pc_start();
@@ -46,4 +48,4 @@ Program Listing for File pack.h
    temperature_t pack_get_min_temperature();
    temperature_t pack_get_mean_temperature();
    current_t pack_get_current();
-   int16_t pack_get_power();
+   bal_handle pack_get_balancing();

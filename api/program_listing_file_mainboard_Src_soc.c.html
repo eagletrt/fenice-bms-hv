@@ -1,0 +1,254 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Program Listing for File soc.c &mdash; Fenice BMS HV 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Fenice BMS HV
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Software</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Fenice BMS HV</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Program Listing for File soc.c</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/api/program_listing_file_mainboard_Src_soc.c.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="program-listing-for-file-soc-c">
+<span id="program-listing-file-mainboard-src-soc-c"></span><h1>Program Listing for File soc.c<a class="headerlink" href="#program-listing-for-file-soc-c" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_mainboard_Src_soc.c.html#file-mainboard-src-soc-c"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">mainboard/Src/soc.c</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/* Includes ------------------------------------------------------------------*/</span>
+<span class="cp">#include</span> <span class="cpf">&quot;soc.h&quot;</span><span class="cp"></span>
+
+<span class="cp">#include</span> <span class="cpf">&quot;pack.h&quot;</span><span class="cp"></span>
+<span class="cm">/* Private typedef -----------------------------------------------------------*/</span>
+<span class="k">struct</span> <span class="n">soc</span> <span class="p">{</span>
+    <span class="kt">uint32_t</span> <span class="n">last_sample</span><span class="p">;</span>
+    <span class="kt">uint32_t</span> <span class="n">coulomb</span><span class="p">;</span>
+    <span class="kt">uint32_t</span> <span class="n">joule</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="cm">/* Private define ------------------------------------------------------------*/</span>
+<span class="cm">/* Private macro -------------------------------------------------------------*/</span>
+<span class="cm">/* Private variables ---------------------------------------------------------*/</span>
+<span class="cm">/* Private function prototypes -----------------------------------------------*/</span>
+<span class="cm">/* Exported functions --------------------------------------------------------*/</span>
+
+<span class="kt">void</span> <span class="nf">soc_init</span><span class="p">(</span><span class="n">soc_t</span> <span class="n">handle</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">handle</span><span class="o">-&gt;</span><span class="n">last_sample</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">handle</span><span class="o">-&gt;</span><span class="n">coulomb</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">handle</span><span class="o">-&gt;</span><span class="n">joule</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">soc_reset_time</span><span class="p">(</span><span class="n">soc_t</span> <span class="n">handle</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">time</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">handle</span><span class="o">-&gt;</span><span class="n">last_sample</span> <span class="o">=</span> <span class="n">time</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">soc_sample_current</span><span class="p">(</span><span class="n">soc_t</span> <span class="n">handle</span><span class="p">,</span> <span class="n">current_t</span> <span class="n">current</span><span class="p">,</span> <span class="n">voltage_t</span> <span class="n">voltage</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">time</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// C = ∫I dt = I*Δt</span>
+    <span class="n">handle</span><span class="o">-&gt;</span><span class="n">coulomb</span> <span class="o">+=</span> <span class="n">current</span> <span class="o">*</span> <span class="p">(</span><span class="n">time</span> <span class="o">-</span> <span class="n">handle</span><span class="o">-&gt;</span><span class="n">last_sample</span><span class="p">);</span>
+
+    <span class="c1">// J = C*V</span>
+    <span class="n">handle</span><span class="o">-&gt;</span><span class="n">joule</span> <span class="o">+=</span> <span class="n">handle</span><span class="o">-&gt;</span><span class="n">coulomb</span> <span class="o">*</span> <span class="n">voltage</span><span class="p">;</span>
+
+    <span class="n">handle</span><span class="o">-&gt;</span><span class="n">last_sample</span> <span class="o">=</span> <span class="n">time</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">double</span> <span class="nf">soc_get_total_consumption</span><span class="p">(</span><span class="n">soc_t</span> <span class="n">handle</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// 1 J = 1/3600s [Wh]</span>
+    <span class="k">return</span> <span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="n">handle</span><span class="o">-&gt;</span><span class="n">joule</span> <span class="o">/</span> <span class="mi">3600000</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, E-Agle TRT.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
