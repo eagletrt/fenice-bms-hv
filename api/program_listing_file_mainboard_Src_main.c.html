@@ -179,6 +179,7 @@
 <span class="cp">#include</span> <span class="cpf">&quot;fdcan.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;fenice_config.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;fsm_bms.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;m95256.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;peripherals/can.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;si8900.h&quot;</span><span class="cp"></span>
 <span class="cm">/* USER CODE END Includes */</span>
@@ -203,6 +204,8 @@
 
 <span class="cm">/* USER CODE BEGIN PV */</span>
 <span class="n">DMA_HandleTypeDef</span> <span class="n">hdma_adc1</span><span class="p">;</span>
+
+<span class="n">m95256_t</span> <span class="n">eeprom</span><span class="p">;</span>
 
 <span class="kt">uint32_t</span> <span class="n">timer_volts</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="kt">uint32_t</span> <span class="n">timer_temps</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
@@ -297,6 +300,7 @@
     <span class="n">fsm_bms_init</span><span class="p">();</span>
     <span class="n">cli_bms_init</span><span class="p">();</span>
     <span class="n">can_init</span><span class="p">();</span>
+    <span class="n">m95256_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">eeprom</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">spi_eeprom</span><span class="p">,</span> <span class="n">CS_EEPROM_GPIO_Port</span><span class="p">,</span> <span class="n">CS_EEPROM_Pin</span><span class="p">);</span>
 
     <span class="k">if</span> <span class="p">(</span><span class="n">si8900_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart3</span><span class="p">,</span> <span class="n">ADC_SIN_GPIO_Port</span><span class="p">,</span> <span class="n">ADC_SIN_Pin</span><span class="p">))</span> <span class="p">{</span>
         <span class="n">cli_print</span><span class="p">(</span><span class="o">&amp;</span><span class="n">cli_bms</span><span class="p">,</span> <span class="s">&quot;SI8900 INITIALIZED</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>

@@ -1,0 +1,13 @@
+.. _exhale_variable_mainboard_2Src_2main_8c_1a7e45b0ca9d0fe428973d248104dfa15f:
+
+Variable eeprom
+===============
+
+- Defined in :ref:`file_mainboard_Src_main.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: eeprom

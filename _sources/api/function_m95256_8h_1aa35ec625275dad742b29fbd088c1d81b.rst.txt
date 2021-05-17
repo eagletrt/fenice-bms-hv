@@ -1,0 +1,13 @@
+.. _exhale_function_m95256_8h_1aa35ec625275dad742b29fbd088c1d81b:
+
+Function m95256_init(m95256_t \*, SPI_HandleTypeDef \*, GPIO_TypeDef \*, uint16_t)
+==================================================================================
+
+- Defined in :ref:`file_mainboard_Inc_peripherals_m95256.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: m95256_init(m95256_t *, SPI_HandleTypeDef *, GPIO_TypeDef *, uint16_t)

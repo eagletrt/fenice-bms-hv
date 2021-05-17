@@ -41,6 +41,8 @@ Includes
 
 - ``gpio.h`` (:ref:`file_mainboard_Inc_gpio.h`)
 
+- ``m95256.h`` (:ref:`file_mainboard_Inc_peripherals_m95256.h`)
+
 - ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
 
 - ``peripherals/can.h`` (:ref:`file_mainboard_Inc_peripherals_can.h`)
@@ -89,6 +91,8 @@ Defines
 Variables
 ---------
 
+
+- :ref:`exhale_variable_mainboard_2Src_2main_8c_1a7e45b0ca9d0fe428973d248104dfa15f`
 
 - :ref:`exhale_variable_mainboard_2Src_2main_8c_1a1c126854bb1813d31ab4776b21dcc51f`
 

@@ -37,6 +37,8 @@ Included By
 -----------
 
 
+- :ref:`file_mainboard_Src_main.c`
+
 - :ref:`file_mainboard_Src_peripherals_m95256.c`
 
 
@@ -53,7 +55,9 @@ Functions
 ---------
 
 
-- :ref:`exhale_function_m95256_8h_1ad79653e10d7f134529b47ba3bbe65e6d`
+- :ref:`exhale_function_m95256_8h_1ae6632af2fbe519ad76f178ff8d6a5323`
+
+- :ref:`exhale_function_m95256_8h_1aa35ec625275dad742b29fbd088c1d81b`
 
 - :ref:`exhale_function_m95256_8h_1ab19be4c09cf63afe51eda9741e888f88`
 

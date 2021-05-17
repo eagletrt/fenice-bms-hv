@@ -31,6 +31,8 @@ Includes
 
 - ``m95256.h`` (:ref:`file_mainboard_Inc_peripherals_m95256.h`)
 
+- ``stdlib.h``
+
 
 
 
@@ -49,7 +51,9 @@ Functions
 
 - :ref:`exhale_function_m95256_8c_1ac4f37ebcdbdcea3a1c91b8794b66ba44`
 
-- :ref:`exhale_function_m95256_8c_1ad79653e10d7f134529b47ba3bbe65e6d`
+- :ref:`exhale_function_m95256_8c_1ae6632af2fbe519ad76f178ff8d6a5323`
+
+- :ref:`exhale_function_m95256_8c_1aa35ec625275dad742b29fbd088c1d81b`
 
 - :ref:`exhale_function_m95256_8c_1ab19be4c09cf63afe51eda9741e888f88`
 

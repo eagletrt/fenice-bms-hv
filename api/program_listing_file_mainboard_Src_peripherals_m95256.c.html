@@ -164,6 +164,8 @@
 <p>↰ <a class="reference internal" href="file_mainboard_Src_peripherals_m95256.c.html#file-mainboard-src-peripherals-m95256-c"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">mainboard/Src/peripherals/m95256.c</span></code>)</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;m95256.h&quot;</span><span class="cp"></span>
 
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+
 <span class="k">struct</span> <span class="n">m95256</span> <span class="p">{</span>
     <span class="n">SPI_HandleTypeDef</span><span class="o">*</span> <span class="n">spi</span><span class="p">;</span>
     <span class="n">GPIO_TypeDef</span><span class="o">*</span> <span class="n">cs_gpio</span><span class="p">;</span>
@@ -173,10 +175,15 @@
 <span class="kt">uint8_t</span> <span class="n">EEPROM_StatusByte</span><span class="p">;</span>
 <span class="kt">uint8_t</span> <span class="n">RxBuffer</span><span class="p">[</span><span class="n">EEPROM_BUFFER_SIZE</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mh">0x00</span><span class="p">};</span>
 
-<span class="kt">void</span> <span class="nf">m95256_INIT</span><span class="p">(</span><span class="n">m95256_t</span> <span class="n">eeprom</span><span class="p">,</span> <span class="n">SPI_HandleTypeDef</span><span class="o">*</span> <span class="n">hspi</span><span class="p">,</span> <span class="n">GPIO_TypeDef</span><span class="o">*</span> <span class="n">cs_gpio</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="n">cs_pin</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">spi</span> <span class="o">=</span> <span class="n">hspi</span><span class="p">;</span>
-    <span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">cs_gpio</span> <span class="o">=</span> <span class="n">cs_gpio</span><span class="p">;</span>
-    <span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">cs_pin</span> <span class="o">=</span> <span class="n">cs_pin</span><span class="p">;</span>
+<span class="kt">void</span> <span class="nf">m95256_init</span><span class="p">(</span><span class="n">m95256_t</span><span class="o">*</span> <span class="n">eeprom</span><span class="p">,</span> <span class="n">SPI_HandleTypeDef</span><span class="o">*</span> <span class="n">hspi</span><span class="p">,</span> <span class="n">GPIO_TypeDef</span><span class="o">*</span> <span class="n">cs_gpio</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="n">cs_pin</span><span class="p">)</span> <span class="p">{</span>
+    <span class="o">*</span><span class="n">eeprom</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">m95256</span><span class="p">));</span>
+    <span class="p">(</span><span class="o">*</span><span class="n">eeprom</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">spi</span> <span class="o">=</span> <span class="n">hspi</span><span class="p">;</span>
+    <span class="p">(</span><span class="o">*</span><span class="n">eeprom</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">cs_gpio</span> <span class="o">=</span> <span class="n">cs_gpio</span><span class="p">;</span>
+    <span class="p">(</span><span class="o">*</span><span class="n">eeprom</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">cs_pin</span> <span class="o">=</span> <span class="n">cs_pin</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">m95256_deinit</span><span class="p">(</span><span class="n">m95256_t</span><span class="o">*</span> <span class="n">eeprom</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">free</span><span class="p">(</span><span class="o">*</span><span class="n">eeprom</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="n">EepromOperations</span> <span class="nf">m95256_WritePage</span><span class="p">(</span><span class="n">m95256_t</span> <span class="n">eeprom</span><span class="p">,</span> <span class="kt">uint8_t</span><span class="o">*</span> <span class="n">pBuffer</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="n">WriteAddr</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="n">NumByteToWrite</span><span class="p">)</span> <span class="p">{</span>
