@@ -1,0 +1,13 @@
+.. _exhale_function_m95256_8h_1a09de66dbb8e3928e352777a1ae8babe2:
+
+Function m95256_SendByte
+========================
+
+- Defined in :ref:`file_mainboard_Inc_peripherals_m95256.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: m95256_SendByte(SPI_HandleTypeDef *, uint8_t)

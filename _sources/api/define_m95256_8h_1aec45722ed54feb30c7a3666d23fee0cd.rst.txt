@@ -1,0 +1,13 @@
+.. _exhale_define_m95256_8h_1aec45722ed54feb30c7a3666d23fee0cd:
+
+Define EEPROM_WIP_FLAG
+======================
+
+- Defined in :ref:`file_mainboard_Inc_peripherals_m95256.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: EEPROM_WIP_FLAG

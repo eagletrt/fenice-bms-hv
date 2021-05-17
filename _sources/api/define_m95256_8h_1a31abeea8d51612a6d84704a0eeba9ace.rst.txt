@@ -1,0 +1,13 @@
+.. _exhale_define_m95256_8h_1a31abeea8d51612a6d84704a0eeba9ace:
+
+Define EEPROM_PAGESIZE
+======================
+
+- Defined in :ref:`file_mainboard_Inc_peripherals_m95256.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: EEPROM_PAGESIZE

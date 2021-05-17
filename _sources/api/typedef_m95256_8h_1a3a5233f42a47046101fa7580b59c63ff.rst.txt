@@ -1,0 +1,13 @@
+.. _exhale_typedef_m95256_8h_1a3a5233f42a47046101fa7580b59c63ff:
+
+Typedef m95256_t
+================
+
+- Defined in :ref:`file_mainboard_Inc_peripherals_m95256.h`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: m95256_t

@@ -1,0 +1,13 @@
+.. _exhale_function_m95256_8h_1a7583d007d063ba294758688d73ca7a77:
+
+Function m95256_ReadStatusByte
+==============================
+
+- Defined in :ref:`file_mainboard_Inc_peripherals_m95256.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: m95256_ReadStatusByte(SPI_HandleTypeDef, uint8_t *)

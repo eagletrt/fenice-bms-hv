@@ -1,0 +1,13 @@
+.. _exhale_define_m95256_8h_1a66a49f64e7ab3993012232ac64adadd4:
+
+Define EEPROM_READ
+==================
+
+- Defined in :ref:`file_mainboard_Inc_peripherals_m95256.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: EEPROM_READ

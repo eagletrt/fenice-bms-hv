@@ -1,0 +1,13 @@
+.. _exhale_define_m95256_8h_1a590c9d80bdcbb44f33f8569b04b22e26:
+
+Define EEPROM_RDSR
+==================
+
+- Defined in :ref:`file_mainboard_Inc_peripherals_m95256.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: EEPROM_RDSR

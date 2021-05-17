@@ -1,0 +1,13 @@
+.. _exhale_define_m95256_8h_1ad4c47c9a8fd4b49b337df54d56305f52:
+
+Define EEPROM_WRITE
+===================
+
+- Defined in :ref:`file_mainboard_Inc_peripherals_m95256.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: EEPROM_WRITE

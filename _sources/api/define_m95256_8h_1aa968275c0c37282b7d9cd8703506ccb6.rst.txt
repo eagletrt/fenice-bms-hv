@@ -1,0 +1,13 @@
+.. _exhale_define_m95256_8h_1aa968275c0c37282b7d9cd8703506ccb6:
+
+Define EEPROM_WRSR
+==================
+
+- Defined in :ref:`file_mainboard_Inc_peripherals_m95256.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: EEPROM_WRSR

@@ -1,0 +1,13 @@
+.. _exhale_function_m95256_8h_1a1e3a0c1da156e600b5588ac469bbdb7b:
+
+Function sEE_WriteStatusRegister(m95256_t, uint8_t)
+===================================================
+
+- Defined in :ref:`file_mainboard_Inc_peripherals_m95256.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: sEE_WriteStatusRegister(m95256_t, uint8_t)

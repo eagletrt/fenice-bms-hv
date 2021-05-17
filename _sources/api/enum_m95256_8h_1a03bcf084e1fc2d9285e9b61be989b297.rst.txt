@@ -1,0 +1,13 @@
+.. _exhale_enum_m95256_8h_1a03bcf084e1fc2d9285e9b61be989b297:
+
+Enum EepromOperations
+=====================
+
+- Defined in :ref:`file_mainboard_Inc_peripherals_m95256.h`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: EepromOperations

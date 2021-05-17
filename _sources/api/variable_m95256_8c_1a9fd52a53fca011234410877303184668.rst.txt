@@ -1,0 +1,13 @@
+.. _exhale_variable_m95256_8c_1a9fd52a53fca011234410877303184668:
+
+Variable EEPROM_StatusByte
+==========================
+
+- Defined in :ref:`file_mainboard_Src_peripherals_m95256.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: EEPROM_StatusByte

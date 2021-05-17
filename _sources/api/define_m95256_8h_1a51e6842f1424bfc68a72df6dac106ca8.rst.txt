@@ -1,0 +1,13 @@
+.. _exhale_define_m95256_8h_1a51e6842f1424bfc68a72df6dac106ca8:
+
+Define EEPROM_CS_HIGH
+=====================
+
+- Defined in :ref:`file_mainboard_Inc_peripherals_m95256.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: EEPROM_CS_HIGH

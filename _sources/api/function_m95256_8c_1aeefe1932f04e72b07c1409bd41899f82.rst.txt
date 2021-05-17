@@ -1,0 +1,13 @@
+.. _exhale_function_m95256_8c_1aeefe1932f04e72b07c1409bd41899f82:
+
+Function m95256_SendInstruction(SPI_HandleTypeDef \*, uint8_t \*, uint8_t)
+==========================================================================
+
+- Defined in :ref:`file_mainboard_Src_peripherals_m95256.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: m95256_SendInstruction(SPI_HandleTypeDef *, uint8_t *, uint8_t)

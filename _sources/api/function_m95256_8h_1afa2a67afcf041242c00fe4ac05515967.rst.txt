@@ -1,0 +1,13 @@
+.. _exhale_function_m95256_8h_1afa2a67afcf041242c00fe4ac05515967:
+
+Function m95256_WritePage(m95256_t, uint8_t \*, uint16_t, uint16_t)
+===================================================================
+
+- Defined in :ref:`file_mainboard_Inc_peripherals_m95256.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: m95256_WritePage(m95256_t, uint8_t *, uint16_t, uint16_t)

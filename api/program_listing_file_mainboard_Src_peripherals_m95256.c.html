@@ -1,0 +1,525 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Program Listing for File m95256.c &mdash; Fenice BMS HV 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Fenice BMS HV
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Software</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Fenice BMS HV</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Program Listing for File m95256.c</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/api/program_listing_file_mainboard_Src_peripherals_m95256.c.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="program-listing-for-file-m95256-c">
+<span id="program-listing-file-mainboard-src-peripherals-m95256-c"></span><h1>Program Listing for File m95256.c<a class="headerlink" href="#program-listing-for-file-m95256-c" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_mainboard_Src_peripherals_m95256.c.html#file-mainboard-src-peripherals-m95256-c"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">mainboard/Src/peripherals/m95256.c</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;m95256.h&quot;</span><span class="cp"></span>
+
+<span class="k">struct</span> <span class="n">m95256</span> <span class="p">{</span>
+    <span class="n">SPI_HandleTypeDef</span><span class="o">*</span> <span class="n">spi</span><span class="p">;</span>
+    <span class="n">GPIO_TypeDef</span><span class="o">*</span> <span class="n">cs_gpio</span><span class="p">;</span>
+    <span class="kt">uint16_t</span> <span class="n">cs_pin</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kt">uint8_t</span> <span class="n">EEPROM_StatusByte</span><span class="p">;</span>
+<span class="kt">uint8_t</span> <span class="n">RxBuffer</span><span class="p">[</span><span class="n">EEPROM_BUFFER_SIZE</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mh">0x00</span><span class="p">};</span>
+
+<span class="kt">void</span> <span class="nf">m95256_INIT</span><span class="p">(</span><span class="n">m95256_t</span> <span class="n">eeprom</span><span class="p">,</span> <span class="n">SPI_HandleTypeDef</span><span class="o">*</span> <span class="n">hspi</span><span class="p">,</span> <span class="n">GPIO_TypeDef</span><span class="o">*</span> <span class="n">cs_gpio</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="n">cs_pin</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">spi</span> <span class="o">=</span> <span class="n">hspi</span><span class="p">;</span>
+    <span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">cs_gpio</span> <span class="o">=</span> <span class="n">cs_gpio</span><span class="p">;</span>
+    <span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">cs_pin</span> <span class="o">=</span> <span class="n">cs_pin</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">EepromOperations</span> <span class="nf">m95256_WritePage</span><span class="p">(</span><span class="n">m95256_t</span> <span class="n">eeprom</span><span class="p">,</span> <span class="kt">uint8_t</span><span class="o">*</span> <span class="n">pBuffer</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="n">WriteAddr</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="n">NumByteToWrite</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">spi</span><span class="o">-&gt;</span><span class="n">State</span> <span class="o">!=</span> <span class="n">HAL_SPI_STATE_READY</span><span class="p">)</span>
+        <span class="p">;</span>
+
+    <span class="n">HAL_StatusTypeDef</span> <span class="n">spiTransmitStatus</span><span class="p">;</span>
+
+    <span class="n">sEE_WriteEnable</span><span class="p">(</span><span class="n">eeprom</span><span class="p">);</span>
+
+    <span class="cm">/*</span>
+<span class="cm">        We gonna send commands in one packet of 3 bytes</span>
+<span class="cm">     */</span>
+    <span class="kt">uint8_t</span> <span class="n">header</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+
+    <span class="n">header</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">EEPROM_WRITE</span><span class="p">;</span>    <span class="c1">// Send &quot;Write to Memory&quot; instruction</span>
+    <span class="n">header</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">WriteAddr</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">;</span>  <span class="c1">// Send 16-bit address</span>
+    <span class="n">header</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">WriteAddr</span><span class="p">;</span>
+
+    <span class="c1">// Select the EEPROM: Chip Select low</span>
+    <span class="n">EEPROM_CS_LOW</span><span class="p">(</span><span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">cs_gpio</span><span class="p">,</span> <span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">cs_pin</span><span class="p">);</span>
+
+    <span class="n">m95256_SendInstruction</span><span class="p">(</span><span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">spi</span><span class="p">,</span> <span class="p">(</span><span class="kt">uint8_t</span><span class="o">*</span><span class="p">)</span><span class="n">header</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+
+    <span class="c1">// Make 5 attemtps to write the data</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">uint8_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">spiTransmitStatus</span> <span class="o">=</span> <span class="n">HAL_SPI_Transmit</span><span class="p">(</span><span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">spi</span><span class="p">,</span> <span class="n">pBuffer</span><span class="p">,</span> <span class="n">NumByteToWrite</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">spiTransmitStatus</span> <span class="o">==</span> <span class="n">HAL_BUSY</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">HAL_Delay</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Deselect the EEPROM: Chip Select high</span>
+    <span class="n">EEPROM_CS_HIGH</span><span class="p">(</span><span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">cs_gpio</span><span class="p">,</span> <span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">cs_pin</span><span class="p">);</span>
+
+    <span class="c1">// Wait the end of EEPROM writing</span>
+    <span class="n">m95256_WaitStandbyState</span><span class="p">(</span><span class="n">eeprom</span><span class="p">);</span>
+
+    <span class="c1">// Disable the write access to the EEPROM</span>
+    <span class="n">sEE_WriteDisable</span><span class="p">(</span><span class="n">eeprom</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">spiTransmitStatus</span> <span class="o">==</span> <span class="n">HAL_ERROR</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">EEPROM_STATUS_ERROR</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">EEPROM_STATUS_COMPLETE</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">EepromOperations</span> <span class="nf">m95256_WriteBuffer</span><span class="p">(</span><span class="n">m95256_t</span> <span class="n">eeprom</span><span class="p">,</span> <span class="kt">uint8_t</span><span class="o">*</span> <span class="n">pBuffer</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="n">WriteAddr</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="n">NumByteToWrite</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">uint16_t</span> <span class="n">NumOfPage</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">NumOfSingle</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">Addr</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">temp</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">uint16_t</span> <span class="n">sEE_DataNum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="n">EepromOperations</span> <span class="n">pageWriteStatus</span> <span class="o">=</span> <span class="n">EEPROM_STATUS_PENDING</span><span class="p">;</span>
+
+    <span class="n">Addr</span> <span class="o">=</span> <span class="n">WriteAddr</span> <span class="o">%</span> <span class="n">EEPROM_PAGESIZE</span><span class="p">;</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="n">EEPROM_PAGESIZE</span> <span class="o">-</span> <span class="n">Addr</span><span class="p">;</span>
+    <span class="n">NumOfPage</span> <span class="o">=</span> <span class="n">NumByteToWrite</span> <span class="o">/</span> <span class="n">EEPROM_PAGESIZE</span><span class="p">;</span>
+    <span class="n">NumOfSingle</span> <span class="o">=</span> <span class="n">NumByteToWrite</span> <span class="o">%</span> <span class="n">EEPROM_PAGESIZE</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">Addr</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>          <span class="cm">/* WriteAddr is EEPROM_PAGESIZE aligned  */</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">NumOfPage</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* NumByteToWrite &lt; EEPROM_PAGESIZE */</span>
+            <span class="n">sEE_DataNum</span> <span class="o">=</span> <span class="n">NumByteToWrite</span><span class="p">;</span>
+            <span class="n">pageWriteStatus</span> <span class="o">=</span> <span class="n">m95256_WritePage</span><span class="p">(</span><span class="n">eeprom</span><span class="p">,</span> <span class="n">pBuffer</span><span class="p">,</span> <span class="n">WriteAddr</span><span class="p">,</span> <span class="n">sEE_DataNum</span><span class="p">);</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">pageWriteStatus</span> <span class="o">!=</span> <span class="n">EEPROM_STATUS_COMPLETE</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="n">pageWriteStatus</span><span class="p">;</span>
+            <span class="p">}</span>
+
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="cm">/* NumByteToWrite &gt; EEPROM_PAGESIZE */</span>
+            <span class="k">while</span> <span class="p">(</span><span class="n">NumOfPage</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">sEE_DataNum</span> <span class="o">=</span> <span class="n">EEPROM_PAGESIZE</span><span class="p">;</span>
+                <span class="n">pageWriteStatus</span> <span class="o">=</span> <span class="n">m95256_WritePage</span><span class="p">(</span><span class="n">eeprom</span><span class="p">,</span> <span class="n">pBuffer</span><span class="p">,</span> <span class="n">WriteAddr</span><span class="p">,</span> <span class="n">sEE_DataNum</span><span class="p">);</span>
+
+                <span class="k">if</span> <span class="p">(</span><span class="n">pageWriteStatus</span> <span class="o">!=</span> <span class="n">EEPROM_STATUS_COMPLETE</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="k">return</span> <span class="n">pageWriteStatus</span><span class="p">;</span>
+                <span class="p">}</span>
+
+                <span class="n">WriteAddr</span> <span class="o">+=</span> <span class="n">EEPROM_PAGESIZE</span><span class="p">;</span>
+                <span class="n">pBuffer</span> <span class="o">+=</span> <span class="n">EEPROM_PAGESIZE</span><span class="p">;</span>
+            <span class="p">}</span>
+
+            <span class="n">sEE_DataNum</span> <span class="o">=</span> <span class="n">NumOfSingle</span><span class="p">;</span>
+            <span class="n">pageWriteStatus</span> <span class="o">=</span> <span class="n">m95256_WritePage</span><span class="p">(</span><span class="n">eeprom</span><span class="p">,</span> <span class="n">pBuffer</span><span class="p">,</span> <span class="n">WriteAddr</span><span class="p">,</span> <span class="n">sEE_DataNum</span><span class="p">);</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">pageWriteStatus</span> <span class="o">!=</span> <span class="n">EEPROM_STATUS_COMPLETE</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="n">pageWriteStatus</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>                           <span class="cm">/* WriteAddr is not EEPROM_PAGESIZE aligned  */</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">NumOfPage</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>          <span class="cm">/* NumByteToWrite &lt; EEPROM_PAGESIZE */</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">NumOfSingle</span> <span class="o">&gt;</span> <span class="n">count</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* (NumByteToWrite + WriteAddr) &gt; EEPROM_PAGESIZE */</span>
+                <span class="n">temp</span> <span class="o">=</span> <span class="n">NumOfSingle</span> <span class="o">-</span> <span class="n">count</span><span class="p">;</span>
+                <span class="n">sEE_DataNum</span> <span class="o">=</span> <span class="n">count</span><span class="p">;</span>
+                <span class="n">pageWriteStatus</span> <span class="o">=</span> <span class="n">m95256_WritePage</span><span class="p">(</span><span class="n">eeprom</span><span class="p">,</span> <span class="n">pBuffer</span><span class="p">,</span> <span class="n">WriteAddr</span><span class="p">,</span> <span class="n">sEE_DataNum</span><span class="p">);</span>
+
+                <span class="k">if</span> <span class="p">(</span><span class="n">pageWriteStatus</span> <span class="o">!=</span> <span class="n">EEPROM_STATUS_COMPLETE</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="k">return</span> <span class="n">pageWriteStatus</span><span class="p">;</span>
+                <span class="p">}</span>
+
+                <span class="n">WriteAddr</span> <span class="o">+=</span> <span class="n">count</span><span class="p">;</span>
+                <span class="n">pBuffer</span> <span class="o">+=</span> <span class="n">count</span><span class="p">;</span>
+
+                <span class="n">sEE_DataNum</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+                <span class="n">pageWriteStatus</span> <span class="o">=</span> <span class="n">m95256_WritePage</span><span class="p">(</span><span class="n">eeprom</span><span class="p">,</span> <span class="n">pBuffer</span><span class="p">,</span> <span class="n">WriteAddr</span><span class="p">,</span> <span class="n">sEE_DataNum</span><span class="p">);</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="n">sEE_DataNum</span> <span class="o">=</span> <span class="n">NumByteToWrite</span><span class="p">;</span>
+                <span class="n">pageWriteStatus</span> <span class="o">=</span> <span class="n">m95256_WritePage</span><span class="p">(</span><span class="n">eeprom</span><span class="p">,</span> <span class="n">pBuffer</span><span class="p">,</span> <span class="n">WriteAddr</span><span class="p">,</span> <span class="n">sEE_DataNum</span><span class="p">);</span>
+            <span class="p">}</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">pageWriteStatus</span> <span class="o">!=</span> <span class="n">EEPROM_STATUS_COMPLETE</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="n">pageWriteStatus</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="cm">/* NumByteToWrite &gt; EEPROM_PAGESIZE */</span>
+            <span class="n">NumByteToWrite</span> <span class="o">-=</span> <span class="n">count</span><span class="p">;</span>
+            <span class="n">NumOfPage</span> <span class="o">=</span> <span class="n">NumByteToWrite</span> <span class="o">/</span> <span class="n">EEPROM_PAGESIZE</span><span class="p">;</span>
+            <span class="n">NumOfSingle</span> <span class="o">=</span> <span class="n">NumByteToWrite</span> <span class="o">%</span> <span class="n">EEPROM_PAGESIZE</span><span class="p">;</span>
+
+            <span class="n">sEE_DataNum</span> <span class="o">=</span> <span class="n">count</span><span class="p">;</span>
+
+            <span class="n">pageWriteStatus</span> <span class="o">=</span> <span class="n">m95256_WritePage</span><span class="p">(</span><span class="n">eeprom</span><span class="p">,</span> <span class="n">pBuffer</span><span class="p">,</span> <span class="n">WriteAddr</span><span class="p">,</span> <span class="n">sEE_DataNum</span><span class="p">);</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">pageWriteStatus</span> <span class="o">!=</span> <span class="n">EEPROM_STATUS_COMPLETE</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="n">pageWriteStatus</span><span class="p">;</span>
+            <span class="p">}</span>
+
+            <span class="n">WriteAddr</span> <span class="o">+=</span> <span class="n">count</span><span class="p">;</span>
+            <span class="n">pBuffer</span> <span class="o">+=</span> <span class="n">count</span><span class="p">;</span>
+
+            <span class="k">while</span> <span class="p">(</span><span class="n">NumOfPage</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">sEE_DataNum</span> <span class="o">=</span> <span class="n">EEPROM_PAGESIZE</span><span class="p">;</span>
+
+                <span class="n">pageWriteStatus</span> <span class="o">=</span> <span class="n">m95256_WritePage</span><span class="p">(</span><span class="n">eeprom</span><span class="p">,</span> <span class="n">pBuffer</span><span class="p">,</span> <span class="n">WriteAddr</span><span class="p">,</span> <span class="n">sEE_DataNum</span><span class="p">);</span>
+
+                <span class="k">if</span> <span class="p">(</span><span class="n">pageWriteStatus</span> <span class="o">!=</span> <span class="n">EEPROM_STATUS_COMPLETE</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="k">return</span> <span class="n">pageWriteStatus</span><span class="p">;</span>
+                <span class="p">}</span>
+
+                <span class="n">WriteAddr</span> <span class="o">+=</span> <span class="n">EEPROM_PAGESIZE</span><span class="p">;</span>
+                <span class="n">pBuffer</span> <span class="o">+=</span> <span class="n">EEPROM_PAGESIZE</span><span class="p">;</span>
+            <span class="p">}</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">NumOfSingle</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">sEE_DataNum</span> <span class="o">=</span> <span class="n">NumOfSingle</span><span class="p">;</span>
+
+                <span class="n">pageWriteStatus</span> <span class="o">=</span> <span class="n">m95256_WritePage</span><span class="p">(</span><span class="n">eeprom</span><span class="p">,</span> <span class="n">pBuffer</span><span class="p">,</span> <span class="n">WriteAddr</span><span class="p">,</span> <span class="n">sEE_DataNum</span><span class="p">);</span>
+
+                <span class="k">if</span> <span class="p">(</span><span class="n">pageWriteStatus</span> <span class="o">!=</span> <span class="n">EEPROM_STATUS_COMPLETE</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="k">return</span> <span class="n">pageWriteStatus</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">EEPROM_STATUS_COMPLETE</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">EepromOperations</span> <span class="nf">m95256_ReadBuffer</span><span class="p">(</span><span class="n">m95256_t</span> <span class="n">eeprom</span><span class="p">,</span> <span class="kt">uint8_t</span><span class="o">*</span> <span class="n">pBuffer</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="n">ReadAddr</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="n">NumByteToRead</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">spi</span><span class="o">-&gt;</span><span class="n">State</span> <span class="o">!=</span> <span class="n">HAL_SPI_STATE_READY</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">HAL_Delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="cm">/*</span>
+<span class="cm">        We gonna send all commands in one packet of 3 bytes</span>
+<span class="cm">     */</span>
+
+    <span class="kt">uint8_t</span> <span class="n">header</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+
+    <span class="n">header</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">EEPROM_READ</span><span class="p">;</span>    <span class="c1">// Send &quot;Read from Memory&quot; instruction</span>
+    <span class="n">header</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">ReadAddr</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">;</span>  <span class="c1">// Send 16-bit address</span>
+    <span class="n">header</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">ReadAddr</span><span class="p">;</span>
+
+    <span class="c1">// Select the EEPROM: Chip Select low</span>
+    <span class="n">EEPROM_CS_LOW</span><span class="p">(</span><span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">cs_gpio</span><span class="p">,</span> <span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">cs_pin</span><span class="p">);</span>
+
+    <span class="cm">/* Send WriteAddr address byte to read from */</span>
+    <span class="n">m95256_SendInstruction</span><span class="p">(</span><span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">spi</span><span class="p">,</span> <span class="n">header</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="n">HAL_SPI_Receive</span><span class="p">(</span><span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">spi</span><span class="p">,</span> <span class="p">(</span><span class="kt">uint8_t</span><span class="o">*</span><span class="p">)</span><span class="n">pBuffer</span><span class="p">,</span> <span class="n">NumByteToRead</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span> <span class="o">==</span> <span class="n">HAL_BUSY</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">HAL_Delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">};</span>
+
+    <span class="c1">// Deselect the EEPROM: Chip Select high</span>
+    <span class="n">EEPROM_CS_HIGH</span><span class="p">(</span><span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">cs_gpio</span><span class="p">,</span> <span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">cs_pin</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="n">EEPROM_STATUS_COMPLETE</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">uint8_t</span> <span class="nf">EEPROM_SendByte</span><span class="p">(</span><span class="n">SPI_HandleTypeDef</span><span class="o">*</span> <span class="n">hspi</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">byte</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">uint8_t</span> <span class="n">answerByte</span><span class="p">;</span>
+
+    <span class="cm">/* Loop while DR register in not empty */</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">hspi</span><span class="o">-&gt;</span><span class="n">State</span> <span class="o">==</span> <span class="n">HAL_SPI_STATE_RESET</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">HAL_Delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="cm">/* Send byte through the SPI peripheral */</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">HAL_SPI_Transmit</span><span class="p">(</span><span class="n">hspi</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">byte</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Error_Handler</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="cm">/* Wait to receive a byte */</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">hspi</span><span class="o">-&gt;</span><span class="n">State</span> <span class="o">==</span> <span class="n">HAL_SPI_STATE_RESET</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">HAL_Delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="cm">/* Return the byte read from the SPI bus */</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">HAL_SPI_Receive</span><span class="p">(</span><span class="n">hspi</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">answerByte</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Error_Handler</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="p">(</span><span class="kt">uint8_t</span><span class="p">)</span><span class="n">answerByte</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">void</span> <span class="nf">sEE_WriteEnable</span><span class="p">(</span><span class="n">m95256_t</span> <span class="n">eeprom</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Select the EEPROM: Chip Select low</span>
+    <span class="n">EEPROM_CS_LOW</span><span class="p">(</span><span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">cs_gpio</span><span class="p">,</span> <span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">cs_pin</span><span class="p">);</span>
+
+    <span class="kt">uint8_t</span> <span class="n">command</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">EEPROM_WREN</span><span class="p">};</span>
+    <span class="cm">/* Send &quot;Write Enable&quot; instruction */</span>
+    <span class="n">m95256_SendInstruction</span><span class="p">(</span><span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">spi</span><span class="p">,</span> <span class="p">(</span><span class="kt">uint8_t</span><span class="o">*</span><span class="p">)</span><span class="n">command</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+
+    <span class="c1">// Deselect the EEPROM: Chip Select high</span>
+    <span class="n">EEPROM_CS_HIGH</span><span class="p">(</span><span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">cs_gpio</span><span class="p">,</span> <span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">cs_pin</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">sEE_WriteDisable</span><span class="p">(</span><span class="n">m95256_t</span> <span class="n">eeprom</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Select the EEPROM: Chip Select low</span>
+    <span class="n">EEPROM_CS_LOW</span><span class="p">(</span><span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">cs_gpio</span><span class="p">,</span> <span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">cs_pin</span><span class="p">);</span>
+
+    <span class="kt">uint8_t</span> <span class="n">command</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">EEPROM_WRDI</span><span class="p">};</span>
+
+    <span class="cm">/* Send &quot;Write Disable&quot; instruction */</span>
+    <span class="n">m95256_SendInstruction</span><span class="p">(</span><span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">spi</span><span class="p">,</span> <span class="p">(</span><span class="kt">uint8_t</span><span class="o">*</span><span class="p">)</span><span class="n">command</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+
+    <span class="c1">// Deselect the EEPROM: Chip Select high</span>
+    <span class="n">EEPROM_CS_HIGH</span><span class="p">(</span><span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">cs_gpio</span><span class="p">,</span> <span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">cs_pin</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">sEE_WriteStatusRegister</span><span class="p">(</span><span class="n">m95256_t</span> <span class="n">eeprom</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">regval</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">uint8_t</span> <span class="n">command</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+
+    <span class="n">command</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">EEPROM_WRSR</span><span class="p">;</span>
+    <span class="n">command</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">regval</span><span class="p">;</span>
+
+    <span class="c1">// Enable the write access to the EEPROM</span>
+    <span class="n">sEE_WriteEnable</span><span class="p">(</span><span class="n">eeprom</span><span class="p">);</span>
+
+    <span class="c1">// Select the EEPROM: Chip Select low</span>
+    <span class="n">EEPROM_CS_LOW</span><span class="p">(</span><span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">cs_gpio</span><span class="p">,</span> <span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">cs_pin</span><span class="p">);</span>
+
+    <span class="c1">// Send &quot;Write Status Register&quot; instruction</span>
+    <span class="c1">// and Regval in one packet</span>
+    <span class="n">m95256_SendInstruction</span><span class="p">(</span><span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">spi</span><span class="p">,</span> <span class="p">(</span><span class="kt">uint8_t</span><span class="o">*</span><span class="p">)</span><span class="n">command</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+
+    <span class="c1">// Deselect the EEPROM: Chip Select high</span>
+    <span class="n">EEPROM_CS_HIGH</span><span class="p">(</span><span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">cs_gpio</span><span class="p">,</span> <span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">cs_pin</span><span class="p">);</span>
+
+    <span class="n">sEE_WriteDisable</span><span class="p">(</span><span class="n">eeprom</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">uint8_t</span> <span class="nf">m95256_WaitStandbyState</span><span class="p">(</span><span class="n">m95256_t</span> <span class="n">eeprom</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">uint8_t</span> <span class="n">sEEstatus</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mh">0x00</span><span class="p">};</span>
+    <span class="kt">uint8_t</span> <span class="n">command</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">EEPROM_RDSR</span><span class="p">};</span>
+
+    <span class="c1">// Select the EEPROM: Chip Select low</span>
+    <span class="n">EEPROM_CS_LOW</span><span class="p">(</span><span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">cs_gpio</span><span class="p">,</span> <span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">cs_pin</span><span class="p">);</span>
+
+    <span class="c1">// Send &quot;Read Status Register&quot; instruction</span>
+    <span class="n">m95256_SendInstruction</span><span class="p">(</span><span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">spi</span><span class="p">,</span> <span class="p">(</span><span class="kt">uint8_t</span><span class="o">*</span><span class="p">)</span><span class="n">command</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+
+    <span class="c1">// Loop as long as the memory is busy with a write cycle</span>
+    <span class="k">do</span> <span class="p">{</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">HAL_SPI_Receive</span><span class="p">(</span><span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">spi</span><span class="p">,</span> <span class="p">(</span><span class="kt">uint8_t</span><span class="o">*</span><span class="p">)</span><span class="n">sEEstatus</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span> <span class="o">==</span> <span class="n">HAL_BUSY</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">HAL_Delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+        <span class="p">};</span>
+
+        <span class="n">HAL_Delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+
+    <span class="p">}</span> <span class="k">while</span> <span class="p">((</span><span class="n">sEEstatus</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&amp;</span> <span class="n">EEPROM_WIP_FLAG</span><span class="p">)</span> <span class="o">==</span> <span class="n">SET</span><span class="p">);</span>  <span class="c1">// Write in progress</span>
+
+    <span class="c1">// Deselect the EEPROM: Chip Select high</span>
+    <span class="n">EEPROM_CS_HIGH</span><span class="p">(</span><span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">cs_gpio</span><span class="p">,</span> <span class="n">eeprom</span><span class="o">-&gt;</span><span class="n">cs_pin</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">m95256_SendInstruction</span><span class="p">(</span><span class="n">SPI_HandleTypeDef</span><span class="o">*</span> <span class="n">hspi</span><span class="p">,</span> <span class="kt">uint8_t</span><span class="o">*</span> <span class="n">instruction</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">size</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">hspi</span><span class="o">-&gt;</span><span class="n">State</span> <span class="o">==</span> <span class="n">HAL_SPI_STATE_RESET</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">HAL_Delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">HAL_SPI_Transmit</span><span class="p">(</span><span class="n">hspi</span><span class="p">,</span> <span class="p">(</span><span class="kt">uint8_t</span><span class="o">*</span><span class="p">)</span><span class="n">instruction</span><span class="p">,</span> <span class="p">(</span><span class="kt">uint16_t</span><span class="p">)</span><span class="n">size</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Error_Handler</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, E-Agle TRT.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

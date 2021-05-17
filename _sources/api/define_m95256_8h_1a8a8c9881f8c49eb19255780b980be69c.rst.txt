@@ -1,0 +1,13 @@
+.. _exhale_define_m95256_8h_1a8a8c9881f8c49eb19255780b980be69c:
+
+Define EEPROM_CS_LOW
+====================
+
+- Defined in :ref:`file_mainboard_Inc_peripherals_m95256.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: EEPROM_CS_LOW

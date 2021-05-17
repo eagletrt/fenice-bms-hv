@@ -1,0 +1,13 @@
+.. _exhale_function_m95256_8h_1a99f83251917b9935d67846f53e85d7c7:
+
+Function m95256_WriteBuffer(m95256_t, uint8_t \*, uint16_t, uint16_t)
+=====================================================================
+
+- Defined in :ref:`file_mainboard_Inc_peripherals_m95256.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: m95256_WriteBuffer(m95256_t, uint8_t *, uint16_t, uint16_t)

@@ -1,0 +1,16 @@
+.. _exhale_struct_structm95256:
+
+Struct m95256
+=============
+
+- Defined in :ref:`file_mainboard_Src_peripherals_m95256.c`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: m95256
+   :members:
+   :protected-members:
+   :undoc-members:

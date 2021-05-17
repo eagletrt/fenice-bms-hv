@@ -1,0 +1,111 @@
+
+.. _file_mainboard_Inc_peripherals_m95256.h:
+
+File m95256.h
+=============
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Inc_peripherals>` (``mainboard/Inc/peripherals``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Inc/peripherals/m95256.h``)
+---------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Inc_peripherals_m95256.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_mainboard_Src_peripherals_m95256.c`
+
+
+
+
+Enums
+-----
+
+
+- :ref:`exhale_enum_m95256_8h_1a03bcf084e1fc2d9285e9b61be989b297`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_m95256_8h_1ad79653e10d7f134529b47ba3bbe65e6d`
+
+- :ref:`exhale_function_m95256_8h_1ab19be4c09cf63afe51eda9741e888f88`
+
+- :ref:`exhale_function_m95256_8h_1a7583d007d063ba294758688d73ca7a77`
+
+- :ref:`exhale_function_m95256_8h_1a09de66dbb8e3928e352777a1ae8babe2`
+
+- :ref:`exhale_function_m95256_8h_1aeefe1932f04e72b07c1409bd41899f82`
+
+- :ref:`exhale_function_m95256_8h_1a8b9465b85b55fca59b41cc85fe2ee193`
+
+- :ref:`exhale_function_m95256_8h_1a99f83251917b9935d67846f53e85d7c7`
+
+- :ref:`exhale_function_m95256_8h_1afa2a67afcf041242c00fe4ac05515967`
+
+- :ref:`exhale_function_m95256_8h_1a90ff9d493c567e83f972f6bdbef487d3`
+
+- :ref:`exhale_function_m95256_8h_1a6faec6b16870bdefb543c9261c1bbf21`
+
+- :ref:`exhale_function_m95256_8h_1a1e3a0c1da156e600b5588ac469bbdb7b`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_m95256_8h_1a331550a4c72f93d110b6d1eb567f05f7`
+
+- :ref:`exhale_define_m95256_8h_1a51e6842f1424bfc68a72df6dac106ca8`
+
+- :ref:`exhale_define_m95256_8h_1a8a8c9881f8c49eb19255780b980be69c`
+
+- :ref:`exhale_define_m95256_8h_1a31abeea8d51612a6d84704a0eeba9ace`
+
+- :ref:`exhale_define_m95256_8h_1a590c9d80bdcbb44f33f8569b04b22e26`
+
+- :ref:`exhale_define_m95256_8h_1a66a49f64e7ab3993012232ac64adadd4`
+
+- :ref:`exhale_define_m95256_8h_1aec45722ed54feb30c7a3666d23fee0cd`
+
+- :ref:`exhale_define_m95256_8h_1a5a353f77e220e889d6ab59e692d26235`
+
+- :ref:`exhale_define_m95256_8h_1a17f14cb3d64f98dd2d3e016ad1258abb`
+
+- :ref:`exhale_define_m95256_8h_1ad4c47c9a8fd4b49b337df54d56305f52`
+
+- :ref:`exhale_define_m95256_8h_1aa968275c0c37282b7d9cd8703506ccb6`
+
+
+Typedefs
+--------
+
+
+- :ref:`exhale_typedef_m95256_8h_1a3a5233f42a47046101fa7580b59c63ff`
+

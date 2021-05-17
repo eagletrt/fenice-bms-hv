@@ -1,0 +1,13 @@
+.. _exhale_define_m95256_8h_1a5a353f77e220e889d6ab59e692d26235:
+
+Define EEPROM_WRDI
+==================
+
+- Defined in :ref:`file_mainboard_Inc_peripherals_m95256.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: EEPROM_WRDI

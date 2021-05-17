@@ -55,6 +55,8 @@ Included By
 -----------
 
 
+- :ref:`file_mainboard_Inc_peripherals_m95256.h`
+
 - :ref:`file_mainboard_Inc_peripherals_si8900.h`
 
 - :ref:`file_mainboard_Src_feedback.c`

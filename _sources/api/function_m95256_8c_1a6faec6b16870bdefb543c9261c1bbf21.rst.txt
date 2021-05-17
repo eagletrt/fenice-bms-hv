@@ -1,0 +1,13 @@
+.. _exhale_function_m95256_8c_1a6faec6b16870bdefb543c9261c1bbf21:
+
+Function sEE_WriteEnable(m95256_t)
+==================================
+
+- Defined in :ref:`file_mainboard_Src_peripherals_m95256.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: sEE_WriteEnable(m95256_t)
