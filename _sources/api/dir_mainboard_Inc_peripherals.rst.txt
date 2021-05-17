@@ -18,7 +18,6 @@ Files
 - :ref:`file_mainboard_Inc_peripherals_can.h`
 - :ref:`file_mainboard_Inc_peripherals_ltc6813.h`
 - :ref:`file_mainboard_Inc_peripherals_ltc6813_utils.h`
-- :ref:`file_mainboard_Inc_peripherals_m95256.h`
 - :ref:`file_mainboard_Inc_peripherals_si8900.h`
 
 

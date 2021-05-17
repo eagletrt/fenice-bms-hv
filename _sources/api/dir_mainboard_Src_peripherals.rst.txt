@@ -18,7 +18,6 @@ Files
 - :ref:`file_mainboard_Src_peripherals_can.c`
 - :ref:`file_mainboard_Src_peripherals_ltc6813.c`
 - :ref:`file_mainboard_Src_peripherals_ltc6813_utils.c`
-- :ref:`file_mainboard_Src_peripherals_m95256.c`
 - :ref:`file_mainboard_Src_peripherals_si8900.c`
 
 

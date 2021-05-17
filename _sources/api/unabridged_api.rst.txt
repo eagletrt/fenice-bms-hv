@@ -24,11 +24,6 @@ Classes and Structs
 .. toctree::
    :maxdepth: 5
 
-   structm95256.rst
-
-.. toctree::
-   :maxdepth: 5
-
    structtemperature.rst
 
 Enums
@@ -49,11 +44,6 @@ Enums
    :maxdepth: 5
 
    enum_fsm__bms_8h_1a25f0477a732b1a7aea1e8966a5abd125.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   enum_m95256_8h_1a03bcf084e1fc2d9285e9b61be989b297.rst
 
 .. toctree::
    :maxdepth: 5
@@ -348,11 +338,6 @@ Functions
    :maxdepth: 5
 
    function_fsm__bms_8c_1aa22565902e9c8145670fa00f3d199ae4.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_m95256_8c_1ac4f37ebcdbdcea3a1c91b8794b66ba44.rst
 
 .. toctree::
    :maxdepth: 5
@@ -917,86 +902,6 @@ Functions
 .. toctree::
    :maxdepth: 5
 
-   function_m95256_8h_1ae6632af2fbe519ad76f178ff8d6a5323.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_m95256_8c_1ae6632af2fbe519ad76f178ff8d6a5323.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_m95256_8h_1aa35ec625275dad742b29fbd088c1d81b.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_m95256_8c_1aa35ec625275dad742b29fbd088c1d81b.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_m95256_8h_1ab19be4c09cf63afe51eda9741e888f88.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_m95256_8c_1ab19be4c09cf63afe51eda9741e888f88.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_m95256_8h_1a7583d007d063ba294758688d73ca7a77.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_m95256_8h_1a09de66dbb8e3928e352777a1ae8babe2.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_m95256_8h_1aeefe1932f04e72b07c1409bd41899f82.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_m95256_8c_1aeefe1932f04e72b07c1409bd41899f82.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_m95256_8h_1a8b9465b85b55fca59b41cc85fe2ee193.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_m95256_8c_1a8b9465b85b55fca59b41cc85fe2ee193.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_m95256_8h_1a99f83251917b9935d67846f53e85d7c7.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_m95256_8c_1a99f83251917b9935d67846f53e85d7c7.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_m95256_8h_1afa2a67afcf041242c00fe4ac05515967.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_m95256_8c_1afa2a67afcf041242c00fe4ac05515967.rst
-
-.. toctree::
-   :maxdepth: 5
-
    function_mainboard_2Src_2main_8c_1a840291bc02cba5474a4cb46a9b9566fe.rst
 
 .. toctree::
@@ -1417,36 +1322,6 @@ Functions
 .. toctree::
    :maxdepth: 5
 
-   function_m95256_8h_1a90ff9d493c567e83f972f6bdbef487d3.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_m95256_8c_1a90ff9d493c567e83f972f6bdbef487d3.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_m95256_8h_1a6faec6b16870bdefb543c9261c1bbf21.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_m95256_8c_1a6faec6b16870bdefb543c9261c1bbf21.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_m95256_8h_1a1e3a0c1da156e600b5588ac469bbdb7b.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_m95256_8c_1a1e3a0c1da156e600b5588ac469bbdb7b.rst
-
-.. toctree::
-   :maxdepth: 5
-
    function_si8900_8h_1a842353447aaacce27c3c313220cff96a.rst
 
 .. toctree::
@@ -1786,11 +1661,6 @@ Variables
 .. toctree::
    :maxdepth: 5
 
-   variable_m95256_8c_1a9fd52a53fca011234410877303184668.rst
-
-.. toctree::
-   :maxdepth: 5
-
    variable_error_8h_1a5803d617be0399f8f39913e58a7671eb.rst
 
 .. toctree::
@@ -2022,11 +1892,6 @@ Variables
    :maxdepth: 5
 
    variable_cellboard_2Src_2main_8c_1aa2146da9811399cd856abaef0c545957.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   variable_m95256_8c_1a7637e99a0b4f7362be6d3b55cf86c1ed.rst
 
 .. toctree::
    :maxdepth: 5
@@ -2316,61 +2181,6 @@ Defines
    :maxdepth: 5
 
    define_stm32f4xx__hal__conf_8h_1a25f014091aaba92bdd9d95d0b2f00503.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   define_m95256_8h_1a331550a4c72f93d110b6d1eb567f05f7.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   define_m95256_8h_1a51e6842f1424bfc68a72df6dac106ca8.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   define_m95256_8h_1a8a8c9881f8c49eb19255780b980be69c.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   define_m95256_8h_1a31abeea8d51612a6d84704a0eeba9ace.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   define_m95256_8h_1a590c9d80bdcbb44f33f8569b04b22e26.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   define_m95256_8h_1a66a49f64e7ab3993012232ac64adadd4.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   define_m95256_8h_1aec45722ed54feb30c7a3666d23fee0cd.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   define_m95256_8h_1a5a353f77e220e889d6ab59e692d26235.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   define_m95256_8h_1a17f14cb3d64f98dd2d3e016ad1258abb.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   define_m95256_8h_1ad4c47c9a8fd4b49b337df54d56305f52.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   define_m95256_8h_1aa968275c0c37282b7d9cd8703506ccb6.rst
 
 .. toctree::
    :maxdepth: 5
@@ -3705,11 +3515,6 @@ Typedefs
    :maxdepth: 5
 
    typedef_feedback_8h_1af31f74762bbbbb2cdd1f2ee74ba4b97b.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   typedef_m95256_8h_1a3a5233f42a47046101fa7580b59c63ff.rst
 
 .. toctree::
    :maxdepth: 5

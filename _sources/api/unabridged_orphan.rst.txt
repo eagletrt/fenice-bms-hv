@@ -185,16 +185,6 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file_mainboard_Src_peripherals_m95256.c.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file_mainboard_Inc_peripherals_m95256.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file_mainboard_Src_main.c.rst
 
 .. toctree::

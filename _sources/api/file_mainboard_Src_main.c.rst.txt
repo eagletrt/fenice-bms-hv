@@ -41,7 +41,7 @@ Includes
 
 - ``gpio.h`` (:ref:`file_mainboard_Inc_gpio.h`)
 
-- ``m95256.h`` (:ref:`file_mainboard_Inc_peripherals_m95256.h`)
+- ``m95256.h``
 
 - ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
 
