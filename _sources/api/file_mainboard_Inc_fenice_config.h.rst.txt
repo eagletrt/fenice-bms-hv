@@ -60,8 +60,6 @@ Included By
 
 - :ref:`file_mainboard_Inc_feedback.h`
 
-- :ref:`file_mainboard_Inc_soc.h`
-
 
 
 

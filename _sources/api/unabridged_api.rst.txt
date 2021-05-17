@@ -24,11 +24,6 @@ Classes and Structs
 .. toctree::
    :maxdepth: 5
 
-   structsoc.rst
-
-.. toctree::
-   :maxdepth: 5
-
    structtemperature.rst
 
 Enums
@@ -1357,46 +1352,6 @@ Functions
 .. toctree::
    :maxdepth: 5
 
-   function_soc_8h_1a637cb1fc6fa1157640a166b80bd4bc26.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_soc_8c_1a637cb1fc6fa1157640a166b80bd4bc26.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_soc_8h_1af6eae21bffdff26947dfcacfe8628d98.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_soc_8c_1af6eae21bffdff26947dfcacfe8628d98.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_soc_8h_1a1b9dc6678214faa7b79dfc812a170a62.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_soc_8c_1a1b9dc6678214faa7b79dfc812a170a62.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_soc_8h_1a800006d81ced9c0c564104d9c1338b04.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_soc_8c_1a800006d81ced9c0c564104d9c1338b04.rst
-
-.. toctree::
-   :maxdepth: 5
-
    function_spi_8h_1ad59b1470e3c09d41c88aecf7ae0ca806.rst
 
 .. toctree::
@@ -1942,11 +1897,6 @@ Variables
    :maxdepth: 5
 
    variable_si8900_8c_1aa9a0893302e24fafcd1a44d7b1c4f81e.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   variable_pack_8c_1a232b686d286a16d23e8f9e39d5fc346a.rst
 
 .. toctree::
    :maxdepth: 5
@@ -3550,11 +3500,6 @@ Typedefs
    :maxdepth: 5
 
    typedef_feedback_8h_1af31f74762bbbbb2cdd1f2ee74ba4b97b.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   typedef_soc_8h_1ae8794aadc3052d7179240663f1684e04.rst
 
 .. toctree::
    :maxdepth: 5
