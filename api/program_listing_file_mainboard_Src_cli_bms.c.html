@@ -168,13 +168,13 @@
 <span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp"></span>
 
-<span class="cp">#include</span> <span class="cpf">&quot;bal.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;bal_fsm.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;error/error.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;fsm_bms.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;usart.h&quot;</span><span class="cp"></span>
 
 <span class="c1">// TODO: don&#39;t count manually</span>
-<span class="cp">#define N_COMMANDS 9</span>
+<span class="cp">#define N_COMMANDS 10</span>
 
 <span class="n">cli_command_func_t</span> <span class="n">_cli_volts</span><span class="p">;</span>
 <span class="n">cli_command_func_t</span> <span class="n">_cli_volts_all</span><span class="p">;</span>
@@ -183,35 +183,42 @@
 <span class="n">cli_command_func_t</span> <span class="n">_cli_status</span><span class="p">;</span>
 <span class="n">cli_command_func_t</span> <span class="n">_cli_balance</span><span class="p">;</span>
 <span class="n">cli_command_func_t</span> <span class="n">_cli_errors</span><span class="p">;</span>
+<span class="n">cli_command_func_t</span> <span class="n">_cli_ts</span><span class="p">;</span>
 <span class="n">cli_command_func_t</span> <span class="n">_cli_dmesg</span><span class="p">;</span>
 <span class="n">cli_command_func_t</span> <span class="n">_cli_reset</span><span class="p">;</span>
 <span class="n">cli_command_func_t</span> <span class="n">_cli_help</span><span class="p">;</span>
 <span class="n">cli_command_func_t</span> <span class="n">_cli_taba</span><span class="p">;</span>
 
-<span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">state_names</span><span class="p">[</span><span class="n">BMS_NUM_STATES</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+<span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">bms_state_names</span><span class="p">[</span><span class="n">BMS_NUM_STATES</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
     <span class="p">[</span><span class="n">BMS_INIT</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;init&quot;</span><span class="p">,</span>
     <span class="p">[</span><span class="n">BMS_SET_TS_OFF</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;ts off&quot;</span><span class="p">,</span>
     <span class="p">[</span><span class="n">BMS_IDLE</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;idle&quot;</span><span class="p">,</span>
     <span class="p">[</span><span class="n">BMS_PRECHARGE_START</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;precharge start&quot;</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">BMS_PRECHARGE</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;precharge&quot;</span><span class="p">,</span>
+    <span class="p">[</span><span class="n">BMS_PRECHARGE_WAIT</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;precharge wait&quot;</span><span class="p">,</span>
     <span class="p">[</span><span class="n">BMS_PRECHARGE_END</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;precharge end&quot;</span><span class="p">,</span>
     <span class="p">[</span><span class="n">BMS_RUN</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;run&quot;</span><span class="p">,</span>
     <span class="p">[</span><span class="n">BMS_CHARGE</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;charge&quot;</span><span class="p">,</span>
     <span class="p">[</span><span class="n">BMS_TO_HALT</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;to halt&quot;</span><span class="p">,</span>
     <span class="p">[</span><span class="n">BMS_HALT</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;halt&quot;</span><span class="p">};</span>
 
-<span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">error_names</span><span class="p">[</span><span class="n">ERROR_NUM_ERRORS</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="p">[</span><span class="n">ERROR_LTC_PEC_ERROR</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;LTC PEC mismatch&quot;</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">ERROR_CELL_UNDER_VOLTAGE</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;under-voltage&quot;</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">ERROR_CELL_OVER_VOLTAGE</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;over-voltage&quot;</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">ERROR_CELL_OVER_TEMPERATURE</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;over-temperature&quot;</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">ERROR_OVER_CURRENT</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;over-current&quot;</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">ERROR_CAN</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;CAN&quot;</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">ERROR_ADC_INIT</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;adc init&quot;</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">ERROR_ADC_TIMEOUT</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;adc timeout&quot;</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">ERROR_INT_VOLTAGE_MISMATCH</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;internal voltage mismatch&quot;</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">ERROR_FEEDBACK_HARD</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;hard feedback&quot;</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">ERROR_FEEDBACK_SOFT</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;soft feedback&quot;</span><span class="p">};</span>
+<span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">bal_state_names</span><span class="p">[</span><span class="n">BAL_NUM_STATES</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">[</span><span class="n">BAL_OFF</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;off&quot;</span><span class="p">,</span>
+    <span class="p">[</span><span class="n">BAL_COMPUTE</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;computing&quot;</span><span class="p">,</span>
+    <span class="p">[</span><span class="n">BAL_DISCHARGE</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;discharging&quot;</span><span class="p">};</span>
+
+<span class="k">const</span> <span class="kt">char</span> <span class="o">*</span>
+    <span class="n">error_names</span><span class="p">[</span><span class="n">ERROR_NUM_ERRORS</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="p">[</span><span class="n">ERROR_LTC_PEC_ERROR</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;LTC PEC mismatch&quot;</span><span class="p">,</span>
+        <span class="p">[</span><span class="n">ERROR_CELL_UNDER_VOLTAGE</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;under-voltage&quot;</span><span class="p">,</span>
+        <span class="p">[</span><span class="n">ERROR_CELL_OVER_VOLTAGE</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;over-voltage&quot;</span><span class="p">,</span>
+        <span class="p">[</span><span class="n">ERROR_CELL_OVER_TEMPERATURE</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;over-temperature&quot;</span><span class="p">,</span>
+        <span class="p">[</span><span class="n">ERROR_OVER_CURRENT</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;over-current&quot;</span><span class="p">,</span>
+        <span class="p">[</span><span class="n">ERROR_CAN</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;CAN&quot;</span><span class="p">,</span>
+        <span class="p">[</span><span class="n">ERROR_ADC_INIT</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;adc init&quot;</span><span class="p">,</span>
+        <span class="p">[</span><span class="n">ERROR_ADC_TIMEOUT</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;adc timeout&quot;</span><span class="p">,</span>
+        <span class="p">[</span><span class="n">ERROR_INT_VOLTAGE_MISMATCH</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;internal voltage mismatch&quot;</span><span class="p">,</span>
+        <span class="p">[</span><span class="n">ERROR_FEEDBACK_HARD</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;hard feedback&quot;</span><span class="p">,</span>
+        <span class="p">[</span><span class="n">ERROR_FEEDBACK_SOFT</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;soft feedback&quot;</span><span class="p">};</span>
 
 <span class="kt">char</span> <span class="k">const</span> <span class="o">*</span><span class="k">const</span> <span class="n">feedback_names</span><span class="p">[</span><span class="n">FEEDBACK_N</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
     <span class="p">[</span><span class="n">FEEDBACK_VREF_POS</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;VREF&quot;</span><span class="p">,</span>
@@ -231,14 +238,15 @@
     <span class="p">[</span><span class="n">FEEDBACK_BMS_SHUTDOWN_POS</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;BMS SHUTDOWN&quot;</span><span class="p">,</span>
     <span class="p">[</span><span class="n">FEEDBACK_TS_ON_POS</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;TS ON&quot;</span><span class="p">};</span>
 
-<span class="kt">char</span> <span class="o">*</span><span class="n">command_names</span><span class="p">[</span><span class="n">N_COMMANDS</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s">&quot;volt&quot;</span><span class="p">,</span> <span class="s">&quot;temp&quot;</span><span class="p">,</span> <span class="s">&quot;status&quot;</span><span class="p">,</span> <span class="s">&quot;errors&quot;</span><span class="p">,</span> <span class="s">&quot;bal&quot;</span><span class="p">,</span> <span class="s">&quot;dmesg&quot;</span><span class="p">,</span> <span class="s">&quot;reset&quot;</span><span class="p">,</span> <span class="s">&quot;?&quot;</span><span class="p">,</span> <span class="s">&quot;</span><span class="se">\t</span><span class="s">a&quot;</span><span class="p">};</span>
+<span class="kt">char</span> <span class="o">*</span><span class="n">command_names</span><span class="p">[</span><span class="n">N_COMMANDS</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s">&quot;volt&quot;</span><span class="p">,</span> <span class="s">&quot;temp&quot;</span><span class="p">,</span> <span class="s">&quot;status&quot;</span><span class="p">,</span> <span class="s">&quot;errors&quot;</span><span class="p">,</span> <span class="s">&quot;ts&quot;</span><span class="p">,</span>
+                                   <span class="s">&quot;bal&quot;</span><span class="p">,</span> <span class="s">&quot;dmesg&quot;</span><span class="p">,</span> <span class="s">&quot;reset&quot;</span><span class="p">,</span> <span class="s">&quot;?&quot;</span><span class="p">,</span> <span class="s">&quot;</span><span class="se">\t</span><span class="s">a&quot;</span><span class="p">};</span>
 
 <span class="n">cli_command_func_t</span> <span class="o">*</span><span class="n">commands</span><span class="p">[</span><span class="n">N_COMMANDS</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="o">&amp;</span><span class="n">_cli_volts</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_temps</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_status</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_errors</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_balance</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_dmesg</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_reset</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_help</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_taba</span><span class="p">};</span>
+    <span class="o">&amp;</span><span class="n">_cli_volts</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_temps</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_status</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_errors</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_ts</span><span class="p">,</span>
+    <span class="o">&amp;</span><span class="n">_cli_balance</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_dmesg</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_reset</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_help</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_taba</span><span class="p">};</span>
 
 <span class="n">cli_t</span> <span class="n">cli_bms</span><span class="p">;</span>
-<span class="kt">bool</span> <span class="n">dmesg_ena</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+<span class="kt">bool</span> <span class="n">dmesg_ena</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
 
 <span class="kt">void</span> <span class="nf">cli_bms_init</span><span class="p">()</span> <span class="p">{</span>
     <span class="n">cli_bms</span><span class="p">.</span><span class="n">uart</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">huart2</span><span class="p">;</span>
@@ -289,9 +297,7 @@
                 <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">pack_get_bus_voltage</span><span class="p">()</span> <span class="o">/</span> <span class="mi">100</span><span class="p">,</span>
                 <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">pack_get_int_voltage</span><span class="p">()</span> <span class="o">/</span> <span class="mi">100</span><span class="p">,</span>
                 <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">pack_get_int_voltage</span><span class="p">()</span> <span class="o">/</span> <span class="n">PACK_CELL_COUNT</span> <span class="o">/</span> <span class="mi">100</span><span class="p">,</span>
-                <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">max</span> <span class="o">/</span> <span class="mi">10000</span><span class="p">,</span>
-                <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">min</span> <span class="o">/</span> <span class="mi">10000</span><span class="p">,</span>
-                <span class="p">(</span><span class="kt">float</span><span class="p">)(</span><span class="n">max</span> <span class="o">-</span> <span class="n">min</span><span class="p">)</span> <span class="o">/</span> <span class="mi">10000</span><span class="p">);</span>
+                <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">max</span> <span class="o">/</span> <span class="mi">10000</span><span class="p">,</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">min</span> <span class="o">/</span> <span class="mi">10000</span><span class="p">,</span> <span class="p">(</span><span class="kt">float</span><span class="p">)(</span><span class="n">max</span> <span class="o">-</span> <span class="n">min</span><span class="p">)</span> <span class="o">/</span> <span class="mi">10000</span><span class="p">);</span>
     <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">&quot;all&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">_cli_volts_all</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">out</span><span class="p">);</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
@@ -348,44 +354,49 @@
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">_cli_status</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">out</span><span class="p">)</span> <span class="p">{</span>
-<span class="cp">#define n_items 4</span>
-
-    <span class="n">bal_handle</span> <span class="n">balancing</span> <span class="o">=</span> <span class="n">pack_get_balancing</span><span class="p">();</span>
-
-    <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">bal</span> <span class="o">=</span> <span class="n">bool_names</span><span class="p">[</span><span class="n">balancing</span><span class="p">.</span><span class="n">enable</span><span class="p">];</span>
+<span class="cp">#define n_items 3</span>
 
     <span class="kt">char</span> <span class="n">thresh</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="sc">&#39;\0&#39;</span><span class="p">};</span>
-    <span class="n">itoa</span><span class="p">((</span><span class="kt">float</span><span class="p">)</span><span class="n">balancing</span><span class="p">.</span><span class="n">threshold</span> <span class="o">/</span> <span class="mi">10</span><span class="p">,</span> <span class="n">thresh</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+    <span class="n">itoa</span><span class="p">((</span><span class="kt">float</span><span class="p">)</span><span class="n">bal_get_threshold</span><span class="p">()</span> <span class="o">/</span> <span class="mi">10</span><span class="p">,</span> <span class="n">thresh</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
 
     <span class="kt">char</span> <span class="n">er_count</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="sc">&#39;\0&#39;</span><span class="p">};</span>
     <span class="n">itoa</span><span class="p">(</span><span class="n">error_count</span><span class="p">(),</span> <span class="n">er_count</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
 
     <span class="c1">// TODO: Fix this</span>
     <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">values</span><span class="p">[</span><span class="n">n_items</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="p">{</span><span class="s">&quot;BMS state&quot;</span><span class="p">,</span> <span class="n">state_names</span><span class="p">[</span><span class="n">fsm_bms</span><span class="p">.</span><span class="n">current_state</span><span class="p">]},</span> <span class="p">{</span><span class="s">&quot;error count&quot;</span><span class="p">,</span> <span class="n">er_count</span><span class="p">},</span> <span class="p">{</span><span class="s">&quot;balancing&quot;</span><span class="p">,</span> <span class="n">bal</span><span class="p">},</span> <span class="p">{</span><span class="s">&quot;balancing threshold&quot;</span><span class="p">,</span> <span class="n">thresh</span><span class="p">}};</span>
-    <span class="c1">//{&quot;BMS state&quot;, (char *)fsm_bms.state_names[fsm_bms.current_state]}, {&quot;error count&quot;, er_count}, {&quot;balancing&quot;, bal}, {&quot;balancing threshold&quot;, thresh}};</span>
+        <span class="p">{</span><span class="s">&quot;BMS state&quot;</span><span class="p">,</span> <span class="n">bms_state_names</span><span class="p">[</span><span class="n">fsm_bms</span><span class="p">.</span><span class="n">current_state</span><span class="p">]},</span>
+        <span class="p">{</span><span class="s">&quot;error count&quot;</span><span class="p">,</span> <span class="n">er_count</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">&quot;balancing state&quot;</span><span class="p">,</span> <span class="n">bal_state_names</span><span class="p">[</span><span class="n">fsm_get_state</span><span class="p">(</span><span class="o">&amp;</span><span class="n">bal_fsm</span><span class="p">)]}};</span>
+    <span class="c1">//{&quot;BMS state&quot;, (char *)fsm_bms.state_names[fsm_bms.current_state]}, {&quot;error</span>
+    <span class="c1">// count&quot;, er_count}, {&quot;balancing&quot;, bal}, {&quot;balancing threshold&quot;, thresh}};</span>
 
     <span class="n">out</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;\0&#39;</span><span class="p">;</span>
     <span class="k">for</span> <span class="p">(</span><span class="kt">uint8_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n_items</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span> <span class="o">+</span> <span class="n">strlen</span><span class="p">(</span><span class="n">out</span><span class="p">),</span> <span class="s">&quot;%s%s%s</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">values</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span>
-                <span class="s">&quot;........................&quot;</span> <span class="o">+</span> <span class="n">strlen</span><span class="p">(</span><span class="n">values</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]),</span>
-                <span class="n">values</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]);</span>
+                <span class="s">&quot;........................&quot;</span> <span class="o">+</span> <span class="n">strlen</span><span class="p">(</span><span class="n">values</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]),</span> <span class="n">values</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">_cli_balance</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">out</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">bal_handle</span> <span class="n">balancing</span> <span class="o">=</span> <span class="n">pack_get_balancing</span><span class="p">();</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">&quot;tog&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">balancing</span><span class="p">.</span><span class="n">enable</span> <span class="o">=</span> <span class="o">!</span><span class="n">balancing</span><span class="p">.</span><span class="n">enable</span><span class="p">;</span>
-
-        <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s">&quot;setting balancing to %u</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">balancing</span><span class="p">.</span><span class="n">enable</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">&quot;on&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">fsm_handle_event</span><span class="p">(</span><span class="o">&amp;</span><span class="n">bal_fsm</span><span class="p">,</span> <span class="n">BAL_COMPUTE</span><span class="p">);</span>
+        <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s">&quot;enabling balancing</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">&quot;off&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">fsm_handle_event</span><span class="p">(</span><span class="o">&amp;</span><span class="n">bal_fsm</span><span class="p">,</span> <span class="n">BAL_OFF</span><span class="p">);</span>
+        <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s">&quot;disabling balancing</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">);</span>
     <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">&quot;thr&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">balancing</span><span class="p">.</span><span class="n">threshold</span> <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">*</span> <span class="mi">10</span><span class="p">;</span>
-
-        <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s">&quot;setting balancing threshold to %u mV</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span>
-                <span class="n">balancing</span><span class="p">.</span><span class="n">threshold</span> <span class="o">/</span> <span class="mi">10</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">bal_set_threshold</span><span class="p">(</span><span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">*</span> <span class="mi">10</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s">&quot;balancing threshold is %u mV</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">bal_get_threshold</span><span class="p">()</span> <span class="o">/</span> <span class="mi">10</span><span class="p">);</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s">&quot;Unknown parameter: %s</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+        <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span><span class="p">,</span>
+                <span class="s">&quot;Unknown parameter: %s</span><span class="se">\r\n\n</span><span class="s">&quot;</span>
+                <span class="s">&quot;valid parameters:</span><span class="se">\r\n</span><span class="s">&quot;</span>
+                <span class="s">&quot;- on</span><span class="se">\r\n</span><span class="s">&quot;</span>
+                <span class="s">&quot;- off</span><span class="se">\r\n</span><span class="s">&quot;</span>
+                <span class="s">&quot;- thr &lt;millivolts&gt;</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span>
+                <span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
@@ -402,7 +413,25 @@
                 <span class="s">&quot;timestamp...T+%lu (%lums ago)</span><span class="se">\r\n</span><span class="s">&quot;</span>
                 <span class="s">&quot;offset......%u</span><span class="se">\r\n</span><span class="s">&quot;</span>
                 <span class="s">&quot;state.......%u</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span>
-                <span class="n">errors</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">id</span><span class="p">,</span> <span class="n">error_names</span><span class="p">[</span><span class="n">errors</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">id</span><span class="p">],</span> <span class="n">errors</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">timestamp</span><span class="p">,</span> <span class="n">now</span> <span class="o">-</span> <span class="n">errors</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">timestamp</span><span class="p">,</span> <span class="n">errors</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">offset</span><span class="p">,</span> <span class="n">errors</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">state</span><span class="p">);</span>
+                <span class="n">errors</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">id</span><span class="p">,</span> <span class="n">error_names</span><span class="p">[</span><span class="n">errors</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">id</span><span class="p">],</span> <span class="n">errors</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">timestamp</span><span class="p">,</span>
+                <span class="n">now</span> <span class="o">-</span> <span class="n">errors</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">timestamp</span><span class="p">,</span> <span class="n">errors</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">offset</span><span class="p">,</span> <span class="n">errors</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">state</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">_cli_ts</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">out</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">&quot;on&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">fsm_handle_event</span><span class="p">(</span><span class="o">&amp;</span><span class="n">fsm_bms</span><span class="p">,</span> <span class="n">BMS_PRECHARGE_WAIT</span><span class="p">);</span>
+        <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s">&quot;triggered TS ON event</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">&quot;off&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">fsm_handle_event</span><span class="p">(</span><span class="o">&amp;</span><span class="n">fsm_bms</span><span class="p">,</span> <span class="n">BMS_SET_TS_OFF</span><span class="p">);</span>
+        <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s">&quot;triggered TS OFF event</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span><span class="p">,</span>
+                <span class="s">&quot;Unknown parameter: %s</span><span class="se">\r\n\n</span><span class="s">&quot;</span>
+                <span class="s">&quot;valid parameters:</span><span class="se">\r\n</span><span class="s">&quot;</span>
+                <span class="s">&quot;- on</span><span class="se">\r\n</span><span class="s">&quot;</span>
+                <span class="s">&quot;- off</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span>
+                <span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 

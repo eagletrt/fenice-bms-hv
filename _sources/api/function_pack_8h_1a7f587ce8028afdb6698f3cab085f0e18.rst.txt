@@ -1,0 +1,13 @@
+.. _exhale_function_pack_8h_1a7f587ce8028afdb6698f3cab085f0e18:
+
+Function pack_get_power()
+=========================
+
+- Defined in :ref:`file_mainboard_Inc_pack.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: pack_get_power()

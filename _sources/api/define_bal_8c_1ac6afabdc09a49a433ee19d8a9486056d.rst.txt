@@ -1,0 +1,13 @@
+.. _exhale_define_bal_8c_1ac6afabdc09a49a433ee19d8a9486056d:
+
+Define min
+==========
+
+- Defined in :ref:`file_mainboard_Src_bal.c`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: min

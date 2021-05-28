@@ -1,0 +1,13 @@
+.. _exhale_define_cellboard_2Inc_2fenice__config_8h_1a3b31b86957fda293852c1bf89266d6a3:
+
+Define BAL_COOLDOWN_DELAY
+=========================
+
+- Defined in :ref:`file_cellboard_Inc_fenice_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: BAL_COOLDOWN_DELAY

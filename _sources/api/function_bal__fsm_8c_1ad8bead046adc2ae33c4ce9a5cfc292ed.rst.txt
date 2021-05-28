@@ -1,0 +1,13 @@
+.. _exhale_function_bal__fsm_8c_1ad8bead046adc2ae33c4ce9a5cfc292ed:
+
+Function do_cooldown
+====================
+
+- Defined in :ref:`file_mainboard_Src_bal_fsm.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: do_cooldown(fsm *)
