@@ -56,6 +56,8 @@ Included By
 
 - :ref:`file_mainboard_Inc_bal.h`
 
+- :ref:`file_mainboard_Inc_soc.h`
+
 - :ref:`file_mainboard_Inc_pack.h`
 
 - :ref:`file_mainboard_Inc_feedback.h`
@@ -79,6 +81,8 @@ Defines
 - :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1adc1c18c9a78fa76194e88a6e067a5bf7`
 
 - :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a0fe341491d7d9863ec4748c8a62c83b3`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a5cec0f505268033793f400c376677e86`
 
 - :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a609c654690c5e70aa9713a972641874e`
 
@@ -141,6 +145,8 @@ Defines
 - :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a375f74cc5a3700baa1b746a2fcc60190`
 
 - :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1ae9b75689e590b0a702f6c24100f04693`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a9bbb9eaaa929495cd59b83a2bd719906`
 
 - :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a9ceb6fa3a1b3065b18963506642d0d06`
 

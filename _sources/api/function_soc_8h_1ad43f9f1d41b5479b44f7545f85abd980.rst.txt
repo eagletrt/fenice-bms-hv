@@ -1,0 +1,13 @@
+.. _exhale_function_soc_8h_1ad43f9f1d41b5479b44f7545f85abd980:
+
+Function soc_load(soc_t, uint32_t, uint32_t, uint32_t)
+======================================================
+
+- Defined in :ref:`file_mainboard_Inc_soc.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: soc_load(soc_t, uint32_t, uint32_t, uint32_t)

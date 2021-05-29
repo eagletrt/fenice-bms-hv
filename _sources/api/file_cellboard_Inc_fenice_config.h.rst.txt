@@ -88,6 +88,8 @@ Defines
 
 - :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1a0fe341491d7d9863ec4748c8a62c83b3`
 
+- :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1a5cec0f505268033793f400c376677e86`
+
 - :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1a609c654690c5e70aa9713a972641874e`
 
 - :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1ab25af29e5cc6b462115ce9382dc13bb9`
@@ -149,6 +151,8 @@ Defines
 - :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1a375f74cc5a3700baa1b746a2fcc60190`
 
 - :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1ae9b75689e590b0a702f6c24100f04693`
+
+- :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1a9bbb9eaaa929495cd59b83a2bd719906`
 
 - :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1a9ceb6fa3a1b3065b18963506642d0d06`
 

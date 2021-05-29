@@ -44,15 +44,19 @@ Includes
 --------
 
 
+- ``config.h`` (:ref:`file_mainboard_Inc_config.h`)
+
 - ``feedback.h`` (:ref:`file_mainboard_Inc_feedback.h`)
+
+- ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
 
 - ``pack.h`` (:ref:`file_mainboard_Inc_pack.h`)
 
 - ``peripherals/si8900.h`` (:ref:`file_mainboard_Inc_peripherals_si8900.h`)
 
-- ``stdbool.h``
+- ``soc.h`` (:ref:`file_mainboard_Inc_soc.h`)
 
-- ``stm32g4xx_hal.h``
+- ``stdbool.h``
 
 - ``string.h``
 
@@ -82,6 +86,10 @@ Functions
 
 - :ref:`exhale_function_pack_8c_1aa4a76377c7d04fce76cb12e4daecb87a`
 
+- :ref:`exhale_function_pack_8c_1af4b44f57cce46f24ce85d25cf6db33e3`
+
+- :ref:`exhale_function_pack_8c_1a23cbb179425ee2e46181a07125be3b69`
+
 - :ref:`exhale_function_pack_8c_1a0e3de3b0a68560c145c795f7debfb95d`
 
 - :ref:`exhale_function_pack_8c_1a818a31883355a6379662b84884e4d8e4`
@@ -94,11 +102,15 @@ Functions
 
 - :ref:`exhale_function_pack_8c_1a72b388852db07771e836901e5561503e`
 
+- :ref:`exhale_function_pack_8c_1ab5b2dc99c6d926800be00817f221d5e9`
+
 - :ref:`exhale_function_pack_8c_1a51f16a179823be9e0b981fa7ccdaa7dd`
 
 - :ref:`exhale_function_pack_8c_1a91acae66b5ea4b819e36a88c776baf3f`
 
 - :ref:`exhale_function_pack_8c_1a9d97a0ffd5453bbe2b7e55b73eb0131a`
+
+- :ref:`exhale_function_pack_8c_1ad349c1b12d10dabd93f3a6400a99ef9a`
 
 - :ref:`exhale_function_pack_8c_1a11b76b127aed2ee361e2615bd9ba6d1a`
 
@@ -143,4 +155,8 @@ Variables
 - :ref:`exhale_variable_pack_8c_1a145ff3ef9e53de3d83064acbf72f0b9f`
 
 - :ref:`exhale_variable_pack_8c_1af0efb692b8d404ba4e4986dff19619f1`
+
+- :ref:`exhale_variable_pack_8c_1a29e86de29809135c63fb780dad514155`
+
+- :ref:`exhale_variable_pack_8c_1a232b686d286a16d23e8f9e39d5fc346a`
 

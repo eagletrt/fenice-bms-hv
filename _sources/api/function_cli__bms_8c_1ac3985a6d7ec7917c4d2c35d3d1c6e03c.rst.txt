@@ -1,0 +1,13 @@
+.. _exhale_function_cli__bms_8c_1ac3985a6d7ec7917c4d2c35d3d1c6e03c:
+
+Function _cli_soc
+=================
+
+- Defined in :ref:`file_mainboard_Src_cli_bms.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: _cli_soc(uint16_t, char **, char *)

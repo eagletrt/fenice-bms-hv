@@ -1,0 +1,80 @@
+
+.. _file_mainboard_Src_soc.c:
+
+File soc.c
+==========
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Src>` (``mainboard/Src``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+This file contains functions and utilities around energy and State of Charge estimation. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Src/soc.c``)
+------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Src_soc.c.rst
+
+
+
+Detailed Description
+--------------------
+
+May 12, 2021 
+
+Matteo Bonora [matteo.bonora@studenti.unitn.it] 
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``pack.h`` (:ref:`file_mainboard_Inc_pack.h`)
+
+- ``soc.h`` (:ref:`file_mainboard_Inc_soc.h`)
+
+- ``string.h``
+
+
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structsoc`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_soc_8c_1a637cb1fc6fa1157640a166b80bd4bc26`
+
+- :ref:`exhale_function_soc_8c_1af6eae21bffdff26947dfcacfe8628d98`
+
+- :ref:`exhale_function_soc_8c_1ad43f9f1d41b5479b44f7545f85abd980`
+
+- :ref:`exhale_function_soc_8c_1aa31c9a93635c5837b091bfc87209d2cc`
+
+- :ref:`exhale_function_soc_8c_1a1b9dc6678214faa7b79dfc812a170a62`
+
+- :ref:`exhale_function_soc_8c_1a800006d81ced9c0c564104d9c1338b04`
+

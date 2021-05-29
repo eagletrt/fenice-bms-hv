@@ -1,0 +1,13 @@
+.. _exhale_function_soc_8c_1af6eae21bffdff26947dfcacfe8628d98:
+
+Function soc_init(soc_t)
+========================
+
+- Defined in :ref:`file_mainboard_Src_soc.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: soc_init(soc_t)

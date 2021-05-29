@@ -1,0 +1,44 @@
+
+.. _program_listing_file_mainboard_Inc_soc.h:
+
+Program Listing for File soc.h
+==============================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_mainboard_Inc_soc.h>` (``mainboard/Inc/soc.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   /* Define to prevent recursive inclusion -------------------------------------*/
+   #ifndef _SOC_H_
+   #define _SOC_H_
+   
+   /* Includes ------------------------------------------------------------------*/
+   #include <inttypes.h>
+   
+   #include "fenice_config.h"
+   /* Exported types ------------------------------------------------------------*/
+   typedef struct soc* soc_t;
+   /* Exported constants --------------------------------------------------------*/
+   /* Exported macros -----------------------------------------------------------*/
+   /* Exported functions --------------------------------------------------------*/
+   
+   void soc_init(soc_t handle);
+   
+   void soc_load(soc_t handle, uint32_t coulomb, uint32_t joule, uint32_t time);
+   
+   void soc_reset_time(soc_t handle, uint32_t time);
+   
+   void soc_reset_count(soc_t handle, uint32_t time);
+   
+   void soc_sample_current(soc_t handle, current_t current, voltage_t voltage, uint32_t time);
+   
+   double soc_get_total_consumption(soc_t handle);
+   
+   /* Private types -------------------------------------------------------------*/
+   /* Private variables ---------------------------------------------------------*/
+   /* Private constants ---------------------------------------------------------*/
+   /* Private Macros -----------------------------------------------------------*/
+   #endif

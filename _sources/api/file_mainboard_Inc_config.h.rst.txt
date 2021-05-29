@@ -48,6 +48,8 @@ Includes
 
 - ``inttypes.h``
 
+- ``soc.h`` (:ref:`file_mainboard_Inc_soc.h`)
+
 
 
 Included By
@@ -56,7 +58,7 @@ Included By
 
 - :ref:`file_mainboard_Src_config.c`
 
-- :ref:`file_mainboard_Src_main.c`
+- :ref:`file_mainboard_Src_pack.c`
 
 
 

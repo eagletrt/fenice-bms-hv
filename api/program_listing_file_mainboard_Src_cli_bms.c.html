@@ -171,10 +171,11 @@
 <span class="cp">#include</span> <span class="cpf">&quot;bal.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;error/error.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;fsm_bms.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;pack.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;usart.h&quot;</span><span class="cp"></span>
 
 <span class="c1">// TODO: don&#39;t count manually</span>
-<span class="cp">#define N_COMMANDS 9</span>
+<span class="cp">#define N_COMMANDS 10</span>
 
 <span class="n">cli_command_func_t</span> <span class="n">_cli_volts</span><span class="p">;</span>
 <span class="n">cli_command_func_t</span> <span class="n">_cli_volts_all</span><span class="p">;</span>
@@ -182,6 +183,7 @@
 <span class="n">cli_command_func_t</span> <span class="n">_cli_temps_all</span><span class="p">;</span>
 <span class="n">cli_command_func_t</span> <span class="n">_cli_status</span><span class="p">;</span>
 <span class="n">cli_command_func_t</span> <span class="n">_cli_balance</span><span class="p">;</span>
+<span class="n">cli_command_func_t</span> <span class="n">_cli_soc</span><span class="p">;</span>
 <span class="n">cli_command_func_t</span> <span class="n">_cli_errors</span><span class="p">;</span>
 <span class="n">cli_command_func_t</span> <span class="n">_cli_dmesg</span><span class="p">;</span>
 <span class="n">cli_command_func_t</span> <span class="n">_cli_reset</span><span class="p">;</span>
@@ -232,10 +234,10 @@
     <span class="p">[</span><span class="n">FEEDBACK_TS_ON_POS</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;TS ON&quot;</span><span class="p">};</span>
 
 <span class="kt">char</span> <span class="o">*</span><span class="n">command_names</span><span class="p">[</span><span class="n">N_COMMANDS</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s">&quot;volt&quot;</span><span class="p">,</span> <span class="s">&quot;temp&quot;</span><span class="p">,</span> <span class="s">&quot;status&quot;</span><span class="p">,</span> <span class="s">&quot;errors&quot;</span><span class="p">,</span> <span class="s">&quot;bal&quot;</span><span class="p">,</span> <span class="s">&quot;dmesg&quot;</span><span class="p">,</span> <span class="s">&quot;reset&quot;</span><span class="p">,</span> <span class="s">&quot;?&quot;</span><span class="p">,</span> <span class="s">&quot;</span><span class="se">\t</span><span class="s">a&quot;</span><span class="p">};</span>
+    <span class="s">&quot;volt&quot;</span><span class="p">,</span> <span class="s">&quot;temp&quot;</span><span class="p">,</span> <span class="s">&quot;status&quot;</span><span class="p">,</span> <span class="s">&quot;errors&quot;</span><span class="p">,</span> <span class="s">&quot;bal&quot;</span><span class="p">,</span> <span class="s">&quot;soc&quot;</span><span class="p">,</span> <span class="s">&quot;dmesg&quot;</span><span class="p">,</span> <span class="s">&quot;reset&quot;</span><span class="p">,</span> <span class="s">&quot;?&quot;</span><span class="p">,</span> <span class="s">&quot;</span><span class="se">\t</span><span class="s">a&quot;</span><span class="p">};</span>
 
 <span class="n">cli_command_func_t</span> <span class="o">*</span><span class="n">commands</span><span class="p">[</span><span class="n">N_COMMANDS</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="o">&amp;</span><span class="n">_cli_volts</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_temps</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_status</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_errors</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_balance</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_dmesg</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_reset</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_help</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_taba</span><span class="p">};</span>
+    <span class="o">&amp;</span><span class="n">_cli_volts</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_temps</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_status</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_errors</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_balance</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_soc</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_dmesg</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_reset</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_help</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_cli_taba</span><span class="p">};</span>
 
 <span class="n">cli_t</span> <span class="n">cli_bms</span><span class="p">;</span>
 <span class="kt">bool</span> <span class="n">dmesg_ena</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
@@ -386,6 +388,17 @@
                 <span class="n">balancing</span><span class="p">.</span><span class="n">threshold</span> <span class="o">/</span> <span class="mi">10</span><span class="p">);</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
         <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s">&quot;Unknown parameter: %s</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="kt">void</span> <span class="nf">_cli_soc</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">out</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">&quot;reset&quot;</span><span class="p">))</span> <span class="p">{</span>
+        <span class="n">pack_reset_soc</span><span class="p">();</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span><span class="p">,</span>
+                <span class="s">&quot;SoC: %f</span><span class="se">\r\n</span><span class="s">&quot;</span>
+                <span class="s">&quot;Energy: %f</span><span class="se">\r\n</span><span class="s">&quot;</span>
+                <span class="s">&quot;Energy total: %f</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span>
+                <span class="n">pack_get_soc</span><span class="p">(),</span> <span class="n">pack_get_energy_last_charge</span><span class="p">(),</span> <span class="n">pack_get_energy_total</span><span class="p">());</span>
     <span class="p">}</span>
 <span class="p">}</span>
 

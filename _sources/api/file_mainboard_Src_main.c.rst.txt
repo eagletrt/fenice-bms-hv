@@ -31,8 +31,6 @@ Includes
 
 - ``cli_bms.h`` (:ref:`file_mainboard_Inc_cli_bms.h`)
 
-- ``config.h`` (:ref:`file_mainboard_Inc_config.h`)
-
 - ``error/error.h`` (:ref:`file_mainboard_Inc_error_error.h`)
 
 - ``fdcan.h`` (:ref:`file_mainboard_Inc_fdcan.h`)
