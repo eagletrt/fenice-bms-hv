@@ -1,0 +1,34 @@
+
+.. _program_listing_file_mainboard_Src_config.c:
+
+Program Listing for File config.c
+=================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_mainboard_Src_config.c>` (``mainboard/Src/config.c``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   #include "config.h"
+   
+   #include <string.h>
+   
+   #include "m95256.h"
+   
+   m95256_t memory;
+   config_t config = config_default;
+   
+   bool config_write(config_t *config) {
+       return m95256_WriteBuffer(memory, (uint8_t *)config, CONFIG_ADDRESS, sizeof(*config)) == EEPROM_STATUS_COMPLETE;
+   }
+   
+   bool config_load() {
+       m95256_ReadBuffer(memory, (uint8_t *)&config, CONFIG_ADDRESS, sizeof(config));
+       return config.version == CONFIG_VERSION;
+   }
+   
+   void config_get(config_t *config) {
+       memcpy(&config, config, sizeof(config));
+   }

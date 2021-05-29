@@ -1,0 +1,13 @@
+.. _exhale_variable_config_8h_1a7c6891ebc53d9341be6ca3271b660762:
+
+Variable config_default
+=======================
+
+- Defined in :ref:`file_mainboard_Inc_config.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: config_default

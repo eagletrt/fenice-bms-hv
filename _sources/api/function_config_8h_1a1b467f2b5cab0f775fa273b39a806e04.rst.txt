@@ -1,0 +1,13 @@
+.. _exhale_function_config_8h_1a1b467f2b5cab0f775fa273b39a806e04:
+
+Function config_load()
+======================
+
+- Defined in :ref:`file_mainboard_Inc_config.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: config_load()

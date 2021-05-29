@@ -1,0 +1,76 @@
+
+.. _file_mainboard_Src_config.c:
+
+File config.c
+=============
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Src>` (``mainboard/Src``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+This file contains the configuration handler. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Src/config.c``)
+---------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Src_config.c.rst
+
+
+
+Detailed Description
+--------------------
+
+May 28, 2021
+
+Matteo Bonora [matteo.bonora@studenti.unitn.it] 
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``config.h`` (:ref:`file_mainboard_Inc_config.h`)
+
+- ``m95256.h``
+
+- ``string.h``
+
+
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_config_8c_1a7c49f020ada32702f4b8b07e7a1f37bc`
+
+- :ref:`exhale_function_config_8c_1a1b467f2b5cab0f775fa273b39a806e04`
+
+- :ref:`exhale_function_config_8c_1afa27d32e14b7a4dbc9cfb8e020e3f748`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_config_8c_1a25ce4b69d296fc9a3324b494542c2420`
+
+- :ref:`exhale_variable_config_8c_1a859a34ad2f9ec17adfd0c7b76d288952`
+

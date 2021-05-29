@@ -1,0 +1,103 @@
+
+.. _file_mainboard_Inc_config.h:
+
+File config.h
+=============
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Inc>` (``mainboard/Inc``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+This file contains the configuration handler. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Inc/config.h``)
+---------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Inc_config.h.rst
+
+
+
+Detailed Description
+--------------------
+
+May 28, 2021
+
+Matteo Bonora [matteo.bonora@studenti.unitn.it] 
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``bal.h`` (:ref:`file_mainboard_Inc_bal.h`)
+
+- ``inttypes.h``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_mainboard_Src_config.c`
+
+- :ref:`file_mainboard_Src_main.c`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structconfig`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_config_8h_1a7c49f020ada32702f4b8b07e7a1f37bc`
+
+- :ref:`exhale_function_config_8h_1a1b467f2b5cab0f775fa273b39a806e04`
+
+- :ref:`exhale_function_config_8h_1afa27d32e14b7a4dbc9cfb8e020e3f748`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_config_8h_1a98b9b2b06a1aba5b41a9c4a94cbd89df`
+
+- :ref:`exhale_define_config_8h_1a33fbd7e91d033fa1e09b4ed4de899c02`
+
+
+Typedefs
+--------
+
+
+- :ref:`exhale_typedef_config_8h_1a261f57fc59ad07837082c43ef8a443e3`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_config_8h_1a7c6891ebc53d9341be6ca3271b660762`
+

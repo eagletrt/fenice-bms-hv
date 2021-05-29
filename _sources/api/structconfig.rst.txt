@@ -1,0 +1,16 @@
+.. _exhale_struct_structconfig:
+
+Struct config
+=============
+
+- Defined in :ref:`file_mainboard_Inc_config.h`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: config
+   :members:
+   :protected-members:
+   :undoc-members:

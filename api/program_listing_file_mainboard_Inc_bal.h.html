@@ -172,11 +172,16 @@
 
 <span class="cp">#define BAL_NULL_INDEX UINT8_MAX</span>
 
-<span class="kt">uint16_t</span> <span class="nf">bal_get_cells_to_discharge</span><span class="p">(</span><span class="n">voltage_t</span> <span class="n">volts</span><span class="p">[],</span> <span class="kt">uint16_t</span> <span class="n">count</span><span class="p">,</span> <span class="n">voltage_t</span> <span class="n">threshold</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="n">cells</span><span class="p">[]);</span>
+<span class="k">typedef</span> <span class="k">struct</span> <span class="n">bal_handle</span> <span class="p">{</span>
+    <span class="kt">bool</span> <span class="n">enable</span><span class="p">;</span>
+    <span class="kt">uint16_t</span> <span class="n">threshold</span><span class="p">;</span>
+    <span class="kt">uint8_t</span> <span class="n">slot_time</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">bal_handle</span><span class="p">;</span>
 
-<span class="kt">uint16_t</span> <span class="nf">bal_compute_imbalance</span><span class="p">(</span><span class="n">voltage_t</span> <span class="n">volts</span><span class="p">[],</span> <span class="kt">uint16_t</span> <span class="n">count</span><span class="p">,</span> <span class="n">voltage_t</span> <span class="n">threshold</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="n">cells</span><span class="p">[]);</span>
+<span class="kt">void</span> <span class="nf">bal_init</span><span class="p">(</span><span class="n">bal_handle</span> <span class="o">*</span><span class="n">bal</span><span class="p">);</span>
 
-<span class="kt">uint16_t</span> <span class="nf">bal_exclude_neighbors</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">indexes</span><span class="p">[],</span> <span class="kt">uint16_t</span> <span class="n">count</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="n">cells</span><span class="p">[]);</span>
+<span class="kt">uint8_t</span> <span class="nf">bal_compute_indexes</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">volts</span><span class="p">[</span><span class="n">PACK_CELL_COUNT</span><span class="p">],</span> <span class="kt">uint8_t</span> <span class="n">indexes</span><span class="p">[</span><span class="n">PACK_CELL_COUNT</span><span class="p">],</span> <span class="kt">uint16_t</span> <span class="n">threshold</span><span class="p">);</span>
+
 <span class="cp">#endif</span>
 </pre></div>
 </div>

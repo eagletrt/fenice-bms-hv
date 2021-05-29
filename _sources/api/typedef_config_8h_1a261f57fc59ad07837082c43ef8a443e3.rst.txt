@@ -1,0 +1,13 @@
+.. _exhale_typedef_config_8h_1a261f57fc59ad07837082c43ef8a443e3:
+
+Typedef config_t
+================
+
+- Defined in :ref:`file_mainboard_Inc_config.h`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: config_t

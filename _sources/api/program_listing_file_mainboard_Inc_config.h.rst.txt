@@ -1,0 +1,35 @@
+
+.. _program_listing_file_mainboard_Inc_config.h:
+
+Program Listing for File config.h
+=================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_mainboard_Inc_config.h>` (``mainboard/Inc/config.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   #ifndef CONFIG_H
+   #define CONFIG_H
+   #include <inttypes.h>
+   
+   #include "bal.h"
+   
+   #define CONFIG_ADDRESS 0x00
+   
+   #define CONFIG_VERSION 0x01
+   
+   struct config {
+       uint32_t version;
+   };
+   typedef struct config config_t;
+   const config_t config_default = {
+       CONFIG_VERSION};
+   
+   bool config_write(config_t *config);
+   bool config_load();
+   void config_get(config_t *config);
+   
+   #endif

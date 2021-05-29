@@ -67,14 +67,12 @@ Enums
 -----
 
 
-- :ref:`exhale_enum_mainboard_2Inc_2fenice__config_8h_1adf764cbdea00d65edcd07bb9953ad2b7`
+- :ref:`exhale_enum_mainboard_2Inc_2fenice__config_8h_1a06fc87d81c62e9abb8790b6e5713c55b`
 
 
 Defines
 -------
 
-
-- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a3b31b86957fda293852c1bf89266d6a3`
 
 - :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a55973ed2194879bd45f5a2f5dc8e705c`
 
@@ -136,8 +134,6 @@ Defines
 
 - :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a92f30c622832ad6c2dfc95f932c21d4e`
 
-- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1ab5e8a957cf8d31a73047fde2f5c65edc`
-
 - :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a60d95021fa7515f639603ef6dae74626`
 
 - :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1abf2cacfdd7c50f4779e617c0d28750b1`
@@ -165,6 +161,8 @@ Defines
 - :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1aabde0ed9a71a7df4aa5b0b1630130d81`
 
 - :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a7106675a03b716a4eaed676ecac40431`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1ae29095c7d8f1949c76d4770d100fe9d2`
 
 - :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a269b2ac5a85295f75c79d8897ac7d556`
 

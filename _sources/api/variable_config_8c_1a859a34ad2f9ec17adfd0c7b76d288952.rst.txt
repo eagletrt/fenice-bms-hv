@@ -1,0 +1,13 @@
+.. _exhale_variable_config_8c_1a859a34ad2f9ec17adfd0c7b76d288952:
+
+Variable memory
+===============
+
+- Defined in :ref:`file_mainboard_Src_config.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: memory

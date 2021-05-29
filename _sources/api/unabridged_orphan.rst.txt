@@ -75,16 +75,6 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file_mainboard_Src_bal_fsm.c.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file_mainboard_Inc_bal_fsm.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file_mainboard_Src_peripherals_can.c.rst
 
 .. toctree::
@@ -101,6 +91,16 @@ Files
    :maxdepth: 5
 
    file_mainboard_Inc_cli_bms.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Src_config.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Inc_config.h.rst
 
 .. toctree::
    :maxdepth: 5

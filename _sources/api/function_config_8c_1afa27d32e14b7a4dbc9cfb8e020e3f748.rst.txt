@@ -1,0 +1,13 @@
+.. _exhale_function_config_8c_1afa27d32e14b7a4dbc9cfb8e020e3f748:
+
+Function config_write(config_t \*)
+==================================
+
+- Defined in :ref:`file_mainboard_Src_config.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: config_write(config_t *)

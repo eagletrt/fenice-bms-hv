@@ -22,8 +22,8 @@ Files
 -----
 
 - :ref:`file_mainboard_Inc_bal.h`
-- :ref:`file_mainboard_Inc_bal_fsm.h`
 - :ref:`file_mainboard_Inc_cli_bms.h`
+- :ref:`file_mainboard_Inc_config.h`
 - :ref:`file_mainboard_Inc_fdcan.h`
 - :ref:`file_mainboard_Inc_feedback.h`
 - :ref:`file_mainboard_Inc_fenice_config.h`
