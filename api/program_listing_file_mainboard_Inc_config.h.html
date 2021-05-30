@@ -162,12 +162,11 @@
   <div class="section" id="program-listing-for-file-config-h">
 <span id="program-listing-file-mainboard-inc-config-h"></span><h1>Program Listing for File config.h<a class="headerlink" href="#program-listing-for-file-config-h" title="Permalink to this headline">¶</a></h1>
 <p>↰ <a class="reference internal" href="file_mainboard_Inc_config.h.html#file-mainboard-inc-config-h"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">mainboard/Inc/config.h</span></code>)</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifndef _CONFIG_H_</span>
-<span class="cp">#define _CONFIG_H_</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifndef CONFIG_H</span>
+<span class="cp">#define CONFIG_H</span>
 <span class="cp">#include</span> <span class="cpf">&lt;inttypes.h&gt;</span><span class="cp"></span>
 
 <span class="cp">#include</span> <span class="cpf">&quot;bal.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;soc.h&quot;</span><span class="cp"></span>
 
 <span class="cp">#define CONFIG_ADDRESS 0x00</span>
 
@@ -175,15 +174,10 @@
 
 <span class="k">struct</span> <span class="n">config</span> <span class="p">{</span>
     <span class="kt">uint32_t</span> <span class="n">version</span><span class="p">;</span>
-
-    <span class="kt">uint32_t</span> <span class="n">total_coulomb</span><span class="p">;</span>
-    <span class="kt">uint32_t</span> <span class="n">total_joule</span><span class="p">;</span>
-    <span class="kt">uint32_t</span> <span class="n">partial_coulomb</span><span class="p">;</span>
-    <span class="kt">uint32_t</span> <span class="n">partial_joule</span><span class="p">;</span>
 <span class="p">};</span>
 <span class="k">typedef</span> <span class="k">struct</span> <span class="n">config</span> <span class="n">config_t</span><span class="p">;</span>
-
-<span class="k">extern</span> <span class="k">const</span> <span class="n">config_t</span> <span class="n">config_default</span><span class="p">;</span>
+<span class="k">const</span> <span class="n">config_t</span> <span class="n">config_default</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">CONFIG_VERSION</span><span class="p">};</span>
 
 <span class="kt">bool</span> <span class="nf">config_write</span><span class="p">(</span><span class="n">config_t</span> <span class="o">*</span><span class="n">config</span><span class="p">);</span>
 <span class="kt">bool</span> <span class="nf">config_load</span><span class="p">();</span>

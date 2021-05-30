@@ -42,7 +42,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Struct bal_handle" href="structbal__handle.html" />
+    <link rel="next" title="Struct cells_t" href="structcells__t.html" />
     <link rel="prev" title="Welcome to Eagletrt ubx parser master’s documentation!" href="../index.html" /> 
 </head>
 
@@ -98,17 +98,16 @@
 <li class="toctree-l2"><a class="reference internal" href="#file-hierarchy">File Hierarchy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#full-api">Full API</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#classes-and-structs">Classes and Structs</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="structbal__handle.html">Struct bal_handle</a></li>
 <li class="toctree-l4"><a class="reference internal" href="structcells__t.html">Struct cells_t</a></li>
 <li class="toctree-l4"><a class="reference internal" href="structconfig.html">Struct config</a></li>
 <li class="toctree-l4"><a class="reference internal" href="structerror__t.html">Struct error_t</a></li>
-<li class="toctree-l4"><a class="reference internal" href="structsoc.html">Struct soc</a></li>
 <li class="toctree-l4"><a class="reference internal" href="structtemperature.html">Struct temperature</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#enums">Enums</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="enum_mainboard_2Inc_2fenice__config_8h_1a06fc87d81c62e9abb8790b6e5713c55b.html">Enum &#64;0</a></li>
-<li class="toctree-l4"><a class="reference internal" href="enum_cellboard_2Inc_2fenice__config_8h_1adf764cbdea00d65edcd07bb9953ad2b7.html">Enum &#64;1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_bal__fsm_8h_1a06fc87d81c62e9abb8790b6e5713c55b.html">Enum &#64;0</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_mainboard_2Inc_2fenice__config_8h_1adf764cbdea00d65edcd07bb9953ad2b7.html">Enum &#64;1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_cellboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html">Enum &#64;2</a></li>
 <li class="toctree-l4"><a class="reference internal" href="enum_fsm__bms_8h_1a25f0477a732b1a7aea1e8966a5abd125.html">Enum bms_states</a></li>
 <li class="toctree-l4"><a class="reference internal" href="enum_error_8h_1a29af8b317c2926569605c08d7ef294a5.html">Enum error_id</a></li>
 <li class="toctree-l4"><a class="reference internal" href="enum_error_8h_1a954c5caf30928503ff36b24cc6d6414d.html">Enum error_state</a></li>
@@ -118,31 +117,39 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="function_bal_8c_1a895873c36da91db9c896648e8cef00c0.html">Function _bubble_sort</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_bal_8c_1aadc6f5a4740bda6bed2ce444d7d45310.html">Function _bal_hateville</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_bal_8c_1a4857f39dc51047468afc725d8b5f9f17.html">Function _bal_hateville_solution</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_cli__bms_8c_1ade814779a92b390ef1873c571fe20473.html">Function _cli_balance</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_cli__bms_8c_1af5c00593dd5b36bdf22fafe638a455af.html">Function _cli_dmesg</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_cli__bms_8c_1aad34c4a4aa15033a1912e6d41d00081b.html">Function _cli_errors</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_cli__bms_8c_1ad04d99b2a03909941b3b382f228567ca.html">Function _cli_help</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_cli__bms_8c_1a93ceb8f6ffb9c2f7efc5c2297e9195ec.html">Function _cli_reset</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_cli__bms_8c_1ac3985a6d7ec7917c4d2c35d3d1c6e03c.html">Function _cli_soc</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_cli__bms_8c_1a7ba9ba49b642bd02c233395a98117ee5.html">Function _cli_status</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_cli__bms_8c_1ad060f51fbc50205bbaee206fcc8dbad2.html">Function _cli_taba</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_cli__bms_8c_1a46815f4fde575ed887a9d99ca0b927a5.html">Function _cli_temps</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_cli__bms_8c_1aa381264cefd6a2a056151ae7cde00492.html">Function _cli_temps_all</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_cli__bms_8c_1a4e36fad2ffae280c09b95d7120be194b.html">Function _cli_ts</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_cli__bms_8c_1a40ccc4ec8554c5a2ee2ad9fb73d97397.html">Function _cli_volts</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_cli__bms_8c_1a50ceab3a580d0de30257e368be4ca618.html">Function _cli_volts_all</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_ltc6813_8h_1a0bec3562f269146e996d92958a025eb3.html">Function _ltc6813_adcv(SPI_HandleTypeDef *, bool)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_ltc6813_8c_1a23ba75ea09d41fd70d20dfa9f5d70178.html">Function _ltc6813_adcv(SPI_HandleTypeDef *, bool)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_ltc6813_8h_1a684d6a9ae823683b80e5fb210070d712.html">Function _ltc6813_wrcfg(SPI_HandleTypeDef *, bool, bool)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_ltc6813_8c_1ab543e90701ab1e4afd4c21b3f8233baf.html">Function _ltc6813_wrcfg(SPI_HandleTypeDef *, bool, bool)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_bal_8c_1ae00338771ec77948b7fbd3e5b29a0ddb.html">Function _max_index</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_bal_8c_1ad42bcabde24aacfde9c874645e976e13.html">Function _max_index</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_pack_8c_1aa61e85cd7f306656a67272edaf145f6c.html">Function _mean</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_bal_8c_1af778468a1695088a03972c1964922276.html">Function _min_index</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_bal_8c_1a949bd6aae2409dc009f91ee631120876.html">Function _swap</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_bal_8h_1a37ecba0c442c5f3eb3c7ee2f6347bc8b.html">Function bal_compute_indexes(uint16_t, uint8_t, uint16_t)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_bal_8c_1aa6bd11fcc753f0813d3763b4eaec4e0f.html">Function bal_compute_indexes(uint16_t, uint8_t, uint16_t)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_bal_8h_1a338063b4a0f01cb455e163840ebcabc2.html">Function bal_init(bal_handle *)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_bal_8c_1a338063b4a0f01cb455e163840ebcabc2.html">Function bal_init(bal_handle *)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_bal_8c_1aa0eaba37cbea2e81fa7aab2d986019f2.html">Function _min_index</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_bal_8h_1ac4fab94238cd9bd16c9f3c3d17fc035e.html">Function bal_compute_imbalance(voltage_t, uint16_t, voltage_t, uint16_t)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_bal_8c_1ac4fab94238cd9bd16c9f3c3d17fc035e.html">Function bal_compute_imbalance(voltage_t, uint16_t, voltage_t, uint16_t)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_bal_8h_1a2c3b2ddfa164a6ec0f86cb9d6ad3ec22.html">Function bal_exclude_neighbors(uint16_t, uint16_t, uint16_t)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_bal_8c_1a5adb7336d5f77eac25813d94d56c0410.html">Function bal_exclude_neighbors(uint16_t, uint16_t, uint16_t)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_bal__fsm_8h_1a72aadcd031bfaf567ec4aecc2d6fd818.html">Function bal_fsm_init()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_bal__fsm_8c_1a72aadcd031bfaf567ec4aecc2d6fd818.html">Function bal_fsm_init()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_bal_8h_1a6719efe50d915cc74294c060d31b92b8.html">Function bal_get_cells_to_discharge(voltage_t, uint16_t, voltage_t, uint16_t)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_bal_8c_1a6719efe50d915cc74294c060d31b92b8.html">Function bal_get_cells_to_discharge(voltage_t, uint16_t, voltage_t, uint16_t)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_bal__fsm_8h_1a4d4339483644c0d5124b8bb2095b923e.html">Function bal_get_threshold()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_bal__fsm_8c_1a4d4339483644c0d5124b8bb2095b923e.html">Function bal_get_threshold()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_bal__fsm_8h_1af340160471b0034430f8d5fef743862b.html">Function bal_set_threshold(uint16_t)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_bal__fsm_8c_1af340160471b0034430f8d5fef743862b.html">Function bal_set_threshold(uint16_t)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_stm32f4xx__it_8h_1a850cefb17a977292ae5eb4cafa9976c3.html">Function BusFault_Handler(void)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_stm32f4xx__it_8c_1a850cefb17a977292ae5eb4cafa9976c3.html">Function BusFault_Handler(void)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_stm32g4xx__it_8h_1a850cefb17a977292ae5eb4cafa9976c3.html">Function BusFault_Handler(void)</a></li>
@@ -169,9 +176,13 @@
 <li class="toctree-l4"><a class="reference internal" href="function_stm32g4xx__it_8h_1adbdfb05858cc36fc520974df37ec3cb0.html">Function DebugMon_Handler(void)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_stm32g4xx__it_8c_1adbdfb05858cc36fc520974df37ec3cb0.html">Function DebugMon_Handler(void)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_fsm__bms_8c_1a76b65fd166830d7a3110b498a51c88db.html">Function do_charge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_bal__fsm_8c_1acdb8ad0b4b8794cf774e63da95e8c756.html">Function do_compute</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_bal__fsm_8c_1ad8bead046adc2ae33c4ce9a5cfc292ed.html">Function do_cooldown</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_bal__fsm_8c_1a1752d741828ffaefc89f40bd7466d430.html">Function do_discharge</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_fsm__bms_8c_1a3f6cc531bdf9a0b2174fd5f580bb4678.html">Function do_halt</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_fsm__bms_8c_1abb571eacecf1a1f8516404199b189e3f.html">Function do_idle</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_fsm__bms_8c_1a327a54b2549a62e234ffb074084e8add.html">Function do_init</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_bal__fsm_8c_1a14a8fef79ebb977dc0a81abf26e8530f.html">Function do_off</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_fsm__bms_8c_1a41c5fed8456db24a47cea87b36818261.html">Function do_precharge</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_fsm__bms_8c_1a4dd67d9b06223b0d8d778b7d1adcf825.html">Function do_precharge_end</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_fsm__bms_8c_1a919a1322b0f64c3939b6733cf5d02b8a.html">Function do_precharge_start</a></li>
@@ -215,10 +226,6 @@
 <li class="toctree-l4"><a class="reference internal" href="function_cellboard_2Src_2main_8c_1a9769ee8710b70b63cf39cab88d62f838.html">Function fourtemps_threebytes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_fsm__bms_8h_1a44d2899c50265c562b9ee5695112b7a4.html">Function fsm_bms_init()</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_fsm__bms_8c_1a44d2899c50265c562b9ee5695112b7a4.html">Function fsm_bms_init()</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_fsm__bms_8h_1a1d01528432bc843cf9541517e6858767.html">Function fsm_bms_ts_off_handler()</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_fsm__bms_8c_1a1d01528432bc843cf9541517e6858767.html">Function fsm_bms_ts_off_handler()</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_fsm__bms_8h_1a6885f1cd99bf8746e06a09f4d6e6838e.html">Function fsm_bms_ts_on_handler()</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_fsm__bms_8c_1a6885f1cd99bf8746e06a09f4d6e6838e.html">Function fsm_bms_ts_on_handler()</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_cellboard_2Src_2main_8c_1ac7fdddb1d7daec7e5db638bc51ff9b6e.html">Function get_temp_maxmin</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_error_8c_1a6b6d15a1320459e59cdcda802d6584ff.html">Function get_timeout_delta</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_fdcan_8c_1a7c1e54efb942c6aa706dbfc9f35914f9.html">Function HAL_FDCAN_MspDeInit</a></li>
@@ -272,10 +279,10 @@
 <li class="toctree-l4"><a class="reference internal" href="function_ltc6813__utils_8c_1a06b77975af53a3bf169cb63308d9ba0e.html">Function ltc6813_read_temperatures(SPI_HandleTypeDef *, temperature_t, temperature_t)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_ltc6813__utils_8h_1a7c0b1330dbf0c54877b204e8501a943b.html">Function ltc6813_read_voltages(SPI_HandleTypeDef *, voltage_t *)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_ltc6813__utils_8c_1a7c0b1330dbf0c54877b204e8501a943b.html">Function ltc6813_read_voltages(SPI_HandleTypeDef *, voltage_t *)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_ltc6813__utils_8h_1a32f0c355e41f4f382b6fe0eac23c3a23.html">Function ltc6813_set_balancing(SPI_HandleTypeDef *, uint8_t *, int)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_ltc6813__utils_8c_1a32f0c355e41f4f382b6fe0eac23c3a23.html">Function ltc6813_set_balancing(SPI_HandleTypeDef *, uint8_t *, int)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_ltc6813__utils_8h_1ad0ee2266089bcd711c3679ae36336fc7.html">Function ltc6813_set_dcc(uint8_t, uint8_t, uint8_t)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_ltc6813__utils_8c_1ad0ee2266089bcd711c3679ae36336fc7.html">Function ltc6813_set_dcc(uint8_t, uint8_t, uint8_t)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ltc6813__utils_8h_1ab4b5bea06d42f3fe287cc3dd5d391bcb.html">Function ltc6813_set_balancing(SPI_HandleTypeDef *, uint16_t *, int)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ltc6813__utils_8c_1ab4b5bea06d42f3fe287cc3dd5d391bcb.html">Function ltc6813_set_balancing(SPI_HandleTypeDef *, uint16_t *, int)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ltc6813__utils_8h_1aadfe70d2f2b194cda0a3ea9311cb97fc.html">Function ltc6813_set_dcc(uint16_t, uint8_t, uint8_t)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ltc6813__utils_8c_1aadfe70d2f2b194cda0a3ea9311cb97fc.html">Function ltc6813_set_dcc(uint16_t, uint8_t, uint8_t)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_ltc6813_8h_1aacb24606a92e6ea069a67fac5cee6847.html">Function ltc6813_stcomm_i2c(SPI_HandleTypeDef *, uint8_t)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_ltc6813_8c_1aacb24606a92e6ea069a67fac5cee6847.html">Function ltc6813_stcomm_i2c(SPI_HandleTypeDef *, uint8_t)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_ltc6813__utils_8h_1a0f0a2a353d27e37ce2b7465786d2e387.html">Function ltc6813_temp_get(SPI_HandleTypeDef *, uint8_t)</a></li>
@@ -320,18 +327,10 @@
 <li class="toctree-l4"><a class="reference internal" href="function_stm32f4xx__it_8c_1a6ad7a5e3ee69cb6db6a6b9111ba898bc.html">Function NMI_Handler(void)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_stm32g4xx__it_8h_1a6ad7a5e3ee69cb6db6a6b9111ba898bc.html">Function NMI_Handler(void)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_stm32g4xx__it_8c_1a6ad7a5e3ee69cb6db6a6b9111ba898bc.html">Function NMI_Handler(void)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_pack_8h_1ae8f765f62104756b8e1f7fac9c7d8296.html">Function pack_balance_cells(SPI_HandleTypeDef *)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_pack_8c_1ae8f765f62104756b8e1f7fac9c7d8296.html">Function pack_balance_cells(SPI_HandleTypeDef *)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_pack_8h_1a05e05a56e1e19d3bdbb650a57e14ae7b.html">Function pack_get_balancing()</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_pack_8c_1a05e05a56e1e19d3bdbb650a57e14ae7b.html">Function pack_get_balancing()</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_pack_8h_1a62b44ad3586608b81dce6a617b3e7f31.html">Function pack_get_bus_voltage()</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_pack_8c_1a62b44ad3586608b81dce6a617b3e7f31.html">Function pack_get_bus_voltage()</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_pack_8h_1aa4a76377c7d04fce76cb12e4daecb87a.html">Function pack_get_current()</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_pack_8c_1aa4a76377c7d04fce76cb12e4daecb87a.html">Function pack_get_current()</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_pack_8h_1af4b44f57cce46f24ce85d25cf6db33e3.html">Function pack_get_energy_last_charge()</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_pack_8c_1af4b44f57cce46f24ce85d25cf6db33e3.html">Function pack_get_energy_last_charge()</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_pack_8h_1a23cbb179425ee2e46181a07125be3b69.html">Function pack_get_energy_total()</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_pack_8c_1a23cbb179425ee2e46181a07125be3b69.html">Function pack_get_energy_total()</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_pack_8h_1a0e3de3b0a68560c145c795f7debfb95d.html">Function pack_get_int_voltage()</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_pack_8c_1a0e3de3b0a68560c145c795f7debfb95d.html">Function pack_get_int_voltage()</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_pack_8h_1a818a31883355a6379662b84884e4d8e4.html">Function pack_get_max_temperature()</a></li>
@@ -344,16 +343,14 @@
 <li class="toctree-l4"><a class="reference internal" href="function_pack_8c_1afc77225b3417710fec24e84556825ea2.html">Function pack_get_min_temperature()</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_pack_8h_1a72b388852db07771e836901e5561503e.html">Function pack_get_min_voltage()</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_pack_8c_1a72b388852db07771e836901e5561503e.html">Function pack_get_min_voltage()</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_pack_8h_1ab5b2dc99c6d926800be00817f221d5e9.html">Function pack_get_soc()</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_pack_8c_1ab5b2dc99c6d926800be00817f221d5e9.html">Function pack_get_soc()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_pack_8h_1a7f587ce8028afdb6698f3cab085f0e18.html">Function pack_get_power()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_pack_8c_1a7f587ce8028afdb6698f3cab085f0e18.html">Function pack_get_power()</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_pack_8h_1a51f16a179823be9e0b981fa7ccdaa7dd.html">Function pack_get_temperatures()</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_pack_8c_1a51f16a179823be9e0b981fa7ccdaa7dd.html">Function pack_get_temperatures()</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_pack_8h_1a91acae66b5ea4b819e36a88c776baf3f.html">Function pack_get_voltages()</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_pack_8c_1a91acae66b5ea4b819e36a88c776baf3f.html">Function pack_get_voltages()</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_pack_8h_1a9d97a0ffd5453bbe2b7e55b73eb0131a.html">Function pack_init()</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_pack_8c_1a9d97a0ffd5453bbe2b7e55b73eb0131a.html">Function pack_init()</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_pack_8h_1ad349c1b12d10dabd93f3a6400a99ef9a.html">Function pack_reset_soc()</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_pack_8c_1ad349c1b12d10dabd93f3a6400a99ef9a.html">Function pack_reset_soc()</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_pack_8h_1a11b76b127aed2ee361e2615bd9ba6d1a.html">Function pack_set_pc_start()</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_pack_8c_1a11b76b127aed2ee361e2615bd9ba6d1a.html">Function pack_set_pc_start()</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_pack_8h_1a892b040f241c24a0894cd094209ecb1c.html">Function pack_set_precharge_end()</a></li>
@@ -388,18 +385,6 @@
 <li class="toctree-l4"><a class="reference internal" href="function_si8900_8c_1a73f7452e5f52d7e8acae5c5112f8335b.html">Function si8900_init(UART_HandleTypeDef *, GPIO_TypeDef *, uint16_t)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_si8900_8h_1ac2cd280986f2937e02967e6e85e69932.html">Function si8900_read_channel(UART_HandleTypeDef *, SI8900_CHANNEL, uint16_t *)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_si8900_8c_1ac2cd280986f2937e02967e6e85e69932.html">Function si8900_read_channel(UART_HandleTypeDef *, SI8900_CHANNEL, uint16_t *)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_soc_8h_1a637cb1fc6fa1157640a166b80bd4bc26.html">Function soc_get_total_consumption(soc_t)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_soc_8c_1a637cb1fc6fa1157640a166b80bd4bc26.html">Function soc_get_total_consumption(soc_t)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_soc_8h_1af6eae21bffdff26947dfcacfe8628d98.html">Function soc_init(soc_t)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_soc_8c_1af6eae21bffdff26947dfcacfe8628d98.html">Function soc_init(soc_t)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_soc_8h_1ad43f9f1d41b5479b44f7545f85abd980.html">Function soc_load(soc_t, uint32_t, uint32_t, uint32_t)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_soc_8c_1ad43f9f1d41b5479b44f7545f85abd980.html">Function soc_load(soc_t, uint32_t, uint32_t, uint32_t)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_soc_8h_1aa31c9a93635c5837b091bfc87209d2cc.html">Function soc_reset_count(soc_t, uint32_t)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_soc_8c_1aa31c9a93635c5837b091bfc87209d2cc.html">Function soc_reset_count(soc_t, uint32_t)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_soc_8h_1a1b9dc6678214faa7b79dfc812a170a62.html">Function soc_reset_time(soc_t, uint32_t)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_soc_8c_1a1b9dc6678214faa7b79dfc812a170a62.html">Function soc_reset_time(soc_t, uint32_t)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_soc_8h_1a800006d81ced9c0c564104d9c1338b04.html">Function soc_sample_current(soc_t, current_t, voltage_t, uint32_t)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_soc_8c_1a800006d81ced9c0c564104d9c1338b04.html">Function soc_sample_current(soc_t, current_t, voltage_t, uint32_t)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_spi_8h_1ad59b1470e3c09d41c88aecf7ae0ca806.html">Function spi_disable_cs(SPI_HandleTypeDef *, GPIO_TypeDef *, uint16_t)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_spi_8c_1ad59b1470e3c09d41c88aecf7ae0ca806.html">Function spi_disable_cs(SPI_HandleTypeDef *, GPIO_TypeDef *, uint16_t)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_spi_8h_1acc2dc237744eb00a139b6385c837d35c.html">Function spi_enable_cs(SPI_HandleTypeDef *, GPIO_TypeDef *, uint16_t)</a></li>
@@ -426,6 +411,7 @@
 <li class="toctree-l4"><a class="reference internal" href="function_temperature_8c_1a11e1b6884f668ef752078d35db919268.html">Function temperature_read_sample(I2C_HandleTypeDef *, uint16_t *)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_stm32g4xx__it_8h_1a38ad4725462bdc5e86c4ead4f04b9fc2.html">Function TIM2_IRQHandler(void)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_stm32g4xx__it_8c_1a38ad4725462bdc5e86c4ead4f04b9fc2.html">Function TIM2_IRQHandler(void)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_bal__fsm_8c_1ac354355a328097b22f830d8e5faa2ae2.html">Function trans_stop</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_stm32f4xx__it_8h_1a1d98923de2ed6b7309b66f9ba2971647.html">Function UsageFault_Handler(void)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_stm32f4xx__it_8c_1a1d98923de2ed6b7309b66f9ba2971647.html">Function UsageFault_Handler(void)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_stm32g4xx__it_8h_1a1d98923de2ed6b7309b66f9ba2971647.html">Function UsageFault_Handler(void)</a></li>
@@ -440,18 +426,21 @@
 <li class="toctree-l4"><a class="reference internal" href="variable_cli__bms_8c_1a97089cbba6264fbfc9a1579ac9351a0d.html">Variable _cli_errors</a></li>
 <li class="toctree-l4"><a class="reference internal" href="variable_cli__bms_8c_1ae9e5758c24518e7a2b34810bd2f7e0e7.html">Variable _cli_help</a></li>
 <li class="toctree-l4"><a class="reference internal" href="variable_cli__bms_8c_1aa409f5250982bed8c00e4fe32469febc.html">Variable _cli_reset</a></li>
-<li class="toctree-l4"><a class="reference internal" href="variable_cli__bms_8c_1a25e2c523f32311f60ea2c783e3a7a192.html">Variable _cli_soc</a></li>
 <li class="toctree-l4"><a class="reference internal" href="variable_cli__bms_8c_1a652260a7b604db4237651c4d177b9594.html">Variable _cli_status</a></li>
 <li class="toctree-l4"><a class="reference internal" href="variable_cli__bms_8c_1a0fa24683c5b8a47f20defc967072a493.html">Variable _cli_taba</a></li>
 <li class="toctree-l4"><a class="reference internal" href="variable_cli__bms_8c_1a4d6657de753b0137c4e808ee4b701095.html">Variable _cli_temps</a></li>
 <li class="toctree-l4"><a class="reference internal" href="variable_cli__bms_8c_1aa27ecd413c6617a7a7060438f1ed98a1.html">Variable _cli_temps_all</a></li>
+<li class="toctree-l4"><a class="reference internal" href="variable_cli__bms_8c_1ad4080b545db45d5ddc4373654018c069.html">Variable _cli_ts</a></li>
 <li class="toctree-l4"><a class="reference internal" href="variable_cli__bms_8c_1a48f73940cf9a70cab31e3d83f94e6736.html">Variable _cli_volts</a></li>
 <li class="toctree-l4"><a class="reference internal" href="variable_cli__bms_8c_1af9ca4b92032fdedb065045d56ae0b78b.html">Variable _cli_volts_all</a></li>
 <li class="toctree-l4"><a class="reference internal" href="variable_group__STM32F4xx__System__Private__Variables_1ga6e1d9cd666f0eacbfde31e9932a93466.html">Variable AHBPrescTable</a></li>
 <li class="toctree-l4"><a class="reference internal" href="variable_group__STM32G4xx__System__Private__Variables_1ga6e1d9cd666f0eacbfde31e9932a93466.html">Variable AHBPrescTable</a></li>
 <li class="toctree-l4"><a class="reference internal" href="variable_group__STM32F4xx__System__Private__Variables_1ga5b4f8b768465842cf854a8f993b375e9.html">Variable APBPrescTable</a></li>
 <li class="toctree-l4"><a class="reference internal" href="variable_group__STM32G4xx__System__Private__Variables_1ga5b4f8b768465842cf854a8f993b375e9.html">Variable APBPrescTable</a></li>
-<li class="toctree-l4"><a class="reference internal" href="variable_pack_8c_1ad78dcd438aad00de10a2c2816ce16a40.html">Variable balancing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="variable_bal__fsm_8h_1aa12677f0c46e8c8c8cf4af823a6e73a6.html">Variable bal_fsm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="variable_bal__fsm_8c_1aa12677f0c46e8c8c8cf4af823a6e73a6.html">Variable bal_fsm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="variable_cli__bms_8c_1ab3e6d0bc7a70a9e7dc40b144ec8057e4.html">Variable bal_state_names</a></li>
+<li class="toctree-l4"><a class="reference internal" href="variable_cli__bms_8c_1a5b79c4930a5cbbea19247cdfa1f81130.html">Variable bms_state_names</a></li>
 <li class="toctree-l4"><a class="reference internal" href="variable_pack_8c_1a22fb404da4d9ebc546ffb3bd5a9ad469.html">Variable cells</a></li>
 <li class="toctree-l4"><a class="reference internal" href="variable_cli__bms_8h_1ae97f49f74719578ca4823d58d8e74c19.html">Variable cli_bms</a></li>
 <li class="toctree-l4"><a class="reference internal" href="variable_cli__bms_8c_1ae97f49f74719578ca4823d58d8e74c19.html">Variable cli_bms</a></li>
@@ -459,13 +448,14 @@
 <li class="toctree-l4"><a class="reference internal" href="variable_cli__bms_8c_1a20333c2148c8e6dab5f6b1d99dc3a8bd.html">Variable commands</a></li>
 <li class="toctree-l4"><a class="reference internal" href="variable_config_8c_1a25ce4b69d296fc9a3324b494542c2420.html">Variable config</a></li>
 <li class="toctree-l4"><a class="reference internal" href="variable_config_8h_1a7c6891ebc53d9341be6ca3271b660762.html">Variable config_default</a></li>
-<li class="toctree-l4"><a class="reference internal" href="variable_config_8c_1a7c6891ebc53d9341be6ca3271b660762.html">Variable config_default</a></li>
 <li class="toctree-l4"><a class="reference internal" href="variable_ltc6813_8h_1ab6a59f2ef3e4da098be70548c2c05304.html">Variable crcTable</a></li>
 <li class="toctree-l4"><a class="reference internal" href="variable_pack_8c_1a93dcc5d94b0f2d636ee60a2f3ae8bed8.html">Variable current</a></li>
 <li class="toctree-l4"><a class="reference internal" href="variable_pack_8c_1a145ff3ef9e53de3d83064acbf72f0b9f.html">Variable current_300</a></li>
 <li class="toctree-l4"><a class="reference internal" href="variable_pack_8c_1af0efb692b8d404ba4e4986dff19619f1.html">Variable current_50</a></li>
+<li class="toctree-l4"><a class="reference internal" href="variable_bal__fsm_8c_1a42ad72e462cf183bfd8a2ddb3a96ca0a.html">Variable cycle_length</a></li>
 <li class="toctree-l4"><a class="reference internal" href="variable_ltc6813_8h_1a145e8e4c8a25985eccf197e933570631.html">Variable dcc</a></li>
 <li class="toctree-l4"><a class="reference internal" href="variable_ltc6813_8h_1afd097769d5012531a863ac47a7699fcc.html">Variable dcto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="variable_bal__fsm_8c_1a8ec8f80fc861b8f08428ad5d9ca7b902.html">Variable discharge_start</a></li>
 <li class="toctree-l4"><a class="reference internal" href="variable_cli__bms_8c_1a0f73a38703f79ee46de42bb0eed53d2e.html">Variable dmesg_ena</a></li>
 <li class="toctree-l4"><a class="reference internal" href="variable_mainboard_2Src_2main_8c_1a7e45b0ca9d0fe428973d248104dfa15f.html">Variable eeprom</a></li>
 <li class="toctree-l4"><a class="reference internal" href="variable_error_8h_1a5803d617be0399f8f39913e58a7671eb.html">Variable er_list</a></li>
@@ -518,9 +508,6 @@
 <li class="toctree-l4"><a class="reference internal" href="variable_cellboard_2Src_2main_8c_1aa2146da9811399cd856abaef0c545957.html">Variable rx</a></li>
 <li class="toctree-l4"><a class="reference internal" href="variable_si8900_8h_1aa0d543873071d781ea27796eeb1b7cab.html">Variable si8900_cnfg_0</a></li>
 <li class="toctree-l4"><a class="reference internal" href="variable_si8900_8c_1aa9a0893302e24fafcd1a44d7b1c4f81e.html">Variable si8900_ready</a></li>
-<li class="toctree-l4"><a class="reference internal" href="variable_pack_8c_1a29e86de29809135c63fb780dad514155.html">Variable soc_last_charge</a></li>
-<li class="toctree-l4"><a class="reference internal" href="variable_pack_8c_1a232b686d286a16d23e8f9e39d5fc346a.html">Variable soc_total</a></li>
-<li class="toctree-l4"><a class="reference internal" href="variable_cli__bms_8c_1a51ca6460673bd23b69c7f4408bda56b8.html">Variable state_names</a></li>
 <li class="toctree-l4"><a class="reference internal" href="variable_group__STM32F4xx__System__Private__Variables_1gaa3cd3e43291e81e795d642b79b6088e6.html">Variable SystemCoreClock</a></li>
 <li class="toctree-l4"><a class="reference internal" href="variable_group__STM32G4xx__System__Private__Variables_1gaa3cd3e43291e81e795d642b79b6088e6.html">Variable SystemCoreClock</a></li>
 <li class="toctree-l4"><a class="reference internal" href="variable_cellboard_2Src_2main_8c_1ad311f87da4f2cec4671720dd982302f4.html">Variable temp_buffer</a></li>
@@ -529,7 +516,7 @@
 <li class="toctree-l4"><a class="reference internal" href="variable_cellboard_2Inc_2fenice__config_8h_1a2ebaa70891a638df88e485e7e05317a5.html">Variable TEMP_SENSOR_ADDRESS_CODING</a></li>
 <li class="toctree-l4"><a class="reference internal" href="variable_cellboard_2Src_2main_8c_1a1593ff46e3c9ddcc410344bdbf0d7907.html">Variable temp_timer</a></li>
 <li class="toctree-l4"><a class="reference internal" href="variable_cellboard_2Src_2main_8c_1a104a126b75d6326f3d7a6739d7bab444.html">Variable temps</a></li>
-<li class="toctree-l4"><a class="reference internal" href="variable_mainboard_2Src_2main_8c_1a58b94d8446d83cebee1aadaa5ed0690e.html">Variable timer_bal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="variable_bal__fsm_8c_1ab1306e35299d8bdd10ea0adfbf9827ad.html">Variable threshold</a></li>
 <li class="toctree-l4"><a class="reference internal" href="variable_fsm__bms_8c_1a3c604ab3cfa9be664d594dc6e191b50d.html">Variable timer_precharge</a></li>
 <li class="toctree-l4"><a class="reference internal" href="variable_mainboard_2Src_2main_8c_1ab9b1f9b2a9bed288beffd8ce1d7d6406.html">Variable timer_temps</a></li>
 <li class="toctree-l4"><a class="reference internal" href="variable_mainboard_2Src_2main_8c_1a8f4d519a00c097f0327f9c45e486301f.html">Variable timer_volts</a></li>
@@ -545,6 +532,8 @@
 <li class="toctree-l4"><a class="reference internal" href="define_stm32g4xx__hal__conf_8h_1a631dea7b230e600555f979c62af1de21.html">Define assert_param</a></li>
 <li class="toctree-l4"><a class="reference internal" href="define_cellboard_2Inc_2main_8h_1a4926b92dcb220e465850d9616c27e171.html">Define B1_GPIO_Port</a></li>
 <li class="toctree-l4"><a class="reference internal" href="define_cellboard_2Inc_2main_8h_1a31ac298fbbc8a1d6de1dc4577a108232.html">Define B1_Pin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_mainboard_2Inc_2fenice__config_8h_1a3b31b86957fda293852c1bf89266d6a3.html">Define BAL_COOLDOWN_DELAY</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_cellboard_2Inc_2fenice__config_8h_1a3b31b86957fda293852c1bf89266d6a3.html">Define BAL_COOLDOWN_DELAY</a></li>
 <li class="toctree-l4"><a class="reference internal" href="define_mainboard_2Inc_2fenice__config_8h_1a55973ed2194879bd45f5a2f5dc8e705c.html">Define BAL_CYCLE_LENGTH</a></li>
 <li class="toctree-l4"><a class="reference internal" href="define_cellboard_2Inc_2fenice__config_8h_1a55973ed2194879bd45f5a2f5dc8e705c.html">Define BAL_CYCLE_LENGTH</a></li>
 <li class="toctree-l4"><a class="reference internal" href="define_mainboard_2Inc_2fenice__config_8h_1adc1c18c9a78fa76194e88a6e067a5bf7.html">Define BAL_MAX_VOLTAGE_THRESHOLD</a></li>
@@ -556,8 +545,6 @@
 <li class="toctree-l4"><a class="reference internal" href="define_cellboard_2Inc_2fenice__config_8h_1a0fe341491d7d9863ec4748c8a62c83b3.html">Define CAN_MAX_PAYLOAD_LENGTH</a></li>
 <li class="toctree-l4"><a class="reference internal" href="define_mainboard_2Inc_2main_8h_1a4ae52a5eb5e26c7229a6c490a8f48344.html">Define CARD_INSERT_GPIO_Port</a></li>
 <li class="toctree-l4"><a class="reference internal" href="define_mainboard_2Inc_2main_8h_1a590c671ed75af4fd9fd0ee3954da954c.html">Define CARD_INSERT_Pin</a></li>
-<li class="toctree-l4"><a class="reference internal" href="define_mainboard_2Inc_2fenice__config_8h_1a5cec0f505268033793f400c376677e86.html">Define CELL_ENERGY_NOMINAL</a></li>
-<li class="toctree-l4"><a class="reference internal" href="define_cellboard_2Inc_2fenice__config_8h_1a5cec0f505268033793f400c376677e86.html">Define CELL_ENERGY_NOMINAL</a></li>
 <li class="toctree-l4"><a class="reference internal" href="define_mainboard_2Inc_2fenice__config_8h_1a609c654690c5e70aa9713a972641874e.html">Define CELL_MAX_TEMPERATURE</a></li>
 <li class="toctree-l4"><a class="reference internal" href="define_cellboard_2Inc_2fenice__config_8h_1a609c654690c5e70aa9713a972641874e.html">Define CELL_MAX_TEMPERATURE</a></li>
 <li class="toctree-l4"><a class="reference internal" href="define_mainboard_2Inc_2fenice__config_8h_1ab25af29e5cc6b462115ce9382dc13bb9.html">Define CELL_MAX_VOLTAGE</a></li>
@@ -702,6 +689,8 @@
 <li class="toctree-l4"><a class="reference internal" href="define_cellboard_2Inc_2fenice__config_8h_1a35bb2e9e977e1567a262f45cac9bf265.html">Define LTC6813_COUNT</a></li>
 <li class="toctree-l4"><a class="reference internal" href="define_mainboard_2Inc_2fenice__config_8h_1a92f30c622832ad6c2dfc95f932c21d4e.html">Define LTC6813_EMU</a></li>
 <li class="toctree-l4"><a class="reference internal" href="define_cellboard_2Inc_2fenice__config_8h_1a92f30c622832ad6c2dfc95f932c21d4e.html">Define LTC6813_EMU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_mainboard_2Inc_2fenice__config_8h_1ab5e8a957cf8d31a73047fde2f5c65edc.html">Define LTC6813_PERIPHERAL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_cellboard_2Inc_2fenice__config_8h_1ab5e8a957cf8d31a73047fde2f5c65edc.html">Define LTC6813_PERIPHERAL</a></li>
 <li class="toctree-l4"><a class="reference internal" href="define_mainboard_2Inc_2fenice__config_8h_1a60d95021fa7515f639603ef6dae74626.html">Define LTC6813_REG_CELL_COUNT</a></li>
 <li class="toctree-l4"><a class="reference internal" href="define_cellboard_2Inc_2fenice__config_8h_1a60d95021fa7515f639603ef6dae74626.html">Define LTC6813_REG_CELL_COUNT</a></li>
 <li class="toctree-l4"><a class="reference internal" href="define_mainboard_2Inc_2fenice__config_8h_1abf2cacfdd7c50f4779e617c0d28750b1.html">Define LTC6813_REG_COUNT</a></li>
@@ -714,7 +703,9 @@
 <li class="toctree-l4"><a class="reference internal" href="define_stm32f4xx__hal__conf_8h_1a08a36ede83ae67498aecf54676be8fc8.html">Define MAC_ADDR3</a></li>
 <li class="toctree-l4"><a class="reference internal" href="define_stm32f4xx__hal__conf_8h_1a41e5cb0b39ad74f0aafb83dbcecf9006.html">Define MAC_ADDR4</a></li>
 <li class="toctree-l4"><a class="reference internal" href="define_stm32f4xx__hal__conf_8h_1a3bcc92663c42ec434f527847bbc4abc1.html">Define MAC_ADDR5</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_bal_8c_1affe776513b24d84b39af8ab0930fef7f.html">Define max</a></li>
 <li class="toctree-l4"><a class="reference internal" href="define_pack_8c_1affe776513b24d84b39af8ab0930fef7f.html">Define max</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_bal_8c_1ac6afabdc09a49a433ee19d8a9486056d.html">Define min</a></li>
 <li class="toctree-l4"><a class="reference internal" href="define_pack_8c_1ac6afabdc09a49a433ee19d8a9486056d.html">Define min</a></li>
 <li class="toctree-l4"><a class="reference internal" href="define_mainboard_2Inc_2main_8h_1a684cc367c1fa4fa31ad4bd1e18b2a7c5.html">Define MUX_A0_GPIO_Port</a></li>
 <li class="toctree-l4"><a class="reference internal" href="define_mainboard_2Inc_2main_8h_1afed727020c7d20654a3f01189fffd27c.html">Define MUX_A0_Pin</a></li>
@@ -728,8 +719,6 @@
 <li class="toctree-l4"><a class="reference internal" href="define_cli__bms_8c_1aad1cc3126c4d8414ef36c3f5c2bb6d42.html">Define n_items</a></li>
 <li class="toctree-l4"><a class="reference internal" href="define_mainboard_2Inc_2fenice__config_8h_1ae9b75689e590b0a702f6c24100f04693.html">Define PACK_CELL_COUNT</a></li>
 <li class="toctree-l4"><a class="reference internal" href="define_cellboard_2Inc_2fenice__config_8h_1ae9b75689e590b0a702f6c24100f04693.html">Define PACK_CELL_COUNT</a></li>
-<li class="toctree-l4"><a class="reference internal" href="define_mainboard_2Inc_2fenice__config_8h_1a9bbb9eaaa929495cd59b83a2bd719906.html">Define PACK_ENERGY_NOMINAL</a></li>
-<li class="toctree-l4"><a class="reference internal" href="define_cellboard_2Inc_2fenice__config_8h_1a9bbb9eaaa929495cd59b83a2bd719906.html">Define PACK_ENERGY_NOMINAL</a></li>
 <li class="toctree-l4"><a class="reference internal" href="define_mainboard_2Inc_2fenice__config_8h_1a9ceb6fa3a1b3065b18963506642d0d06.html">Define PACK_MAX_CURRENT</a></li>
 <li class="toctree-l4"><a class="reference internal" href="define_cellboard_2Inc_2fenice__config_8h_1a9ceb6fa3a1b3065b18963506642d0d06.html">Define PACK_MAX_CURRENT</a></li>
 <li class="toctree-l4"><a class="reference internal" href="define_mainboard_2Inc_2fenice__config_8h_1ab4ac28b6065c859687ae8a9d0c6ce9f4.html">Define PACK_TEMP_COUNT</a></li>
@@ -849,12 +838,10 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#typedefs">Typedefs</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="typedef_bal_8h_1ad40d8d4a13383d7f7bbd075b834a60d1.html">Typedef bal_handle</a></li>
 <li class="toctree-l4"><a class="reference internal" href="typedef_config_8h_1a261f57fc59ad07837082c43ef8a443e3.html">Typedef config_t</a></li>
 <li class="toctree-l4"><a class="reference internal" href="typedef_mainboard_2Inc_2fenice__config_8h_1a10dbe1ad50d7aed2fe64419786f3ea77.html">Typedef current_t</a></li>
 <li class="toctree-l4"><a class="reference internal" href="typedef_cellboard_2Inc_2fenice__config_8h_1a10dbe1ad50d7aed2fe64419786f3ea77.html">Typedef current_t</a></li>
 <li class="toctree-l4"><a class="reference internal" href="typedef_feedback_8h_1af31f74762bbbbb2cdd1f2ee74ba4b97b.html">Typedef feedback_t</a></li>
-<li class="toctree-l4"><a class="reference internal" href="typedef_soc_8h_1ae8794aadc3052d7179240663f1684e04.html">Typedef soc_t</a></li>
 <li class="toctree-l4"><a class="reference internal" href="typedef_temperature_8h_1a77ac062b2f0d5b68b2755dc75fe485ef.html">Typedef temperature_t</a></li>
 <li class="toctree-l4"><a class="reference internal" href="typedef_mainboard_2Inc_2fenice__config_8h_1a7f0e4c8e257063101aa9f4cc03644195.html">Typedef temperature_t</a></li>
 <li class="toctree-l4"><a class="reference internal" href="typedef_cellboard_2Inc_2fenice__config_8h_1a7f0e4c8e257063101aa9f4cc03644195.html">Typedef temperature_t</a></li>
@@ -940,7 +927,7 @@
 <ul class="treeView" id="class-treeView">
   <li>
     <ul class="collapsibleList">
-      <li>Struct <a href="structbal__handle.html#exhale-struct-structbal-handle">bal_handle</a></li><li>Struct <a href="structcells__t.html#exhale-struct-structcells-t">cells_t</a></li><li>Struct <a href="structconfig.html#exhale-struct-structconfig">config</a></li><li>Struct <a href="structerror__t.html#exhale-struct-structerror-t">error_t</a></li><li>Struct <a href="structsoc.html#exhale-struct-structsoc">soc</a></li><li>Struct <a href="structtemperature.html#exhale-struct-structtemperature">temperature</a></li><li>Enum <a href="enum_mainboard_2Inc_2fenice__config_8h_1a06fc87d81c62e9abb8790b6e5713c55b.html#exhale-enum-mainboard-2Inc-2fenice-config-8h-1a06fc87d81c62e9abb8790b6e5713c55b">@0</a></li><li>Enum <a href="enum_cellboard_2Inc_2fenice__config_8h_1adf764cbdea00d65edcd07bb9953ad2b7.html#exhale-enum-cellboard-2Inc-2fenice-config-8h-1adf764cbdea00d65edcd07bb9953ad2b7">@1</a></li><li>Enum <a href="enum_fsm__bms_8h_1a25f0477a732b1a7aea1e8966a5abd125.html#exhale-enum-fsm-bms-8h-1a25f0477a732b1a7aea1e8966a5abd125">bms_states</a></li><li>Enum <a href="enum_error_8h_1a29af8b317c2926569605c08d7ef294a5.html#exhale-enum-error-8h-1a29af8b317c2926569605c08d7ef294a5">error_id</a></li><li>Enum <a href="enum_error_8h_1a954c5caf30928503ff36b24cc6d6414d.html#exhale-enum-error-8h-1a954c5caf30928503ff36b24cc6d6414d">error_state</a></li><li>Enum <a href="enum_error_8h_1a338314053cb4bab8d75aee3b8d561ce2.html#exhale-enum-error-8h-1a338314053cb4bab8d75aee3b8d561ce2">error_timeout</a></li><li>Enum <a href="enum_ltc6813__utils_8c_1a5391cc284a203955527f667faa21c611.html#exhale-enum-ltc6813-utils-8c-1a5391cc284a203955527f667faa21c611">ltc6813_i2c_ctrl</a></li><li class="lastChild">Enum <a href="enum_si8900_8h_1a5a649fb4dcc41823a34f026ef00b5f2f.html#exhale-enum-si8900-8h-1a5a649fb4dcc41823a34f026ef00b5f2f">SI8900_CHANNEL</a></li>
+      <li>Struct <a href="structcells__t.html#exhale-struct-structcells-t">cells_t</a></li><li>Struct <a href="structconfig.html#exhale-struct-structconfig">config</a></li><li>Struct <a href="structerror__t.html#exhale-struct-structerror-t">error_t</a></li><li>Struct <a href="structtemperature.html#exhale-struct-structtemperature">temperature</a></li><li>Enum <a href="enum_bal__fsm_8h_1a06fc87d81c62e9abb8790b6e5713c55b.html#exhale-enum-bal-fsm-8h-1a06fc87d81c62e9abb8790b6e5713c55b">@0</a></li><li>Enum <a href="enum_mainboard_2Inc_2fenice__config_8h_1adf764cbdea00d65edcd07bb9953ad2b7.html#exhale-enum-mainboard-2Inc-2fenice-config-8h-1adf764cbdea00d65edcd07bb9953ad2b7">@1</a></li><li>Enum <a href="enum_cellboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#exhale-enum-cellboard-2Inc-2fenice-config-8h-1a99fb83031ce9923c84392b4e92f956b5">@2</a></li><li>Enum <a href="enum_fsm__bms_8h_1a25f0477a732b1a7aea1e8966a5abd125.html#exhale-enum-fsm-bms-8h-1a25f0477a732b1a7aea1e8966a5abd125">bms_states</a></li><li>Enum <a href="enum_error_8h_1a29af8b317c2926569605c08d7ef294a5.html#exhale-enum-error-8h-1a29af8b317c2926569605c08d7ef294a5">error_id</a></li><li>Enum <a href="enum_error_8h_1a954c5caf30928503ff36b24cc6d6414d.html#exhale-enum-error-8h-1a954c5caf30928503ff36b24cc6d6414d">error_state</a></li><li>Enum <a href="enum_error_8h_1a338314053cb4bab8d75aee3b8d561ce2.html#exhale-enum-error-8h-1a338314053cb4bab8d75aee3b8d561ce2">error_timeout</a></li><li>Enum <a href="enum_ltc6813__utils_8c_1a5391cc284a203955527f667faa21c611.html#exhale-enum-ltc6813-utils-8c-1a5391cc284a203955527f667faa21c611">ltc6813_i2c_ctrl</a></li><li class="lastChild">Enum <a href="enum_si8900_8h_1a5a649fb4dcc41823a34f026ef00b5f2f.html#exhale-enum-si8900-8h-1a5a649fb4dcc41823a34f026ef00b5f2f">SI8900_CHANNEL</a></li>
     </ul>
   </li><!-- only tree view element -->
 </ul><!-- /treeView class-treeView --></div>
@@ -949,7 +936,7 @@
 <ul class="treeView" id="file-treeView">
   <li>
     <ul class="collapsibleList">
-      <li>Directory <a href="dir_cellboard.html#dir-cellboard">cellboard</a><ul><li>Directory <a href="dir_cellboard_Inc.html#dir-cellboard-Inc">Inc</a><ul><li>File <a href="file_cellboard_Inc_fenice_config.h.html#file-cellboard-Inc-fenice-config.h">fenice_config.h</a></li><li>File <a href="file_cellboard_Inc_main.h.html#file-cellboard-Inc-main.h">main.h</a></li><li>File <a href="file_cellboard_Inc_pct2075.h.html#file-cellboard-Inc-pct2075.h">pct2075.h</a></li><li>File <a href="file_cellboard_Inc_stm32f4xx_hal_conf.h.html#file-cellboard-Inc-stm32f4xx-hal-conf.h">stm32f4xx_hal_conf.h</a></li><li>File <a href="file_cellboard_Inc_stm32f4xx_it.h.html#file-cellboard-Inc-stm32f4xx-it.h">stm32f4xx_it.h</a></li><li class="lastChild">File <a href="file_cellboard_Inc_temperature.h.html#file-cellboard-Inc-temperature.h">temperature.h</a></li></ul></li><li class="lastChild">Directory <a href="dir_cellboard_Src.html#dir-cellboard-Src">Src</a><ul><li>File <a href="file_cellboard_Src_main.c.html#file-cellboard-Src-main.c">main.c</a></li><li>File <a href="file_cellboard_Src_pct2075.c.html#file-cellboard-Src-pct2075.c">pct2075.c</a></li><li>File <a href="file_cellboard_Src_stm32f4xx_hal_msp.c.html#file-cellboard-Src-stm32f4xx-hal-msp.c">stm32f4xx_hal_msp.c</a></li><li>File <a href="file_cellboard_Src_stm32f4xx_it.c.html#file-cellboard-Src-stm32f4xx-it.c">stm32f4xx_it.c</a></li><li>File <a href="file_cellboard_Src_system_stm32f4xx.c.html#file-cellboard-Src-system-stm32f4xx.c">system_stm32f4xx.c</a></li><li class="lastChild">File <a href="file_cellboard_Src_temperature.c.html#file-cellboard-Src-temperature.c">temperature.c</a></li></ul></li></ul></li><li class="lastChild">Directory <a href="dir_mainboard.html#dir-mainboard">mainboard</a><ul><li>Directory <a href="dir_mainboard_Inc.html#dir-mainboard-Inc">Inc</a><ul><li>Directory <a href="dir_mainboard_Inc_error.html#dir-mainboard-Inc-error">error</a><ul><li>File <a href="file_mainboard_Inc_error_error.h.html#file-mainboard-Inc-error-error.h">error.h</a></li><li class="lastChild">File <a href="file_mainboard_Inc_error_error_list_ref.h.html#file-mainboard-Inc-error-error-list-ref.h">error_list_ref.h</a></li></ul></li><li>Directory <a href="dir_mainboard_Inc_peripherals.html#dir-mainboard-Inc-peripherals">peripherals</a><ul><li>File <a href="file_mainboard_Inc_peripherals_can.h.html#file-mainboard-Inc-peripherals-can.h">can.h</a></li><li>File <a href="file_mainboard_Inc_peripherals_ltc6813.h.html#file-mainboard-Inc-peripherals-ltc6813.h">ltc6813.h</a></li><li>File <a href="file_mainboard_Inc_peripherals_ltc6813_utils.h.html#file-mainboard-Inc-peripherals-ltc6813-utils.h">ltc6813_utils.h</a></li><li class="lastChild">File <a href="file_mainboard_Inc_peripherals_si8900.h.html#file-mainboard-Inc-peripherals-si8900.h">si8900.h</a></li></ul></li><li>File <a href="file_mainboard_Inc_bal.h.html#file-mainboard-Inc-bal.h">bal.h</a></li><li>File <a href="file_mainboard_Inc_cli_bms.h.html#file-mainboard-Inc-cli-bms.h">cli_bms.h</a></li><li>File <a href="file_mainboard_Inc_config.h.html#file-mainboard-Inc-config.h">config.h</a></li><li>File <a href="file_mainboard_Inc_fdcan.h.html#file-mainboard-Inc-fdcan.h">fdcan.h</a></li><li>File <a href="file_mainboard_Inc_feedback.h.html#file-mainboard-Inc-feedback.h">feedback.h</a></li><li>File <a href="file_mainboard_Inc_fenice_config.h.html#file-mainboard-Inc-fenice-config.h">fenice_config.h</a></li><li>File <a href="file_mainboard_Inc_fsm_bms.h.html#file-mainboard-Inc-fsm-bms.h">fsm_bms.h</a></li><li>File <a href="file_mainboard_Inc_gpio.h.html#file-mainboard-Inc-gpio.h">gpio.h</a></li><li>File <a href="file_mainboard_Inc_main.h.html#file-mainboard-Inc-main.h">main.h</a></li><li>File <a href="file_mainboard_Inc_pack.h.html#file-mainboard-Inc-pack.h">pack.h</a></li><li>File <a href="file_mainboard_Inc_soc.h.html#file-mainboard-Inc-soc.h">soc.h</a></li><li>File <a href="file_mainboard_Inc_spi.h.html#file-mainboard-Inc-spi.h">spi.h</a></li><li>File <a href="file_mainboard_Inc_stm32g4xx_hal_conf.h.html#file-mainboard-Inc-stm32g4xx-hal-conf.h">stm32g4xx_hal_conf.h</a></li><li>File <a href="file_mainboard_Inc_stm32g4xx_it.h.html#file-mainboard-Inc-stm32g4xx-it.h">stm32g4xx_it.h</a></li><li>File <a href="file_mainboard_Inc_tim.h.html#file-mainboard-Inc-tim.h">tim.h</a></li><li class="lastChild">File <a href="file_mainboard_Inc_usart.h.html#file-mainboard-Inc-usart.h">usart.h</a></li></ul></li><li class="lastChild">Directory <a href="dir_mainboard_Src.html#dir-mainboard-Src">Src</a><ul><li>Directory <a href="dir_mainboard_Src_error.html#dir-mainboard-Src-error">error</a><ul><li>File <a href="file_mainboard_Src_error_error.c.html#file-mainboard-Src-error-error.c">error.c</a></li><li class="lastChild">File <a href="file_mainboard_Src_error_error_list_ref.c.html#file-mainboard-Src-error-error-list-ref.c">error_list_ref.c</a></li></ul></li><li>Directory <a href="dir_mainboard_Src_peripherals.html#dir-mainboard-Src-peripherals">peripherals</a><ul><li>File <a href="file_mainboard_Src_peripherals_can.c.html#file-mainboard-Src-peripherals-can.c">can.c</a></li><li>File <a href="file_mainboard_Src_peripherals_ltc6813.c.html#file-mainboard-Src-peripherals-ltc6813.c">ltc6813.c</a></li><li>File <a href="file_mainboard_Src_peripherals_ltc6813_utils.c.html#file-mainboard-Src-peripherals-ltc6813-utils.c">ltc6813_utils.c</a></li><li class="lastChild">File <a href="file_mainboard_Src_peripherals_si8900.c.html#file-mainboard-Src-peripherals-si8900.c">si8900.c</a></li></ul></li><li>File <a href="file_mainboard_Src_bal.c.html#file-mainboard-Src-bal.c">bal.c</a></li><li>File <a href="file_mainboard_Src_cli_bms.c.html#file-mainboard-Src-cli-bms.c">cli_bms.c</a></li><li>File <a href="file_mainboard_Src_config.c.html#file-mainboard-Src-config.c">config.c</a></li><li>File <a href="file_mainboard_Src_fdcan.c.html#file-mainboard-Src-fdcan.c">fdcan.c</a></li><li>File <a href="file_mainboard_Src_feedback.c.html#file-mainboard-Src-feedback.c">feedback.c</a></li><li>File <a href="file_mainboard_Src_fsm_bms.c.html#file-mainboard-Src-fsm-bms.c">fsm_bms.c</a></li><li>File <a href="file_mainboard_Src_gpio.c.html#file-mainboard-Src-gpio.c">gpio.c</a></li><li>File <a href="file_mainboard_Src_main.c.html#file-mainboard-Src-main.c">main.c</a></li><li>File <a href="file_mainboard_Src_pack.c.html#file-mainboard-Src-pack.c">pack.c</a></li><li>File <a href="file_mainboard_Src_soc.c.html#file-mainboard-Src-soc.c">soc.c</a></li><li>File <a href="file_mainboard_Src_spi.c.html#file-mainboard-Src-spi.c">spi.c</a></li><li>File <a href="file_mainboard_Src_stm32g4xx_hal_msp.c.html#file-mainboard-Src-stm32g4xx-hal-msp.c">stm32g4xx_hal_msp.c</a></li><li>File <a href="file_mainboard_Src_stm32g4xx_it.c.html#file-mainboard-Src-stm32g4xx-it.c">stm32g4xx_it.c</a></li><li>File <a href="file_mainboard_Src_system_stm32g4xx.c.html#file-mainboard-Src-system-stm32g4xx.c">system_stm32g4xx.c</a></li><li>File <a href="file_mainboard_Src_tim.c.html#file-mainboard-Src-tim.c">tim.c</a></li><li class="lastChild">File <a href="file_mainboard_Src_usart.c.html#file-mainboard-Src-usart.c">usart.c</a></li></ul></li></ul></li>
+      <li>Directory <a href="dir_cellboard.html#dir-cellboard">cellboard</a><ul><li>Directory <a href="dir_cellboard_Inc.html#dir-cellboard-Inc">Inc</a><ul><li>File <a href="file_cellboard_Inc_fenice_config.h.html#file-cellboard-Inc-fenice-config.h">fenice_config.h</a></li><li>File <a href="file_cellboard_Inc_main.h.html#file-cellboard-Inc-main.h">main.h</a></li><li>File <a href="file_cellboard_Inc_pct2075.h.html#file-cellboard-Inc-pct2075.h">pct2075.h</a></li><li>File <a href="file_cellboard_Inc_stm32f4xx_hal_conf.h.html#file-cellboard-Inc-stm32f4xx-hal-conf.h">stm32f4xx_hal_conf.h</a></li><li>File <a href="file_cellboard_Inc_stm32f4xx_it.h.html#file-cellboard-Inc-stm32f4xx-it.h">stm32f4xx_it.h</a></li><li class="lastChild">File <a href="file_cellboard_Inc_temperature.h.html#file-cellboard-Inc-temperature.h">temperature.h</a></li></ul></li><li class="lastChild">Directory <a href="dir_cellboard_Src.html#dir-cellboard-Src">Src</a><ul><li>File <a href="file_cellboard_Src_main.c.html#file-cellboard-Src-main.c">main.c</a></li><li>File <a href="file_cellboard_Src_pct2075.c.html#file-cellboard-Src-pct2075.c">pct2075.c</a></li><li>File <a href="file_cellboard_Src_stm32f4xx_hal_msp.c.html#file-cellboard-Src-stm32f4xx-hal-msp.c">stm32f4xx_hal_msp.c</a></li><li>File <a href="file_cellboard_Src_stm32f4xx_it.c.html#file-cellboard-Src-stm32f4xx-it.c">stm32f4xx_it.c</a></li><li>File <a href="file_cellboard_Src_system_stm32f4xx.c.html#file-cellboard-Src-system-stm32f4xx.c">system_stm32f4xx.c</a></li><li class="lastChild">File <a href="file_cellboard_Src_temperature.c.html#file-cellboard-Src-temperature.c">temperature.c</a></li></ul></li></ul></li><li class="lastChild">Directory <a href="dir_mainboard.html#dir-mainboard">mainboard</a><ul><li>Directory <a href="dir_mainboard_Inc.html#dir-mainboard-Inc">Inc</a><ul><li>Directory <a href="dir_mainboard_Inc_error.html#dir-mainboard-Inc-error">error</a><ul><li>File <a href="file_mainboard_Inc_error_error.h.html#file-mainboard-Inc-error-error.h">error.h</a></li><li class="lastChild">File <a href="file_mainboard_Inc_error_error_list_ref.h.html#file-mainboard-Inc-error-error-list-ref.h">error_list_ref.h</a></li></ul></li><li>Directory <a href="dir_mainboard_Inc_peripherals.html#dir-mainboard-Inc-peripherals">peripherals</a><ul><li>File <a href="file_mainboard_Inc_peripherals_can.h.html#file-mainboard-Inc-peripherals-can.h">can.h</a></li><li>File <a href="file_mainboard_Inc_peripherals_ltc6813.h.html#file-mainboard-Inc-peripherals-ltc6813.h">ltc6813.h</a></li><li>File <a href="file_mainboard_Inc_peripherals_ltc6813_utils.h.html#file-mainboard-Inc-peripherals-ltc6813-utils.h">ltc6813_utils.h</a></li><li class="lastChild">File <a href="file_mainboard_Inc_peripherals_si8900.h.html#file-mainboard-Inc-peripherals-si8900.h">si8900.h</a></li></ul></li><li>File <a href="file_mainboard_Inc_bal.h.html#file-mainboard-Inc-bal.h">bal.h</a></li><li>File <a href="file_mainboard_Inc_bal_fsm.h.html#file-mainboard-Inc-bal-fsm.h">bal_fsm.h</a></li><li>File <a href="file_mainboard_Inc_cli_bms.h.html#file-mainboard-Inc-cli-bms.h">cli_bms.h</a></li><li>File <a href="file_mainboard_Inc_config.h.html#file-mainboard-Inc-config.h">config.h</a></li><li>File <a href="file_mainboard_Inc_fdcan.h.html#file-mainboard-Inc-fdcan.h">fdcan.h</a></li><li>File <a href="file_mainboard_Inc_feedback.h.html#file-mainboard-Inc-feedback.h">feedback.h</a></li><li>File <a href="file_mainboard_Inc_fenice_config.h.html#file-mainboard-Inc-fenice-config.h">fenice_config.h</a></li><li>File <a href="file_mainboard_Inc_fsm_bms.h.html#file-mainboard-Inc-fsm-bms.h">fsm_bms.h</a></li><li>File <a href="file_mainboard_Inc_gpio.h.html#file-mainboard-Inc-gpio.h">gpio.h</a></li><li>File <a href="file_mainboard_Inc_main.h.html#file-mainboard-Inc-main.h">main.h</a></li><li>File <a href="file_mainboard_Inc_pack.h.html#file-mainboard-Inc-pack.h">pack.h</a></li><li>File <a href="file_mainboard_Inc_spi.h.html#file-mainboard-Inc-spi.h">spi.h</a></li><li>File <a href="file_mainboard_Inc_stm32g4xx_hal_conf.h.html#file-mainboard-Inc-stm32g4xx-hal-conf.h">stm32g4xx_hal_conf.h</a></li><li>File <a href="file_mainboard_Inc_stm32g4xx_it.h.html#file-mainboard-Inc-stm32g4xx-it.h">stm32g4xx_it.h</a></li><li>File <a href="file_mainboard_Inc_tim.h.html#file-mainboard-Inc-tim.h">tim.h</a></li><li class="lastChild">File <a href="file_mainboard_Inc_usart.h.html#file-mainboard-Inc-usart.h">usart.h</a></li></ul></li><li class="lastChild">Directory <a href="dir_mainboard_Src.html#dir-mainboard-Src">Src</a><ul><li>Directory <a href="dir_mainboard_Src_error.html#dir-mainboard-Src-error">error</a><ul><li>File <a href="file_mainboard_Src_error_error.c.html#file-mainboard-Src-error-error.c">error.c</a></li><li class="lastChild">File <a href="file_mainboard_Src_error_error_list_ref.c.html#file-mainboard-Src-error-error-list-ref.c">error_list_ref.c</a></li></ul></li><li>Directory <a href="dir_mainboard_Src_peripherals.html#dir-mainboard-Src-peripherals">peripherals</a><ul><li>File <a href="file_mainboard_Src_peripherals_can.c.html#file-mainboard-Src-peripherals-can.c">can.c</a></li><li>File <a href="file_mainboard_Src_peripherals_ltc6813.c.html#file-mainboard-Src-peripherals-ltc6813.c">ltc6813.c</a></li><li>File <a href="file_mainboard_Src_peripherals_ltc6813_utils.c.html#file-mainboard-Src-peripherals-ltc6813-utils.c">ltc6813_utils.c</a></li><li class="lastChild">File <a href="file_mainboard_Src_peripherals_si8900.c.html#file-mainboard-Src-peripherals-si8900.c">si8900.c</a></li></ul></li><li>File <a href="file_mainboard_Src_bal.c.html#file-mainboard-Src-bal.c">bal.c</a></li><li>File <a href="file_mainboard_Src_bal_fsm.c.html#file-mainboard-Src-bal-fsm.c">bal_fsm.c</a></li><li>File <a href="file_mainboard_Src_cli_bms.c.html#file-mainboard-Src-cli-bms.c">cli_bms.c</a></li><li>File <a href="file_mainboard_Src_config.c.html#file-mainboard-Src-config.c">config.c</a></li><li>File <a href="file_mainboard_Src_fdcan.c.html#file-mainboard-Src-fdcan.c">fdcan.c</a></li><li>File <a href="file_mainboard_Src_feedback.c.html#file-mainboard-Src-feedback.c">feedback.c</a></li><li>File <a href="file_mainboard_Src_fsm_bms.c.html#file-mainboard-Src-fsm-bms.c">fsm_bms.c</a></li><li>File <a href="file_mainboard_Src_gpio.c.html#file-mainboard-Src-gpio.c">gpio.c</a></li><li>File <a href="file_mainboard_Src_main.c.html#file-mainboard-Src-main.c">main.c</a></li><li>File <a href="file_mainboard_Src_pack.c.html#file-mainboard-Src-pack.c">pack.c</a></li><li>File <a href="file_mainboard_Src_spi.c.html#file-mainboard-Src-spi.c">spi.c</a></li><li>File <a href="file_mainboard_Src_stm32g4xx_hal_msp.c.html#file-mainboard-Src-stm32g4xx-hal-msp.c">stm32g4xx_hal_msp.c</a></li><li>File <a href="file_mainboard_Src_stm32g4xx_it.c.html#file-mainboard-Src-stm32g4xx-it.c">stm32g4xx_it.c</a></li><li>File <a href="file_mainboard_Src_system_stm32g4xx.c.html#file-mainboard-Src-system-stm32g4xx.c">system_stm32g4xx.c</a></li><li>File <a href="file_mainboard_Src_tim.c.html#file-mainboard-Src-tim.c">tim.c</a></li><li class="lastChild">File <a href="file_mainboard_Src_usart.c.html#file-mainboard-Src-usart.c">usart.c</a></li></ul></li></ul></li>
     </ul>
   </li><!-- only tree view element -->
 </ul><!-- /treeView file-treeView --></div>
@@ -957,14 +944,6 @@
 <h2>Full API<a class="headerlink" href="#full-api" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="classes-and-structs">
 <h3>Classes and Structs<a class="headerlink" href="#classes-and-structs" title="Permalink to this headline">¶</a></h3>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="structbal__handle.html">Struct bal_handle</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="structbal__handle.html#struct-documentation">Struct Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="structcells__t.html">Struct cells_t</a><ul>
@@ -991,14 +970,6 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="structsoc.html">Struct soc</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="structsoc.html#struct-documentation">Struct Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="structtemperature.html">Struct temperature</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="structtemperature.html#struct-documentation">Struct Documentation</a></li>
 </ul>
@@ -1010,16 +981,24 @@
 <h3>Enums<a class="headerlink" href="#enums" title="Permalink to this headline">¶</a></h3>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="enum_mainboard_2Inc_2fenice__config_8h_1a06fc87d81c62e9abb8790b6e5713c55b.html">Enum &#64;0</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="enum_mainboard_2Inc_2fenice__config_8h_1a06fc87d81c62e9abb8790b6e5713c55b.html#enum-documentation">Enum Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="enum_bal__fsm_8h_1a06fc87d81c62e9abb8790b6e5713c55b.html">Enum &#64;0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="enum_bal__fsm_8h_1a06fc87d81c62e9abb8790b6e5713c55b.html#enum-documentation">Enum Documentation</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="enum_cellboard_2Inc_2fenice__config_8h_1adf764cbdea00d65edcd07bb9953ad2b7.html">Enum &#64;1</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="enum_cellboard_2Inc_2fenice__config_8h_1adf764cbdea00d65edcd07bb9953ad2b7.html#enum-documentation">Enum Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="enum_mainboard_2Inc_2fenice__config_8h_1adf764cbdea00d65edcd07bb9953ad2b7.html">Enum &#64;1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="enum_mainboard_2Inc_2fenice__config_8h_1adf764cbdea00d65edcd07bb9953ad2b7.html#enum-documentation">Enum Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="enum_cellboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html">Enum &#64;2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="enum_cellboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#enum-documentation">Enum Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -1077,8 +1056,16 @@
 <h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_bal_8c_1a895873c36da91db9c896648e8cef00c0.html">Function _bubble_sort</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_bal_8c_1a895873c36da91db9c896648e8cef00c0.html#function-documentation">Function Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_bal_8c_1aadc6f5a4740bda6bed2ce444d7d45310.html">Function _bal_hateville</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_bal_8c_1aadc6f5a4740bda6bed2ce444d7d45310.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_bal_8c_1a4857f39dc51047468afc725d8b5f9f17.html">Function _bal_hateville_solution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_bal_8c_1a4857f39dc51047468afc725d8b5f9f17.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -1125,14 +1112,6 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_cli__bms_8c_1ac3985a6d7ec7917c4d2c35d3d1c6e03c.html">Function _cli_soc</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_cli__bms_8c_1ac3985a6d7ec7917c4d2c35d3d1c6e03c.html#function-documentation">Function Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="function_cli__bms_8c_1a7ba9ba49b642bd02c233395a98117ee5.html">Function _cli_status</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="function_cli__bms_8c_1a7ba9ba49b642bd02c233395a98117ee5.html#function-documentation">Function Documentation</a></li>
 </ul>
@@ -1159,6 +1138,14 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="function_cli__bms_8c_1aa381264cefd6a2a056151ae7cde00492.html">Function _cli_temps_all</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="function_cli__bms_8c_1aa381264cefd6a2a056151ae7cde00492.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_cli__bms_8c_1a4e36fad2ffae280c09b95d7120be194b.html">Function _cli_ts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_cli__bms_8c_1a4e36fad2ffae280c09b95d7120be194b.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -1213,8 +1200,8 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_bal_8c_1ae00338771ec77948b7fbd3e5b29a0ddb.html">Function _max_index</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_bal_8c_1ae00338771ec77948b7fbd3e5b29a0ddb.html#function-documentation">Function Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_bal_8c_1ad42bcabde24aacfde9c874645e976e13.html">Function _max_index</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_bal_8c_1ad42bcabde24aacfde9c874645e976e13.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -1229,48 +1216,104 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_bal_8c_1af778468a1695088a03972c1964922276.html">Function _min_index</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_bal_8c_1af778468a1695088a03972c1964922276.html#function-documentation">Function Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_bal_8c_1aa0eaba37cbea2e81fa7aab2d986019f2.html">Function _min_index</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_bal_8c_1aa0eaba37cbea2e81fa7aab2d986019f2.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_bal_8c_1a949bd6aae2409dc009f91ee631120876.html">Function _swap</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_bal_8c_1a949bd6aae2409dc009f91ee631120876.html#function-documentation">Function Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_bal_8h_1ac4fab94238cd9bd16c9f3c3d17fc035e.html">Function bal_compute_imbalance(voltage_t, uint16_t, voltage_t, uint16_t)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_bal_8h_1ac4fab94238cd9bd16c9f3c3d17fc035e.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_bal_8h_1a37ecba0c442c5f3eb3c7ee2f6347bc8b.html">Function bal_compute_indexes(uint16_t, uint8_t, uint16_t)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_bal_8h_1a37ecba0c442c5f3eb3c7ee2f6347bc8b.html#function-documentation">Function Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_bal_8c_1ac4fab94238cd9bd16c9f3c3d17fc035e.html">Function bal_compute_imbalance(voltage_t, uint16_t, voltage_t, uint16_t)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_bal_8c_1ac4fab94238cd9bd16c9f3c3d17fc035e.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_bal_8c_1aa6bd11fcc753f0813d3763b4eaec4e0f.html">Function bal_compute_indexes(uint16_t, uint8_t, uint16_t)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_bal_8c_1aa6bd11fcc753f0813d3763b4eaec4e0f.html#function-documentation">Function Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_bal_8h_1a2c3b2ddfa164a6ec0f86cb9d6ad3ec22.html">Function bal_exclude_neighbors(uint16_t, uint16_t, uint16_t)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_bal_8h_1a2c3b2ddfa164a6ec0f86cb9d6ad3ec22.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_bal_8h_1a338063b4a0f01cb455e163840ebcabc2.html">Function bal_init(bal_handle *)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_bal_8h_1a338063b4a0f01cb455e163840ebcabc2.html#function-documentation">Function Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_bal_8c_1a5adb7336d5f77eac25813d94d56c0410.html">Function bal_exclude_neighbors(uint16_t, uint16_t, uint16_t)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_bal_8c_1a5adb7336d5f77eac25813d94d56c0410.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_bal_8c_1a338063b4a0f01cb455e163840ebcabc2.html">Function bal_init(bal_handle *)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_bal_8c_1a338063b4a0f01cb455e163840ebcabc2.html#function-documentation">Function Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_bal__fsm_8h_1a72aadcd031bfaf567ec4aecc2d6fd818.html">Function bal_fsm_init()</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_bal__fsm_8h_1a72aadcd031bfaf567ec4aecc2d6fd818.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_bal__fsm_8c_1a72aadcd031bfaf567ec4aecc2d6fd818.html">Function bal_fsm_init()</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_bal__fsm_8c_1a72aadcd031bfaf567ec4aecc2d6fd818.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_bal_8h_1a6719efe50d915cc74294c060d31b92b8.html">Function bal_get_cells_to_discharge(voltage_t, uint16_t, voltage_t, uint16_t)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_bal_8h_1a6719efe50d915cc74294c060d31b92b8.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_bal_8c_1a6719efe50d915cc74294c060d31b92b8.html">Function bal_get_cells_to_discharge(voltage_t, uint16_t, voltage_t, uint16_t)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_bal_8c_1a6719efe50d915cc74294c060d31b92b8.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_bal__fsm_8h_1a4d4339483644c0d5124b8bb2095b923e.html">Function bal_get_threshold()</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_bal__fsm_8h_1a4d4339483644c0d5124b8bb2095b923e.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_bal__fsm_8c_1a4d4339483644c0d5124b8bb2095b923e.html">Function bal_get_threshold()</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_bal__fsm_8c_1a4d4339483644c0d5124b8bb2095b923e.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_bal__fsm_8h_1af340160471b0034430f8d5fef743862b.html">Function bal_set_threshold(uint16_t)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_bal__fsm_8h_1af340160471b0034430f8d5fef743862b.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_bal__fsm_8c_1af340160471b0034430f8d5fef743862b.html">Function bal_set_threshold(uint16_t)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_bal__fsm_8c_1af340160471b0034430f8d5fef743862b.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -1485,6 +1528,30 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="function_bal__fsm_8c_1acdb8ad0b4b8794cf774e63da95e8c756.html">Function do_compute</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_bal__fsm_8c_1acdb8ad0b4b8794cf774e63da95e8c756.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_bal__fsm_8c_1ad8bead046adc2ae33c4ce9a5cfc292ed.html">Function do_cooldown</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_bal__fsm_8c_1ad8bead046adc2ae33c4ce9a5cfc292ed.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_bal__fsm_8c_1a1752d741828ffaefc89f40bd7466d430.html">Function do_discharge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_bal__fsm_8c_1a1752d741828ffaefc89f40bd7466d430.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="function_fsm__bms_8c_1a3f6cc531bdf9a0b2174fd5f580bb4678.html">Function do_halt</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="function_fsm__bms_8c_1a3f6cc531bdf9a0b2174fd5f580bb4678.html#function-documentation">Function Documentation</a></li>
 </ul>
@@ -1503,6 +1570,14 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="function_fsm__bms_8c_1a327a54b2549a62e234ffb074084e8add.html">Function do_init</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="function_fsm__bms_8c_1a327a54b2549a62e234ffb074084e8add.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_bal__fsm_8c_1a14a8fef79ebb977dc0a81abf26e8530f.html">Function do_off</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_bal__fsm_8c_1a14a8fef79ebb977dc0a81abf26e8530f.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -1847,38 +1922,6 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="function_fsm__bms_8c_1a44d2899c50265c562b9ee5695112b7a4.html">Function fsm_bms_init()</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="function_fsm__bms_8c_1a44d2899c50265c562b9ee5695112b7a4.html#function-documentation">Function Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="function_fsm__bms_8h_1a1d01528432bc843cf9541517e6858767.html">Function fsm_bms_ts_off_handler()</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_fsm__bms_8h_1a1d01528432bc843cf9541517e6858767.html#function-documentation">Function Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="function_fsm__bms_8c_1a1d01528432bc843cf9541517e6858767.html">Function fsm_bms_ts_off_handler()</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_fsm__bms_8c_1a1d01528432bc843cf9541517e6858767.html#function-documentation">Function Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="function_fsm__bms_8h_1a6885f1cd99bf8746e06a09f4d6e6838e.html">Function fsm_bms_ts_on_handler()</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_fsm__bms_8h_1a6885f1cd99bf8746e06a09f4d6e6838e.html#function-documentation">Function Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="function_fsm__bms_8c_1a6885f1cd99bf8746e06a09f4d6e6838e.html">Function fsm_bms_ts_on_handler()</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_fsm__bms_8c_1a6885f1cd99bf8746e06a09f4d6e6838e.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -2309,32 +2352,32 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_ltc6813__utils_8h_1a32f0c355e41f4f382b6fe0eac23c3a23.html">Function ltc6813_set_balancing(SPI_HandleTypeDef *, uint8_t *, int)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_ltc6813__utils_8h_1a32f0c355e41f4f382b6fe0eac23c3a23.html#function-documentation">Function Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_ltc6813__utils_8h_1ab4b5bea06d42f3fe287cc3dd5d391bcb.html">Function ltc6813_set_balancing(SPI_HandleTypeDef *, uint16_t *, int)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_ltc6813__utils_8h_1ab4b5bea06d42f3fe287cc3dd5d391bcb.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_ltc6813__utils_8c_1a32f0c355e41f4f382b6fe0eac23c3a23.html">Function ltc6813_set_balancing(SPI_HandleTypeDef *, uint8_t *, int)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_ltc6813__utils_8c_1a32f0c355e41f4f382b6fe0eac23c3a23.html#function-documentation">Function Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_ltc6813__utils_8c_1ab4b5bea06d42f3fe287cc3dd5d391bcb.html">Function ltc6813_set_balancing(SPI_HandleTypeDef *, uint16_t *, int)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_ltc6813__utils_8c_1ab4b5bea06d42f3fe287cc3dd5d391bcb.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_ltc6813__utils_8h_1ad0ee2266089bcd711c3679ae36336fc7.html">Function ltc6813_set_dcc(uint8_t, uint8_t, uint8_t)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_ltc6813__utils_8h_1ad0ee2266089bcd711c3679ae36336fc7.html#function-documentation">Function Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_ltc6813__utils_8h_1aadfe70d2f2b194cda0a3ea9311cb97fc.html">Function ltc6813_set_dcc(uint16_t, uint8_t, uint8_t)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_ltc6813__utils_8h_1aadfe70d2f2b194cda0a3ea9311cb97fc.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_ltc6813__utils_8c_1ad0ee2266089bcd711c3679ae36336fc7.html">Function ltc6813_set_dcc(uint8_t, uint8_t, uint8_t)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_ltc6813__utils_8c_1ad0ee2266089bcd711c3679ae36336fc7.html#function-documentation">Function Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_ltc6813__utils_8c_1aadfe70d2f2b194cda0a3ea9311cb97fc.html">Function ltc6813_set_dcc(uint16_t, uint8_t, uint8_t)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_ltc6813__utils_8c_1aadfe70d2f2b194cda0a3ea9311cb97fc.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -2693,38 +2736,6 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_pack_8h_1ae8f765f62104756b8e1f7fac9c7d8296.html">Function pack_balance_cells(SPI_HandleTypeDef *)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_pack_8h_1ae8f765f62104756b8e1f7fac9c7d8296.html#function-documentation">Function Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="function_pack_8c_1ae8f765f62104756b8e1f7fac9c7d8296.html">Function pack_balance_cells(SPI_HandleTypeDef *)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_pack_8c_1ae8f765f62104756b8e1f7fac9c7d8296.html#function-documentation">Function Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="function_pack_8h_1a05e05a56e1e19d3bdbb650a57e14ae7b.html">Function pack_get_balancing()</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_pack_8h_1a05e05a56e1e19d3bdbb650a57e14ae7b.html#function-documentation">Function Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="function_pack_8c_1a05e05a56e1e19d3bdbb650a57e14ae7b.html">Function pack_get_balancing()</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_pack_8c_1a05e05a56e1e19d3bdbb650a57e14ae7b.html#function-documentation">Function Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="function_pack_8h_1a62b44ad3586608b81dce6a617b3e7f31.html">Function pack_get_bus_voltage()</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="function_pack_8h_1a62b44ad3586608b81dce6a617b3e7f31.html#function-documentation">Function Documentation</a></li>
 </ul>
@@ -2751,38 +2762,6 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="function_pack_8c_1aa4a76377c7d04fce76cb12e4daecb87a.html">Function pack_get_current()</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="function_pack_8c_1aa4a76377c7d04fce76cb12e4daecb87a.html#function-documentation">Function Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="function_pack_8h_1af4b44f57cce46f24ce85d25cf6db33e3.html">Function pack_get_energy_last_charge()</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_pack_8h_1af4b44f57cce46f24ce85d25cf6db33e3.html#function-documentation">Function Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="function_pack_8c_1af4b44f57cce46f24ce85d25cf6db33e3.html">Function pack_get_energy_last_charge()</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_pack_8c_1af4b44f57cce46f24ce85d25cf6db33e3.html#function-documentation">Function Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="function_pack_8h_1a23cbb179425ee2e46181a07125be3b69.html">Function pack_get_energy_total()</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_pack_8h_1a23cbb179425ee2e46181a07125be3b69.html#function-documentation">Function Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="function_pack_8c_1a23cbb179425ee2e46181a07125be3b69.html">Function pack_get_energy_total()</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_pack_8c_1a23cbb179425ee2e46181a07125be3b69.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -2885,16 +2864,16 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_pack_8h_1ab5b2dc99c6d926800be00817f221d5e9.html">Function pack_get_soc()</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_pack_8h_1ab5b2dc99c6d926800be00817f221d5e9.html#function-documentation">Function Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_pack_8h_1a7f587ce8028afdb6698f3cab085f0e18.html">Function pack_get_power()</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_pack_8h_1a7f587ce8028afdb6698f3cab085f0e18.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_pack_8c_1ab5b2dc99c6d926800be00817f221d5e9.html">Function pack_get_soc()</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_pack_8c_1ab5b2dc99c6d926800be00817f221d5e9.html#function-documentation">Function Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_pack_8c_1a7f587ce8028afdb6698f3cab085f0e18.html">Function pack_get_power()</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_pack_8c_1a7f587ce8028afdb6698f3cab085f0e18.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -2943,22 +2922,6 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="function_pack_8c_1a9d97a0ffd5453bbe2b7e55b73eb0131a.html">Function pack_init()</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="function_pack_8c_1a9d97a0ffd5453bbe2b7e55b73eb0131a.html#function-documentation">Function Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="function_pack_8h_1ad349c1b12d10dabd93f3a6400a99ef9a.html">Function pack_reset_soc()</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_pack_8h_1ad349c1b12d10dabd93f3a6400a99ef9a.html#function-documentation">Function Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="function_pack_8c_1ad349c1b12d10dabd93f3a6400a99ef9a.html">Function pack_reset_soc()</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_pack_8c_1ad349c1b12d10dabd93f3a6400a99ef9a.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -3237,102 +3200,6 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_soc_8h_1a637cb1fc6fa1157640a166b80bd4bc26.html">Function soc_get_total_consumption(soc_t)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_soc_8h_1a637cb1fc6fa1157640a166b80bd4bc26.html#function-documentation">Function Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="function_soc_8c_1a637cb1fc6fa1157640a166b80bd4bc26.html">Function soc_get_total_consumption(soc_t)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_soc_8c_1a637cb1fc6fa1157640a166b80bd4bc26.html#function-documentation">Function Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="function_soc_8h_1af6eae21bffdff26947dfcacfe8628d98.html">Function soc_init(soc_t)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_soc_8h_1af6eae21bffdff26947dfcacfe8628d98.html#function-documentation">Function Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="function_soc_8c_1af6eae21bffdff26947dfcacfe8628d98.html">Function soc_init(soc_t)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_soc_8c_1af6eae21bffdff26947dfcacfe8628d98.html#function-documentation">Function Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="function_soc_8h_1ad43f9f1d41b5479b44f7545f85abd980.html">Function soc_load(soc_t, uint32_t, uint32_t, uint32_t)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_soc_8h_1ad43f9f1d41b5479b44f7545f85abd980.html#function-documentation">Function Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="function_soc_8c_1ad43f9f1d41b5479b44f7545f85abd980.html">Function soc_load(soc_t, uint32_t, uint32_t, uint32_t)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_soc_8c_1ad43f9f1d41b5479b44f7545f85abd980.html#function-documentation">Function Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="function_soc_8h_1aa31c9a93635c5837b091bfc87209d2cc.html">Function soc_reset_count(soc_t, uint32_t)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_soc_8h_1aa31c9a93635c5837b091bfc87209d2cc.html#function-documentation">Function Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="function_soc_8c_1aa31c9a93635c5837b091bfc87209d2cc.html">Function soc_reset_count(soc_t, uint32_t)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_soc_8c_1aa31c9a93635c5837b091bfc87209d2cc.html#function-documentation">Function Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="function_soc_8h_1a1b9dc6678214faa7b79dfc812a170a62.html">Function soc_reset_time(soc_t, uint32_t)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_soc_8h_1a1b9dc6678214faa7b79dfc812a170a62.html#function-documentation">Function Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="function_soc_8c_1a1b9dc6678214faa7b79dfc812a170a62.html">Function soc_reset_time(soc_t, uint32_t)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_soc_8c_1a1b9dc6678214faa7b79dfc812a170a62.html#function-documentation">Function Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="function_soc_8h_1a800006d81ced9c0c564104d9c1338b04.html">Function soc_sample_current(soc_t, current_t, voltage_t, uint32_t)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_soc_8h_1a800006d81ced9c0c564104d9c1338b04.html#function-documentation">Function Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="function_soc_8c_1a800006d81ced9c0c564104d9c1338b04.html">Function soc_sample_current(soc_t, current_t, voltage_t, uint32_t)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_soc_8c_1a800006d81ced9c0c564104d9c1338b04.html#function-documentation">Function Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="function_spi_8h_1ad59b1470e3c09d41c88aecf7ae0ca806.html">Function spi_disable_cs(SPI_HandleTypeDef *, GPIO_TypeDef *, uint16_t)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="function_spi_8h_1ad59b1470e3c09d41c88aecf7ae0ca806.html#function-documentation">Function Documentation</a></li>
 </ul>
@@ -3541,6 +3408,14 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="function_bal__fsm_8c_1ac354355a328097b22f830d8e5faa2ae2.html">Function trans_stop</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_bal__fsm_8c_1ac354355a328097b22f830d8e5faa2ae2.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="function_stm32f4xx__it_8h_1a1d98923de2ed6b7309b66f9ba2971647.html">Function UsageFault_Handler(void)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="function_stm32f4xx__it_8h_1a1d98923de2ed6b7309b66f9ba2971647.html#function-documentation">Function Documentation</a></li>
 </ul>
@@ -3632,14 +3507,6 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="variable_cli__bms_8c_1a25e2c523f32311f60ea2c783e3a7a192.html">Variable _cli_soc</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="variable_cli__bms_8c_1a25e2c523f32311f60ea2c783e3a7a192.html#variable-documentation">Variable Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="variable_cli__bms_8c_1a652260a7b604db4237651c4d177b9594.html">Variable _cli_status</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="variable_cli__bms_8c_1a652260a7b604db4237651c4d177b9594.html#variable-documentation">Variable Documentation</a></li>
 </ul>
@@ -3666,6 +3533,14 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="variable_cli__bms_8c_1aa27ecd413c6617a7a7060438f1ed98a1.html">Variable _cli_temps_all</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="variable_cli__bms_8c_1aa27ecd413c6617a7a7060438f1ed98a1.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_cli__bms_8c_1ad4080b545db45d5ddc4373654018c069.html">Variable _cli_ts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_cli__bms_8c_1ad4080b545db45d5ddc4373654018c069.html#variable-documentation">Variable Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -3720,8 +3595,32 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="variable_pack_8c_1ad78dcd438aad00de10a2c2816ce16a40.html">Variable balancing</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="variable_pack_8c_1ad78dcd438aad00de10a2c2816ce16a40.html#variable-documentation">Variable Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="variable_bal__fsm_8h_1aa12677f0c46e8c8c8cf4af823a6e73a6.html">Variable bal_fsm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_bal__fsm_8h_1aa12677f0c46e8c8c8cf4af823a6e73a6.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_bal__fsm_8c_1aa12677f0c46e8c8c8cf4af823a6e73a6.html">Variable bal_fsm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_bal__fsm_8c_1aa12677f0c46e8c8c8cf4af823a6e73a6.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_cli__bms_8c_1ab3e6d0bc7a70a9e7dc40b144ec8057e4.html">Variable bal_state_names</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_cli__bms_8c_1ab3e6d0bc7a70a9e7dc40b144ec8057e4.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_cli__bms_8c_1a5b79c4930a5cbbea19247cdfa1f81130.html">Variable bms_state_names</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_cli__bms_8c_1a5b79c4930a5cbbea19247cdfa1f81130.html#variable-documentation">Variable Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -3784,14 +3683,6 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="variable_config_8c_1a7c6891ebc53d9341be6ca3271b660762.html">Variable config_default</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="variable_config_8c_1a7c6891ebc53d9341be6ca3271b660762.html#variable-documentation">Variable Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="variable_ltc6813_8h_1ab6a59f2ef3e4da098be70548c2c05304.html">Variable crcTable</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="variable_ltc6813_8h_1ab6a59f2ef3e4da098be70548c2c05304.html#variable-documentation">Variable Documentation</a></li>
 </ul>
@@ -3824,6 +3715,14 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_bal__fsm_8c_1a42ad72e462cf183bfd8a2ddb3a96ca0a.html">Variable cycle_length</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_bal__fsm_8c_1a42ad72e462cf183bfd8a2ddb3a96ca0a.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="variable_ltc6813_8h_1a145e8e4c8a25985eccf197e933570631.html">Variable dcc</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="variable_ltc6813_8h_1a145e8e4c8a25985eccf197e933570631.html#variable-documentation">Variable Documentation</a></li>
 </ul>
@@ -3834,6 +3733,14 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="variable_ltc6813_8h_1afd097769d5012531a863ac47a7699fcc.html">Variable dcto</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="variable_ltc6813_8h_1afd097769d5012531a863ac47a7699fcc.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_bal__fsm_8c_1a8ec8f80fc861b8f08428ad5d9ca7b902.html">Variable discharge_start</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_bal__fsm_8c_1a8ec8f80fc861b8f08428ad5d9ca7b902.html#variable-documentation">Variable Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -4256,30 +4163,6 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="variable_pack_8c_1a29e86de29809135c63fb780dad514155.html">Variable soc_last_charge</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="variable_pack_8c_1a29e86de29809135c63fb780dad514155.html#variable-documentation">Variable Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="variable_pack_8c_1a232b686d286a16d23e8f9e39d5fc346a.html">Variable soc_total</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="variable_pack_8c_1a232b686d286a16d23e8f9e39d5fc346a.html#variable-documentation">Variable Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="variable_cli__bms_8c_1a51ca6460673bd23b69c7f4408bda56b8.html">Variable state_names</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="variable_cli__bms_8c_1a51ca6460673bd23b69c7f4408bda56b8.html#variable-documentation">Variable Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="variable_group__STM32F4xx__System__Private__Variables_1gaa3cd3e43291e81e795d642b79b6088e6.html">Variable SystemCoreClock</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="variable_group__STM32F4xx__System__Private__Variables_1gaa3cd3e43291e81e795d642b79b6088e6.html#variable-documentation">Variable Documentation</a></li>
 </ul>
@@ -4344,8 +4227,8 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="variable_mainboard_2Src_2main_8c_1a58b94d8446d83cebee1aadaa5ed0690e.html">Variable timer_bal</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="variable_mainboard_2Src_2main_8c_1a58b94d8446d83cebee1aadaa5ed0690e.html#variable-documentation">Variable Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="variable_bal__fsm_8c_1ab1306e35299d8bdd10ea0adfbf9827ad.html">Variable threshold</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_bal__fsm_8c_1ab1306e35299d8bdd10ea0adfbf9827ad.html#variable-documentation">Variable Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -4451,6 +4334,22 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="define_mainboard_2Inc_2fenice__config_8h_1a3b31b86957fda293852c1bf89266d6a3.html">Define BAL_COOLDOWN_DELAY</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_mainboard_2Inc_2fenice__config_8h_1a3b31b86957fda293852c1bf89266d6a3.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_cellboard_2Inc_2fenice__config_8h_1a3b31b86957fda293852c1bf89266d6a3.html">Define BAL_COOLDOWN_DELAY</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_cellboard_2Inc_2fenice__config_8h_1a3b31b86957fda293852c1bf89266d6a3.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="define_mainboard_2Inc_2fenice__config_8h_1a55973ed2194879bd45f5a2f5dc8e705c.html">Define BAL_CYCLE_LENGTH</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="define_mainboard_2Inc_2fenice__config_8h_1a55973ed2194879bd45f5a2f5dc8e705c.html#define-documentation">Define Documentation</a></li>
 </ul>
@@ -4533,22 +4432,6 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="define_mainboard_2Inc_2main_8h_1a590c671ed75af4fd9fd0ee3954da954c.html">Define CARD_INSERT_Pin</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="define_mainboard_2Inc_2main_8h_1a590c671ed75af4fd9fd0ee3954da954c.html#define-documentation">Define Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="define_mainboard_2Inc_2fenice__config_8h_1a5cec0f505268033793f400c376677e86.html">Define CELL_ENERGY_NOMINAL</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="define_mainboard_2Inc_2fenice__config_8h_1a5cec0f505268033793f400c376677e86.html#define-documentation">Define Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="define_cellboard_2Inc_2fenice__config_8h_1a5cec0f505268033793f400c376677e86.html">Define CELL_ENERGY_NOMINAL</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="define_cellboard_2Inc_2fenice__config_8h_1a5cec0f505268033793f400c376677e86.html#define-documentation">Define Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -5707,6 +5590,22 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="define_mainboard_2Inc_2fenice__config_8h_1ab5e8a957cf8d31a73047fde2f5c65edc.html">Define LTC6813_PERIPHERAL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_mainboard_2Inc_2fenice__config_8h_1ab5e8a957cf8d31a73047fde2f5c65edc.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_cellboard_2Inc_2fenice__config_8h_1ab5e8a957cf8d31a73047fde2f5c65edc.html">Define LTC6813_PERIPHERAL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_cellboard_2Inc_2fenice__config_8h_1ab5e8a957cf8d31a73047fde2f5c65edc.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="define_mainboard_2Inc_2fenice__config_8h_1a60d95021fa7515f639603ef6dae74626.html">Define LTC6813_REG_CELL_COUNT</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="define_mainboard_2Inc_2fenice__config_8h_1a60d95021fa7515f639603ef6dae74626.html#define-documentation">Define Documentation</a></li>
 </ul>
@@ -5803,8 +5702,24 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="define_bal_8c_1affe776513b24d84b39af8ab0930fef7f.html">Define max</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_bal_8c_1affe776513b24d84b39af8ab0930fef7f.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="define_pack_8c_1affe776513b24d84b39af8ab0930fef7f.html">Define max</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="define_pack_8c_1affe776513b24d84b39af8ab0930fef7f.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_bal_8c_1ac6afabdc09a49a433ee19d8a9486056d.html">Define min</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_bal_8c_1ac6afabdc09a49a433ee19d8a9486056d.html#define-documentation">Define Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -5909,22 +5824,6 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="define_cellboard_2Inc_2fenice__config_8h_1ae9b75689e590b0a702f6c24100f04693.html">Define PACK_CELL_COUNT</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="define_cellboard_2Inc_2fenice__config_8h_1ae9b75689e590b0a702f6c24100f04693.html#define-documentation">Define Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="define_mainboard_2Inc_2fenice__config_8h_1a9bbb9eaaa929495cd59b83a2bd719906.html">Define PACK_ENERGY_NOMINAL</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="define_mainboard_2Inc_2fenice__config_8h_1a9bbb9eaaa929495cd59b83a2bd719906.html#define-documentation">Define Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="define_cellboard_2Inc_2fenice__config_8h_1a9bbb9eaaa929495cd59b83a2bd719906.html">Define PACK_ENERGY_NOMINAL</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="define_cellboard_2Inc_2fenice__config_8h_1a9bbb9eaaa929495cd59b83a2bd719906.html#define-documentation">Define Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -6862,14 +6761,6 @@
 <h3>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">¶</a></h3>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="typedef_bal_8h_1ad40d8d4a13383d7f7bbd075b834a60d1.html">Typedef bal_handle</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="typedef_bal_8h_1ad40d8d4a13383d7f7bbd075b834a60d1.html#typedef-documentation">Typedef Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="typedef_config_8h_1a261f57fc59ad07837082c43ef8a443e3.html">Typedef config_t</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="typedef_config_8h_1a261f57fc59ad07837082c43ef8a443e3.html#typedef-documentation">Typedef Documentation</a></li>
 </ul>
@@ -6896,14 +6787,6 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="typedef_feedback_8h_1af31f74762bbbbb2cdd1f2ee74ba4b97b.html">Typedef feedback_t</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="typedef_feedback_8h_1af31f74762bbbbb2cdd1f2ee74ba4b97b.html#typedef-documentation">Typedef Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="typedef_soc_8h_1ae8794aadc3052d7179240663f1684e04.html">Typedef soc_t</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="typedef_soc_8h_1ae8794aadc3052d7179240663f1684e04.html#typedef-documentation">Typedef Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -6958,7 +6841,7 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="structbal__handle.html" class="btn btn-neutral float-right" title="Struct bal_handle" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="structcells__t.html" class="btn btn-neutral float-right" title="Struct cells_t" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to Eagletrt ubx parser master’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

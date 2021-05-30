@@ -72,7 +72,5 @@ Variables
 
 - :ref:`exhale_variable_config_8c_1a25ce4b69d296fc9a3324b494542c2420`
 
-- :ref:`exhale_variable_config_8c_1a7c6891ebc53d9341be6ca3271b660762`
-
 - :ref:`exhale_variable_config_8c_1a859a34ad2f9ec17adfd0c7b76d288952`
 

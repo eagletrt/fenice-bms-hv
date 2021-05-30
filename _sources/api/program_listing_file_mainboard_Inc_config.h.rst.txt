@@ -11,12 +11,11 @@ Program Listing for File config.h
 .. code-block:: cpp
 
    
-   #ifndef _CONFIG_H_
-   #define _CONFIG_H_
+   #ifndef CONFIG_H
+   #define CONFIG_H
    #include <inttypes.h>
    
    #include "bal.h"
-   #include "soc.h"
    
    #define CONFIG_ADDRESS 0x00
    
@@ -24,15 +23,10 @@ Program Listing for File config.h
    
    struct config {
        uint32_t version;
-   
-       uint32_t total_coulomb;
-       uint32_t total_joule;
-       uint32_t partial_coulomb;
-       uint32_t partial_joule;
    };
    typedef struct config config_t;
-   
-   extern const config_t config_default;
+   const config_t config_default = {
+       CONFIG_VERSION};
    
    bool config_write(config_t *config);
    bool config_load();

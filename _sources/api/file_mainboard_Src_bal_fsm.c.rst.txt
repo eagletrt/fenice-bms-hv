@@ -1,0 +1,96 @@
+
+.. _file_mainboard_Src_bal_fsm.c:
+
+File bal_fsm.c
+==============
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Src>` (``mainboard/Src``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+This file contains the balancing functions. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Src/bal_fsm.c``)
+----------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Src_bal_fsm.c.rst
+
+
+
+Detailed Description
+--------------------
+
+May 09, 2021
+
+Matteo Bonora [matteo.bonora@studenti.unitn.it] 
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``bal_fsm.h`` (:ref:`file_mainboard_Inc_bal_fsm.h`)
+
+- ``cli_bms.h`` (:ref:`file_mainboard_Inc_cli_bms.h`)
+
+- ``fenice_config.h`` (:ref:`file_mainboard_Inc_fenice_config.h`)
+
+- ``ltc6813_utils.h`` (:ref:`file_mainboard_Inc_peripherals_ltc6813_utils.h`)
+
+- ``pack.h`` (:ref:`file_mainboard_Inc_pack.h`)
+
+- ``spi.h`` (:ref:`file_mainboard_Inc_spi.h`)
+
+
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_bal__fsm_8c_1a72aadcd031bfaf567ec4aecc2d6fd818`
+
+- :ref:`exhale_function_bal__fsm_8c_1a4d4339483644c0d5124b8bb2095b923e`
+
+- :ref:`exhale_function_bal__fsm_8c_1af340160471b0034430f8d5fef743862b`
+
+- :ref:`exhale_function_bal__fsm_8c_1acdb8ad0b4b8794cf774e63da95e8c756`
+
+- :ref:`exhale_function_bal__fsm_8c_1ad8bead046adc2ae33c4ce9a5cfc292ed`
+
+- :ref:`exhale_function_bal__fsm_8c_1a1752d741828ffaefc89f40bd7466d430`
+
+- :ref:`exhale_function_bal__fsm_8c_1a14a8fef79ebb977dc0a81abf26e8530f`
+
+- :ref:`exhale_function_bal__fsm_8c_1ac354355a328097b22f830d8e5faa2ae2`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_bal__fsm_8c_1aa12677f0c46e8c8c8cf4af823a6e73a6`
+
+- :ref:`exhale_variable_bal__fsm_8c_1a42ad72e462cf183bfd8a2ddb3a96ca0a`
+
+- :ref:`exhale_variable_bal__fsm_8c_1a8ec8f80fc861b8f08428ad5d9ca7b902`
+
+- :ref:`exhale_variable_bal__fsm_8c_1ab1306e35299d8bdd10ea0adfbf9827ad`
+

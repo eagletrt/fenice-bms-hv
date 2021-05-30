@@ -191,11 +191,10 @@
 <div class="section" id="includes">
 <h2>Includes<a class="headerlink" href="#includes" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">bal.h</span></code> (<a class="reference internal" href="file_mainboard_Inc_bal.h.html#file-mainboard-inc-bal-h"><span class="std std-ref">File bal.h</span></a>)</li>
+<li><code class="docutils literal notranslate"><span class="pre">bal_fsm.h</span></code> (<a class="reference internal" href="file_mainboard_Inc_bal_fsm.h.html#file-mainboard-inc-bal-fsm-h"><span class="std std-ref">File bal_fsm.h</span></a>)</li>
 <li><code class="docutils literal notranslate"><span class="pre">cli_bms.h</span></code> (<a class="reference internal" href="file_mainboard_Inc_cli_bms.h.html#file-mainboard-inc-cli-bms-h"><span class="std std-ref">File cli_bms.h</span></a>)</li>
 <li><code class="docutils literal notranslate"><span class="pre">error/error.h</span></code> (<a class="reference internal" href="file_mainboard_Inc_error_error.h.html#file-mainboard-inc-error-error-h"><span class="std std-ref">File error.h</span></a>)</li>
 <li><code class="docutils literal notranslate"><span class="pre">fsm_bms.h</span></code> (<a class="reference internal" href="file_mainboard_Inc_fsm_bms.h.html#file-mainboard-inc-fsm-bms-h"><span class="std std-ref">File fsm_bms.h</span></a>)</li>
-<li><code class="docutils literal notranslate"><span class="pre">pack.h</span></code> (<a class="reference internal" href="file_mainboard_Inc_pack.h.html#file-mainboard-inc-pack-h"><span class="std std-ref">File pack.h</span></a>)</li>
 <li><code class="docutils literal notranslate"><span class="pre">stdio.h</span></code></li>
 <li><code class="docutils literal notranslate"><span class="pre">stdlib.h</span></code></li>
 <li><code class="docutils literal notranslate"><span class="pre">string.h</span></code></li>
@@ -210,11 +209,11 @@
 <li><a class="reference internal" href="function_cli__bms_8c_1aad34c4a4aa15033a1912e6d41d00081b.html#exhale-function-cli-bms-8c-1aad34c4a4aa15033a1912e6d41d00081b"><span class="std std-ref">Function _cli_errors</span></a></li>
 <li><a class="reference internal" href="function_cli__bms_8c_1ad04d99b2a03909941b3b382f228567ca.html#exhale-function-cli-bms-8c-1ad04d99b2a03909941b3b382f228567ca"><span class="std std-ref">Function _cli_help</span></a></li>
 <li><a class="reference internal" href="function_cli__bms_8c_1a93ceb8f6ffb9c2f7efc5c2297e9195ec.html#exhale-function-cli-bms-8c-1a93ceb8f6ffb9c2f7efc5c2297e9195ec"><span class="std std-ref">Function _cli_reset</span></a></li>
-<li><a class="reference internal" href="function_cli__bms_8c_1ac3985a6d7ec7917c4d2c35d3d1c6e03c.html#exhale-function-cli-bms-8c-1ac3985a6d7ec7917c4d2c35d3d1c6e03c"><span class="std std-ref">Function _cli_soc</span></a></li>
 <li><a class="reference internal" href="function_cli__bms_8c_1a7ba9ba49b642bd02c233395a98117ee5.html#exhale-function-cli-bms-8c-1a7ba9ba49b642bd02c233395a98117ee5"><span class="std std-ref">Function _cli_status</span></a></li>
 <li><a class="reference internal" href="function_cli__bms_8c_1ad060f51fbc50205bbaee206fcc8dbad2.html#exhale-function-cli-bms-8c-1ad060f51fbc50205bbaee206fcc8dbad2"><span class="std std-ref">Function _cli_taba</span></a></li>
 <li><a class="reference internal" href="function_cli__bms_8c_1a46815f4fde575ed887a9d99ca0b927a5.html#exhale-function-cli-bms-8c-1a46815f4fde575ed887a9d99ca0b927a5"><span class="std std-ref">Function _cli_temps</span></a></li>
 <li><a class="reference internal" href="function_cli__bms_8c_1aa381264cefd6a2a056151ae7cde00492.html#exhale-function-cli-bms-8c-1aa381264cefd6a2a056151ae7cde00492"><span class="std std-ref">Function _cli_temps_all</span></a></li>
+<li><a class="reference internal" href="function_cli__bms_8c_1a4e36fad2ffae280c09b95d7120be194b.html#exhale-function-cli-bms-8c-1a4e36fad2ffae280c09b95d7120be194b"><span class="std std-ref">Function _cli_ts</span></a></li>
 <li><a class="reference internal" href="function_cli__bms_8c_1a40ccc4ec8554c5a2ee2ad9fb73d97397.html#exhale-function-cli-bms-8c-1a40ccc4ec8554c5a2ee2ad9fb73d97397"><span class="std std-ref">Function _cli_volts</span></a></li>
 <li><a class="reference internal" href="function_cli__bms_8c_1a50ceab3a580d0de30257e368be4ca618.html#exhale-function-cli-bms-8c-1a50ceab3a580d0de30257e368be4ca618"><span class="std std-ref">Function _cli_volts_all</span></a></li>
 <li><a class="reference internal" href="function_cli__bms_8c_1a16fe565bf6dc85a9ea1dbb0ab6077a6d.html#exhale-function-cli-bms-8c-1a16fe565bf6dc85a9ea1dbb0ab6077a6d"><span class="std std-ref">Function cli_bms_debug(char *, size_t)</span></a></li>
@@ -236,20 +235,21 @@
 <li><a class="reference internal" href="variable_cli__bms_8c_1a97089cbba6264fbfc9a1579ac9351a0d.html#exhale-variable-cli-bms-8c-1a97089cbba6264fbfc9a1579ac9351a0d"><span class="std std-ref">Variable _cli_errors</span></a></li>
 <li><a class="reference internal" href="variable_cli__bms_8c_1ae9e5758c24518e7a2b34810bd2f7e0e7.html#exhale-variable-cli-bms-8c-1ae9e5758c24518e7a2b34810bd2f7e0e7"><span class="std std-ref">Variable _cli_help</span></a></li>
 <li><a class="reference internal" href="variable_cli__bms_8c_1aa409f5250982bed8c00e4fe32469febc.html#exhale-variable-cli-bms-8c-1aa409f5250982bed8c00e4fe32469febc"><span class="std std-ref">Variable _cli_reset</span></a></li>
-<li><a class="reference internal" href="variable_cli__bms_8c_1a25e2c523f32311f60ea2c783e3a7a192.html#exhale-variable-cli-bms-8c-1a25e2c523f32311f60ea2c783e3a7a192"><span class="std std-ref">Variable _cli_soc</span></a></li>
 <li><a class="reference internal" href="variable_cli__bms_8c_1a652260a7b604db4237651c4d177b9594.html#exhale-variable-cli-bms-8c-1a652260a7b604db4237651c4d177b9594"><span class="std std-ref">Variable _cli_status</span></a></li>
 <li><a class="reference internal" href="variable_cli__bms_8c_1a0fa24683c5b8a47f20defc967072a493.html#exhale-variable-cli-bms-8c-1a0fa24683c5b8a47f20defc967072a493"><span class="std std-ref">Variable _cli_taba</span></a></li>
 <li><a class="reference internal" href="variable_cli__bms_8c_1a4d6657de753b0137c4e808ee4b701095.html#exhale-variable-cli-bms-8c-1a4d6657de753b0137c4e808ee4b701095"><span class="std std-ref">Variable _cli_temps</span></a></li>
 <li><a class="reference internal" href="variable_cli__bms_8c_1aa27ecd413c6617a7a7060438f1ed98a1.html#exhale-variable-cli-bms-8c-1aa27ecd413c6617a7a7060438f1ed98a1"><span class="std std-ref">Variable _cli_temps_all</span></a></li>
+<li><a class="reference internal" href="variable_cli__bms_8c_1ad4080b545db45d5ddc4373654018c069.html#exhale-variable-cli-bms-8c-1ad4080b545db45d5ddc4373654018c069"><span class="std std-ref">Variable _cli_ts</span></a></li>
 <li><a class="reference internal" href="variable_cli__bms_8c_1a48f73940cf9a70cab31e3d83f94e6736.html#exhale-variable-cli-bms-8c-1a48f73940cf9a70cab31e3d83f94e6736"><span class="std std-ref">Variable _cli_volts</span></a></li>
 <li><a class="reference internal" href="variable_cli__bms_8c_1af9ca4b92032fdedb065045d56ae0b78b.html#exhale-variable-cli-bms-8c-1af9ca4b92032fdedb065045d56ae0b78b"><span class="std std-ref">Variable _cli_volts_all</span></a></li>
+<li><a class="reference internal" href="variable_cli__bms_8c_1ab3e6d0bc7a70a9e7dc40b144ec8057e4.html#exhale-variable-cli-bms-8c-1ab3e6d0bc7a70a9e7dc40b144ec8057e4"><span class="std std-ref">Variable bal_state_names</span></a></li>
+<li><a class="reference internal" href="variable_cli__bms_8c_1a5b79c4930a5cbbea19247cdfa1f81130.html#exhale-variable-cli-bms-8c-1a5b79c4930a5cbbea19247cdfa1f81130"><span class="std std-ref">Variable bms_state_names</span></a></li>
 <li><a class="reference internal" href="variable_cli__bms_8c_1ae97f49f74719578ca4823d58d8e74c19.html#exhale-variable-cli-bms-8c-1ae97f49f74719578ca4823d58d8e74c19"><span class="std std-ref">Variable cli_bms</span></a></li>
 <li><a class="reference internal" href="variable_cli__bms_8c_1a97994c0c44928753874e891b57f04587.html#exhale-variable-cli-bms-8c-1a97994c0c44928753874e891b57f04587"><span class="std std-ref">Variable command_names</span></a></li>
 <li><a class="reference internal" href="variable_cli__bms_8c_1a20333c2148c8e6dab5f6b1d99dc3a8bd.html#exhale-variable-cli-bms-8c-1a20333c2148c8e6dab5f6b1d99dc3a8bd"><span class="std std-ref">Variable commands</span></a></li>
 <li><a class="reference internal" href="variable_cli__bms_8c_1a0f73a38703f79ee46de42bb0eed53d2e.html#exhale-variable-cli-bms-8c-1a0f73a38703f79ee46de42bb0eed53d2e"><span class="std std-ref">Variable dmesg_ena</span></a></li>
 <li><a class="reference internal" href="variable_cli__bms_8c_1ac2a46744405dcf0fbb95105514066043.html#exhale-variable-cli-bms-8c-1ac2a46744405dcf0fbb95105514066043"><span class="std std-ref">Variable error_names</span></a></li>
 <li><a class="reference internal" href="variable_cli__bms_8c_1a70d6a509a5b8d0c0e34a5390c0a24607.html#exhale-variable-cli-bms-8c-1a70d6a509a5b8d0c0e34a5390c0a24607"><span class="std std-ref">Variable feedback_names</span></a></li>
-<li><a class="reference internal" href="variable_cli__bms_8c_1a51ca6460673bd23b69c7f4408bda56b8.html#exhale-variable-cli-bms-8c-1a51ca6460673bd23b69c7f4408bda56b8"><span class="std std-ref">Variable state_names</span></a></li>
 </ul>
 </div>
 </div>

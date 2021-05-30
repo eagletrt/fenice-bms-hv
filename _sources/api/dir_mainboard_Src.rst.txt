@@ -22,6 +22,7 @@ Files
 -----
 
 - :ref:`file_mainboard_Src_bal.c`
+- :ref:`file_mainboard_Src_bal_fsm.c`
 - :ref:`file_mainboard_Src_cli_bms.c`
 - :ref:`file_mainboard_Src_config.c`
 - :ref:`file_mainboard_Src_fdcan.c`
@@ -30,7 +31,6 @@ Files
 - :ref:`file_mainboard_Src_gpio.c`
 - :ref:`file_mainboard_Src_main.c`
 - :ref:`file_mainboard_Src_pack.c`
-- :ref:`file_mainboard_Src_soc.c`
 - :ref:`file_mainboard_Src_spi.c`
 - :ref:`file_mainboard_Src_stm32g4xx_hal_msp.c`
 - :ref:`file_mainboard_Src_stm32g4xx_it.c`

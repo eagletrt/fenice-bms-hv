@@ -1,0 +1,13 @@
+.. _exhale_variable_bal__fsm_8c_1a42ad72e462cf183bfd8a2ddb3a96ca0a:
+
+Variable cycle_length
+=====================
+
+- Defined in :ref:`file_mainboard_Src_bal_fsm.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: cycle_length

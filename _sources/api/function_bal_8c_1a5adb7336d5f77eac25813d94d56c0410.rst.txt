@@ -1,0 +1,13 @@
+.. _exhale_function_bal_8c_1a5adb7336d5f77eac25813d94d56c0410:
+
+Function bal_exclude_neighbors(uint16_t, uint16_t, uint16_t)
+============================================================
+
+- Defined in :ref:`file_mainboard_Src_bal.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: bal_exclude_neighbors(uint16_t, uint16_t, uint16_t)
