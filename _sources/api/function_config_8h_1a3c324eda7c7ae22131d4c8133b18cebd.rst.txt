@@ -1,0 +1,13 @@
+.. _exhale_function_config_8h_1a3c324eda7c7ae22131d4c8133b18cebd:
+
+Function config_set(config_t \*)
+================================
+
+- Defined in :ref:`file_mainboard_Inc_config.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: config_set(config_t *)

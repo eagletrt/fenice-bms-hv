@@ -48,6 +48,10 @@ Includes
 
 - ``inttypes.h``
 
+- ``m95256.h``
+
+- ``soc.h`` (:ref:`file_mainboard_Inc_soc.h`)
+
 
 
 Included By
@@ -57,6 +61,8 @@ Included By
 - :ref:`file_mainboard_Src_config.c`
 
 - :ref:`file_mainboard_Src_main.c`
+
+- :ref:`file_mainboard_Src_pack.c`
 
 
 
@@ -74,9 +80,11 @@ Functions
 
 - :ref:`exhale_function_config_8h_1a7c49f020ada32702f4b8b07e7a1f37bc`
 
-- :ref:`exhale_function_config_8h_1a1b467f2b5cab0f775fa273b39a806e04`
+- :ref:`exhale_function_config_8h_1a924366cd123309004b14514c62aab2c4`
 
-- :ref:`exhale_function_config_8h_1afa27d32e14b7a4dbc9cfb8e020e3f748`
+- :ref:`exhale_function_config_8h_1a3c324eda7c7ae22131d4c8133b18cebd`
+
+- :ref:`exhale_function_config_8h_1a8b59eff804cbc3a56c012c62427bddcb`
 
 
 Defines

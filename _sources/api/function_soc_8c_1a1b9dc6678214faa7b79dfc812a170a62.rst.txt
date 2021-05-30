@@ -1,0 +1,13 @@
+.. _exhale_function_soc_8c_1a1b9dc6678214faa7b79dfc812a170a62:
+
+Function soc_reset_time(soc_t, uint32_t)
+========================================
+
+- Defined in :ref:`file_mainboard_Src_soc.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: soc_reset_time(soc_t, uint32_t)

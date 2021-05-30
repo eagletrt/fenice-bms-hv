@@ -1,0 +1,13 @@
+.. _exhale_function_config_8h_1a8b59eff804cbc3a56c012c62427bddcb:
+
+Function config_write(m95256_t)
+===============================
+
+- Defined in :ref:`file_mainboard_Inc_config.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: config_write(m95256_t)

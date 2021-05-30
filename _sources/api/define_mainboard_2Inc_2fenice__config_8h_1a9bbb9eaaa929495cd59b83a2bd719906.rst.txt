@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2fenice__config_8h_1a9bbb9eaaa929495cd59b83a2bd719906:
+
+Define PACK_ENERGY_NOMINAL
+==========================
+
+- Defined in :ref:`file_mainboard_Inc_fenice_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: PACK_ENERGY_NOMINAL

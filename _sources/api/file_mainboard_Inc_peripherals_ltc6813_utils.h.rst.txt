@@ -66,8 +66,6 @@ Included By
 
 - :ref:`file_mainboard_Inc_peripherals_ltc6813.h`
 
-- :ref:`file_mainboard_Src_bal_fsm.c`
-
 - :ref:`file_mainboard_Src_peripherals_ltc6813_utils.c`
 
 
@@ -89,9 +87,9 @@ Functions
 
 - :ref:`exhale_function_ltc6813__utils_8h_1a7c0b1330dbf0c54877b204e8501a943b`
 
-- :ref:`exhale_function_ltc6813__utils_8h_1ab4b5bea06d42f3fe287cc3dd5d391bcb`
+- :ref:`exhale_function_ltc6813__utils_8h_1a32f0c355e41f4f382b6fe0eac23c3a23`
 
-- :ref:`exhale_function_ltc6813__utils_8h_1aadfe70d2f2b194cda0a3ea9311cb97fc`
+- :ref:`exhale_function_ltc6813__utils_8h_1ad0ee2266089bcd711c3679ae36336fc7`
 
 - :ref:`exhale_function_ltc6813__utils_8h_1a0f0a2a353d27e37ce2b7465786d2e387`
 

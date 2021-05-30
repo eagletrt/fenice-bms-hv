@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Src_2main_8c_1a8c6e478f157f4c9bdecf098fab81c4b6:
+
+Define CONFIG_WRITE_INTERVAL
+============================
+
+- Defined in :ref:`file_mainboard_Src_main.c`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CONFIG_WRITE_INTERVAL

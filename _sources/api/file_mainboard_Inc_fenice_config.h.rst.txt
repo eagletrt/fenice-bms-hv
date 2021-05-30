@@ -56,6 +56,8 @@ Included By
 
 - :ref:`file_mainboard_Inc_bal.h`
 
+- :ref:`file_mainboard_Inc_soc.h`
+
 - :ref:`file_mainboard_Inc_pack.h`
 
 - :ref:`file_mainboard_Inc_feedback.h`
@@ -67,20 +69,20 @@ Enums
 -----
 
 
-- :ref:`exhale_enum_mainboard_2Inc_2fenice__config_8h_1adf764cbdea00d65edcd07bb9953ad2b7`
+- :ref:`exhale_enum_mainboard_2Inc_2fenice__config_8h_1a06fc87d81c62e9abb8790b6e5713c55b`
 
 
 Defines
 -------
 
 
-- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a3b31b86957fda293852c1bf89266d6a3`
-
 - :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a55973ed2194879bd45f5a2f5dc8e705c`
 
 - :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1adc1c18c9a78fa76194e88a6e067a5bf7`
 
 - :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a0fe341491d7d9863ec4748c8a62c83b3`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a5cec0f505268033793f400c376677e86`
 
 - :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a609c654690c5e70aa9713a972641874e`
 
@@ -136,8 +138,6 @@ Defines
 
 - :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a92f30c622832ad6c2dfc95f932c21d4e`
 
-- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1ab5e8a957cf8d31a73047fde2f5c65edc`
-
 - :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a60d95021fa7515f639603ef6dae74626`
 
 - :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1abf2cacfdd7c50f4779e617c0d28750b1`
@@ -145,6 +145,8 @@ Defines
 - :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a375f74cc5a3700baa1b746a2fcc60190`
 
 - :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1ae9b75689e590b0a702f6c24100f04693`
+
+- :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a9bbb9eaaa929495cd59b83a2bd719906`
 
 - :ref:`exhale_define_mainboard_2Inc_2fenice__config_8h_1a9ceb6fa3a1b3065b18963506642d0d06`
 

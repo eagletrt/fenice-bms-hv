@@ -48,7 +48,7 @@ Includes
 
 - ``bal.h`` (:ref:`file_mainboard_Inc_bal.h`)
 
-- ``stddef.h``
+- ``stdio.h``
 
 
 
@@ -59,26 +59,15 @@ Functions
 ---------
 
 
-- :ref:`exhale_function_bal_8c_1aadc6f5a4740bda6bed2ce444d7d45310`
+- :ref:`exhale_function_bal_8c_1a895873c36da91db9c896648e8cef00c0`
 
-- :ref:`exhale_function_bal_8c_1a4857f39dc51047468afc725d8b5f9f17`
+- :ref:`exhale_function_bal_8c_1ae00338771ec77948b7fbd3e5b29a0ddb`
 
-- :ref:`exhale_function_bal_8c_1ad42bcabde24aacfde9c874645e976e13`
+- :ref:`exhale_function_bal_8c_1af778468a1695088a03972c1964922276`
 
-- :ref:`exhale_function_bal_8c_1aa0eaba37cbea2e81fa7aab2d986019f2`
+- :ref:`exhale_function_bal_8c_1a949bd6aae2409dc009f91ee631120876`
 
-- :ref:`exhale_function_bal_8c_1ac4fab94238cd9bd16c9f3c3d17fc035e`
+- :ref:`exhale_function_bal_8c_1aa6bd11fcc753f0813d3763b4eaec4e0f`
 
-- :ref:`exhale_function_bal_8c_1a5adb7336d5f77eac25813d94d56c0410`
-
-- :ref:`exhale_function_bal_8c_1a6719efe50d915cc74294c060d31b92b8`
-
-
-Defines
--------
-
-
-- :ref:`exhale_define_bal_8c_1affe776513b24d84b39af8ab0930fef7f`
-
-- :ref:`exhale_define_bal_8c_1ac6afabdc09a49a433ee19d8a9486056d`
+- :ref:`exhale_function_bal_8c_1a338063b4a0f01cb455e163840ebcabc2`
 

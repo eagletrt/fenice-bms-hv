@@ -46,8 +46,6 @@ Includes
 --------
 
 
-- ``../../lib/can/naked_generator/Primary/c/Primary.h``
-
 - ``inttypes.h``
 
 - ``llist.h``

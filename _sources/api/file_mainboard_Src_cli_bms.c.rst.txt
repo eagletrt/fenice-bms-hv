@@ -13,6 +13,7 @@ cli instance for bms
 
 
 
+
 .. contents:: Contents
    :local:
    :backlinks: none
@@ -46,13 +47,15 @@ Includes
 --------
 
 
-- ``bal_fsm.h`` (:ref:`file_mainboard_Inc_bal_fsm.h`)
+- ``bal.h`` (:ref:`file_mainboard_Inc_bal.h`)
 
 - ``cli_bms.h`` (:ref:`file_mainboard_Inc_cli_bms.h`)
 
 - ``error/error.h`` (:ref:`file_mainboard_Inc_error_error.h`)
 
 - ``fsm_bms.h`` (:ref:`file_mainboard_Inc_fsm_bms.h`)
+
+- ``pack.h`` (:ref:`file_mainboard_Inc_pack.h`)
 
 - ``stdio.h``
 
@@ -81,6 +84,8 @@ Functions
 
 - :ref:`exhale_function_cli__bms_8c_1a93ceb8f6ffb9c2f7efc5c2297e9195ec`
 
+- :ref:`exhale_function_cli__bms_8c_1ac3985a6d7ec7917c4d2c35d3d1c6e03c`
+
 - :ref:`exhale_function_cli__bms_8c_1a7ba9ba49b642bd02c233395a98117ee5`
 
 - :ref:`exhale_function_cli__bms_8c_1ad060f51fbc50205bbaee206fcc8dbad2`
@@ -88,8 +93,6 @@ Functions
 - :ref:`exhale_function_cli__bms_8c_1a46815f4fde575ed887a9d99ca0b927a5`
 
 - :ref:`exhale_function_cli__bms_8c_1aa381264cefd6a2a056151ae7cde00492`
-
-- :ref:`exhale_function_cli__bms_8c_1a4e36fad2ffae280c09b95d7120be194b`
 
 - :ref:`exhale_function_cli__bms_8c_1a40ccc4ec8554c5a2ee2ad9fb73d97397`
 
@@ -123,6 +126,8 @@ Variables
 
 - :ref:`exhale_variable_cli__bms_8c_1aa409f5250982bed8c00e4fe32469febc`
 
+- :ref:`exhale_variable_cli__bms_8c_1a25e2c523f32311f60ea2c783e3a7a192`
+
 - :ref:`exhale_variable_cli__bms_8c_1a652260a7b604db4237651c4d177b9594`
 
 - :ref:`exhale_variable_cli__bms_8c_1a0fa24683c5b8a47f20defc967072a493`
@@ -131,15 +136,9 @@ Variables
 
 - :ref:`exhale_variable_cli__bms_8c_1aa27ecd413c6617a7a7060438f1ed98a1`
 
-- :ref:`exhale_variable_cli__bms_8c_1ad4080b545db45d5ddc4373654018c069`
-
 - :ref:`exhale_variable_cli__bms_8c_1a48f73940cf9a70cab31e3d83f94e6736`
 
 - :ref:`exhale_variable_cli__bms_8c_1af9ca4b92032fdedb065045d56ae0b78b`
-
-- :ref:`exhale_variable_cli__bms_8c_1ab3e6d0bc7a70a9e7dc40b144ec8057e4`
-
-- :ref:`exhale_variable_cli__bms_8c_1a5b79c4930a5cbbea19247cdfa1f81130`
 
 - :ref:`exhale_variable_cli__bms_8c_1ae97f49f74719578ca4823d58d8e74c19`
 
@@ -152,4 +151,6 @@ Variables
 - :ref:`exhale_variable_cli__bms_8c_1ac2a46744405dcf0fbb95105514066043`
 
 - :ref:`exhale_variable_cli__bms_8c_1a70d6a509a5b8d0c0e34a5390c0a24607`
+
+- :ref:`exhale_variable_cli__bms_8c_1a51ca6460673bd23b69c7f4408bda56b8`
 

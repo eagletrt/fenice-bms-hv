@@ -1,0 +1,13 @@
+.. _exhale_function_pack_8c_1af4b44f57cce46f24ce85d25cf6db33e3:
+
+Function pack_get_energy_last_charge()
+======================================
+
+- Defined in :ref:`file_mainboard_Src_pack.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: pack_get_energy_last_charge()

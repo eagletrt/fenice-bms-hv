@@ -1,0 +1,13 @@
+.. _exhale_variable_pack_8c_1a232b686d286a16d23e8f9e39d5fc346a:
+
+Variable soc_total
+==================
+
+- Defined in :ref:`file_mainboard_Src_pack.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: soc_total

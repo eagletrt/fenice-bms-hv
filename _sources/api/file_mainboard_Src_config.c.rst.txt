@@ -46,7 +46,7 @@ Includes
 
 - ``config.h`` (:ref:`file_mainboard_Inc_config.h`)
 
-- ``m95256.h``
+- ``stdbool.h``
 
 - ``string.h``
 
@@ -59,11 +59,13 @@ Functions
 ---------
 
 
-- :ref:`exhale_function_config_8c_1a7c49f020ada32702f4b8b07e7a1f37bc`
+- :ref:`exhale_function_config_8c_1aceda802bb871756a03cce91936980101`
 
-- :ref:`exhale_function_config_8c_1a1b467f2b5cab0f775fa273b39a806e04`
+- :ref:`exhale_function_config_8c_1a924366cd123309004b14514c62aab2c4`
 
-- :ref:`exhale_function_config_8c_1afa27d32e14b7a4dbc9cfb8e020e3f748`
+- :ref:`exhale_function_config_8c_1ab21f4f432786038f37bbb614b5482582`
+
+- :ref:`exhale_function_config_8c_1a8b59eff804cbc3a56c012c62427bddcb`
 
 
 Variables
@@ -72,5 +74,7 @@ Variables
 
 - :ref:`exhale_variable_config_8c_1a25ce4b69d296fc9a3324b494542c2420`
 
-- :ref:`exhale_variable_config_8c_1a859a34ad2f9ec17adfd0c7b76d288952`
+- :ref:`exhale_variable_config_8c_1a7c6891ebc53d9341be6ca3271b660762`
+
+- :ref:`exhale_variable_config_8c_1ad25edacba00e4d0666a9959053b7cc10`
 
