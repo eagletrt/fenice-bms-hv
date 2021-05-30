@@ -1447,6 +1447,16 @@ Functions
 .. toctree::
    :maxdepth: 5
 
+   function_soc_8h_1a3a9387c3f027f01060a1c35e64b83450.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_soc_8c_1a3a9387c3f027f01060a1c35e64b83450.rst
+
+.. toctree::
+   :maxdepth: 5
+
    function_soc_8h_1aa9b1a5f1e57898a6e179250c98e37538.rst
 
 .. toctree::

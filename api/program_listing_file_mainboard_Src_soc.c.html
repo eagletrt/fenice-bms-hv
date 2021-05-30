@@ -168,7 +168,6 @@
 <span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp"></span>
 
-<span class="cp">#include</span> <span class="cpf">&quot;pack.h&quot;</span><span class="cp"></span>
 <span class="cm">/* Private typedef -----------------------------------------------------------*/</span>
 <span class="k">struct</span> <span class="n">soc</span> <span class="p">{</span>
     <span class="kt">uint32_t</span> <span class="n">last_sample</span><span class="p">;</span>
@@ -185,6 +184,10 @@
 <span class="kt">void</span> <span class="nf">soc_init</span><span class="p">(</span><span class="n">soc_t</span><span class="o">*</span> <span class="n">handle</span><span class="p">)</span> <span class="p">{</span>
     <span class="o">*</span><span class="n">handle</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">soc</span><span class="p">));</span>
     <span class="n">soc_reset_count</span><span class="p">(</span><span class="o">*</span><span class="n">handle</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">soc_deinit</span><span class="p">(</span><span class="n">soc_t</span><span class="o">*</span> <span class="n">handle</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">free</span><span class="p">(</span><span class="o">*</span><span class="n">handle</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">soc_load</span><span class="p">(</span><span class="n">soc_t</span> <span class="n">handle</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">joule</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">time</span><span class="p">)</span> <span class="p">{</span>

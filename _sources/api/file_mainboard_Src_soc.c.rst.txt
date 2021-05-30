@@ -44,8 +44,6 @@ Includes
 --------
 
 
-- ``pack.h`` (:ref:`file_mainboard_Inc_pack.h`)
-
 - ``soc.h`` (:ref:`file_mainboard_Inc_soc.h`)
 
 - ``stdlib.h``
@@ -67,6 +65,8 @@ Classes
 Functions
 ---------
 
+
+- :ref:`exhale_function_soc_8c_1a3a9387c3f027f01060a1c35e64b83450`
 
 - :ref:`exhale_function_soc_8c_1aa9b1a5f1e57898a6e179250c98e37538`
 
