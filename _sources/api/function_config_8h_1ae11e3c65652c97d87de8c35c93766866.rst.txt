@@ -1,0 +1,13 @@
+.. _exhale_function_config_8h_1ae11e3c65652c97d87de8c35c93766866:
+
+Function config_read(config_t)
+==============================
+
+- Defined in :ref:`file_mainboard_Inc_config.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: config_read(config_t)

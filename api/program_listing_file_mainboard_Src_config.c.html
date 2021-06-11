@@ -168,36 +168,47 @@
 <span class="cp">#include</span> <span class="cpf">&quot;main.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;spi.h&quot;</span><span class="cp"></span>
 
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp"></span>
-<span class="n">m95256_t</span> <span class="n">eeprom</span><span class="p">;</span>
+
+<span class="k">struct</span> <span class="n">config</span> <span class="p">{</span>
+    <span class="kt">uint8_t</span> <span class="n">version</span><span class="p">;</span>
+    <span class="kt">uint16_t</span> <span class="n">address</span><span class="p">;</span>
+    <span class="kt">size_t</span> <span class="n">size</span><span class="p">;</span>
+    <span class="kt">void</span> <span class="o">*</span><span class="n">data</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="k">static</span> <span class="n">m95256_t</span> <span class="n">eeprom</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
 
 <span class="kt">bool</span> <span class="nf">config_init</span><span class="p">(</span><span class="n">config_t</span> <span class="o">*</span><span class="n">config</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="n">address</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">default_data</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">size</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">config</span><span class="o">-&gt;</span><span class="n">address</span> <span class="o">=</span> <span class="n">address</span><span class="p">;</span>
-    <span class="n">config</span><span class="o">-&gt;</span><span class="n">size</span>    <span class="o">=</span> <span class="n">size</span><span class="p">;</span>
-    <span class="n">m95256_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">eeprom</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">spi_eeprom</span><span class="p">,</span> <span class="n">CS_EEPROM_GPIO_Port</span><span class="p">,</span> <span class="n">CS_EEPROM_Pin</span><span class="p">);</span>
+    <span class="o">*</span><span class="n">config</span>            <span class="o">=</span> <span class="p">(</span><span class="n">config_t</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">config</span><span class="p">));</span>
+    <span class="p">(</span><span class="o">*</span><span class="n">config</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">address</span> <span class="o">=</span> <span class="n">address</span><span class="p">;</span>
+    <span class="p">(</span><span class="o">*</span><span class="n">config</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">size</span>    <span class="o">=</span> <span class="n">size</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">eeprom</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">m95256_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">eeprom</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">spi_eeprom</span><span class="p">,</span> <span class="n">CS_EEPROM_GPIO_Port</span><span class="p">,</span> <span class="n">CS_EEPROM_Pin</span><span class="p">);</span>
+    <span class="p">}</span>
 
-    <span class="n">config_read</span><span class="p">(</span><span class="n">config</span><span class="p">);</span>
-    <span class="k">if</span> <span class="p">(((</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="p">)</span><span class="n">config</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="p">((</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="p">)</span><span class="n">default_data</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span> <span class="p">{</span>
+    <span class="n">config_read</span><span class="p">(</span><span class="o">*</span><span class="n">config</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(((</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="p">)(</span><span class="o">*</span><span class="n">config</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="p">((</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="p">)</span><span class="n">default_data</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span> <span class="p">{</span>
         <span class="c1">// Data in memory is gibberish</span>
-        <span class="n">memcpy</span><span class="p">(</span><span class="n">config</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">,</span> <span class="n">default_data</span><span class="p">,</span> <span class="n">size</span><span class="p">);</span>
+        <span class="n">memcpy</span><span class="p">((</span><span class="o">*</span><span class="n">config</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">,</span> <span class="n">default_data</span><span class="p">,</span> <span class="n">size</span><span class="p">);</span>
         <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
     <span class="p">}</span>
     <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="kt">bool</span> <span class="nf">config_read</span><span class="p">(</span><span class="n">config_t</span> <span class="o">*</span><span class="n">config</span><span class="p">)</span> <span class="p">{</span>
+<span class="kt">bool</span> <span class="nf">config_read</span><span class="p">(</span><span class="n">config_t</span> <span class="n">config</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="n">m95256_ReadBuffer</span><span class="p">(</span><span class="n">eeprom</span><span class="p">,</span> <span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">config</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">,</span> <span class="n">config</span><span class="o">-&gt;</span><span class="n">address</span><span class="p">,</span> <span class="n">config</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">)</span> <span class="o">==</span> <span class="n">EEPROM_STATUS_COMPLETE</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="kt">bool</span> <span class="nf">config_write</span><span class="p">(</span><span class="n">config_t</span> <span class="o">*</span><span class="n">config</span><span class="p">)</span> <span class="p">{</span>
+<span class="kt">bool</span> <span class="nf">config_write</span><span class="p">(</span><span class="n">config_t</span> <span class="n">config</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="n">m95256_WriteBuffer</span><span class="p">(</span><span class="n">eeprom</span><span class="p">,</span> <span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="p">)</span><span class="n">config</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">,</span> <span class="n">config</span><span class="o">-&gt;</span><span class="n">address</span><span class="p">,</span> <span class="n">config</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">)</span> <span class="o">==</span> <span class="n">EEPROM_STATUS_COMPLETE</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="kt">void</span> <span class="o">*</span><span class="nf">config_get</span><span class="p">(</span><span class="n">config_t</span> <span class="o">*</span><span class="n">config</span><span class="p">)</span> <span class="p">{</span>
+<span class="kt">void</span> <span class="o">*</span><span class="nf">config_get</span><span class="p">(</span><span class="n">config_t</span> <span class="n">config</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="n">config</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="kt">void</span> <span class="nf">config_set</span><span class="p">(</span><span class="n">config_t</span> <span class="o">*</span><span class="n">config</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">data</span><span class="p">)</span> <span class="p">{</span>
+<span class="kt">void</span> <span class="nf">config_set</span><span class="p">(</span><span class="n">config_t</span> <span class="n">config</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">data</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">memcpy</span><span class="p">(</span><span class="n">config</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">config</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>

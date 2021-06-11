@@ -169,21 +169,17 @@
 
 <span class="cp">#include</span> <span class="cpf">&lt;inttypes.h&gt;</span><span class="cp"></span>
 
-<span class="k">struct</span> <span class="n">config</span> <span class="p">{</span>
-    <span class="kt">uint8_t</span> <span class="n">version</span><span class="p">;</span>
-    <span class="kt">uint16_t</span> <span class="n">address</span><span class="p">;</span>
-    <span class="kt">size_t</span> <span class="n">size</span><span class="p">;</span>
-    <span class="kt">void</span> <span class="o">*</span><span class="n">data</span><span class="p">;</span>
-<span class="p">};</span>
-
-<span class="k">typedef</span> <span class="k">struct</span> <span class="n">config</span> <span class="n">config_t</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="k">struct</span> <span class="n">config</span> <span class="o">*</span><span class="n">config_t</span><span class="p">;</span>
 
 <span class="kt">bool</span> <span class="nf">config_init</span><span class="p">(</span><span class="n">config_t</span> <span class="o">*</span><span class="n">config</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="n">address</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">default_data</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">size</span><span class="p">);</span>
-<span class="kt">bool</span> <span class="nf">config_write</span><span class="p">(</span><span class="n">config_t</span> <span class="o">*</span><span class="n">config</span><span class="p">);</span>
-<span class="kt">bool</span> <span class="nf">config_read</span><span class="p">(</span><span class="n">config_t</span> <span class="o">*</span><span class="n">config</span><span class="p">);</span>
 
-<span class="kt">void</span> <span class="o">*</span><span class="nf">config_get</span><span class="p">(</span><span class="n">config_t</span> <span class="o">*</span><span class="n">config</span><span class="p">);</span>
-<span class="kt">void</span> <span class="nf">config_set</span><span class="p">(</span><span class="n">config_t</span> <span class="o">*</span><span class="n">config</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">data</span><span class="p">);</span>
+<span class="kt">bool</span> <span class="nf">config_write</span><span class="p">(</span><span class="n">config_t</span> <span class="n">config</span><span class="p">);</span>
+
+<span class="kt">bool</span> <span class="nf">config_read</span><span class="p">(</span><span class="n">config_t</span> <span class="n">config</span><span class="p">);</span>
+
+<span class="kt">void</span> <span class="o">*</span><span class="nf">config_get</span><span class="p">(</span><span class="n">config_t</span> <span class="n">config</span><span class="p">);</span>
+
+<span class="kt">void</span> <span class="nf">config_set</span><span class="p">(</span><span class="n">config_t</span> <span class="n">config</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">data</span><span class="p">);</span>
 
 <span class="cp">#endif</span>
 </pre></div>

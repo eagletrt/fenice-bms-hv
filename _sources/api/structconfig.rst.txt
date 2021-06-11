@@ -3,7 +3,7 @@
 Struct config
 =============
 
-- Defined in :ref:`file_mainboard_Inc_config.h`
+- Defined in :ref:`file_mainboard_Src_config.c`
 
 
 Struct Documentation

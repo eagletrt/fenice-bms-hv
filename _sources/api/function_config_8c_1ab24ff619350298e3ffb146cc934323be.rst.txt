@@ -1,0 +1,13 @@
+.. _exhale_function_config_8c_1ab24ff619350298e3ffb146cc934323be:
+
+Function config_get(config_t)
+=============================
+
+- Defined in :ref:`file_mainboard_Src_config.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: config_get(config_t)

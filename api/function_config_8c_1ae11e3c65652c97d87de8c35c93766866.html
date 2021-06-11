@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Function config_get(config_t *) &mdash; Fenice BMS HV 1.0.0 documentation</title>
+  <title>Function config_read(config_t) &mdash; Fenice BMS HV 1.0.0 documentation</title>
   
 
   
@@ -42,8 +42,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Function config_get(config_t *)" href="function_config_8c_1adb28b924d2059e556a66b0d9644effa3.html" />
-    <link rel="prev" title="Function compare_timeouts" href="function_error_8h_1a5f13743cb35edb95159816f9deff4be8.html" /> 
+    <link rel="next" title="Function config_set(config_t, void *)" href="function_config_8h_1aa0fb67c7cf86934180155622d1e3c8c7.html" />
+    <link rel="prev" title="Function config_read(config_t)" href="function_config_8h_1ae11e3c65652c97d87de8c35c93766866.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -144,13 +144,13 @@
         
           <li><a href="library_root.html">Software</a> &raquo;</li>
         
-      <li>Function config_get(config_t *)</li>
+      <li>Function config_read(config_t)</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/api/function_config_8h_1adb28b924d2059e556a66b0d9644effa3.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/api/function_config_8c_1ae11e3c65652c97d87de8c35c93766866.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -163,17 +163,30 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="function-config-get-config-t">
-<span id="exhale-function-config-8h-1adb28b924d2059e556a66b0d9644effa3"></span><h1>Function config_get(config_t *)<a class="headerlink" href="#function-config-get-config-t" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="function-config-read-config-t">
+<span id="exhale-function-config-8c-1ae11e3c65652c97d87de8c35c93766866"></span><h1>Function config_read(config_t)<a class="headerlink" href="#function-config-read-config-t" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li>Defined in <a class="reference internal" href="file_mainboard_Inc_config.h.html#file-mainboard-inc-config-h"><span class="std std-ref">File config.h</span></a></li>
+<li>Defined in <a class="reference internal" href="file_mainboard_Src_config.c.html#file-mainboard-src-config-c"><span class="std std-ref">File config.c</span></a></li>
 </ul>
 <div class="section" id="function-documentation">
 <h2>Function Documentation<a class="headerlink" href="#function-documentation" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
-<dt id="_CPPv410config_getP8config_t">
-<span id="_CPPv310config_getP8config_t"></span><span id="_CPPv210config_getP8config_t"></span><span id="config_get__config_tP"></span><span class="target" id="config_8h_1adb28b924d2059e556a66b0d9644effa3"></span>void *<code class="descname">config_get</code><span class="sig-paren">(</span><a class="reference internal" href="typedef_config_8h_1a261f57fc59ad07837082c43ef8a443e3.html#_CPPv48config_t" title="config_t">config_t</a> *<em>config</em><span class="sig-paren">)</span><br /></dt>
-<dd></dd></dl>
+<dt id="_CPPv411config_read8config_t">
+<span id="_CPPv311config_read8config_t"></span><span id="_CPPv211config_read8config_t"></span><span id="config_read__config_t"></span><span class="target" id="config_8h_1ae11e3c65652c97d87de8c35c93766866"></span>bool <code class="descname">config_read</code><span class="sig-paren">(</span><a class="reference internal" href="typedef_config_8h_1a290a4302983fc145cd4766f1ff7caadf.html#_CPPv48config_t" title="config_t">config_t</a> <em>config</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411config_read8config_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Reads a config from EEPROM. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>true Read successfull </dd>
+<dt><strong>Return</strong></dt>
+<dd>false Error </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">config</span></code>: The config handle </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
 
 </div>
 </div>
@@ -184,8 +197,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="function_config_8c_1adb28b924d2059e556a66b0d9644effa3.html" class="btn btn-neutral float-right" title="Function config_get(config_t *)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="function_error_8h_1a5f13743cb35edb95159816f9deff4be8.html" class="btn btn-neutral float-left" title="Function compare_timeouts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="function_config_8h_1aa0fb67c7cf86934180155622d1e3c8c7.html" class="btn btn-neutral float-right" title="Function config_set(config_t, void *)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="function_config_8h_1ae11e3c65652c97d87de8c35c93766866.html" class="btn btn-neutral float-left" title="Function config_read(config_t)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

@@ -52,6 +52,8 @@ Includes
 
 - ``spi.h`` (:ref:`file_mainboard_Inc_spi.h`)
 
+- ``stdlib.h``
+
 - ``string.h``
 
 
@@ -59,19 +61,26 @@ Includes
 
 
 
+Classes
+-------
+
+
+- :ref:`exhale_struct_structconfig`
+
+
 Functions
 ---------
 
 
-- :ref:`exhale_function_config_8c_1adb28b924d2059e556a66b0d9644effa3`
+- :ref:`exhale_function_config_8c_1ab24ff619350298e3ffb146cc934323be`
 
 - :ref:`exhale_function_config_8c_1af90a1fc8182f2146aea757b74272eb57`
 
-- :ref:`exhale_function_config_8c_1a551236499ef0233168faccbaaeec1afc`
+- :ref:`exhale_function_config_8c_1ae11e3c65652c97d87de8c35c93766866`
 
-- :ref:`exhale_function_config_8c_1a5108753c25aa4abc7c1eafbd621b009a`
+- :ref:`exhale_function_config_8c_1aa0fb67c7cf86934180155622d1e3c8c7`
 
-- :ref:`exhale_function_config_8c_1afa27d32e14b7a4dbc9cfb8e020e3f748`
+- :ref:`exhale_function_config_8c_1ac145a5e5c5c7bd30dd4322f22f8184fd`
 
 
 Variables

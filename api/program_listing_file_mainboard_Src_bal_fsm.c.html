@@ -195,12 +195,12 @@
 <span class="kt">uint16_t</span> <span class="nf">do_cooldown</span><span class="p">(</span><span class="n">fsm</span> <span class="o">*</span><span class="n">FSM</span><span class="p">);</span>
 
 <span class="n">voltage_t</span> <span class="nf">bal_get_threshold</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="o">*</span><span class="p">(</span><span class="n">voltage_t</span> <span class="o">*</span><span class="p">)</span><span class="n">config_get</span><span class="p">(</span><span class="o">&amp;</span><span class="n">config</span><span class="p">);</span>
+    <span class="k">return</span> <span class="o">*</span><span class="p">(</span><span class="n">voltage_t</span> <span class="o">*</span><span class="p">)</span><span class="n">config_get</span><span class="p">(</span><span class="n">config</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">bal_set_threshold</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">thresh</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">config_set</span><span class="p">(</span><span class="o">&amp;</span><span class="n">config</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">thresh</span><span class="p">);</span>
-    <span class="n">config_write</span><span class="p">(</span><span class="o">&amp;</span><span class="n">config</span><span class="p">);</span>
+    <span class="n">config_set</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">thresh</span><span class="p">);</span>
+    <span class="n">config_write</span><span class="p">(</span><span class="n">config</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">bal_fsm_init</span><span class="p">()</span> <span class="p">{</span>
