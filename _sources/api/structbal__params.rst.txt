@@ -1,0 +1,16 @@
+.. _exhale_struct_structbal__params:
+
+Struct bal_params
+=================
+
+- Defined in :ref:`file_mainboard_Src_bal_fsm.c`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: bal_params
+   :members:
+   :protected-members:
+   :undoc-members:

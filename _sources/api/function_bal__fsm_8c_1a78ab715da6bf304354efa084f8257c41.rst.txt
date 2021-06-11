@@ -1,0 +1,13 @@
+.. _exhale_function_bal__fsm_8c_1a78ab715da6bf304354efa084f8257c41:
+
+Function bal_get_threshold()
+============================
+
+- Defined in :ref:`file_mainboard_Src_bal_fsm.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: bal_get_threshold()

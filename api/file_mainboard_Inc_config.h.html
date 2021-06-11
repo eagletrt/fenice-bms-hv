@@ -172,9 +172,7 @@
 <li><a class="reference internal" href="#included-by" id="id4">Included By</a></li>
 <li><a class="reference internal" href="#classes" id="id5">Classes</a></li>
 <li><a class="reference internal" href="#functions" id="id6">Functions</a></li>
-<li><a class="reference internal" href="#defines" id="id7">Defines</a></li>
-<li><a class="reference internal" href="#typedefs" id="id8">Typedefs</a></li>
-<li><a class="reference internal" href="#variables" id="id9">Variables</a></li>
+<li><a class="reference internal" href="#typedefs" id="id7">Typedefs</a></li>
 </ul>
 </div>
 <div class="section" id="definition-mainboard-inc-config-h">
@@ -196,15 +194,14 @@
 <li><code class="docutils literal notranslate"><span class="pre">bal.h</span></code> (<a class="reference internal" href="file_mainboard_Inc_bal.h.html#file-mainboard-inc-bal-h"><span class="std std-ref">File bal.h</span></a>)</li>
 <li><code class="docutils literal notranslate"><span class="pre">inttypes.h</span></code></li>
 <li><code class="docutils literal notranslate"><span class="pre">m95256.h</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">soc.h</span></code> (<a class="reference internal" href="file_mainboard_Inc_soc.h.html#file-mainboard-inc-soc-h"><span class="std std-ref">File soc.h</span></a>)</li>
 </ul>
 </div>
 <div class="section" id="included-by">
 <h2>Included By<a class="headerlink" href="#included-by" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
+<li><a class="reference internal" href="file_mainboard_Src_bal_fsm.c.html#file-mainboard-src-bal-fsm-c"><span class="std std-ref">File bal_fsm.c</span></a></li>
 <li><a class="reference internal" href="file_mainboard_Src_config.c.html#file-mainboard-src-config-c"><span class="std std-ref">File config.c</span></a></li>
 <li><a class="reference internal" href="file_mainboard_Src_main.c.html#file-mainboard-src-main-c"><span class="std std-ref">File main.c</span></a></li>
-<li><a class="reference internal" href="file_mainboard_Src_pack.c.html#file-mainboard-src-pack-c"><span class="std std-ref">File pack.c</span></a></li>
 </ul>
 </div>
 <div class="section" id="classes">
@@ -216,29 +213,17 @@
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><a class="reference internal" href="function_config_8h_1a7c49f020ada32702f4b8b07e7a1f37bc.html#exhale-function-config-8h-1a7c49f020ada32702f4b8b07e7a1f37bc"><span class="std std-ref">Function config_get(config_t *)</span></a></li>
-<li><a class="reference internal" href="function_config_8h_1a924366cd123309004b14514c62aab2c4.html#exhale-function-config-8h-1a924366cd123309004b14514c62aab2c4"><span class="std std-ref">Function config_load(m95256_t)</span></a></li>
-<li><a class="reference internal" href="function_config_8h_1a3c324eda7c7ae22131d4c8133b18cebd.html#exhale-function-config-8h-1a3c324eda7c7ae22131d4c8133b18cebd"><span class="std std-ref">Function config_set(config_t *)</span></a></li>
-<li><a class="reference internal" href="function_config_8h_1a8b59eff804cbc3a56c012c62427bddcb.html#exhale-function-config-8h-1a8b59eff804cbc3a56c012c62427bddcb"><span class="std std-ref">Function config_write(m95256_t)</span></a></li>
-</ul>
-</div>
-<div class="section" id="defines">
-<h2>Defines<a class="headerlink" href="#defines" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><a class="reference internal" href="define_config_8h_1a98b9b2b06a1aba5b41a9c4a94cbd89df.html#exhale-define-config-8h-1a98b9b2b06a1aba5b41a9c4a94cbd89df"><span class="std std-ref">Define CONFIG_ADDRESS</span></a></li>
-<li><a class="reference internal" href="define_config_8h_1a33fbd7e91d033fa1e09b4ed4de899c02.html#exhale-define-config-8h-1a33fbd7e91d033fa1e09b4ed4de899c02"><span class="std std-ref">Define CONFIG_VERSION</span></a></li>
+<li><a class="reference internal" href="function_config_8h_1adb28b924d2059e556a66b0d9644effa3.html#exhale-function-config-8h-1adb28b924d2059e556a66b0d9644effa3"><span class="std std-ref">Function config_get(config_t *)</span></a></li>
+<li><a class="reference internal" href="function_config_8h_1af90a1fc8182f2146aea757b74272eb57.html#exhale-function-config-8h-1af90a1fc8182f2146aea757b74272eb57"><span class="std std-ref">Function config_init(config_t *, uint16_t, void *, size_t)</span></a></li>
+<li><a class="reference internal" href="function_config_8h_1a551236499ef0233168faccbaaeec1afc.html#exhale-function-config-8h-1a551236499ef0233168faccbaaeec1afc"><span class="std std-ref">Function config_read(config_t *)</span></a></li>
+<li><a class="reference internal" href="function_config_8h_1a5108753c25aa4abc7c1eafbd621b009a.html#exhale-function-config-8h-1a5108753c25aa4abc7c1eafbd621b009a"><span class="std std-ref">Function config_set(config_t *, void *)</span></a></li>
+<li><a class="reference internal" href="function_config_8h_1afa27d32e14b7a4dbc9cfb8e020e3f748.html#exhale-function-config-8h-1afa27d32e14b7a4dbc9cfb8e020e3f748"><span class="std std-ref">Function config_write(config_t *)</span></a></li>
 </ul>
 </div>
 <div class="section" id="typedefs">
 <h2>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><a class="reference internal" href="typedef_config_8h_1a261f57fc59ad07837082c43ef8a443e3.html#exhale-typedef-config-8h-1a261f57fc59ad07837082c43ef8a443e3"><span class="std std-ref">Typedef config_t</span></a></li>
-</ul>
-</div>
-<div class="section" id="variables">
-<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><a class="reference internal" href="variable_config_8h_1a7c6891ebc53d9341be6ca3271b660762.html#exhale-variable-config-8h-1a7c6891ebc53d9341be6ca3271b660762"><span class="std std-ref">Variable config_default</span></a></li>
 </ul>
 </div>
 </div>

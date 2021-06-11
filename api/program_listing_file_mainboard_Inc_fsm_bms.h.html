@@ -165,28 +165,26 @@
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifndef FSM_BMS_H</span>
 <span class="cp">#define FSM_BMS_H</span>
 
-<span class="cp">#include</span> <span class="cpf">&quot;fsm.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdbool.h&gt;</span><span class="cp"></span>
 
+<span class="cp">#include</span> <span class="cpf">&quot;fsm.h&quot;</span><span class="cp"></span>
 <span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span>
-    <span class="n">BMS_INIT</span><span class="p">,</span>
-    <span class="n">BMS_SET_TS_OFF</span><span class="p">,</span>
-    <span class="n">BMS_IDLE</span><span class="p">,</span>
-    <span class="n">BMS_PRECHARGE_START</span><span class="p">,</span>
-    <span class="n">BMS_PRECHARGE</span><span class="p">,</span>
-    <span class="n">BMS_PRECHARGE_END</span><span class="p">,</span>
-    <span class="n">BMS_RUN</span><span class="p">,</span>
-    <span class="n">BMS_CHARGE</span><span class="p">,</span>
-    <span class="n">BMS_TO_HALT</span><span class="p">,</span>
-    <span class="n">BMS_HALT</span><span class="p">,</span>
-    <span class="n">BMS_NUM_STATES</span>
+  <span class="n">BMS_INIT</span><span class="p">,</span>
+  <span class="n">BMS_SET_TS_OFF</span><span class="p">,</span>
+  <span class="n">BMS_IDLE</span><span class="p">,</span>
+  <span class="n">BMS_PRECHARGE_START</span><span class="p">,</span>
+  <span class="n">BMS_PRECHARGE_WAIT</span><span class="p">,</span>
+  <span class="n">BMS_PRECHARGE_END</span><span class="p">,</span>
+  <span class="n">BMS_RUN</span><span class="p">,</span>
+  <span class="n">BMS_CHARGE</span><span class="p">,</span>
+  <span class="n">BMS_TO_HALT</span><span class="p">,</span>
+  <span class="n">BMS_HALT</span><span class="p">,</span>
+  <span class="n">BMS_NUM_STATES</span>
 <span class="p">}</span> <span class="n">bms_states</span><span class="p">;</span>
 
 <span class="k">extern</span> <span class="n">fsm</span> <span class="n">fsm_bms</span><span class="p">;</span>
 
 <span class="kt">void</span> <span class="nf">fsm_bms_init</span><span class="p">();</span>
-
-<span class="kt">void</span> <span class="nf">fsm_bms_ts_off_handler</span><span class="p">();</span>
-<span class="kt">void</span> <span class="nf">fsm_bms_ts_on_handler</span><span class="p">();</span>
 
 <span class="cp">#endif</span>
 </pre></div>

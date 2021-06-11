@@ -1,0 +1,13 @@
+.. _exhale_define_bal__fsm_8c_1a9995a37a568fe0de38d467d62086121a:
+
+Define CONF_VER
+===============
+
+- Defined in :ref:`file_mainboard_Src_bal_fsm.c`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CONF_VER

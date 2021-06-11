@@ -1,0 +1,13 @@
+.. _exhale_function_bal__fsm_8c_1a1752d741828ffaefc89f40bd7466d430:
+
+Function do_discharge
+=====================
+
+- Defined in :ref:`file_mainboard_Src_bal_fsm.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: do_discharge(fsm *)

@@ -22,6 +22,7 @@ Program Listing for File main.c
    
    /* Private includes ----------------------------------------------------------*/
    /* USER CODE BEGIN Includes */
+   #include "bal_fsm.h"
    #include "cli_bms.h"
    #include "config.h"
    #include "error/error.h"
@@ -42,7 +43,6 @@ Program Listing for File main.c
    /* USER CODE BEGIN PD */
    #define TEMPS_READ_INTERVAL 40
    #define VOLTS_READ_INTERVAL 20
-   #define CONFIG_WRITE_INTERVAL 5000
    /* USER CODE END PD */
    
    /* Private macro -------------------------------------------------------------*/
@@ -55,12 +55,8 @@ Program Listing for File main.c
    /* USER CODE BEGIN PV */
    DMA_HandleTypeDef hdma_adc1;
    
-   m95256_t eeprom;
-   
    uint32_t timer_volts = 0;
    uint32_t timer_temps = 0;
-   uint32_t timer_bal = 0;
-   uint32_t timer_config = 0;
    /* USER CODE END PV */
    
    /* Private function prototypes -----------------------------------------------*/
@@ -89,16 +85,6 @@ Program Listing for File main.c
    
            read_volts();
            can_send(ID_HV_VOLTAGE);
-       }
-   
-       if (tick - timer_bal >= BAL_CYCLE_LENGTH + 5000) {
-           timer_bal = tick;
-           pack_balance_cells(&hspi1);
-       }
-   
-       if (tick - timer_config >= CONFIG_WRITE_INTERVAL) {
-           timer_config = tick;
-           config_write(eeprom);
        }
    }
    
@@ -148,26 +134,22 @@ Program Listing for File main.c
        /* Initialize interrupts */
        MX_NVIC_Init();
        /* USER CODE BEGIN 2 */
+   
        FDCAN1_Init();
        HAL_FDCAN_ActivateNotification(&hfdcan1, FDCAN_IT_RX_FIFO0_NEW_MESSAGE, 0);
        HAL_FDCAN_Start(&hfdcan1);
    
-       // Load config from eeprom
-       m95256_init(&eeprom, &spi_eeprom, CS_EEPROM_GPIO_Port, CS_EEPROM_Pin);
-       config_load(eeprom);
-   
-       // Initialize logging, errors and can
-       cli_bms_init();
        error_init();
+       fsm_bms_init();
+       bal_fsm_init();
+       cli_bms_init();
        can_init();
+   
        if (si8900_init(&huart3, ADC_SIN_GPIO_Port, ADC_SIN_Pin)) {
            cli_print(&cli_bms, "SI8900 INITIALIZED\r\n", 20);
        } else {
            cli_print(&cli_bms, "SI8900 ERROR\r\n", 14);
        }
-   
-       pack_init();
-       fsm_bms_init();
    
        /* USER CODE END 2 */
    
@@ -177,7 +159,8 @@ Program Listing for File main.c
            /* USER CODE END WHILE */
    
            /* USER CODE BEGIN 3 */
-           //fsm_run(&fsm_bms);
+           fsm_run(&fsm_bms);
+           fsm_run(&bal_fsm);
    
            check_timers();
    
@@ -188,27 +171,27 @@ Program Listing for File main.c
    }
    
    void SystemClock_Config(void) {
-       RCC_OscInitTypeDef RCC_OscInitStruct = {0};
-       RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+       RCC_OscInitTypeDef RCC_OscInitStruct   = {0};
+       RCC_ClkInitTypeDef RCC_ClkInitStruct   = {0};
        RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
    
        HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE1_BOOST);
-       RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
-       RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+       RCC_OscInitStruct.OscillatorType      = RCC_OSCILLATORTYPE_HSI;
+       RCC_OscInitStruct.HSIState            = RCC_HSI_ON;
        RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
-       RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
-       RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
-       RCC_OscInitStruct.PLL.PLLM = RCC_PLLM_DIV4;
-       RCC_OscInitStruct.PLL.PLLN = 85;
-       RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
-       RCC_OscInitStruct.PLL.PLLQ = RCC_PLLQ_DIV2;
-       RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV2;
+       RCC_OscInitStruct.PLL.PLLState        = RCC_PLL_ON;
+       RCC_OscInitStruct.PLL.PLLSource       = RCC_PLLSOURCE_HSI;
+       RCC_OscInitStruct.PLL.PLLM            = RCC_PLLM_DIV4;
+       RCC_OscInitStruct.PLL.PLLN            = 85;
+       RCC_OscInitStruct.PLL.PLLP            = RCC_PLLP_DIV2;
+       RCC_OscInitStruct.PLL.PLLQ            = RCC_PLLQ_DIV2;
+       RCC_OscInitStruct.PLL.PLLR            = RCC_PLLR_DIV2;
        if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK) {
            Error_Handler();
        }
        RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
-       RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
-       RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+       RCC_ClkInitStruct.SYSCLKSource   = RCC_SYSCLKSOURCE_PLLCLK;
+       RCC_ClkInitStruct.AHBCLKDivider  = RCC_SYSCLK_DIV1;
        RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
        RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
    
@@ -218,7 +201,7 @@ Program Listing for File main.c
        PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART2 | RCC_PERIPHCLK_USART3 | RCC_PERIPHCLK_FDCAN;
        PeriphClkInit.Usart2ClockSelection = RCC_USART2CLKSOURCE_PCLK1;
        PeriphClkInit.Usart3ClockSelection = RCC_USART3CLKSOURCE_PCLK1;
-       PeriphClkInit.FdcanClockSelection = RCC_FDCANCLKSOURCE_PLL;
+       PeriphClkInit.FdcanClockSelection  = RCC_FDCANCLKSOURCE_PLL;
        if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK) {
            Error_Handler();
        }
@@ -243,8 +226,8 @@ Program Listing for File main.c
    void Error_Handler(void) {
        /* USER CODE BEGIN Error_Handler_Debug */
        /* User can add his own implementation to report the HAL error return
-        * state
-        */
+      * state
+      */
    
        /* USER CODE END Error_Handler_Debug */
    }
@@ -254,8 +237,8 @@ Program Listing for File main.c
    void assert_failed(uint8_t *file, uint32_t line) {
        /* USER CODE BEGIN 6 */
        /* User can add his own implementation to report the file name and line
-          number, tex: printf("Wrong parameters value: file %s on line %d\r\n",
-          file, line) */
+        number, tex: printf("Wrong parameters value: file %s on line %d\r\n",
+        file, line) */
        /* USER CODE END 6 */
    }
    #endif /* USE_FULL_ASSERT */

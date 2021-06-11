@@ -1,0 +1,13 @@
+.. _exhale_function_ltc6813__utils_8c_1ab4b5bea06d42f3fe287cc3dd5d391bcb:
+
+Function ltc6813_set_balancing(SPI_HandleTypeDef \*, uint16_t \*, int)
+======================================================================
+
+- Defined in :ref:`file_mainboard_Src_peripherals_ltc6813_utils.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ltc6813_set_balancing(SPI_HandleTypeDef *, uint16_t *, int)

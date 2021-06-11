@@ -1,0 +1,13 @@
+.. _exhale_function_bal_8c_1aadc6f5a4740bda6bed2ce444d7d45310:
+
+Function _bal_hateville
+=======================
+
+- Defined in :ref:`file_mainboard_Src_bal.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: _bal_hateville(uint16_t, uint16_t, uint16_t)

@@ -1,0 +1,13 @@
+.. _exhale_variable_bal__fsm_8c_1ad77919ecc9cc42a8ca2608ceb23cd398:
+
+Variable bal_params_default
+===========================
+
+- Defined in :ref:`file_mainboard_Src_bal_fsm.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: bal_params_default

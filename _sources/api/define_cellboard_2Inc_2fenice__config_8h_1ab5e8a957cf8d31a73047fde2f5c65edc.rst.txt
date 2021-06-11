@@ -1,0 +1,13 @@
+.. _exhale_define_cellboard_2Inc_2fenice__config_8h_1ab5e8a957cf8d31a73047fde2f5c65edc:
+
+Define LTC6813_PERIPHERAL
+=========================
+
+- Defined in :ref:`file_cellboard_Inc_fenice_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: LTC6813_PERIPHERAL

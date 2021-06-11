@@ -1,0 +1,13 @@
+.. _exhale_variable_cli__bms_8c_1a5b79c4930a5cbbea19247cdfa1f81130:
+
+Variable bms_state_names
+========================
+
+- Defined in :ref:`file_mainboard_Src_cli_bms.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: bms_state_names

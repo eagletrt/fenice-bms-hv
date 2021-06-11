@@ -29,6 +29,8 @@ Includes
 --------
 
 
+- ``bal_fsm.h`` (:ref:`file_mainboard_Inc_bal_fsm.h`)
+
 - ``cli_bms.h`` (:ref:`file_mainboard_Inc_cli_bms.h`)
 
 - ``config.h`` (:ref:`file_mainboard_Inc_config.h`)
@@ -85,8 +87,6 @@ Defines
 -------
 
 
-- :ref:`exhale_define_mainboard_2Src_2main_8c_1a8c6e478f157f4c9bdecf098fab81c4b6`
-
 - :ref:`exhale_define_mainboard_2Src_2main_8c_1a16edec1b754ced802e83b10006e0942c`
 
 - :ref:`exhale_define_mainboard_2Src_2main_8c_1aa28d3201210f230c3d1bf3265318a70f`
@@ -96,13 +96,7 @@ Variables
 ---------
 
 
-- :ref:`exhale_variable_mainboard_2Src_2main_8c_1a7e45b0ca9d0fe428973d248104dfa15f`
-
 - :ref:`exhale_variable_mainboard_2Src_2main_8c_1a1c126854bb1813d31ab4776b21dcc51f`
-
-- :ref:`exhale_variable_mainboard_2Src_2main_8c_1a58b94d8446d83cebee1aadaa5ed0690e`
-
-- :ref:`exhale_variable_mainboard_2Src_2main_8c_1abcf8624ca0f5e85d5a1e35fd37870b91`
 
 - :ref:`exhale_variable_mainboard_2Src_2main_8c_1ab9b1f9b2a9bed288beffd8ce1d7d6406`
 

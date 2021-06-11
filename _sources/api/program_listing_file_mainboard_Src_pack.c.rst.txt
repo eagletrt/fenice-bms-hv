@@ -14,13 +14,11 @@ Program Listing for File pack.c
    #include "pack.h"
    
    #include <stdbool.h>
+   #include <stm32g4xx_hal.h>
    #include <string.h>
    
-   #include "config.h"
    #include "feedback.h"
-   #include "main.h"
    #include "peripherals/si8900.h"
-   #include "soc.h"
    #define CURRENT_ARRAY_LENGTH 512
    
    #ifndef max
@@ -48,11 +46,7 @@ Program Listing for File pack.c
    uint32_t current_50[CURRENT_ARRAY_LENGTH];   // TODO: move to pck_data and update DMA and generate getter no setter
    uint32_t current_300[CURRENT_ARRAY_LENGTH];  // TODO: move to pck_data and update DMA and generate getter no setter
    
-   soc_t soc_total;
-   soc_t soc_last_charge;
-   
    cells_t cells;
-   bal_handle balancing;  // TODO: Remove bal_conf_t struct (remove enable and the rest has to be managed by the state machine with the eeprom too)
    current_t current;
    
    void pack_init() {
@@ -68,16 +62,6 @@ Program Listing for File pack.c
            cells.temperatures[i] = 0;
        }
    
-       config_t config;
-       config_get(&config);
-   
-       soc_init(&soc_total);
-       soc_init(&soc_last_charge);
-       soc_load(soc_total, config.total_joule, HAL_GetTick());
-       soc_load(soc_last_charge, config.charge_joule, HAL_GetTick());
-   
-       bal_init(&balancing);
-   
        // LTC6813 GPIO configuration
        GPIO_CONFIG = GPIO_I2C_MODE;
    }
@@ -87,8 +71,8 @@ Program Listing for File pack.c
    
        ltc6813_read_voltages(hspi, cells.voltages);
    
-       voltage_t internal = 0;
-       voltage_t bus = 0;
+       voltage_t internal;
+       voltage_t bus;
        if (si8900_read_channel(huart, SI8900_AIN0, &internal)) {
            cells.int_voltage = internal;
        }
@@ -165,18 +149,7 @@ Program Listing for File pack.c
            current = current50;
        }
    
-       config_t c;
-       config_get(&c);
-   
-       soc_sample_current(soc_total, current, pack_get_int_voltage(), HAL_GetTick());
-       soc_sample_current(soc_last_charge, current, pack_get_int_voltage(), HAL_GetTick());
-   
-       c.charge_joule = soc_get_joule(soc_last_charge);
-   
-       c.total_joule = soc_get_joule(soc_total);
-       config_set(&c);
-   
-       error_toggle_check(current > PACK_MAX_CURRENT, ERROR_OVER_CURRENT, 0);
+       error_toggle_check(current300 > PACK_MAX_CURRENT, ERROR_OVER_CURRENT, 0);
    }
    
    void pack_update_voltage_stats(voltage_t *total, voltage_t *maxv, voltage_t *minv) {
@@ -214,43 +187,6 @@ Program Listing for File pack.c
        cells.mean_temperature = (temperature_t)(avg_temperature / TEMP_SENSOR_COUNT);
        cells.max_temperature = max_temperature;
        cells.min_temperature = min(min_temperature, max_temperature);
-   }
-   
-   bool pack_balance_cells(SPI_HandleTypeDef *hspi) {
-       // TODO: Improve logging
-       if (balancing.enable) {
-           uint8_t indexes[PACK_CELL_COUNT];
-   
-           voltage_t voltages[PACK_CELL_COUNT];
-   
-           memcpy(voltages, cells.voltages, PACK_CELL_COUNT);
-   
-           size_t len = bal_compute_indexes(voltages, indexes, balancing.threshold);
-   
-           if (len > 0) {
-               ltc6813_set_balancing(hspi, indexes, balancing.slot_time);
-               return true;
-           }
-   
-           balancing.enable = false;
-       }
-       return false;
-   }
-   
-   void pack_reset_soc() {
-       soc_reset_count(soc_last_charge, HAL_GetTick());
-   }
-   
-   double pack_get_soc() {
-       return soc_get_wh(soc_last_charge) / ((double)PACK_ENERGY_NOMINAL / 10) * 100;
-   }
-   
-   double pack_get_energy_total() {
-       return soc_get_wh(soc_total);
-   }
-   
-   double pack_get_energy_last_charge() {
-       return soc_get_wh(soc_last_charge);
    }
    
    bool pack_set_ts_off() {
@@ -321,7 +257,7 @@ Program Listing for File pack.c
        return current;
    }
    
-   bal_handle pack_get_balancing() {
-       // TODO: don't return the handle, create getters for each parameter
-       return balancing;
+   int16_t pack_get_power() {
+       // TODO: fix units
+       return current * cells.int_voltage;
    }

@@ -46,7 +46,11 @@ Includes
 
 - ``config.h`` (:ref:`file_mainboard_Inc_config.h`)
 
-- ``stdbool.h``
+- ``fenice_config.h`` (:ref:`file_mainboard_Inc_fenice_config.h`)
+
+- ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
+
+- ``spi.h`` (:ref:`file_mainboard_Inc_spi.h`)
 
 - ``string.h``
 
@@ -59,22 +63,20 @@ Functions
 ---------
 
 
-- :ref:`exhale_function_config_8c_1aceda802bb871756a03cce91936980101`
+- :ref:`exhale_function_config_8c_1adb28b924d2059e556a66b0d9644effa3`
 
-- :ref:`exhale_function_config_8c_1a924366cd123309004b14514c62aab2c4`
+- :ref:`exhale_function_config_8c_1af90a1fc8182f2146aea757b74272eb57`
 
-- :ref:`exhale_function_config_8c_1ab21f4f432786038f37bbb614b5482582`
+- :ref:`exhale_function_config_8c_1a551236499ef0233168faccbaaeec1afc`
 
-- :ref:`exhale_function_config_8c_1a8b59eff804cbc3a56c012c62427bddcb`
+- :ref:`exhale_function_config_8c_1a5108753c25aa4abc7c1eafbd621b009a`
+
+- :ref:`exhale_function_config_8c_1afa27d32e14b7a4dbc9cfb8e020e3f748`
 
 
 Variables
 ---------
 
 
-- :ref:`exhale_variable_config_8c_1a25ce4b69d296fc9a3324b494542c2420`
-
-- :ref:`exhale_variable_config_8c_1a7c6891ebc53d9341be6ca3271b660762`
-
-- :ref:`exhale_variable_config_8c_1ad25edacba00e4d0666a9959053b7cc10`
+- :ref:`exhale_variable_config_8c_1a7e45b0ca9d0fe428973d248104dfa15f`
 

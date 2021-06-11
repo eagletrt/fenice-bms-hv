@@ -50,19 +50,17 @@ Includes
 
 - ``m95256.h``
 
-- ``soc.h`` (:ref:`file_mainboard_Inc_soc.h`)
-
 
 
 Included By
 -----------
 
 
+- :ref:`file_mainboard_Src_bal_fsm.c`
+
 - :ref:`file_mainboard_Src_config.c`
 
 - :ref:`file_mainboard_Src_main.c`
-
-- :ref:`file_mainboard_Src_pack.c`
 
 
 
@@ -78,22 +76,15 @@ Functions
 ---------
 
 
-- :ref:`exhale_function_config_8h_1a7c49f020ada32702f4b8b07e7a1f37bc`
+- :ref:`exhale_function_config_8h_1adb28b924d2059e556a66b0d9644effa3`
 
-- :ref:`exhale_function_config_8h_1a924366cd123309004b14514c62aab2c4`
+- :ref:`exhale_function_config_8h_1af90a1fc8182f2146aea757b74272eb57`
 
-- :ref:`exhale_function_config_8h_1a3c324eda7c7ae22131d4c8133b18cebd`
+- :ref:`exhale_function_config_8h_1a551236499ef0233168faccbaaeec1afc`
 
-- :ref:`exhale_function_config_8h_1a8b59eff804cbc3a56c012c62427bddcb`
+- :ref:`exhale_function_config_8h_1a5108753c25aa4abc7c1eafbd621b009a`
 
-
-Defines
--------
-
-
-- :ref:`exhale_define_config_8h_1a98b9b2b06a1aba5b41a9c4a94cbd89df`
-
-- :ref:`exhale_define_config_8h_1a33fbd7e91d033fa1e09b4ed4de899c02`
+- :ref:`exhale_function_config_8h_1afa27d32e14b7a4dbc9cfb8e020e3f748`
 
 
 Typedefs
@@ -101,11 +92,4 @@ Typedefs
 
 
 - :ref:`exhale_typedef_config_8h_1a261f57fc59ad07837082c43ef8a443e3`
-
-
-Variables
----------
-
-
-- :ref:`exhale_variable_config_8h_1a7c6891ebc53d9341be6ca3271b660762`
 
