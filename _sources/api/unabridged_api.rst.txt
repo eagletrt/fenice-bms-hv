@@ -342,6 +342,11 @@ Functions
 .. toctree::
    :maxdepth: 5
 
+   function_config_8c_1a98c008e70f201ba1a3d23d51417f1457.rst
+
+.. toctree::
+   :maxdepth: 5
+
    function_config_8h_1ab24ff619350298e3ffb146cc934323be.rst
 
 .. toctree::
@@ -1832,11 +1837,6 @@ Variables
    :maxdepth: 5
 
    variable_group__STM32G4xx__System__Private__Variables_1ga5b4f8b768465842cf854a8f993b375e9.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   variable_bal__fsm_8c_1a0bb1b3247a27a6ba88c6d41292867232.rst
 
 .. toctree::
    :maxdepth: 5

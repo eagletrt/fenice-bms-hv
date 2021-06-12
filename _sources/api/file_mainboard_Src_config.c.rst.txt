@@ -70,6 +70,8 @@ Functions
 ---------
 
 
+- :ref:`exhale_function_config_8c_1a98c008e70f201ba1a3d23d51417f1457`
+
 - :ref:`exhale_function_config_8c_1ab24ff619350298e3ffb146cc934323be`
 
 - :ref:`exhale_function_config_8c_1af90a1fc8182f2146aea757b74272eb57`

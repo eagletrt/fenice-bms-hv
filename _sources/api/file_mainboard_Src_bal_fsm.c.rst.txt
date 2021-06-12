@@ -104,8 +104,6 @@ Variables
 ---------
 
 
-- :ref:`exhale_variable_bal__fsm_8c_1a0bb1b3247a27a6ba88c6d41292867232`
-
 - :ref:`exhale_variable_bal__fsm_8c_1aa12677f0c46e8c8c8cf4af823a6e73a6`
 
 - :ref:`exhale_variable_bal__fsm_8c_1ad77919ecc9cc42a8ca2608ceb23cd398`

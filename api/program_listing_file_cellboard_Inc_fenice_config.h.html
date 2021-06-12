@@ -212,8 +212,7 @@
 
 <span class="cp">#define TEMP_SENSOR_COUNT (TEMP_BUS_COUNT * TEMP_STRIPS_PER_BUS * TEMP_SENSORS_PER_STRIP)</span>
 
-<span class="k">static</span> <span class="k">const</span> <span class="kt">uint8_t</span> <span class="n">TEMP_SENSOR_ADDRESS_CODING</span><span class="p">[</span><span class="n">TEMP_SENSORS_PER_STRIP</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="mo">000</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mo">010</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="mo">020</span><span class="p">,</span> <span class="mi">120</span><span class="p">};</span>
+<span class="k">static</span> <span class="k">const</span> <span class="kt">uint8_t</span> <span class="n">TEMP_SENSOR_ADDRESS_CODING</span><span class="p">[</span><span class="n">TEMP_SENSORS_PER_STRIP</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mo">000</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mo">010</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="mo">020</span><span class="p">,</span> <span class="mi">120</span><span class="p">};</span>
 
 <span class="c1">//===========================================================================</span>
 <span class="c1">//================================ Pack Settings ============================</span>
@@ -226,8 +225,8 @@
 <span class="cp">#define PACK_MAX_CURRENT 2000</span>
 
 <span class="cp">#define CELL_WARN_VOLTAGE 28000</span>
-<span class="cp">#define CELL_MIN_VOLTAGE 25000</span>
-<span class="cp">#define CELL_MAX_VOLTAGE 42250</span>
+<span class="cp">#define CELL_MIN_VOLTAGE  25000</span>
+<span class="cp">#define CELL_MAX_VOLTAGE  42250</span>
 
 <span class="cp">#define CELL_MAX_TEMPERATURE 6000</span>
 
@@ -237,7 +236,7 @@
 
 <span class="c1">// @section Balancing</span>
 
-<span class="cp">#define BAL_MAX_VOLTAGE_THRESHOLD 100</span>
+<span class="cp">#define BAL_MAX_VOLTAGE_THRESHOLD 1000</span>
 
 <span class="cp">#define BAL_CYCLE_LENGTH 120000</span>
 
@@ -245,7 +244,7 @@
 
 <span class="c1">// @section Pre-charge</span>
 
-<span class="cp">#define PRECHARGE_TIMEOUT 10000</span>
+<span class="cp">#define PRECHARGE_TIMEOUT           10000</span>
 <span class="cp">#define PRECHARGE_VOLTAGE_THRESHOLD 0.95</span>
 
 <span class="k">typedef</span> <span class="kt">uint16_t</span> <span class="n">voltage_t</span><span class="p">;</span>
@@ -274,24 +273,24 @@
     <span class="n">FEEDBACK_N</span><span class="p">,</span>
 <span class="p">};</span>
 
-<span class="cp">#define FEEDBACK_NULL 0</span>
-<span class="cp">#define FEEDBACK_VREF ((feedback_t)1 &lt;&lt; FEEDBACK_VREF_POS)</span>
-<span class="cp">#define FEEDBACK_FROM_TSMS ((feedback_t)1 &lt;&lt; FEEDBACK_FROM_TSMS_POS)</span>
-<span class="cp">#define FEEDBACK_TO_TSMS ((feedback_t)1 &lt;&lt; FEEDBACK_TO_TSMS_POS)</span>
+<span class="cp">#define FEEDBACK_NULL          0</span>
+<span class="cp">#define FEEDBACK_VREF          ((feedback_t)1 &lt;&lt; FEEDBACK_VREF_POS)</span>
+<span class="cp">#define FEEDBACK_FROM_TSMS     ((feedback_t)1 &lt;&lt; FEEDBACK_FROM_TSMS_POS)</span>
+<span class="cp">#define FEEDBACK_TO_TSMS       ((feedback_t)1 &lt;&lt; FEEDBACK_TO_TSMS_POS)</span>
 <span class="cp">#define FEEDBACK_FROM_SHUTDOWN ((feedback_t)1 &lt;&lt; FEEDBACK_FROM_SHUTDOWN_POS)</span>
-<span class="cp">#define FEEDBACK_LATCH_IMD ((feedback_t)1 &lt;&lt; FEEDBACK_LATCH_IMD_POS)</span>
-<span class="cp">#define FEEDBACK_LATCH_BMS ((feedback_t)1 &lt;&lt; FEEDBACK_LATCH_BMS_POS)</span>
-<span class="cp">#define FEEDBACK_IMD_FAULT ((feedback_t)1 &lt;&lt; FEEDBACK_IMD_FAULT_POS)</span>
-<span class="cp">#define FEEDBACK_BMS_FAULT ((feedback_t)1 &lt;&lt; FEEDBACK_BMS_FAULT_POS)</span>
-<span class="cp">#define FEEDBACK_TSAL_HV ((feedback_t)1 &lt;&lt; FEEDBACK_TSAL_HV_POS)</span>
-<span class="cp">#define FEEDBACK_AIR_POSITIVE ((feedback_t)1 &lt;&lt; FEEDBACK_AIR_POSITIVE_POS)</span>
-<span class="cp">#define FEEDBACK_AIR_NEGATIVE ((feedback_t)1 &lt;&lt; FEEDBACK_AIR_NEGATIVE_POS)</span>
-<span class="cp">#define FEEDBACK_PC_END ((feedback_t)1 &lt;&lt; FEEDBACK_PC_END_POS)</span>
-<span class="cp">#define FEEDBACK_RELAY_LV ((feedback_t)1 &lt;&lt; FEEDBACK_RELAY_LV_POS)</span>
-<span class="cp">#define FEEDBACK_IMD_SHUTDOWN ((feedback_t)1 &lt;&lt; FEEDBACK_IMD_SHUTDOWN_POS)</span>
-<span class="cp">#define FEEDBACK_BMS_SHUTDOWN ((feedback_t)1 &lt;&lt; FEEDBACK_BMS_SHUTDOWN_POS)</span>
-<span class="cp">#define FEEDBACK_TS_ON ((feedback_t)1 &lt;&lt; FEEDBACK_TS_ON_POS)</span>
-<span class="cp">#define FEEDBACK_ALL (feedback_t)(((feedback_t)1 &lt;&lt; FEEDBACK_N) - 1)</span>
+<span class="cp">#define FEEDBACK_LATCH_IMD     ((feedback_t)1 &lt;&lt; FEEDBACK_LATCH_IMD_POS)</span>
+<span class="cp">#define FEEDBACK_LATCH_BMS     ((feedback_t)1 &lt;&lt; FEEDBACK_LATCH_BMS_POS)</span>
+<span class="cp">#define FEEDBACK_IMD_FAULT     ((feedback_t)1 &lt;&lt; FEEDBACK_IMD_FAULT_POS)</span>
+<span class="cp">#define FEEDBACK_BMS_FAULT     ((feedback_t)1 &lt;&lt; FEEDBACK_BMS_FAULT_POS)</span>
+<span class="cp">#define FEEDBACK_TSAL_HV       ((feedback_t)1 &lt;&lt; FEEDBACK_TSAL_HV_POS)</span>
+<span class="cp">#define FEEDBACK_AIR_POSITIVE  ((feedback_t)1 &lt;&lt; FEEDBACK_AIR_POSITIVE_POS)</span>
+<span class="cp">#define FEEDBACK_AIR_NEGATIVE  ((feedback_t)1 &lt;&lt; FEEDBACK_AIR_NEGATIVE_POS)</span>
+<span class="cp">#define FEEDBACK_PC_END        ((feedback_t)1 &lt;&lt; FEEDBACK_PC_END_POS)</span>
+<span class="cp">#define FEEDBACK_RELAY_LV      ((feedback_t)1 &lt;&lt; FEEDBACK_RELAY_LV_POS)</span>
+<span class="cp">#define FEEDBACK_IMD_SHUTDOWN  ((feedback_t)1 &lt;&lt; FEEDBACK_IMD_SHUTDOWN_POS)</span>
+<span class="cp">#define FEEDBACK_BMS_SHUTDOWN  ((feedback_t)1 &lt;&lt; FEEDBACK_BMS_SHUTDOWN_POS)</span>
+<span class="cp">#define FEEDBACK_TS_ON         ((feedback_t)1 &lt;&lt; FEEDBACK_TS_ON_POS)</span>
+<span class="cp">#define FEEDBACK_ALL           (feedback_t)(((feedback_t)1 &lt;&lt; FEEDBACK_N) - 1)</span>
 
 <span class="c1">//===========================================================================</span>
 <span class="c1">//=========================== S160 current transducer =======================</span>
