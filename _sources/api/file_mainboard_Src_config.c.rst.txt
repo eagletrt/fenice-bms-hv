@@ -48,8 +48,6 @@ Includes
 
 - ``fenice_config.h`` (:ref:`file_mainboard_Inc_fenice_config.h`)
 
-- ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
-
 - ``spi.h`` (:ref:`file_mainboard_Inc_spi.h`)
 
 - ``stdlib.h``

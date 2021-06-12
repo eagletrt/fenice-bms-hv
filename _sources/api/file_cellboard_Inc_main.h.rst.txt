@@ -57,8 +57,6 @@ Included By
 
 - :ref:`file_mainboard_Inc_peripherals_si8900.h`
 
-- :ref:`file_mainboard_Src_config.c`
-
 - :ref:`file_mainboard_Src_feedback.c`
 
 - :ref:`file_mainboard_Src_fsm_bms.c`

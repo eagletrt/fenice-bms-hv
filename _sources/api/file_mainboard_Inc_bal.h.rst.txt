@@ -60,8 +60,6 @@ Included By
 
 - :ref:`file_mainboard_Inc_bal_fsm.h`
 
-- :ref:`file_mainboard_Inc_config.h`
-
 - :ref:`file_mainboard_Src_bal.c`
 
 

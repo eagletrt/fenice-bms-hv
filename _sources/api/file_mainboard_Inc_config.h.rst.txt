@@ -44,8 +44,6 @@ Includes
 --------
 
 
-- ``bal.h`` (:ref:`file_mainboard_Inc_bal.h`)
-
 - ``inttypes.h``
 
 - ``m95256.h``
