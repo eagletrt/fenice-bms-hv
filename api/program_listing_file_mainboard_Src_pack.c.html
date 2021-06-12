@@ -164,13 +164,20 @@
 <p>↰ <a class="reference internal" href="file_mainboard_Src_pack.c.html#file-mainboard-src-pack-c"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">mainboard/Src/pack.c</span></code>)</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;pack.h&quot;</span><span class="cp"></span>
 
+<span class="cp">#include</span> <span class="cpf">&quot;config.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;feedback.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;main.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;peripherals/si8900.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;soc.h&quot;</span><span class="cp"></span>
+
 <span class="cp">#include</span> <span class="cpf">&lt;stdbool.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stm32g4xx_hal.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp"></span>
 
-<span class="cp">#include</span> <span class="cpf">&quot;feedback.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;peripherals/si8900.h&quot;</span><span class="cp"></span>
 <span class="cp">#define CURRENT_ARRAY_LENGTH 512</span>
+
+<span class="cp">#define SOC_WRITE_INTERVAL 5000</span>
+<span class="cp">#define SOC_VERSION        0x01</span>
+<span class="cp">#define SOC_ADDR           0x55</span>
 
 <span class="cp">#ifndef max</span>
 <span class="cp">#define max(a, b) ((a) &gt; (b) ? (a) : (b))</span>
@@ -194,8 +201,21 @@
 
 <span class="p">}</span> <span class="n">cells_t</span><span class="p">;</span>
 
+<span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+    <span class="kt">uint8_t</span> <span class="n">version</span><span class="p">;</span>
+
+    <span class="kt">double</span> <span class="n">total_joule</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">charge_joule</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">soc_params</span><span class="p">;</span>
+<span class="n">soc_params</span> <span class="n">soc_params_default</span> <span class="o">=</span> <span class="p">{</span><span class="n">SOC_VERSION</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">};</span>
+
 <span class="kt">uint32_t</span> <span class="n">current_50</span><span class="p">[</span><span class="n">CURRENT_ARRAY_LENGTH</span><span class="p">];</span>   <span class="c1">// TODO: move to pck_data and update DMA and generate getter no setter</span>
 <span class="kt">uint32_t</span> <span class="n">current_300</span><span class="p">[</span><span class="n">CURRENT_ARRAY_LENGTH</span><span class="p">];</span>  <span class="c1">// TODO: move to pck_data and update DMA and generate getter no setter</span>
+
+<span class="n">soc_t</span> <span class="n">soc_total</span><span class="p">;</span>
+<span class="n">soc_t</span> <span class="n">soc_last_charge</span><span class="p">;</span>
+<span class="n">config_t</span> <span class="n">soc_config</span><span class="p">;</span>
+<span class="kt">uint32_t</span> <span class="n">soc_timer</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
 <span class="n">cells_t</span> <span class="n">cells</span><span class="p">;</span>
 <span class="n">current_t</span> <span class="n">current</span><span class="p">;</span>
@@ -203,7 +223,7 @@
 <span class="kt">void</span> <span class="nf">pack_init</span><span class="p">()</span> <span class="p">{</span>
     <span class="n">cells</span><span class="p">.</span><span class="n">bus_voltage</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="n">cells</span><span class="p">.</span><span class="n">int_voltage</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="n">current</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">current</span>           <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
     <span class="k">for</span> <span class="p">(</span><span class="kt">size_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">PACK_CELL_COUNT</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">cells</span><span class="p">.</span><span class="n">voltages</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
@@ -212,6 +232,13 @@
     <span class="k">for</span> <span class="p">(</span><span class="kt">size_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">PACK_TEMP_COUNT</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">cells</span><span class="p">.</span><span class="n">temperatures</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="p">}</span>
+
+    <span class="n">soc_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">soc_total</span><span class="p">);</span>
+    <span class="n">soc_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">soc_last_charge</span><span class="p">);</span>
+    <span class="n">config_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">soc_config</span><span class="p">,</span> <span class="n">SOC_ADDR</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">soc_params_default</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">soc_params</span><span class="p">));</span>
+
+    <span class="n">soc_load</span><span class="p">(</span><span class="n">soc_total</span><span class="p">,</span> <span class="p">((</span><span class="n">soc_params</span> <span class="o">*</span><span class="p">)</span><span class="n">config_get</span><span class="p">(</span><span class="n">soc_config</span><span class="p">))</span><span class="o">-&gt;</span><span class="n">total_joule</span><span class="p">,</span> <span class="n">HAL_GetTick</span><span class="p">());</span>
+    <span class="n">soc_load</span><span class="p">(</span><span class="n">soc_last_charge</span><span class="p">,</span> <span class="p">((</span><span class="n">soc_params</span> <span class="o">*</span><span class="p">)</span><span class="n">config_get</span><span class="p">(</span><span class="n">soc_config</span><span class="p">))</span><span class="o">-&gt;</span><span class="n">charge_joule</span><span class="p">,</span> <span class="n">HAL_GetTick</span><span class="p">());</span>
 
     <span class="c1">// LTC6813 GPIO configuration</span>
     <span class="n">GPIO_CONFIG</span> <span class="o">=</span> <span class="n">GPIO_I2C_MODE</span><span class="p">;</span>
@@ -222,8 +249,8 @@
 
     <span class="n">ltc6813_read_voltages</span><span class="p">(</span><span class="n">hspi</span><span class="p">,</span> <span class="n">cells</span><span class="p">.</span><span class="n">voltages</span><span class="p">);</span>
 
-    <span class="n">voltage_t</span> <span class="n">internal</span><span class="p">;</span>
-    <span class="n">voltage_t</span> <span class="n">bus</span><span class="p">;</span>
+    <span class="n">voltage_t</span> <span class="n">internal</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">voltage_t</span> <span class="n">bus</span>      <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">si8900_read_channel</span><span class="p">(</span><span class="n">huart</span><span class="p">,</span> <span class="n">SI8900_AIN0</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">internal</span><span class="p">))</span> <span class="p">{</span>
         <span class="n">cells</span><span class="p">.</span><span class="n">int_voltage</span> <span class="o">=</span> <span class="n">internal</span><span class="p">;</span>
     <span class="p">}</span>
@@ -263,8 +290,8 @@
     <span class="p">}</span>
 
     <span class="n">cells</span><span class="p">.</span><span class="n">mean_temperature</span> <span class="o">=</span> <span class="p">((</span><span class="kt">float</span><span class="p">)</span><span class="n">avg_temp</span> <span class="o">/</span> <span class="p">(</span><span class="n">LTC6813_COUNT</span> <span class="o">*</span> <span class="mi">4</span><span class="p">))</span> <span class="o">*</span> <span class="mi">10</span><span class="p">;</span>
-    <span class="n">cells</span><span class="p">.</span><span class="n">max_temperature</span> <span class="o">=</span> <span class="n">max_temp</span><span class="p">;</span>
-    <span class="n">cells</span><span class="p">.</span><span class="n">min_temperature</span> <span class="o">=</span> <span class="n">min_temp</span><span class="p">;</span>
+    <span class="n">cells</span><span class="p">.</span><span class="n">max_temperature</span>  <span class="o">=</span> <span class="n">max_temp</span><span class="p">;</span>
+    <span class="n">cells</span><span class="p">.</span><span class="n">min_temperature</span>  <span class="o">=</span> <span class="n">min_temp</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">pack_update_all_temperatures</span><span class="p">(</span><span class="n">SPI_HandleTypeDef</span> <span class="o">*</span><span class="n">hspi</span><span class="p">)</span> <span class="p">{</span>
@@ -281,17 +308,17 @@
 
 <span class="c1">//TODO: redo DMA and then rewrite the function</span>
 <span class="kt">void</span> <span class="nf">pack_update_current</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">current_t</span> <span class="n">current50</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">current_t</span> <span class="n">current50</span>  <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="n">current_t</span> <span class="n">current300</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-    <span class="kt">int32_t</span> <span class="n">adc50</span> <span class="o">=</span> <span class="n">_mean</span><span class="p">(</span><span class="n">current_50</span><span class="p">,</span> <span class="n">CURRENT_ARRAY_LENGTH</span><span class="p">);</span>
+    <span class="kt">int32_t</span> <span class="n">adc50</span>  <span class="o">=</span> <span class="n">_mean</span><span class="p">(</span><span class="n">current_50</span><span class="p">,</span> <span class="n">CURRENT_ARRAY_LENGTH</span><span class="p">);</span>
     <span class="kt">int32_t</span> <span class="n">adc300</span> <span class="o">=</span> <span class="n">_mean</span><span class="p">(</span><span class="n">current_300</span><span class="p">,</span> <span class="n">CURRENT_ARRAY_LENGTH</span><span class="p">);</span>
 
     <span class="c1">// We calculate the input voltage</span>
     <span class="kt">float</span> <span class="n">in_volt</span> <span class="o">=</span> <span class="p">(((</span><span class="kt">float</span><span class="p">)</span><span class="n">adc50</span> <span class="o">*</span> <span class="mf">3.3</span><span class="p">)</span> <span class="o">/</span> <span class="mi">4096</span><span class="p">);</span>
-    <span class="n">current50</span> <span class="o">=</span> <span class="p">((</span><span class="n">in_volt</span> <span class="o">-</span> <span class="n">S160_OFFSET</span><span class="p">)</span> <span class="o">/</span> <span class="n">S160_50A_SENS</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="n">current50</span>     <span class="o">=</span> <span class="p">((</span><span class="n">in_volt</span> <span class="o">-</span> <span class="n">S160_OFFSET</span><span class="p">)</span> <span class="o">/</span> <span class="n">S160_50A_SENS</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10</span><span class="p">;</span>
 
-    <span class="n">in_volt</span> <span class="o">=</span> <span class="p">(((</span><span class="kt">float</span><span class="p">)</span><span class="n">adc300</span> <span class="o">*</span> <span class="mf">3.3</span><span class="p">)</span> <span class="o">/</span> <span class="mi">4096</span><span class="p">);</span>
+    <span class="n">in_volt</span>    <span class="o">=</span> <span class="p">(((</span><span class="kt">float</span><span class="p">)</span><span class="n">adc300</span> <span class="o">*</span> <span class="mf">3.3</span><span class="p">)</span> <span class="o">/</span> <span class="mi">4096</span><span class="p">);</span>
     <span class="n">current300</span> <span class="o">=</span> <span class="p">((</span><span class="n">in_volt</span> <span class="o">-</span> <span class="n">S160_OFFSET</span><span class="p">)</span> <span class="o">/</span> <span class="n">S160_300A_SENS</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10</span><span class="p">;</span>
 
     <span class="k">if</span> <span class="p">(</span><span class="n">current300</span> <span class="o">&gt;=</span> <span class="mi">50</span><span class="p">)</span> <span class="p">{</span>
@@ -300,11 +327,26 @@
         <span class="n">current</span> <span class="o">=</span> <span class="n">current50</span><span class="p">;</span>
     <span class="p">}</span>
 
-    <span class="n">error_toggle_check</span><span class="p">(</span><span class="n">current300</span> <span class="o">&gt;</span> <span class="n">PACK_MAX_CURRENT</span><span class="p">,</span> <span class="n">ERROR_OVER_CURRENT</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="n">soc_params</span> <span class="n">params</span> <span class="o">=</span> <span class="o">*</span><span class="p">(</span><span class="n">soc_params</span> <span class="o">*</span><span class="p">)</span><span class="n">config_get</span><span class="p">(</span><span class="n">soc_config</span><span class="p">);</span>
+
+    <span class="n">soc_sample_current</span><span class="p">(</span><span class="n">soc_total</span><span class="p">,</span> <span class="n">current</span><span class="p">,</span> <span class="n">pack_get_int_voltage</span><span class="p">(),</span> <span class="n">HAL_GetTick</span><span class="p">());</span>
+    <span class="n">soc_sample_current</span><span class="p">(</span><span class="n">soc_last_charge</span><span class="p">,</span> <span class="n">current</span><span class="p">,</span> <span class="n">pack_get_int_voltage</span><span class="p">(),</span> <span class="n">HAL_GetTick</span><span class="p">());</span>
+
+    <span class="n">params</span><span class="p">.</span><span class="n">charge_joule</span> <span class="o">=</span> <span class="n">soc_get_joule</span><span class="p">(</span><span class="n">soc_last_charge</span><span class="p">);</span>
+
+    <span class="n">params</span><span class="p">.</span><span class="n">total_joule</span> <span class="o">=</span> <span class="n">soc_get_joule</span><span class="p">(</span><span class="n">soc_total</span><span class="p">);</span>
+    <span class="n">config_set</span><span class="p">(</span><span class="n">soc_config</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">params</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">HAL_GetTick</span><span class="p">()</span> <span class="o">-</span> <span class="n">soc_timer</span> <span class="o">&gt;=</span> <span class="n">SOC_WRITE_INTERVAL</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">soc_timer</span> <span class="o">=</span> <span class="n">HAL_GetTick</span><span class="p">();</span>
+        <span class="n">config_write</span><span class="p">(</span><span class="n">soc_config</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="n">error_toggle_check</span><span class="p">(</span><span class="n">current</span> <span class="o">&gt;</span> <span class="n">PACK_MAX_CURRENT</span><span class="p">,</span> <span class="n">ERROR_OVER_CURRENT</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">pack_update_voltage_stats</span><span class="p">(</span><span class="n">voltage_t</span> <span class="o">*</span><span class="n">total</span><span class="p">,</span> <span class="n">voltage_t</span> <span class="o">*</span><span class="n">maxv</span><span class="p">,</span> <span class="n">voltage_t</span> <span class="o">*</span><span class="n">minv</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kt">uint32_t</span> <span class="n">tot_voltage</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">uint32_t</span> <span class="n">tot_voltage</span>  <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="n">voltage_t</span> <span class="n">max_voltage</span> <span class="o">=</span> <span class="n">cells</span><span class="p">.</span><span class="n">voltages</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
     <span class="n">voltage_t</span> <span class="n">min_voltage</span> <span class="o">=</span> <span class="n">UINT16_MAX</span><span class="p">;</span>
 
@@ -317,12 +359,12 @@
     <span class="p">}</span>
 
     <span class="o">*</span><span class="n">total</span> <span class="o">=</span> <span class="p">(</span><span class="n">voltage_t</span><span class="p">)(</span><span class="n">tot_voltage</span> <span class="o">/</span> <span class="mi">100</span><span class="p">);</span>
-    <span class="o">*</span><span class="n">maxv</span> <span class="o">=</span> <span class="n">max_voltage</span><span class="p">;</span>
-    <span class="o">*</span><span class="n">minv</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">min_voltage</span><span class="p">,</span> <span class="n">max_voltage</span><span class="p">);</span>
+    <span class="o">*</span><span class="n">maxv</span>  <span class="o">=</span> <span class="n">max_voltage</span><span class="p">;</span>
+    <span class="o">*</span><span class="n">minv</span>  <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">min_voltage</span><span class="p">,</span> <span class="n">max_voltage</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">pack_update_temperature_stats</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kt">uint32_t</span> <span class="n">avg_temperature</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">uint32_t</span> <span class="n">avg_temperature</span>      <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="n">temperature_t</span> <span class="n">max_temperature</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="n">temperature_t</span> <span class="n">min_temperature</span> <span class="o">=</span> <span class="n">UINT8_MAX</span><span class="p">;</span>
 
@@ -336,8 +378,24 @@
     <span class="p">}</span>
 
     <span class="n">cells</span><span class="p">.</span><span class="n">mean_temperature</span> <span class="o">=</span> <span class="p">(</span><span class="n">temperature_t</span><span class="p">)(</span><span class="n">avg_temperature</span> <span class="o">/</span> <span class="n">TEMP_SENSOR_COUNT</span><span class="p">);</span>
-    <span class="n">cells</span><span class="p">.</span><span class="n">max_temperature</span> <span class="o">=</span> <span class="n">max_temperature</span><span class="p">;</span>
-    <span class="n">cells</span><span class="p">.</span><span class="n">min_temperature</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">min_temperature</span><span class="p">,</span> <span class="n">max_temperature</span><span class="p">);</span>
+    <span class="n">cells</span><span class="p">.</span><span class="n">max_temperature</span>  <span class="o">=</span> <span class="n">max_temperature</span><span class="p">;</span>
+    <span class="n">cells</span><span class="p">.</span><span class="n">min_temperature</span>  <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">min_temperature</span><span class="p">,</span> <span class="n">max_temperature</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">pack_reset_soc</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">soc_reset_count</span><span class="p">(</span><span class="n">soc_last_charge</span><span class="p">,</span> <span class="n">HAL_GetTick</span><span class="p">());</span>
+<span class="p">}</span>
+
+<span class="kt">double</span> <span class="nf">pack_get_soc</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">soc_get_wh</span><span class="p">(</span><span class="n">soc_last_charge</span><span class="p">)</span> <span class="o">/</span> <span class="p">((</span><span class="kt">double</span><span class="p">)</span><span class="n">PACK_ENERGY_NOMINAL</span> <span class="o">/</span> <span class="mi">10</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">double</span> <span class="nf">pack_get_energy_total</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">soc_get_wh</span><span class="p">(</span><span class="n">soc_total</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">double</span> <span class="nf">pack_get_energy_last_charge</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">soc_get_wh</span><span class="p">(</span><span class="n">soc_last_charge</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="kt">bool</span> <span class="nf">pack_set_ts_off</span><span class="p">()</span> <span class="p">{</span>

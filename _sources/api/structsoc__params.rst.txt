@@ -1,0 +1,16 @@
+.. _exhale_struct_structsoc__params:
+
+Struct soc_params
+=================
+
+- Defined in :ref:`file_mainboard_Src_pack.c`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: soc_params
+   :members:
+   :protected-members:
+   :undoc-members:

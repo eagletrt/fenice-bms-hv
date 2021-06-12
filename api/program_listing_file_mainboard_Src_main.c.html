@@ -209,6 +209,7 @@
 
 <span class="kt">uint32_t</span> <span class="n">timer_volts</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="kt">uint32_t</span> <span class="n">timer_temps</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kt">uint32_t</span> <span class="n">timer_bal</span>   <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="cm">/* USER CODE END PV */</span>
 
 <span class="cm">/* Private function prototypes -----------------------------------------------*/</span>
@@ -288,20 +289,22 @@
     <span class="cm">/* USER CODE BEGIN 2 */</span>
 
     <span class="n">FDCAN1_Init</span><span class="p">();</span>
+    <span class="n">can_init</span><span class="p">();</span>
     <span class="n">HAL_FDCAN_ActivateNotification</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hfdcan1</span><span class="p">,</span> <span class="n">FDCAN_IT_RX_FIFO0_NEW_MESSAGE</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
     <span class="n">HAL_FDCAN_Start</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hfdcan1</span><span class="p">);</span>
 
-    <span class="n">error_init</span><span class="p">();</span>
-    <span class="n">fsm_bms_init</span><span class="p">();</span>
-    <span class="n">bal_fsm_init</span><span class="p">();</span>
     <span class="n">cli_bms_init</span><span class="p">();</span>
-    <span class="n">can_init</span><span class="p">();</span>
+    <span class="n">error_init</span><span class="p">();</span>
 
     <span class="k">if</span> <span class="p">(</span><span class="n">si8900_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart3</span><span class="p">,</span> <span class="n">ADC_SIN_GPIO_Port</span><span class="p">,</span> <span class="n">ADC_SIN_Pin</span><span class="p">))</span> <span class="p">{</span>
         <span class="n">cli_print</span><span class="p">(</span><span class="o">&amp;</span><span class="n">cli_bms</span><span class="p">,</span> <span class="s">&quot;SI8900 INITIALIZED</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
         <span class="n">cli_print</span><span class="p">(</span><span class="o">&amp;</span><span class="n">cli_bms</span><span class="p">,</span> <span class="s">&quot;SI8900 ERROR</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="mi">14</span><span class="p">);</span>
     <span class="p">}</span>
+
+    <span class="n">pack_init</span><span class="p">();</span>
+    <span class="n">bal_fsm_init</span><span class="p">();</span>
+    <span class="n">fsm_bms_init</span><span class="p">();</span>
 
     <span class="cm">/* USER CODE END 2 */</span>
 

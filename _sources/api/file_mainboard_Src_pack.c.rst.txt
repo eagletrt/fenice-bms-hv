@@ -44,15 +44,19 @@ Includes
 --------
 
 
+- ``config.h`` (:ref:`file_mainboard_Inc_config.h`)
+
 - ``feedback.h`` (:ref:`file_mainboard_Inc_feedback.h`)
+
+- ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
 
 - ``pack.h`` (:ref:`file_mainboard_Inc_pack.h`)
 
 - ``peripherals/si8900.h`` (:ref:`file_mainboard_Inc_peripherals_si8900.h`)
 
-- ``stdbool.h``
+- ``soc.h`` (:ref:`file_mainboard_Inc_soc.h`)
 
-- ``stm32g4xx_hal.h``
+- ``stdbool.h``
 
 - ``string.h``
 
@@ -67,6 +71,8 @@ Classes
 
 - :ref:`exhale_struct_structcells__t`
 
+- :ref:`exhale_struct_structsoc__params`
+
 
 Functions
 ---------
@@ -77,6 +83,10 @@ Functions
 - :ref:`exhale_function_pack_8c_1a62b44ad3586608b81dce6a617b3e7f31`
 
 - :ref:`exhale_function_pack_8c_1aa4a76377c7d04fce76cb12e4daecb87a`
+
+- :ref:`exhale_function_pack_8c_1af4b44f57cce46f24ce85d25cf6db33e3`
+
+- :ref:`exhale_function_pack_8c_1a23cbb179425ee2e46181a07125be3b69`
 
 - :ref:`exhale_function_pack_8c_1a0e3de3b0a68560c145c795f7debfb95d`
 
@@ -92,11 +102,15 @@ Functions
 
 - :ref:`exhale_function_pack_8c_1a7f587ce8028afdb6698f3cab085f0e18`
 
+- :ref:`exhale_function_pack_8c_1ab5b2dc99c6d926800be00817f221d5e9`
+
 - :ref:`exhale_function_pack_8c_1a51f16a179823be9e0b981fa7ccdaa7dd`
 
 - :ref:`exhale_function_pack_8c_1a91acae66b5ea4b819e36a88c776baf3f`
 
 - :ref:`exhale_function_pack_8c_1a9d97a0ffd5453bbe2b7e55b73eb0131a`
+
+- :ref:`exhale_function_pack_8c_1ad349c1b12d10dabd93f3a6400a99ef9a`
 
 - :ref:`exhale_function_pack_8c_1a11b76b127aed2ee361e2615bd9ba6d1a`
 
@@ -127,6 +141,12 @@ Defines
 
 - :ref:`exhale_define_pack_8c_1ac6afabdc09a49a433ee19d8a9486056d`
 
+- :ref:`exhale_define_pack_8c_1a25fdc63f0f31003ac8d4646d262d90fd`
+
+- :ref:`exhale_define_pack_8c_1ab4f531691d71e5669a903c54018b13bf`
+
+- :ref:`exhale_define_pack_8c_1a8baa943c563bf485d375f07a862bc62c`
+
 
 Variables
 ---------
@@ -139,4 +159,14 @@ Variables
 - :ref:`exhale_variable_pack_8c_1a145ff3ef9e53de3d83064acbf72f0b9f`
 
 - :ref:`exhale_variable_pack_8c_1af0efb692b8d404ba4e4986dff19619f1`
+
+- :ref:`exhale_variable_pack_8c_1a9e43ec2e7da68d7802a24f123bb30a0d`
+
+- :ref:`exhale_variable_pack_8c_1a29e86de29809135c63fb780dad514155`
+
+- :ref:`exhale_variable_pack_8c_1a409e04db659286c5d291207fa8af4fcf`
+
+- :ref:`exhale_variable_pack_8c_1a182e5dd719201aff2b6217defb8aacc1`
+
+- :ref:`exhale_variable_pack_8c_1a232b686d286a16d23e8f9e39d5fc346a`
 

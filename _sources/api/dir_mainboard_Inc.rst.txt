@@ -32,6 +32,7 @@ Files
 - :ref:`file_mainboard_Inc_gpio.h`
 - :ref:`file_mainboard_Inc_main.h`
 - :ref:`file_mainboard_Inc_pack.h`
+- :ref:`file_mainboard_Inc_soc.h`
 - :ref:`file_mainboard_Inc_spi.h`
 - :ref:`file_mainboard_Inc_stm32g4xx_hal_conf.h`
 - :ref:`file_mainboard_Inc_stm32g4xx_it.h`

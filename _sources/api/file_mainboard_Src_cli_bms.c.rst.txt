@@ -54,6 +54,10 @@ Includes
 
 - ``fsm_bms.h`` (:ref:`file_mainboard_Inc_fsm_bms.h`)
 
+- ``pack.h`` (:ref:`file_mainboard_Inc_pack.h`)
+
+- ``soc.h`` (:ref:`file_mainboard_Inc_soc.h`)
+
 - ``stdio.h``
 
 - ``stdlib.h``
@@ -80,6 +84,8 @@ Functions
 - :ref:`exhale_function_cli__bms_8c_1ad04d99b2a03909941b3b382f228567ca`
 
 - :ref:`exhale_function_cli__bms_8c_1a93ceb8f6ffb9c2f7efc5c2297e9195ec`
+
+- :ref:`exhale_function_cli__bms_8c_1ac3985a6d7ec7917c4d2c35d3d1c6e03c`
 
 - :ref:`exhale_function_cli__bms_8c_1a7ba9ba49b642bd02c233395a98117ee5`
 
@@ -123,6 +129,8 @@ Variables
 
 - :ref:`exhale_variable_cli__bms_8c_1aa409f5250982bed8c00e4fe32469febc`
 
+- :ref:`exhale_variable_cli__bms_8c_1a25e2c523f32311f60ea2c783e3a7a192`
+
 - :ref:`exhale_variable_cli__bms_8c_1a652260a7b604db4237651c4d177b9594`
 
 - :ref:`exhale_variable_cli__bms_8c_1a0fa24683c5b8a47f20defc967072a493`
@@ -143,9 +151,9 @@ Variables
 
 - :ref:`exhale_variable_cli__bms_8c_1ae97f49f74719578ca4823d58d8e74c19`
 
-- :ref:`exhale_variable_cli__bms_8c_1a97994c0c44928753874e891b57f04587`
+- :ref:`exhale_variable_cli__bms_8c_1ac46f13f37b615ba6530b891875b2fcc8`
 
-- :ref:`exhale_variable_cli__bms_8c_1a20333c2148c8e6dab5f6b1d99dc3a8bd`
+- :ref:`exhale_variable_cli__bms_8c_1a8f42799c97f502ea64dec3f953d6f131`
 
 - :ref:`exhale_variable_cli__bms_8c_1a0f73a38703f79ee46de42bb0eed53d2e`
 

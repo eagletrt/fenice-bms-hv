@@ -1,0 +1,13 @@
+.. _exhale_variable_pack_8c_1a182e5dd719201aff2b6217defb8aacc1:
+
+Variable soc_timer
+==================
+
+- Defined in :ref:`file_mainboard_Src_pack.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: soc_timer

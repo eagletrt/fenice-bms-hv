@@ -191,11 +191,13 @@
 <div class="section" id="includes">
 <h2>Includes<a class="headerlink" href="#includes" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">config.h</span></code> (<a class="reference internal" href="file_mainboard_Inc_config.h.html#file-mainboard-inc-config-h"><span class="std std-ref">File config.h</span></a>)</li>
 <li><code class="docutils literal notranslate"><span class="pre">feedback.h</span></code> (<a class="reference internal" href="file_mainboard_Inc_feedback.h.html#file-mainboard-inc-feedback-h"><span class="std std-ref">File feedback.h</span></a>)</li>
+<li><code class="docutils literal notranslate"><span class="pre">main.h</span></code> (<a class="reference internal" href="file_mainboard_Inc_main.h.html#file-mainboard-inc-main-h"><span class="std std-ref">File main.h</span></a>)</li>
 <li><code class="docutils literal notranslate"><span class="pre">pack.h</span></code> (<a class="reference internal" href="file_mainboard_Inc_pack.h.html#file-mainboard-inc-pack-h"><span class="std std-ref">File pack.h</span></a>)</li>
 <li><code class="docutils literal notranslate"><span class="pre">peripherals/si8900.h</span></code> (<a class="reference internal" href="file_mainboard_Inc_peripherals_si8900.h.html#file-mainboard-inc-peripherals-si8900-h"><span class="std std-ref">File si8900.h</span></a>)</li>
+<li><code class="docutils literal notranslate"><span class="pre">soc.h</span></code> (<a class="reference internal" href="file_mainboard_Inc_soc.h.html#file-mainboard-inc-soc-h"><span class="std std-ref">File soc.h</span></a>)</li>
 <li><code class="docutils literal notranslate"><span class="pre">stdbool.h</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">stm32g4xx_hal.h</span></code></li>
 <li><code class="docutils literal notranslate"><span class="pre">string.h</span></code></li>
 </ul>
 </div>
@@ -203,6 +205,7 @@
 <h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><a class="reference internal" href="structcells__t.html#exhale-struct-structcells-t"><span class="std std-ref">Struct cells_t</span></a></li>
+<li><a class="reference internal" href="structsoc__params.html#exhale-struct-structsoc-params"><span class="std std-ref">Struct soc_params</span></a></li>
 </ul>
 </div>
 <div class="section" id="functions">
@@ -211,6 +214,8 @@
 <li><a class="reference internal" href="function_pack_8c_1aa61e85cd7f306656a67272edaf145f6c.html#exhale-function-pack-8c-1aa61e85cd7f306656a67272edaf145f6c"><span class="std std-ref">Function _mean</span></a></li>
 <li><a class="reference internal" href="function_pack_8c_1a62b44ad3586608b81dce6a617b3e7f31.html#exhale-function-pack-8c-1a62b44ad3586608b81dce6a617b3e7f31"><span class="std std-ref">Function pack_get_bus_voltage()</span></a></li>
 <li><a class="reference internal" href="function_pack_8c_1aa4a76377c7d04fce76cb12e4daecb87a.html#exhale-function-pack-8c-1aa4a76377c7d04fce76cb12e4daecb87a"><span class="std std-ref">Function pack_get_current()</span></a></li>
+<li><a class="reference internal" href="function_pack_8c_1af4b44f57cce46f24ce85d25cf6db33e3.html#exhale-function-pack-8c-1af4b44f57cce46f24ce85d25cf6db33e3"><span class="std std-ref">Function pack_get_energy_last_charge()</span></a></li>
+<li><a class="reference internal" href="function_pack_8c_1a23cbb179425ee2e46181a07125be3b69.html#exhale-function-pack-8c-1a23cbb179425ee2e46181a07125be3b69"><span class="std std-ref">Function pack_get_energy_total()</span></a></li>
 <li><a class="reference internal" href="function_pack_8c_1a0e3de3b0a68560c145c795f7debfb95d.html#exhale-function-pack-8c-1a0e3de3b0a68560c145c795f7debfb95d"><span class="std std-ref">Function pack_get_int_voltage()</span></a></li>
 <li><a class="reference internal" href="function_pack_8c_1a818a31883355a6379662b84884e4d8e4.html#exhale-function-pack-8c-1a818a31883355a6379662b84884e4d8e4"><span class="std std-ref">Function pack_get_max_temperature()</span></a></li>
 <li><a class="reference internal" href="function_pack_8c_1a8449975cb2e30ea9d8a723cfbd837e6b.html#exhale-function-pack-8c-1a8449975cb2e30ea9d8a723cfbd837e6b"><span class="std std-ref">Function pack_get_max_voltage()</span></a></li>
@@ -218,9 +223,11 @@
 <li><a class="reference internal" href="function_pack_8c_1afc77225b3417710fec24e84556825ea2.html#exhale-function-pack-8c-1afc77225b3417710fec24e84556825ea2"><span class="std std-ref">Function pack_get_min_temperature()</span></a></li>
 <li><a class="reference internal" href="function_pack_8c_1a72b388852db07771e836901e5561503e.html#exhale-function-pack-8c-1a72b388852db07771e836901e5561503e"><span class="std std-ref">Function pack_get_min_voltage()</span></a></li>
 <li><a class="reference internal" href="function_pack_8c_1a7f587ce8028afdb6698f3cab085f0e18.html#exhale-function-pack-8c-1a7f587ce8028afdb6698f3cab085f0e18"><span class="std std-ref">Function pack_get_power()</span></a></li>
+<li><a class="reference internal" href="function_pack_8c_1ab5b2dc99c6d926800be00817f221d5e9.html#exhale-function-pack-8c-1ab5b2dc99c6d926800be00817f221d5e9"><span class="std std-ref">Function pack_get_soc()</span></a></li>
 <li><a class="reference internal" href="function_pack_8c_1a51f16a179823be9e0b981fa7ccdaa7dd.html#exhale-function-pack-8c-1a51f16a179823be9e0b981fa7ccdaa7dd"><span class="std std-ref">Function pack_get_temperatures()</span></a></li>
 <li><a class="reference internal" href="function_pack_8c_1a91acae66b5ea4b819e36a88c776baf3f.html#exhale-function-pack-8c-1a91acae66b5ea4b819e36a88c776baf3f"><span class="std std-ref">Function pack_get_voltages()</span></a></li>
 <li><a class="reference internal" href="function_pack_8c_1a9d97a0ffd5453bbe2b7e55b73eb0131a.html#exhale-function-pack-8c-1a9d97a0ffd5453bbe2b7e55b73eb0131a"><span class="std std-ref">Function pack_init()</span></a></li>
+<li><a class="reference internal" href="function_pack_8c_1ad349c1b12d10dabd93f3a6400a99ef9a.html#exhale-function-pack-8c-1ad349c1b12d10dabd93f3a6400a99ef9a"><span class="std std-ref">Function pack_reset_soc()</span></a></li>
 <li><a class="reference internal" href="function_pack_8c_1a11b76b127aed2ee361e2615bd9ba6d1a.html#exhale-function-pack-8c-1a11b76b127aed2ee361e2615bd9ba6d1a"><span class="std std-ref">Function pack_set_pc_start()</span></a></li>
 <li><a class="reference internal" href="function_pack_8c_1a892b040f241c24a0894cd094209ecb1c.html#exhale-function-pack-8c-1a892b040f241c24a0894cd094209ecb1c"><span class="std std-ref">Function pack_set_precharge_end()</span></a></li>
 <li><a class="reference internal" href="function_pack_8c_1a2f41a2ff4246719c3c4d066a2f399540.html#exhale-function-pack-8c-1a2f41a2ff4246719c3c4d066a2f399540"><span class="std std-ref">Function pack_set_ts_off()</span></a></li>
@@ -238,6 +245,9 @@
 <li><a class="reference internal" href="define_pack_8c_1aa7ea986bc4c9a1c93ff64f92a0fdd296.html#exhale-define-pack-8c-1aa7ea986bc4c9a1c93ff64f92a0fdd296"><span class="std std-ref">Define CURRENT_ARRAY_LENGTH</span></a></li>
 <li><a class="reference internal" href="define_pack_8c_1affe776513b24d84b39af8ab0930fef7f.html#exhale-define-pack-8c-1affe776513b24d84b39af8ab0930fef7f"><span class="std std-ref">Define max</span></a></li>
 <li><a class="reference internal" href="define_pack_8c_1ac6afabdc09a49a433ee19d8a9486056d.html#exhale-define-pack-8c-1ac6afabdc09a49a433ee19d8a9486056d"><span class="std std-ref">Define min</span></a></li>
+<li><a class="reference internal" href="define_pack_8c_1a25fdc63f0f31003ac8d4646d262d90fd.html#exhale-define-pack-8c-1a25fdc63f0f31003ac8d4646d262d90fd"><span class="std std-ref">Define SOC_ADDR</span></a></li>
+<li><a class="reference internal" href="define_pack_8c_1ab4f531691d71e5669a903c54018b13bf.html#exhale-define-pack-8c-1ab4f531691d71e5669a903c54018b13bf"><span class="std std-ref">Define SOC_VERSION</span></a></li>
+<li><a class="reference internal" href="define_pack_8c_1a8baa943c563bf485d375f07a862bc62c.html#exhale-define-pack-8c-1a8baa943c563bf485d375f07a862bc62c"><span class="std std-ref">Define SOC_WRITE_INTERVAL</span></a></li>
 </ul>
 </div>
 <div class="section" id="variables">
@@ -247,6 +257,11 @@
 <li><a class="reference internal" href="variable_pack_8c_1a93dcc5d94b0f2d636ee60a2f3ae8bed8.html#exhale-variable-pack-8c-1a93dcc5d94b0f2d636ee60a2f3ae8bed8"><span class="std std-ref">Variable current</span></a></li>
 <li><a class="reference internal" href="variable_pack_8c_1a145ff3ef9e53de3d83064acbf72f0b9f.html#exhale-variable-pack-8c-1a145ff3ef9e53de3d83064acbf72f0b9f"><span class="std std-ref">Variable current_300</span></a></li>
 <li><a class="reference internal" href="variable_pack_8c_1af0efb692b8d404ba4e4986dff19619f1.html#exhale-variable-pack-8c-1af0efb692b8d404ba4e4986dff19619f1"><span class="std std-ref">Variable current_50</span></a></li>
+<li><a class="reference internal" href="variable_pack_8c_1a9e43ec2e7da68d7802a24f123bb30a0d.html#exhale-variable-pack-8c-1a9e43ec2e7da68d7802a24f123bb30a0d"><span class="std std-ref">Variable soc_config</span></a></li>
+<li><a class="reference internal" href="variable_pack_8c_1a29e86de29809135c63fb780dad514155.html#exhale-variable-pack-8c-1a29e86de29809135c63fb780dad514155"><span class="std std-ref">Variable soc_last_charge</span></a></li>
+<li><a class="reference internal" href="variable_pack_8c_1a409e04db659286c5d291207fa8af4fcf.html#exhale-variable-pack-8c-1a409e04db659286c5d291207fa8af4fcf"><span class="std std-ref">Variable soc_params_default</span></a></li>
+<li><a class="reference internal" href="variable_pack_8c_1a182e5dd719201aff2b6217defb8aacc1.html#exhale-variable-pack-8c-1a182e5dd719201aff2b6217defb8aacc1"><span class="std std-ref">Variable soc_timer</span></a></li>
+<li><a class="reference internal" href="variable_pack_8c_1a232b686d286a16d23e8f9e39d5fc346a.html#exhale-variable-pack-8c-1a232b686d286a16d23e8f9e39d5fc346a"><span class="std std-ref">Variable soc_total</span></a></li>
 </ul>
 </div>
 </div>

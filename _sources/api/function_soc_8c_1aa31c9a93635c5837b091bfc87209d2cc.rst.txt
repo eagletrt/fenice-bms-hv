@@ -1,0 +1,13 @@
+.. _exhale_function_soc_8c_1aa31c9a93635c5837b091bfc87209d2cc:
+
+Function soc_reset_count(soc_t, uint32_t)
+=========================================
+
+- Defined in :ref:`file_mainboard_Src_soc.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: soc_reset_count(soc_t, uint32_t)

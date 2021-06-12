@@ -1,0 +1,13 @@
+.. _exhale_function_pack_8h_1a23cbb179425ee2e46181a07125be3b69:
+
+Function pack_get_energy_total()
+================================
+
+- Defined in :ref:`file_mainboard_Inc_pack.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: pack_get_energy_total()

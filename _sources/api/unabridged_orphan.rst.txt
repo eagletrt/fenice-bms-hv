@@ -255,6 +255,16 @@ Files
 .. toctree::
    :maxdepth: 5
 
+   file_mainboard_Src_soc.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Inc_soc.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
    file_mainboard_Src_spi.c.rst
 
 .. toctree::

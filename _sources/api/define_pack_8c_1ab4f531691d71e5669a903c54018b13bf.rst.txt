@@ -1,0 +1,13 @@
+.. _exhale_define_pack_8c_1ab4f531691d71e5669a903c54018b13bf:
+
+Define SOC_VERSION
+==================
+
+- Defined in :ref:`file_mainboard_Src_pack.c`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: SOC_VERSION
