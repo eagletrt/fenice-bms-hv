@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 5 11
 Title "Fenice BMS - CellBoard"
 Date "2021-06-11"
-Rev "v2.1.2.5"
+Rev "v2.2"
 Comp "E-Agle TRT"
 Comment1 ""
 Comment2 ""
