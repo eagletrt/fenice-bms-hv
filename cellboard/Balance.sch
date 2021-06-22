@@ -3,11 +3,11 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 10 10
-Title ""
-Date ""
-Rev "v2.1.4"
-Comp ""
+Sheet 2 11
+Title "Fenice BMS - CellBoard"
+Date "2021-06-11"
+Rev "v2.1.2.5"
+Comp "E-Agle TRT"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -19,8 +19,8 @@ U 1 1 5D73C2B3
 P 8550 6100
 AR Path="/5D6A2002/5D73C2B3" Ref="Q1"  Part="1" 
 AR Path="/5DECF668/5D73C2B3" Ref="Q?"  Part="1" 
-F 0 "Q1" H 8755 6100 50  0000 L CNN
-F 1 "BSS308PE" H 8755 6145 50  0001 L CNN
+F 0 "Q1" H 8750 6000 50  0000 L CNN
+F 1 "TSM3401CX RFG" H 8750 6100 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 8750 6200 50  0001 C CNN
 F 3 "~" H 8550 6100 50  0001 C CNN
 	1    8550 6100
@@ -32,8 +32,8 @@ U 1 1 5D73C2BF
 P 8550 5350
 AR Path="/5D6A2002/5D73C2BF" Ref="Q2"  Part="1" 
 AR Path="/5DECF668/5D73C2BF" Ref="Q?"  Part="1" 
-F 0 "Q2" H 8755 5350 50  0000 L CNN
-F 1 "BSS308PE" H 8755 5395 50  0001 L CNN
+F 0 "Q2" H 8750 5250 50  0000 L CNN
+F 1 "TSM3401CX RFG" H 8750 5350 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 8750 5450 50  0001 C CNN
 F 3 "~" H 8550 5350 50  0001 C CNN
 	1    8550 5350
@@ -45,8 +45,8 @@ U 1 1 5D73C2C6
 P 8550 3750
 AR Path="/5D6A2002/5D73C2C6" Ref="Q3"  Part="1" 
 AR Path="/5DECF668/5D73C2C6" Ref="Q?"  Part="1" 
-F 0 "Q3" H 8755 3750 50  0000 L CNN
-F 1 "BSS308PE" H 8755 3795 50  0001 L CNN
+F 0 "Q3" H 8750 3700 50  0000 L CNN
+F 1 "TSM3401CX RFG" H 8755 3795 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 8750 3850 50  0001 C CNN
 F 3 "~" H 8550 3750 50  0001 C CNN
 	1    8550 3750
@@ -58,8 +58,8 @@ U 1 1 5D73C2CD
 P 8550 3000
 AR Path="/5D6A2002/5D73C2CD" Ref="Q4"  Part="1" 
 AR Path="/5DECF668/5D73C2CD" Ref="Q?"  Part="1" 
-F 0 "Q4" H 8755 3000 50  0000 L CNN
-F 1 "BSS308PE" H 8755 3045 50  0001 L CNN
+F 0 "Q4" H 8750 2950 50  0000 L CNN
+F 1 "TSM3401CX RFG" H 8755 3045 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 8750 3100 50  0001 C CNN
 F 3 "~" H 8550 3000 50  0001 C CNN
 	1    8550 3000
@@ -71,8 +71,8 @@ U 1 1 5D73C2D4
 P 8550 2250
 AR Path="/5D6A2002/5D73C2D4" Ref="Q5"  Part="1" 
 AR Path="/5DECF668/5D73C2D4" Ref="Q?"  Part="1" 
-F 0 "Q5" H 8755 2250 50  0000 L CNN
-F 1 "BSS308PE" H 8755 2295 50  0001 L CNN
+F 0 "Q5" H 8750 2200 50  0000 L CNN
+F 1 "TSM3401CX RFG" H 8755 2295 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 8750 2350 50  0001 C CNN
 F 3 "~" H 8550 2250 50  0001 C CNN
 	1    8550 2250
@@ -84,17 +84,15 @@ U 1 1 5D73C2DD
 P 5350 6550
 AR Path="/5D6A2002/5D73C2DD" Ref="Q8"  Part="1" 
 AR Path="/5DECF668/5D73C2DD" Ref="Q?"  Part="1" 
-F 0 "Q8" H 5555 6550 50  0000 L CNN
-F 1 "BSS308PE" H 5555 6595 50  0001 L CNN
+F 0 "Q8" H 5550 6500 50  0000 L CNN
+F 1 "TSM3401CX RFG" H 5555 6595 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 5550 6650 50  0001 C CNN
 F 3 "~" H 5350 6550 50  0001 C CNN
 	1    5350 6550
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	7550 6400 7700 6400
 $Comp
-L CellsBoard:R R48
+L Device:R R48
 U 1 1 5D73C385
 P 1150 2500
 AR Path="/5D6A2002/5D73C385" Ref="R48"  Part="1" 
@@ -107,7 +105,7 @@ F 3 "~" H 1150 2500 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L CellsBoard:R R37
+L Device:R R37
 U 1 1 5D73C3C7
 P 7900 1750
 AR Path="/5D6A2002/5D73C3C7" Ref="R37"  Part="1" 
@@ -120,7 +118,7 @@ F 3 "~" H 7900 1750 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L CellsBoard:R R36
+L Device:R R36
 U 1 1 5D73C3CD
 P 7900 2500
 AR Path="/5D6A2002/5D73C3CD" Ref="R36"  Part="1" 
@@ -133,7 +131,7 @@ F 3 "~" H 7900 2500 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L CellsBoard:R R35
+L Device:R R35
 U 1 1 5D73C3D3
 P 7900 3250
 AR Path="/5D6A2002/5D73C3D3" Ref="R35"  Part="1" 
@@ -146,7 +144,7 @@ F 3 "~" H 7900 3250 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L CellsBoard:R R32
+L Device:R R32
 U 1 1 5D73C3E5
 P 7900 6300
 AR Path="/5D6A2002/5D73C3E5" Ref="R32"  Part="1" 
@@ -164,8 +162,8 @@ U 1 1 5D73C422
 P 8550 1500
 AR Path="/5D6A2002/5D73C422" Ref="Q6"  Part="1" 
 AR Path="/5DECF668/5D73C422" Ref="Q?"  Part="1" 
-F 0 "Q6" H 8755 1500 50  0000 L CNN
-F 1 "BSS308PE" H 8755 1545 50  0001 L CNN
+F 0 "Q6" H 8750 1400 50  0000 L CNN
+F 1 "TSM3401CX RFG" H 8750 1500 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 8750 1600 50  0001 C CNN
 F 3 "~" H 8550 1500 50  0001 C CNN
 	1    8550 1500
@@ -231,8 +229,8 @@ U 1 1 5D73C2E4
 P 5350 5800
 AR Path="/5D6A2002/5D73C2E4" Ref="Q9"  Part="1" 
 AR Path="/5DECF668/5D73C2E4" Ref="Q?"  Part="1" 
-F 0 "Q9" H 5555 5800 50  0000 L CNN
-F 1 "BSS308PE" H 5555 5845 50  0001 L CNN
+F 0 "Q9" H 5550 5750 50  0000 L CNN
+F 1 "TSM3401CX RFG" H 5555 5845 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 5550 5900 50  0001 C CNN
 F 3 "~" H 5350 5800 50  0001 C CNN
 	1    5350 5800
@@ -244,8 +242,8 @@ U 1 1 5D73C2EB
 P 5350 5050
 AR Path="/5D6A2002/5D73C2EB" Ref="Q10"  Part="1" 
 AR Path="/5DECF668/5D73C2EB" Ref="Q?"  Part="1" 
-F 0 "Q10" H 5555 5050 50  0000 L CNN
-F 1 "BSS308PE" H 5555 5095 50  0001 L CNN
+F 0 "Q10" H 5550 5000 50  0000 L CNN
+F 1 "TSM3401CX RFG" H 5555 5095 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 5550 5150 50  0001 C CNN
 F 3 "~" H 5350 5050 50  0001 C CNN
 	1    5350 5050
@@ -257,8 +255,8 @@ U 1 1 5D73C2F2
 P 1800 7300
 AR Path="/5D6A2002/5D73C2F2" Ref="Q11"  Part="1" 
 AR Path="/5DECF668/5D73C2F2" Ref="Q?"  Part="1" 
-F 0 "Q11" H 2005 7300 50  0000 L CNN
-F 1 "BSS308PE" H 2005 7345 50  0001 L CNN
+F 0 "Q11" H 2000 7250 50  0000 L CNN
+F 1 "TSM3401CX RFG" H 2005 7345 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 2000 7400 50  0001 C CNN
 F 3 "~" H 1800 7300 50  0001 C CNN
 	1    1800 7300
@@ -270,15 +268,15 @@ U 1 1 5D73C2F9
 P 1800 6550
 AR Path="/5D6A2002/5D73C2F9" Ref="Q12"  Part="1" 
 AR Path="/5DECF668/5D73C2F9" Ref="Q?"  Part="1" 
-F 0 "Q12" H 2005 6550 50  0000 L CNN
-F 1 "BSS308PE" H 2005 6595 50  0001 L CNN
+F 0 "Q12" H 2000 6500 50  0000 L CNN
+F 1 "TSM3401CX RFG" H 2005 6595 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 2000 6650 50  0001 C CNN
 F 3 "~" H 1800 6550 50  0001 C CNN
 	1    1800 6550
 	-1   0    0    1   
 $EndComp
 $Comp
-L CellsBoard:R R40
+L Device:R R40
 U 1 1 5D73C3B5
 P 4700 6050
 AR Path="/5D6A2002/5D73C3B5" Ref="R40"  Part="1" 
@@ -291,7 +289,7 @@ F 3 "~" H 4700 6050 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L CellsBoard:R R41
+L Device:R R41
 U 1 1 5D73C3AF
 P 4700 5300
 AR Path="/5D6A2002/5D73C3AF" Ref="R41"  Part="1" 
@@ -304,7 +302,7 @@ F 3 "~" H 4700 5300 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L CellsBoard:R R43
+L Device:R R43
 U 1 1 5D73C3A9
 P 1150 6800
 AR Path="/5D6A2002/5D73C3A9" Ref="R43"  Part="1" 
@@ -317,7 +315,7 @@ F 3 "~" H 1150 6800 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L CellsBoard:R R42
+L Device:R R42
 U 1 1 5D73C3A3
 P 1150 7550
 AR Path="/5D6A2002/5D73C3A3" Ref="R42"  Part="1" 
@@ -330,7 +328,7 @@ F 3 "~" H 1150 7550 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L CellsBoard:R R44
+L Device:R R44
 U 1 1 5D73C39D
 P 1150 6050
 AR Path="/5D6A2002/5D73C39D" Ref="R44"  Part="1" 
@@ -343,7 +341,7 @@ F 3 "~" H 1150 6050 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L CellsBoard:R R45
+L Device:R R45
 U 1 1 5D73C397
 P 1150 5300
 AR Path="/5D6A2002/5D73C397" Ref="R45"  Part="1" 
@@ -356,7 +354,7 @@ F 3 "~" H 1150 5300 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L CellsBoard:R R46
+L Device:R R46
 U 1 1 5D73C391
 P 1150 4000
 AR Path="/5D6A2002/5D73C391" Ref="R46"  Part="1" 
@@ -369,7 +367,7 @@ F 3 "~" H 1150 4000 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L CellsBoard:R R47
+L Device:R R47
 U 1 1 5D73C38B
 P 1150 3250
 AR Path="/5D6A2002/5D73C38B" Ref="R47"  Part="1" 
@@ -419,8 +417,8 @@ U 1 1 5D73C307
 P 1800 5050
 AR Path="/5D6A2002/5D73C307" Ref="Q14"  Part="1" 
 AR Path="/5DECF668/5D73C307" Ref="Q?"  Part="1" 
-F 0 "Q14" H 2005 5050 50  0000 L CNN
-F 1 "BSS308PE" H 2005 5095 50  0001 L CNN
+F 0 "Q14" H 2000 5000 50  0000 L CNN
+F 1 "TSM3401CX RFG" H 2005 5095 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 2000 5150 50  0001 C CNN
 F 3 "~" H 1800 5050 50  0001 C CNN
 	1    1800 5050
@@ -434,8 +432,8 @@ U 1 1 5D73C300
 P 1800 5800
 AR Path="/5D6A2002/5D73C300" Ref="Q13"  Part="1" 
 AR Path="/5DECF668/5D73C300" Ref="Q?"  Part="1" 
-F 0 "Q13" H 2005 5800 50  0000 L CNN
-F 1 "BSS308PE" H 2005 5845 50  0001 L CNN
+F 0 "Q13" H 2000 5750 50  0000 L CNN
+F 1 "TSM3401CX RFG" H 2005 5845 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 2000 5900 50  0001 C CNN
 F 3 "~" H 1800 5800 50  0001 C CNN
 	1    1800 5800
@@ -449,14 +447,10 @@ Wire Wire Line
 	9050 5550 8750 5550
 Wire Wire Line
 	8750 5550 8750 6100
-Wire Wire Line
-	9450 5650 9450 5700
 Text HLabel 850  1850 0    50   Input ~ 0
 CB17
 Text HLabel 850  2600 0    50   Input ~ 0
 CB16
-Wire Wire Line
-	1000 1850 950  1850
 Text HLabel 850  3350 0    50   Input ~ 0
 CB15
 Text HLabel 850  4800 0    50   Input ~ 0
@@ -467,7 +461,7 @@ Text HLabel 850  6150 0    50   Input ~ 0
 CB12
 Text HLabel 850  6900 0    50   Input ~ 0
 CB11
-Text HLabel 850  7650 0    50   Input ~ 0
+Text HLabel 850  7550 0    50   Input ~ 0
 CB10
 Text HLabel 4400 5400 0    50   Input ~ 0
 CB9
@@ -483,14 +477,14 @@ Text HLabel 7600 3350 0    50   Input ~ 0
 CB3
 Text HLabel 7550 5100 0    50   Input ~ 0
 CB2
-Text HLabel 7550 6400 0    50   Input ~ 0
+Text HLabel 7550 6300 0    50   Input ~ 0
 CB0
 Text HLabel 4400 4800 0    50   Input ~ 0
 CB10
 Wire Wire Line
 	950  2600 850  2600
 $Comp
-L CellsBoard:R R34
+L Device:R R34
 U 1 1 5D73C3D9
 P 7900 4000
 AR Path="/5D6A2002/5D73C3D9" Ref="R34"  Part="1" 
@@ -505,20 +499,14 @@ $EndComp
 Wire Wire Line
 	950  3350 850  3350
 Wire Wire Line
-	850  4100 950  4100
-Wire Wire Line
 	1700 5600 1700 5550
 Wire Wire Line
-	1000 6150 950  6150
-Wire Wire Line
 	8450 1300 7600 1300
-Wire Wire Line
-	7750 2600 7700 2600
 Wire Wire Line
 	8450 5100 7550 5100
 Wire Wire Line
 	5250 4800 4400 4800
-Text HLabel 7600 4100 0    50   Input ~ 0
+Text HLabel 7600 4000 0    50   Input ~ 0
 CB2
 Text HLabel 2900 2350 2    50   Input ~ 0
 S18
@@ -573,19 +561,6 @@ S1
 Text HLabel 9650 2700 2    50   Input ~ 0
 S3
 $Comp
-L Device:R_Pack04 RN1
-U 1 1 5D59C73F
-P 9250 5550
-AR Path="/5D6A2002/5D59C73F" Ref="RN1"  Part="1" 
-AR Path="/5DECF668/5D59C73F" Ref="RN?"  Part="1" 
-F 0 "RN1" V 9450 5550 50  0000 C CNN
-F 1 "3K3" V 8950 5550 50  0000 C CNN
-F 2 "Resistor_SMD:R_Array_Convex_4x0603" V 9525 5550 50  0001 C CNN
-F 3 "~" H 9250 5550 50  0001 C CNN
-	1    9250 5550
-	0    -1   -1   0   
-$EndComp
-$Comp
 L Device:R_Pack04 RN2
 U 1 1 5D5A16F4
 P 9250 2500
@@ -624,24 +599,6 @@ F 3 "~" H 2500 2450 50  0001 C CNN
 	1    2500 2450
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	9650 5700 9450 5700
-Text HLabel 9650 5700 2    50   Input ~ 0
-CB0
-Connection ~ 9450 5700
-Wire Wire Line
-	9450 5700 9450 5750
-Wire Wire Line
-	9050 5650 9000 5650
-Wire Wire Line
-	9000 5650 9000 5750
-Wire Wire Line
-	9000 5750 9050 5750
-Text HLabel 9000 5850 3    50   Input ~ 0
-CB0
-Wire Wire Line
-	9000 5850 9000 5750
-Connection ~ 9000 5750
 Text Label 8750 5350 0    50   ~ 0
 Q_S2
 Text Label 8750 5550 0    50   ~ 0
@@ -674,79 +631,6 @@ Text Label 2200 3000 2    50   ~ 0
 Q_S16
 Text Label 2200 2250 2    50   ~ 0
 Q_S17
-$Comp
-L CellsBoard:R R1
-U 1 1 5E585B4F
-P 7900 6400
-AR Path="/5D6A2002/5E585B4F" Ref="R1"  Part="1" 
-AR Path="/5DECF668/5E585B4F" Ref="R?"  Part="1" 
-F 0 "R1" V 7800 6400 50  0000 C CNN
-F 1 "Rdsc" V 7900 6400 50  0000 C CNN
-F 2 "Resistor_SMD:R_2512_6332Metric" V 7830 6400 50  0001 C CNN
-F 3 "~" H 7900 6400 50  0001 C CNN
-	1    7900 6400
-	0    -1   -1   0   
-$EndComp
-$Comp
-L CellsBoard:R R3
-U 1 1 5E5AAF30
-P 7900 4100
-AR Path="/5D6A2002/5E5AAF30" Ref="R3"  Part="1" 
-AR Path="/5DECF668/5E5AAF30" Ref="R?"  Part="1" 
-F 0 "R3" V 7800 4100 50  0000 C CNN
-F 1 "Rdsc" V 7900 4100 50  0000 C CNN
-F 2 "Resistor_SMD:R_2512_6332Metric" V 7830 4100 50  0001 C CNN
-F 3 "~" H 7900 4100 50  0001 C CNN
-	1    7900 4100
-	0    -1   -1   0   
-$EndComp
-$Comp
-L CellsBoard:R R5
-U 1 1 5E5AB553
-P 7900 2600
-AR Path="/5D6A2002/5E5AB553" Ref="R5"  Part="1" 
-AR Path="/5DECF668/5E5AB553" Ref="R?"  Part="1" 
-F 0 "R5" V 7800 2600 50  0000 C CNN
-F 1 "Rdsc" V 7900 2600 50  0000 C CNN
-F 2 "Resistor_SMD:R_2512_6332Metric" V 7830 2600 50  0001 C CNN
-F 3 "~" H 7900 2600 50  0001 C CNN
-	1    7900 2600
-	0    -1   -1   0   
-$EndComp
-$Comp
-L CellsBoard:R R6
-U 1 1 5E5C541D
-P 7900 1850
-AR Path="/5D6A2002/5E5C541D" Ref="R6"  Part="1" 
-AR Path="/5DECF668/5E5C541D" Ref="R?"  Part="1" 
-F 0 "R6" V 7800 1850 50  0000 C CNN
-F 1 "Rdsc" V 7900 1850 50  0000 C CNN
-F 2 "Resistor_SMD:R_2512_6332Metric" V 7830 1850 50  0001 C CNN
-F 3 "~" H 7900 1850 50  0001 C CNN
-	1    7900 1850
-	0    -1   -1   0   
-$EndComp
-$Comp
-L CellsBoard:R R9
-U 1 1 5E5C5B6B
-P 4700 6150
-AR Path="/5D6A2002/5E5C5B6B" Ref="R9"  Part="1" 
-AR Path="/5DECF668/5E5C5B6B" Ref="R?"  Part="1" 
-F 0 "R9" V 4600 6150 50  0000 C CNN
-F 1 "Rdsc" V 4700 6150 50  0000 C CNN
-F 2 "Resistor_SMD:R_2512_6332Metric" V 4630 6150 50  0001 C CNN
-F 3 "~" H 4700 6150 50  0001 C CNN
-	1    4700 6150
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	1000 7550 950  7550
-Wire Wire Line
-	1000 7650 950  7650
-Wire Wire Line
-	950  7650 950  7550
-Wire Wire Line
-	950  7650 850  7650
 Wire Wire Line
 	5800 6200 5850 6200
 Wire Wire Line
@@ -775,149 +659,7 @@ F 3 "~" H 6050 6100 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L CellsBoard:R R10
-U 1 1 5E69CE71
-P 4700 5400
-AR Path="/5D6A2002/5E69CE71" Ref="R10"  Part="1" 
-AR Path="/5DECF668/5E69CE71" Ref="R?"  Part="1" 
-F 0 "R10" V 4600 5400 50  0000 C CNN
-F 1 "Rdsc" V 4700 5400 50  0000 C CNN
-F 2 "Resistor_SMD:R_2512_6332Metric" V 4630 5400 50  0001 C CNN
-F 3 "~" H 4700 5400 50  0001 C CNN
-	1    4700 5400
-	0    -1   -1   0   
-$EndComp
-$Comp
-L CellsBoard:R R11
-U 1 1 5E6A3E95
-P 1150 7650
-AR Path="/5D6A2002/5E6A3E95" Ref="R11"  Part="1" 
-AR Path="/5DECF668/5E6A3E95" Ref="R?"  Part="1" 
-F 0 "R11" V 1050 7650 50  0000 C CNN
-F 1 "Rdsc" V 1150 7650 50  0000 C CNN
-F 2 "Resistor_SMD:R_2512_6332Metric" V 1080 7650 50  0001 C CNN
-F 3 "~" H 1150 7650 50  0001 C CNN
-	1    1150 7650
-	0    -1   -1   0   
-$EndComp
-$Comp
-L CellsBoard:R R12
-U 1 1 5E6AAC0C
-P 1150 6900
-AR Path="/5D6A2002/5E6AAC0C" Ref="R12"  Part="1" 
-AR Path="/5DECF668/5E6AAC0C" Ref="R?"  Part="1" 
-F 0 "R12" V 1050 6900 50  0000 C CNN
-F 1 "Rdsc" V 1150 6900 50  0000 C CNN
-F 2 "Resistor_SMD:R_2512_6332Metric" V 1080 6900 50  0001 C CNN
-F 3 "~" H 1150 6900 50  0001 C CNN
-	1    1150 6900
-	0    -1   -1   0   
-$EndComp
-$Comp
-L CellsBoard:R R13
-U 1 1 5E6AB11F
-P 1150 6150
-AR Path="/5D6A2002/5E6AB11F" Ref="R13"  Part="1" 
-AR Path="/5DECF668/5E6AB11F" Ref="R?"  Part="1" 
-F 0 "R13" V 1050 6150 50  0000 C CNN
-F 1 "Rdsc" V 1150 6150 50  0000 C CNN
-F 2 "Resistor_SMD:R_2512_6332Metric" V 1080 6150 50  0001 C CNN
-F 3 "~" H 1150 6150 50  0001 C CNN
-	1    1150 6150
-	0    -1   -1   0   
-$EndComp
-$Comp
-L CellsBoard:R R14
-U 1 1 5E6C7C9D
-P 1150 5400
-AR Path="/5D6A2002/5E6C7C9D" Ref="R14"  Part="1" 
-AR Path="/5DECF668/5E6C7C9D" Ref="R?"  Part="1" 
-F 0 "R14" V 1050 5400 50  0000 C CNN
-F 1 "Rdsc" V 1150 5400 50  0000 C CNN
-F 2 "Resistor_SMD:R_2512_6332Metric" V 1080 5400 50  0001 C CNN
-F 3 "~" H 1150 5400 50  0001 C CNN
-	1    1150 5400
-	0    -1   -1   0   
-$EndComp
-$Comp
-L CellsBoard:R R15
-U 1 1 5E6CEF8E
-P 1150 4100
-AR Path="/5D6A2002/5E6CEF8E" Ref="R15"  Part="1" 
-AR Path="/5DECF668/5E6CEF8E" Ref="R?"  Part="1" 
-F 0 "R15" V 1050 4100 50  0000 C CNN
-F 1 "Rdsc" V 1150 4100 50  0000 C CNN
-F 2 "Resistor_SMD:R_2512_6332Metric" V 1080 4100 50  0001 C CNN
-F 3 "~" H 1150 4100 50  0001 C CNN
-	1    1150 4100
-	0    -1   -1   0   
-$EndComp
-$Comp
-L CellsBoard:R R16
-U 1 1 5E6CF32B
-P 1150 3350
-AR Path="/5D6A2002/5E6CF32B" Ref="R16"  Part="1" 
-AR Path="/5DECF668/5E6CF32B" Ref="R?"  Part="1" 
-F 0 "R16" V 1050 3350 50  0000 C CNN
-F 1 "Rdsc" V 1150 3350 50  0000 C CNN
-F 2 "Resistor_SMD:R_2512_6332Metric" V 1080 3350 50  0001 C CNN
-F 3 "~" H 1150 3350 50  0001 C CNN
-	1    1150 3350
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	7750 4100 7700 4100
-$Comp
-L CellsBoard:R R17
-U 1 1 5E7063EC
-P 1150 2600
-AR Path="/5D6A2002/5E7063EC" Ref="R17"  Part="1" 
-AR Path="/5DECF668/5E7063EC" Ref="R?"  Part="1" 
-F 0 "R17" V 1050 2600 50  0000 C CNN
-F 1 "Rdsc" V 1150 2600 50  0000 C CNN
-F 2 "Resistor_SMD:R_2512_6332Metric" V 1080 2600 50  0001 C CNN
-F 3 "~" H 1150 2600 50  0001 C CNN
-	1    1150 2600
-	0    -1   -1   0   
-$EndComp
-$Comp
-L CellsBoard:R R18
-U 1 1 5E70E9DF
-P 1150 1850
-AR Path="/5D6A2002/5E70E9DF" Ref="R18"  Part="1" 
-AR Path="/5DECF668/5E70E9DF" Ref="R?"  Part="1" 
-F 0 "R18" V 1050 1850 50  0000 C CNN
-F 1 "Rdsc" V 1150 1850 50  0000 C CNN
-F 2 "Resistor_SMD:R_2512_6332Metric" V 1080 1850 50  0001 C CNN
-F 3 "~" H 1150 1850 50  0001 C CNN
-	1    1150 1850
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	8450 6300 8100 6300
-Wire Wire Line
-	7750 6400 7700 6400
-Wire Wire Line
-	7700 6400 7700 6300
-Wire Wire Line
-	7700 6300 7750 6300
-$Comp
-L CellsBoard:R R4
-U 1 1 5E71F91C
-P 7900 3350
-AR Path="/5D6A2002/5E71F91C" Ref="R4"  Part="1" 
-AR Path="/5DECF668/5E71F91C" Ref="R?"  Part="1" 
-F 0 "R4" V 7800 3350 50  0000 C CNN
-F 1 "Rdsc" V 7900 3350 50  0000 C CNN
-F 2 "Resistor_SMD:R_2512_6332Metric" V 7830 3350 50  0001 C CNN
-F 3 "~" H 7900 3350 50  0001 C CNN
-	1    7900 3350
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	4550 6900 4500 6900
-$Comp
-L CellsBoard:R R49
+L Device:R R49
 U 1 1 5E94906A
 P 1150 1750
 AR Path="/5D6A2002/5E94906A" Ref="R49"  Part="1" 
@@ -952,7 +694,7 @@ F 3 "~" H 1800 1500 50  0001 C CNN
 	1    1800 1500
 	-1   0    0    1   
 $EndComp
-Text HLabel 850  4100 0    50   Input ~ 0
+Text HLabel 850  4000 0    50   Input ~ 0
 CB14
 Text Label 1400 1750 0    50   ~ 0
 DIS_18
@@ -962,7 +704,6 @@ Text Label 1400 3250 0    50   ~ 0
 DIS_16
 Text Label 1400 4000 0    50   ~ 0
 DIS_15
-Connection ~ 950  7650
 Text Label 1400 5300 0    50   ~ 0
 DIS_14
 Text Label 1400 6050 0    50   ~ 0
@@ -979,25 +720,16 @@ Wire Wire Line
 	2300 6250 2300 7300
 Wire Wire Line
 	2300 3750 2300 2650
-Wire Wire Line
-	4850 5400 4900 5400
 Text Label 4950 5300 0    50   ~ 0
 DIS_10
-Wire Wire Line
-	4850 6050 4900 6050
 Text Label 4950 6050 0    50   ~ 0
 DIS_9
-Connection ~ 7700 6400
 Text Label 8150 6300 0    50   ~ 0
 DIS_1
 Wire Wire Line
 	8750 1500 9050 1500
 Wire Wire Line
 	9050 1500 9050 2400
-Wire Wire Line
-	8050 2500 8100 2500
-Wire Wire Line
-	8450 3250 8100 3250
 Text Label 8150 1750 0    50   ~ 0
 DIS_6
 Text Label 8150 2500 0    50   ~ 0
@@ -1017,32 +749,10 @@ Wire Wire Line
 	4550 6800 4500 6800
 Wire Wire Line
 	4500 6800 4500 6900
-Wire Wire Line
-	4900 6800 5250 6800
-Connection ~ 4900 6800
-Wire Wire Line
-	4900 6900 4900 6800
-Wire Wire Line
-	4850 6900 4900 6900
 Text Label 4950 6800 0    50   ~ 0
 DIS_8
-Wire Wire Line
-	4850 6800 4900 6800
 $Comp
-L CellsBoard:R R8
-U 1 1 5E5C5931
-P 4700 6900
-AR Path="/5D6A2002/5E5C5931" Ref="R8"  Part="1" 
-AR Path="/5DECF668/5E5C5931" Ref="R?"  Part="1" 
-F 0 "R8" V 4600 6900 50  0000 C CNN
-F 1 "Rdsc" V 4700 6900 50  0000 C CNN
-F 2 "Resistor_SMD:R_2512_6332Metric" V 4630 6900 50  0001 C CNN
-F 3 "~" H 4700 6900 50  0001 C CNN
-	1    4700 6900
-	0    -1   -1   0   
-$EndComp
-$Comp
-L CellsBoard:R R39
+L Device:R R39
 U 1 1 5D73C3BB
 P 4700 6800
 AR Path="/5D6A2002/5D73C3BB" Ref="R39"  Part="1" 
@@ -1061,68 +771,27 @@ Wire Wire Line
 Wire Wire Line
 	4500 6050 4500 6150
 Wire Wire Line
-	4500 6150 4550 6150
-Wire Wire Line
-	4850 6150 4900 6150
-Wire Wire Line
-	4900 6150 4900 6050
-Connection ~ 4900 6050
-Wire Wire Line
-	4900 6050 5250 6050
-Wire Wire Line
 	4400 6150 4500 6150
 Connection ~ 4500 6150
 Wire Wire Line
 	4400 5400 4500 5400
 Wire Wire Line
-	4850 5300 4900 5300
-Wire Wire Line
-	4900 5300 4900 5400
-Wire Wire Line
 	5250 5300 5250 5250
-Wire Wire Line
-	5250 5300 4900 5300
-Connection ~ 4900 5300
 Wire Wire Line
 	4550 5300 4500 5300
 Wire Wire Line
 	4500 5300 4500 5400
-Wire Wire Line
-	4550 5400 4500 5400
 Connection ~ 4500 5400
 Wire Wire Line
 	4500 5400 4500 5550
 Wire Wire Line
-	8050 6400 8100 6400
-Wire Wire Line
-	8100 6400 8100 6300
-Connection ~ 8100 6300
-Wire Wire Line
-	8100 6300 8050 6300
-Wire Wire Line
 	8450 5550 8450 5600
 Wire Wire Line
-	7750 4000 7700 4000
-Wire Wire Line
-	7700 4000 7700 4100
-Connection ~ 7700 4100
-Wire Wire Line
-	7700 4100 7600 4100
-Wire Wire Line
-	8050 4000 8100 4000
-Wire Wire Line
 	8450 4000 8450 3950
-Wire Wire Line
-	8050 4100 8100 4100
-Wire Wire Line
-	8100 4100 8100 4000
-Connection ~ 8100 4000
-Wire Wire Line
-	8100 4000 8450 4000
 Text HLabel 7550 5700 0    50   Input ~ 0
 CB1
 $Comp
-L CellsBoard:R R33
+L Device:R R33
 U 1 1 5D73C3DF
 P 7900 5600
 AR Path="/5D6A2002/5D73C3DF" Ref="R33"  Part="1" 
@@ -1134,19 +803,6 @@ F 3 "~" H 7900 5600 50  0001 C CNN
 	1    7900 5600
 	0    -1   -1   0   
 $EndComp
-$Comp
-L CellsBoard:R R2
-U 1 1 5E59F7C6
-P 7900 5700
-AR Path="/5D6A2002/5E59F7C6" Ref="R2"  Part="1" 
-AR Path="/5DECF668/5E59F7C6" Ref="R?"  Part="1" 
-F 0 "R2" V 7800 5700 50  0000 C CNN
-F 1 "Rdsc" V 7900 5700 50  0000 C CNN
-F 2 "Resistor_SMD:R_2512_6332Metric" V 7830 5700 50  0001 C CNN
-F 3 "~" H 7900 5700 50  0001 C CNN
-	1    7900 5700
-	0    -1   -1   0   
-$EndComp
 Text Label 8150 5600 0    50   ~ 0
 DIS_2
 Wire Wire Line
@@ -1155,20 +811,9 @@ Wire Wire Line
 	7750 5600 7700 5600
 Wire Wire Line
 	7700 5600 7700 5700
-Wire Wire Line
-	7750 5700 7700 5700
 Connection ~ 7700 5700
 Wire Wire Line
 	7700 5700 7700 5850
-Wire Wire Line
-	8450 5600 8100 5600
-Wire Wire Line
-	8100 5600 8100 5700
-Wire Wire Line
-	8100 5700 8050 5700
-Wire Wire Line
-	8050 5600 8100 5600
-Connection ~ 8100 5600
 Wire Wire Line
 	7600 3350 7700 3350
 Wire Wire Line
@@ -1181,18 +826,9 @@ Wire Wire Line
 	7700 3500 8450 3500
 Connection ~ 7700 3350
 Wire Wire Line
-	7700 3350 7750 3350
-Wire Wire Line
 	7750 3250 7700 3250
 Wire Wire Line
 	7700 3250 7700 3350
-Wire Wire Line
-	8050 3350 8100 3350
-Wire Wire Line
-	8100 3350 8100 3250
-Connection ~ 8100 3250
-Wire Wire Line
-	8100 3250 8050 3250
 Wire Wire Line
 	7750 2500 7700 2500
 Wire Wire Line
@@ -1205,13 +841,6 @@ Wire Wire Line
 Wire Wire Line
 	8450 2500 8450 2450
 Wire Wire Line
-	8050 2600 8100 2600
-Wire Wire Line
-	8100 2600 8100 2500
-Connection ~ 8100 2500
-Wire Wire Line
-	8100 2500 8450 2500
-Wire Wire Line
 	7700 2750 8450 2750
 Wire Wire Line
 	8450 2750 8450 2800
@@ -1222,21 +851,10 @@ Wire Wire Line
 Wire Wire Line
 	7700 1750 7700 1850
 Wire Wire Line
-	7700 1850 7750 1850
-Wire Wire Line
 	7700 1850 7700 2000
 Connection ~ 7700 1850
 Wire Wire Line
-	8050 1850 8100 1850
-Wire Wire Line
-	8100 1850 8100 1750
-Wire Wire Line
-	8100 1750 8450 1750
-Wire Wire Line
 	8450 1750 8450 1700
-Wire Wire Line
-	8100 1750 8050 1750
-Connection ~ 8100 1750
 Wire Wire Line
 	7700 2000 8450 2000
 Wire Wire Line
@@ -1252,44 +870,13 @@ Wire Wire Line
 Wire Wire Line
 	8750 5350 9050 5350
 Wire Wire Line
-	4900 7550 5250 7550
-Connection ~ 4900 7550
-Wire Wire Line
-	4900 7650 4900 7550
-Wire Wire Line
-	4850 7650 4900 7650
-Wire Wire Line
-	4500 7650 4400 7650
-Connection ~ 4500 7650
-Wire Wire Line
-	4500 7550 4500 7650
-Wire Wire Line
-	4550 7550 4500 7550
-Wire Wire Line
 	4500 6900 4500 7050
-Wire Wire Line
-	4850 7550 4900 7550
 Wire Wire Line
 	5250 7500 5250 7550
 Text Label 4950 7550 0    50   ~ 0
 DIS_7
-Wire Wire Line
-	4550 7650 4500 7650
-Text HLabel 4400 7650 0    50   Input ~ 0
+Text HLabel 4400 7550 0    50   Input ~ 0
 CB6
-$Comp
-L CellsBoard:R R7
-U 1 1 5E5C565D
-P 4700 7650
-AR Path="/5D6A2002/5E5C565D" Ref="R7"  Part="1" 
-AR Path="/5DECF668/5E5C565D" Ref="R?"  Part="1" 
-F 0 "R7" V 4600 7650 50  0000 C CNN
-F 1 "Rdsc" V 4700 7650 50  0000 C CNN
-F 2 "Resistor_SMD:R_2512_6332Metric" V 4630 7650 50  0001 C CNN
-F 3 "~" H 4700 7650 50  0001 C CNN
-	1    4700 7650
-	0    -1   -1   0   
-$EndComp
 Text Label 5550 7300 0    50   ~ 0
 Q_S7
 $Comp
@@ -1298,15 +885,15 @@ U 1 1 5D73C41C
 P 5350 7300
 AR Path="/5D6A2002/5D73C41C" Ref="Q7"  Part="1" 
 AR Path="/5DECF668/5D73C41C" Ref="Q?"  Part="1" 
-F 0 "Q7" H 5555 7300 50  0000 L CNN
-F 1 "BSS308PE" H 5555 7345 50  0001 L CNN
+F 0 "Q7" H 5550 7250 50  0000 L CNN
+F 1 "TSM3401CX RFG" H 5555 7345 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 5550 7400 50  0001 C CNN
 F 3 "~" H 5350 7300 50  0001 C CNN
 	1    5350 7300
 	-1   0    0    1   
 $EndComp
 $Comp
-L CellsBoard:R R38
+L Device:R R38
 U 1 1 5D73C3C1
 P 4700 7550
 AR Path="/5D6A2002/5D73C3C1" Ref="R38"  Part="1" 
@@ -1339,16 +926,7 @@ Wire Wire Line
 Wire Wire Line
 	5250 5550 5250 5600
 Wire Wire Line
-	1300 7550 1350 7550
-Wire Wire Line
 	1700 7550 1700 7500
-Wire Wire Line
-	1300 7650 1350 7650
-Wire Wire Line
-	1350 7650 1350 7550
-Connection ~ 1350 7550
-Wire Wire Line
-	1350 7550 1700 7550
 Wire Wire Line
 	850  6900 950  6900
 Wire Wire Line
@@ -1357,22 +935,11 @@ Wire Wire Line
 	950  6800 950  6900
 Connection ~ 950  6900
 Wire Wire Line
-	950  6900 1000 6900
-Wire Wire Line
 	950  7050 1700 7050
 Wire Wire Line
 	950  6900 950  7050
 Wire Wire Line
-	1300 6900 1350 6900
-Wire Wire Line
-	1350 6900 1350 6800
-Wire Wire Line
-	1350 6800 1300 6800
-Wire Wire Line
-	1350 6800 1700 6800
-Wire Wire Line
 	1700 6800 1700 6750
-Connection ~ 1350 6800
 Wire Wire Line
 	1700 7050 1700 7100
 Wire Wire Line
@@ -1389,16 +956,7 @@ Wire Wire Line
 Wire Wire Line
 	1700 6300 950  6300
 Wire Wire Line
-	1300 6150 1350 6150
-Wire Wire Line
-	1350 6150 1350 6050
-Wire Wire Line
-	1350 6050 1300 6050
-Wire Wire Line
-	1350 6050 1700 6050
-Wire Wire Line
 	1700 6050 1700 6000
-Connection ~ 1350 6050
 Wire Wire Line
 	850  5400 950  5400
 Wire Wire Line
@@ -1409,20 +967,9 @@ Wire Wire Line
 	950  5300 1000 5300
 Connection ~ 950  5400
 Wire Wire Line
-	950  5400 1000 5400
-Wire Wire Line
 	950  5400 950  5300
 Wire Wire Line
-	1300 5400 1350 5400
-Wire Wire Line
-	1350 5400 1350 5300
-Wire Wire Line
-	1350 5300 1700 5300
-Wire Wire Line
 	1700 5300 1700 5250
-Wire Wire Line
-	1350 5300 1300 5300
-Connection ~ 1350 5300
 Wire Wire Line
 	1700 4800 1700 4850
 Wire Wire Line
@@ -1430,39 +977,12 @@ Wire Wire Line
 Wire Wire Line
 	1700 3950 1700 4000
 Wire Wire Line
-	1000 4000 950  4000
-Wire Wire Line
-	950  4000 950  4100
-Connection ~ 950  4100
-Wire Wire Line
-	950  4100 1000 4100
-Wire Wire Line
-	1700 4000 1350 4000
-Wire Wire Line
-	1300 4100 1350 4100
-Wire Wire Line
-	1350 4100 1350 4000
-Connection ~ 1350 4000
-Wire Wire Line
-	1350 4000 1300 4000
-Wire Wire Line
 	1000 3250 950  3250
 Wire Wire Line
 	950  3250 950  3350
-Wire Wire Line
-	1000 3350 950  3350
 Connection ~ 950  3350
 Wire Wire Line
-	1300 3350 1350 3350
-Wire Wire Line
-	1350 3350 1350 3250
-Wire Wire Line
-	1350 3250 1700 3250
-Wire Wire Line
 	1700 3200 1700 3250
-Wire Wire Line
-	1300 3250 1350 3250
-Connection ~ 1350 3250
 Wire Wire Line
 	1700 3550 1700 3500
 Wire Wire Line
@@ -1473,20 +993,9 @@ Wire Wire Line
 	1000 2500 950  2500
 Wire Wire Line
 	950  2500 950  2600
-Wire Wire Line
-	1000 2600 950  2600
 Connection ~ 950  2600
 Wire Wire Line
-	1300 2600 1350 2600
-Wire Wire Line
-	1350 2600 1350 2500
-Wire Wire Line
-	1350 2500 1300 2500
-Wire Wire Line
-	1350 2500 1700 2500
-Wire Wire Line
 	1700 2500 1700 2450
-Connection ~ 1350 2500
 Wire Wire Line
 	950  2600 950  2750
 Wire Wire Line
@@ -1520,16 +1029,7 @@ Wire Wire Line
 Wire Wire Line
 	950  2000 1700 2000
 Wire Wire Line
-	1300 1750 1350 1750
-Wire Wire Line
-	1350 1750 1350 1850
-Wire Wire Line
-	1350 1850 1300 1850
-Wire Wire Line
-	1350 1750 1700 1750
-Wire Wire Line
 	1700 1750 1700 1700
-Connection ~ 1350 1750
 Wire Wire Line
 	1700 1250 1700 1300
 Wire Notes Line
@@ -3746,6 +3246,54 @@ FC FC 75 E6 0C 00 00 00 00 00 00 00 42 18 AD 0D 00 00 00 00 00 00 20 06 99 33 00
 80 98 FF 07 55 9E 2E 24 23 8A 1E 61 00 00 00 00 49 45 4E 44 AE 42 60 82 
 EndData
 $EndBitmap
+Text Notes 4050 850  0    100  ~ 0
+PASSIVE DISCHARGE SELECTION\n(power dissipation 2512=3W)\n
+Wire Wire Line
+	1300 1750 1700 1750
+Wire Wire Line
+	1300 2500 1700 2500
+Wire Wire Line
+	1300 3250 1700 3250
+Wire Wire Line
+	1300 4000 1700 4000
+Wire Wire Line
+	850  4000 1000 4000
+Wire Wire Line
+	1300 5300 1700 5300
+Wire Wire Line
+	1300 6050 1700 6050
+Wire Wire Line
+	1300 6800 1700 6800
+Wire Wire Line
+	1300 7550 1700 7550
+Wire Wire Line
+	850  7550 1000 7550
+Wire Wire Line
+	4850 5300 5250 5300
+Wire Wire Line
+	4850 6050 5250 6050
+Wire Wire Line
+	4850 6800 5250 6800
+Wire Wire Line
+	4850 7550 5250 7550
+Wire Wire Line
+	4400 7550 4550 7550
+Wire Wire Line
+	8050 6300 8450 6300
+Wire Wire Line
+	7550 6300 7750 6300
+Wire Wire Line
+	8050 5600 8450 5600
+Wire Wire Line
+	8050 4000 8450 4000
+Wire Wire Line
+	7600 4000 7750 4000
+Wire Wire Line
+	8050 3250 8450 3250
+Wire Wire Line
+	8050 2500 8450 2500
+Wire Wire Line
+	8050 1750 8450 1750
 $Bitmap
 Pos 5100 1650
 Scale 0.500000
@@ -5294,10 +4842,21 @@ BA 74 C9 F3 6F D3 D3 D3 0B 17 2E 8C C4 55 01 A8 DA D0 D0 90 A0 24 35 35 35 3E 3E
 00 00 00 00 00 00 40 C9 FF 03 71 29 42 C3 1D 6C A8 2D 00 00 00 00 49 45 4E 44 AE 42 60 82 
 EndData
 $EndBitmap
-Text Notes 4050 850  0    100  ~ 0
-PASSIVE DISCHARGE SELECTION\n(power dissipation 2512=3W)\n
-Text Notes 3550 3850 0    50   ~ 0
-SINGLE RESISTOR = POPULATE ONLY THE RESISTOR FROM R1 TO R18
-Text Notes 3550 4050 0    50   ~ 0
-DUAL RESISTOR = POPULATE THE RESISTOR FROM R1 TO R18 + FROM R32 TO R49
+$Comp
+L Device:R_Pack04 RN1
+U 1 1 5D59C73F
+P 9250 5550
+AR Path="/5D6A2002/5D59C73F" Ref="RN1"  Part="1" 
+AR Path="/5DECF668/5D59C73F" Ref="RN?"  Part="1" 
+F 0 "RN1" V 9450 5550 50  0000 C CNN
+F 1 "3K3" V 8950 5550 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0603" V 9525 5550 50  0001 C CNN
+F 3 "~" H 9250 5550 50  0001 C CNN
+	1    9250 5550
+	0    -1   -1   0   
+$EndComp
+NoConn ~ 9450 5750
+NoConn ~ 9450 5650
+NoConn ~ 9050 5650
+NoConn ~ 9050 5750
 $EndSCHEMATC

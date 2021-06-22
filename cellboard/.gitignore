@@ -9,6 +9,10 @@
 *.sch-bak
 *.kicad_pcb-bak
 
+#outputs
+/output/*
+
 
 # other files
 other/
+nak/

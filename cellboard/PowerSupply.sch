@@ -3,625 +3,652 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 10
-Title ""
-Date ""
-Rev "v2.1.4"
-Comp ""
+Sheet 4 11
+Title "Fenice BMS - CellBoard"
+Date "2021-06-11"
+Rev "v2.1.2.5"
+Comp "E-Agle TRT"
 Comment1 ""
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text Notes 5050 5100 0    50   ~ 0
+ToMain
+Text HLabel 2700 2350 0    50   Input ~ 0
+GND_ISO
 $Comp
-L CellsBoard:C C40
-U 1 1 5C169292
-P 6000 2450
-F 0 "C40" V 5850 2450 50  0000 C CNN
-F 1 "10pF" V 6150 2450 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 6038 2300 50  0001 C CNN
-F 3 "VJ0805A4R7BXXCW1BC" H 6000 2450 50  0001 C CNN
-	1    6000 2450
+L Relay_SolidState:CPC1117N U2
+U 1 1 615A0959
+P 3400 2250
+AR Path="/60C84861/615A0959" Ref="U2"  Part="1" 
+AR Path="/5DECF668/5DEB81A3/615A0959" Ref="U2"  Part="1" 
+AR Path="/60CD4ECF/615A0959" Ref="U3"  Part="1" 
+F 0 "U3" H 3400 2575 50  0000 C CNN
+F 1 "CPC1125N" H 3400 2484 50  0000 C CNN
+F 2 "Package_SO:SOP-4_3.8x4.1mm_P2.54mm" H 3200 2050 50  0001 L CIN
+F 3 "https://eu.mouser.com/datasheet/2/240/CPC1125N-1548216.pdf" H 3350 2250 50  0001 L CNN
+	1    3400 2250
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6000 2300 6400 2300
-Wire Wire Line
-	6000 2600 6400 2600
 $Comp
-L CellsBoard:R R22
-U 1 1 5C16929F
-P 6400 2450
-F 0 "R22" V 6300 2450 50  0000 C CNN
-F 1 "1M" V 6400 2450 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 6330 2450 50  0001 C CNN
-F 3 "~" H 6400 2450 50  0001 C CNN
-	1    6400 2450
+L Device:L L1
+U 1 1 615B650E
+P 6150 2750
+AR Path="/60C84861/615B650E" Ref="L1"  Part="1" 
+AR Path="/5DECF668/5DEB81A3/615B650E" Ref="L1"  Part="1" 
+AR Path="/60CD4ECF/615B650E" Ref="L1"  Part="1" 
+F 0 "L1" V 6250 2850 50  0000 C CNN
+F 1 "56u" V 6250 2650 50  0000 C CNN
+F 2 "CellsBoard:sdr1307" H 6150 2750 50  0001 C CNN
+F 3 "https://eu.mouser.com/ProductDetail/Bourns/SDR1307-560KL?qs=%2Fha2pyFadujozPExgq%252Ba3%2FN9wLayx4c6WuLGEqGFxOZ4fi1TExskhw%3D%3D" H 6150 2750 50  0001 C CNN
+	1    6150 2750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 615B9311
+P 3100 3450
+AR Path="/60C84861/615B9311" Ref="C1"  Part="1" 
+AR Path="/5DECF668/5DEB81A3/615B9311" Ref="C1"  Part="1" 
+AR Path="/60CD4ECF/615B9311" Ref="C8"  Part="1" 
+F 0 "C8" H 2985 3404 50  0000 R CNN
+F 1 "1u_HV" H 2985 3495 50  0000 R CNN
+F 2 "Capacitor_SMD:C_2220_5650Metric_Pad1.97x5.40mm_HandSolder" H 3138 3300 50  0001 C CNN
+F 3 "https://eu.mouser.com/ProductDetail/Murata-Electronics/GRM55DR72E105KW01L?qs=%2Fha2pyFaduijGLDbavTLLDORtZVd1YoVsMERX5Qk2sIi6goF42lowg%3D%3D" H 3100 3450 50  0001 C CNN
+	1    3100 3450
 	1    0    0    1   
 $EndComp
-Connection ~ 6400 2300
-Wire Wire Line
-	6400 2300 6750 2300
-Connection ~ 6400 2600
 $Comp
-L CellsBoard:R R23
-U 1 1 5C1692A9
-P 6400 2750
-F 0 "R23" V 6300 2750 50  0000 C CNN
-F 1 "191k" V 6400 2750 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 6330 2750 50  0001 C CNN
-F 3 "~" H 6400 2750 50  0001 C CNN
-	1    6400 2750
+L Device:C C4
+U 1 1 615B98AA
+P 3550 3450
+AR Path="/60C84861/615B98AA" Ref="C4"  Part="1" 
+AR Path="/5DECF668/5DEB81A3/615B98AA" Ref="C4"  Part="1" 
+AR Path="/60CD4ECF/615B98AA" Ref="C9"  Part="1" 
+F 0 "C9" H 3435 3404 50  0000 R CNN
+F 1 "1u_HV" H 3435 3495 50  0000 R CNN
+F 2 "Capacitor_SMD:C_2220_5650Metric_Pad1.97x5.40mm_HandSolder" H 3588 3300 50  0001 C CNN
+F 3 "https://eu.mouser.com/ProductDetail/Murata-Electronics/GRM55DR72E105KW01L?qs=%2Fha2pyFaduijGLDbavTLLDORtZVd1YoVsMERX5Qk2sIi6goF42lowg%3D%3D" H 3550 3450 50  0001 C CNN
+	1    3550 3450
 	1    0    0    1   
 $EndComp
-Connection ~ 6400 2900
 Wire Wire Line
-	6750 2900 6400 2900
-Text Label 2250 2900 0    50   ~ 0
-0V
-NoConn ~ 4550 1850
+	4800 3450 4800 3550
+Wire Wire Line
+	4900 3550 4900 3450
+Wire Wire Line
+	4800 3550 4850 3550
 $Comp
-L CellsBoard:C C39
-U 1 1 5C1692CD
-P 6000 1400
-F 0 "C39" V 5850 1400 50  0000 C CNN
-F 1 "2.2uF" V 6150 1400 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 6038 1250 50  0001 C CNN
-F 3 "RATED 5V" H 6000 1400 50  0001 C CNN
-	1    6000 1400
-	0    1    1    0   
-$EndComp
-$Comp
-L CellsBoard:R R20
-U 1 1 5C1692D8
-P 3600 1550
-F 0 "R20" V 3500 1550 50  0000 C CNN
-F 1 "100" V 3600 1550 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 3530 1550 50  0001 C CNN
-F 3 "~" H 3600 1550 50  0001 C CNN
-	1    3600 1550
-	0    1    1    0   
-$EndComp
-Text Label 2500 1550 0    50   ~ 0
-CB18
-$Comp
-L CellsBoard:C C37
-U 1 1 5C1692E1
-P 3800 2250
-F 0 "C37" V 3650 2250 50  0000 C CNN
-F 1 "4.7uF" V 3950 2250 50  0000 C CNN
-F 2 "Capacitor_SMD:C_1210_3225Metric" H 3838 2100 50  0001 C CNN
-F 3 "rated 150V o superiore" H 3800 2250 50  0001 C CNN
-	1    3800 2250
-	1    0    0    -1  
+L Device:C C8
+U 1 1 615CC84C
+P 4300 3450
+AR Path="/60C84861/615CC84C" Ref="C8"  Part="1" 
+AR Path="/5DECF668/5DEB81A3/615CC84C" Ref="C8"  Part="1" 
+AR Path="/60CD4ECF/615CC84C" Ref="C19"  Part="1" 
+F 0 "C19" H 4550 3450 50  0000 R CNN
+F 1 "22n" H 4550 3550 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 4338 3300 50  0001 C CNN
+F 3 "https://eu.mouser.com/ProductDetail/AVX/06033C393KAT2A?qs=%2Fha2pyFadujNXWS1%2F3w2UMhYZ7DnGnQjIL6Tz%252Bw5vGJgPAFHjygGuQ%3D%3D" H 4300 3450 50  0001 C CNN
+	1    4300 3450
+	1    0    0    1   
 $EndComp
 Wire Wire Line
-	3750 1550 3800 1550
-Connection ~ 3800 1550
+	4300 3300 4300 3250
+Wire Wire Line
+	4300 3600 4300 3650
+Wire Wire Line
+	4850 3650 4850 3550
+Connection ~ 4850 3650
+Connection ~ 4850 3550
+Wire Wire Line
+	4850 3550 4900 3550
+Wire Wire Line
+	4500 2650 4050 2650
+Wire Wire Line
+	3100 3600 3100 3650
+Wire Wire Line
+	3550 3600 3550 3650
+Wire Wire Line
+	3550 2650 3550 3300
+Wire Wire Line
+	3100 2650 3100 3300
 $Comp
-L CellsBoard:L L1
-U 1 1 5C1692F0
-P 7850 1850
-F 0 "L1" V 7800 1850 50  0000 C CNN
-F 1 "22uH" V 7950 1850 50  0000 C CNN
-F 2 "CellsBoard:SLF10145_Type_BigPad" H 7850 1850 50  0001 C CNN
-F 3 "https://product.tdk.com/en/search/inductor/inductor/smd/info?part_no=SLF10145T-220M1R9-H" H 7850 1850 50  0001 C CNN
-	1    7850 1850
-	0    1    1    0   
-$EndComp
-$Comp
-L CellsBoard:C C42
-U 1 1 5C1692F7
-P 7850 1400
-F 0 "C42" V 7700 1400 50  0000 C CNN
-F 1 "100nF_HV" V 8000 1400 50  0000 C CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric" H 7888 1250 50  0001 C CNN
-F 3 "rated 150V o superiore" H 7850 1400 50  0001 C CNN
-	1    7850 1400
-	0    1    1    0   
-$EndComp
-$Comp
-L CellsBoard:D D1
-U 1 1 5C169300
-P 8500 1850
-F 0 "D1" H 8500 1750 50  0000 C CNN
-F 1 "BAS16J" H 8500 1975 50  0000 C CNN
-F 2 "Diode_SMD:D_SOD-323" H 8500 1850 50  0001 C CNN
-F 3 "~" H 8500 1850 50  0001 C CNN
-	1    8500 1850
-	1    0    0    -1  
-$EndComp
-Text Label 8800 1850 2    50   ~ 0
-0V
-Wire Wire Line
-	8650 1850 8800 1850
-$Comp
-L CellsBoard:C C41
-U 1 1 5C16930E
-P 6750 2550
-F 0 "C41" V 6600 2550 50  0000 C CNN
-F 1 "22uF" V 6900 2550 50  0000 C CNN
-F 2 "Capacitor_SMD:C_1210_3225Metric" H 6788 2400 50  0001 C CNN
-F 3 "GMK325BJ226MM-P" H 6750 2550 50  0001 C CNN
-	1    6750 2550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6750 2400 6750 2300
-Wire Wire Line
-	6750 2700 6750 2900
-Connection ~ 8250 1650
-Text Notes 4100 1050 0    197  ~ 39
-POWER SUPPLY
-Connection ~ 6000 2600
-Connection ~ 6000 2300
-Wire Wire Line
-	8250 1650 8250 1850
-Wire Wire Line
-	8250 1400 8250 1650
-Wire Wire Line
-	6650 1400 6650 1650
-Wire Wire Line
-	5350 1550 5850 1550
-Wire Wire Line
-	5850 1550 5850 1400
-Wire Wire Line
-	5350 1650 6650 1650
-Wire Wire Line
-	6800 1750 6800 1650
-Wire Wire Line
-	6800 1650 8250 1650
-Wire Wire Line
-	5350 1750 6800 1750
-Text Label 5450 1650 0    50   ~ 0
-BST
-Text Label 5450 1750 0    50   ~ 0
-SW
-Text Label 5450 1550 0    50   ~ 0
-Int_VCC
-Text Label 6300 1400 2    50   ~ 0
-0V
-Wire Wire Line
-	6150 1400 6300 1400
-Wire Wire Line
-	5350 2050 5550 2050
-Wire Wire Line
-	5550 2050 5550 2600
-Wire Wire Line
-	5550 2600 6000 2600
-Wire Wire Line
-	6650 1400 7700 1400
-Wire Wire Line
-	5350 1850 7700 1850
-Wire Wire Line
-	8000 1850 8250 1850
-Wire Wire Line
-	8000 1400 8250 1400
-Text Label 5450 1950 0    50   ~ 0
-5V
-Text Label 5450 2050 0    50   ~ 0
-FB
-Text Label 5450 1850 0    50   ~ 0
-IND
-Text Label 4450 2050 2    50   ~ 0
-RT
-Text Label 4450 1950 2    50   ~ 0
-TR
-Text Label 4450 1550 2    50   ~ 0
-VIN
-Text HLabel 2250 1550 0    50   BiDi ~ 0
-CB18
-Wire Wire Line
-	8250 1850 8350 1850
-Connection ~ 8250 1850
-Text HLabel 8000 2300 2    50   BiDi ~ 0
-+5V
-Text HLabel 8000 2900 2    50   BiDi ~ 0
-0V
-Wire Wire Line
-	4950 2900 6400 2900
-Wire Wire Line
-	4950 2900 4350 2900
-Connection ~ 4950 2900
-Connection ~ 4350 2900
-Wire Wire Line
-	4350 2050 4550 2050
-Wire Wire Line
-	4100 1950 4550 1950
-$Comp
-L CellsBoard:C C38
-U 1 1 5C1692B8
-P 4100 2600
-F 0 "C38" V 3950 2600 50  0000 C CNN
-F 1 "100pF" V 4250 2600 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 4138 2450 50  0001 C CNN
-F 3 "RATED 5V" H 4100 2600 50  0001 C CNN
-	1    4100 2600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4100 2900 4100 2750
-Wire Wire Line
-	4100 2900 4350 2900
-Wire Wire Line
-	4100 2900 3800 2900
-Connection ~ 4100 2900
-Wire Wire Line
-	4350 2100 4350 2050
-Wire Wire Line
-	4350 2400 4350 2900
-Wire Wire Line
-	4100 1950 4100 2450
-Wire Wire Line
-	3800 1550 3800 2100
-Wire Wire Line
-	3800 2400 3800 2900
-Connection ~ 3800 2900
-Text Label 7700 2300 0    50   ~ 0
-Vreg
-Text Label 5350 2900 2    50   ~ 0
-0V
-Wire Wire Line
-	5350 1950 5650 1950
-Wire Wire Line
-	5650 2300 5650 1950
-Connection ~ 6750 2300
-Connection ~ 6750 2900
-Text HLabel 3800 1250 0    50   BiDi ~ 0
-DRIVE
-Wire Wire Line
-	3800 1550 4500 1550
-Wire Wire Line
-	4750 2450 4850 2550
-Connection ~ 4950 2650
-Wire Wire Line
-	4950 2650 4950 2900
-Wire Wire Line
-	4850 2450 4850 2550
-Connection ~ 4850 2550
-Wire Wire Line
-	4850 2550 4950 2650
-Wire Wire Line
-	5050 2450 5050 2550
-Wire Wire Line
-	5050 2550 4950 2650
-Wire Wire Line
-	5150 2450 5050 2550
-Connection ~ 5050 2550
-Wire Wire Line
-	4950 2650 4950 2450
-Wire Wire Line
-	6750 2300 7350 2300
-Text Notes 3300 3950 0    50   ~ 0
-Note that even X5R and X7R type ceramic capacitors have\na DC bias effect which reduces their capacitance when a\nDC voltage is applied. It is not uncommon for capacitors\noffered in the smallest case sizes to lose more than 50%\nof their capacitance when operated near their rated voltage
-Wire Notes Line
-	5650 4000 3250 4000
-Wire Notes Line
-	3250 4000 3250 3500
-Wire Notes Line
-	3250 3500 3450 3500
-Wire Notes Line
-	3450 3500 3450 2250
-Wire Notes Line
-	3450 2250 3550 2250
-Wire Notes Line
-	3550 3500 5650 3500
-Wire Notes Line
-	5650 3500 5650 4000
-Text Notes 3850 4250 0    50   ~ 0
-2.2/4.7=(1-x)-> x=53.2%>50%
-Wire Notes Line
-	3600 3950 3600 4200
-Wire Notes Line
-	3600 4200 3800 4200
-Wire Notes Line
-	3800 4200 3800 4300
-Wire Notes Line
-	3800 4300 5200 4300
-Wire Notes Line
-	5200 4300 5200 4100
-Wire Notes Line
-	5200 4100 3800 4100
-Wire Notes Line
-	3800 4100 3800 4150
-Wire Wire Line
-	7650 2300 7700 2300
-Wire Wire Line
-	5650 2300 6000 2300
-$Comp
-L CellsBoard:TestPoint T?
-U 1 1 608591CC
-P 6750 2300
-AR Path="/5DECF668/5DEB8198/608591CC" Ref="T?"  Part="1" 
-AR Path="/5DECF668/5DEB81A3/608591CC" Ref="T40"  Part="1" 
-F 0 "T40" V 6750 2488 50  0000 L CNN
-F 1 "TestPoint" V 6795 2488 50  0001 L CNN
-F 2 "CellsBoard:Test_point" H 6950 2300 50  0001 C CNN
-F 3 "~" H 6950 2300 50  0001 C CNN
-	1    6750 2300
-	1    0    0    -1  
-$EndComp
-$Comp
-L CellsBoard:TestPoint TP?
-U 1 1 5E0C03E7
-P 7700 2300
-AR Path="/5DECF668/5DEB8198/5E0C03E7" Ref="TP?"  Part="1" 
-AR Path="/5DECF668/5DEB81A3/5E0C03E7" Ref="TP5"  Part="1" 
-F 0 "TP5" V 7700 2488 50  0000 L CNN
-F 1 "TestPoint" V 7745 2488 50  0001 L CNN
-F 2 "CellsBoard:Test_point" H 7900 2300 50  0001 C CNN
-F 3 "~" H 7900 2300 50  0001 C CNN
-	1    7700 2300
+L Device:R R4
+U 1 1 615FE881
+P 3900 3450
+AR Path="/60C84861/615FE881" Ref="R4"  Part="1" 
+AR Path="/5DECF668/5DEB81A3/615FE881" Ref="R4"  Part="1" 
+AR Path="/60CD4ECF/615FE881" Ref="R4"  Part="1" 
+F 0 "R4" H 3850 3500 50  0000 R CNN
+F 1 "2k" H 3850 3400 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 3830 3450 50  0001 C CNN
+F 3 "https://www.mouser.it/ProductDetail/Vishay-Dale/CRCW08052K00FKEAC?qs=E3Y5ESvWgWP6floxGsbShA%3D%3D" H 3900 3450 50  0001 C CNN
+	1    3900 3450
 	-1   0    0    1   
 $EndComp
-Connection ~ 7700 2300
-Wire Wire Line
-	7700 2300 8000 2300
 $Comp
-L CellsBoard:TestPoint TP?
-U 1 1 5E0C471F
-P 7200 2900
-AR Path="/5DECF668/5DEB8198/5E0C471F" Ref="TP?"  Part="1" 
-AR Path="/5DECF668/5DEB81A3/5E0C471F" Ref="TP1"  Part="1" 
-F 0 "TP1" V 7200 3088 50  0000 L CNN
-F 1 "TestPoint" V 7245 3088 50  0001 L CNN
-F 2 "CellsBoard:Test_point" H 7400 2900 50  0001 C CNN
-F 3 "~" H 7400 2900 50  0001 C CNN
-	1    7200 2900
-	1    0    0    -1  
-$EndComp
-Connection ~ 7200 2900
-Wire Wire Line
-	6750 2900 7200 2900
-Wire Wire Line
-	7200 2900 8000 2900
-$Comp
-L Connector_Generic:Conn_01x02 J?
-U 1 1 5E5B4A5C
-P 6350 5950
-AR Path="/5DECF668/5E5B4A5C" Ref="J?"  Part="1" 
-AR Path="/5DECF668/5DEB81A3/5E5B4A5C" Ref="J8"  Part="1" 
-F 0 "J8" H 6350 5750 50  0000 C CNN
-F 1 "CONN_1X02" V 6450 5900 50  0001 C CNN
-F 2 "CellsBoard:Molex_Micro-Fit_3.0_43650-0215_1x02_P3.00mm_Vertical" H 6350 5950 50  0001 C CNN
-F 3 "~" H 6350 5950 50  0001 C CNN
-	1    6350 5950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6050 5950 6150 5950
-Wire Wire Line
-	6050 6050 6150 6050
-$Comp
-L CellsBoard:LT8630 U8
-U 1 1 5E6F4944
-P 4950 1750
-F 0 "U8" H 4950 2215 50  0000 C CNN
-F 1 "LT8630" H 4950 2124 50  0000 C CNN
-F 2 "CellsBoard:LT8631" H 4950 2150 50  0001 C CNN
-F 3 "" H 4950 2150 50  0001 C CNN
-	1    4950 1750
-	1    0    0    -1  
-$EndComp
-$Comp
-L CellsBoard:R R21
-U 1 1 5C1692BF
-P 4350 2250
-F 0 "R21" V 4250 2250 50  0000 C CNN
-F 1 "25K5" V 4350 2250 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 4280 2250 50  0001 C CNN
-F 3 "~" H 4350 2250 50  0001 C CNN
-	1    4350 2250
+L Device:R R3
+U 1 1 61601389
+P 3900 2400
+AR Path="/60C84861/61601389" Ref="R3"  Part="1" 
+AR Path="/5DECF668/5DEB81A3/61601389" Ref="R3"  Part="1" 
+AR Path="/60CD4ECF/61601389" Ref="R3"  Part="1" 
+F 0 "R3" H 3970 2446 50  0000 L CNN
+F 1 "100k" H 3970 2355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 3830 2400 50  0001 C CNN
+F 3 "https://www.mouser.it/ProductDetail/Vishay-Dale/CRCW0805100KFKEAHP?qs=k2%2FDWSARqgFvzezk%252B9pwaw%3D%3D" H 3900 2400 50  0001 C CNN
+	1    3900 2400
 	1    0    0    1   
 $EndComp
 Wire Wire Line
-	2250 2900 3800 2900
+	3700 2350 3750 2350
+Wire Wire Line
+	3900 2150 3900 2250
+Wire Wire Line
+	3700 2150 3900 2150
 $Comp
-L CellsBoard:L L2
-U 1 1 5E70B413
-P 5200 5650
-F 0 "L2" V 5390 5650 50  0000 C CNN
-F 1 "560uH" V 5299 5650 50  0000 C CNN
-F 2 "CellsBoard:Inductor_Bourns_SRR4028" H 5200 5650 50  0001 C CNN
-F 3 "~" H 5200 5650 50  0001 C CNN
-	1    5200 5650
+L Device:C C11
+U 1 1 61613132
+P 5550 2550
+AR Path="/60C84861/61613132" Ref="C11"  Part="1" 
+AR Path="/5DECF668/5DEB81A3/61613132" Ref="C11"  Part="1" 
+AR Path="/60CD4ECF/61613132" Ref="C23"  Part="1" 
+F 0 "C23" V 5500 2750 50  0000 R CNN
+F 1 "10n" V 5400 2750 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 5588 2400 50  0001 C CNN
+F 3 "https://eu.mouser.com/ProductDetail/KEMET/C0805C103M5RACTU?qs=9cd7XHFgWSEkxVNi%2F51VCw%3D%3D" H 5550 2550 50  0001 C CNN
+	1    5550 2550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5300 2650 5350 2650
+Wire Wire Line
+	5350 2550 5400 2550
+Wire Wire Line
+	5750 2550 5700 2550
+$Comp
+L Device:R R7
+U 1 1 6161F66C
+P 6600 2950
+AR Path="/60C84861/6161F66C" Ref="R7"  Part="1" 
+AR Path="/5DECF668/5DEB81A3/6161F66C" Ref="R7"  Part="1" 
+AR Path="/60CD4ECF/6161F66C" Ref="R6"  Part="1" 
+F 0 "R6" H 6670 2996 50  0000 L CNN
+F 1 "3k" H 6670 2905 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 6530 2950 50  0001 C CNN
+F 3 "https://eu.mouser.com/ProductDetail/Yageo/RC0603FR-073KL?qs=%2Fha2pyFaduhXXNW8qwNUNvaxS1XHl2D%2F%2Ft6X5ShqhtszzAtBHjyVdw%3D%3D" H 6600 2950 50  0001 C CNN
+	1    6600 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 6161FFED
+P 6600 3450
+AR Path="/60C84861/6161FFED" Ref="R8"  Part="1" 
+AR Path="/5DECF668/5DEB81A3/6161FFED" Ref="R8"  Part="1" 
+AR Path="/60CD4ECF/6161FFED" Ref="R7"  Part="1" 
+F 0 "R7" H 6670 3496 50  0000 L CNN
+F 1 "2k" H 6670 3405 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 6530 3450 50  0001 C CNN
+F 3 "https://eu.mouser.com/ProductDetail/Yageo/RC0603FR-072KL?qs=%2Fha2pyFaduhXXNW8qwNUNlwMict3mUCz3uv5Dg%2FR7MrWI1hjxxC60A%3D%3D" H 6600 3450 50  0001 C CNN
+	1    6600 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C15
+U 1 1 61620751
+P 6950 3450
+AR Path="/60C84861/61620751" Ref="C15"  Part="1" 
+AR Path="/5DECF668/5DEB81A3/61620751" Ref="C15"  Part="1" 
+AR Path="/60CD4ECF/61620751" Ref="C25"  Part="1" 
+F 0 "C25" H 6800 3450 50  0000 R CNN
+F 1 "47u" H 6800 3550 50  0000 R CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 6988 3300 50  0001 C CNN
+F 3 "https://eu.mouser.com/ProductDetail/Murata-Electronics/GRM31CC80J476KE18L?qs=18WYLvqSxEokQ%252BFkt5%252B%252BQg%3D%3D" H 6950 3450 50  0001 C CNN
+	1    6950 3450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6600 3650 6600 3600
+Wire Wire Line
+	6600 3650 6950 3650
+Wire Wire Line
+	6950 3650 6950 3600
+Wire Wire Line
+	6600 2800 6600 2750
+Wire Wire Line
+	6600 2750 6950 2750
+$Comp
+L Device:C C12
+U 1 1 61642D39
+P 5800 3450
+AR Path="/60C84861/61642D39" Ref="C12"  Part="1" 
+AR Path="/5DECF668/5DEB81A3/61642D39" Ref="C12"  Part="1" 
+AR Path="/60CD4ECF/61642D39" Ref="C24"  Part="1" 
+F 0 "C24" H 6000 3350 50  0000 R CNN
+F 1 "1u" H 6000 3450 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 5838 3300 50  0001 C CNN
+F 3 "https://www.mouser.it/ProductDetail/Taiyo-Yuden/EMK212B7105KG-T?qs=%2Fha2pyFaduhf6%2FpNoUtlH6RHOyScW1y5v6aFua48ull6FKrCss7NKw%3D%3D" H 5800 3450 50  0001 C CNN
+	1    5800 3450
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	5800 3600 5800 3650
+Wire Wire Line
+	5800 3300 5800 3250
+Wire Wire Line
+	2700 2650 3100 2650
+Wire Wire Line
+	2700 3650 3100 3650
+Text Notes 2300 1750 0    157  ~ 31
+Buck DCDC converter - 80V in - 5V 1A out 
+Text Notes 4300 2150 0    50   ~ 0
+DCDC is enabled by an optocoupled \nactivated by 5V from CAN connector
+Wire Notes Line
+	4250 1950 4250 2200
+Wire Notes Line
+	4250 2200 5750 2200
+Wire Notes Line
+	5750 2200 5750 1950
+Wire Notes Line
+	5750 1950 4250 1950
+Wire Wire Line
+	6950 3300 6950 2750
+Wire Wire Line
+	3900 3600 3900 3650
+$Comp
+L Device:R R5
+U 1 1 6169F73E
+P 4300 2750
+AR Path="/60C84861/6169F73E" Ref="R5"  Part="1" 
+AR Path="/5DECF668/5DEB81A3/6169F73E" Ref="R5"  Part="1" 
+AR Path="/60CD4ECF/6169F73E" Ref="R5"  Part="1" 
+F 0 "R5" V 4200 2900 50  0000 C CNN
+F 1 "215k" V 4200 2700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 4230 2750 50  0001 C CNN
+F 3 "https://eu.mouser.com/ProductDetail/Vishay-Dale/CRCW0805215KFKEA?qs=%2Fha2pyFaduhkDOWkOJXWlO5PkLeZrjUoRaTLkG3VgmY7CF%2F5AHb3zQ%3D%3D" H 4300 2750 50  0001 C CNN
+	1    4300 2750
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	5000 5650 5050 5650
+	4450 2750 4500 2750
+Wire Wire Line
+	4150 2750 4050 2750
+Wire Wire Line
+	4050 2750 4050 2650
+Connection ~ 4050 2650
+Connection ~ 3100 2650
+Connection ~ 3100 3650
+Connection ~ 3550 2650
+Connection ~ 3550 3650
+Wire Wire Line
+	3100 3650 3550 3650
+Wire Wire Line
+	3100 2650 3550 2650
+Wire Wire Line
+	3550 3650 3900 3650
+Connection ~ 3900 3650
+Wire Wire Line
+	3900 3650 4300 3650
+Wire Wire Line
+	3900 2950 4500 2950
+Wire Wire Line
+	3900 2950 3900 3300
+Wire Wire Line
+	6950 2750 7050 2750
 $Comp
-L CellsBoard:C C24
-U 1 1 5E70DEF1
-P 5600 5950
-F 0 "C24" V 5450 5950 50  0000 C CNN
-F 1 "22uF" V 5750 5950 50  0000 C CNN
-F 2 "Capacitor_SMD:C_1210_3225Metric" H 5638 5800 50  0001 C CNN
-F 3 "GMK325BJ226MM-P" H 5600 5950 50  0001 C CNN
-	1    5600 5950
-	1    0    0    -1  
+L Device:R R2
+U 1 1 615A13B4
+P 2900 2350
+AR Path="/60C84861/615A13B4" Ref="R2"  Part="1" 
+AR Path="/5DECF668/5DEB81A3/615A13B4" Ref="R2"  Part="1" 
+AR Path="/60CD4ECF/615A13B4" Ref="R2"  Part="1" 
+F 0 "R2" V 2693 2350 50  0000 C CNN
+F 1 "1.24k" V 2784 2350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2830 2350 50  0001 C CNN
+F 3 "https://eu.mouser.com/ProductDetail/Vishay-Dale/CRCW08051K24FKEA?qs=DZvKvnD5UYXgJnfM0kmUdw%3D%3D" H 2900 2350 50  0001 C CNN
+	1    2900 2350
+	0    1    1    0   
 $EndComp
+Text HLabel 2700 2150 0    50   Input ~ 0
+5V_ISO
+Text Label 3700 2150 0    50   ~ 0
+EN-DCDC1
+Wire Notes Line
+	4250 2000 3600 2000
+Text Label 3900 2950 0    50   ~ 0
+EN-D
+Text Label 4300 3250 0    50   ~ 0
+SS-D
 Wire Wire Line
-	5350 5650 5400 5650
+	4300 3250 4500 3250
+Text Label 5400 3150 0    50   ~ 0
+VCC-D
+Text Label 5650 3050 2    50   ~ 0
+FB-D
+Text Label 5450 2750 0    50   ~ 0
+SW-D
 Wire Wire Line
-	5600 5650 5600 5800
+	5300 2750 5350 2750
+Wire Wire Line
+	5750 2550 5750 2750
+Wire Wire Line
+	5350 2550 5350 2650
+Connection ~ 4300 3650
+Wire Wire Line
+	4300 3650 4850 3650
+Text Notes 4050 4250 0    50   ~ 0
+EN: \n<0.35V SHUTDOWN state\n<1.24V STAND-BY state\nEN-D:\nLOW Voltage 3.5V*18cells=63V\n
+Wire Wire Line
+	3550 2650 3750 2650
+Connection ~ 6600 2750
+Connection ~ 6600 3650
 $Comp
-L CellsBoard:R R50
-U 1 1 5E712339
-P 5150 6000
-F 0 "R50" V 5050 6000 50  0000 C CNN
-F 1 "1M" V 5150 6000 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 5080 6000 50  0001 C CNN
-F 3 "~" H 5150 6000 50  0001 C CNN
-	1    5150 6000
-	0    -1   1    0   
-$EndComp
-Wire Wire Line
-	5300 6000 5300 6250
-Wire Wire Line
-	5300 6350 5000 6350
-Wire Wire Line
-	5000 6250 5050 6250
-Connection ~ 5300 6250
-Wire Wire Line
-	5300 6250 5300 6350
-Wire Wire Line
-	5000 6100 5050 6100
-Wire Wire Line
-	5050 6100 5050 6250
-Connection ~ 5050 6250
-Wire Wire Line
-	5050 6250 5300 6250
-Wire Wire Line
-	5300 6250 5600 6250
-Wire Wire Line
-	5600 6250 5600 6100
-Wire Wire Line
-	5600 6250 6050 6250
-Wire Wire Line
-	6050 6250 6050 6050
-Connection ~ 5600 6250
-Wire Wire Line
-	5600 5650 6050 5650
-Wire Wire Line
-	6050 5650 6050 5950
-Connection ~ 5600 5650
-$Comp
-L CellsBoard:C C23
-U 1 1 5E71D043
-P 3450 5950
-F 0 "C23" V 3300 5950 50  0000 C CNN
-F 1 "4.7uF" V 3600 5950 50  0000 C CNN
-F 2 "Capacitor_SMD:C_1210_3225Metric" H 3488 5800 50  0001 C CNN
-F 3 "rated 150V o superiore" H 3450 5950 50  0001 C CNN
-	1    3450 5950
-	1    0    0    -1  
-$EndComp
-Text HLabel 2650 5650 0    50   BiDi ~ 0
-CB18
-Wire Wire Line
-	2650 5650 3450 5650
-Wire Wire Line
-	4200 6200 4100 6200
-Wire Wire Line
-	4100 6200 4100 6350
-Connection ~ 4100 6350
-Wire Wire Line
-	4100 6350 4200 6350
-Wire Wire Line
-	4100 5750 4100 5650
-Wire Wire Line
-	4100 5750 4200 5750
-Connection ~ 4100 5650
-Wire Wire Line
-	4100 5650 4200 5650
-Wire Wire Line
-	3450 6100 3450 6350
-Connection ~ 3450 6350
-Wire Wire Line
-	3450 6350 4100 6350
-Wire Wire Line
-	3450 5800 3450 5650
-Connection ~ 3450 5650
-Wire Wire Line
-	3450 5650 4100 5650
-Text Notes 8750 3700 0    50   ~ 0
-ACTIVE mode\nSTM32G474-> runMODE_35mA+25mA driving\nLTC6813-1 ->16.5mA+1.1mA(ibias)+11mA (isoPSI)\nTOT:90mA (max Power require from all electtonic)
-Text Notes 8750 4100 0    50   ~ 0
-SLEEP mode\nSTM32G474-> standbyMODE_7.2uA\nLTC6813-1 ->6uA+0mA(ibias)+9uA (isoPSI)\nTOT:22uA (max Power require from all electtonic)
-Wire Wire Line
-	5000 5750 5400 5750
-Wire Wire Line
-	5400 5750 5400 5650
-Connection ~ 5400 5650
-Wire Wire Line
-	5400 5650 5600 5650
-NoConn ~ 5000 5850
-$Comp
-L CellsBoard:GND #PWR?
-U 1 1 5E696043
-P 5300 6350
-AR Path="/5DECF668/5E696043" Ref="#PWR?"  Part="1" 
-AR Path="/5DECF668/5DEB81A3/5E696043" Ref="#PWR0192"  Part="1" 
-F 0 "#PWR0192" H 5300 6100 50  0001 C CNN
-F 1 "GND" H 5305 6177 50  0000 C CNN
-F 2 "" H 5300 6350 50  0001 C CNN
-F 3 "" H 5300 6350 50  0001 C CNN
-	1    5300 6350
-	1    0    0    -1  
-$EndComp
-Connection ~ 5300 6350
-$Comp
-L CellsBoard:GND #PWR?
-U 1 1 5E698BCD
-P 3450 6350
-AR Path="/5DECF668/5E698BCD" Ref="#PWR?"  Part="1" 
-AR Path="/5DECF668/5DEB81A3/5E698BCD" Ref="#PWR0193"  Part="1" 
-F 0 "#PWR0193" H 3450 6100 50  0001 C CNN
-F 1 "GND" H 3455 6177 50  0000 C CNN
-F 2 "" H 3450 6350 50  0001 C CNN
-F 3 "" H 3450 6350 50  0001 C CNN
-	1    3450 6350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2250 1550 3450 1550
-Text Notes 6400 6300 0    50   ~ 0
-ToMain
-$Comp
-L CellsBoard:Fuse F20
-U 1 1 5E9599F2
-P 7500 2300
-F 0 "F20" V 7400 2300 50  0000 C CNN
-F 1 "Fuse" V 7400 2300 50  0001 C CNN
-F 2 "CellsBoard:Fuse_0805" V 7430 2300 50  0001 C CNN
-F 3 "~" H 7500 2300 50  0001 C CNN
-	1    7500 2300
+L Device:R R6
+U 1 1 60AC4045
+P 5950 2850
+AR Path="/60C84861/60AC4045" Ref="R6"  Part="1" 
+AR Path="/5DECF668/5DEB81A3/60AC4045" Ref="R6"  Part="1" 
+AR Path="/60CD4ECF/60AC4045" Ref="R8"  Part="1" 
+F 0 "R8" V 6050 2700 50  0000 L CNN
+F 1 "255k" V 6050 2850 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 5880 2850 50  0001 C CNN
+F 3 "https://www.mouser.it/ProductDetail/Panasonic/ERJ-6ENF2553V?qs=%2Fha2pyFaduirjrsza3agtqlJkYWG%252Bktgb%2F8p31YvEbbpzIv5TNVfFw%3D%3D" H 5950 2850 50  0001 C CNN
+	1    5950 2850
 	0    1    1    0   
 $EndComp
 $Comp
-L CellsBoard:LTC3639 U9
-U 1 1 5E706FEB
-P 4600 5800
-F 0 "U9" H 4600 6215 50  0000 C CNN
-F 1 "LTC3639" H 4600 6124 50  0000 C CNN
-F 2 "CellsBoard:MSOP-12-16-1EP_3x4mm_P0.5mm_EP1.65x2.85mm_ThermalVias" H 4600 6100 50  0001 C CNN
-F 3 "" H 4600 6100 50  0001 C CNN
-	1    4600 5800
-	1    0    0    -1  
+L Device:C C14
+U 1 1 60ACC257
+P 6350 2850
+AR Path="/60C84861/60ACC257" Ref="C14"  Part="1" 
+AR Path="/5DECF668/5DEB81A3/60ACC257" Ref="C14"  Part="1" 
+AR Path="/60CD4ECF/60ACC257" Ref="C67"  Part="1" 
+F 0 "C67" V 6500 2900 50  0000 C CNN
+F 1 "3n" V 6500 2800 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 6388 2700 50  0001 C CNN
+F 3 "https://www.mouser.it/ProductDetail/TDK/C2012C0G1H332J125AA?qs=%2Fha2pyFadujER92Rh35K2WFctxMUR0QqPMAjjErL8S7hnPN2eFKOtFeORC3X15qa" H 6350 2850 50  0001 C CNN
+	1    6350 2850
+	0    -1   1    0   
 $EndComp
-Text Notes 2000 5200 0    197  ~ 39
-POWER SUPPLY FOR COCKPIT LED
-Wire Notes Line
-	500  4650 11050 4650
-NoConn ~ 4550 1750
-Wire Wire Line
-	4150 6000 4200 6000
-Wire Wire Line
-	4200 6100 4150 6100
-Wire Wire Line
-	4150 6100 4150 6000
 $Comp
-L CellsBoard:SolderJumper_3_Open JP21
-U 1 1 6043E9E4
-P 4050 1250
-F 0 "JP21" H 4050 1455 50  0000 C CNN
-F 1 "SolderJumper_3_Open" H 4050 1364 50  0000 C CNN
-F 2 "CellsBoard:PinHeader_1x03_P2.54mm_Vertical" H 4050 1250 50  0001 C CNN
-F 3 "~" H 4050 1250 50  0001 C CNN
-	1    4050 1250
+L Device:C C13
+U 1 1 60ACDEAC
+P 6150 3100
+AR Path="/60C84861/60ACDEAC" Ref="C13"  Part="1" 
+AR Path="/5DECF668/5DEB81A3/60ACDEAC" Ref="C13"  Part="1" 
+AR Path="/60CD4ECF/60ACDEAC" Ref="C66"  Part="1" 
+F 0 "C66" H 6050 3050 50  0000 R CNN
+F 1 "10n" H 6050 3150 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 6188 2950 50  0001 C CNN
+F 3 "https://www.mouser.it/ProductDetail/Murata-Electronics/GRM2195C1H103JA01D?qs=%2Fha2pyFadug1kxXJswzFEF6bulUuXTst%252B9BJIPg7oWsWLkYFkg7Bdg%3D%3D" H 6150 3100 50  0001 C CNN
+	1    6150 3100
+	1    0    0    1   
+$EndComp
+Connection ~ 5750 2750
+Wire Wire Line
+	4850 3650 5800 3650
+Wire Wire Line
+	3750 2350 3750 2650
+Connection ~ 3750 2650
+Wire Wire Line
+	3750 2650 4050 2650
+Wire Wire Line
+	3900 2550 3900 2950
+Connection ~ 3900 2950
+Text HLabel 7050 2750 2    50   Output ~ 0
++5V
+Connection ~ 6950 2750
+$Comp
+L CellsBoard:MAQ5281 U?
+U 1 1 60C7EDAB
+P 4000 5350
+AR Path="/60C7EDAB" Ref="U?"  Part="1" 
+AR Path="/5DECF668/5DEB81A3/60C7EDAB" Ref="U8"  Part="1" 
+AR Path="/60C84861/60C7EDAB" Ref="U3"  Part="1" 
+AR Path="/60CD4ECF/60C7EDAB" Ref="U8"  Part="1" 
+F 0 "U8" H 3975 5765 50  0000 C CNN
+F 1 "MAQ5281" H 3975 5674 50  0000 C CNN
+F 2 "Package_SO:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 4000 5350 50  0001 C CNN
+F 3 "" H 4000 5350 50  0001 C CNN
+	1    4000 5350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3850 1250 3800 1250
+	4400 5400 4400 5500
 Wire Wire Line
-	4050 1400 4050 1650
+	4350 5500 4400 5500
 Wire Wire Line
-	4050 1650 4550 1650
+	4400 5400 4350 5400
 Wire Wire Line
-	4250 1250 4500 1250
+	4350 5200 4400 5200
+$Comp
+L Device:C C2
+U 1 1 60C8A874
+P 3250 5750
+AR Path="/60C84861/60C8A874" Ref="C2"  Part="1" 
+AR Path="/5DECF668/5DEB81A3/60C8A874" Ref="C2"  Part="1" 
+AR Path="/60CD4ECF/60C8A874" Ref="C78"  Part="1" 
+F 0 "C78" H 3135 5704 50  0000 R CNN
+F 1 "1u_HV" H 3135 5795 50  0000 R CNN
+F 2 "Capacitor_SMD:C_2220_5650Metric_Pad1.97x5.40mm_HandSolder" H 3288 5600 50  0001 C CNN
+F 3 "https://eu.mouser.com/ProductDetail/Murata-Electronics/GRM55DR72E105KW01L?qs=%2Fha2pyFaduijGLDbavTLLDORtZVd1YoVsMERX5Qk2sIi6goF42lowg%3D%3D" H 3250 5750 50  0001 C CNN
+	1    3250 5750
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 60C93EDF
+P 3500 5750
+AR Path="/60C84861/60C93EDF" Ref="C3"  Part="1" 
+AR Path="/5DECF668/5DEB81A3/60C93EDF" Ref="C3"  Part="1" 
+AR Path="/60CD4ECF/60C93EDF" Ref="C79"  Part="1" 
+F 0 "C79" H 3615 5796 50  0000 L CNN
+F 1 "100n" H 3615 5705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 3538 5600 50  0001 C CNN
+F 3 "~" H 3500 5750 50  0001 C CNN
+	1    3500 5750
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	4500 1250 4500 1550
-Connection ~ 4500 1550
+	3500 5500 3600 5500
 Wire Wire Line
-	4500 1550 4550 1550
+	3500 5600 3500 5500
+Wire Wire Line
+	3000 6000 3250 6000
+Connection ~ 3250 6000
+Wire Wire Line
+	3250 6000 3500 6000
+Connection ~ 3500 6000
+Wire Wire Line
+	3500 6000 4400 6000
+Wire Wire Line
+	3250 5600 3250 5200
+Wire Wire Line
+	3250 5200 3600 5200
+$Comp
+L Device:C C9
+U 1 1 60CACFB9
+P 4600 5400
+AR Path="/60C84861/60CACFB9" Ref="C9"  Part="1" 
+AR Path="/5DECF668/5DEB81A3/60CACFB9" Ref="C9"  Part="1" 
+AR Path="/60CD4ECF/60CACFB9" Ref="C84"  Part="1" 
+F 0 "C84" H 4715 5446 50  0000 L CNN
+F 1 "10n" H 4715 5355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4638 5250 50  0001 C CNN
+F 3 "~" H 4600 5400 50  0001 C CNN
+	1    4600 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 5250 4600 5200
+Wire Wire Line
+	4600 5200 4950 5200
+Wire Wire Line
+	4900 5300 4900 5550
+Wire Wire Line
+	4600 5550 4600 6000
+Wire Wire Line
+	4400 5500 4400 6000
+Connection ~ 4400 5500
+Wire Wire Line
+	3500 5900 3500 6000
+Wire Wire Line
+	3250 5900 3250 6000
+Wire Wire Line
+	4350 5300 4400 5300
+Wire Wire Line
+	4400 5300 4400 5200
+Wire Wire Line
+	4600 6000 4400 6000
+Connection ~ 4400 6000
+Wire Wire Line
+	4600 5200 4400 5200
+Connection ~ 4600 5200
+Connection ~ 4400 5200
+Text Notes 2400 4850 0    157  ~ 31
+Linear regulator 5V - 25mA
+Wire Wire Line
+	4900 5300 4950 5300
+Wire Wire Line
+	4600 5550 4900 5550
+$Comp
+L Connector_Generic:Conn_02x02_Counter_Clockwise J7
+U 1 1 60D4ECE4
+P 5150 5200
+AR Path="/60C84861/60D4ECE4" Ref="J7"  Part="1" 
+AR Path="/5DECF668/5DEB81A3/60D4ECE4" Ref="J7"  Part="1" 
+AR Path="/60CD4ECF/60D4ECE4" Ref="J8"  Part="1" 
+F 0 "J8" H 5200 5000 50  0000 C CNN
+F 1 "Conn_02x02_Counter_Clockwise" H 5200 5326 50  0001 C CNN
+F 2 "Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical" H 5150 5200 50  0001 C CNN
+F 3 "~" H 5150 5200 50  0001 C CNN
+	1    5150 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 5200 5450 5200
+Text Label 5900 5300 2    50   ~ 0
+120V_linreg
+Wire Wire Line
+	5450 5300 5900 5300
+Text Label 2750 5200 0    50   ~ 0
+120V_linreg
+Connection ~ 3250 5200
+Wire Wire Line
+	2750 5200 3250 5200
+Wire Wire Line
+	5500 5200 5500 5150
+Wire Wire Line
+	5550 5150 5500 5150
+Connection ~ 4600 5550
+$Comp
+L CellsBoard:LM5161PWP U?
+U 1 1 60C9E18A
+P 4900 2950
+AR Path="/60C9E18A" Ref="U?"  Part="1" 
+AR Path="/5DECF668/5DEB81A3/60C9E18A" Ref="U4"  Part="1" 
+AR Path="/60C84861/60C9E18A" Ref="U4"  Part="1" 
+AR Path="/60CD4ECF/60C9E18A" Ref="U4"  Part="1" 
+F 0 "U4" H 4900 3517 50  0000 C CNN
+F 1 "LM5161PWP" H 4900 3426 50  0000 C CNN
+F 2 "Package_SO:HTSSOP-14-1EP_4.4x5mm_P0.65mm_EP3.4x5mm_Mask3x3.1mm" H 4950 2500 50  0001 L CNN
+F 3 "" H 4900 3500 50  0001 C CNN
+	1    4900 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 2850 5300 2850
+Wire Wire Line
+	5350 2850 5350 2750
+Connection ~ 5350 2750
+Wire Wire Line
+	5350 2750 5750 2750
+Wire Wire Line
+	5300 2950 5350 2950
+Wire Wire Line
+	5350 2950 5350 2850
+Connection ~ 5350 2850
+Text HLabel 2700 3650 0    50   Input ~ 0
+GND_SUPPLY
+Text HLabel 3000 6000 0    50   Input ~ 0
+GND_SUPPLY
+Text HLabel 2700 2650 0    50   Input ~ 0
+VCC_SUPPLY
+Text HLabel 5550 5150 2    50   Input ~ 0
+VCC_SUPPLY
+Wire Wire Line
+	6600 3100 6600 3250
+Wire Wire Line
+	5750 2750 5800 2750
+Wire Wire Line
+	6300 2750 6500 2750
+Wire Wire Line
+	5800 3650 6600 3650
+Connection ~ 5800 3650
+Wire Wire Line
+	6100 2850 6150 2850
+Wire Wire Line
+	6500 2850 6500 2750
+Connection ~ 6500 2750
+Wire Wire Line
+	6500 2750 6600 2750
+Wire Wire Line
+	5800 2850 5800 2750
+Connection ~ 5800 2750
+Wire Wire Line
+	5800 2750 6000 2750
+Wire Wire Line
+	6150 2950 6150 2850
+Connection ~ 6150 2850
+Wire Wire Line
+	6150 2850 6200 2850
+Wire Wire Line
+	6150 3250 6600 3250
+Connection ~ 6600 3250
+Wire Wire Line
+	6600 3250 6600 3300
+Wire Wire Line
+	6150 3250 5900 3250
+Wire Wire Line
+	5900 3250 5900 3050
+Wire Wire Line
+	5900 3050 5300 3050
+Connection ~ 6150 3250
+Text Notes 6100 5300 0    50   ~ 0
+Disconnecting the mainboard\ndisconnects the linreg
+Text Notes 2450 4950 0    50   ~ 0
+Populate only on segment 0
+$Comp
+L Jumper:SolderJumper_2_Open JP1
+U 1 1 60EFD564
+P 5500 3250
+AR Path="/60C84861/60EFD564" Ref="JP1"  Part="1" 
+AR Path="/5DECF668/5DEB81A3/60EFD564" Ref="JP1"  Part="1" 
+AR Path="/60CD4ECF/60EFD564" Ref="JP5"  Part="1" 
+F 0 "JP5" H 5500 3150 50  0000 C CNN
+F 1 "SolderJumper_2_Open" V 5545 3318 50  0001 L CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 5500 3250 50  0001 C CNN
+F 3 "~" H 5500 3250 50  0001 C CNN
+	1    5500 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 3150 5800 3150
+Wire Wire Line
+	5300 3250 5350 3250
+Wire Wire Line
+	5650 3250 5800 3250
+Connection ~ 5800 3250
+Wire Wire Line
+	5800 3250 5800 3150
+Text Notes 5200 3850 0    50   ~ 0
+Close JP5 to enable \nCCM at light loads.
+Wire Wire Line
+	2700 2150 3100 2150
+Wire Wire Line
+	2700 2350 2750 2350
+Wire Wire Line
+	3050 2350 3100 2350
 $EndSCHEMATC
