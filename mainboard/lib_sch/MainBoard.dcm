@@ -70,6 +70,12 @@ D KT Series Reed Relay
 F https://standexelectronics.com/viewer/pdfjs/web/viewer.php?file=https%3A%2F%2Fstandexelectronics.com%2Fwp-content%2Fuploads%2F2015%2F03%2FKT_V03.pdf
 $ENDCMP
 #
+$CMP LMV339
+D Quad General-Purpose Low-Voltage Comparator, SOIC-14/TSSOP-14
+K cmp open collector
+F https://www.st.com/resource/en/datasheet/lmv331.pdf
+$ENDCMP
+#
 $CMP LP2989
 D LP29289 Fixed 500mA Low Noise LDO
 F http://www.ti.com/lit/ds/symlink/lp2989.pdf
@@ -186,6 +192,12 @@ D High precision, Low drift 3.3 V reference
 F http://www.ti.com/lit/ds/symlink/ref3433.pdf
 $ENDCMP
 #
+$CMP RGL34x
+D Diode
+K diode
+F https://www.mouser.it/datasheet/2/427/rgl34a-1768034.pdf
+$ENDCMP
+#
 $CMP R_power_backplane
 D Resistor
 K R res resistor
@@ -225,6 +237,12 @@ $ENDCMP
 $CMP TPS3700
 D Window Comparator
 F http://www.ti.com/lit/ds/symlink/tps3700.pdf
+$ENDCMP
+#
+$CMP TS3704
+D Quad Differential Comparators, SO-14/TSSOP-14
+K cmp
+F https://www.st.com/resource/en/datasheet/lm139.pdf
 $ENDCMP
 #
 $CMP TS391I
