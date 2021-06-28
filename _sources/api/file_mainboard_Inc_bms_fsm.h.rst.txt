@@ -1,0 +1,102 @@
+
+.. _file_mainboard_Inc_bms_fsm.h:
+
+File bms_fsm.h
+==============
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Inc>` (``mainboard/Inc``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+BMS's state machine. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Inc/bms_fsm.h``)
+----------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Inc_bms_fsm.h.rst
+
+
+
+Detailed Description
+--------------------
+
+Mar 31, 2020
+
+Matteo Bonora [matteo.bonora@studenti.unitn.it] 
+
+Simone Ruffini [simone.ruffini@studenti.unitn.it] 
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``fsm.h`` (:ref:`file_mainboard_Inc_bal_fsm.h`)
+
+- ``stdbool.h``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_mainboard_Src_bms_fsm.c`
+
+- :ref:`file_mainboard_Src_cli_bms.c`
+
+- :ref:`file_mainboard_Src_main.c`
+
+- :ref:`file_mainboard_Src_peripherals_can.c`
+
+- :ref:`file_mainboard_Src_super_fsm.c`
+
+- :ref:`file_mainboard_Src_tim.c`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structbms__fsm`
+
+
+Enums
+-----
+
+
+- :ref:`exhale_enum_bms__fsm_8h_1aa73eb4aef78f9b630c1c82768fc3508c`
+
+- :ref:`exhale_enum_bms__fsm_8h_1a25f0477a732b1a7aea1e8966a5abd125`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_bms__fsm_8h_1ab27416dfde693265de1ef0588e9c37b4`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_bms__fsm_8h_1a9e00b4d41aaef2c8c5a5c8926076d0e1`
+

@@ -171,7 +171,9 @@
 <span class="c1">//=================================== General ===============================</span>
 <span class="c1">//===========================================================================</span>
 
-<span class="cp">#define htim_Err htim2</span>
+<span class="cp">#define htim_err   htim3</span>
+<span class="cp">#define htim_bms   htim2</span>
+<span class="cp">#define htim_super htim4</span>
 
 <span class="cp">#define spi_eeprom hspi2</span>
 
@@ -244,7 +246,8 @@
 
 <span class="c1">// @section Pre-charge</span>
 
-<span class="cp">#define PRECHARGE_TIMEOUT           10000</span>
+<span class="cp">#define PRECHARGE_TIMEOUT           10000U</span>
+<span class="cp">#define PRECHARGE_CHECK_INTERVAL    100U</span>
 <span class="cp">#define PRECHARGE_VOLTAGE_THRESHOLD 0.95</span>
 
 <span class="k">typedef</span> <span class="kt">uint16_t</span> <span class="n">voltage_t</span><span class="p">;</span>
@@ -309,7 +312,7 @@
 <span class="c1">//=============================== SI8900 Settings ===========================</span>
 <span class="c1">//===========================================================================</span>
 
-<span class="cp">#define SI8900_INIT_TIMEOUT 1000</span>
+<span class="cp">#define SI8900_INIT_TIMEOUT 400</span>
 
 <span class="cp">#define SI8900_TIMEOUT 5</span>
 

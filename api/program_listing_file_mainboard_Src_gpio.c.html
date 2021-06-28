@@ -195,14 +195,11 @@
 
   <span class="cm">/*Configure GPIO pin Output Level */</span>
   <span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">GPIOA</span><span class="p">,</span> <span class="n">MUX_A2_Pin</span><span class="o">|</span><span class="n">MUX_A3_Pin</span><span class="o">|</span><span class="n">CS_LTC_Pin</span><span class="o">|</span><span class="n">BMS_FAULT_Pin</span>
-                          <span class="o">|</span><span class="n">TS_ON_Pin</span><span class="o">|</span><span class="n">PC_ENDED_Pin</span><span class="p">,</span> <span class="n">GPIO_PIN_RESET</span><span class="p">);</span>
+                          <span class="o">|</span><span class="n">TS_ON_Pin</span><span class="o">|</span><span class="n">PC_ENDED_Pin</span><span class="o">|</span><span class="n">HOLD_Pin</span><span class="p">,</span> <span class="n">GPIO_PIN_RESET</span><span class="p">);</span>
 
   <span class="cm">/*Configure GPIO pin Output Level */</span>
   <span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">GPIOB</span><span class="p">,</span> <span class="n">ADC_SIN_Pin</span><span class="o">|</span><span class="n">MUX_A1_Pin</span><span class="o">|</span><span class="n">MUX_A0_Pin</span><span class="o">|</span><span class="n">CS_SD_Pin</span>
                           <span class="o">|</span><span class="n">LED_2_Pin</span><span class="o">|</span><span class="n">LED_1_Pin</span><span class="p">,</span> <span class="n">GPIO_PIN_RESET</span><span class="p">);</span>
-
-  <span class="cm">/*Configure GPIO pin Output Level */</span>
-  <span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">HOLD_GPIO_Port</span><span class="p">,</span> <span class="n">HOLD_Pin</span><span class="p">,</span> <span class="n">GPIO_PIN_SET</span><span class="p">);</span>
 
   <span class="cm">/*Configure GPIO pin : PtPin */</span>
   <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pin</span> <span class="o">=</span> <span class="n">CS_EEPROM_Pin</span><span class="p">;</span>

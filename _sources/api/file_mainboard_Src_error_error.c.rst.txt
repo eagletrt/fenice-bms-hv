@@ -69,17 +69,30 @@ Functions
 
 - :ref:`exhale_function_error_8c_1a3b6a9c78bb29ca0f757779c0bdb37e3c`
 
+- :ref:`exhale_function_error_8c_1a4c013455493be71097266ca44894cafa`
+
 - :ref:`exhale_function_error_8c_1a344c68273636b72c77da957d1086a5ee`
 
 - :ref:`exhale_function_error_8c_1a366492838020f38e468861b2034b90ba`
 
 - :ref:`exhale_function_error_8c_1ac902639c33be815867c0fb48c167293d`
 
+- :ref:`exhale_function_error_8c_1ae86f203b676a3c6a854b7e1f55e49a6d`
+
 - :ref:`exhale_function_error_8c_1ab141b610cef83979b66d4e1e158ea8fa`
 
 - :ref:`exhale_function_error_8c_1afb94a3a257e2bdafbc186960699bc5a3`
 
 - :ref:`exhale_function_error_8c_1a6b6d15a1320459e59cdcda802d6584ff`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_error_8c_1affe776513b24d84b39af8ab0930fef7f`
+
+- :ref:`exhale_define_error_8c_1ac6afabdc09a49a433ee19d8a9486056d`
 
 
 Variables

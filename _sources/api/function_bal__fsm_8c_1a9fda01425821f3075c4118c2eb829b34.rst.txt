@@ -1,0 +1,13 @@
+.. _exhale_function_bal__fsm_8c_1a9fda01425821f3075c4118c2eb829b34:
+
+Function discharge_entry
+========================
+
+- Defined in :ref:`file_mainboard_Src_bal_fsm.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: discharge_entry(fsm)

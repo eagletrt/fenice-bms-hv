@@ -85,6 +85,16 @@ Files
 .. toctree::
    :maxdepth: 5
 
+   file_mainboard_Src_bms_fsm.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Inc_bms_fsm.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
    file_mainboard_Src_peripherals_can.c.rst
 
 .. toctree::
@@ -161,16 +171,6 @@ Files
    :maxdepth: 5
 
    file_cellboard_Inc_fenice_config.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file_mainboard_Src_fsm_bms.c.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file_mainboard_Inc_fsm_bms.h.rst
 
 .. toctree::
    :maxdepth: 5
@@ -311,6 +311,16 @@ Files
    :maxdepth: 5
 
    file_mainboard_Inc_stm32g4xx_it.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Src_super_fsm.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Inc_super_fsm.h.rst
 
 .. toctree::
    :maxdepth: 5

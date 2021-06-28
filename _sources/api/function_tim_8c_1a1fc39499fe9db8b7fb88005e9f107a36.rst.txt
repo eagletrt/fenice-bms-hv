@@ -1,0 +1,13 @@
+.. _exhale_function_tim_8c_1a1fc39499fe9db8b7fb88005e9f107a36:
+
+Function HAL_TIM_OC_DelayElapsedCallback
+========================================
+
+- Defined in :ref:`file_mainboard_Src_tim.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: HAL_TIM_OC_DelayElapsedCallback(TIM_HandleTypeDef *)

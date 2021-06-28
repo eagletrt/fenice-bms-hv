@@ -1,7 +1,7 @@
 .. _exhale_function_mainboard_2Inc_2main_8h_1a3ed7f44fca3a6f9df9f4cec4b62876ca:
 
-Function check_timers()
-=======================
+Function check_timers
+=====================
 
 - Defined in :ref:`file_mainboard_Inc_main.h`
 

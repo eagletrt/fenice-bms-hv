@@ -1,0 +1,13 @@
+.. _exhale_define_cellboard_2Inc_2fenice__config_8h_1a258ded157859527b5296e12210f61b63:
+
+Define htim_err
+===============
+
+- Defined in :ref:`file_cellboard_Inc_fenice_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: htim_err

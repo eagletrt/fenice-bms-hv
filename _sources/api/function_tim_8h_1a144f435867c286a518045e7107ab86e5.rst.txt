@@ -1,0 +1,13 @@
+.. _exhale_function_tim_8h_1a144f435867c286a518045e7107ab86e5:
+
+Function TIM_computePulse(TIM_HandleTypeDef \*, uint32_t)
+=========================================================
+
+- Defined in :ref:`file_mainboard_Inc_tim.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: TIM_computePulse(TIM_HandleTypeDef *, uint32_t)

@@ -59,6 +59,8 @@ Included By
 
 - :ref:`file_mainboard_Src_peripherals_si8900.c`
 
+- :ref:`file_mainboard_Src_super_fsm.c`
+
 - :ref:`file_mainboard_Src_usart.c`
 
 

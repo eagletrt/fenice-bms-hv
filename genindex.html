@@ -187,7 +187,7 @@
 <h2 id="Symbols">Symbols</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/enum_bal__fsm_8h_1a06fc87d81c62e9abb8790b6e5713c55b.html#_CPPv4Ut6_anon_0">[anonymous] (C++ enum)</a>, <a href="api/enum_cellboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#_CPPv4Ut6_anon_2">[1]</a>, <a href="api/enum_mainboard_2Inc_2fenice__config_8h_1adf764cbdea00d65edcd07bb9953ad2b7.html#_CPPv4Ut6_anon_1">[2]</a>
+      <li><a href="api/enum_bal__fsm_8h_1a06fc87d81c62e9abb8790b6e5713c55b.html#_CPPv4Ut6_anon_0">[anonymous] (C++ enum)</a>, <a href="api/enum_bal__fsm_8h_1adf764cbdea00d65edcd07bb9953ad2b7.html#_CPPv4Ut6_anon_1">[1]</a>, <a href="api/enum_cellboard_2Inc_2fenice__config_8h_1abc6126af1d45847bc59afa0aa3216b04.html#_CPPv4Ut6_anon_3">[2]</a>, <a href="api/enum_mainboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#_CPPv4Ut6_anon_2">[3]</a>
 </li>
   </ul></td>
 </tr></table>
@@ -233,6 +233,8 @@
 </li>
       <li><a href="api/define_cellboard_2Inc_2main_8h_1a31ac298fbbc8a1d6de1dc4577a108232.html#c.B1_Pin">B1_Pin (C macro)</a>
 </li>
+      <li><a href="api/variable_bal__fsm_8c_1aa7c85a3c7c06fd8b21ac78d6a5237152.html#_CPPv43bal">bal (C++ member)</a>, <a href="api/variable_bal__fsm_8h_1aa7c85a3c7c06fd8b21ac78d6a5237152.html#_CPPv43bal">[1]</a>
+</li>
       <li><a href="api/enum_bal__fsm_8h_1a06fc87d81c62e9abb8790b6e5713c55b.html#_CPPv411BAL_COMPUTE">BAL_COMPUTE (C++ enumerator)</a>
 </li>
       <li><a href="api/function_bal_8c_1ac4fab94238cd9bd16c9f3c3d17fc035e.html#_CPPv421bal_compute_imbalanceA_9voltage_t8uint16_t9voltage_tA_8uint16_t">bal_compute_imbalance (C++ function)</a>, <a href="api/function_bal_8h_1ac4fab94238cd9bd16c9f3c3d17fc035e.html#_CPPv421bal_compute_imbalanceA_9voltage_t8uint16_t9voltage_tA_8uint16_t">[1]</a>
@@ -245,9 +247,19 @@
 </li>
       <li><a href="api/enum_bal__fsm_8h_1a06fc87d81c62e9abb8790b6e5713c55b.html#_CPPv413BAL_DISCHARGE">BAL_DISCHARGE (C++ enumerator)</a>
 </li>
+      <li><a href="api/enum_bal__fsm_8h_1adf764cbdea00d65edcd07bb9953ad2b7.html#_CPPv410BAL_EV_NUM">BAL_EV_NUM (C++ enumerator)</a>
+</li>
       <li><a href="api/function_bal_8c_1a5adb7336d5f77eac25813d94d56c0410.html#_CPPv421bal_exclude_neighborsA_8uint16_t8uint16_tA_8uint16_t">bal_exclude_neighbors (C++ function)</a>, <a href="api/function_bal_8h_1a2c3b2ddfa164a6ec0f86cb9d6ad3ec22.html#_CPPv421bal_exclude_neighborsA_8uint16_t8uint16_tA_8uint16_t">[1]</a>
 </li>
-      <li><a href="api/variable_bal__fsm_8c_1aa12677f0c46e8c8c8cf4af823a6e73a6.html#_CPPv47bal_fsm">bal_fsm (C++ member)</a>, <a href="api/variable_bal__fsm_8h_1aa12677f0c46e8c8c8cf4af823a6e73a6.html#_CPPv47bal_fsm">[1]</a>
+      <li><a href="api/structbal__fsm.html#_CPPv47bal_fsm">bal_fsm (C++ class)</a>
+</li>
+      <li><a href="api/structbal__fsm.html#_CPPv4N7bal_fsm5cellsE">bal_fsm::cells (C++ member)</a>, <a href="api/variable_pack_8c_1a22fb404da4d9ebc546ffb3bd5a9ad469.html#_CPPv4N7bal_fsm5cellsE">[1]</a>
+</li>
+      <li><a href="api/structbal__fsm.html#_CPPv4N7bal_fsm12cycle_lengthE">bal_fsm::cycle_length (C++ member)</a>
+</li>
+      <li><a href="api/structbal__fsm.html#_CPPv4N7bal_fsm14discharge_timeE">bal_fsm::discharge_time (C++ member)</a>
+</li>
+      <li><a href="api/structbal__fsm.html#_CPPv4N7bal_fsm3fsmE">bal_fsm::fsm (C++ member)</a>
 </li>
       <li><a href="api/function_bal__fsm_8c_1a72aadcd031bfaf567ec4aecc2d6fd818.html#_CPPv412bal_fsm_initv">bal_fsm_init (C++ function)</a>, <a href="api/function_bal__fsm_8h_1a72aadcd031bfaf567ec4aecc2d6fd818.html#_CPPv412bal_fsm_initv">[1]</a>
 </li>
@@ -273,33 +285,47 @@
 </li>
       <li><a href="api/function_bal__fsm_8c_1af340160471b0034430f8d5fef743862b.html#_CPPv417bal_set_threshold8uint16_t">bal_set_threshold (C++ function)</a>, <a href="api/function_bal__fsm_8h_1af340160471b0034430f8d5fef743862b.html#_CPPv417bal_set_threshold8uint16_t">[1]</a>
 </li>
-      <li><a href="api/enum_fsm__bms_8h_1a25f0477a732b1a7aea1e8966a5abd125.html#_CPPv410BMS_CHARGE">BMS_CHARGE (C++ enumerator)</a>
+      <li><a href="api/variable_bms__fsm_8c_1a9e00b4d41aaef2c8c5a5c8926076d0e1.html#_CPPv43bms">bms (C++ member)</a>, <a href="api/variable_bms__fsm_8h_1a9e00b4d41aaef2c8c5a5c8926076d0e1.html#_CPPv43bms">[1]</a>
+</li>
+      <li><a href="api/enum_bms__fsm_8h_1aa73eb4aef78f9b630c1c82768fc3508c.html#_CPPv411BMS_EV_HALT">BMS_EV_HALT (C++ enumerator)</a>
+</li>
+      <li><a href="api/enum_bms__fsm_8h_1aa73eb4aef78f9b630c1c82768fc3508c.html#_CPPv410BMS_EV_NUM">BMS_EV_NUM (C++ enumerator)</a>
+</li>
+      <li><a href="api/enum_bms__fsm_8h_1aa73eb4aef78f9b630c1c82768fc3508c.html#_CPPv422BMS_EV_PRECHARGE_CHECK">BMS_EV_PRECHARGE_CHECK (C++ enumerator)</a>
+</li>
+      <li><a href="api/enum_bms__fsm_8h_1aa73eb4aef78f9b630c1c82768fc3508c.html#_CPPv424BMS_EV_PRECHARGE_TIMEOUT">BMS_EV_PRECHARGE_TIMEOUT (C++ enumerator)</a>
+</li>
+      <li><a href="api/enum_bms__fsm_8h_1aa73eb4aef78f9b630c1c82768fc3508c.html#_CPPv419BMS_EV_TEMP_MEASURE">BMS_EV_TEMP_MEASURE (C++ enumerator)</a>
+</li>
+      <li><a href="api/enum_bms__fsm_8h_1aa73eb4aef78f9b630c1c82768fc3508c.html#_CPPv413BMS_EV_TS_OFF">BMS_EV_TS_OFF (C++ enumerator)</a>
+</li>
+      <li><a href="api/enum_bms__fsm_8h_1aa73eb4aef78f9b630c1c82768fc3508c.html#_CPPv412BMS_EV_TS_ON">BMS_EV_TS_ON (C++ enumerator)</a>
+</li>
+      <li><a href="api/enum_bms__fsm_8h_1aa73eb4aef78f9b630c1c82768fc3508c.html#_CPPv419BMS_EV_VOLT_MEASURE">BMS_EV_VOLT_MEASURE (C++ enumerator)</a>
+</li>
+      <li><a href="api/enum_bms__fsm_8h_1aa73eb4aef78f9b630c1c82768fc3508c.html#_CPPv410bms_events">bms_events (C++ enum)</a>
 </li>
       <li><a href="api/define_mainboard_2Inc_2main_8h_1af253fc2c0b960fab7613c2079d4f601f.html#c.BMS_FAULT_GPIO_Port">BMS_FAULT_GPIO_Port (C macro)</a>
 </li>
       <li><a href="api/define_mainboard_2Inc_2main_8h_1a285655485c9636fdac33b4f323052d64.html#c.BMS_FAULT_Pin">BMS_FAULT_Pin (C macro)</a>
 </li>
-      <li><a href="api/enum_fsm__bms_8h_1a25f0477a732b1a7aea1e8966a5abd125.html#_CPPv48BMS_HALT">BMS_HALT (C++ enumerator)</a>
+      <li><a href="api/structbms__fsm.html#_CPPv47bms_fsm">bms_fsm (C++ class)</a>
 </li>
-      <li><a href="api/enum_fsm__bms_8h_1a25f0477a732b1a7aea1e8966a5abd125.html#_CPPv48BMS_IDLE">BMS_IDLE (C++ enumerator)</a>
+      <li><a href="api/structbms__fsm.html#_CPPv4N7bms_fsm3fsmE">bms_fsm::fsm (C++ member)</a>
 </li>
-      <li><a href="api/enum_fsm__bms_8h_1a25f0477a732b1a7aea1e8966a5abd125.html#_CPPv48BMS_INIT">BMS_INIT (C++ enumerator)</a>
+      <li><a href="api/function_bms__fsm_8c_1ab27416dfde693265de1ef0588e9c37b4.html#_CPPv412bms_fsm_initv">bms_fsm_init (C++ function)</a>, <a href="api/function_bms__fsm_8h_1ab27416dfde693265de1ef0588e9c37b4.html#_CPPv412bms_fsm_initv">[1]</a>
 </li>
-      <li><a href="api/enum_fsm__bms_8h_1a25f0477a732b1a7aea1e8966a5abd125.html#_CPPv414BMS_NUM_STATES">BMS_NUM_STATES (C++ enumerator)</a>
+      <li><a href="api/enum_bms__fsm_8h_1a25f0477a732b1a7aea1e8966a5abd125.html#_CPPv48BMS_HALT">BMS_HALT (C++ enumerator)</a>
 </li>
-      <li><a href="api/enum_fsm__bms_8h_1a25f0477a732b1a7aea1e8966a5abd125.html#_CPPv417BMS_PRECHARGE_END">BMS_PRECHARGE_END (C++ enumerator)</a>
+      <li><a href="api/enum_bms__fsm_8h_1a25f0477a732b1a7aea1e8966a5abd125.html#_CPPv48BMS_IDLE">BMS_IDLE (C++ enumerator)</a>
 </li>
-      <li><a href="api/enum_fsm__bms_8h_1a25f0477a732b1a7aea1e8966a5abd125.html#_CPPv419BMS_PRECHARGE_START">BMS_PRECHARGE_START (C++ enumerator)</a>
+      <li><a href="api/enum_bms__fsm_8h_1a25f0477a732b1a7aea1e8966a5abd125.html#_CPPv414BMS_NUM_STATES">BMS_NUM_STATES (C++ enumerator)</a>
 </li>
-      <li><a href="api/enum_fsm__bms_8h_1a25f0477a732b1a7aea1e8966a5abd125.html#_CPPv418BMS_PRECHARGE_WAIT">BMS_PRECHARGE_WAIT (C++ enumerator)</a>
+      <li><a href="api/enum_bms__fsm_8h_1a25f0477a732b1a7aea1e8966a5abd125.html#_CPPv46BMS_ON">BMS_ON (C++ enumerator)</a>
 </li>
-      <li><a href="api/enum_fsm__bms_8h_1a25f0477a732b1a7aea1e8966a5abd125.html#_CPPv47BMS_RUN">BMS_RUN (C++ enumerator)</a>
+      <li><a href="api/enum_bms__fsm_8h_1a25f0477a732b1a7aea1e8966a5abd125.html#_CPPv413BMS_PRECHARGE">BMS_PRECHARGE (C++ enumerator)</a>
 </li>
-      <li><a href="api/enum_fsm__bms_8h_1a25f0477a732b1a7aea1e8966a5abd125.html#_CPPv414BMS_SET_TS_OFF">BMS_SET_TS_OFF (C++ enumerator)</a>
-</li>
-      <li><a href="api/enum_fsm__bms_8h_1a25f0477a732b1a7aea1e8966a5abd125.html#_CPPv410bms_states">bms_states (C++ enum)</a>
-</li>
-      <li><a href="api/enum_fsm__bms_8h_1a25f0477a732b1a7aea1e8966a5abd125.html#_CPPv411BMS_TO_HALT">BMS_TO_HALT (C++ enumerator)</a>
+      <li><a href="api/enum_bms__fsm_8h_1a25f0477a732b1a7aea1e8966a5abd125.html#_CPPv410bms_states">bms_states (C++ enum)</a>
 </li>
       <li><a href="api/function_stm32f4xx__it_8c_1a850cefb17a977292ae5eb4cafa9976c3.html#_CPPv416BusFault_Handlerv">BusFault_Handler (C++ function)</a>, <a href="api/function_stm32f4xx__it_8h_1a850cefb17a977292ae5eb4cafa9976c3.html#_CPPv416BusFault_Handlerv">[1]</a>, <a href="api/function_stm32g4xx__it_8c_1a850cefb17a977292ae5eb4cafa9976c3.html#_CPPv416BusFault_Handlerv">[2]</a>, <a href="api/function_stm32g4xx__it_8h_1a850cefb17a977292ae5eb4cafa9976c3.html#_CPPv416BusFault_Handlerv">[3]</a>
 </li>
@@ -353,7 +379,7 @@
 </li>
       <li><a href="api/define_mainboard_2Inc_2main_8h_1ac7e8838bf05988b9dfbea1295b0e9ab1.html#c.CHARGE_Pin">CHARGE_Pin (C macro)</a>
 </li>
-      <li><a href="api/function_mainboard_2Inc_2main_8h_1a3ed7f44fca3a6f9df9f4cec4b62876ca.html#_CPPv412check_timersv">check_timers (C++ function)</a>, <a href="api/function_mainboard_2Src_2main_8c_1a3ed7f44fca3a6f9df9f4cec4b62876ca.html#_CPPv412check_timersv">[1]</a>
+      <li><a href="api/function_mainboard_2Inc_2main_8h_1a3ed7f44fca3a6f9df9f4cec4b62876ca.html#_CPPv412check_timersv">check_timers (C++ function)</a>
 </li>
       <li><a href="api/variable_cli__bms_8c_1ae97f49f74719578ca4823d58d8e74c19.html#_CPPv47cli_bms">cli_bms (C++ member)</a>, <a href="api/variable_cli__bms_8h_1ae97f49f74719578ca4823d58d8e74c19.html#_CPPv47cli_bms">[1]</a>
 </li>
@@ -433,8 +459,6 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/variable_error_8c_1a5803d617be0399f8f39913e58a7671eb.html#_CPPv47er_list">er_list (C++ member)</a>, <a href="api/variable_error_8h_1a5803d617be0399f8f39913e58a7671eb.html#_CPPv47er_list">[1]</a>
 </li>
-      <li><a href="api/enum_error_8h_1a954c5caf30928503ff36b24cc6d6414d.html#_CPPv412ERROR_ACTIVE">ERROR_ACTIVE (C++ enumerator)</a>
-</li>
       <li><a href="api/enum_error_8h_1a29af8b317c2926569605c08d7ef294a5.html#_CPPv414ERROR_ADC_INIT">ERROR_ADC_INIT (C++ enumerator)</a>
 </li>
       <li><a href="api/enum_error_8h_1a29af8b317c2926569605c08d7ef294a5.html#_CPPv417ERROR_ADC_TIMEOUT">ERROR_ADC_TIMEOUT (C++ enumerator)</a>
@@ -451,11 +475,9 @@
 </li>
       <li><a href="api/function_error_8c_1ae0da17dfc49f7b7b8bf6093efc28700c.html#_CPPv410error_dumpA_7error_t">error_dump (C++ function)</a>, <a href="api/function_error_8h_1ae0da17dfc49f7b7b8bf6093efc28700c.html#_CPPv410error_dumpA_7error_t">[1]</a>
 </li>
-      <li><a href="api/enum_error_8h_1a954c5caf30928503ff36b24cc6d6414d.html#_CPPv411ERROR_FATAL">ERROR_FATAL (C++ enumerator)</a>
+      <li><a href="api/enum_error_8h_1a29af8b317c2926569605c08d7ef294a5.html#_CPPv414ERROR_FEEDBACK">ERROR_FEEDBACK (C++ enumerator)</a>
 </li>
-      <li><a href="api/enum_error_8h_1a29af8b317c2926569605c08d7ef294a5.html#_CPPv419ERROR_FEEDBACK_HARD">ERROR_FEEDBACK_HARD (C++ enumerator)</a>
-</li>
-      <li><a href="api/enum_error_8h_1a29af8b317c2926569605c08d7ef294a5.html#_CPPv419ERROR_FEEDBACK_SOFT">ERROR_FEEDBACK_SOFT (C++ enumerator)</a>
+      <li><a href="api/function_error_8c_1a4c013455493be71097266ca44894cafa.html#_CPPv413error_get_topv">error_get_top (C++ function)</a>, <a href="api/function_error_8h_1a4c013455493be71097266ca44894cafa.html#_CPPv413error_get_topv">[1]</a>
 </li>
       <li><a href="api/function_cellboard_2Inc_2main_8h_1a1730ffe1e560465665eb47d9264826f9.html#_CPPv413Error_Handlerv">Error_Handler (C++ function)</a>, <a href="api/function_cellboard_2Src_2main_8c_1a1730ffe1e560465665eb47d9264826f9.html#_CPPv413Error_Handlerv">[1]</a>, <a href="api/function_mainboard_2Inc_2main_8h_1a1730ffe1e560465665eb47d9264826f9.html#_CPPv413Error_Handlerv">[2]</a>, <a href="api/function_mainboard_2Src_2main_8c_1a1730ffe1e560465665eb47d9264826f9.html#_CPPv413Error_Handlerv">[3]</a>
 </li>
@@ -469,17 +491,19 @@
 </li>
       <li><a href="api/variable_error__list__ref_8c_1ae8bdbe4c365032b5f0bfed0d120a0497.html#_CPPv420error_list_ref_array">error_list_ref_array (C++ member)</a>, <a href="api/variable_error__list__ref_8h_1ae8bdbe4c365032b5f0bfed0d120a0497.html#_CPPv420error_list_ref_array">[1]</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/function_error__list__ref_8c_1a15d1d25a509bfc4df69959c281373295.html#_CPPv428error_list_ref_array_element8uint16_t8uint16_t">error_list_ref_array_element (C++ function)</a>, <a href="api/function_error__list__ref_8h_1a15d1d25a509bfc4df69959c281373295.html#_CPPv428error_list_ref_array_element8uint16_t8uint16_t">[1]</a>
 </li>
-      <li><a href="api/enum_error_8h_1a29af8b317c2926569605c08d7ef294a5.html#_CPPv419ERROR_LTC_PEC_ERROR">ERROR_LTC_PEC_ERROR (C++ enumerator)</a>
+      <li><a href="api/enum_error_8h_1a29af8b317c2926569605c08d7ef294a5.html#_CPPv413ERROR_LTC_PEC">ERROR_LTC_PEC (C++ enumerator)</a>
 </li>
       <li><a href="api/enum_error_8h_1a29af8b317c2926569605c08d7ef294a5.html#_CPPv416ERROR_NUM_ERRORS">ERROR_NUM_ERRORS (C++ enumerator)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/enum_error_8h_1a29af8b317c2926569605c08d7ef294a5.html#_CPPv418ERROR_OVER_CURRENT">ERROR_OVER_CURRENT (C++ enumerator)</a>
 </li>
       <li><a href="api/function_error_8c_1ac902639c33be815867c0fb48c167293d.html#_CPPv49error_set8error_id7uint8_t8uint32_t">error_set (C++ function)</a>, <a href="api/function_error_8h_1a088a6ef471aa61175b288a40b17dfd74.html#_CPPv49error_set8error_id7uint8_t8uint32_t">[1]</a>
+</li>
+      <li><a href="api/function_error_8c_1ae86f203b676a3c6a854b7e1f55e49a6d.html#_CPPv415error_set_fatalP7error_t">error_set_fatal (C++ function)</a>, <a href="api/function_error_8h_1ae86f203b676a3c6a854b7e1f55e49a6d.html#_CPPv415error_set_fatalP7error_t">[1]</a>
 </li>
       <li><a href="api/enum_error_8h_1a954c5caf30928503ff36b24cc6d6414d.html#_CPPv411error_state">error_state (C++ enum)</a>
 </li>
@@ -507,6 +531,12 @@
 </li>
       <li><a href="api/define_stm32f4xx__hal__conf_8h_1a4ad07ad8fa6f8639ab8ef362390d86c7.html#c.ETH_TXBUFNB">ETH_TXBUFNB (C macro)</a>
 </li>
+      <li><a href="api/enum_bal__fsm_8h_1adf764cbdea00d65edcd07bb9953ad2b7.html#_CPPv418EV_BAL_CHECK_TIMER">EV_BAL_CHECK_TIMER (C++ enumerator)</a>
+</li>
+      <li><a href="api/enum_bal__fsm_8h_1adf764cbdea00d65edcd07bb9953ad2b7.html#_CPPv412EV_BAL_START">EV_BAL_START (C++ enumerator)</a>
+</li>
+      <li><a href="api/enum_bal__fsm_8h_1adf764cbdea00d65edcd07bb9953ad2b7.html#_CPPv411EV_BAL_STOP">EV_BAL_STOP (C++ enumerator)</a>
+</li>
       <li><a href="api/define_stm32f4xx__hal__conf_8h_1a8c47c935e91e70569098b41718558648.html#c.EXTERNAL_CLOCK_VALUE">EXTERNAL_CLOCK_VALUE (C macro)</a>, <a href="api/define_stm32g4xx__hal__conf_8h_1a8c47c935e91e70569098b41718558648.html#c.EXTERNAL_CLOCK_VALUE">[1]</a>
 </li>
   </ul></td>
@@ -525,21 +555,21 @@
 </li>
       <li><a href="api/define_cellboard_2Inc_2fenice__config_8h_1a6518732d47d3c62703bb81d1cc4f7bdc.html#c.FEEDBACK_AIR_NEGATIVE">FEEDBACK_AIR_NEGATIVE (C macro)</a>, <a href="api/define_mainboard_2Inc_2fenice__config_8h_1a6518732d47d3c62703bb81d1cc4f7bdc.html#c.FEEDBACK_AIR_NEGATIVE">[1]</a>
 </li>
-      <li><a href="api/enum_cellboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#_CPPv425FEEDBACK_AIR_NEGATIVE_POS">FEEDBACK_AIR_NEGATIVE_POS (C++ enumerator)</a>, <a href="api/enum_mainboard_2Inc_2fenice__config_8h_1adf764cbdea00d65edcd07bb9953ad2b7.html#_CPPv425FEEDBACK_AIR_NEGATIVE_POS">[1]</a>
+      <li><a href="api/enum_cellboard_2Inc_2fenice__config_8h_1abc6126af1d45847bc59afa0aa3216b04.html#_CPPv425FEEDBACK_AIR_NEGATIVE_POS">FEEDBACK_AIR_NEGATIVE_POS (C++ enumerator)</a>, <a href="api/enum_mainboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#_CPPv425FEEDBACK_AIR_NEGATIVE_POS">[1]</a>
 </li>
       <li><a href="api/define_cellboard_2Inc_2fenice__config_8h_1a967e38a47e1ae71543e1903555d28abf.html#c.FEEDBACK_AIR_POSITIVE">FEEDBACK_AIR_POSITIVE (C macro)</a>, <a href="api/define_mainboard_2Inc_2fenice__config_8h_1a967e38a47e1ae71543e1903555d28abf.html#c.FEEDBACK_AIR_POSITIVE">[1]</a>
 </li>
-      <li><a href="api/enum_cellboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#_CPPv425FEEDBACK_AIR_POSITIVE_POS">FEEDBACK_AIR_POSITIVE_POS (C++ enumerator)</a>, <a href="api/enum_mainboard_2Inc_2fenice__config_8h_1adf764cbdea00d65edcd07bb9953ad2b7.html#_CPPv425FEEDBACK_AIR_POSITIVE_POS">[1]</a>
+      <li><a href="api/enum_cellboard_2Inc_2fenice__config_8h_1abc6126af1d45847bc59afa0aa3216b04.html#_CPPv425FEEDBACK_AIR_POSITIVE_POS">FEEDBACK_AIR_POSITIVE_POS (C++ enumerator)</a>, <a href="api/enum_mainboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#_CPPv425FEEDBACK_AIR_POSITIVE_POS">[1]</a>
 </li>
       <li><a href="api/define_cellboard_2Inc_2fenice__config_8h_1a04107a61d000fd6656664fde5401d334.html#c.FEEDBACK_ALL">FEEDBACK_ALL (C macro)</a>, <a href="api/define_mainboard_2Inc_2fenice__config_8h_1a04107a61d000fd6656664fde5401d334.html#c.FEEDBACK_ALL">[1]</a>
 </li>
       <li><a href="api/define_cellboard_2Inc_2fenice__config_8h_1af313533a4eb32bafcbddd19b5e2154cc.html#c.FEEDBACK_BMS_FAULT">FEEDBACK_BMS_FAULT (C macro)</a>, <a href="api/define_mainboard_2Inc_2fenice__config_8h_1af313533a4eb32bafcbddd19b5e2154cc.html#c.FEEDBACK_BMS_FAULT">[1]</a>
 </li>
-      <li><a href="api/enum_cellboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#_CPPv422FEEDBACK_BMS_FAULT_POS">FEEDBACK_BMS_FAULT_POS (C++ enumerator)</a>, <a href="api/enum_mainboard_2Inc_2fenice__config_8h_1adf764cbdea00d65edcd07bb9953ad2b7.html#_CPPv422FEEDBACK_BMS_FAULT_POS">[1]</a>
+      <li><a href="api/enum_cellboard_2Inc_2fenice__config_8h_1abc6126af1d45847bc59afa0aa3216b04.html#_CPPv422FEEDBACK_BMS_FAULT_POS">FEEDBACK_BMS_FAULT_POS (C++ enumerator)</a>, <a href="api/enum_mainboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#_CPPv422FEEDBACK_BMS_FAULT_POS">[1]</a>
 </li>
       <li><a href="api/define_cellboard_2Inc_2fenice__config_8h_1ac6c25dcc28c3841d095287674c262136.html#c.FEEDBACK_BMS_SHUTDOWN">FEEDBACK_BMS_SHUTDOWN (C macro)</a>, <a href="api/define_mainboard_2Inc_2fenice__config_8h_1ac6c25dcc28c3841d095287674c262136.html#c.FEEDBACK_BMS_SHUTDOWN">[1]</a>
 </li>
-      <li><a href="api/enum_cellboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#_CPPv425FEEDBACK_BMS_SHUTDOWN_POS">FEEDBACK_BMS_SHUTDOWN_POS (C++ enumerator)</a>, <a href="api/enum_mainboard_2Inc_2fenice__config_8h_1adf764cbdea00d65edcd07bb9953ad2b7.html#_CPPv425FEEDBACK_BMS_SHUTDOWN_POS">[1]</a>
+      <li><a href="api/enum_cellboard_2Inc_2fenice__config_8h_1abc6126af1d45847bc59afa0aa3216b04.html#_CPPv425FEEDBACK_BMS_SHUTDOWN_POS">FEEDBACK_BMS_SHUTDOWN_POS (C++ enumerator)</a>, <a href="api/enum_mainboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#_CPPv425FEEDBACK_BMS_SHUTDOWN_POS">[1]</a>
 </li>
       <li><a href="api/function_feedback_8c_1a11c9b5dab785327e001b6db1cfd922c8.html#_CPPv414feedback_check10feedback_t10feedback_t8error_id">feedback_check (C++ function)</a>, <a href="api/function_feedback_8h_1a11c9b5dab785327e001b6db1cfd922c8.html#_CPPv414feedback_check10feedback_t10feedback_t8error_id">[1]</a>
 </li>
@@ -551,11 +581,11 @@
 </li>
       <li><a href="api/define_cellboard_2Inc_2fenice__config_8h_1a9912a7389caf6887b3ad3ceea19cf9b6.html#c.FEEDBACK_FROM_SHUTDOWN">FEEDBACK_FROM_SHUTDOWN (C macro)</a>, <a href="api/define_mainboard_2Inc_2fenice__config_8h_1a9912a7389caf6887b3ad3ceea19cf9b6.html#c.FEEDBACK_FROM_SHUTDOWN">[1]</a>
 </li>
-      <li><a href="api/enum_cellboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#_CPPv426FEEDBACK_FROM_SHUTDOWN_POS">FEEDBACK_FROM_SHUTDOWN_POS (C++ enumerator)</a>, <a href="api/enum_mainboard_2Inc_2fenice__config_8h_1adf764cbdea00d65edcd07bb9953ad2b7.html#_CPPv426FEEDBACK_FROM_SHUTDOWN_POS">[1]</a>
+      <li><a href="api/enum_cellboard_2Inc_2fenice__config_8h_1abc6126af1d45847bc59afa0aa3216b04.html#_CPPv426FEEDBACK_FROM_SHUTDOWN_POS">FEEDBACK_FROM_SHUTDOWN_POS (C++ enumerator)</a>, <a href="api/enum_mainboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#_CPPv426FEEDBACK_FROM_SHUTDOWN_POS">[1]</a>
 </li>
       <li><a href="api/define_cellboard_2Inc_2fenice__config_8h_1afeade4a3aa68e8a17d4b6653dd118f3c.html#c.FEEDBACK_FROM_TSMS">FEEDBACK_FROM_TSMS (C macro)</a>, <a href="api/define_mainboard_2Inc_2fenice__config_8h_1afeade4a3aa68e8a17d4b6653dd118f3c.html#c.FEEDBACK_FROM_TSMS">[1]</a>
 </li>
-      <li><a href="api/enum_cellboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#_CPPv422FEEDBACK_FROM_TSMS_POS">FEEDBACK_FROM_TSMS_POS (C++ enumerator)</a>, <a href="api/enum_mainboard_2Inc_2fenice__config_8h_1adf764cbdea00d65edcd07bb9953ad2b7.html#_CPPv422FEEDBACK_FROM_TSMS_POS">[1]</a>
+      <li><a href="api/enum_cellboard_2Inc_2fenice__config_8h_1abc6126af1d45847bc59afa0aa3216b04.html#_CPPv422FEEDBACK_FROM_TSMS_POS">FEEDBACK_FROM_TSMS_POS (C++ enumerator)</a>, <a href="api/enum_mainboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#_CPPv422FEEDBACK_FROM_TSMS_POS">[1]</a>
 </li>
       <li><a href="api/define_feedback_8h_1a4619c2dd34ea61bef213fdcbd01f3d94.html#c.FEEDBACK_IDLE_TS_ON_TRIGGER_MASK">FEEDBACK_IDLE_TS_ON_TRIGGER_MASK (C macro)</a>
 </li>
@@ -563,23 +593,23 @@
 </li>
       <li><a href="api/define_cellboard_2Inc_2fenice__config_8h_1a89fc54d810ffb4e44df4694793d80863.html#c.FEEDBACK_IMD_FAULT">FEEDBACK_IMD_FAULT (C macro)</a>, <a href="api/define_mainboard_2Inc_2fenice__config_8h_1a89fc54d810ffb4e44df4694793d80863.html#c.FEEDBACK_IMD_FAULT">[1]</a>
 </li>
-      <li><a href="api/enum_cellboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#_CPPv422FEEDBACK_IMD_FAULT_POS">FEEDBACK_IMD_FAULT_POS (C++ enumerator)</a>, <a href="api/enum_mainboard_2Inc_2fenice__config_8h_1adf764cbdea00d65edcd07bb9953ad2b7.html#_CPPv422FEEDBACK_IMD_FAULT_POS">[1]</a>
+      <li><a href="api/enum_cellboard_2Inc_2fenice__config_8h_1abc6126af1d45847bc59afa0aa3216b04.html#_CPPv422FEEDBACK_IMD_FAULT_POS">FEEDBACK_IMD_FAULT_POS (C++ enumerator)</a>, <a href="api/enum_mainboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#_CPPv422FEEDBACK_IMD_FAULT_POS">[1]</a>
 </li>
       <li><a href="api/define_cellboard_2Inc_2fenice__config_8h_1aacb1f83a54dd505fedda5ae061986c76.html#c.FEEDBACK_IMD_SHUTDOWN">FEEDBACK_IMD_SHUTDOWN (C macro)</a>, <a href="api/define_mainboard_2Inc_2fenice__config_8h_1aacb1f83a54dd505fedda5ae061986c76.html#c.FEEDBACK_IMD_SHUTDOWN">[1]</a>
 </li>
-      <li><a href="api/enum_cellboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#_CPPv425FEEDBACK_IMD_SHUTDOWN_POS">FEEDBACK_IMD_SHUTDOWN_POS (C++ enumerator)</a>, <a href="api/enum_mainboard_2Inc_2fenice__config_8h_1adf764cbdea00d65edcd07bb9953ad2b7.html#_CPPv425FEEDBACK_IMD_SHUTDOWN_POS">[1]</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/enum_cellboard_2Inc_2fenice__config_8h_1abc6126af1d45847bc59afa0aa3216b04.html#_CPPv425FEEDBACK_IMD_SHUTDOWN_POS">FEEDBACK_IMD_SHUTDOWN_POS (C++ enumerator)</a>, <a href="api/enum_mainboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#_CPPv425FEEDBACK_IMD_SHUTDOWN_POS">[1]</a>
+</li>
       <li><a href="api/define_cellboard_2Inc_2fenice__config_8h_1afc031ad8d471245104a20627db9c5242.html#c.FEEDBACK_LATCH_BMS">FEEDBACK_LATCH_BMS (C macro)</a>, <a href="api/define_mainboard_2Inc_2fenice__config_8h_1afc031ad8d471245104a20627db9c5242.html#c.FEEDBACK_LATCH_BMS">[1]</a>
 </li>
-      <li><a href="api/enum_cellboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#_CPPv422FEEDBACK_LATCH_BMS_POS">FEEDBACK_LATCH_BMS_POS (C++ enumerator)</a>, <a href="api/enum_mainboard_2Inc_2fenice__config_8h_1adf764cbdea00d65edcd07bb9953ad2b7.html#_CPPv422FEEDBACK_LATCH_BMS_POS">[1]</a>
+      <li><a href="api/enum_cellboard_2Inc_2fenice__config_8h_1abc6126af1d45847bc59afa0aa3216b04.html#_CPPv422FEEDBACK_LATCH_BMS_POS">FEEDBACK_LATCH_BMS_POS (C++ enumerator)</a>, <a href="api/enum_mainboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#_CPPv422FEEDBACK_LATCH_BMS_POS">[1]</a>
 </li>
       <li><a href="api/define_cellboard_2Inc_2fenice__config_8h_1a17279386c8315cbc09ae36214e765674.html#c.FEEDBACK_LATCH_IMD">FEEDBACK_LATCH_IMD (C macro)</a>, <a href="api/define_mainboard_2Inc_2fenice__config_8h_1a17279386c8315cbc09ae36214e765674.html#c.FEEDBACK_LATCH_IMD">[1]</a>
 </li>
-      <li><a href="api/enum_cellboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#_CPPv422FEEDBACK_LATCH_IMD_POS">FEEDBACK_LATCH_IMD_POS (C++ enumerator)</a>, <a href="api/enum_mainboard_2Inc_2fenice__config_8h_1adf764cbdea00d65edcd07bb9953ad2b7.html#_CPPv422FEEDBACK_LATCH_IMD_POS">[1]</a>
+      <li><a href="api/enum_cellboard_2Inc_2fenice__config_8h_1abc6126af1d45847bc59afa0aa3216b04.html#_CPPv422FEEDBACK_LATCH_IMD_POS">FEEDBACK_LATCH_IMD_POS (C++ enumerator)</a>, <a href="api/enum_mainboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#_CPPv422FEEDBACK_LATCH_IMD_POS">[1]</a>
 </li>
-      <li><a href="api/enum_cellboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#_CPPv410FEEDBACK_N">FEEDBACK_N (C++ enumerator)</a>, <a href="api/enum_mainboard_2Inc_2fenice__config_8h_1adf764cbdea00d65edcd07bb9953ad2b7.html#_CPPv410FEEDBACK_N">[1]</a>
+      <li><a href="api/enum_cellboard_2Inc_2fenice__config_8h_1abc6126af1d45847bc59afa0aa3216b04.html#_CPPv410FEEDBACK_N">FEEDBACK_N (C++ enumerator)</a>, <a href="api/enum_mainboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#_CPPv410FEEDBACK_N">[1]</a>
 </li>
       <li><a href="api/define_cellboard_2Inc_2fenice__config_8h_1a1f337074220e345427c393e4dfe72c9d.html#c.FEEDBACK_NULL">FEEDBACK_NULL (C macro)</a>, <a href="api/define_mainboard_2Inc_2fenice__config_8h_1a1f337074220e345427c393e4dfe72c9d.html#c.FEEDBACK_NULL">[1]</a>
 </li>
@@ -589,13 +619,13 @@
 </li>
       <li><a href="api/define_cellboard_2Inc_2fenice__config_8h_1a28406ab7a2ebc1b2fd97b655b173dbfa.html#c.FEEDBACK_PC_END">FEEDBACK_PC_END (C macro)</a>, <a href="api/define_mainboard_2Inc_2fenice__config_8h_1a28406ab7a2ebc1b2fd97b655b173dbfa.html#c.FEEDBACK_PC_END">[1]</a>
 </li>
-      <li><a href="api/enum_cellboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#_CPPv419FEEDBACK_PC_END_POS">FEEDBACK_PC_END_POS (C++ enumerator)</a>, <a href="api/enum_mainboard_2Inc_2fenice__config_8h_1adf764cbdea00d65edcd07bb9953ad2b7.html#_CPPv419FEEDBACK_PC_END_POS">[1]</a>
+      <li><a href="api/enum_cellboard_2Inc_2fenice__config_8h_1abc6126af1d45847bc59afa0aa3216b04.html#_CPPv419FEEDBACK_PC_END_POS">FEEDBACK_PC_END_POS (C++ enumerator)</a>, <a href="api/enum_mainboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#_CPPv419FEEDBACK_PC_END_POS">[1]</a>
 </li>
       <li><a href="api/function_feedback_8c_1a06351c2489bffae2ee37347c46ab8e2d.html#_CPPv413feedback_read10feedback_t">feedback_read (C++ function)</a>, <a href="api/function_feedback_8h_1a06351c2489bffae2ee37347c46ab8e2d.html#_CPPv413feedback_read10feedback_t">[1]</a>
 </li>
       <li><a href="api/define_cellboard_2Inc_2fenice__config_8h_1a0c42839ebbedb7b0a4722a0c89f2768e.html#c.FEEDBACK_RELAY_LV">FEEDBACK_RELAY_LV (C macro)</a>, <a href="api/define_mainboard_2Inc_2fenice__config_8h_1a0c42839ebbedb7b0a4722a0c89f2768e.html#c.FEEDBACK_RELAY_LV">[1]</a>
 </li>
-      <li><a href="api/enum_cellboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#_CPPv421FEEDBACK_RELAY_LV_POS">FEEDBACK_RELAY_LV_POS (C++ enumerator)</a>, <a href="api/enum_mainboard_2Inc_2fenice__config_8h_1adf764cbdea00d65edcd07bb9953ad2b7.html#_CPPv421FEEDBACK_RELAY_LV_POS">[1]</a>
+      <li><a href="api/enum_cellboard_2Inc_2fenice__config_8h_1abc6126af1d45847bc59afa0aa3216b04.html#_CPPv421FEEDBACK_RELAY_LV_POS">FEEDBACK_RELAY_LV_POS (C++ enumerator)</a>, <a href="api/enum_mainboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#_CPPv421FEEDBACK_RELAY_LV_POS">[1]</a>
 </li>
       <li><a href="api/typedef_feedback_8h_1af31f74762bbbbb2cdd1f2ee74ba4b97b.html#_CPPv410feedback_t">feedback_t (C++ type)</a>
 </li>
@@ -605,7 +635,7 @@
 </li>
       <li><a href="api/define_cellboard_2Inc_2fenice__config_8h_1ae96f45706c849a95b8912193be3a6cee.html#c.FEEDBACK_TO_TSMS">FEEDBACK_TO_TSMS (C macro)</a>, <a href="api/define_mainboard_2Inc_2fenice__config_8h_1ae96f45706c849a95b8912193be3a6cee.html#c.FEEDBACK_TO_TSMS">[1]</a>
 </li>
-      <li><a href="api/enum_cellboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#_CPPv420FEEDBACK_TO_TSMS_POS">FEEDBACK_TO_TSMS_POS (C++ enumerator)</a>, <a href="api/enum_mainboard_2Inc_2fenice__config_8h_1adf764cbdea00d65edcd07bb9953ad2b7.html#_CPPv420FEEDBACK_TO_TSMS_POS">[1]</a>
+      <li><a href="api/enum_cellboard_2Inc_2fenice__config_8h_1abc6126af1d45847bc59afa0aa3216b04.html#_CPPv420FEEDBACK_TO_TSMS_POS">FEEDBACK_TO_TSMS_POS (C++ enumerator)</a>, <a href="api/enum_mainboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#_CPPv420FEEDBACK_TO_TSMS_POS">[1]</a>
 </li>
       <li><a href="api/define_feedback_8h_1a72194c3f60b2be52883873a649796e9d.html#c.FEEDBACK_TS_OFF_MASK">FEEDBACK_TS_OFF_MASK (C macro)</a>
 </li>
@@ -613,19 +643,15 @@
 </li>
       <li><a href="api/define_cellboard_2Inc_2fenice__config_8h_1a1b9c0102efa9b5f2ba6e0ec6ca959e8a.html#c.FEEDBACK_TS_ON">FEEDBACK_TS_ON (C macro)</a>, <a href="api/define_mainboard_2Inc_2fenice__config_8h_1a1b9c0102efa9b5f2ba6e0ec6ca959e8a.html#c.FEEDBACK_TS_ON">[1]</a>
 </li>
-      <li><a href="api/enum_cellboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#_CPPv418FEEDBACK_TS_ON_POS">FEEDBACK_TS_ON_POS (C++ enumerator)</a>, <a href="api/enum_mainboard_2Inc_2fenice__config_8h_1adf764cbdea00d65edcd07bb9953ad2b7.html#_CPPv418FEEDBACK_TS_ON_POS">[1]</a>
+      <li><a href="api/enum_cellboard_2Inc_2fenice__config_8h_1abc6126af1d45847bc59afa0aa3216b04.html#_CPPv418FEEDBACK_TS_ON_POS">FEEDBACK_TS_ON_POS (C++ enumerator)</a>, <a href="api/enum_mainboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#_CPPv418FEEDBACK_TS_ON_POS">[1]</a>
 </li>
       <li><a href="api/define_cellboard_2Inc_2fenice__config_8h_1a6eb87d577456b165cca34c87be6e4c17.html#c.FEEDBACK_TSAL_HV">FEEDBACK_TSAL_HV (C macro)</a>, <a href="api/define_mainboard_2Inc_2fenice__config_8h_1a6eb87d577456b165cca34c87be6e4c17.html#c.FEEDBACK_TSAL_HV">[1]</a>
 </li>
-      <li><a href="api/enum_cellboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#_CPPv420FEEDBACK_TSAL_HV_POS">FEEDBACK_TSAL_HV_POS (C++ enumerator)</a>, <a href="api/enum_mainboard_2Inc_2fenice__config_8h_1adf764cbdea00d65edcd07bb9953ad2b7.html#_CPPv420FEEDBACK_TSAL_HV_POS">[1]</a>
+      <li><a href="api/enum_cellboard_2Inc_2fenice__config_8h_1abc6126af1d45847bc59afa0aa3216b04.html#_CPPv420FEEDBACK_TSAL_HV_POS">FEEDBACK_TSAL_HV_POS (C++ enumerator)</a>, <a href="api/enum_mainboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#_CPPv420FEEDBACK_TSAL_HV_POS">[1]</a>
 </li>
       <li><a href="api/define_cellboard_2Inc_2fenice__config_8h_1ad25baf1309e63341af5a37332165047b.html#c.FEEDBACK_VREF">FEEDBACK_VREF (C macro)</a>, <a href="api/define_mainboard_2Inc_2fenice__config_8h_1ad25baf1309e63341af5a37332165047b.html#c.FEEDBACK_VREF">[1]</a>
 </li>
-      <li><a href="api/enum_cellboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#_CPPv417FEEDBACK_VREF_POS">FEEDBACK_VREF_POS (C++ enumerator)</a>, <a href="api/enum_mainboard_2Inc_2fenice__config_8h_1adf764cbdea00d65edcd07bb9953ad2b7.html#_CPPv417FEEDBACK_VREF_POS">[1]</a>
-</li>
-      <li><a href="api/variable_fsm__bms_8c_1ab6e277a466f3fb179e0c41896bb0e85c.html#_CPPv47fsm_bms">fsm_bms (C++ member)</a>, <a href="api/variable_fsm__bms_8h_1ab6e277a466f3fb179e0c41896bb0e85c.html#_CPPv47fsm_bms">[1]</a>
-</li>
-      <li><a href="api/function_fsm__bms_8c_1a44d2899c50265c562b9ee5695112b7a4.html#_CPPv412fsm_bms_initv">fsm_bms_init (C++ function)</a>, <a href="api/function_fsm__bms_8h_1a44d2899c50265c562b9ee5695112b7a4.html#_CPPv412fsm_bms_initv">[1]</a>
+      <li><a href="api/enum_cellboard_2Inc_2fenice__config_8h_1abc6126af1d45847bc59afa0aa3216b04.html#_CPPv417FEEDBACK_VREF_POS">FEEDBACK_VREF_POS (C++ enumerator)</a>, <a href="api/enum_mainboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5.html#_CPPv417FEEDBACK_VREF_POS">[1]</a>
 </li>
   </ul></td>
 </tr></table>
@@ -677,12 +703,12 @@
 </li>
       <li><a href="api/define_stm32f4xx__hal__conf_8h_1a167269406e73327b95c3bb7b9cfe6d89.html#c.HAL_UART_MODULE_ENABLED">HAL_UART_MODULE_ENABLED (C macro)</a>, <a href="api/define_stm32g4xx__hal__conf_8h_1a167269406e73327b95c3bb7b9cfe6d89.html#c.HAL_UART_MODULE_ENABLED">[1]</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/function_stm32f4xx__it_8c_1a2bffc10d5bd4106753b7c30e86903bea.html#_CPPv417HardFault_Handlerv">HardFault_Handler (C++ function)</a>, <a href="api/function_stm32f4xx__it_8h_1a2bffc10d5bd4106753b7c30e86903bea.html#_CPPv417HardFault_Handlerv">[1]</a>, <a href="api/function_stm32g4xx__it_8c_1a2bffc10d5bd4106753b7c30e86903bea.html#_CPPv417HardFault_Handlerv">[2]</a>, <a href="api/function_stm32g4xx__it_8h_1a2bffc10d5bd4106753b7c30e86903bea.html#_CPPv417HardFault_Handlerv">[3]</a>
 </li>
       <li><a href="api/variable_fdcan_8c_1a7e870132380038c7b0e226a8c78d3461.html#_CPPv47hfdcan1">hfdcan1 (C++ member)</a>, <a href="api/variable_fdcan_8h_1a7e870132380038c7b0e226a8c78d3461.html#_CPPv47hfdcan1">[1]</a>, <a href="api/variable_stm32g4xx__it_8c_1a7e870132380038c7b0e226a8c78d3461.html#_CPPv47hfdcan1">[2]</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/define_mainboard_2Inc_2main_8h_1aacff7d78aff3b4fa5e3c40c6bb3a9034.html#c.HOLD_GPIO_Port">HOLD_GPIO_Port (C macro)</a>
 </li>
       <li><a href="api/define_mainboard_2Inc_2main_8h_1a2b73acee9fa4bda9aa0cecbfc1616597.html#c.HOLD_Pin">HOLD_Pin (C macro)</a>
@@ -701,7 +727,15 @@
 </li>
       <li><a href="api/variable_stm32g4xx__it_8c_1a2c80fd5510e2990a59a5c90d745c716c.html#_CPPv45htim2">htim2 (C++ member)</a>, <a href="api/variable_tim_8c_1a2c80fd5510e2990a59a5c90d745c716c.html#_CPPv45htim2">[1]</a>, <a href="api/variable_tim_8h_1a2c80fd5510e2990a59a5c90d745c716c.html#_CPPv45htim2">[2]</a>
 </li>
-      <li><a href="api/define_cellboard_2Inc_2fenice__config_8h_1a779ec931683e9dc628d7aee263a22fa1.html#c.htim_Err">htim_Err (C macro)</a>, <a href="api/define_mainboard_2Inc_2fenice__config_8h_1a779ec931683e9dc628d7aee263a22fa1.html#c.htim_Err">[1]</a>
+      <li><a href="api/variable_stm32g4xx__it_8c_1aac3d2c59ee0e3bbae1b99529a154eb62.html#_CPPv45htim3">htim3 (C++ member)</a>, <a href="api/variable_tim_8c_1aac3d2c59ee0e3bbae1b99529a154eb62.html#_CPPv45htim3">[1]</a>, <a href="api/variable_tim_8h_1aac3d2c59ee0e3bbae1b99529a154eb62.html#_CPPv45htim3">[2]</a>
+</li>
+      <li><a href="api/variable_stm32g4xx__it_8c_1a85788cec5a97ee377e4ee2e74f026484.html#_CPPv45htim4">htim4 (C++ member)</a>, <a href="api/variable_tim_8c_1a85788cec5a97ee377e4ee2e74f026484.html#_CPPv45htim4">[1]</a>, <a href="api/variable_tim_8h_1a85788cec5a97ee377e4ee2e74f026484.html#_CPPv45htim4">[2]</a>
+</li>
+      <li><a href="api/define_cellboard_2Inc_2fenice__config_8h_1aa5da6226d68d66c83e73de55e5790115.html#c.htim_bms">htim_bms (C macro)</a>, <a href="api/define_mainboard_2Inc_2fenice__config_8h_1aa5da6226d68d66c83e73de55e5790115.html#c.htim_bms">[1]</a>
+</li>
+      <li><a href="api/define_cellboard_2Inc_2fenice__config_8h_1a258ded157859527b5296e12210f61b63.html#c.htim_err">htim_err (C macro)</a>, <a href="api/define_mainboard_2Inc_2fenice__config_8h_1a258ded157859527b5296e12210f61b63.html#c.htim_err">[1]</a>
+</li>
+      <li><a href="api/define_cellboard_2Inc_2fenice__config_8h_1a7ded33a4d024b4c85cb466a5de305133.html#c.htim_super">htim_super (C macro)</a>, <a href="api/define_mainboard_2Inc_2fenice__config_8h_1a7ded33a4d024b4c85cb466a5de305133.html#c.htim_super">[1]</a>
 </li>
       <li><a href="api/variable_cellboard_2Src_2main_8c_1aa9479c261d65eecedd3d9582f7f0f89c.html#_CPPv46huart2">huart2 (C++ member)</a>, <a href="api/variable_stm32g4xx__it_8c_1aa9479c261d65eecedd3d9582f7f0f89c.html#_CPPv46huart2">[1]</a>, <a href="api/variable_usart_8c_1aa9479c261d65eecedd3d9582f7f0f89c.html#_CPPv46huart2">[2]</a>, <a href="api/variable_usart_8h_1aa9479c261d65eecedd3d9582f7f0f89c.html#_CPPv46huart2">[3]</a>
 </li>
@@ -847,10 +881,10 @@
 </li>
       <li><a href="api/define_mainboard_2Inc_2main_8h_1a3de7916f8cb74ad5892cf776dfaf6f25.html#c.MUX_A1_Pin">MUX_A1_Pin (C macro)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/define_mainboard_2Inc_2main_8h_1a29c7ded282ae5068bbfb72aa72518c31.html#c.MUX_A2_GPIO_Port">MUX_A2_GPIO_Port (C macro)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/define_mainboard_2Inc_2main_8h_1a7f301924602912ea599f2026cdfd264a.html#c.MUX_A2_Pin">MUX_A2_Pin (C macro)</a>
 </li>
       <li><a href="api/define_mainboard_2Inc_2main_8h_1ad6e7f26e5693818cf2ee0324d6c3daef.html#c.MUX_A3_GPIO_Port">MUX_A3_GPIO_Port (C macro)</a>
@@ -866,6 +900,10 @@
       <li><a href="api/function_spi_8c_1aea85daa666c03d85fd59edef711ebb08.html#_CPPv412MX_SPI2_Initv">MX_SPI2_Init (C++ function)</a>, <a href="api/function_spi_8h_1aea85daa666c03d85fd59edef711ebb08.html#_CPPv412MX_SPI2_Initv">[1]</a>
 </li>
       <li><a href="api/function_tim_8c_1a4b8ff887fd3fdf26605e35927e4ff202.html#_CPPv412MX_TIM2_Initv">MX_TIM2_Init (C++ function)</a>, <a href="api/function_tim_8h_1a4b8ff887fd3fdf26605e35927e4ff202.html#_CPPv412MX_TIM2_Initv">[1]</a>
+</li>
+      <li><a href="api/function_tim_8c_1a7912f2916786a2c33cb6fb8259ade58c.html#_CPPv412MX_TIM3_Initv">MX_TIM3_Init (C++ function)</a>, <a href="api/function_tim_8h_1a7912f2916786a2c33cb6fb8259ade58c.html#_CPPv412MX_TIM3_Initv">[1]</a>
+</li>
+      <li><a href="api/function_tim_8c_1aef1e0b132b1af1c923cc420a57180c67.html#_CPPv412MX_TIM4_Initv">MX_TIM4_Init (C++ function)</a>, <a href="api/function_tim_8h_1aef1e0b132b1af1c923cc420a57180c67.html#_CPPv412MX_TIM4_Initv">[1]</a>
 </li>
       <li><a href="api/function_cellboard_2Src_2main_8c_1a6db1014d713f6f5c0f52a13299ee0733.html#_CPPv419MX_USART2_UART_Initv">MX_USART2_UART_Init (C++ function)</a>, <a href="api/function_usart_8c_1a052088fe5bb3f807a4b2502e664fd4fd.html#_CPPv419MX_USART2_UART_Initv">[1]</a>, <a href="api/function_usart_8h_1a6db1014d713f6f5c0f52a13299ee0733.html#_CPPv419MX_USART2_UART_Initv">[2]</a>
 </li>
@@ -1001,6 +1039,8 @@
 </li>
       <li><a href="api/define_stm32f4xx__hal__conf_8h_1a474bf13e28d09b667e41b151140ee39d.html#c.PHY_WRITE_TO">PHY_WRITE_TO (C macro)</a>
 </li>
+      <li><a href="api/define_cellboard_2Inc_2fenice__config_8h_1a87aa6e0b0f11113630f2bd190de08091.html#c.PRECHARGE_CHECK_INTERVAL">PRECHARGE_CHECK_INTERVAL (C macro)</a>, <a href="api/define_mainboard_2Inc_2fenice__config_8h_1a87aa6e0b0f11113630f2bd190de08091.html#c.PRECHARGE_CHECK_INTERVAL">[1]</a>
+</li>
       <li><a href="api/define_cellboard_2Inc_2fenice__config_8h_1ae0749bc3a20fd01dea3168777acdb529.html#c.PRECHARGE_TIMEOUT">PRECHARGE_TIMEOUT (C macro)</a>, <a href="api/define_mainboard_2Inc_2fenice__config_8h_1ae0749bc3a20fd01dea3168777acdb529.html#c.PRECHARGE_TIMEOUT">[1]</a>
 </li>
       <li><a href="api/define_cellboard_2Inc_2fenice__config_8h_1a5e2a19a0e90ed9912932dd358475c976.html#c.PRECHARGE_VOLTAGE_THRESHOLD">PRECHARGE_VOLTAGE_THRESHOLD (C macro)</a>, <a href="api/define_mainboard_2Inc_2fenice__config_8h_1a5e2a19a0e90ed9912932dd358475c976.html#c.PRECHARGE_VOLTAGE_THRESHOLD">[1]</a>
@@ -1019,11 +1059,11 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/variable_ltc6813_8h_1a48a49b8421c6dc03a9a877737bf47b3c.html#_CPPv48rdcv_cmd">rdcv_cmd (C++ member)</a>
 </li>
-      <li><a href="api/function_mainboard_2Inc_2main_8h_1aa37e75086b51ff3285a728e2503da04a.html#_CPPv410read_tempsv">read_temps (C++ function)</a>, <a href="api/function_mainboard_2Src_2main_8c_1aa37e75086b51ff3285a728e2503da04a.html#_CPPv410read_tempsv">[1]</a>
+      <li><a href="api/function_mainboard_2Inc_2main_8h_1aa37e75086b51ff3285a728e2503da04a.html#_CPPv410read_tempsv">read_temps (C++ function)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/function_mainboard_2Inc_2main_8h_1a6a685456398dbe1476716961676530ad.html#_CPPv410read_voltsv">read_volts (C++ function)</a>, <a href="api/function_mainboard_2Src_2main_8c_1a6a685456398dbe1476716961676530ad.html#_CPPv410read_voltsv">[1]</a>
+      <li><a href="api/function_mainboard_2Inc_2main_8h_1a6a685456398dbe1476716961676530ad.html#_CPPv410read_voltsv">read_volts (C++ function)</a>
 </li>
       <li><a href="api/enum_error_8h_1a338314053cb4bab8d75aee3b8d561ce2.html#_CPPv47REGULAR">REGULAR (C++ enumerator)</a>
 </li>
@@ -1073,8 +1113,6 @@
 </li>
       <li><a href="api/function_soc_8c_1a3a9387c3f027f01060a1c35e64b83450.html#_CPPv410soc_deinitP5soc_t">soc_deinit (C++ function)</a>, <a href="api/function_soc_8h_1a3a9387c3f027f01060a1c35e64b83450.html#_CPPv410soc_deinitP5soc_t">[1]</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/function_soc_8c_1aa9b1a5f1e57898a6e179250c98e37538.html#_CPPv413soc_get_joule5soc_t">soc_get_joule (C++ function)</a>, <a href="api/function_soc_8h_1aa9b1a5f1e57898a6e179250c98e37538.html#_CPPv413soc_get_joule5soc_t">[1]</a>
 </li>
       <li><a href="api/function_soc_8c_1a0a8b3494f4378341cd132fbca26a0a22.html#_CPPv410soc_get_wh5soc_t">soc_get_wh (C++ function)</a>, <a href="api/function_soc_8h_1a0a8b3494f4378341cd132fbca26a0a22.html#_CPPv410soc_get_wh5soc_t">[1]</a>
@@ -1089,6 +1127,8 @@
 </li>
       <li><a href="api/structsoc__params.html#_CPPv4N10soc_params11total_jouleE">soc_params::total_joule (C++ member)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/structsoc__params.html#_CPPv4N10soc_params7versionE">soc_params::version (C++ member)</a>
 </li>
       <li><a href="api/function_soc_8c_1aa31c9a93635c5837b091bfc87209d2cc.html#_CPPv415soc_reset_count5soc_t8uint32_t">soc_reset_count (C++ function)</a>, <a href="api/function_soc_8h_1aa31c9a93635c5837b091bfc87209d2cc.html#_CPPv415soc_reset_count5soc_t8uint32_t">[1]</a>
@@ -1106,6 +1146,34 @@
       <li><a href="api/define_cellboard_2Inc_2fenice__config_8h_1ae29095c7d8f1949c76d4770d100fe9d2.html#c.spi_eeprom">spi_eeprom (C macro)</a>, <a href="api/define_mainboard_2Inc_2fenice__config_8h_1ae29095c7d8f1949c76d4770d100fe9d2.html#c.spi_eeprom">[1]</a>
 </li>
       <li><a href="api/function_spi_8c_1acc2dc237744eb00a139b6385c837d35c.html#_CPPv413spi_enable_csP17SPI_HandleTypeDefP12GPIO_TypeDef8uint16_t">spi_enable_cs (C++ function)</a>, <a href="api/function_spi_8h_1acc2dc237744eb00a139b6385c837d35c.html#_CPPv413spi_enable_csP17SPI_HandleTypeDefP12GPIO_TypeDef8uint16_t">[1]</a>
+</li>
+      <li><a href="api/enum_error_8h_1a954c5caf30928503ff36b24cc6d6414d.html#_CPPv411STATE_FATAL">STATE_FATAL (C++ enumerator)</a>
+</li>
+      <li><a href="api/enum_error_8h_1a954c5caf30928503ff36b24cc6d6414d.html#_CPPv413STATE_WARNING">STATE_WARNING (C++ enumerator)</a>
+</li>
+      <li><a href="api/enum_super__fsm_8h_1a6216fe89e211b6e64848520c07a74851.html#_CPPv49SUPER_BMS">SUPER_BMS (C++ enumerator)</a>
+</li>
+      <li><a href="api/enum_super__fsm_8h_1a07e48dbb234cc54c9b8677492a6ec92d.html#_CPPv412SUPER_EV_BMS">SUPER_EV_BMS (C++ enumerator)</a>
+</li>
+      <li><a href="api/enum_super__fsm_8h_1a07e48dbb234cc54c9b8677492a6ec92d.html#_CPPv422SUPER_EV_MEASURE_TEMPS">SUPER_EV_MEASURE_TEMPS (C++ enumerator)</a>
+</li>
+      <li><a href="api/enum_super__fsm_8h_1a07e48dbb234cc54c9b8677492a6ec92d.html#_CPPv422SUPER_EV_MEASURE_VOLTS">SUPER_EV_MEASURE_VOLTS (C++ enumerator)</a>
+</li>
+      <li><a href="api/enum_super__fsm_8h_1a07e48dbb234cc54c9b8677492a6ec92d.html#_CPPv412SUPER_EV_NUM">SUPER_EV_NUM (C++ enumerator)</a>
+</li>
+      <li><a href="api/enum_super__fsm_8h_1a07e48dbb234cc54c9b8677492a6ec92d.html#_CPPv412super_events">super_events (C++ enum)</a>
+</li>
+      <li><a href="api/variable_mainboard_2Src_2main_8c_1aa33e6817b3b772e862cdbd1f1015c000.html#_CPPv49super_fsm">super_fsm (C++ member)</a>, <a href="api/variable_super__fsm_8h_1aa33e6817b3b772e862cdbd1f1015c000.html#_CPPv49super_fsm">[1]</a>
+</li>
+      <li><a href="api/function_super__fsm_8c_1a7b59b0191d1ef2a7d789bdd43705f289.html#_CPPv414super_fsm_initv">super_fsm_init (C++ function)</a>, <a href="api/function_super__fsm_8h_1a7b59b0191d1ef2a7d789bdd43705f289.html#_CPPv414super_fsm_initv">[1]</a>
+</li>
+      <li><a href="api/enum_super__fsm_8h_1a6216fe89e211b6e64848520c07a74851.html#_CPPv419SUPER_MEASURE_TEMPS">SUPER_MEASURE_TEMPS (C++ enumerator)</a>
+</li>
+      <li><a href="api/enum_super__fsm_8h_1a6216fe89e211b6e64848520c07a74851.html#_CPPv419SUPER_MEASURE_VOLTS">SUPER_MEASURE_VOLTS (C++ enumerator)</a>
+</li>
+      <li><a href="api/enum_super__fsm_8h_1a6216fe89e211b6e64848520c07a74851.html#_CPPv416SUPER_NUM_STATES">SUPER_NUM_STATES (C++ enumerator)</a>
+</li>
+      <li><a href="api/enum_super__fsm_8h_1a6216fe89e211b6e64848520c07a74851.html#_CPPv412super_states">super_states (C++ enum)</a>
 </li>
       <li><a href="api/function_stm32f4xx__it_8c_1a3e5ddb3df0d62f2dc357e64a3f04a6ce.html#_CPPv411SVC_Handlerv">SVC_Handler (C++ function)</a>, <a href="api/function_stm32f4xx__it_8h_1a3e5ddb3df0d62f2dc357e64a3f04a6ce.html#_CPPv411SVC_Handlerv">[1]</a>, <a href="api/function_stm32g4xx__it_8c_1a3e5ddb3df0d62f2dc357e64a3f04a6ce.html#_CPPv411SVC_Handlerv">[2]</a>, <a href="api/function_stm32g4xx__it_8h_1a3e5ddb3df0d62f2dc357e64a3f04a6ce.html#_CPPv411SVC_Handlerv">[3]</a>
 </li>
@@ -1145,12 +1213,12 @@
 </li>
       <li><a href="api/structtemperature.html#_CPPv4N11temperature3maxE">temperature::max (C++ member)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/structtemperature.html#_CPPv4N11temperature3minE">temperature::min (C++ member)</a>
 </li>
       <li><a href="api/structtemperature.html#_CPPv4N11temperature6valuesE">temperature::values (C++ member)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/function_temperature_8c_1a8100629669aaaec504d11d774f1011e4.html#_CPPv423temperature_get_averageAmlL1Eml19TEMP_STRIPS_PER_BUSL6E_AL4E_8uint16_tAmlL1Eml19TEMP_STRIPS_PER_BUSL6E_7uint8_t">temperature_get_average (C++ function)</a>, <a href="api/function_temperature_8h_1ad5f8dceaf82578550a4ae5379a4770fb.html#_CPPv423temperature_get_averageAmlL1Eml19TEMP_STRIPS_PER_BUSL6E_AL4E_8uint16_tAmlL1Eml19TEMP_STRIPS_PER_BUSL6E_7uint8_t">[1]</a>
 </li>
       <li><a href="api/function_temperature_8c_1a8e51dc2da655bcb0ea1690371fe10bb7.html#_CPPv424temperature_get_extremesA_7uint8_tAL2E_7uint8_tAL2E_7uint8_t">temperature_get_extremes (C++ function)</a>, <a href="api/function_temperature_8h_1a8e51dc2da655bcb0ea1690371fe10bb7.html#_CPPv424temperature_get_extremesA_7uint8_tAL2E_7uint8_tAL2E_7uint8_t">[1]</a>
@@ -1159,9 +1227,17 @@
 </li>
       <li><a href="api/typedef_cellboard_2Inc_2fenice__config_8h_1a7f0e4c8e257063101aa9f4cc03644195.html#_CPPv413temperature_t">temperature_t (C++ type)</a>, <a href="api/typedef_mainboard_2Inc_2fenice__config_8h_1a7f0e4c8e257063101aa9f4cc03644195.html#_CPPv413temperature_t">[1]</a>, <a href="api/typedef_temperature_8h_1a77ac062b2f0d5b68b2755dc75fe485ef.html#_CPPv413temperature_t">[2]</a>
 </li>
+      <li><a href="api/define_super__fsm_8h_1a16edec1b754ced802e83b10006e0942c.html#c.TEMPS_READ_INTERVAL">TEMPS_READ_INTERVAL (C macro)</a>
+</li>
       <li><a href="api/define_stm32f4xx__hal__conf_8h_1ae27809d4959b9fd5b5d974e3e1c77d2e.html#c.TICK_INT_PRIORITY">TICK_INT_PRIORITY (C macro)</a>, <a href="api/define_stm32g4xx__hal__conf_8h_1ae27809d4959b9fd5b5d974e3e1c77d2e.html#c.TICK_INT_PRIORITY">[1]</a>
 </li>
       <li><a href="api/function_stm32g4xx__it_8c_1a38ad4725462bdc5e86c4ead4f04b9fc2.html#_CPPv415TIM2_IRQHandlerv">TIM2_IRQHandler (C++ function)</a>, <a href="api/function_stm32g4xx__it_8h_1a38ad4725462bdc5e86c4ead4f04b9fc2.html#_CPPv415TIM2_IRQHandlerv">[1]</a>
+</li>
+      <li><a href="api/function_stm32g4xx__it_8c_1ac8e51d2183b5230cbd5481f8867adce9.html#_CPPv415TIM3_IRQHandlerv">TIM3_IRQHandler (C++ function)</a>, <a href="api/function_stm32g4xx__it_8h_1ac8e51d2183b5230cbd5481f8867adce9.html#_CPPv415TIM3_IRQHandlerv">[1]</a>
+</li>
+      <li><a href="api/function_stm32g4xx__it_8c_1a7133f3f78767503641d307386e68bd28.html#_CPPv415TIM4_IRQHandlerv">TIM4_IRQHandler (C++ function)</a>, <a href="api/function_stm32g4xx__it_8h_1a7133f3f78767503641d307386e68bd28.html#_CPPv415TIM4_IRQHandlerv">[1]</a>
+</li>
+      <li><a href="api/function_tim_8c_1a144f435867c286a518045e7107ab86e5.html#_CPPv416TIM_computePulseP17TIM_HandleTypeDef8uint32_t">TIM_computePulse (C++ function)</a>, <a href="api/function_tim_8h_1a144f435867c286a518045e7107ab86e5.html#_CPPv416TIM_computePulseP17TIM_HandleTypeDef8uint32_t">[1]</a>
 </li>
       <li><a href="api/define_cellboard_2Inc_2main_8h_1affce477a22cc940d3962932cb33ec422.html#c.TMS_GPIO_Port">TMS_GPIO_Port (C macro)</a>
 </li>
@@ -1261,11 +1337,13 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/define_stm32f4xx__hal__conf_8h_1aae550dad9f96d52cfce5e539adadbbb4.html#c.VDD_VALUE">VDD_VALUE (C macro)</a>, <a href="api/define_stm32g4xx__hal__conf_8h_1aae550dad9f96d52cfce5e539adadbbb4.html#c.VDD_VALUE">[1]</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/define_group__STM32F4xx__System__Private__Defines_1ga40e1495541cbb4acbe3f1819bd87a9fe.html#c.VECT_TAB_OFFSET">VECT_TAB_OFFSET (C macro)</a>, <a href="api/define_group__STM32G4xx__System__Private__Defines_1ga40e1495541cbb4acbe3f1819bd87a9fe.html#c.VECT_TAB_OFFSET">[1]</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/typedef_cellboard_2Inc_2fenice__config_8h_1a919cc27d97b06cf5d67cf5a9bc181dc2.html#_CPPv49voltage_t">voltage_t (C++ type)</a>, <a href="api/typedef_mainboard_2Inc_2fenice__config_8h_1a919cc27d97b06cf5d67cf5a9bc181dc2.html#_CPPv49voltage_t">[1]</a>
+</li>
+      <li><a href="api/define_super__fsm_8h_1aa28d3201210f230c3d1bf3265318a70f.html#c.VOLTS_READ_INTERVAL">VOLTS_READ_INTERVAL (C macro)</a>
 </li>
   </ul></td>
 </tr></table>

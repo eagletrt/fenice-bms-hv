@@ -1,0 +1,13 @@
+.. _exhale_function_bms__fsm_8c_1a9ca7c608d03f9d3b1265be4197c22ed6:
+
+Function on_handler
+===================
+
+- Defined in :ref:`file_mainboard_Src_bms_fsm.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: on_handler(fsm, uint8_t)

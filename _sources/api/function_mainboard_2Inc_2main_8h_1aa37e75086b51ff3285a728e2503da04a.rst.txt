@@ -1,7 +1,7 @@
 .. _exhale_function_mainboard_2Inc_2main_8h_1aa37e75086b51ff3285a728e2503da04a:
 
-Function read_temps()
-=====================
+Function read_temps
+===================
 
 - Defined in :ref:`file_mainboard_Inc_main.h`
 

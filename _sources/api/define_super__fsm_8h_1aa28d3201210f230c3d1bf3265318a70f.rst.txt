@@ -1,0 +1,13 @@
+.. _exhale_define_super__fsm_8h_1aa28d3201210f230c3d1bf3265318a70f:
+
+Define VOLTS_READ_INTERVAL
+==========================
+
+- Defined in :ref:`file_mainboard_Inc_super_fsm.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: VOLTS_READ_INTERVAL

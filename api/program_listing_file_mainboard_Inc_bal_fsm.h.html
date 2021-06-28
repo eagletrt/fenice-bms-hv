@@ -168,15 +168,18 @@
 <span class="cp">#include</span> <span class="cpf">&quot;bal.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;fsm.h&quot;</span><span class="cp"></span>
 
-<span class="k">enum</span> <span class="p">{</span>
-    <span class="n">BAL_OFF</span><span class="p">,</span>
-    <span class="n">BAL_COMPUTE</span><span class="p">,</span>
-    <span class="n">BAL_DISCHARGE</span><span class="p">,</span>
-    <span class="n">BAL_COOLDOWN</span><span class="p">,</span>
-    <span class="n">BAL_NUM_STATES</span>
-<span class="p">};</span>
+<span class="k">enum</span> <span class="p">{</span> <span class="n">BAL_OFF</span><span class="p">,</span> <span class="n">BAL_COMPUTE</span><span class="p">,</span> <span class="n">BAL_DISCHARGE</span><span class="p">,</span> <span class="n">BAL_COOLDOWN</span><span class="p">,</span> <span class="n">BAL_NUM_STATES</span> <span class="p">};</span>
+<span class="k">enum</span> <span class="p">{</span> <span class="n">EV_BAL_STOP</span><span class="p">,</span> <span class="n">EV_BAL_START</span><span class="p">,</span> <span class="n">EV_BAL_CHECK_TIMER</span><span class="p">,</span> <span class="n">BAL_EV_NUM</span> <span class="p">};</span>
 
-<span class="k">extern</span> <span class="n">fsm</span> <span class="n">bal_fsm</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+    <span class="n">fsm</span> <span class="n">fsm</span><span class="p">;</span>
+
+    <span class="kt">uint16_t</span> <span class="n">cells</span><span class="p">[</span><span class="n">PACK_CELL_COUNT</span><span class="p">];</span>
+    <span class="kt">uint32_t</span> <span class="n">discharge_time</span><span class="p">;</span>
+    <span class="kt">uint32_t</span> <span class="n">cycle_length</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">bal_fsm</span><span class="p">;</span>
+
+<span class="k">extern</span> <span class="n">bal_fsm</span> <span class="n">bal</span><span class="p">;</span>
 
 <span class="kt">uint16_t</span> <span class="nf">bal_get_threshold</span><span class="p">();</span>
 <span class="kt">void</span> <span class="nf">bal_set_threshold</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">thresh</span><span class="p">);</span>

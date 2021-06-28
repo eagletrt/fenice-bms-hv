@@ -1,0 +1,13 @@
+.. _exhale_function_bal__fsm_8c_1ac25ddc0a68470cf90b87b09fae6b46c7:
+
+Function off_handler
+====================
+
+- Defined in :ref:`file_mainboard_Src_bal_fsm.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: off_handler(fsm, uint8_t)

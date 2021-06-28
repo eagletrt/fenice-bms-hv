@@ -53,9 +53,7 @@ Variables
 
 - :ref:`exhale_variable_error__list__ref_8c_1a1392b89b1c872143f5a96002e3e5bc09`
 
-- :ref:`exhale_variable_error__list__ref_8c_1a4e9c7f68f593536f20a79f70ab19c7c2`
-
-- :ref:`exhale_variable_error__list__ref_8c_1aeba000c41a5c35e2158d53f086267155`
+- :ref:`exhale_variable_error__list__ref_8c_1a329d72a571ef83719aeaf63d78359a6a`
 
 - :ref:`exhale_variable_error__list__ref_8c_1a8af44e0ba60a74354ed515cdc9fae7f2`
 

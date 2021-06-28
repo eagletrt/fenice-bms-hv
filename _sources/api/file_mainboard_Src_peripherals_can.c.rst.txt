@@ -44,11 +44,11 @@ Includes
 --------
 
 
+- ``bms_fsm.h`` (:ref:`file_mainboard_Inc_bms_fsm.h`)
+
 - ``can.h`` (:ref:`file_mainboard_Inc_peripherals_can.h`)
 
 - ``cli_bms.h`` (:ref:`file_mainboard_Inc_cli_bms.h`)
-
-- ``fsm_bms.h`` (:ref:`file_mainboard_Inc_fsm_bms.h`)
 
 - ``pack.h`` (:ref:`file_mainboard_Inc_pack.h`)
 

@@ -205,6 +205,8 @@
 <span class="cm">/* External variables --------------------------------------------------------*/</span>
 <span class="k">extern</span> <span class="n">FDCAN_HandleTypeDef</span> <span class="n">hfdcan1</span><span class="p">;</span>
 <span class="k">extern</span> <span class="n">TIM_HandleTypeDef</span> <span class="n">htim2</span><span class="p">;</span>
+<span class="k">extern</span> <span class="n">TIM_HandleTypeDef</span> <span class="n">htim3</span><span class="p">;</span>
+<span class="k">extern</span> <span class="n">TIM_HandleTypeDef</span> <span class="n">htim4</span><span class="p">;</span>
 <span class="k">extern</span> <span class="n">UART_HandleTypeDef</span> <span class="n">huart2</span><span class="p">;</span>
 <span class="cm">/* USER CODE BEGIN EV */</span>
 
@@ -350,6 +352,28 @@
   <span class="cm">/* USER CODE BEGIN TIM2_IRQn 1 */</span>
 
   <span class="cm">/* USER CODE END TIM2_IRQn 1 */</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">TIM3_IRQHandler</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="cm">/* USER CODE BEGIN TIM3_IRQn 0 */</span>
+
+  <span class="cm">/* USER CODE END TIM3_IRQn 0 */</span>
+  <span class="n">HAL_TIM_IRQHandler</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim3</span><span class="p">);</span>
+  <span class="cm">/* USER CODE BEGIN TIM3_IRQn 1 */</span>
+
+  <span class="cm">/* USER CODE END TIM3_IRQn 1 */</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">TIM4_IRQHandler</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="cm">/* USER CODE BEGIN TIM4_IRQn 0 */</span>
+
+  <span class="cm">/* USER CODE END TIM4_IRQn 0 */</span>
+  <span class="n">HAL_TIM_IRQHandler</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim4</span><span class="p">);</span>
+  <span class="cm">/* USER CODE BEGIN TIM4_IRQn 1 */</span>
+
+  <span class="cm">/* USER CODE END TIM4_IRQn 1 */</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">USART2_IRQHandler</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>

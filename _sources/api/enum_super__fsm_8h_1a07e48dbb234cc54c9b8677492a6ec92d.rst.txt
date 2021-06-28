@@ -1,0 +1,13 @@
+.. _exhale_enum_super__fsm_8h_1a07e48dbb234cc54c9b8677492a6ec92d:
+
+Enum super_events
+=================
+
+- Defined in :ref:`file_mainboard_Inc_super_fsm.h`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: super_events

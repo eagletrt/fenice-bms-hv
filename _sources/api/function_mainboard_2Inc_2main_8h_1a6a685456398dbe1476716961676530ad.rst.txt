@@ -1,7 +1,7 @@
 .. _exhale_function_mainboard_2Inc_2main_8h_1a6a685456398dbe1476716961676530ad:
 
-Function read_volts()
-=====================
+Function read_volts
+===================
 
 - Defined in :ref:`file_mainboard_Inc_main.h`
 

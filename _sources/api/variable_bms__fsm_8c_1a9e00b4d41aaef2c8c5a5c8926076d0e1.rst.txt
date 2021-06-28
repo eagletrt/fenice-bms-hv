@@ -1,0 +1,13 @@
+.. _exhale_variable_bms__fsm_8c_1a9e00b4d41aaef2c8c5a5c8926076d0e1:
+
+Variable bms
+============
+
+- Defined in :ref:`file_mainboard_Src_bms_fsm.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: bms

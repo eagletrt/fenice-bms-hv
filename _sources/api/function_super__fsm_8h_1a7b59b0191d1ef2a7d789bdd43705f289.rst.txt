@@ -1,0 +1,13 @@
+.. _exhale_function_super__fsm_8h_1a7b59b0191d1ef2a7d789bdd43705f289:
+
+Function super_fsm_init()
+=========================
+
+- Defined in :ref:`file_mainboard_Inc_super_fsm.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: super_fsm_init()

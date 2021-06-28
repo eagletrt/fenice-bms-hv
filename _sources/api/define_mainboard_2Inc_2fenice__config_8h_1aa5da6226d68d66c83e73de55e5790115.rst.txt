@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2fenice__config_8h_1aa5da6226d68d66c83e73de55e5790115:
+
+Define htim_bms
+===============
+
+- Defined in :ref:`file_mainboard_Inc_fenice_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: htim_bms

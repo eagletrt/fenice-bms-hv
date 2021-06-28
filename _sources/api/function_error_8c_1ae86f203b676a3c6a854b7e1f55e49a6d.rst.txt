@@ -1,0 +1,13 @@
+.. _exhale_function_error_8c_1ae86f203b676a3c6a854b7e1f55e49a6d:
+
+Function error_set_fatal(error_t \*)
+====================================
+
+- Defined in :ref:`file_mainboard_Src_error_error.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: error_set_fatal(error_t *)

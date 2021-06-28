@@ -1,0 +1,16 @@
+.. _exhale_struct_structbal__fsm:
+
+Struct bal_fsm
+==============
+
+- Defined in :ref:`file_mainboard_Inc_bal_fsm.h`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: bal_fsm
+   :members:
+   :protected-members:
+   :undoc-members:

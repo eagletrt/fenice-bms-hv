@@ -1,0 +1,13 @@
+.. _exhale_function_tim_8h_1aef1e0b132b1af1c923cc420a57180c67:
+
+Function MX_TIM4_Init(void)
+===========================
+
+- Defined in :ref:`file_mainboard_Inc_tim.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: MX_TIM4_Init(void)

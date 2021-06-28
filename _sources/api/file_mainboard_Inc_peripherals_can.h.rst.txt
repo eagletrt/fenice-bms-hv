@@ -56,11 +56,13 @@ Included By
 -----------
 
 
-- :ref:`file_mainboard_Src_fsm_bms.c`
+- :ref:`file_mainboard_Src_bms_fsm.c`
 
 - :ref:`file_mainboard_Src_main.c`
 
 - :ref:`file_mainboard_Src_peripherals_can.c`
+
+- :ref:`file_mainboard_Src_super_fsm.c`
 
 
 

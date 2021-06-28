@@ -1,0 +1,13 @@
+.. _exhale_function_bms__fsm_8c_1a91f44e4595bb6072696755ad0e4d6deb:
+
+Function precharge_exit
+=======================
+
+- Defined in :ref:`file_mainboard_Src_bms_fsm.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: precharge_exit(fsm)

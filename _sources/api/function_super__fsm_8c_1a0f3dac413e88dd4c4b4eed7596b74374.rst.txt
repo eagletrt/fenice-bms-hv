@@ -1,0 +1,13 @@
+.. _exhale_function_super__fsm_8c_1a0f3dac413e88dd4c4b4eed7596b74374:
+
+Function super_bms
+==================
+
+- Defined in :ref:`file_mainboard_Src_super_fsm.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: super_bms(fsm, super_events)

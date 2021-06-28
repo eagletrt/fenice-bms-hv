@@ -63,11 +63,20 @@ Included By
 
 
 
+Classes
+-------
+
+
+- :ref:`exhale_struct_structbal__fsm`
+
+
 Enums
 -----
 
 
 - :ref:`exhale_enum_bal__fsm_8h_1a06fc87d81c62e9abb8790b6e5713c55b`
+
+- :ref:`exhale_enum_bal__fsm_8h_1adf764cbdea00d65edcd07bb9953ad2b7`
 
 
 Functions
@@ -85,5 +94,5 @@ Variables
 ---------
 
 
-- :ref:`exhale_variable_bal__fsm_8h_1aa12677f0c46e8c8c8cf4af823a6e73a6`
+- :ref:`exhale_variable_bal__fsm_8h_1aa7c85a3c7c06fd8b21ac78d6a5237152`
 

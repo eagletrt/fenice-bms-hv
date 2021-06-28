@@ -181,28 +181,25 @@
 
 <span class="n">llist_node</span> <span class="n">error_list_ref_temperatures</span><span class="p">[</span><span class="n">PACK_TEMP_COUNT</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="nb">NULL</span><span class="p">};</span>
 
-<span class="n">llist_node</span> <span class="n">error_list_ref_current</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="nb">NULL</span><span class="p">};</span>
+<span class="n">llist_node</span> <span class="n">error_list_ref_current</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>         <span class="o">=</span> <span class="p">{</span><span class="nb">NULL</span><span class="p">};</span>
 <span class="n">llist_node</span> <span class="n">error_list_ref_ltc</span><span class="p">[</span><span class="n">LTC6813_COUNT</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="nb">NULL</span><span class="p">};</span>
-<span class="n">llist_node</span> <span class="n">error_list_ref_can</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="nb">NULL</span><span class="p">};</span>
-<span class="n">llist_node</span> <span class="n">error_adc_init</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="nb">NULL</span><span class="p">};</span>
-<span class="n">llist_node</span> <span class="n">error_adc_timeout</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="nb">NULL</span><span class="p">};</span>
-<span class="n">llist_node</span> <span class="n">error_int_voltage_mismatch</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="nb">NULL</span><span class="p">};</span>
-<span class="n">llist_node</span> <span class="n">error_feedback_hard</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="nb">NULL</span><span class="p">};</span>
-<span class="n">llist_node</span> <span class="n">error_feedback_soft</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="nb">NULL</span><span class="p">};</span>
+<span class="n">llist_node</span> <span class="n">error_list_ref_can</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>             <span class="o">=</span> <span class="p">{</span><span class="nb">NULL</span><span class="p">};</span>
+<span class="n">llist_node</span> <span class="n">error_adc_init</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>                 <span class="o">=</span> <span class="p">{</span><span class="nb">NULL</span><span class="p">};</span>
+<span class="n">llist_node</span> <span class="n">error_adc_timeout</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>              <span class="o">=</span> <span class="p">{</span><span class="nb">NULL</span><span class="p">};</span>
+<span class="n">llist_node</span> <span class="n">error_int_voltage_mismatch</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>     <span class="o">=</span> <span class="p">{</span><span class="nb">NULL</span><span class="p">};</span>
+<span class="n">llist_node</span> <span class="n">error_feedback</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>                 <span class="o">=</span> <span class="p">{</span><span class="nb">NULL</span><span class="p">};</span>
 
 <span class="n">llist_node</span> <span class="o">*</span><span class="k">const</span> <span class="n">error_list_ref_array</span><span class="p">[</span><span class="n">ERROR_NUM_ERRORS</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="p">[</span><span class="n">ERROR_LTC_PEC_ERROR</span><span class="p">]</span> <span class="o">=</span> <span class="n">error_list_ref_ltc</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">ERROR_CELL_UNDER_VOLTAGE</span><span class="p">]</span> <span class="o">=</span> <span class="n">error_list_ref_voltages</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">ERROR_CELL_OVER_VOLTAGE</span><span class="p">]</span> <span class="o">=</span> <span class="n">error_list_ref_voltages</span><span class="p">,</span>
+    <span class="p">[</span><span class="n">ERROR_LTC_PEC</span><span class="p">]</span>               <span class="o">=</span> <span class="n">error_list_ref_ltc</span><span class="p">,</span>
+    <span class="p">[</span><span class="n">ERROR_CELL_UNDER_VOLTAGE</span><span class="p">]</span>    <span class="o">=</span> <span class="n">error_list_ref_voltages</span><span class="p">,</span>
+    <span class="p">[</span><span class="n">ERROR_CELL_OVER_VOLTAGE</span><span class="p">]</span>     <span class="o">=</span> <span class="n">error_list_ref_voltages</span><span class="p">,</span>
     <span class="p">[</span><span class="n">ERROR_CELL_OVER_TEMPERATURE</span><span class="p">]</span> <span class="o">=</span> <span class="n">error_list_ref_temperatures</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">ERROR_OVER_CURRENT</span><span class="p">]</span> <span class="o">=</span> <span class="n">error_list_ref_current</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">ERROR_CAN</span><span class="p">]</span> <span class="o">=</span> <span class="n">error_list_ref_can</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">ERROR_ADC_INIT</span><span class="p">]</span> <span class="o">=</span> <span class="n">error_adc_init</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">ERROR_ADC_TIMEOUT</span><span class="p">]</span> <span class="o">=</span> <span class="n">error_adc_timeout</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">ERROR_INT_VOLTAGE_MISMATCH</span><span class="p">]</span> <span class="o">=</span> <span class="n">error_int_voltage_mismatch</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">ERROR_FEEDBACK_HARD</span><span class="p">]</span> <span class="o">=</span> <span class="n">error_feedback_hard</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">ERROR_FEEDBACK_SOFT</span><span class="p">]</span> <span class="o">=</span> <span class="n">error_feedback_soft</span><span class="p">,</span>
-<span class="p">};</span>
+    <span class="p">[</span><span class="n">ERROR_OVER_CURRENT</span><span class="p">]</span>          <span class="o">=</span> <span class="n">error_list_ref_current</span><span class="p">,</span>
+    <span class="p">[</span><span class="n">ERROR_CAN</span><span class="p">]</span>                   <span class="o">=</span> <span class="n">error_list_ref_can</span><span class="p">,</span>
+    <span class="p">[</span><span class="n">ERROR_ADC_INIT</span><span class="p">]</span>              <span class="o">=</span> <span class="n">error_adc_init</span><span class="p">,</span>
+    <span class="p">[</span><span class="n">ERROR_ADC_TIMEOUT</span><span class="p">]</span>           <span class="o">=</span> <span class="n">error_adc_timeout</span><span class="p">,</span>
+    <span class="p">[</span><span class="n">ERROR_INT_VOLTAGE_MISMATCH</span><span class="p">]</span>  <span class="o">=</span> <span class="n">error_int_voltage_mismatch</span><span class="p">,</span>
+    <span class="p">[</span><span class="n">ERROR_FEEDBACK</span><span class="p">]</span>              <span class="o">=</span> <span class="n">error_feedback</span><span class="p">};</span>
 
 <span class="n">llist_node</span> <span class="o">*</span><span class="nf">error_list_ref_array_element</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">id</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="n">offset</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">llist_node</span> <span class="o">*</span><span class="n">tmp</span> <span class="o">=</span> <span class="o">*</span><span class="p">(</span><span class="n">error_list_ref_array</span> <span class="o">+</span> <span class="n">id</span><span class="p">);</span>

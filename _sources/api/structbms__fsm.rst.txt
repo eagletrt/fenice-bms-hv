@@ -1,0 +1,16 @@
+.. _exhale_struct_structbms__fsm:
+
+Struct bms_fsm
+==============
+
+- Defined in :ref:`file_mainboard_Inc_bms_fsm.h`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: bms_fsm
+   :members:
+   :protected-members:
+   :undoc-members:

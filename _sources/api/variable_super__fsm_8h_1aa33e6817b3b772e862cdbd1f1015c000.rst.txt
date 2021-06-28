@@ -1,0 +1,13 @@
+.. _exhale_variable_super__fsm_8h_1aa33e6817b3b772e862cdbd1f1015c000:
+
+Variable super_fsm
+==================
+
+- Defined in :ref:`file_mainboard_Inc_super_fsm.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: super_fsm

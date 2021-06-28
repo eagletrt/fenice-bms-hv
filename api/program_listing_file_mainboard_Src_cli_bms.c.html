@@ -165,8 +165,8 @@
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;cli_bms.h&quot;</span><span class="cp"></span>
 
 <span class="cp">#include</span> <span class="cpf">&quot;bal_fsm.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;bms_fsm.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;error/error.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;fsm_bms.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;pack.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;soc.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;usart.h&quot;</span><span class="cp"></span>
@@ -192,23 +192,14 @@
 <span class="n">cli_command_func_t</span> <span class="n">_cli_help</span><span class="p">;</span>
 <span class="n">cli_command_func_t</span> <span class="n">_cli_taba</span><span class="p">;</span>
 
-<span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">bms_state_names</span><span class="p">[</span><span class="n">BMS_NUM_STATES</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="p">[</span><span class="n">BMS_INIT</span><span class="p">]</span>            <span class="o">=</span> <span class="s">&quot;init&quot;</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">BMS_SET_TS_OFF</span><span class="p">]</span>      <span class="o">=</span> <span class="s">&quot;ts off&quot;</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">BMS_IDLE</span><span class="p">]</span>            <span class="o">=</span> <span class="s">&quot;idle&quot;</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">BMS_PRECHARGE_START</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;precharge start&quot;</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">BMS_PRECHARGE_WAIT</span><span class="p">]</span>  <span class="o">=</span> <span class="s">&quot;precharge wait&quot;</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">BMS_PRECHARGE_END</span><span class="p">]</span>   <span class="o">=</span> <span class="s">&quot;precharge end&quot;</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">BMS_RUN</span><span class="p">]</span>             <span class="o">=</span> <span class="s">&quot;run&quot;</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">BMS_CHARGE</span><span class="p">]</span>          <span class="o">=</span> <span class="s">&quot;charge&quot;</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">BMS_TO_HALT</span><span class="p">]</span>         <span class="o">=</span> <span class="s">&quot;to halt&quot;</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">BMS_HALT</span><span class="p">]</span>            <span class="o">=</span> <span class="s">&quot;halt&quot;</span><span class="p">};</span>
+<span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">bms_state_names</span><span class="p">[</span><span class="n">BMS_NUM_STATES</span><span class="p">]</span> <span class="o">=</span>
+    <span class="p">{[</span><span class="n">BMS_IDLE</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;idle&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">BMS_PRECHARGE</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;precharge&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">BMS_ON</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;run&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">BMS_HALT</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;halt&quot;</span><span class="p">};</span>
 
 <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">bal_state_names</span><span class="p">[</span><span class="n">BAL_NUM_STATES</span><span class="p">]</span> <span class="o">=</span>
-    <span class="p">{[</span><span class="n">BAL_OFF</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;off&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">BAL_COMPUTE</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;computing&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">BAL_DISCHARGE</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;discharging&quot;</span><span class="p">};</span>
+    <span class="p">{[</span><span class="n">BAL_OFF</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;off&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">BAL_COMPUTE</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;computing&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">BAL_DISCHARGE</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;discharging&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">BAL_COOLDOWN</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;cooldown&quot;</span><span class="p">};</span>
 
 <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">error_names</span><span class="p">[</span><span class="n">ERROR_NUM_ERRORS</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="p">[</span><span class="n">ERROR_LTC_PEC_ERROR</span><span class="p">]</span>         <span class="o">=</span> <span class="s">&quot;LTC PEC mismatch&quot;</span><span class="p">,</span>
+    <span class="p">[</span><span class="n">ERROR_LTC_PEC</span><span class="p">]</span>               <span class="o">=</span> <span class="s">&quot;LTC PEC mismatch&quot;</span><span class="p">,</span>
     <span class="p">[</span><span class="n">ERROR_CELL_UNDER_VOLTAGE</span><span class="p">]</span>    <span class="o">=</span> <span class="s">&quot;under-voltage&quot;</span><span class="p">,</span>
     <span class="p">[</span><span class="n">ERROR_CELL_OVER_VOLTAGE</span><span class="p">]</span>     <span class="o">=</span> <span class="s">&quot;over-voltage&quot;</span><span class="p">,</span>
     <span class="p">[</span><span class="n">ERROR_CELL_OVER_TEMPERATURE</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;over-temperature&quot;</span><span class="p">,</span>
@@ -217,8 +208,7 @@
     <span class="p">[</span><span class="n">ERROR_ADC_INIT</span><span class="p">]</span>              <span class="o">=</span> <span class="s">&quot;adc init&quot;</span><span class="p">,</span>
     <span class="p">[</span><span class="n">ERROR_ADC_TIMEOUT</span><span class="p">]</span>           <span class="o">=</span> <span class="s">&quot;adc timeout&quot;</span><span class="p">,</span>
     <span class="p">[</span><span class="n">ERROR_INT_VOLTAGE_MISMATCH</span><span class="p">]</span>  <span class="o">=</span> <span class="s">&quot;internal voltage mismatch&quot;</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">ERROR_FEEDBACK_HARD</span><span class="p">]</span>         <span class="o">=</span> <span class="s">&quot;hard feedback&quot;</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">ERROR_FEEDBACK_SOFT</span><span class="p">]</span>         <span class="o">=</span> <span class="s">&quot;soft feedback&quot;</span><span class="p">};</span>
+    <span class="p">[</span><span class="n">ERROR_FEEDBACK</span><span class="p">]</span>              <span class="o">=</span> <span class="s">&quot;feedback&quot;</span><span class="p">};</span>
 
 <span class="kt">char</span> <span class="k">const</span> <span class="o">*</span><span class="k">const</span> <span class="n">feedback_names</span><span class="p">[</span><span class="n">FEEDBACK_N</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
     <span class="p">[</span><span class="n">FEEDBACK_VREF_POS</span><span class="p">]</span>          <span class="o">=</span> <span class="s">&quot;VREF&quot;</span><span class="p">,</span>
@@ -379,9 +369,9 @@
 
     <span class="c1">// TODO: Fix this</span>
     <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">values</span><span class="p">[</span><span class="n">n_items</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="p">{</span><span class="s">&quot;BMS state&quot;</span><span class="p">,</span> <span class="n">bms_state_names</span><span class="p">[</span><span class="n">fsm_bms</span><span class="p">.</span><span class="n">current_state</span><span class="p">]},</span>
+        <span class="p">{</span><span class="s">&quot;BMS state&quot;</span><span class="p">,</span> <span class="n">bms_state_names</span><span class="p">[</span><span class="n">fsm_get_state</span><span class="p">(</span><span class="n">bms</span><span class="p">.</span><span class="n">fsm</span><span class="p">)]},</span>
         <span class="p">{</span><span class="s">&quot;error count&quot;</span><span class="p">,</span> <span class="n">er_count</span><span class="p">},</span>
-        <span class="p">{</span><span class="s">&quot;balancing state&quot;</span><span class="p">,</span> <span class="n">bal_state_names</span><span class="p">[</span><span class="n">fsm_get_state</span><span class="p">(</span><span class="o">&amp;</span><span class="n">bal_fsm</span><span class="p">)]}};</span>
+        <span class="p">{</span><span class="s">&quot;balancing state&quot;</span><span class="p">,</span> <span class="n">bal_state_names</span><span class="p">[</span><span class="n">fsm_get_state</span><span class="p">(</span><span class="n">bal</span><span class="p">.</span><span class="n">fsm</span><span class="p">)]}};</span>
     <span class="c1">//{&quot;BMS state&quot;, (char *)fsm_bms.state_names[fsm_bms.current_state]}, {&quot;error</span>
     <span class="c1">// count&quot;, er_count}, {&quot;balancing&quot;, bal}, {&quot;balancing threshold&quot;, thresh}};</span>
 
@@ -398,10 +388,10 @@
 
 <span class="kt">void</span> <span class="nf">_cli_balance</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">out</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">&quot;on&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">fsm_handle_event</span><span class="p">(</span><span class="o">&amp;</span><span class="n">bal_fsm</span><span class="p">,</span> <span class="n">BAL_COMPUTE</span><span class="p">);</span>
+        <span class="n">fsm_catch_event</span><span class="p">(</span><span class="n">bal</span><span class="p">.</span><span class="n">fsm</span><span class="p">,</span> <span class="n">EV_BAL_START</span><span class="p">);</span>
         <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s">&quot;enabling balancing</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">);</span>
     <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">&quot;off&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">fsm_handle_event</span><span class="p">(</span><span class="o">&amp;</span><span class="n">bal_fsm</span><span class="p">,</span> <span class="n">BAL_OFF</span><span class="p">);</span>
+        <span class="n">fsm_catch_event</span><span class="p">(</span><span class="n">bal</span><span class="p">.</span><span class="n">fsm</span><span class="p">,</span> <span class="n">EV_BAL_STOP</span><span class="p">);</span>
         <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s">&quot;disabling balancing</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">);</span>
     <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">&quot;thr&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
@@ -451,22 +441,22 @@
             <span class="s">&quot;</span><span class="se">\r\n</span><span class="s">id..........%i (%s)</span><span class="se">\r\n</span><span class="s">&quot;</span>
             <span class="s">&quot;timestamp...T+%lu (%lums ago)</span><span class="se">\r\n</span><span class="s">&quot;</span>
             <span class="s">&quot;offset......%u</span><span class="se">\r\n</span><span class="s">&quot;</span>
-            <span class="s">&quot;state.......%u</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span>
+            <span class="s">&quot;state.......%s</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span>
             <span class="n">errors</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">id</span><span class="p">,</span>
             <span class="n">error_names</span><span class="p">[</span><span class="n">errors</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">id</span><span class="p">],</span>
             <span class="n">errors</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">timestamp</span><span class="p">,</span>
             <span class="n">now</span> <span class="o">-</span> <span class="n">errors</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">timestamp</span><span class="p">,</span>
             <span class="n">errors</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">offset</span><span class="p">,</span>
-            <span class="n">errors</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">state</span><span class="p">);</span>
+            <span class="n">errors</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">state</span> <span class="o">==</span> <span class="n">STATE_WARNING</span> <span class="o">?</span> <span class="s">&quot;warning&quot;</span> <span class="o">:</span> <span class="s">&quot;fatal&quot;</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">_cli_ts</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">out</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">&quot;on&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">fsm_handle_event</span><span class="p">(</span><span class="o">&amp;</span><span class="n">fsm_bms</span><span class="p">,</span> <span class="n">BMS_PRECHARGE_WAIT</span><span class="p">);</span>
+        <span class="n">fsm_catch_event</span><span class="p">(</span><span class="n">bms</span><span class="p">.</span><span class="n">fsm</span><span class="p">,</span> <span class="n">BMS_EV_TS_ON</span><span class="p">);</span>
         <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s">&quot;triggered TS ON event</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">);</span>
     <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">&quot;off&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">fsm_handle_event</span><span class="p">(</span><span class="o">&amp;</span><span class="n">fsm_bms</span><span class="p">,</span> <span class="n">BMS_SET_TS_OFF</span><span class="p">);</span>
+        <span class="n">fsm_catch_event</span><span class="p">(</span><span class="n">bms</span><span class="p">.</span><span class="n">fsm</span><span class="p">,</span> <span class="n">BMS_EV_TS_OFF</span><span class="p">);</span>
         <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s">&quot;triggered TS OFF event</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">);</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
         <span class="n">sprintf</span><span class="p">(</span>

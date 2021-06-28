@@ -1,0 +1,13 @@
+.. _exhale_function_bms__fsm_8c_1a030f40b1d5691cac0e43f2a975835e38:
+
+Function idle_handler
+=====================
+
+- Defined in :ref:`file_mainboard_Src_bms_fsm.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: idle_handler(fsm, uint8_t)

@@ -1,0 +1,13 @@
+.. _exhale_function_error_8h_1a4c013455493be71097266ca44894cafa:
+
+Function error_get_top()
+========================
+
+- Defined in :ref:`file_mainboard_Inc_error_error.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: error_get_top()

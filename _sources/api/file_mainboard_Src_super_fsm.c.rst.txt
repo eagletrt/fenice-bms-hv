@@ -1,0 +1,89 @@
+
+.. _file_mainboard_Src_super_fsm.c:
+
+File super_fsm.c
+================
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Src>` (``mainboard/Src``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+Super FSM: the simple FSM that handles sensor readings and BMS execution. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Src/super_fsm.c``)
+------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Src_super_fsm.c.rst
+
+
+
+Detailed Description
+--------------------
+
+Jun 27, 2021
+
+Matteo Bonora [matteo.bonora@studenti.unitn.it] 
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``bms_fsm.h`` (:ref:`file_mainboard_Inc_bms_fsm.h`)
+
+- ``can.h`` (:ref:`file_mainboard_Inc_peripherals_can.h`)
+
+- ``inttypes.h``
+
+- ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
+
+- ``pack.h`` (:ref:`file_mainboard_Inc_pack.h`)
+
+- ``spi.h`` (:ref:`file_mainboard_Inc_spi.h`)
+
+- ``stdio.h``
+
+- ``stdlib.h``
+
+- ``string.h``
+
+- ``super_fsm.h`` (:ref:`file_mainboard_Inc_super_fsm.h`)
+
+- ``tim.h`` (:ref:`file_mainboard_Inc_tim.h`)
+
+- ``usart.h`` (:ref:`file_mainboard_Inc_usart.h`)
+
+
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_super__fsm_8c_1a0f3dac413e88dd4c4b4eed7596b74374`
+
+- :ref:`exhale_function_super__fsm_8c_1a6c5eca8599b582f67db9f523a2c3f550`
+
+- :ref:`exhale_function_super__fsm_8c_1a7b59b0191d1ef2a7d789bdd43705f289`
+
+- :ref:`exhale_function_super__fsm_8c_1ac15eb145b2bff81e846e3fef9c360bd4`
+
+- :ref:`exhale_function_super__fsm_8c_1a75b444630231c9dc8aeaa085cb20d1e1`
+

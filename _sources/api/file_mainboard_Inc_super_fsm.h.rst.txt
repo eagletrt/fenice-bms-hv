@@ -1,0 +1,96 @@
+
+.. _file_mainboard_Inc_super_fsm.h:
+
+File super_fsm.h
+================
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Inc>` (``mainboard/Inc``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+Super FSM: the simple FSM that handles sensor readings and BMS execution. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Inc/super_fsm.h``)
+------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Inc_super_fsm.h.rst
+
+
+
+Detailed Description
+--------------------
+
+Jun 27, 2021
+
+Matteo Bonora [matteo.bonora@studenti.unitn.it] 
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``fsm.h`` (:ref:`file_mainboard_Inc_bal_fsm.h`)
+
+- ``stdbool.h``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_mainboard_Src_main.c`
+
+- :ref:`file_mainboard_Src_super_fsm.c`
+
+- :ref:`file_mainboard_Src_tim.c`
+
+
+
+
+Enums
+-----
+
+
+- :ref:`exhale_enum_super__fsm_8h_1a07e48dbb234cc54c9b8677492a6ec92d`
+
+- :ref:`exhale_enum_super__fsm_8h_1a6216fe89e211b6e64848520c07a74851`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_super__fsm_8h_1a7b59b0191d1ef2a7d789bdd43705f289`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_super__fsm_8h_1a16edec1b754ced802e83b10006e0942c`
+
+- :ref:`exhale_define_super__fsm_8h_1aa28d3201210f230c3d1bf3265318a70f`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_super__fsm_8h_1aa33e6817b3b772e862cdbd1f1015c000`
+

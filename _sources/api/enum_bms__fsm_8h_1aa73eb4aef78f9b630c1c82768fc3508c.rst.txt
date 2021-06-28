@@ -1,0 +1,13 @@
+.. _exhale_enum_bms__fsm_8h_1aa73eb4aef78f9b630c1c82768fc3508c:
+
+Enum bms_events
+===============
+
+- Defined in :ref:`file_mainboard_Inc_bms_fsm.h`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: bms_events

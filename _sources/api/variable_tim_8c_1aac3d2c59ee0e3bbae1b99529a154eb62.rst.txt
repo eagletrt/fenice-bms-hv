@@ -1,0 +1,13 @@
+.. _exhale_variable_tim_8c_1aac3d2c59ee0e3bbae1b99529a154eb62:
+
+Variable htim3
+==============
+
+- Defined in :ref:`file_mainboard_Src_tim.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: htim3

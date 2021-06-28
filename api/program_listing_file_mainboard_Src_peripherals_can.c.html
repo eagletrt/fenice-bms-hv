@@ -164,26 +164,32 @@
 <p>↰ <a class="reference internal" href="file_mainboard_Src_peripherals_can.c.html#file-mainboard-src-peripherals-can-c"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">mainboard/Src/peripherals/can.c</span></code>)</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;can.h&quot;</span><span class="cp"></span>
 
+<span class="cp">#include</span> <span class="cpf">&quot;bms_fsm.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;cli_bms.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;fsm_bms.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;pack.h&quot;</span><span class="cp"></span>
 
 <span class="n">FDCAN_TxHeaderTypeDef</span> <span class="n">tx_header</span><span class="p">;</span>
 
 <span class="kt">void</span> <span class="nf">can_init</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">tx_header</span><span class="p">.</span><span class="n">BitRateSwitch</span> <span class="o">=</span> <span class="n">FDCAN_BRS_OFF</span><span class="p">;</span>
-    <span class="n">tx_header</span><span class="p">.</span><span class="n">FDFormat</span> <span class="o">=</span> <span class="n">FDCAN_CLASSIC_CAN</span><span class="p">;</span>
-    <span class="n">tx_header</span><span class="p">.</span><span class="n">IdType</span> <span class="o">=</span> <span class="n">FDCAN_STANDARD_ID</span><span class="p">;</span>
-    <span class="n">tx_header</span><span class="p">.</span><span class="n">MessageMarker</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="n">tx_header</span><span class="p">.</span><span class="n">TxEventFifoControl</span> <span class="o">=</span> <span class="n">FDCAN_STORE_TX_EVENTS</span><span class="p">;</span>
-    <span class="n">tx_header</span><span class="p">.</span><span class="n">TxFrameType</span> <span class="o">=</span> <span class="n">FDCAN_DATA_FRAME</span><span class="p">;</span>
+    <span class="n">tx_header</span><span class="p">.</span><span class="n">BitRateSwitch</span>       <span class="o">=</span> <span class="n">FDCAN_BRS_OFF</span><span class="p">;</span>
+    <span class="n">tx_header</span><span class="p">.</span><span class="n">FDFormat</span>            <span class="o">=</span> <span class="n">FDCAN_CLASSIC_CAN</span><span class="p">;</span>
+    <span class="n">tx_header</span><span class="p">.</span><span class="n">IdType</span>              <span class="o">=</span> <span class="n">FDCAN_STANDARD_ID</span><span class="p">;</span>
+    <span class="n">tx_header</span><span class="p">.</span><span class="n">MessageMarker</span>       <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">tx_header</span><span class="p">.</span><span class="n">TxEventFifoControl</span>  <span class="o">=</span> <span class="n">FDCAN_STORE_TX_EVENTS</span><span class="p">;</span>
+    <span class="n">tx_header</span><span class="p">.</span><span class="n">TxFrameType</span>         <span class="o">=</span> <span class="n">FDCAN_DATA_FRAME</span><span class="p">;</span>
     <span class="n">tx_header</span><span class="p">.</span><span class="n">ErrorStateIndicator</span> <span class="o">=</span> <span class="n">FDCAN_ESI_PASSIVE</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="n">HAL_StatusTypeDef</span> <span class="nf">can_send</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">id</span><span class="p">)</span> <span class="p">{</span>
     <span class="kt">uint8_t</span> <span class="n">buffer</span><span class="p">[</span><span class="n">CAN_MAX_PAYLOAD_LENGTH</span><span class="p">];</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">id</span> <span class="o">==</span> <span class="n">ID_HV_VOLTAGE</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">serialize_Primary_HV_VOLTAGE</span><span class="p">(</span><span class="n">pack_get_int_voltage</span><span class="p">(),</span> <span class="n">pack_get_bus_voltage</span><span class="p">(),</span> <span class="n">pack_get_max_voltage</span><span class="p">(),</span> <span class="n">pack_get_min_voltage</span><span class="p">(),</span> <span class="n">buffer</span><span class="p">,</span> <span class="n">CAN_MAX_PAYLOAD_LENGTH</span><span class="p">);</span>
+        <span class="n">serialize_Primary_HV_VOLTAGE</span><span class="p">(</span>
+            <span class="n">pack_get_int_voltage</span><span class="p">(),</span>
+            <span class="n">pack_get_bus_voltage</span><span class="p">(),</span>
+            <span class="n">pack_get_max_voltage</span><span class="p">(),</span>
+            <span class="n">pack_get_min_voltage</span><span class="p">(),</span>
+            <span class="n">buffer</span><span class="p">,</span>
+            <span class="n">CAN_MAX_PAYLOAD_LENGTH</span><span class="p">);</span>
     <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">id</span> <span class="o">==</span> <span class="n">ID_HV_CURRENT</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">serialize_Primary_HV_CURRENT</span><span class="p">(</span><span class="n">pack_get_current</span><span class="p">(),</span> <span class="n">pack_get_power</span><span class="p">(),</span> <span class="n">buffer</span><span class="p">,</span> <span class="n">CAN_MAX_PAYLOAD_LENGTH</span><span class="p">);</span>
     <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">id</span> <span class="o">==</span> <span class="n">ID_TS_STATUS</span><span class="p">)</span> <span class="p">{</span>
@@ -195,8 +201,7 @@
     <span class="n">tx_header</span><span class="p">.</span><span class="n">Identifier</span> <span class="o">=</span> <span class="n">id</span><span class="p">;</span>
     <span class="n">tx_header</span><span class="p">.</span><span class="n">DataLength</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">Primary_HV_VOLTAGE</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="mi">16</span><span class="p">;</span>  <span class="c1">// Only valid for classic can frames</span>
 
-    <span class="n">HAL_StatusTypeDef</span> <span class="n">status</span> <span class="o">=</span>
-        <span class="n">HAL_FDCAN_AddMessageToTxFifoQ</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hfdcan1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">tx_header</span><span class="p">,</span> <span class="n">buffer</span><span class="p">);</span>
+    <span class="n">HAL_StatusTypeDef</span> <span class="n">status</span> <span class="o">=</span> <span class="n">HAL_FDCAN_AddMessageToTxFifoQ</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hfdcan1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">tx_header</span><span class="p">,</span> <span class="n">buffer</span><span class="p">);</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">status</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">error_set</span><span class="p">(</span><span class="n">ERROR_CAN</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">HAL_GetTick</span><span class="p">());</span>
         <span class="n">cli_bms_debug</span><span class="p">(</span><span class="s">&quot;CAN: Error sending message&quot;</span><span class="p">,</span> <span class="mi">27</span><span class="p">);</span>
@@ -230,10 +235,10 @@
 
             <span class="k">switch</span> <span class="p">(</span><span class="n">ts_status</span><span class="p">.</span><span class="n">ts_status_set</span><span class="p">)</span> <span class="p">{</span>
                 <span class="k">case</span> <span class="nl">Primary_Ts_Status_Set_OFF</span><span class="p">:</span>
-                    <span class="n">fsm_handle_event</span><span class="p">(</span><span class="o">&amp;</span><span class="n">fsm_bms</span><span class="p">,</span> <span class="n">BMS_SET_TS_OFF</span><span class="p">);</span>
+                    <span class="n">fsm_catch_event</span><span class="p">(</span><span class="n">bms</span><span class="p">.</span><span class="n">fsm</span><span class="p">,</span> <span class="n">BMS_EV_TS_OFF</span><span class="p">);</span>
                     <span class="k">break</span><span class="p">;</span>
                 <span class="k">case</span> <span class="nl">Primary_Ts_Status_Set_ON</span><span class="p">:</span>
-                    <span class="n">fsm_handle_event</span><span class="p">(</span><span class="o">&amp;</span><span class="n">fsm_bms</span><span class="p">,</span> <span class="n">BMS_PRECHARGE_START</span><span class="p">);</span>
+                    <span class="n">fsm_catch_event</span><span class="p">(</span><span class="n">bms</span><span class="p">.</span><span class="n">fsm</span><span class="p">,</span> <span class="n">BMS_EV_TS_ON</span><span class="p">);</span>
                     <span class="k">break</span><span class="p">;</span>
             <span class="p">}</span>
         <span class="p">}</span>

@@ -61,6 +61,8 @@ Included By
 
 - :ref:`file_mainboard_Src_spi.c`
 
+- :ref:`file_mainboard_Src_super_fsm.c`
+
 
 
 

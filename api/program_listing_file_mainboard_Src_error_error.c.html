@@ -164,29 +164,34 @@
 <p>↰ <a class="reference internal" href="file_mainboard_Src_error_error.c.html#file-mainboard-src-error-error-c"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">mainboard/Src/error/error.c</span></code>)</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;error/error.h&quot;</span><span class="cp"></span>
 
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
-
 <span class="cp">#include</span> <span class="cpf">&quot;error/error_list_ref.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;tim.h&quot;</span><span class="cp"></span>
 
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<span class="cp">#ifndef max</span>
+<span class="cp">#define max(a, b) ((a) &gt; (b) ? (a) : (b))</span>
+<span class="cp">#endif</span>
+<span class="cp">#ifndef min</span>
+<span class="cp">#define min(a, b) ((a) &lt; (b) ? (a) : (b))</span>
+<span class="cp">#endif</span>
+
 <span class="k">const</span> <span class="n">error_timeout</span> <span class="n">error_timeouts</span><span class="p">[</span><span class="n">ERROR_NUM_ERRORS</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="p">[</span><span class="n">ERROR_LTC_PEC_ERROR</span><span class="p">]</span> <span class="o">=</span> <span class="n">SOFT</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">ERROR_CELL_UNDER_VOLTAGE</span><span class="p">]</span> <span class="o">=</span> <span class="n">SHORT</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">ERROR_CELL_OVER_VOLTAGE</span><span class="p">]</span> <span class="o">=</span> <span class="n">SHORT</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">ERROR_CELL_OVER_TEMPERATURE</span><span class="p">]</span> <span class="o">=</span> <span class="n">REGULAR</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">ERROR_OVER_CURRENT</span><span class="p">]</span> <span class="o">=</span> <span class="n">SHORT</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">ERROR_CAN</span><span class="p">]</span> <span class="o">=</span> <span class="n">REGULAR</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">ERROR_ADC_INIT</span><span class="p">]</span> <span class="o">=</span> <span class="n">SOFT</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">ERROR_ADC_TIMEOUT</span><span class="p">]</span> <span class="o">=</span> <span class="n">SOFT</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">ERROR_INT_VOLTAGE_MISMATCH</span><span class="p">]</span> <span class="o">=</span> <span class="n">SOFT</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">ERROR_FEEDBACK_HARD</span><span class="p">]</span> <span class="o">=</span> <span class="n">INSTANT</span><span class="p">,</span>
-    <span class="p">[</span><span class="n">ERROR_FEEDBACK_SOFT</span><span class="p">]</span> <span class="o">=</span> <span class="n">SOFT</span><span class="p">};</span>
+    <span class="p">[</span><span class="n">ERROR_LTC_PEC</span><span class="p">]</span>               <span class="o">=</span> <span class="n">SOFT</span><span class="p">,</span>
+    <span class="p">[</span><span class="n">ERROR_CELL_UNDER_VOLTAGE</span><span class="p">]</span>    <span class="o">=</span> <span class="mi">500</span><span class="p">,</span>
+    <span class="p">[</span><span class="n">ERROR_CELL_OVER_VOLTAGE</span><span class="p">]</span>     <span class="o">=</span> <span class="mi">500</span><span class="p">,</span>
+    <span class="p">[</span><span class="n">ERROR_CELL_OVER_TEMPERATURE</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span>
+    <span class="p">[</span><span class="n">ERROR_OVER_CURRENT</span><span class="p">]</span>          <span class="o">=</span> <span class="mi">500</span><span class="p">,</span>
+    <span class="p">[</span><span class="n">ERROR_CAN</span><span class="p">]</span>                   <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span>
+    <span class="p">[</span><span class="n">ERROR_ADC_INIT</span><span class="p">]</span>              <span class="o">=</span> <span class="n">SOFT</span><span class="p">,</span>
+    <span class="p">[</span><span class="n">ERROR_ADC_TIMEOUT</span><span class="p">]</span>           <span class="o">=</span> <span class="n">SOFT</span><span class="p">,</span>
+    <span class="p">[</span><span class="n">ERROR_INT_VOLTAGE_MISMATCH</span><span class="p">]</span>  <span class="o">=</span> <span class="n">SOFT</span><span class="p">,</span>
+    <span class="p">[</span><span class="n">ERROR_FEEDBACK</span><span class="p">]</span>              <span class="o">=</span> <span class="n">SOFT</span><span class="p">};</span>
 
 <span class="n">llist</span> <span class="n">er_list</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
 
 <span class="kt">uint32_t</span> <span class="nf">get_timeout_delta</span><span class="p">(</span><span class="n">error_t</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
     <span class="kt">uint32_t</span> <span class="n">delta</span> <span class="o">=</span> <span class="n">error</span><span class="o">-&gt;</span><span class="n">timestamp</span> <span class="o">+</span> <span class="n">error_timeouts</span><span class="p">[</span><span class="n">error</span><span class="o">-&gt;</span><span class="n">id</span><span class="p">]</span> <span class="o">-</span> <span class="n">HAL_GetTick</span><span class="p">();</span>
-    <span class="k">return</span> <span class="n">delta</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">?</span> <span class="nl">delta</span> <span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">delta</span> <span class="o">&lt;=</span> <span class="n">error_timeouts</span><span class="p">[</span><span class="n">error</span><span class="o">-&gt;</span><span class="n">id</span><span class="p">]</span> <span class="o">?</span> <span class="nl">delta</span> <span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kt">bool</span> <span class="nf">error_equals</span><span class="p">(</span><span class="n">llist_node</span> <span class="n">a</span><span class="p">,</span> <span class="n">llist_node</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
@@ -194,6 +199,7 @@
 <span class="p">}</span>
 
 <span class="kt">int8_t</span> <span class="nf">error_compare</span><span class="p">(</span><span class="n">llist_node</span> <span class="n">a</span><span class="p">,</span> <span class="n">llist_node</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// TODO: check if error is soft</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">get_timeout_delta</span><span class="p">((</span><span class="n">error_t</span> <span class="o">*</span><span class="p">)</span><span class="n">a</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">get_timeout_delta</span><span class="p">((</span><span class="n">error_t</span> <span class="o">*</span><span class="p">)</span><span class="n">b</span><span class="p">))</span>
         <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">get_timeout_delta</span><span class="p">((</span><span class="n">error_t</span> <span class="o">*</span><span class="p">)</span><span class="n">a</span><span class="p">)</span> <span class="o">==</span> <span class="n">get_timeout_delta</span><span class="p">((</span><span class="n">error_t</span> <span class="o">*</span><span class="p">)</span><span class="n">b</span><span class="p">))</span>
@@ -202,12 +208,16 @@
 <span class="p">}</span>
 
 <span class="kt">bool</span> <span class="nf">error_set_timer</span><span class="p">(</span><span class="n">error_t</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">HAL_TIM_Base_Stop_IT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim_Err</span><span class="p">);</span>
+    <span class="n">HAL_TIM_Base_Stop_IT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim_err</span><span class="p">);</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">!=</span> <span class="nb">NULL</span> <span class="o">&amp;&amp;</span> <span class="n">error</span><span class="o">-&gt;</span><span class="n">state</span> <span class="o">==</span> <span class="n">ERROR_ACTIVE</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">!=</span> <span class="nb">NULL</span> <span class="o">&amp;&amp;</span> <span class="n">error</span><span class="o">-&gt;</span><span class="n">state</span> <span class="o">==</span> <span class="n">STATE_WARNING</span> <span class="o">&amp;&amp;</span> <span class="n">error_timeouts</span><span class="p">[</span><span class="n">error</span><span class="o">-&gt;</span><span class="n">id</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">SOFT</span><span class="p">)</span> <span class="p">{</span>
         <span class="c1">// Set counter period register to the delta</span>
-        <span class="n">htim_Err</span><span class="p">.</span><span class="n">Instance</span><span class="o">-&gt;</span><span class="n">ARR</span> <span class="o">=</span> <span class="n">get_timeout_delta</span><span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
-        <span class="n">HAL_TIM_Base_Start_IT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim_Err</span><span class="p">);</span>
+        <span class="c1">//htim_Err.Instance-&gt;ARR = min(UINT16_MAX, get_timeout_delta(error) * 10 - 1);</span>
+        <span class="n">htim_err</span><span class="p">.</span><span class="n">Instance</span><span class="o">-&gt;</span><span class="n">CCR1</span> <span class="o">=</span> <span class="n">get_timeout_delta</span><span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10</span><span class="p">;</span>
+        <span class="c1">//htim2.Instance-&gt;CCR1   = 0;</span>
+        <span class="c1">//htim2.Instance-&gt;CCR1 = htim2.Instance-&gt;ARR;</span>
+        <span class="n">HAL_TIM_Base_Start_IT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim_err</span><span class="p">);</span>
+        <span class="n">HAL_TIM_OC_Start_IT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim_err</span><span class="p">,</span> <span class="n">TIM_CHANNEL_1</span><span class="p">);</span>
 
         <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
     <span class="p">}</span>
@@ -217,12 +227,13 @@
 
 <span class="kt">void</span> <span class="nf">error_init</span><span class="p">()</span> <span class="p">{</span>
     <span class="n">er_list</span> <span class="o">=</span> <span class="n">llist_init</span><span class="p">(</span><span class="n">error_compare</span><span class="p">,</span> <span class="n">error_equals</span><span class="p">);</span>
+    <span class="n">HAL_TIM_Base_Stop_IT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim_err</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">error_init_error</span><span class="p">(</span><span class="n">error_t</span> <span class="o">*</span><span class="n">error</span><span class="p">,</span> <span class="n">error_id</span> <span class="n">id</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">offset</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">timestamp</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">error</span><span class="o">-&gt;</span><span class="n">id</span> <span class="o">=</span> <span class="n">id</span><span class="p">;</span>
-    <span class="n">error</span><span class="o">-&gt;</span><span class="n">offset</span> <span class="o">=</span> <span class="n">offset</span><span class="p">;</span>
-    <span class="n">error</span><span class="o">-&gt;</span><span class="n">state</span> <span class="o">=</span> <span class="n">ERROR_ACTIVE</span><span class="p">;</span>
+    <span class="n">error</span><span class="o">-&gt;</span><span class="n">id</span>        <span class="o">=</span> <span class="n">id</span><span class="p">;</span>
+    <span class="n">error</span><span class="o">-&gt;</span><span class="n">offset</span>    <span class="o">=</span> <span class="n">offset</span><span class="p">;</span>
+    <span class="n">error</span><span class="o">-&gt;</span><span class="n">state</span>     <span class="o">=</span> <span class="n">STATE_WARNING</span><span class="p">;</span>
     <span class="n">error</span><span class="o">-&gt;</span><span class="n">timestamp</span> <span class="o">=</span> <span class="n">timestamp</span><span class="p">;</span>
 <span class="p">}</span>
 
@@ -253,12 +264,23 @@
     <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
 <span class="p">}</span>
 
+<span class="n">error_t</span> <span class="o">*</span><span class="nf">error_get_top</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">error_t</span> <span class="o">*</span><span class="p">)</span><span class="n">llist_get_head</span><span class="p">(</span><span class="n">er_list</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">bool</span> <span class="nf">error_set_fatal</span><span class="p">(</span><span class="n">error_t</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">!=</span> <span class="nb">NULL</span> <span class="o">&amp;&amp;</span> <span class="n">error</span><span class="o">-&gt;</span><span class="n">state</span> <span class="o">!=</span> <span class="n">STATE_FATAL</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">error</span><span class="o">-&gt;</span><span class="n">state</span> <span class="o">=</span> <span class="n">STATE_FATAL</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+<span class="p">}</span>
+
 <span class="kt">bool</span> <span class="nf">error_unset</span><span class="p">(</span><span class="n">error_id</span> <span class="n">id</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">offset</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="n">error_list_ref_array_element</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">offset</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">error_t</span> <span class="o">*</span><span class="n">error</span> <span class="o">=</span> <span class="p">(</span><span class="n">error_t</span> <span class="o">*</span><span class="p">)(</span><span class="o">*</span><span class="n">error_list_ref_array_element</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">offset</span><span class="p">));</span>
 
-        <span class="c1">// Check if error is fatal; in that case do not remove it, but deactivate it</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">error</span><span class="o">-&gt;</span><span class="n">state</span> <span class="o">==</span> <span class="n">ERROR_FATAL</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Check if error is fatal; in that case do not remove it</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">error</span><span class="o">-&gt;</span><span class="n">state</span> <span class="o">==</span> <span class="n">STATE_FATAL</span><span class="p">)</span> <span class="p">{</span>
             <span class="c1">//error-&gt;state = ERROR_NOT_ACTIVE;</span>
             <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
         <span class="p">}</span>

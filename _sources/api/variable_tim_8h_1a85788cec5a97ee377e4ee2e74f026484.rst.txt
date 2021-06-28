@@ -1,0 +1,13 @@
+.. _exhale_variable_tim_8h_1a85788cec5a97ee377e4ee2e74f026484:
+
+Variable htim4
+==============
+
+- Defined in :ref:`file_mainboard_Inc_tim.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: htim4

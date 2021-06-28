@@ -1,0 +1,13 @@
+.. _exhale_function_super__fsm_8c_1ac15eb145b2bff81e846e3fef9c360bd4:
+
+Function super_measure_temps
+============================
+
+- Defined in :ref:`file_mainboard_Src_super_fsm.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: super_measure_temps(fsm, super_events)

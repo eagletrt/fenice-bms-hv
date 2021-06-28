@@ -1,0 +1,108 @@
+
+.. _file_mainboard_Src_bms_fsm.c:
+
+File bms_fsm.c
+==============
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Src>` (``mainboard/Src``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+BMS's state machine. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Src/bms_fsm.c``)
+----------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Src_bms_fsm.c.rst
+
+
+
+Detailed Description
+--------------------
+
+Mar 25, 2020
+
+Matteo Bonora [matteo.bonora@studenti.unitn.it] 
+
+Simone Ruffini [simone.ruffini@studenti.unitn.it] 
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``bms_fsm.h`` (:ref:`file_mainboard_Inc_bms_fsm.h`)
+
+- ``cli_bms.h`` (:ref:`file_mainboard_Inc_cli_bms.h`)
+
+- ``error.h`` (:ref:`file_mainboard_Inc_error_error.h`)
+
+- ``inttypes.h``
+
+- ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
+
+- ``pack.h`` (:ref:`file_mainboard_Inc_pack.h`)
+
+- ``peripherals/can.h`` (:ref:`file_mainboard_Inc_peripherals_can.h`)
+
+- ``stdio.h``
+
+- ``string.h``
+
+- ``tim.h`` (:ref:`file_mainboard_Inc_tim.h`)
+
+
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_bms__fsm_8c_1ab27416dfde693265de1ef0588e9c37b4`
+
+- :ref:`exhale_function_bms__fsm_8c_1ad04590a7a4f1683ca2137f8d84587e45`
+
+- :ref:`exhale_function_bms__fsm_8c_1a2df1e01f8cb8a51c3dfebed0b38fcf45`
+
+- :ref:`exhale_function_bms__fsm_8c_1a7768b8b49ec7d7f13a9616fe7c5ecb9b`
+
+- :ref:`exhale_function_bms__fsm_8c_1ac5498612908569629136d04a57d98475`
+
+- :ref:`exhale_function_bms__fsm_8c_1a3e1f77f89cc4583ff6c036dbd40f8840`
+
+- :ref:`exhale_function_bms__fsm_8c_1a030f40b1d5691cac0e43f2a975835e38`
+
+- :ref:`exhale_function_bms__fsm_8c_1a3654ce5f2c4b8516e6b4271c43cf5e21`
+
+- :ref:`exhale_function_bms__fsm_8c_1a9ca7c608d03f9d3b1265be4197c22ed6`
+
+- :ref:`exhale_function_bms__fsm_8c_1af04c6a3e6539a800d964a3383df6cd73`
+
+- :ref:`exhale_function_bms__fsm_8c_1a91f44e4595bb6072696755ad0e4d6deb`
+
+- :ref:`exhale_function_bms__fsm_8c_1a24c3da281d17588a3dea0e1c3af1ab2a`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_bms__fsm_8c_1a9e00b4d41aaef2c8c5a5c8926076d0e1`
+

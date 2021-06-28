@@ -1,0 +1,13 @@
+.. _exhale_define_super__fsm_8h_1a16edec1b754ced802e83b10006e0942c:
+
+Define TEMPS_READ_INTERVAL
+==========================
+
+- Defined in :ref:`file_mainboard_Inc_super_fsm.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: TEMPS_READ_INTERVAL

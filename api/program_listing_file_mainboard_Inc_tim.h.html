@@ -178,15 +178,20 @@
 <span class="cm">/* USER CODE END Includes */</span>
 
 <span class="k">extern</span> <span class="n">TIM_HandleTypeDef</span> <span class="n">htim2</span><span class="p">;</span>
+<span class="k">extern</span> <span class="n">TIM_HandleTypeDef</span> <span class="n">htim3</span><span class="p">;</span>
+<span class="k">extern</span> <span class="n">TIM_HandleTypeDef</span> <span class="n">htim4</span><span class="p">;</span>
 
 <span class="cm">/* USER CODE BEGIN Private defines */</span>
 
 <span class="cm">/* USER CODE END Private defines */</span>
 
 <span class="kt">void</span> <span class="nf">MX_TIM2_Init</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">MX_TIM3_Init</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">MX_TIM4_Init</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 
 <span class="cm">/* USER CODE BEGIN Prototypes */</span>
 
+<span class="kt">uint16_t</span> <span class="nf">TIM_computePulse</span><span class="p">(</span><span class="n">TIM_HandleTypeDef</span> <span class="o">*</span><span class="n">htim</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">chFrequency</span><span class="p">);</span>
 <span class="cm">/* USER CODE END Prototypes */</span>
 
 <span class="cp">#ifdef __cplusplus</span>

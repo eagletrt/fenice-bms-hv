@@ -175,15 +175,16 @@
 <span class="cm">/* Private includes ----------------------------------------------------------*/</span>
 <span class="cm">/* USER CODE BEGIN Includes */</span>
 <span class="cp">#include</span> <span class="cpf">&quot;bal_fsm.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;bms_fsm.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;cli_bms.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;config.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;error/error.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;fdcan.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;fenice_config.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;fsm_bms.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;m95256.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;peripherals/can.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;si8900.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;super_fsm.h&quot;</span><span class="cp"></span>
 <span class="cm">/* USER CODE END Includes */</span>
 
 <span class="cm">/* Private typedef -----------------------------------------------------------*/</span>
@@ -193,8 +194,6 @@
 
 <span class="cm">/* Private define ------------------------------------------------------------*/</span>
 <span class="cm">/* USER CODE BEGIN PD */</span>
-<span class="cp">#define TEMPS_READ_INTERVAL 40</span>
-<span class="cp">#define VOLTS_READ_INTERVAL 20</span>
 <span class="cm">/* USER CODE END PD */</span>
 
 <span class="cm">/* Private macro -------------------------------------------------------------*/</span>
@@ -207,9 +206,8 @@
 <span class="cm">/* USER CODE BEGIN PV */</span>
 <span class="n">DMA_HandleTypeDef</span> <span class="n">hdma_adc1</span><span class="p">;</span>
 
-<span class="kt">uint32_t</span> <span class="n">timer_volts</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="kt">uint32_t</span> <span class="n">timer_temps</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="kt">uint32_t</span> <span class="n">timer_bal</span>   <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="n">fsm</span> <span class="n">super_fsm</span><span class="p">;</span>
+
 <span class="cm">/* USER CODE END PV */</span>
 
 <span class="cm">/* Private function prototypes -----------------------------------------------*/</span>
@@ -221,38 +219,7 @@
 
 <span class="cm">/* Private user code ---------------------------------------------------------*/</span>
 <span class="cm">/* USER CODE BEGIN 0 */</span>
-<span class="kt">void</span> <span class="nf">check_timers</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kt">uint32_t</span> <span class="n">tick</span> <span class="o">=</span> <span class="n">HAL_GetTick</span><span class="p">();</span>
 
-    <span class="c1">// Read and send temperatures</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">tick</span> <span class="o">-</span> <span class="n">timer_temps</span> <span class="o">&gt;=</span> <span class="n">TEMPS_READ_INTERVAL</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">timer_temps</span> <span class="o">=</span> <span class="n">tick</span><span class="p">;</span>
-
-        <span class="n">read_temps</span><span class="p">();</span>
-        <span class="n">can_send</span><span class="p">(</span><span class="n">ID_HV_CURRENT</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="c1">// Read and send voltages and current</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">tick</span> <span class="o">-</span> <span class="n">timer_volts</span> <span class="o">&gt;=</span> <span class="n">VOLTS_READ_INTERVAL</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">timer_volts</span> <span class="o">=</span> <span class="n">tick</span><span class="p">;</span>
-
-        <span class="n">read_volts</span><span class="p">();</span>
-        <span class="n">can_send</span><span class="p">(</span><span class="n">ID_HV_VOLTAGE</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kt">void</span> <span class="nf">read_volts</span><span class="p">()</span> <span class="p">{</span>
-    <span class="c1">// Voltages</span>
-    <span class="n">pack_update_voltages</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hspi1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">huart3</span><span class="p">);</span>
-
-    <span class="c1">// Current</span>
-    <span class="n">pack_update_current</span><span class="p">();</span>
-<span class="p">}</span>
-
-<span class="kt">void</span> <span class="nf">read_temps</span><span class="p">()</span> <span class="p">{</span>
-    <span class="c1">// Temperatures</span>
-    <span class="n">pack_update_temperatures</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hspi1</span><span class="p">);</span>
-<span class="p">}</span>
 <span class="cm">/* USER CODE END 0 */</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
@@ -283,6 +250,8 @@
     <span class="n">MX_USART2_UART_Init</span><span class="p">();</span>
     <span class="n">MX_USART3_UART_Init</span><span class="p">();</span>
     <span class="n">MX_TIM2_Init</span><span class="p">();</span>
+    <span class="n">MX_TIM3_Init</span><span class="p">();</span>
+    <span class="n">MX_TIM4_Init</span><span class="p">();</span>
 
     <span class="cm">/* Initialize interrupts */</span>
     <span class="n">MX_NVIC_Init</span><span class="p">();</span>
@@ -296,15 +265,12 @@
     <span class="n">cli_bms_init</span><span class="p">();</span>
     <span class="n">error_init</span><span class="p">();</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="n">si8900_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart3</span><span class="p">,</span> <span class="n">ADC_SIN_GPIO_Port</span><span class="p">,</span> <span class="n">ADC_SIN_Pin</span><span class="p">))</span> <span class="p">{</span>
-        <span class="n">cli_print</span><span class="p">(</span><span class="o">&amp;</span><span class="n">cli_bms</span><span class="p">,</span> <span class="s">&quot;SI8900 INITIALIZED</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="n">cli_print</span><span class="p">(</span><span class="o">&amp;</span><span class="n">cli_bms</span><span class="p">,</span> <span class="s">&quot;SI8900 ERROR</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="mi">14</span><span class="p">);</span>
-    <span class="p">}</span>
+    <span class="n">si8900_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart3</span><span class="p">,</span> <span class="n">ADC_SIN_GPIO_Port</span><span class="p">,</span> <span class="n">ADC_SIN_Pin</span><span class="p">);</span>
 
     <span class="n">pack_init</span><span class="p">();</span>
     <span class="n">bal_fsm_init</span><span class="p">();</span>
-    <span class="n">fsm_bms_init</span><span class="p">();</span>
+    <span class="n">bms_fsm_init</span><span class="p">();</span>
+    <span class="n">super_fsm_init</span><span class="p">();</span>
 
     <span class="cm">/* USER CODE END 2 */</span>
 
@@ -314,10 +280,7 @@
         <span class="cm">/* USER CODE END WHILE */</span>
 
         <span class="cm">/* USER CODE BEGIN 3 */</span>
-        <span class="n">fsm_run</span><span class="p">(</span><span class="o">&amp;</span><span class="n">fsm_bms</span><span class="p">);</span>
-        <span class="n">fsm_run</span><span class="p">(</span><span class="o">&amp;</span><span class="n">bal_fsm</span><span class="p">);</span>
-
-        <span class="n">check_timers</span><span class="p">();</span>
+        <span class="n">fsm_run</span><span class="p">(</span><span class="n">super_fsm</span><span class="p">);</span>
 
         <span class="n">cli_loop</span><span class="p">(</span><span class="o">&amp;</span><span class="n">cli_bms</span><span class="p">);</span>
     <span class="p">}</span>
