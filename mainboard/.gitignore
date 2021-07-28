@@ -11,6 +11,9 @@
 /output/*
 /output/MainBoard.step
 \#*.dxf
+/stm32cubemx/*
+!stm32cubemx/*/*.ioc
+/bom
  
 # old files
 dont_delete_me_yet/

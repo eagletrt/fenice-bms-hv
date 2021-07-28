@@ -1343,7 +1343,7 @@ F 3 "~" H 6050 4100 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Text HLabel 7850 2550 0    50   Input ~ 0
-CHARGE
+HANDCART
 Text Label 8850 1000 3    50   ~ 0
 CAN_TX
 Text HLabel 9750 1350 1    50   Input ~ 0
@@ -1985,7 +1985,7 @@ L Device:Crystal_GND24_Small Y1
 U 1 1 60D96B3B
 P 6800 2250
 F 0 "Y1" H 6944 2296 50  0000 L CNN
-F 1 "26MHz" H 6944 2205 50  0000 L CNN
+F 1 "16MHz" H 6944 2205 50  0000 L CNN
 F 2 "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm" H 6800 2250 50  0001 C CNN
 F 3 "~" H 6800 2250 50  0001 C CNN
 	1    6800 2250
