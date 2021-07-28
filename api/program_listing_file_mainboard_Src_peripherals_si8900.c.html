@@ -164,26 +164,26 @@
 <p>↰ <a class="reference internal" href="file_mainboard_Src_peripherals_si8900.c.html#file-mainboard-src-peripherals-si8900-c"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">mainboard/Src/peripherals/si8900.c</span></code>)</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;peripherals/si8900.h&quot;</span><span class="cp"></span>
 
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp"></span>
-
 <span class="cp">#include</span> <span class="cpf">&quot;error/error.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;fenice_config.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;usart.h&quot;</span><span class="cp"></span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp"></span>
 
 <span class="kt">bool</span> <span class="n">si8900_ready</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
 
 <span class="kt">bool</span> <span class="nf">si8900_init</span><span class="p">(</span><span class="n">UART_HandleTypeDef</span> <span class="o">*</span><span class="n">huart</span><span class="p">,</span> <span class="n">GPIO_TypeDef</span> <span class="o">*</span><span class="n">reset_gpio</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="n">reset_pin</span><span class="p">)</span> <span class="p">{</span>
     <span class="kt">uint8_t</span> <span class="n">recv</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="kt">uint8_t</span> <span class="n">tx</span> <span class="o">=</span> <span class="mh">0xAA</span><span class="p">;</span>
+    <span class="kt">uint8_t</span> <span class="n">tx</span>   <span class="o">=</span> <span class="mh">0xAA</span><span class="p">;</span>
 
-    <span class="kt">bool</span> <span class="n">timeout</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="kt">bool</span> <span class="n">timeout</span>      <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
     <span class="kt">bool</span> <span class="n">code_receive</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
     <span class="kt">bool</span> <span class="n">code_confirm</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
 
-    <span class="n">HAL_GPIO_TogglePin</span><span class="p">(</span><span class="n">ADC_SIN_GPIO_Port</span><span class="p">,</span> <span class="n">ADC_SIN_Pin</span><span class="p">);</span>
-    <span class="n">HAL_Delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-    <span class="n">HAL_GPIO_TogglePin</span><span class="p">(</span><span class="n">ADC_SIN_GPIO_Port</span><span class="p">,</span> <span class="n">ADC_SIN_Pin</span><span class="p">);</span>
+    <span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">ADC_SIN_GPIO_Port</span><span class="p">,</span> <span class="n">ADC_SIN_Pin</span><span class="p">,</span> <span class="n">GPIO_PIN_SET</span><span class="p">);</span>
+    <span class="n">HAL_Delay</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+    <span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">ADC_SIN_GPIO_Port</span><span class="p">,</span> <span class="n">ADC_SIN_Pin</span><span class="p">,</span> <span class="n">GPIO_PIN_RESET</span><span class="p">);</span>
 
     <span class="kt">uint32_t</span> <span class="n">time</span> <span class="o">=</span> <span class="n">HAL_GetTick</span><span class="p">();</span>
 
@@ -220,21 +220,28 @@
 
         <span class="n">HAL_UART_Transmit</span><span class="p">(</span><span class="n">huart</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">conf</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
 
-        <span class="kt">uint8_t</span> <span class="n">recv</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">HAL_UART_Receive</span><span class="p">(</span><span class="n">huart</span><span class="p">,</span> <span class="n">recv</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
-            <span class="o">*</span><span class="n">voltage</span> <span class="o">=</span> <span class="n">si8900_convert_voltage</span><span class="p">(</span><span class="n">recv</span><span class="p">);</span>
-            <span class="n">error_unset</span><span class="p">(</span><span class="n">ERROR_ADC_TIMEOUT</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-            <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+        <span class="kt">uint8_t</span> <span class="n">recv</span><span class="p">,</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">recv</span> <span class="o">!=</span> <span class="n">conf</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">HAL_UART_Receive</span><span class="p">(</span><span class="n">huart</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">recv</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">count</span><span class="o">++</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">error_set</span><span class="p">(</span><span class="n">ERROR_ADC_TIMEOUT</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">HAL_GetTick</span><span class="p">());</span>
+                <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+            <span class="p">}</span>
         <span class="p">}</span>
-        <span class="n">error_set</span><span class="p">(</span><span class="n">ERROR_ADC_TIMEOUT</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">HAL_GetTick</span><span class="p">());</span>
+
+        <span class="kt">uint8_t</span> <span class="n">data</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+        <span class="n">HAL_UART_Receive</span><span class="p">(</span><span class="n">huart</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+        <span class="o">*</span><span class="n">voltage</span> <span class="o">=</span> <span class="n">si8900_convert_voltage</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+
+        <span class="n">error_unset</span><span class="p">(</span><span class="n">ERROR_ADC_TIMEOUT</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
     <span class="p">}</span>
     <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kt">uint16_t</span> <span class="nf">si8900_convert_voltage</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">adc_hl</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="p">{</span>
     <span class="c1">// MSB | LSB</span>
-    <span class="kt">uint16_t</span> <span class="n">dig</span> <span class="o">=</span>
-        <span class="p">((</span><span class="n">adc_hl</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&amp;</span> <span class="mi">0</span><span class="n">b00001111</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="mi">6</span><span class="p">)</span> <span class="o">|</span> <span class="p">((</span><span class="n">adc_hl</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&amp;</span> <span class="mi">0</span><span class="n">b01111110</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="kt">uint16_t</span> <span class="n">dig</span> <span class="o">=</span> <span class="p">((</span><span class="n">adc_hl</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&amp;</span> <span class="mi">0</span><span class="n">b00001111</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="mi">6</span><span class="p">)</span> <span class="o">|</span> <span class="p">((</span><span class="n">adc_hl</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&amp;</span> <span class="mi">0</span><span class="n">b01111110</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="p">);</span>
 
     <span class="k">return</span> <span class="p">((</span><span class="n">SI8900_VREF</span> <span class="o">*</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">dig</span><span class="p">)</span> <span class="o">/</span> <span class="mi">1024</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">;</span>
 <span class="p">}</span>

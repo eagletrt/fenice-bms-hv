@@ -52,8 +52,6 @@ Includes
 
 - ``stdbool.h``
 
-- ``stm32g4xx_hal.h``
-
 
 
 Included By

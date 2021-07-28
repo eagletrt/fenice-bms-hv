@@ -165,24 +165,18 @@
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifndef SI8902_H</span>
 <span class="cp">#define SI8902_H</span>
 
-<span class="cp">#include</span> <span class="cpf">&lt;inttypes.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdbool.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stm32g4xx_hal.h&gt;</span><span class="cp"></span>
-
 <span class="cp">#include</span> <span class="cpf">&quot;main.h&quot;</span><span class="cp"></span>
 
-<span class="k">static</span> <span class="k">const</span> <span class="kt">uint8_t</span> <span class="n">si8900_cnfg_0</span> <span class="o">=</span> <span class="mi">0</span><span class="n">b11000011</span><span class="p">;</span>
+<span class="cp">#include</span> <span class="cpf">&lt;inttypes.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdbool.h&gt;</span><span class="cp"></span>
 
-<span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span>
-    <span class="n">SI8900_AIN0</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="n">SI8900_AIN1</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
-    <span class="n">SI8900_AIN2</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="p">}</span> <span class="n">SI8900_CHANNEL</span><span class="p">;</span>
+<span class="k">static</span> <span class="k">const</span> <span class="kt">uint8_t</span> <span class="n">si8900_cnfg_0</span> <span class="o">=</span> <span class="mi">0</span><span class="n">b11001011</span><span class="p">;</span>
+
+<span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span> <span class="n">SI8900_AIN0</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">SI8900_AIN1</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">SI8900_AIN2</span> <span class="o">=</span> <span class="mi">2</span> <span class="p">}</span> <span class="n">SI8900_CHANNEL</span><span class="p">;</span>
 
 <span class="kt">bool</span> <span class="nf">si8900_init</span><span class="p">(</span><span class="n">UART_HandleTypeDef</span> <span class="o">*</span><span class="n">huart</span><span class="p">,</span> <span class="n">GPIO_TypeDef</span> <span class="o">*</span><span class="n">reset_gpio</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="n">reset_pin</span><span class="p">);</span>
 
-<span class="kt">bool</span> <span class="nf">si8900_read_channel</span><span class="p">(</span><span class="n">UART_HandleTypeDef</span> <span class="o">*</span><span class="n">huart</span><span class="p">,</span> <span class="n">SI8900_CHANNEL</span> <span class="n">ch</span><span class="p">,</span>
-                         <span class="kt">uint16_t</span> <span class="o">*</span><span class="n">voltage</span><span class="p">);</span>
+<span class="kt">bool</span> <span class="nf">si8900_read_channel</span><span class="p">(</span><span class="n">UART_HandleTypeDef</span> <span class="o">*</span><span class="n">huart</span><span class="p">,</span> <span class="n">SI8900_CHANNEL</span> <span class="n">ch</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="o">*</span><span class="n">voltage</span><span class="p">);</span>
 
 <span class="kt">uint16_t</span> <span class="nf">si8900_convert_voltage</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">adc_hl</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
 
