@@ -7,25 +7,62 @@
  * @author		Matteo Bonora [matteo.bonora@studenti.unitn.it]
  */
 
-#ifndef CONFIG_H
-#define CONFIG_H
+#ifndef _CONFIG_H_
+#define _CONFIG_H_
+#include "m95256.h"
+
 #include <inttypes.h>
 
-#include "bal.h"
+typedef struct config *config_t;
 
-#define CONFIG_ADDRESS 0x00
+/**
+ * @brief Initializes a config instance
+ * 
+ * @param config The config handle
+ * @param address The handle to read/write the config to
+ * @param default_data The default value for data. Used when the config in eeprom is invalid
+ * @param size Size of the data structure
+ * @return true Initialization from EEPROM successfull
+ * @return false The default config has been initialized
+ */
+bool config_init(config_t *config, uint16_t address, void *default_data, size_t size);
 
-#define CONFIG_VERSION 0x01
+/**
+ * @brief Writes a config to EEPROM
+ * 
+ * @param config The config handle
+ * @return true Write successfull
+ * @return false Error
+ */
+bool config_write(config_t config);
 
-struct config {
-	uint32_t version;
-};
-typedef struct config config_t;
-const config_t config_default = {
-	CONFIG_VERSION};
+/**
+ * @brief Reads a config from EEPROM
+ * 
+ * @param config The config handle
+ * @return true Read successfull
+ * @return false Error
+ */
+bool config_read(config_t config);
 
-bool config_write(config_t *config);
-bool config_load();
-void config_get(config_t *config);
+/**
+ * @brief Returns the config data
+ * 
+ * @note This function doesn NOT read from EEPROM. call config_read for that functionality
+ * 
+ * @param config The config handle
+ * @return void* The data
+ */
+void *config_get(config_t config);
+
+/**
+ * @brief Writes in the data register of the config handle
+ * 
+ * @note This function doesn NOT write to EEPROM. call config_write for that functionality
+ * 
+ * @param config The config handle
+ * @param data data to write
+ */
+void config_set(config_t config, void *data);
 
 #endif

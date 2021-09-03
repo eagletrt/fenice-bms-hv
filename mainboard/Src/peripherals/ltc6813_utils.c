@@ -65,7 +65,7 @@ size_t ltc6813_read_voltages(SPI_HandleTypeDef *hspi, voltage_t *volts) {
 
 		for (uint8_t ltc = 0; ltc < LTC6813_COUNT; ltc++) {
 			if (ltc6813_pec15(6, data) == (uint16_t)(data[6] * 256 + data[7])) {
-				error_unset(ERROR_LTC_PEC_ERROR, ltc);
+				error_unset(ERROR_LTC_PEC, ltc);
 
 				// For every cell in the register
 				for (uint8_t cell = 0; cell < LTC6813_REG_CELL_COUNT; cell++) {
@@ -78,7 +78,7 @@ size_t ltc6813_read_voltages(SPI_HandleTypeDef *hspi, voltage_t *volts) {
 					count++;
 				}
 			} else {
-				error_set(ERROR_LTC_PEC_ERROR, ltc, HAL_GetTick());
+				error_set(ERROR_LTC_PEC, ltc, HAL_GetTick());
 			}
 		}
 	}
@@ -210,8 +210,8 @@ void ltc6813_check_temperature(uint16_t temps, uint8_t index) {
 	}
 }
 
-void ltc6813_set_dcc(uint8_t indexes[], uint8_t cfgar[8], uint8_t cfgbr[8]) {
-	for (uint8_t i = 0; i < PACK_CELL_COUNT; i++) {
+void ltc6813_set_dcc(uint16_t indexes[], uint8_t cfgar[8], uint8_t cfgbr[8]) {
+	for (uint16_t i = 0; i < PACK_CELL_COUNT; i++) {
 		if (indexes[i] < 8) {
 			cfgar[4] += dcc[indexes[i]];
 		} else if (indexes[i] >= 8 && indexes[i] < 12) {
@@ -232,12 +232,11 @@ void ltc6813_set_dcc(uint8_t indexes[], uint8_t cfgar[8], uint8_t cfgbr[8]) {
 	}
 }
 
-void ltc6813_set_balancing(SPI_HandleTypeDef *hspi, uint8_t *indexes,
-						   int dcto) {
+void ltc6813_set_balancing(SPI_HandleTypeDef *hspi, uint16_t *indexes, int dcto) {
 	uint8_t cfgar[LTC6813_COUNT][8] = {0};
 	uint8_t cfgbr[LTC6813_COUNT][8] = {0};
 
-	for (uint8_t i = 0; i < LTC6813_COUNT; i++) {
+	for (uint16_t i = 0; i < LTC6813_COUNT; i++) {
 		// cfgbr[i][1] += 0b00001000; // set DTMEN
 		cfgar[i][0] += 0b00000010;	// set DTEN
 		cfgar[i][5] += dcto << 4;	// Set timer

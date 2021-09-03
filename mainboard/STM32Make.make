@@ -57,13 +57,14 @@ Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c \
 Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c \
 Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c \
 Src/bal.c \
+Src/bal_fsm.c \
+Src/bms_fsm.c \
 Src/cli_bms.c \
 Src/config.c \
 Src/error/error.c \
 Src/error/error_list_ref.c \
 Src/fdcan.c \
 Src/feedback.c \
-Src/fsm_bms.c \
 Src/gpio.c \
 Src/main.c \
 Src/pack.c \
@@ -71,18 +72,14 @@ Src/peripherals/can.c \
 Src/peripherals/ltc6813.c \
 Src/peripherals/ltc6813_utils.c \
 Src/peripherals/si8900.c \
+Src/soc.c \
 Src/spi.c \
 Src/stm32g4xx_hal_msp.c \
 Src/stm32g4xx_it.c \
+Src/super_fsm.c \
 Src/system_stm32g4xx.c \
 Src/tim.c \
 Src/usart.c \
-lib/can/external/flatcc/runtime/builder.c \
-lib/can/external/flatcc/runtime/emitter.c \
-lib/can/external/flatcc/runtime/json_parser.c \
-lib/can/external/flatcc/runtime/json_printer.c \
-lib/can/external/flatcc/runtime/refmap.c \
-lib/can/external/flatcc/runtime/verifier.c \
 lib/can/naked_generator/BMSinternal/c/BMSinternal.c \
 lib/can/naked_generator/Primary/c/Primary.c \
 lib/can/naked_generator/Secondary/c/Secondary.c \
@@ -163,13 +160,6 @@ C_INCLUDES =  \
 -IInc \
 -IInc/error \
 -IInc/peripherals \
--Ilib/can/external/flatcc \
--Ilib/can/external/flatcc/portable \
--Ilib/can/external/flatcc/reflection \
--Ilib/can/external/flatcc/support \
--Ilib/can/flatbuf_generator/BMSinternal/c \
--Ilib/can/flatbuf_generator/Primary/c \
--Ilib/can/flatbuf_generator/Secondary/c \
 -Ilib/can/includes_generator/BMSinternal \
 -Ilib/can/includes_generator/Primary \
 -Ilib/can/includes_generator/Secondary \
@@ -193,12 +183,14 @@ ifeq ($(DEBUG), 1)
 CFLAGS += -g -gdwarf-2
 endif
 
+# Add additional flags
+CFLAGS += 
+ASFLAGS += -specs=nosys.specs 
+CXXFLAGS = 
+CXXFLAGS += -feliminate-unused-debug-types
 
 # Generate dependency information
 CFLAGS += -MMD -MP -MF"$(@:%.o=%.d)"
-
-CXXFLAGS?=
-CXXFLAGS += -feliminate-unused-debug-types
 
 #######################################
 # LDFLAGS
@@ -259,13 +251,13 @@ $(BUILD_DIR):
 # flash
 #######################################
 flash: $(BUILD_DIR)/$(TARGET).elf
-	"openocd" -f ./openocd.cfg -c "program $(BUILD_DIR)/$(TARGET).elf verify reset exit"
+	"/usr/bin/openocd" -f ./openocd.cfg -c "program $(BUILD_DIR)/$(TARGET).elf verify reset exit"
 
 #######################################
 # erase
 #######################################
 erase: $(BUILD_DIR)/$(TARGET).elf
-	"openocd" -f ./openocd.cfg -c "init; reset halt; stm32g4x mass_erase 0; exit"
+	"/usr/bin/openocd" -f ./openocd.cfg -c "init; reset halt; stm32g4x mass_erase 0; exit"
 
 #######################################
 # clean up

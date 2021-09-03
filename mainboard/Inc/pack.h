@@ -10,7 +10,6 @@
 
 #include <inttypes.h>
 
-#include "bal.h"
 #include "error/error.h"
 #include "fenice_config.h"
 #include "peripherals/ltc6813_utils.h"
@@ -51,7 +50,11 @@ void pack_update_voltage_stats();
  * @details It updates *_temperature variables with the data of the pack
  */
 void pack_update_temperature_stats();
-bool pack_balance_cells(SPI_HandleTypeDef *hspi);
+
+void pack_reset_soc();
+double pack_get_soc();
+double pack_get_energy_total();
+double pack_get_energy_last_charge();
 
 bool pack_set_ts_off();
 bool pack_set_pc_start();
@@ -67,4 +70,4 @@ temperature_t pack_get_max_temperature();
 temperature_t pack_get_min_temperature();
 temperature_t pack_get_mean_temperature();
 current_t pack_get_current();
-bal_handle pack_get_balancing();
+int16_t pack_get_power();

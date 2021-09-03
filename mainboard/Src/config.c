@@ -9,22 +9,80 @@
 
 #include "config.h"
 
+#include "fenice_config.h"
+#include "spi.h"
+
+#include <stdlib.h>
 #include <string.h>
 
-#include "m95256.h"
+struct config {
+    uint8_t version;
+    uint16_t address;
+    bool dirty;
+    size_t size;
+    void *data;
+};
+static m95256_t eeprom = NULL;
 
-m95256_t memory;
-config_t config = config_default;
+bool config_init(config_t *config, uint16_t address, void *default_data, size_t size) {
+    *config         = (config_t)malloc(sizeof(struct config));
+    (*config)->data = malloc(size);
 
-bool config_write(config_t *config) {
-	return m95256_WriteBuffer(memory, (uint8_t *)config, CONFIG_ADDRESS, sizeof(*config)) == EEPROM_STATUS_COMPLETE;
+    (*config)->address = address;
+    (*config)->size    = size;
+    (*config)->dirty   = false;
+
+    if (eeprom == NULL) {
+        m95256_init(&eeprom, &spi_eeprom, CS_EEPROM_GPIO_Port, CS_EEPROM_Pin);
+    }
+
+    if (config_read(*config)) {
+        if (((uint8_t *)(*config)->data)[0] == ((uint8_t *)default_data)[0]) {
+            return true;
+        }
+        // Data in eeprom is gibberish
+        memcpy((*config)->data, default_data, size);
+        (*config)->dirty = true;
+
+        return false;
+    }
+    // TODO: trigger warning?
+    return false;
 }
 
-bool config_load() {
-	m95256_ReadBuffer(memory, (uint8_t *)&config, CONFIG_ADDRESS, sizeof(config));
-	return config.version == CONFIG_VERSION;
+void config_deinit(config_t config) {
+    free(config->data);
+    free(config);
 }
 
-void config_get(config_t *config) {
-	memcpy(&config, config, sizeof(config));
+bool config_read(config_t config) {
+    uint8_t tmpdata[config->size];
+
+    if (m95256_ReadBuffer(eeprom, tmpdata, config->address, config->size) == EEPROM_STATUS_COMPLETE) {
+        memcpy(config->data, tmpdata, config->size);
+        config->dirty = false;
+        return true;
+    }
+
+    return false;
+}
+
+bool config_write(config_t config) {
+    if (config->dirty) {
+        if (m95256_WriteBuffer(eeprom, (uint8_t *)config->data, config->address, config->size) ==
+            EEPROM_STATUS_COMPLETE) {
+            config->dirty = false;
+            return true;
+        }
+    }
+    return true;
+}
+
+void *config_get(config_t config) {
+    return config->data;
+}
+
+void config_set(config_t config, void *data) {
+    memcpy(config->data, data, config->size);
+    config->dirty = true;
 }
