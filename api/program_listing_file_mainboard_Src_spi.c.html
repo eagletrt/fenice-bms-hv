@@ -179,43 +179,8 @@
 <span class="p">}</span>
 <span class="cm">/* USER CODE END 0 */</span>
 
-<span class="n">SPI_HandleTypeDef</span> <span class="n">hspi1</span><span class="p">;</span>
 <span class="n">SPI_HandleTypeDef</span> <span class="n">hspi2</span><span class="p">;</span>
 
-<span class="cm">/* SPI1 init function */</span>
-<span class="kt">void</span> <span class="nf">MX_SPI1_Init</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
-<span class="p">{</span>
-
-  <span class="cm">/* USER CODE BEGIN SPI1_Init 0 */</span>
-
-  <span class="cm">/* USER CODE END SPI1_Init 0 */</span>
-
-  <span class="cm">/* USER CODE BEGIN SPI1_Init 1 */</span>
-
-  <span class="cm">/* USER CODE END SPI1_Init 1 */</span>
-  <span class="n">hspi1</span><span class="p">.</span><span class="n">Instance</span> <span class="o">=</span> <span class="n">SPI1</span><span class="p">;</span>
-  <span class="n">hspi1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Mode</span> <span class="o">=</span> <span class="n">SPI_MODE_MASTER</span><span class="p">;</span>
-  <span class="n">hspi1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Direction</span> <span class="o">=</span> <span class="n">SPI_DIRECTION_2LINES</span><span class="p">;</span>
-  <span class="n">hspi1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">DataSize</span> <span class="o">=</span> <span class="n">SPI_DATASIZE_8BIT</span><span class="p">;</span>
-  <span class="n">hspi1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">CLKPolarity</span> <span class="o">=</span> <span class="n">SPI_POLARITY_LOW</span><span class="p">;</span>
-  <span class="n">hspi1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">CLKPhase</span> <span class="o">=</span> <span class="n">SPI_PHASE_1EDGE</span><span class="p">;</span>
-  <span class="n">hspi1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">NSS</span> <span class="o">=</span> <span class="n">SPI_NSS_SOFT</span><span class="p">;</span>
-  <span class="n">hspi1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">BaudRatePrescaler</span> <span class="o">=</span> <span class="n">SPI_BAUDRATEPRESCALER_256</span><span class="p">;</span>
-  <span class="n">hspi1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">FirstBit</span> <span class="o">=</span> <span class="n">SPI_FIRSTBIT_MSB</span><span class="p">;</span>
-  <span class="n">hspi1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">TIMode</span> <span class="o">=</span> <span class="n">SPI_TIMODE_DISABLE</span><span class="p">;</span>
-  <span class="n">hspi1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">CRCCalculation</span> <span class="o">=</span> <span class="n">SPI_CRCCALCULATION_DISABLE</span><span class="p">;</span>
-  <span class="n">hspi1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">CRCPolynomial</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
-  <span class="n">hspi1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">CRCLength</span> <span class="o">=</span> <span class="n">SPI_CRC_LENGTH_DATASIZE</span><span class="p">;</span>
-  <span class="n">hspi1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">NSSPMode</span> <span class="o">=</span> <span class="n">SPI_NSS_PULSE_DISABLE</span><span class="p">;</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">HAL_SPI_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hspi1</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="n">Error_Handler</span><span class="p">();</span>
-  <span class="p">}</span>
-  <span class="cm">/* USER CODE BEGIN SPI1_Init 2 */</span>
-
-  <span class="cm">/* USER CODE END SPI1_Init 2 */</span>
-
-<span class="p">}</span>
 <span class="cm">/* SPI2 init function */</span>
 <span class="kt">void</span> <span class="nf">MX_SPI2_Init</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
@@ -231,16 +196,14 @@
   <span class="n">hspi2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Mode</span> <span class="o">=</span> <span class="n">SPI_MODE_MASTER</span><span class="p">;</span>
   <span class="n">hspi2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Direction</span> <span class="o">=</span> <span class="n">SPI_DIRECTION_2LINES</span><span class="p">;</span>
   <span class="n">hspi2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">DataSize</span> <span class="o">=</span> <span class="n">SPI_DATASIZE_8BIT</span><span class="p">;</span>
-  <span class="n">hspi2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">CLKPolarity</span> <span class="o">=</span> <span class="n">SPI_POLARITY_LOW</span><span class="p">;</span>
+  <span class="n">hspi2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">CLKPolarity</span> <span class="o">=</span> <span class="n">SPI_POLARITY_HIGH</span><span class="p">;</span>
   <span class="n">hspi2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">CLKPhase</span> <span class="o">=</span> <span class="n">SPI_PHASE_1EDGE</span><span class="p">;</span>
   <span class="n">hspi2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">NSS</span> <span class="o">=</span> <span class="n">SPI_NSS_SOFT</span><span class="p">;</span>
-  <span class="n">hspi2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">BaudRatePrescaler</span> <span class="o">=</span> <span class="n">SPI_BAUDRATEPRESCALER_256</span><span class="p">;</span>
+  <span class="n">hspi2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">BaudRatePrescaler</span> <span class="o">=</span> <span class="n">SPI_BAUDRATEPRESCALER_128</span><span class="p">;</span>
   <span class="n">hspi2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">FirstBit</span> <span class="o">=</span> <span class="n">SPI_FIRSTBIT_MSB</span><span class="p">;</span>
   <span class="n">hspi2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">TIMode</span> <span class="o">=</span> <span class="n">SPI_TIMODE_DISABLE</span><span class="p">;</span>
   <span class="n">hspi2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">CRCCalculation</span> <span class="o">=</span> <span class="n">SPI_CRCCALCULATION_DISABLE</span><span class="p">;</span>
-  <span class="n">hspi2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">CRCPolynomial</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
-  <span class="n">hspi2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">CRCLength</span> <span class="o">=</span> <span class="n">SPI_CRC_LENGTH_DATASIZE</span><span class="p">;</span>
-  <span class="n">hspi2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">NSSPMode</span> <span class="o">=</span> <span class="n">SPI_NSS_PULSE_DISABLE</span><span class="p">;</span>
+  <span class="n">hspi2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">CRCPolynomial</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
   <span class="k">if</span> <span class="p">(</span><span class="n">HAL_SPI_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hspi2</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
   <span class="p">{</span>
     <span class="n">Error_Handler</span><span class="p">();</span>
@@ -255,27 +218,7 @@
 <span class="p">{</span>
 
   <span class="n">GPIO_InitTypeDef</span> <span class="n">GPIO_InitStruct</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
-  <span class="k">if</span><span class="p">(</span><span class="n">spiHandle</span><span class="o">-&gt;</span><span class="n">Instance</span><span class="o">==</span><span class="n">SPI1</span><span class="p">)</span>
-  <span class="p">{</span>
-  <span class="cm">/* USER CODE BEGIN SPI1_MspInit 0 */</span>
-
-  <span class="cm">/* USER CODE END SPI1_MspInit 0 */</span>
-    <span class="cm">/* SPI1 clock enable */</span>
-    <span class="n">__HAL_RCC_SPI1_CLK_ENABLE</span><span class="p">();</span>
-
-    <span class="n">__HAL_RCC_GPIOA_CLK_ENABLE</span><span class="p">();</span>
-    <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pin</span> <span class="o">=</span> <span class="n">GPIO_PIN_5</span><span class="o">|</span><span class="n">GPIO_PIN_6</span><span class="o">|</span><span class="n">GPIO_PIN_7</span><span class="p">;</span>
-    <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Mode</span> <span class="o">=</span> <span class="n">GPIO_MODE_AF_PP</span><span class="p">;</span>
-    <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pull</span> <span class="o">=</span> <span class="n">GPIO_NOPULL</span><span class="p">;</span>
-    <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Speed</span> <span class="o">=</span> <span class="n">GPIO_SPEED_FREQ_LOW</span><span class="p">;</span>
-    <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Alternate</span> <span class="o">=</span> <span class="n">GPIO_AF5_SPI1</span><span class="p">;</span>
-    <span class="n">HAL_GPIO_Init</span><span class="p">(</span><span class="n">GPIOA</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">GPIO_InitStruct</span><span class="p">);</span>
-
-  <span class="cm">/* USER CODE BEGIN SPI1_MspInit 1 */</span>
-
-  <span class="cm">/* USER CODE END SPI1_MspInit 1 */</span>
-  <span class="p">}</span>
-  <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">spiHandle</span><span class="o">-&gt;</span><span class="n">Instance</span><span class="o">==</span><span class="n">SPI2</span><span class="p">)</span>
+  <span class="k">if</span><span class="p">(</span><span class="n">spiHandle</span><span class="o">-&gt;</span><span class="n">Instance</span><span class="o">==</span><span class="n">SPI2</span><span class="p">)</span>
   <span class="p">{</span>
   <span class="cm">/* USER CODE BEGIN SPI2_MspInit 0 */</span>
 
@@ -287,7 +230,7 @@
     <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pin</span> <span class="o">=</span> <span class="n">GPIO_PIN_13</span><span class="o">|</span><span class="n">GPIO_PIN_14</span><span class="o">|</span><span class="n">GPIO_PIN_15</span><span class="p">;</span>
     <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Mode</span> <span class="o">=</span> <span class="n">GPIO_MODE_AF_PP</span><span class="p">;</span>
     <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pull</span> <span class="o">=</span> <span class="n">GPIO_NOPULL</span><span class="p">;</span>
-    <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Speed</span> <span class="o">=</span> <span class="n">GPIO_SPEED_FREQ_LOW</span><span class="p">;</span>
+    <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Speed</span> <span class="o">=</span> <span class="n">GPIO_SPEED_FREQ_VERY_HIGH</span><span class="p">;</span>
     <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Alternate</span> <span class="o">=</span> <span class="n">GPIO_AF5_SPI2</span><span class="p">;</span>
     <span class="n">HAL_GPIO_Init</span><span class="p">(</span><span class="n">GPIOB</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">GPIO_InitStruct</span><span class="p">);</span>
 
@@ -300,21 +243,7 @@
 <span class="kt">void</span> <span class="nf">HAL_SPI_MspDeInit</span><span class="p">(</span><span class="n">SPI_HandleTypeDef</span><span class="o">*</span> <span class="n">spiHandle</span><span class="p">)</span>
 <span class="p">{</span>
 
-  <span class="k">if</span><span class="p">(</span><span class="n">spiHandle</span><span class="o">-&gt;</span><span class="n">Instance</span><span class="o">==</span><span class="n">SPI1</span><span class="p">)</span>
-  <span class="p">{</span>
-  <span class="cm">/* USER CODE BEGIN SPI1_MspDeInit 0 */</span>
-
-  <span class="cm">/* USER CODE END SPI1_MspDeInit 0 */</span>
-    <span class="cm">/* Peripheral clock disable */</span>
-    <span class="n">__HAL_RCC_SPI1_CLK_DISABLE</span><span class="p">();</span>
-
-    <span class="n">HAL_GPIO_DeInit</span><span class="p">(</span><span class="n">GPIOA</span><span class="p">,</span> <span class="n">GPIO_PIN_5</span><span class="o">|</span><span class="n">GPIO_PIN_6</span><span class="o">|</span><span class="n">GPIO_PIN_7</span><span class="p">);</span>
-
-  <span class="cm">/* USER CODE BEGIN SPI1_MspDeInit 1 */</span>
-
-  <span class="cm">/* USER CODE END SPI1_MspDeInit 1 */</span>
-  <span class="p">}</span>
-  <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">spiHandle</span><span class="o">-&gt;</span><span class="n">Instance</span><span class="o">==</span><span class="n">SPI2</span><span class="p">)</span>
+  <span class="k">if</span><span class="p">(</span><span class="n">spiHandle</span><span class="o">-&gt;</span><span class="n">Instance</span><span class="o">==</span><span class="n">SPI2</span><span class="p">)</span>
   <span class="p">{</span>
   <span class="cm">/* USER CODE BEGIN SPI2_MspDeInit 0 */</span>
 

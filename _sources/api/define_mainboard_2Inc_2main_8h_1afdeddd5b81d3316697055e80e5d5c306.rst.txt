@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2main_8h_1afdeddd5b81d3316697055e80e5d5c306:
+
+Define CARD_OK_GPIO_Port
+========================
+
+- Defined in :ref:`file_mainboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CARD_OK_GPIO_Port

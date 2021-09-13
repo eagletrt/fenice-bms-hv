@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2main_8h_1a1167ccdb95e517f86cd7c7f97836e0a6:
+
+Define FB_FROM_TSMS_Pin
+=======================
+
+- Defined in :ref:`file_mainboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: FB_FROM_TSMS_Pin

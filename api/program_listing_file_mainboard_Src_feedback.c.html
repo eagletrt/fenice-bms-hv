@@ -164,8 +164,6 @@
 <p>↰ <a class="reference internal" href="file_mainboard_Src_feedback.c.html#file-mainboard-src-feedback-c"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">mainboard/Src/feedback.c</span></code>)</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;feedback.h&quot;</span><span class="cp"></span>
 
-<span class="cp">#include</span> <span class="cpf">&lt;stm32g4xx_hal.h&gt;</span><span class="cp"></span>
-
 <span class="cp">#include</span> <span class="cpf">&quot;main.h&quot;</span><span class="cp"></span>
 
 <span class="n">feedback_t</span> <span class="n">feedback</span><span class="p">;</span>
@@ -180,7 +178,7 @@
             <span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">MUX_A2_GPIO_Port</span><span class="p">,</span> <span class="n">MUX_A2_Pin</span><span class="p">,</span> <span class="p">(</span><span class="n">i</span> <span class="o">&amp;</span> <span class="mi">0</span><span class="n">b00000100</span><span class="p">));</span>
             <span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">MUX_A3_GPIO_Port</span><span class="p">,</span> <span class="n">MUX_A3_Pin</span><span class="p">,</span> <span class="p">(</span><span class="n">i</span> <span class="o">&amp;</span> <span class="mi">0</span><span class="n">b00001000</span><span class="p">));</span>
 
-            <span class="n">feedback</span> <span class="o">|=</span> <span class="p">(</span><span class="n">HAL_GPIO_ReadPin</span><span class="p">(</span><span class="n">ANALOG_DATA_GPIO_Port</span><span class="p">,</span> <span class="n">ANALOG_DATA_Pin</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">i</span><span class="p">);</span>
+            <span class="n">feedback</span> <span class="o">|=</span> <span class="p">(</span><span class="n">HAL_GPIO_ReadPin</span><span class="p">(</span><span class="n">MUX_IN_GPIO_Port</span><span class="p">,</span> <span class="n">MUX_IN_Pin</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">i</span><span class="p">);</span>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -198,7 +196,7 @@
     <span class="k">return</span> <span class="n">feedback</span> <span class="o">==</span> <span class="n">fb_value</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="c1">// //this ckeck is performed during ON state and from PRECHARGE TO ON</span>
+<span class="c1">// //this check is performed during ON state and from PRECHARGE TO ON</span>
 <span class="c1">// bool pack_feedback_check_on() {</span>
 <span class="c1">//  uint16_t difference = pd_feedback ^ FEEDBACK_ON;</span>
 

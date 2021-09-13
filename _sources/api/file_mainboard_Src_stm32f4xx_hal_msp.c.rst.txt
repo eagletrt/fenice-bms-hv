@@ -1,0 +1,60 @@
+
+.. _file_mainboard_Src_stm32f4xx_hal_msp.c:
+
+File stm32f4xx_hal_msp.c
+========================
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Src>` (``mainboard/Src``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+This file provides code for the MSP Initialization and de-Initialization codes. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Src/stm32f4xx_hal_msp.c``)
+--------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Src_stm32f4xx_hal_msp.c.rst
+
+
+
+Detailed Description
+--------------------
+
+
+
+ Copyright (c) 2021 STMicroelectronics. All rights reserved.
+
+
+This software component is licensed by ST under Ultimate Liberty license SLA0044, the "License"; You may not use this file except in compliance with the License. You may obtain a copy of the License at: www.st.com/SLA0044 
+
+
+
+
+Includes
+--------
+
+
+- ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
+
+
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_mainboard_2Src_2stm32f4xx__hal__msp_8c_1ae4fb8e66865c87d0ebab74a726a6891f`
+

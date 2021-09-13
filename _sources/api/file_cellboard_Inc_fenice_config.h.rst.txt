@@ -56,10 +56,6 @@ Included By
 
 - :ref:`file_mainboard_Inc_error_error_list_ref.h`
 
-- :ref:`file_mainboard_Inc_peripherals_ltc6813_utils.h`
-
-- :ref:`file_mainboard_Inc_peripherals_ltc6813.h`
-
 - :ref:`file_mainboard_Src_bal_fsm.c`
 
 - :ref:`file_mainboard_Src_config.c`

@@ -47,7 +47,7 @@ Includes
 
 - ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
 
-- ``stm32f4xx_it.h`` (:ref:`file_cellboard_Inc_stm32f4xx_it.h`)
+- ``stm32f4xx_it.h`` (:ref:`file_mainboard_Inc_stm32f4xx_it.h`)
 
 
 
@@ -58,32 +58,32 @@ Functions
 ---------
 
 
-- :ref:`exhale_function_stm32f4xx__it_8c_1a850cefb17a977292ae5eb4cafa9976c3`
+- :ref:`exhale_function_cellboard_2Src_2stm32f4xx__it_8c_1a850cefb17a977292ae5eb4cafa9976c3`
 
-- :ref:`exhale_function_stm32f4xx__it_8c_1adbdfb05858cc36fc520974df37ec3cb0`
+- :ref:`exhale_function_cellboard_2Src_2stm32f4xx__it_8c_1adbdfb05858cc36fc520974df37ec3cb0`
 
-- :ref:`exhale_function_stm32f4xx__it_8c_1a2bffc10d5bd4106753b7c30e86903bea`
+- :ref:`exhale_function_cellboard_2Src_2stm32f4xx__it_8c_1a2bffc10d5bd4106753b7c30e86903bea`
 
-- :ref:`exhale_function_stm32f4xx__it_8c_1ad25274aece51e7f5b821f5d32b31bddf`
+- :ref:`exhale_function_cellboard_2Src_2stm32f4xx__it_8c_1ad25274aece51e7f5b821f5d32b31bddf`
 
-- :ref:`exhale_function_stm32f4xx__it_8c_1a272ffa65eb8ff5c4a065b0d3473611cd`
+- :ref:`exhale_function_cellboard_2Src_2stm32f4xx__it_8c_1a272ffa65eb8ff5c4a065b0d3473611cd`
 
-- :ref:`exhale_function_stm32f4xx__it_8c_1a3150f74512510287a942624aa9b44cc5`
+- :ref:`exhale_function_cellboard_2Src_2stm32f4xx__it_8c_1a3150f74512510287a942624aa9b44cc5`
 
-- :ref:`exhale_function_stm32f4xx__it_8c_1a6ad7a5e3ee69cb6db6a6b9111ba898bc`
+- :ref:`exhale_function_cellboard_2Src_2stm32f4xx__it_8c_1a6ad7a5e3ee69cb6db6a6b9111ba898bc`
 
-- :ref:`exhale_function_stm32f4xx__it_8c_1a6303e1f258cbdc1f970ce579cc015623`
+- :ref:`exhale_function_cellboard_2Src_2stm32f4xx__it_8c_1a6303e1f258cbdc1f970ce579cc015623`
 
-- :ref:`exhale_function_stm32f4xx__it_8c_1a3e5ddb3df0d62f2dc357e64a3f04a6ce`
+- :ref:`exhale_function_cellboard_2Src_2stm32f4xx__it_8c_1a3e5ddb3df0d62f2dc357e64a3f04a6ce`
 
-- :ref:`exhale_function_stm32f4xx__it_8c_1ab5e09814056d617c521549e542639b7e`
+- :ref:`exhale_function_cellboard_2Src_2stm32f4xx__it_8c_1ab5e09814056d617c521549e542639b7e`
 
-- :ref:`exhale_function_stm32f4xx__it_8c_1a1d98923de2ed6b7309b66f9ba2971647`
+- :ref:`exhale_function_cellboard_2Src_2stm32f4xx__it_8c_1a1d98923de2ed6b7309b66f9ba2971647`
 
 
 Variables
 ---------
 
 
-- :ref:`exhale_variable_stm32f4xx__it_8c_1af7b2c26e44dadaaa798a5c3d82914ba7`
+- :ref:`exhale_variable_cellboard_2Src_2stm32f4xx__it_8c_1af7b2c26e44dadaaa798a5c3d82914ba7`
 

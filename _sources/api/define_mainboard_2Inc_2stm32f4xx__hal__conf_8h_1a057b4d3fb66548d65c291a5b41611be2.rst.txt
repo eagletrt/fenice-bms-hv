@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2stm32f4xx__hal__conf_8h_1a057b4d3fb66548d65c291a5b41611be2:
+
+Define PHY_JABBER_DETECTION
+===========================
+
+- Defined in :ref:`file_mainboard_Inc_stm32f4xx_hal_conf.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: PHY_JABBER_DETECTION

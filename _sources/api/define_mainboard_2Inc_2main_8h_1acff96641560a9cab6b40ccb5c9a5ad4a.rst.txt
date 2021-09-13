@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2main_8h_1acff96641560a9cab6b40ccb5c9a5ad4a:
+
+Define SI8900_TX_Pin
+====================
+
+- Defined in :ref:`file_mainboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: SI8900_TX_Pin

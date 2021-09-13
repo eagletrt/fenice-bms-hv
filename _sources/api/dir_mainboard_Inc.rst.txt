@@ -21,21 +21,23 @@ Subdirectories
 Files
 -----
 
+- :ref:`file_mainboard_Inc_adc.h`
 - :ref:`file_mainboard_Inc_bal.h`
 - :ref:`file_mainboard_Inc_bal_fsm.h`
 - :ref:`file_mainboard_Inc_bms_fsm.h`
+- :ref:`file_mainboard_Inc_can.h`
 - :ref:`file_mainboard_Inc_cli_bms.h`
 - :ref:`file_mainboard_Inc_config.h`
-- :ref:`file_mainboard_Inc_fdcan.h`
 - :ref:`file_mainboard_Inc_feedback.h`
 - :ref:`file_mainboard_Inc_fenice_config.h`
 - :ref:`file_mainboard_Inc_gpio.h`
 - :ref:`file_mainboard_Inc_main.h`
+- :ref:`file_mainboard_Inc_mainboard_config.h`
 - :ref:`file_mainboard_Inc_pack.h`
 - :ref:`file_mainboard_Inc_soc.h`
 - :ref:`file_mainboard_Inc_spi.h`
-- :ref:`file_mainboard_Inc_stm32g4xx_hal_conf.h`
-- :ref:`file_mainboard_Inc_stm32g4xx_it.h`
+- :ref:`file_mainboard_Inc_stm32f4xx_hal_conf.h`
+- :ref:`file_mainboard_Inc_stm32f4xx_it.h`
 - :ref:`file_mainboard_Inc_super_fsm.h`
 - :ref:`file_mainboard_Inc_tim.h`
 - :ref:`file_mainboard_Inc_usart.h`

@@ -1,0 +1,13 @@
+.. _exhale_define_cellboard_2Inc_2stm32f4xx__hal__conf_8h_1a08a36ede83ae67498aecf54676be8fc8:
+
+Define MAC_ADDR3
+================
+
+- Defined in :ref:`file_cellboard_Inc_stm32f4xx_hal_conf.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MAC_ADDR3

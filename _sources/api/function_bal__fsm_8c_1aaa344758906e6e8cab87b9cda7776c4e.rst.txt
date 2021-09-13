@@ -1,0 +1,13 @@
+.. _exhale_function_bal__fsm_8c_1aaa344758906e6e8cab87b9cda7776c4e:
+
+Function discharge_handler
+==========================
+
+- Defined in :ref:`file_mainboard_Src_bal_fsm.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: discharge_handler(fsm, uint8_t)

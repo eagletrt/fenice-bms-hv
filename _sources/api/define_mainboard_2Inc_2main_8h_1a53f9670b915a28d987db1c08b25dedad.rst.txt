@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2main_8h_1a53f9670b915a28d987db1c08b25dedad:
+
+Define LED1_Pin
+===============
+
+- Defined in :ref:`file_mainboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: LED1_Pin

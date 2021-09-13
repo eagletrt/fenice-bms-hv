@@ -1,0 +1,13 @@
+.. _exhale_function_super__fsm_8c_1a3760361be841c8ff77fd1bb377aca49a:
+
+Function super_measure_volts
+============================
+
+- Defined in :ref:`file_mainboard_Src_super_fsm.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: super_measure_volts(fsm, super_events)

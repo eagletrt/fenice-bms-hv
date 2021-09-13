@@ -1,0 +1,13 @@
+.. _exhale_function_cellboard_2Src_2stm32f4xx__hal__msp_8c_1a2ec8d9b09854c732e2feed549278f048:
+
+Function HAL_I2C_MspDeInit
+==========================
+
+- Defined in :ref:`file_cellboard_Src_stm32f4xx_hal_msp.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: HAL_I2C_MspDeInit(I2C_HandleTypeDef *)

@@ -167,6 +167,8 @@
 <span class="cm">/* Includes ------------------------------------------------------------------*/</span>
 <span class="cp">#include</span> <span class="cpf">&quot;main.h&quot;</span><span class="cp"></span>
 
+<span class="cp">#include</span> <span class="cpf">&quot;adc.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;can.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;gpio.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;spi.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;tim.h&quot;</span><span class="cp"></span>
@@ -179,10 +181,9 @@
 <span class="cp">#include</span> <span class="cpf">&quot;cli_bms.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;config.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;error/error.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;fdcan.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;fenice_config.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;m95256.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;peripherals/can.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;peripherals/can_comm.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;si8900.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;super_fsm.h&quot;</span><span class="cp"></span>
 <span class="cm">/* USER CODE END Includes */</span>
@@ -212,7 +213,6 @@
 
 <span class="cm">/* Private function prototypes -----------------------------------------------*/</span>
 <span class="kt">void</span> <span class="nf">SystemClock_Config</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
-<span class="k">static</span> <span class="kt">void</span> <span class="nf">MX_NVIC_Init</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 <span class="cm">/* USER CODE BEGIN PFP */</span>
 
 <span class="cm">/* USER CODE END PFP */</span>
@@ -245,27 +245,35 @@
 
     <span class="cm">/* Initialize all configured peripherals */</span>
     <span class="n">MX_GPIO_Init</span><span class="p">();</span>
-    <span class="n">MX_SPI1_Init</span><span class="p">();</span>
-    <span class="n">MX_SPI2_Init</span><span class="p">();</span>
-    <span class="n">MX_USART2_UART_Init</span><span class="p">();</span>
     <span class="n">MX_USART3_UART_Init</span><span class="p">();</span>
+    <span class="n">MX_ADC1_Init</span><span class="p">();</span>
+    <span class="n">MX_CAN1_Init</span><span class="p">();</span>
+    <span class="n">MX_CAN2_Init</span><span class="p">();</span>
+    <span class="n">MX_SPI2_Init</span><span class="p">();</span>
     <span class="n">MX_TIM2_Init</span><span class="p">();</span>
     <span class="n">MX_TIM3_Init</span><span class="p">();</span>
     <span class="n">MX_TIM4_Init</span><span class="p">();</span>
-
-    <span class="cm">/* Initialize interrupts */</span>
-    <span class="n">MX_NVIC_Init</span><span class="p">();</span>
+    <span class="n">MX_USART1_UART_Init</span><span class="p">();</span>
     <span class="cm">/* USER CODE BEGIN 2 */</span>
+    <span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">EEPROM_HOLD_GPIO_Port</span><span class="p">,</span> <span class="n">EEPROM_HOLD_Pin</span><span class="p">,</span> <span class="n">GPIO_PIN_SET</span><span class="p">);</span>
 
-    <span class="n">FDCAN1_Init</span><span class="p">();</span>
+    <span class="c1">// Blink</span>
+    <span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">LED2_GPIO_Port</span><span class="p">,</span> <span class="n">LED2_Pin</span><span class="p">,</span> <span class="n">GPIO_PIN_SET</span><span class="p">);</span>
+    <span class="n">HAL_Delay</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+    <span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">LED2_GPIO_Port</span><span class="p">,</span> <span class="n">LED2_Pin</span><span class="p">,</span> <span class="n">GPIO_PIN_RESET</span><span class="p">);</span>
+    <span class="n">HAL_Delay</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+    <span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">LED2_GPIO_Port</span><span class="p">,</span> <span class="n">LED2_Pin</span><span class="p">,</span> <span class="n">GPIO_PIN_SET</span><span class="p">);</span>
+    <span class="n">HAL_Delay</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+    <span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">LED2_GPIO_Port</span><span class="p">,</span> <span class="n">LED2_Pin</span><span class="p">,</span> <span class="n">GPIO_PIN_RESET</span><span class="p">);</span>
+    <span class="n">HAL_Delay</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+    <span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">LED2_GPIO_Port</span><span class="p">,</span> <span class="n">LED2_Pin</span><span class="p">,</span> <span class="n">GPIO_PIN_SET</span><span class="p">);</span>
+
     <span class="n">can_init</span><span class="p">();</span>
-    <span class="n">HAL_FDCAN_ActivateNotification</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hfdcan1</span><span class="p">,</span> <span class="n">FDCAN_IT_RX_FIFO0_NEW_MESSAGE</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-    <span class="n">HAL_FDCAN_Start</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hfdcan1</span><span class="p">);</span>
 
     <span class="n">cli_bms_init</span><span class="p">();</span>
     <span class="n">error_init</span><span class="p">();</span>
 
-    <span class="n">si8900_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart3</span><span class="p">,</span> <span class="n">ADC_SIN_GPIO_Port</span><span class="p">,</span> <span class="n">ADC_SIN_Pin</span><span class="p">);</span>
+    <span class="n">si8900_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">SI8900_UART</span><span class="p">,</span> <span class="n">ADC_SIN_GPIO_Port</span><span class="p">,</span> <span class="n">ADC_SIN_Pin</span><span class="p">);</span>
 
     <span class="n">pack_init</span><span class="p">();</span>
     <span class="n">bal_fsm_init</span><span class="p">();</span>
@@ -289,52 +297,36 @@
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">SystemClock_Config</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">RCC_OscInitTypeDef</span> <span class="n">RCC_OscInitStruct</span>   <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
-    <span class="n">RCC_ClkInitTypeDef</span> <span class="n">RCC_ClkInitStruct</span>   <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
-    <span class="n">RCC_PeriphCLKInitTypeDef</span> <span class="n">PeriphClkInit</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+    <span class="n">RCC_OscInitTypeDef</span> <span class="n">RCC_OscInitStruct</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+    <span class="n">RCC_ClkInitTypeDef</span> <span class="n">RCC_ClkInitStruct</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
 
-    <span class="n">HAL_PWREx_ControlVoltageScaling</span><span class="p">(</span><span class="n">PWR_REGULATOR_VOLTAGE_SCALE1_BOOST</span><span class="p">);</span>
+    <span class="n">__HAL_RCC_PWR_CLK_ENABLE</span><span class="p">();</span>
+    <span class="n">__HAL_PWR_VOLTAGESCALING_CONFIG</span><span class="p">(</span><span class="n">PWR_REGULATOR_VOLTAGE_SCALE1</span><span class="p">);</span>
     <span class="n">RCC_OscInitStruct</span><span class="p">.</span><span class="n">OscillatorType</span>      <span class="o">=</span> <span class="n">RCC_OSCILLATORTYPE_HSI</span><span class="p">;</span>
     <span class="n">RCC_OscInitStruct</span><span class="p">.</span><span class="n">HSIState</span>            <span class="o">=</span> <span class="n">RCC_HSI_ON</span><span class="p">;</span>
     <span class="n">RCC_OscInitStruct</span><span class="p">.</span><span class="n">HSICalibrationValue</span> <span class="o">=</span> <span class="n">RCC_HSICALIBRATION_DEFAULT</span><span class="p">;</span>
     <span class="n">RCC_OscInitStruct</span><span class="p">.</span><span class="n">PLL</span><span class="p">.</span><span class="n">PLLState</span>        <span class="o">=</span> <span class="n">RCC_PLL_ON</span><span class="p">;</span>
     <span class="n">RCC_OscInitStruct</span><span class="p">.</span><span class="n">PLL</span><span class="p">.</span><span class="n">PLLSource</span>       <span class="o">=</span> <span class="n">RCC_PLLSOURCE_HSI</span><span class="p">;</span>
-    <span class="n">RCC_OscInitStruct</span><span class="p">.</span><span class="n">PLL</span><span class="p">.</span><span class="n">PLLM</span>            <span class="o">=</span> <span class="n">RCC_PLLM_DIV4</span><span class="p">;</span>
-    <span class="n">RCC_OscInitStruct</span><span class="p">.</span><span class="n">PLL</span><span class="p">.</span><span class="n">PLLN</span>            <span class="o">=</span> <span class="mi">85</span><span class="p">;</span>
+    <span class="n">RCC_OscInitStruct</span><span class="p">.</span><span class="n">PLL</span><span class="p">.</span><span class="n">PLLM</span>            <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+    <span class="n">RCC_OscInitStruct</span><span class="p">.</span><span class="n">PLL</span><span class="p">.</span><span class="n">PLLN</span>            <span class="o">=</span> <span class="mi">180</span><span class="p">;</span>
     <span class="n">RCC_OscInitStruct</span><span class="p">.</span><span class="n">PLL</span><span class="p">.</span><span class="n">PLLP</span>            <span class="o">=</span> <span class="n">RCC_PLLP_DIV2</span><span class="p">;</span>
-    <span class="n">RCC_OscInitStruct</span><span class="p">.</span><span class="n">PLL</span><span class="p">.</span><span class="n">PLLQ</span>            <span class="o">=</span> <span class="n">RCC_PLLQ_DIV2</span><span class="p">;</span>
-    <span class="n">RCC_OscInitStruct</span><span class="p">.</span><span class="n">PLL</span><span class="p">.</span><span class="n">PLLR</span>            <span class="o">=</span> <span class="n">RCC_PLLR_DIV2</span><span class="p">;</span>
+    <span class="n">RCC_OscInitStruct</span><span class="p">.</span><span class="n">PLL</span><span class="p">.</span><span class="n">PLLQ</span>            <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="n">RCC_OscInitStruct</span><span class="p">.</span><span class="n">PLL</span><span class="p">.</span><span class="n">PLLR</span>            <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">HAL_RCC_OscConfig</span><span class="p">(</span><span class="o">&amp;</span><span class="n">RCC_OscInitStruct</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Error_Handler</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">HAL_PWREx_EnableOverDrive</span><span class="p">()</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">Error_Handler</span><span class="p">();</span>
     <span class="p">}</span>
     <span class="n">RCC_ClkInitStruct</span><span class="p">.</span><span class="n">ClockType</span> <span class="o">=</span> <span class="n">RCC_CLOCKTYPE_HCLK</span> <span class="o">|</span> <span class="n">RCC_CLOCKTYPE_SYSCLK</span> <span class="o">|</span> <span class="n">RCC_CLOCKTYPE_PCLK1</span> <span class="o">|</span> <span class="n">RCC_CLOCKTYPE_PCLK2</span><span class="p">;</span>
     <span class="n">RCC_ClkInitStruct</span><span class="p">.</span><span class="n">SYSCLKSource</span>   <span class="o">=</span> <span class="n">RCC_SYSCLKSOURCE_PLLCLK</span><span class="p">;</span>
     <span class="n">RCC_ClkInitStruct</span><span class="p">.</span><span class="n">AHBCLKDivider</span>  <span class="o">=</span> <span class="n">RCC_SYSCLK_DIV1</span><span class="p">;</span>
-    <span class="n">RCC_ClkInitStruct</span><span class="p">.</span><span class="n">APB1CLKDivider</span> <span class="o">=</span> <span class="n">RCC_HCLK_DIV1</span><span class="p">;</span>
-    <span class="n">RCC_ClkInitStruct</span><span class="p">.</span><span class="n">APB2CLKDivider</span> <span class="o">=</span> <span class="n">RCC_HCLK_DIV1</span><span class="p">;</span>
+    <span class="n">RCC_ClkInitStruct</span><span class="p">.</span><span class="n">APB1CLKDivider</span> <span class="o">=</span> <span class="n">RCC_HCLK_DIV4</span><span class="p">;</span>
+    <span class="n">RCC_ClkInitStruct</span><span class="p">.</span><span class="n">APB2CLKDivider</span> <span class="o">=</span> <span class="n">RCC_HCLK_DIV2</span><span class="p">;</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="n">HAL_RCC_ClockConfig</span><span class="p">(</span><span class="o">&amp;</span><span class="n">RCC_ClkInitStruct</span><span class="p">,</span> <span class="n">FLASH_LATENCY_4</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">HAL_RCC_ClockConfig</span><span class="p">(</span><span class="o">&amp;</span><span class="n">RCC_ClkInitStruct</span><span class="p">,</span> <span class="n">FLASH_LATENCY_5</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">Error_Handler</span><span class="p">();</span>
     <span class="p">}</span>
-    <span class="n">PeriphClkInit</span><span class="p">.</span><span class="n">PeriphClockSelection</span> <span class="o">=</span> <span class="n">RCC_PERIPHCLK_USART2</span> <span class="o">|</span> <span class="n">RCC_PERIPHCLK_USART3</span> <span class="o">|</span> <span class="n">RCC_PERIPHCLK_FDCAN</span><span class="p">;</span>
-    <span class="n">PeriphClkInit</span><span class="p">.</span><span class="n">Usart2ClockSelection</span> <span class="o">=</span> <span class="n">RCC_USART2CLKSOURCE_PCLK1</span><span class="p">;</span>
-    <span class="n">PeriphClkInit</span><span class="p">.</span><span class="n">Usart3ClockSelection</span> <span class="o">=</span> <span class="n">RCC_USART3CLKSOURCE_PCLK1</span><span class="p">;</span>
-    <span class="n">PeriphClkInit</span><span class="p">.</span><span class="n">FdcanClockSelection</span>  <span class="o">=</span> <span class="n">RCC_FDCANCLKSOURCE_PLL</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">HAL_RCCEx_PeriphCLKConfig</span><span class="p">(</span><span class="o">&amp;</span><span class="n">PeriphClkInit</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Error_Handler</span><span class="p">();</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="k">static</span> <span class="kt">void</span> <span class="nf">MX_NVIC_Init</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
-    <span class="cm">/* FDCAN1_IT0_IRQn interrupt configuration */</span>
-    <span class="n">HAL_NVIC_SetPriority</span><span class="p">(</span><span class="n">FDCAN1_IT0_IRQn</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-    <span class="n">HAL_NVIC_EnableIRQ</span><span class="p">(</span><span class="n">FDCAN1_IT0_IRQn</span><span class="p">);</span>
-    <span class="cm">/* FDCAN1_IT1_IRQn interrupt configuration */</span>
-    <span class="n">HAL_NVIC_SetPriority</span><span class="p">(</span><span class="n">FDCAN1_IT1_IRQn</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-    <span class="n">HAL_NVIC_EnableIRQ</span><span class="p">(</span><span class="n">FDCAN1_IT1_IRQn</span><span class="p">);</span>
-    <span class="cm">/* USART2_IRQn interrupt configuration */</span>
-    <span class="n">HAL_NVIC_SetPriority</span><span class="p">(</span><span class="n">USART2_IRQn</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-    <span class="n">HAL_NVIC_EnableIRQ</span><span class="p">(</span><span class="n">USART2_IRQn</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="cm">/* USER CODE BEGIN 4 */</span>

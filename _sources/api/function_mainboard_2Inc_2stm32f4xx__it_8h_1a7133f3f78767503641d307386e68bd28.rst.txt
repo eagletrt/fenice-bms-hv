@@ -1,0 +1,13 @@
+.. _exhale_function_mainboard_2Inc_2stm32f4xx__it_8h_1a7133f3f78767503641d307386e68bd28:
+
+Function TIM4_IRQHandler(void)
+==============================
+
+- Defined in :ref:`file_mainboard_Inc_stm32f4xx_it.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: TIM4_IRQHandler(void)

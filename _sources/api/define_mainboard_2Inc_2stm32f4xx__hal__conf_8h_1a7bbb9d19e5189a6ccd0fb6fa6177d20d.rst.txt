@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2stm32f4xx__hal__conf_8h_1a7bbb9d19e5189a6ccd0fb6fa6177d20d:
+
+Define LSE_VALUE
+================
+
+- Defined in :ref:`file_mainboard_Inc_stm32f4xx_hal_conf.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: LSE_VALUE

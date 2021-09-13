@@ -46,7 +46,7 @@ Includes
 
 - ``bms_fsm.h`` (:ref:`file_mainboard_Inc_bms_fsm.h`)
 
-- ``can.h`` (:ref:`file_mainboard_Inc_peripherals_can.h`)
+- ``can_comm.h`` (:ref:`file_mainboard_Inc_peripherals_can_comm.h`)
 
 - ``inttypes.h``
 
@@ -77,13 +77,11 @@ Functions
 ---------
 
 
-- :ref:`exhale_function_super__fsm_8c_1a0f3dac413e88dd4c4b4eed7596b74374`
+- :ref:`exhale_function_super__fsm_8c_1afe0a6bb0b1683b48450c76e1eedb2146`
 
 - :ref:`exhale_function_super__fsm_8c_1a6c5eca8599b582f67db9f523a2c3f550`
 
 - :ref:`exhale_function_super__fsm_8c_1a7b59b0191d1ef2a7d789bdd43705f289`
 
-- :ref:`exhale_function_super__fsm_8c_1ac15eb145b2bff81e846e3fef9c360bd4`
-
-- :ref:`exhale_function_super__fsm_8c_1a75b444630231c9dc8aeaa085cb20d1e1`
+- :ref:`exhale_function_super__fsm_8c_1a3760361be841c8ff77fd1bb377aca49a`
 

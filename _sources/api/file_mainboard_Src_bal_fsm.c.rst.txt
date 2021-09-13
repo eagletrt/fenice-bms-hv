@@ -52,8 +52,6 @@ Includes
 
 - ``fenice_config.h`` (:ref:`file_mainboard_Inc_fenice_config.h`)
 
-- ``ltc6813_utils.h`` (:ref:`file_mainboard_Inc_peripherals_ltc6813_utils.h`)
-
 - ``pack.h`` (:ref:`file_mainboard_Inc_pack.h`)
 
 - ``spi.h`` (:ref:`file_mainboard_Inc_spi.h`)
@@ -82,15 +80,15 @@ Functions
 
 - :ref:`exhale_function_bal__fsm_8c_1adcc4bb671017dbefd48fb7af07d3f8aa`
 
-- :ref:`exhale_function_bal__fsm_8c_1af5f665c1a0f853dad6d3d340d7a38f41`
+- :ref:`exhale_function_bal__fsm_8c_1aafb9605440c9ff7cf89cde5c7a5baab3`
 
 - :ref:`exhale_function_bal__fsm_8c_1a9fda01425821f3075c4118c2eb829b34`
 
-- :ref:`exhale_function_bal__fsm_8c_1aee677c270cac8d79f4e206b80e37801f`
+- :ref:`exhale_function_bal__fsm_8c_1aaa344758906e6e8cab87b9cda7776c4e`
 
 - :ref:`exhale_function_bal__fsm_8c_1a63e27fddad7e518a4721d2038977f3ff`
 
-- :ref:`exhale_function_bal__fsm_8c_1ac25ddc0a68470cf90b87b09fae6b46c7`
+- :ref:`exhale_function_bal__fsm_8c_1ac136fcb9c02e11caaf10b1982794b7af`
 
 
 Defines

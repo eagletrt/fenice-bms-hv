@@ -177,14 +177,15 @@
 
 <span class="cm">/* USER CODE END Includes */</span>
 
-<span class="k">extern</span> <span class="n">UART_HandleTypeDef</span> <span class="n">huart2</span><span class="p">;</span>
+<span class="k">extern</span> <span class="n">UART_HandleTypeDef</span> <span class="n">huart1</span><span class="p">;</span>
 <span class="k">extern</span> <span class="n">UART_HandleTypeDef</span> <span class="n">huart3</span><span class="p">;</span>
 
 <span class="cm">/* USER CODE BEGIN Private defines */</span>
-
+<span class="cp">#define CLI_UART    huart1</span>
+<span class="cp">#define SI8900_UART huart3</span>
 <span class="cm">/* USER CODE END Private defines */</span>
 
-<span class="kt">void</span> <span class="nf">MX_USART2_UART_Init</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">MX_USART1_UART_Init</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 <span class="kt">void</span> <span class="nf">MX_USART3_UART_Init</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 
 <span class="cm">/* USER CODE BEGIN Prototypes */</span>

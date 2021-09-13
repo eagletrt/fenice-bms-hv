@@ -1,0 +1,13 @@
+.. _exhale_function_mainboard_2Inc_2stm32f4xx__it_8h_1a2bffc10d5bd4106753b7c30e86903bea:
+
+Function HardFault_Handler(void)
+================================
+
+- Defined in :ref:`file_mainboard_Inc_stm32f4xx_it.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: HardFault_Handler(void)

@@ -1,0 +1,13 @@
+.. _exhale_variable_mainboard_2Src_2stm32f4xx__it_8c_1ab77168d14df04ccca5d48612ee21ced8:
+
+Variable hcan2
+==============
+
+- Defined in :ref:`file_mainboard_Src_stm32f4xx_it.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: hcan2

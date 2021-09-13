@@ -1,0 +1,13 @@
+.. _exhale_define_can_8h_1a37bba7b621bea04a5bd427108390798c:
+
+Define CAR_CAN
+==============
+
+- Defined in :ref:`file_mainboard_Inc_can.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CAR_CAN

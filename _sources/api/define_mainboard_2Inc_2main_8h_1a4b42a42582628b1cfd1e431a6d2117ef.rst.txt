@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2main_8h_1a4b42a42582628b1cfd1e431a6d2117ef:
+
+Define SI8900_RX_Pin
+====================
+
+- Defined in :ref:`file_mainboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: SI8900_RX_Pin

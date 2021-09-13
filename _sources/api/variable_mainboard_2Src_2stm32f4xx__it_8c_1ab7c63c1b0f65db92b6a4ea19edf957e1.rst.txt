@@ -1,0 +1,13 @@
+.. _exhale_variable_mainboard_2Src_2stm32f4xx__it_8c_1ab7c63c1b0f65db92b6a4ea19edf957e1:
+
+Variable huart3
+===============
+
+- Defined in :ref:`file_mainboard_Src_stm32f4xx_it.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: huart3

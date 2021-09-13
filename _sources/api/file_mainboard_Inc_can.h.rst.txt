@@ -1,0 +1,90 @@
+
+.. _file_mainboard_Inc_can.h:
+
+File can.h
+==========
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Inc>` (``mainboard/Inc``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+This file contains all the function prototypes for the :ref:`file_mainboard_Src_can.c` file. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Inc/can.h``)
+------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Inc_can.h.rst
+
+
+
+Detailed Description
+--------------------
+
+
+
+ Copyright (c) 2021 STMicroelectronics. All rights reserved.
+
+
+This software component is licensed by ST under BSD 3-Clause license, the "License"; You may not use this file except in compliance with the License. You may obtain a copy of the License at: opensource.org/licenses/BSD-3-Clause 
+
+
+
+
+Includes
+--------
+
+
+- ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_mainboard_Inc_peripherals_can_comm.h`
+
+- :ref:`file_mainboard_Src_can.c`
+
+- :ref:`file_mainboard_Src_main.c`
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_can_8h_1a030a62a0956ab83394eb8354a0e97902`
+
+- :ref:`exhale_function_can_8h_1a1ee5cd592134235b6c07f676784d47c3`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_can_8h_1a7aa8b81c81dc7e1fb2bd0d6e88229bb4`
+
+- :ref:`exhale_define_can_8h_1a37bba7b621bea04a5bd427108390798c`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_can_8h_1a1618d731d18d69e906e8a357b7cd3c8d`
+
+- :ref:`exhale_variable_can_8h_1ab77168d14df04ccca5d48612ee21ced8`
+

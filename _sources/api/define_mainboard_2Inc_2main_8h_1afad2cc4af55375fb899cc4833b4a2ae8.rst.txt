@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2main_8h_1afad2cc4af55375fb899cc4833b4a2ae8:
+
+Define IMD_PWM_Pin
+==================
+
+- Defined in :ref:`file_mainboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: IMD_PWM_Pin

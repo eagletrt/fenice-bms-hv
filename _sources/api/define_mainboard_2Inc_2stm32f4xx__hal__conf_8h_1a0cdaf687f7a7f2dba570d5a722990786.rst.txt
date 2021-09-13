@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2stm32f4xx__hal__conf_8h_1a0cdaf687f7a7f2dba570d5a722990786:
+
+Define ETH_RX_BUF_SIZE
+======================
+
+- Defined in :ref:`file_mainboard_Inc_stm32f4xx_hal_conf.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: ETH_RX_BUF_SIZE

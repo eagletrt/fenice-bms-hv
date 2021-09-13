@@ -1,0 +1,13 @@
+.. _exhale_define_usart_8h_1aabc6d6fbcdd3e068111445b8ca016944:
+
+Define SI8900_UART
+==================
+
+- Defined in :ref:`file_mainboard_Inc_usart.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: SI8900_UART

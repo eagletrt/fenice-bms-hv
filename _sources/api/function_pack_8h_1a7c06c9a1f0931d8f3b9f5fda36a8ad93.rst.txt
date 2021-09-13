@@ -1,0 +1,13 @@
+.. _exhale_function_pack_8h_1a7c06c9a1f0931d8f3b9f5fda36a8ad93:
+
+Function pack_update_voltages(UART_HandleTypeDef \*)
+====================================================
+
+- Defined in :ref:`file_mainboard_Inc_pack.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: pack_update_voltages(UART_HandleTypeDef *)

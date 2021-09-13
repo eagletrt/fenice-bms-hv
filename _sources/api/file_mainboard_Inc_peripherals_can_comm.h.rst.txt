@@ -1,0 +1,77 @@
+
+.. _file_mainboard_Inc_peripherals_can_comm.h:
+
+File can_comm.h
+===============
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Inc_peripherals>` (``mainboard/Inc/peripherals``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+CAN bus serialization middleware. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Inc/peripherals/can_comm.h``)
+-----------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Inc_peripherals_can_comm.h.rst
+
+
+
+Detailed Description
+--------------------
+
+Mar 1, 2021 
+
+Matteo Bonora [matteo.bonora@studenti.unitn.it] 
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``../../Primary/c/Primary.h``
+
+- ``../Primary/ids.h``
+
+- ``can.h`` (:ref:`file_mainboard_Inc_can.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_mainboard_Src_bms_fsm.c`
+
+- :ref:`file_mainboard_Src_main.c`
+
+- :ref:`file_mainboard_Src_peripherals_can_comm.c`
+
+- :ref:`file_mainboard_Src_super_fsm.c`
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_can__comm_8h_1a1619e4e36842ab2508b1a3c18cb60ae3`
+
+- :ref:`exhale_function_can__comm_8h_1aae59d8aa22ab4a13257a2260699cb7cd`
+

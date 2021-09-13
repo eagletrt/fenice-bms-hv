@@ -65,6 +65,16 @@ Files
 .. toctree::
    :maxdepth: 5
 
+   file_mainboard_Src_adc.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Inc_adc.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
    file_mainboard_Src_bal.c.rst
 
 .. toctree::
@@ -95,12 +105,22 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file_mainboard_Src_peripherals_can.c.rst
+   file_mainboard_Src_can.c.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_mainboard_Inc_peripherals_can.h.rst
+   file_mainboard_Inc_can.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Src_peripherals_can_comm.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Inc_peripherals_can_comm.h.rst
 
 .. toctree::
    :maxdepth: 5
@@ -145,16 +165,6 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file_mainboard_Src_fdcan.c.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file_mainboard_Inc_fdcan.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file_mainboard_Src_feedback.c.rst
 
 .. toctree::
@@ -185,26 +195,6 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file_mainboard_Src_peripherals_ltc6813.c.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file_mainboard_Inc_peripherals_ltc6813.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file_mainboard_Src_peripherals_ltc6813_utils.c.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file_mainboard_Inc_peripherals_ltc6813_utils.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file_mainboard_Src_main.c.rst
 
 .. toctree::
@@ -221,6 +211,11 @@ Files
    :maxdepth: 5
 
    file_cellboard_Inc_main.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Inc_mainboard_config.h.rst
 
 .. toctree::
    :maxdepth: 5
@@ -275,7 +270,17 @@ Files
 .. toctree::
    :maxdepth: 5
 
+   file_mainboard_Inc_stm32f4xx_hal_conf.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
    file_cellboard_Inc_stm32f4xx_hal_conf.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Src_stm32f4xx_hal_msp.c.rst
 
 .. toctree::
    :maxdepth: 5
@@ -285,32 +290,22 @@ Files
 .. toctree::
    :maxdepth: 5
 
+   file_mainboard_Src_stm32f4xx_it.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
    file_cellboard_Src_stm32f4xx_it.c.rst
 
 .. toctree::
    :maxdepth: 5
 
+   file_mainboard_Inc_stm32f4xx_it.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
    file_cellboard_Inc_stm32f4xx_it.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file_mainboard_Inc_stm32g4xx_hal_conf.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file_mainboard_Src_stm32g4xx_hal_msp.c.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file_mainboard_Src_stm32g4xx_it.c.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file_mainboard_Inc_stm32g4xx_it.h.rst
 
 .. toctree::
    :maxdepth: 5
@@ -325,12 +320,12 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file_cellboard_Src_system_stm32f4xx.c.rst
+   file_mainboard_Src_system_stm32f4xx.c.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_mainboard_Src_system_stm32g4xx.c.rst
+   file_cellboard_Src_system_stm32f4xx.c.rst
 
 .. toctree::
    :maxdepth: 5

@@ -1,0 +1,13 @@
+.. _exhale_define_cellboard_2Inc_2stm32f4xx__hal__conf_8h_1ac3dd74314ed62ac8575e2f9f48b3ac48:
+
+Define HAL_RCC_MODULE_ENABLED
+=============================
+
+- Defined in :ref:`file_cellboard_Inc_stm32f4xx_hal_conf.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: HAL_RCC_MODULE_ENABLED

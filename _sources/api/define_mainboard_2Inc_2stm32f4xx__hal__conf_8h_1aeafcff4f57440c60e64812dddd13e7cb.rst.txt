@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2stm32f4xx__hal__conf_8h_1aeafcff4f57440c60e64812dddd13e7cb:
+
+Define HSE_VALUE
+================
+
+- Defined in :ref:`file_mainboard_Inc_stm32f4xx_hal_conf.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: HSE_VALUE

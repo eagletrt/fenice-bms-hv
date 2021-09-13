@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2main_8h_1aa32574f5a52ac3d47aefda544d8f9100:
+
+Define AIRM_OFF_Pin
+===================
+
+- Defined in :ref:`file_mainboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: AIRM_OFF_Pin

@@ -179,11 +179,11 @@
 <span class="cp">    }</span>
 
 <span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span>
-    <span class="n">ERROR_LTC_PEC</span><span class="p">,</span>
-
+    <span class="n">ERROR_CELL_LOW_VOLTAGE</span><span class="p">,</span>
     <span class="n">ERROR_CELL_UNDER_VOLTAGE</span><span class="p">,</span>
     <span class="n">ERROR_CELL_OVER_VOLTAGE</span><span class="p">,</span>
     <span class="n">ERROR_CELL_OVER_TEMPERATURE</span><span class="p">,</span>
+    <span class="n">ERROR_CELL_HIGH_TEMPERATURE</span><span class="p">,</span>
 
     <span class="n">ERROR_OVER_CURRENT</span><span class="p">,</span>
     <span class="n">ERROR_CAN</span><span class="p">,</span>
@@ -192,14 +192,17 @@
     <span class="n">ERROR_ADC_TIMEOUT</span><span class="p">,</span>
     <span class="n">ERROR_INT_VOLTAGE_MISMATCH</span><span class="p">,</span>
 
+    <span class="n">ERROR_CELLBOARD_COMM</span><span class="p">,</span>
+    <span class="n">ERROR_CELLBOARD_INTERNAL</span><span class="p">,</span>
+
     <span class="n">ERROR_FEEDBACK</span><span class="p">,</span>
 
     <span class="n">ERROR_NUM_ERRORS</span>
-<span class="p">}</span> <span class="n">error_id</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">__attribute__</span><span class="p">((</span><span class="n">__packed__</span><span class="p">))</span> <span class="n">error_id</span><span class="p">;</span>
 
-<span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span> <span class="n">SOFT</span> <span class="o">=</span> <span class="n">UINT32_MAX</span><span class="p">,</span> <span class="n">SHORT</span> <span class="o">=</span> <span class="mi">500</span><span class="p">,</span> <span class="n">REGULAR</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span> <span class="n">INSTANT</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">}</span> <span class="n">error_timeout</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span> <span class="n">SOFT</span> <span class="o">=</span> <span class="n">UINT32_MAX</span><span class="p">,</span> <span class="n">SHORT</span> <span class="o">=</span> <span class="mi">500</span><span class="p">,</span> <span class="n">REGULAR</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span> <span class="n">INSTANT</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">}</span> <span class="n">__attribute__</span><span class="p">((</span><span class="n">__packed__</span><span class="p">))</span> <span class="n">error_timeout</span><span class="p">;</span>
 
-<span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span> <span class="n">STATE_WARNING</span><span class="p">,</span> <span class="n">STATE_FATAL</span> <span class="p">}</span> <span class="n">error_state</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span> <span class="n">STATE_WARNING</span><span class="p">,</span> <span class="n">STATE_FATAL</span> <span class="p">}</span> <span class="n">__attribute__</span><span class="p">((</span><span class="n">__packed__</span><span class="p">))</span> <span class="n">error_state</span><span class="p">;</span>
 
 <span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
     <span class="n">error_id</span> <span class="n">id</span><span class="p">;</span>    <span class="cm">/* Defines the type of error */</span>
@@ -218,7 +221,8 @@
 
 <span class="kt">bool</span> <span class="nf">error_unset</span><span class="p">(</span><span class="n">error_id</span> <span class="n">type</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">offset</span><span class="p">);</span>
 
-<span class="kt">uint8_t</span> <span class="nf">error_count</span><span class="p">();</span>
+<span class="kt">size_t</span> <span class="nf">error_get_fatal</span><span class="p">();</span>
+<span class="kt">size_t</span> <span class="nf">error_count</span><span class="p">();</span>
 <span class="kt">void</span> <span class="nf">error_dump</span><span class="p">(</span><span class="n">error_t</span> <span class="n">errors</span><span class="p">[]);</span>
 <span class="kt">bool</span> <span class="nf">compare_timeouts</span><span class="p">(</span><span class="n">error_t</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">error_t</span> <span class="o">*</span><span class="n">b</span><span class="p">);</span>
 

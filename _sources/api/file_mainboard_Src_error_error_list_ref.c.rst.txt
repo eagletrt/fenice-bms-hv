@@ -53,6 +53,10 @@ Variables
 
 - :ref:`exhale_variable_error__list__ref_8c_1a1392b89b1c872143f5a96002e3e5bc09`
 
+- :ref:`exhale_variable_error__list__ref_8c_1a3ceb17206b6e3981fe3114342123c1b4`
+
+- :ref:`exhale_variable_error__list__ref_8c_1a2bd297458226e83223e775b2b2aa0ea3`
+
 - :ref:`exhale_variable_error__list__ref_8c_1a329d72a571ef83719aeaf63d78359a6a`
 
 - :ref:`exhale_variable_error__list__ref_8c_1a8af44e0ba60a74354ed515cdc9fae7f2`
@@ -61,9 +65,13 @@ Variables
 
 - :ref:`exhale_variable_error__list__ref_8c_1a7cc811a5f4f4f648f8a52ad8faefa794`
 
+- :ref:`exhale_variable_error__list__ref_8c_1a87266af2696b97d75f01623aed20055d`
+
 - :ref:`exhale_variable_error__list__ref_8c_1ab759376ad0dea39889ea81b8090e41ab`
 
-- :ref:`exhale_variable_error__list__ref_8c_1ad6eb4aa93796659970eedf302cce80a8`
+- :ref:`exhale_variable_error__list__ref_8c_1a2d684cf34d56bca4673f2c38071fa8ad`
+
+- :ref:`exhale_variable_error__list__ref_8c_1adead5d2694de4e95a0e6ffdc66744366`
 
 - :ref:`exhale_variable_error__list__ref_8c_1ac55ace95496a528c1f751fc3baa4455e`
 

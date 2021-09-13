@@ -1,0 +1,71 @@
+
+.. _file_mainboard_Src_adc.c:
+
+File adc.c
+==========
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Src>` (``mainboard/Src``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+This file provides code for the configuration of the ADC instances. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Src/adc.c``)
+------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Src_adc.c.rst
+
+
+
+Detailed Description
+--------------------
+
+
+
+ Copyright (c) 2021 STMicroelectronics. All rights reserved.
+
+
+This software component is licensed by ST under BSD 3-Clause license, the "License"; You may not use this file except in compliance with the License. You may obtain a copy of the License at: opensource.org/licenses/BSD-3-Clause 
+
+
+
+
+Includes
+--------
+
+
+- ``adc.h`` (:ref:`file_mainboard_Inc_adc.h`)
+
+
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_adc_8c_1a3f61f2c2af0f122f81a87af8ad7b4360`
+
+- :ref:`exhale_function_adc_8c_1ac3139540667c403c5dfd37a99c610b1c`
+
+- :ref:`exhale_function_adc_8c_1acccd58aa70215a6b184ad242312ffd0c`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_adc_8c_1a22b804736f5648d52f639b2647d4ed13`
+

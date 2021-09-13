@@ -29,17 +29,19 @@ Includes
 --------
 
 
+- ``adc.h`` (:ref:`file_mainboard_Inc_adc.h`)
+
 - ``bal_fsm.h`` (:ref:`file_mainboard_Inc_bal_fsm.h`)
 
 - ``bms_fsm.h`` (:ref:`file_mainboard_Inc_bms_fsm.h`)
+
+- ``can.h`` (:ref:`file_mainboard_Inc_can.h`)
 
 - ``cli_bms.h`` (:ref:`file_mainboard_Inc_cli_bms.h`)
 
 - ``config.h`` (:ref:`file_mainboard_Inc_config.h`)
 
 - ``error/error.h`` (:ref:`file_mainboard_Inc_error_error.h`)
-
-- ``fdcan.h`` (:ref:`file_mainboard_Inc_fdcan.h`)
 
 - ``fenice_config.h`` (:ref:`file_mainboard_Inc_fenice_config.h`)
 
@@ -49,7 +51,7 @@ Includes
 
 - ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
 
-- ``peripherals/can.h`` (:ref:`file_mainboard_Inc_peripherals_can.h`)
+- ``peripherals/can_comm.h`` (:ref:`file_mainboard_Inc_peripherals_can_comm.h`)
 
 - ``si8900.h`` (:ref:`file_mainboard_Inc_peripherals_si8900.h`)
 
@@ -73,8 +75,6 @@ Functions
 - :ref:`exhale_function_mainboard_2Src_2main_8c_1a1730ffe1e560465665eb47d9264826f9`
 
 - :ref:`exhale_function_mainboard_2Src_2main_8c_1a840291bc02cba5474a4cb46a9b9566fe`
-
-- :ref:`exhale_function_mainboard_2Src_2main_8c_1a4990b1c13cc4573981034104cc9d0cb7`
 
 - :ref:`exhale_function_mainboard_2Src_2main_8c_1a70af21c671abfcc773614a9a4f63d920`
 

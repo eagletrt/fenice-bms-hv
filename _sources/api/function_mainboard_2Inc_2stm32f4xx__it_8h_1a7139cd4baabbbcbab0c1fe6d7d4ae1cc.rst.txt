@@ -1,0 +1,13 @@
+.. _exhale_function_mainboard_2Inc_2stm32f4xx__it_8h_1a7139cd4baabbbcbab0c1fe6d7d4ae1cc:
+
+Function USART1_IRQHandler(void)
+================================
+
+- Defined in :ref:`file_mainboard_Inc_stm32f4xx_it.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: USART1_IRQHandler(void)

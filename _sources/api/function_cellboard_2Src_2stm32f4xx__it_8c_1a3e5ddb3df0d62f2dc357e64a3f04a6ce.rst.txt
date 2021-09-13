@@ -1,0 +1,13 @@
+.. _exhale_function_cellboard_2Src_2stm32f4xx__it_8c_1a3e5ddb3df0d62f2dc357e64a3f04a6ce:
+
+Function SVC_Handler(void)
+==========================
+
+- Defined in :ref:`file_cellboard_Src_stm32f4xx_it.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: SVC_Handler(void)

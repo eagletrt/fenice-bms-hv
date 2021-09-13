@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2stm32f4xx__hal__conf_8h_1a86165f80d6078719ee0715afe13febf5:
+
+Define HAL_GPIO_MODULE_ENABLED
+==============================
+
+- Defined in :ref:`file_mainboard_Inc_stm32f4xx_hal_conf.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: HAL_GPIO_MODULE_ENABLED

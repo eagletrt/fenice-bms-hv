@@ -60,8 +60,6 @@ Functions
 
 - :ref:`exhale_function_spi_8c_1a8e1dadd744299fa6f8bca0e1bcbd2c00`
 
-- :ref:`exhale_function_spi_8c_1af81398f9775695df0b172367651ca3e6`
-
 - :ref:`exhale_function_spi_8c_1aea85daa666c03d85fd59edef711ebb08`
 
 - :ref:`exhale_function_spi_8c_1ad59b1470e3c09d41c88aecf7ae0ca806`
@@ -72,8 +70,6 @@ Functions
 Variables
 ---------
 
-
-- :ref:`exhale_variable_spi_8c_1a9c6222bae4d0328dd843ae099623b40b`
 
 - :ref:`exhale_variable_spi_8c_1ab9da65f935e805137e2eb4e18c5ab224`
 

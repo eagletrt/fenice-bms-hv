@@ -1,0 +1,635 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Program Listing for File stm32f4xx_hal_conf.h &mdash; Fenice BMS HV 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Fenice BMS HV
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Software</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Fenice BMS HV</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Program Listing for File stm32f4xx_hal_conf.h</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/api/program_listing_file_mainboard_Inc_stm32f4xx_hal_conf.h.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="program-listing-for-file-stm32f4xx-hal-conf-h">
+<span id="program-listing-file-mainboard-inc-stm32f4xx-hal-conf-h"></span><h1>Program Listing for File stm32f4xx_hal_conf.h<a class="headerlink" href="#program-listing-for-file-stm32f4xx-hal-conf-h" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_mainboard_Inc_stm32f4xx_hal_conf.h.html#file-mainboard-inc-stm32f4xx-hal-conf-h"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">mainboard/Inc/stm32f4xx_hal_conf.h</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/* Define to prevent recursive inclusion -------------------------------------*/</span>
+<span class="cp">#ifndef __STM32F4xx_HAL_CONF_H</span>
+<span class="cp">#define __STM32F4xx_HAL_CONF_H</span>
+
+<span class="cp">#ifdef __cplusplus</span>
+ <span class="k">extern</span> <span class="s">&quot;C&quot;</span> <span class="p">{</span>
+<span class="cp">#endif</span>
+
+<span class="cm">/* Exported types ------------------------------------------------------------*/</span>
+<span class="cm">/* Exported constants --------------------------------------------------------*/</span>
+
+<span class="cm">/* ########################## Module Selection ############################## */</span>
+<span class="cp">#define HAL_MODULE_ENABLED</span>
+
+  <span class="cp">#define HAL_ADC_MODULE_ENABLED</span>
+<span class="cm">/* #define HAL_CRYP_MODULE_ENABLED   */</span>
+<span class="cp">#define HAL_CAN_MODULE_ENABLED</span>
+<span class="cm">/* #define HAL_CRC_MODULE_ENABLED   */</span>
+<span class="cm">/* #define HAL_CAN_LEGACY_MODULE_ENABLED   */</span>
+<span class="cm">/* #define HAL_CRYP_MODULE_ENABLED   */</span>
+<span class="cm">/* #define HAL_DAC_MODULE_ENABLED   */</span>
+<span class="cm">/* #define HAL_DCMI_MODULE_ENABLED   */</span>
+<span class="cm">/* #define HAL_DMA2D_MODULE_ENABLED   */</span>
+<span class="cm">/* #define HAL_ETH_MODULE_ENABLED   */</span>
+<span class="cm">/* #define HAL_NAND_MODULE_ENABLED   */</span>
+<span class="cm">/* #define HAL_NOR_MODULE_ENABLED   */</span>
+<span class="cm">/* #define HAL_PCCARD_MODULE_ENABLED   */</span>
+<span class="cm">/* #define HAL_SRAM_MODULE_ENABLED   */</span>
+<span class="cm">/* #define HAL_SDRAM_MODULE_ENABLED   */</span>
+<span class="cm">/* #define HAL_HASH_MODULE_ENABLED   */</span>
+<span class="cm">/* #define HAL_I2C_MODULE_ENABLED   */</span>
+<span class="cm">/* #define HAL_I2S_MODULE_ENABLED   */</span>
+<span class="cm">/* #define HAL_IWDG_MODULE_ENABLED   */</span>
+<span class="cm">/* #define HAL_LTDC_MODULE_ENABLED   */</span>
+<span class="cm">/* #define HAL_RNG_MODULE_ENABLED   */</span>
+<span class="cm">/* #define HAL_RTC_MODULE_ENABLED   */</span>
+<span class="cm">/* #define HAL_SAI_MODULE_ENABLED   */</span>
+<span class="cm">/* #define HAL_SD_MODULE_ENABLED   */</span>
+<span class="cm">/* #define HAL_MMC_MODULE_ENABLED   */</span>
+<span class="cp">#define HAL_SPI_MODULE_ENABLED</span>
+<span class="cp">#define HAL_TIM_MODULE_ENABLED</span>
+<span class="cp">#define HAL_UART_MODULE_ENABLED</span>
+<span class="cm">/* #define HAL_USART_MODULE_ENABLED   */</span>
+<span class="cm">/* #define HAL_IRDA_MODULE_ENABLED   */</span>
+<span class="cm">/* #define HAL_SMARTCARD_MODULE_ENABLED   */</span>
+<span class="cm">/* #define HAL_SMBUS_MODULE_ENABLED   */</span>
+<span class="cm">/* #define HAL_WWDG_MODULE_ENABLED   */</span>
+<span class="cm">/* #define HAL_PCD_MODULE_ENABLED   */</span>
+<span class="cm">/* #define HAL_HCD_MODULE_ENABLED   */</span>
+<span class="cm">/* #define HAL_DSI_MODULE_ENABLED   */</span>
+<span class="cm">/* #define HAL_QSPI_MODULE_ENABLED   */</span>
+<span class="cm">/* #define HAL_QSPI_MODULE_ENABLED   */</span>
+<span class="cm">/* #define HAL_CEC_MODULE_ENABLED   */</span>
+<span class="cm">/* #define HAL_FMPI2C_MODULE_ENABLED   */</span>
+<span class="cm">/* #define HAL_FMPSMBUS_MODULE_ENABLED   */</span>
+<span class="cm">/* #define HAL_SPDIFRX_MODULE_ENABLED   */</span>
+<span class="cm">/* #define HAL_DFSDM_MODULE_ENABLED   */</span>
+<span class="cm">/* #define HAL_LPTIM_MODULE_ENABLED   */</span>
+<span class="cp">#define HAL_GPIO_MODULE_ENABLED</span>
+<span class="cp">#define HAL_EXTI_MODULE_ENABLED</span>
+<span class="cp">#define HAL_DMA_MODULE_ENABLED</span>
+<span class="cp">#define HAL_RCC_MODULE_ENABLED</span>
+<span class="cp">#define HAL_FLASH_MODULE_ENABLED</span>
+<span class="cp">#define HAL_PWR_MODULE_ENABLED</span>
+<span class="cp">#define HAL_CORTEX_MODULE_ENABLED</span>
+
+<span class="cm">/* ########################## HSE/HSI Values adaptation ##################### */</span>
+<span class="cp">#if !defined  (HSE_VALUE)</span>
+  <span class="cp">#define HSE_VALUE    25000000U</span>
+<span class="cp">#endif </span><span class="cm">/* HSE_VALUE */</span><span class="cp"></span>
+
+<span class="cp">#if !defined  (HSE_STARTUP_TIMEOUT)</span>
+  <span class="cp">#define HSE_STARTUP_TIMEOUT    100U</span>
+<span class="cp">#endif </span><span class="cm">/* HSE_STARTUP_TIMEOUT */</span><span class="cp"></span>
+
+<span class="cp">#if !defined  (HSI_VALUE)</span>
+  <span class="cp">#define HSI_VALUE    ((uint32_t)16000000U)</span>
+<span class="cp">#endif </span><span class="cm">/* HSI_VALUE */</span><span class="cp"></span>
+
+<span class="cp">#if !defined  (LSI_VALUE)</span>
+ <span class="cp">#define LSI_VALUE  32000U</span>
+<span class="cp">#endif </span><span class="cm">/* LSI_VALUE */</span><span class="cp"></span>
+<span class="cp">#if !defined  (LSE_VALUE)</span>
+ <span class="cp">#define LSE_VALUE  32768U</span>
+<span class="cp">#endif </span><span class="cm">/* LSE_VALUE */</span><span class="cp"></span>
+
+<span class="cp">#if !defined  (LSE_STARTUP_TIMEOUT)</span>
+  <span class="cp">#define LSE_STARTUP_TIMEOUT    5000U</span>
+<span class="cp">#endif </span><span class="cm">/* LSE_STARTUP_TIMEOUT */</span><span class="cp"></span>
+
+<span class="cp">#if !defined  (EXTERNAL_CLOCK_VALUE)</span>
+  <span class="cp">#define EXTERNAL_CLOCK_VALUE    12288000U</span>
+<span class="cp">#endif </span><span class="cm">/* EXTERNAL_CLOCK_VALUE */</span><span class="cp"></span>
+
+<span class="cm">/* Tip: To avoid modifying this file each time you need to use different HSE,</span>
+<span class="cm">   ===  you can define the HSE value in your toolchain compiler preprocessor. */</span>
+
+<span class="cm">/* ########################### System Configuration ######################### */</span>
+<span class="cp">#define  VDD_VALUE            3300U</span>
+<span class="cp">#define  TICK_INT_PRIORITY            0U</span>
+<span class="cp">#define  USE_RTOS                     0U</span>
+<span class="cp">#define  PREFETCH_ENABLE              1U</span>
+<span class="cp">#define  INSTRUCTION_CACHE_ENABLE     1U</span>
+<span class="cp">#define  DATA_CACHE_ENABLE            1U</span>
+
+<span class="cp">#define  USE_HAL_ADC_REGISTER_CALLBACKS         0U </span><span class="cm">/* ADC register callback disabled       */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_CAN_REGISTER_CALLBACKS         0U </span><span class="cm">/* CAN register callback disabled       */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_CEC_REGISTER_CALLBACKS         0U </span><span class="cm">/* CEC register callback disabled       */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_CRYP_REGISTER_CALLBACKS        0U </span><span class="cm">/* CRYP register callback disabled      */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_DAC_REGISTER_CALLBACKS         0U </span><span class="cm">/* DAC register callback disabled       */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_DCMI_REGISTER_CALLBACKS        0U </span><span class="cm">/* DCMI register callback disabled      */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_DFSDM_REGISTER_CALLBACKS       0U </span><span class="cm">/* DFSDM register callback disabled     */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_DMA2D_REGISTER_CALLBACKS       0U </span><span class="cm">/* DMA2D register callback disabled     */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_DSI_REGISTER_CALLBACKS         0U </span><span class="cm">/* DSI register callback disabled       */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_ETH_REGISTER_CALLBACKS         0U </span><span class="cm">/* ETH register callback disabled       */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_HASH_REGISTER_CALLBACKS        0U </span><span class="cm">/* HASH register callback disabled      */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_HCD_REGISTER_CALLBACKS         0U </span><span class="cm">/* HCD register callback disabled       */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_I2C_REGISTER_CALLBACKS         0U </span><span class="cm">/* I2C register callback disabled       */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_FMPI2C_REGISTER_CALLBACKS      0U </span><span class="cm">/* FMPI2C register callback disabled    */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_FMPSMBUS_REGISTER_CALLBACKS    0U </span><span class="cm">/* FMPSMBUS register callback disabled  */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_I2S_REGISTER_CALLBACKS         0U </span><span class="cm">/* I2S register callback disabled       */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_IRDA_REGISTER_CALLBACKS        0U </span><span class="cm">/* IRDA register callback disabled      */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_LPTIM_REGISTER_CALLBACKS       0U </span><span class="cm">/* LPTIM register callback disabled     */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_LTDC_REGISTER_CALLBACKS        0U </span><span class="cm">/* LTDC register callback disabled      */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_MMC_REGISTER_CALLBACKS         0U </span><span class="cm">/* MMC register callback disabled       */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_NAND_REGISTER_CALLBACKS        0U </span><span class="cm">/* NAND register callback disabled      */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_NOR_REGISTER_CALLBACKS         0U </span><span class="cm">/* NOR register callback disabled       */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_PCCARD_REGISTER_CALLBACKS      0U </span><span class="cm">/* PCCARD register callback disabled    */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_PCD_REGISTER_CALLBACKS         0U </span><span class="cm">/* PCD register callback disabled       */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_QSPI_REGISTER_CALLBACKS        0U </span><span class="cm">/* QSPI register callback disabled      */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_RNG_REGISTER_CALLBACKS         0U </span><span class="cm">/* RNG register callback disabled       */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_RTC_REGISTER_CALLBACKS         0U </span><span class="cm">/* RTC register callback disabled       */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_SAI_REGISTER_CALLBACKS         0U </span><span class="cm">/* SAI register callback disabled       */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_SD_REGISTER_CALLBACKS          0U </span><span class="cm">/* SD register callback disabled        */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_SMARTCARD_REGISTER_CALLBACKS   0U </span><span class="cm">/* SMARTCARD register callback disabled */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_SDRAM_REGISTER_CALLBACKS       0U </span><span class="cm">/* SDRAM register callback disabled     */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_SRAM_REGISTER_CALLBACKS        0U </span><span class="cm">/* SRAM register callback disabled      */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_SPDIFRX_REGISTER_CALLBACKS     0U </span><span class="cm">/* SPDIFRX register callback disabled   */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_SMBUS_REGISTER_CALLBACKS       0U </span><span class="cm">/* SMBUS register callback disabled     */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_SPI_REGISTER_CALLBACKS         0U </span><span class="cm">/* SPI register callback disabled       */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_TIM_REGISTER_CALLBACKS         0U </span><span class="cm">/* TIM register callback disabled       */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_UART_REGISTER_CALLBACKS        0U </span><span class="cm">/* UART register callback disabled      */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_USART_REGISTER_CALLBACKS       0U </span><span class="cm">/* USART register callback disabled     */</span><span class="cp"></span>
+<span class="cp">#define  USE_HAL_WWDG_REGISTER_CALLBACKS        0U </span><span class="cm">/* WWDG register callback disabled      */</span><span class="cp"></span>
+
+<span class="cm">/* ########################## Assert Selection ############################## */</span>
+<span class="cm">/* #define USE_FULL_ASSERT    1U */</span>
+
+<span class="cm">/* ################## Ethernet peripheral configuration ##################### */</span>
+
+<span class="cm">/* Section 1 : Ethernet peripheral configuration */</span>
+
+<span class="cm">/* MAC ADDRESS: MAC_ADDR0:MAC_ADDR1:MAC_ADDR2:MAC_ADDR3:MAC_ADDR4:MAC_ADDR5 */</span>
+<span class="cp">#define MAC_ADDR0   2U</span>
+<span class="cp">#define MAC_ADDR1   0U</span>
+<span class="cp">#define MAC_ADDR2   0U</span>
+<span class="cp">#define MAC_ADDR3   0U</span>
+<span class="cp">#define MAC_ADDR4   0U</span>
+<span class="cp">#define MAC_ADDR5   0U</span>
+
+<span class="cm">/* Definition of the Ethernet driver buffers size and count */</span>
+<span class="cp">#define ETH_RX_BUF_SIZE                ETH_MAX_PACKET_SIZE </span><span class="cm">/* buffer size for receive               */</span><span class="cp"></span>
+<span class="cp">#define ETH_TX_BUF_SIZE                ETH_MAX_PACKET_SIZE </span><span class="cm">/* buffer size for transmit              */</span><span class="cp"></span>
+<span class="cp">#define ETH_RXBUFNB                    4U       </span><span class="cm">/* 4 Rx buffers of size ETH_RX_BUF_SIZE  */</span><span class="cp"></span>
+<span class="cp">#define ETH_TXBUFNB                    4U       </span><span class="cm">/* 4 Tx buffers of size ETH_TX_BUF_SIZE  */</span><span class="cp"></span>
+
+<span class="cm">/* Section 2: PHY configuration section */</span>
+
+<span class="cm">/* DP83848_PHY_ADDRESS Address*/</span>
+<span class="cp">#define DP83848_PHY_ADDRESS           0x01U</span>
+<span class="cm">/* PHY Reset delay these values are based on a 1 ms Systick interrupt*/</span>
+<span class="cp">#define PHY_RESET_DELAY                 0x000000FFU</span>
+<span class="cm">/* PHY Configuration delay */</span>
+<span class="cp">#define PHY_CONFIG_DELAY                0x00000FFFU</span>
+
+<span class="cp">#define PHY_READ_TO                     0x0000FFFFU</span>
+<span class="cp">#define PHY_WRITE_TO                    0x0000FFFFU</span>
+
+<span class="cm">/* Section 3: Common PHY Registers */</span>
+
+<span class="cp">#define PHY_BCR                         ((uint16_t)0x0000U)</span>
+<span class="cp">#define PHY_BSR                         ((uint16_t)0x0001U)</span>
+<span class="cp">#define PHY_RESET                       ((uint16_t)0x8000U)</span>
+<span class="cp">#define PHY_LOOPBACK                    ((uint16_t)0x4000U)</span>
+<span class="cp">#define PHY_FULLDUPLEX_100M             ((uint16_t)0x2100U)</span>
+<span class="cp">#define PHY_HALFDUPLEX_100M             ((uint16_t)0x2000U)</span>
+<span class="cp">#define PHY_FULLDUPLEX_10M              ((uint16_t)0x0100U)</span>
+<span class="cp">#define PHY_HALFDUPLEX_10M              ((uint16_t)0x0000U)</span>
+<span class="cp">#define PHY_AUTONEGOTIATION             ((uint16_t)0x1000U)</span>
+<span class="cp">#define PHY_RESTART_AUTONEGOTIATION     ((uint16_t)0x0200U)</span>
+<span class="cp">#define PHY_POWERDOWN                   ((uint16_t)0x0800U)</span>
+<span class="cp">#define PHY_ISOLATE                     ((uint16_t)0x0400U)</span>
+<span class="cp">#define PHY_AUTONEGO_COMPLETE           ((uint16_t)0x0020U)</span>
+<span class="cp">#define PHY_LINKED_STATUS               ((uint16_t)0x0004U)</span>
+<span class="cp">#define PHY_JABBER_DETECTION            ((uint16_t)0x0002U)</span>
+<span class="cm">/* Section 4: Extended PHY Registers */</span>
+<span class="cp">#define PHY_SR                          ((uint16_t)0x10U)</span>
+<span class="cp">#define PHY_SPEED_STATUS                ((uint16_t)0x0002U)</span>
+<span class="cp">#define PHY_DUPLEX_STATUS               ((uint16_t)0x0004U)</span>
+<span class="cm">/* ################## SPI peripheral configuration ########################## */</span>
+
+<span class="cm">/* CRC FEATURE: Use to activate CRC feature inside HAL SPI Driver</span>
+<span class="cm">* Activated: CRC code is present inside driver</span>
+<span class="cm">* Deactivated: CRC code cleaned from driver</span>
+<span class="cm">*/</span>
+
+<span class="cp">#define USE_SPI_CRC                     0U</span>
+
+<span class="cm">/* Includes ------------------------------------------------------------------*/</span>
+<span class="cp">#ifdef HAL_RCC_MODULE_ENABLED</span>
+  <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_rcc.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_RCC_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_GPIO_MODULE_ENABLED</span>
+  <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_gpio.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_GPIO_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_EXTI_MODULE_ENABLED</span>
+  <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_exti.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_EXTI_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_DMA_MODULE_ENABLED</span>
+  <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_dma.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_DMA_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_CORTEX_MODULE_ENABLED</span>
+  <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_cortex.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_CORTEX_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_ADC_MODULE_ENABLED</span>
+  <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_adc.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_ADC_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_CAN_MODULE_ENABLED</span>
+  <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_can.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_CAN_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_CAN_LEGACY_MODULE_ENABLED</span>
+  <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_can_legacy.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_CAN_LEGACY_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_CRC_MODULE_ENABLED</span>
+  <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_crc.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_CRC_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_CRYP_MODULE_ENABLED</span>
+  <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_cryp.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_CRYP_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_DMA2D_MODULE_ENABLED</span>
+  <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_dma2d.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_DMA2D_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_DAC_MODULE_ENABLED</span>
+  <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_dac.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_DAC_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_DCMI_MODULE_ENABLED</span>
+  <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_dcmi.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_DCMI_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_ETH_MODULE_ENABLED</span>
+  <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_eth.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_ETH_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_FLASH_MODULE_ENABLED</span>
+  <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_flash.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_FLASH_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_SRAM_MODULE_ENABLED</span>
+  <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_sram.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_SRAM_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_NOR_MODULE_ENABLED</span>
+  <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_nor.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_NOR_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_NAND_MODULE_ENABLED</span>
+  <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_nand.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_NAND_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_PCCARD_MODULE_ENABLED</span>
+  <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_pccard.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_PCCARD_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_SDRAM_MODULE_ENABLED</span>
+  <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_sdram.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_SDRAM_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_HASH_MODULE_ENABLED</span>
+ <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_hash.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_HASH_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_I2C_MODULE_ENABLED</span>
+ <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_i2c.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_I2C_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_SMBUS_MODULE_ENABLED</span>
+ <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_smbus.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_SMBUS_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_I2S_MODULE_ENABLED</span>
+ <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_i2s.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_I2S_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_IWDG_MODULE_ENABLED</span>
+ <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_iwdg.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_IWDG_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_LTDC_MODULE_ENABLED</span>
+ <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_ltdc.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_LTDC_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_PWR_MODULE_ENABLED</span>
+ <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_pwr.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_PWR_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_RNG_MODULE_ENABLED</span>
+ <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_rng.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_RNG_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_RTC_MODULE_ENABLED</span>
+ <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_rtc.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_RTC_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_SAI_MODULE_ENABLED</span>
+ <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_sai.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_SAI_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_SD_MODULE_ENABLED</span>
+ <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_sd.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_SD_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_SPI_MODULE_ENABLED</span>
+ <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_spi.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_SPI_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_TIM_MODULE_ENABLED</span>
+ <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_tim.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_TIM_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_UART_MODULE_ENABLED</span>
+ <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_uart.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_UART_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_USART_MODULE_ENABLED</span>
+ <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_usart.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_USART_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_IRDA_MODULE_ENABLED</span>
+ <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_irda.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_IRDA_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_SMARTCARD_MODULE_ENABLED</span>
+ <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_smartcard.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_SMARTCARD_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_WWDG_MODULE_ENABLED</span>
+ <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_wwdg.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_WWDG_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_PCD_MODULE_ENABLED</span>
+ <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_pcd.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_PCD_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_HCD_MODULE_ENABLED</span>
+ <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_hcd.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_HCD_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_DSI_MODULE_ENABLED</span>
+ <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_dsi.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_DSI_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_QSPI_MODULE_ENABLED</span>
+ <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_qspi.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_QSPI_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_CEC_MODULE_ENABLED</span>
+ <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_cec.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_CEC_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_FMPI2C_MODULE_ENABLED</span>
+ <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_fmpi2c.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_FMPI2C_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_FMPSMBUS_MODULE_ENABLED</span>
+ <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_fmpsmbus.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_FMPSMBUS_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_SPDIFRX_MODULE_ENABLED</span>
+ <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_spdifrx.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_SPDIFRX_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_DFSDM_MODULE_ENABLED</span>
+ <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_dfsdm.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_DFSDM_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_LPTIM_MODULE_ENABLED</span>
+ <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_lptim.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_LPTIM_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cp">#ifdef HAL_MMC_MODULE_ENABLED</span>
+ <span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx_hal_mmc.h&quot;</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* HAL_MMC_MODULE_ENABLED */</span><span class="cp"></span>
+
+<span class="cm">/* Exported macro ------------------------------------------------------------*/</span>
+<span class="cp">#ifdef  USE_FULL_ASSERT</span>
+
+  <span class="cp">#define assert_param(expr) ((expr) ? (void)0U : assert_failed((uint8_t *)__FILE__, __LINE__))</span>
+<span class="cm">/* Exported functions ------------------------------------------------------- */</span>
+  <span class="kt">void</span> <span class="n">assert_failed</span><span class="p">(</span><span class="kt">uint8_t</span><span class="o">*</span> <span class="n">file</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">line</span><span class="p">);</span>
+<span class="cp">#else</span>
+  <span class="cp">#define assert_param(expr) ((void)0U)</span>
+<span class="cp">#endif </span><span class="cm">/* USE_FULL_ASSERT */</span><span class="cp"></span>
+
+<span class="cp">#ifdef __cplusplus</span>
+<span class="p">}</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#endif </span><span class="cm">/* __STM32F4xx_HAL_CONF_H */</span><span class="cp"></span>
+
+<span class="cm">/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, E-Agle TRT.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

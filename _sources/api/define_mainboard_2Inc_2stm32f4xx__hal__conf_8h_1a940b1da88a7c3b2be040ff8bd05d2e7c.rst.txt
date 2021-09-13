@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2stm32f4xx__hal__conf_8h_1a940b1da88a7c3b2be040ff8bd05d2e7c:
+
+Define USE_HAL_FMPI2C_REGISTER_CALLBACKS
+========================================
+
+- Defined in :ref:`file_mainboard_Inc_stm32f4xx_hal_conf.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: USE_HAL_FMPI2C_REGISTER_CALLBACKS

@@ -44,6 +44,8 @@ Includes
 --------
 
 
+- ``bms_fsm.h`` (:ref:`file_mainboard_Inc_bms_fsm.h`)
+
 - ``error/error.h`` (:ref:`file_mainboard_Inc_error_error.h`)
 
 - ``error/error_list_ref.h`` (:ref:`file_mainboard_Inc_error_error_list_ref.h`)
@@ -63,11 +65,13 @@ Functions
 
 - :ref:`exhale_function_error_8c_1a6d4fa5acedb7f22a6df926bf45720eec`
 
-- :ref:`exhale_function_error_8c_1a0b2c9424f2b45fadeabe0f7b6d999ac1`
+- :ref:`exhale_function_error_8c_1a15a4e697b631740f79c027eabaf026a4`
 
 - :ref:`exhale_function_error_8c_1ae0da17dfc49f7b7b8bf6093efc28700c`
 
 - :ref:`exhale_function_error_8c_1a3b6a9c78bb29ca0f757779c0bdb37e3c`
+
+- :ref:`exhale_function_error_8c_1a46223f8bcd03d0e69fecfcf12080a711`
 
 - :ref:`exhale_function_error_8c_1a4c013455493be71097266ca44894cafa`
 

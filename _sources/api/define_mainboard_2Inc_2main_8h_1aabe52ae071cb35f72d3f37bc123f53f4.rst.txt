@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2main_8h_1aabe52ae071cb35f72d3f37bc123f53f4:
+
+Define IMD_PWM_GPIO_Port
+========================
+
+- Defined in :ref:`file_mainboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: IMD_PWM_GPIO_Port

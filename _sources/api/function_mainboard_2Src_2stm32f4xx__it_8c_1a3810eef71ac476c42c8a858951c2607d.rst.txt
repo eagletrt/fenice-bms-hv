@@ -1,0 +1,13 @@
+.. _exhale_function_mainboard_2Src_2stm32f4xx__it_8c_1a3810eef71ac476c42c8a858951c2607d:
+
+Function CAN2_SCE_IRQHandler(void)
+==================================
+
+- Defined in :ref:`file_mainboard_Src_stm32f4xx_it.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: CAN2_SCE_IRQHandler(void)

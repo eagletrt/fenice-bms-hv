@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2stm32f4xx__hal__conf_8h_1a1ac901a4ad405241d90a5c10104b8986:
+
+Define PHY_HALFDUPLEX_100M
+==========================
+
+- Defined in :ref:`file_mainboard_Inc_stm32f4xx_hal_conf.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: PHY_HALFDUPLEX_100M

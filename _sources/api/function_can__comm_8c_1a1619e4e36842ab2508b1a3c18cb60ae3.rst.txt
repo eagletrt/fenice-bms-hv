@@ -1,0 +1,13 @@
+.. _exhale_function_can__comm_8c_1a1619e4e36842ab2508b1a3c18cb60ae3:
+
+Function can_init()
+===================
+
+- Defined in :ref:`file_mainboard_Src_peripherals_can_comm.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: can_init()

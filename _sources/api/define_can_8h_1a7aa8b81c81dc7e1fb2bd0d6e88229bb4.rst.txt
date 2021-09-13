@@ -1,0 +1,13 @@
+.. _exhale_define_can_8h_1a7aa8b81c81dc7e1fb2bd0d6e88229bb4:
+
+Define BMS_CAN
+==============
+
+- Defined in :ref:`file_mainboard_Inc_can.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: BMS_CAN

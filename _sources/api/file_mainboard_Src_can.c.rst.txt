@@ -1,0 +1,77 @@
+
+.. _file_mainboard_Src_can.c:
+
+File can.c
+==========
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Src>` (``mainboard/Src``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+This file provides code for the configuration of the CAN instances. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Src/can.c``)
+------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Src_can.c.rst
+
+
+
+Detailed Description
+--------------------
+
+
+
+ Copyright (c) 2021 STMicroelectronics. All rights reserved.
+
+
+This software component is licensed by ST under BSD 3-Clause license, the "License"; You may not use this file except in compliance with the License. You may obtain a copy of the License at: opensource.org/licenses/BSD-3-Clause 
+
+
+
+
+Includes
+--------
+
+
+- ``can.h`` (:ref:`file_mainboard_Inc_can.h`)
+
+
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_can_8c_1a4b39e42353b2781bc75d83c018640b67`
+
+- :ref:`exhale_function_can_8c_1a2778ce7f3a2de42769b6de9fec4cedb9`
+
+- :ref:`exhale_function_can_8c_1a030a62a0956ab83394eb8354a0e97902`
+
+- :ref:`exhale_function_can_8c_1a1ee5cd592134235b6c07f676784d47c3`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_can_8c_1a18b5b05ac35955baef1479165be10521`
+
+- :ref:`exhale_variable_can_8c_1a1618d731d18d69e906e8a357b7cd3c8d`
+
+- :ref:`exhale_variable_can_8c_1ab77168d14df04ccca5d48612ee21ced8`
+

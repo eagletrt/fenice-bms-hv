@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2stm32f4xx__hal__conf_8h_1a23382b8f04b3e6db2c59dfa1ef5ea4a2:
+
+Define HAL_TIM_MODULE_ENABLED
+=============================
+
+- Defined in :ref:`file_mainboard_Inc_stm32f4xx_hal_conf.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: HAL_TIM_MODULE_ENABLED

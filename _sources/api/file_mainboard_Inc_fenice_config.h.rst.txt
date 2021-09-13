@@ -54,9 +54,9 @@ Included By
 -----------
 
 
-- :ref:`file_mainboard_Inc_bal.h`
-
 - :ref:`file_mainboard_Inc_pack.h`
+
+- :ref:`file_mainboard_Inc_bal.h`
 
 - :ref:`file_mainboard_Inc_feedback.h`
 

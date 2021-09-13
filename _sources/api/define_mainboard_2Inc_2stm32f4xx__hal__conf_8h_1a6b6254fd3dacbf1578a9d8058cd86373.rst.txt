@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2stm32f4xx__hal__conf_8h_1a6b6254fd3dacbf1578a9d8058cd86373:
+
+Define PHY_FULLDUPLEX_10M
+=========================
+
+- Defined in :ref:`file_mainboard_Inc_stm32f4xx_hal_conf.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: PHY_FULLDUPLEX_10M

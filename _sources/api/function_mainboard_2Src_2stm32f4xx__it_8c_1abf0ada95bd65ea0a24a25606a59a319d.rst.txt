@@ -1,0 +1,13 @@
+.. _exhale_function_mainboard_2Src_2stm32f4xx__it_8c_1abf0ada95bd65ea0a24a25606a59a319d:
+
+Function CAN2_RX0_IRQHandler(void)
+==================================
+
+- Defined in :ref:`file_mainboard_Src_stm32f4xx_it.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: CAN2_RX0_IRQHandler(void)

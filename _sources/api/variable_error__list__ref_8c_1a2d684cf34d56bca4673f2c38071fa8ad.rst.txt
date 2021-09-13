@@ -1,0 +1,13 @@
+.. _exhale_variable_error__list__ref_8c_1a2d684cf34d56bca4673f2c38071fa8ad:
+
+Variable error_list_ref_high_temperatures
+=========================================
+
+- Defined in :ref:`file_mainboard_Src_error_error_list_ref.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: error_list_ref_high_temperatures

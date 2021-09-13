@@ -50,7 +50,7 @@ Includes
 
 - ``inttypes.h``
 
-- ``peripherals/ltc6813_utils.h`` (:ref:`file_mainboard_Inc_peripherals_ltc6813_utils.h`)
+- ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
 
 
 
@@ -60,8 +60,6 @@ Included By
 
 - :ref:`file_mainboard_Inc_main.h`
 
-- :ref:`file_mainboard_Inc_peripherals_ltc6813_utils.h`
-
 - :ref:`file_mainboard_Src_bal_fsm.c`
 
 - :ref:`file_mainboard_Src_bms_fsm.c`
@@ -70,7 +68,7 @@ Included By
 
 - :ref:`file_mainboard_Src_pack.c`
 
-- :ref:`file_mainboard_Src_peripherals_can.c`
+- :ref:`file_mainboard_Src_peripherals_can_comm.c`
 
 - :ref:`file_mainboard_Src_super_fsm.c`
 
@@ -123,11 +121,7 @@ Functions
 
 - :ref:`exhale_function_pack_8h_1ab2b35f6b2db327d1614bc09d976bc482`
 
-- :ref:`exhale_function_pack_8h_1a773a6a93c82094e37b85c0e139e67018`
-
-- :ref:`exhale_function_pack_8h_1a02f9bbdcac77d9a17e6ea2fa7484b694`
-
 - :ref:`exhale_function_pack_8h_1a182c1da5d0bad07df594abc7f4d3c81d`
 
-- :ref:`exhale_function_pack_8h_1a08455a4cb9e36189817909bc4b3c41d9`
+- :ref:`exhale_function_pack_8h_1a7c06c9a1f0931d8f3b9f5fda36a8ad93`
 

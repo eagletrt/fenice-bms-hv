@@ -1,0 +1,75 @@
+
+.. _file_mainboard_Inc_adc.h:
+
+File adc.h
+==========
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Inc>` (``mainboard/Inc``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+This file contains all the function prototypes for the :ref:`file_mainboard_Src_adc.c` file. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Inc/adc.h``)
+------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Inc_adc.h.rst
+
+
+
+Detailed Description
+--------------------
+
+
+
+ Copyright (c) 2021 STMicroelectronics. All rights reserved.
+
+
+This software component is licensed by ST under BSD 3-Clause license, the "License"; You may not use this file except in compliance with the License. You may obtain a copy of the License at: opensource.org/licenses/BSD-3-Clause 
+
+
+
+
+Includes
+--------
+
+
+- ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_mainboard_Src_adc.c`
+
+- :ref:`file_mainboard_Src_main.c`
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_adc_8h_1acccd58aa70215a6b184ad242312ffd0c`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_adc_8h_1a22b804736f5648d52f639b2647d4ed13`
+

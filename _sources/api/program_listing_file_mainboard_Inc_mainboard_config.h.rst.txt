@@ -1,0 +1,31 @@
+
+.. _program_listing_file_mainboard_Inc_mainboard_config.h:
+
+Program Listing for File mainboard_config.h
+===========================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_mainboard_Inc_mainboard_config.h>` (``mainboard/Inc/mainboard_config.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   #ifndef MAINBOARD_CONFIG_H
+   #define MAINBOARD_CONFIG_H
+   
+   #include "../../fenice_config.h"
+   
+   //===========================================================================
+   //=================================== General ===============================
+   //===========================================================================
+   
+   #define htim_err   htim3
+   #define htim_bms   htim2
+   #define htim_super htim4
+   
+   #define spi_eeprom hspi2
+   
+   #define cli_uart huart1
+   
+   #endif

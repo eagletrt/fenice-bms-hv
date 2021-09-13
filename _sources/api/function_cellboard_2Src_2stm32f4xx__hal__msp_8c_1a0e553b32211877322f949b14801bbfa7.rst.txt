@@ -1,0 +1,13 @@
+.. _exhale_function_cellboard_2Src_2stm32f4xx__hal__msp_8c_1a0e553b32211877322f949b14801bbfa7:
+
+Function HAL_UART_MspInit(UART_HandleTypeDef \*)
+================================================
+
+- Defined in :ref:`file_cellboard_Src_stm32f4xx_hal_msp.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: HAL_UART_MspInit(UART_HandleTypeDef *)

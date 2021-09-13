@@ -1,0 +1,13 @@
+.. _exhale_function_usart_8h_1a57d1167735baafab8e3288526c424929:
+
+Function MX_USART1_UART_Init(void)
+==================================
+
+- Defined in :ref:`file_mainboard_Inc_usart.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: MX_USART1_UART_Init(void)

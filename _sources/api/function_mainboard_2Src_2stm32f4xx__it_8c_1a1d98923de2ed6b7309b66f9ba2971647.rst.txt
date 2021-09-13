@@ -1,0 +1,13 @@
+.. _exhale_function_mainboard_2Src_2stm32f4xx__it_8c_1a1d98923de2ed6b7309b66f9ba2971647:
+
+Function UsageFault_Handler(void)
+=================================
+
+- Defined in :ref:`file_mainboard_Src_stm32f4xx_it.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: UsageFault_Handler(void)

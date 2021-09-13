@@ -169,51 +169,36 @@
 <span class="cp">#include</span> <span class="cpf">&quot;cli_bms.h&quot;</span><span class="cp"></span>
 <span class="cm">/* USER CODE END 0 */</span>
 
-<span class="n">UART_HandleTypeDef</span> <span class="n">huart2</span><span class="p">;</span>
+<span class="n">UART_HandleTypeDef</span> <span class="n">huart1</span><span class="p">;</span>
 <span class="n">UART_HandleTypeDef</span> <span class="n">huart3</span><span class="p">;</span>
 
-<span class="cm">/* USART2 init function */</span>
+<span class="cm">/* USART1 init function */</span>
 
-<span class="kt">void</span> <span class="nf">MX_USART2_UART_Init</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="kt">void</span> <span class="nf">MX_USART1_UART_Init</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
 
-  <span class="cm">/* USER CODE BEGIN USART2_Init 0 */</span>
+  <span class="cm">/* USER CODE BEGIN USART1_Init 0 */</span>
 
-  <span class="cm">/* USER CODE END USART2_Init 0 */</span>
+  <span class="cm">/* USER CODE END USART1_Init 0 */</span>
 
-  <span class="cm">/* USER CODE BEGIN USART2_Init 1 */</span>
+  <span class="cm">/* USER CODE BEGIN USART1_Init 1 */</span>
 
-  <span class="cm">/* USER CODE END USART2_Init 1 */</span>
-  <span class="n">huart2</span><span class="p">.</span><span class="n">Instance</span> <span class="o">=</span> <span class="n">USART2</span><span class="p">;</span>
-  <span class="n">huart2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">BaudRate</span> <span class="o">=</span> <span class="mi">115200</span><span class="p">;</span>
-  <span class="n">huart2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">WordLength</span> <span class="o">=</span> <span class="n">UART_WORDLENGTH_8B</span><span class="p">;</span>
-  <span class="n">huart2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">StopBits</span> <span class="o">=</span> <span class="n">UART_STOPBITS_1</span><span class="p">;</span>
-  <span class="n">huart2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Parity</span> <span class="o">=</span> <span class="n">UART_PARITY_NONE</span><span class="p">;</span>
-  <span class="n">huart2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Mode</span> <span class="o">=</span> <span class="n">UART_MODE_TX_RX</span><span class="p">;</span>
-  <span class="n">huart2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">HwFlowCtl</span> <span class="o">=</span> <span class="n">UART_HWCONTROL_NONE</span><span class="p">;</span>
-  <span class="n">huart2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">OverSampling</span> <span class="o">=</span> <span class="n">UART_OVERSAMPLING_16</span><span class="p">;</span>
-  <span class="n">huart2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">OneBitSampling</span> <span class="o">=</span> <span class="n">UART_ONE_BIT_SAMPLE_DISABLE</span><span class="p">;</span>
-  <span class="n">huart2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">ClockPrescaler</span> <span class="o">=</span> <span class="n">UART_PRESCALER_DIV1</span><span class="p">;</span>
-  <span class="n">huart2</span><span class="p">.</span><span class="n">AdvancedInit</span><span class="p">.</span><span class="n">AdvFeatureInit</span> <span class="o">=</span> <span class="n">UART_ADVFEATURE_NO_INIT</span><span class="p">;</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">HAL_UART_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart2</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
+  <span class="cm">/* USER CODE END USART1_Init 1 */</span>
+  <span class="n">huart1</span><span class="p">.</span><span class="n">Instance</span> <span class="o">=</span> <span class="n">USART1</span><span class="p">;</span>
+  <span class="n">huart1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">BaudRate</span> <span class="o">=</span> <span class="mi">115200</span><span class="p">;</span>
+  <span class="n">huart1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">WordLength</span> <span class="o">=</span> <span class="n">UART_WORDLENGTH_8B</span><span class="p">;</span>
+  <span class="n">huart1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">StopBits</span> <span class="o">=</span> <span class="n">UART_STOPBITS_1</span><span class="p">;</span>
+  <span class="n">huart1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Parity</span> <span class="o">=</span> <span class="n">UART_PARITY_NONE</span><span class="p">;</span>
+  <span class="n">huart1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Mode</span> <span class="o">=</span> <span class="n">UART_MODE_TX_RX</span><span class="p">;</span>
+  <span class="n">huart1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">HwFlowCtl</span> <span class="o">=</span> <span class="n">UART_HWCONTROL_NONE</span><span class="p">;</span>
+  <span class="n">huart1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">OverSampling</span> <span class="o">=</span> <span class="n">UART_OVERSAMPLING_16</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">HAL_UART_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart1</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
   <span class="p">{</span>
     <span class="n">Error_Handler</span><span class="p">();</span>
   <span class="p">}</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">HAL_UARTEx_SetTxFifoThreshold</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart2</span><span class="p">,</span> <span class="n">UART_TXFIFO_THRESHOLD_8_8</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="n">Error_Handler</span><span class="p">();</span>
-  <span class="p">}</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">HAL_UARTEx_SetRxFifoThreshold</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart2</span><span class="p">,</span> <span class="n">UART_RXFIFO_THRESHOLD_8_8</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="n">Error_Handler</span><span class="p">();</span>
-  <span class="p">}</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">HAL_UARTEx_EnableFifoMode</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart2</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="n">Error_Handler</span><span class="p">();</span>
-  <span class="p">}</span>
-  <span class="cm">/* USER CODE BEGIN USART2_Init 2 */</span>
+  <span class="cm">/* USER CODE BEGIN USART1_Init 2 */</span>
 
-  <span class="cm">/* USER CODE END USART2_Init 2 */</span>
+  <span class="cm">/* USER CODE END USART1_Init 2 */</span>
 
 <span class="p">}</span>
 <span class="cm">/* USART3 init function */</span>
@@ -229,29 +214,14 @@
 
   <span class="cm">/* USER CODE END USART3_Init 1 */</span>
   <span class="n">huart3</span><span class="p">.</span><span class="n">Instance</span> <span class="o">=</span> <span class="n">USART3</span><span class="p">;</span>
-  <span class="n">huart3</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">BaudRate</span> <span class="o">=</span> <span class="mi">500000</span><span class="p">;</span>
+  <span class="n">huart3</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">BaudRate</span> <span class="o">=</span> <span class="mi">115200</span><span class="p">;</span>
   <span class="n">huart3</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">WordLength</span> <span class="o">=</span> <span class="n">UART_WORDLENGTH_8B</span><span class="p">;</span>
   <span class="n">huart3</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">StopBits</span> <span class="o">=</span> <span class="n">UART_STOPBITS_1</span><span class="p">;</span>
   <span class="n">huart3</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Parity</span> <span class="o">=</span> <span class="n">UART_PARITY_NONE</span><span class="p">;</span>
   <span class="n">huart3</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Mode</span> <span class="o">=</span> <span class="n">UART_MODE_TX_RX</span><span class="p">;</span>
   <span class="n">huart3</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">HwFlowCtl</span> <span class="o">=</span> <span class="n">UART_HWCONTROL_NONE</span><span class="p">;</span>
   <span class="n">huart3</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">OverSampling</span> <span class="o">=</span> <span class="n">UART_OVERSAMPLING_16</span><span class="p">;</span>
-  <span class="n">huart3</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">OneBitSampling</span> <span class="o">=</span> <span class="n">UART_ONE_BIT_SAMPLE_DISABLE</span><span class="p">;</span>
-  <span class="n">huart3</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">ClockPrescaler</span> <span class="o">=</span> <span class="n">UART_PRESCALER_DIV1</span><span class="p">;</span>
-  <span class="n">huart3</span><span class="p">.</span><span class="n">AdvancedInit</span><span class="p">.</span><span class="n">AdvFeatureInit</span> <span class="o">=</span> <span class="n">UART_ADVFEATURE_NO_INIT</span><span class="p">;</span>
   <span class="k">if</span> <span class="p">(</span><span class="n">HAL_UART_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart3</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="n">Error_Handler</span><span class="p">();</span>
-  <span class="p">}</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">HAL_UARTEx_SetTxFifoThreshold</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart3</span><span class="p">,</span> <span class="n">UART_TXFIFO_THRESHOLD_1_8</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="n">Error_Handler</span><span class="p">();</span>
-  <span class="p">}</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">HAL_UARTEx_SetRxFifoThreshold</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart3</span><span class="p">,</span> <span class="n">UART_RXFIFO_THRESHOLD_1_8</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="n">Error_Handler</span><span class="p">();</span>
-  <span class="p">}</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">HAL_UARTEx_EnableFifoMode</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart3</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
   <span class="p">{</span>
     <span class="n">Error_Handler</span><span class="p">();</span>
   <span class="p">}</span>
@@ -265,25 +235,28 @@
 <span class="p">{</span>
 
   <span class="n">GPIO_InitTypeDef</span> <span class="n">GPIO_InitStruct</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
-  <span class="k">if</span><span class="p">(</span><span class="n">uartHandle</span><span class="o">-&gt;</span><span class="n">Instance</span><span class="o">==</span><span class="n">USART2</span><span class="p">)</span>
+  <span class="k">if</span><span class="p">(</span><span class="n">uartHandle</span><span class="o">-&gt;</span><span class="n">Instance</span><span class="o">==</span><span class="n">USART1</span><span class="p">)</span>
   <span class="p">{</span>
-  <span class="cm">/* USER CODE BEGIN USART2_MspInit 0 */</span>
+  <span class="cm">/* USER CODE BEGIN USART1_MspInit 0 */</span>
 
-  <span class="cm">/* USER CODE END USART2_MspInit 0 */</span>
-    <span class="cm">/* USART2 clock enable */</span>
-    <span class="n">__HAL_RCC_USART2_CLK_ENABLE</span><span class="p">();</span>
+  <span class="cm">/* USER CODE END USART1_MspInit 0 */</span>
+    <span class="cm">/* USART1 clock enable */</span>
+    <span class="n">__HAL_RCC_USART1_CLK_ENABLE</span><span class="p">();</span>
 
     <span class="n">__HAL_RCC_GPIOA_CLK_ENABLE</span><span class="p">();</span>
-    <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pin</span> <span class="o">=</span> <span class="n">GPIO_PIN_2</span><span class="o">|</span><span class="n">GPIO_PIN_3</span><span class="p">;</span>
+    <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pin</span> <span class="o">=</span> <span class="n">GPIO_PIN_9</span><span class="o">|</span><span class="n">GPIO_PIN_10</span><span class="p">;</span>
     <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Mode</span> <span class="o">=</span> <span class="n">GPIO_MODE_AF_PP</span><span class="p">;</span>
     <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pull</span> <span class="o">=</span> <span class="n">GPIO_NOPULL</span><span class="p">;</span>
-    <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Speed</span> <span class="o">=</span> <span class="n">GPIO_SPEED_FREQ_LOW</span><span class="p">;</span>
-    <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Alternate</span> <span class="o">=</span> <span class="n">GPIO_AF7_USART2</span><span class="p">;</span>
+    <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Speed</span> <span class="o">=</span> <span class="n">GPIO_SPEED_FREQ_VERY_HIGH</span><span class="p">;</span>
+    <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Alternate</span> <span class="o">=</span> <span class="n">GPIO_AF7_USART1</span><span class="p">;</span>
     <span class="n">HAL_GPIO_Init</span><span class="p">(</span><span class="n">GPIOA</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">GPIO_InitStruct</span><span class="p">);</span>
 
-  <span class="cm">/* USER CODE BEGIN USART2_MspInit 1 */</span>
+    <span class="cm">/* USART1 interrupt Init */</span>
+    <span class="n">HAL_NVIC_SetPriority</span><span class="p">(</span><span class="n">USART1_IRQn</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="n">HAL_NVIC_EnableIRQ</span><span class="p">(</span><span class="n">USART1_IRQn</span><span class="p">);</span>
+  <span class="cm">/* USER CODE BEGIN USART1_MspInit 1 */</span>
 
-  <span class="cm">/* USER CODE END USART2_MspInit 1 */</span>
+  <span class="cm">/* USER CODE END USART1_MspInit 1 */</span>
   <span class="p">}</span>
   <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">uartHandle</span><span class="o">-&gt;</span><span class="n">Instance</span><span class="o">==</span><span class="n">USART3</span><span class="p">)</span>
   <span class="p">{</span>
@@ -293,14 +266,25 @@
     <span class="cm">/* USART3 clock enable */</span>
     <span class="n">__HAL_RCC_USART3_CLK_ENABLE</span><span class="p">();</span>
 
+    <span class="n">__HAL_RCC_GPIOC_CLK_ENABLE</span><span class="p">();</span>
     <span class="n">__HAL_RCC_GPIOB_CLK_ENABLE</span><span class="p">();</span>
-    <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pin</span> <span class="o">=</span> <span class="n">GPIO_PIN_10</span><span class="o">|</span><span class="n">GPIO_PIN_11</span><span class="p">;</span>
+    <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pin</span> <span class="o">=</span> <span class="n">SI8900_RX_Pin</span><span class="p">;</span>
     <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Mode</span> <span class="o">=</span> <span class="n">GPIO_MODE_AF_PP</span><span class="p">;</span>
     <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pull</span> <span class="o">=</span> <span class="n">GPIO_NOPULL</span><span class="p">;</span>
-    <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Speed</span> <span class="o">=</span> <span class="n">GPIO_SPEED_FREQ_LOW</span><span class="p">;</span>
+    <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Speed</span> <span class="o">=</span> <span class="n">GPIO_SPEED_FREQ_VERY_HIGH</span><span class="p">;</span>
     <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Alternate</span> <span class="o">=</span> <span class="n">GPIO_AF7_USART3</span><span class="p">;</span>
-    <span class="n">HAL_GPIO_Init</span><span class="p">(</span><span class="n">GPIOB</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">GPIO_InitStruct</span><span class="p">);</span>
+    <span class="n">HAL_GPIO_Init</span><span class="p">(</span><span class="n">SI8900_RX_GPIO_Port</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">GPIO_InitStruct</span><span class="p">);</span>
 
+    <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pin</span> <span class="o">=</span> <span class="n">SI8900_TX_Pin</span><span class="p">;</span>
+    <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Mode</span> <span class="o">=</span> <span class="n">GPIO_MODE_AF_PP</span><span class="p">;</span>
+    <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pull</span> <span class="o">=</span> <span class="n">GPIO_NOPULL</span><span class="p">;</span>
+    <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Speed</span> <span class="o">=</span> <span class="n">GPIO_SPEED_FREQ_VERY_HIGH</span><span class="p">;</span>
+    <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Alternate</span> <span class="o">=</span> <span class="n">GPIO_AF7_USART3</span><span class="p">;</span>
+    <span class="n">HAL_GPIO_Init</span><span class="p">(</span><span class="n">SI8900_TX_GPIO_Port</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">GPIO_InitStruct</span><span class="p">);</span>
+
+    <span class="cm">/* USART3 interrupt Init */</span>
+    <span class="n">HAL_NVIC_SetPriority</span><span class="p">(</span><span class="n">USART3_IRQn</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="n">HAL_NVIC_EnableIRQ</span><span class="p">(</span><span class="n">USART3_IRQn</span><span class="p">);</span>
   <span class="cm">/* USER CODE BEGIN USART3_MspInit 1 */</span>
 
   <span class="cm">/* USER CODE END USART3_MspInit 1 */</span>
@@ -310,21 +294,21 @@
 <span class="kt">void</span> <span class="nf">HAL_UART_MspDeInit</span><span class="p">(</span><span class="n">UART_HandleTypeDef</span><span class="o">*</span> <span class="n">uartHandle</span><span class="p">)</span>
 <span class="p">{</span>
 
-  <span class="k">if</span><span class="p">(</span><span class="n">uartHandle</span><span class="o">-&gt;</span><span class="n">Instance</span><span class="o">==</span><span class="n">USART2</span><span class="p">)</span>
+  <span class="k">if</span><span class="p">(</span><span class="n">uartHandle</span><span class="o">-&gt;</span><span class="n">Instance</span><span class="o">==</span><span class="n">USART1</span><span class="p">)</span>
   <span class="p">{</span>
-  <span class="cm">/* USER CODE BEGIN USART2_MspDeInit 0 */</span>
+  <span class="cm">/* USER CODE BEGIN USART1_MspDeInit 0 */</span>
 
-  <span class="cm">/* USER CODE END USART2_MspDeInit 0 */</span>
+  <span class="cm">/* USER CODE END USART1_MspDeInit 0 */</span>
     <span class="cm">/* Peripheral clock disable */</span>
-    <span class="n">__HAL_RCC_USART2_CLK_DISABLE</span><span class="p">();</span>
+    <span class="n">__HAL_RCC_USART1_CLK_DISABLE</span><span class="p">();</span>
 
-    <span class="n">HAL_GPIO_DeInit</span><span class="p">(</span><span class="n">GPIOA</span><span class="p">,</span> <span class="n">GPIO_PIN_2</span><span class="o">|</span><span class="n">GPIO_PIN_3</span><span class="p">);</span>
+    <span class="n">HAL_GPIO_DeInit</span><span class="p">(</span><span class="n">GPIOA</span><span class="p">,</span> <span class="n">GPIO_PIN_9</span><span class="o">|</span><span class="n">GPIO_PIN_10</span><span class="p">);</span>
 
-    <span class="cm">/* USART2 interrupt Deinit */</span>
-    <span class="n">HAL_NVIC_DisableIRQ</span><span class="p">(</span><span class="n">USART2_IRQn</span><span class="p">);</span>
-  <span class="cm">/* USER CODE BEGIN USART2_MspDeInit 1 */</span>
+    <span class="cm">/* USART1 interrupt Deinit */</span>
+    <span class="n">HAL_NVIC_DisableIRQ</span><span class="p">(</span><span class="n">USART1_IRQn</span><span class="p">);</span>
+  <span class="cm">/* USER CODE BEGIN USART1_MspDeInit 1 */</span>
 
-  <span class="cm">/* USER CODE END USART2_MspDeInit 1 */</span>
+  <span class="cm">/* USER CODE END USART1_MspDeInit 1 */</span>
   <span class="p">}</span>
   <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">uartHandle</span><span class="o">-&gt;</span><span class="n">Instance</span><span class="o">==</span><span class="n">USART3</span><span class="p">)</span>
   <span class="p">{</span>
@@ -334,8 +318,12 @@
     <span class="cm">/* Peripheral clock disable */</span>
     <span class="n">__HAL_RCC_USART3_CLK_DISABLE</span><span class="p">();</span>
 
-    <span class="n">HAL_GPIO_DeInit</span><span class="p">(</span><span class="n">GPIOB</span><span class="p">,</span> <span class="n">GPIO_PIN_10</span><span class="o">|</span><span class="n">GPIO_PIN_11</span><span class="p">);</span>
+    <span class="n">HAL_GPIO_DeInit</span><span class="p">(</span><span class="n">SI8900_RX_GPIO_Port</span><span class="p">,</span> <span class="n">SI8900_RX_Pin</span><span class="p">);</span>
 
+    <span class="n">HAL_GPIO_DeInit</span><span class="p">(</span><span class="n">SI8900_TX_GPIO_Port</span><span class="p">,</span> <span class="n">SI8900_TX_Pin</span><span class="p">);</span>
+
+    <span class="cm">/* USART3 interrupt Deinit */</span>
+    <span class="n">HAL_NVIC_DisableIRQ</span><span class="p">(</span><span class="n">USART3_IRQn</span><span class="p">);</span>
   <span class="cm">/* USER CODE BEGIN USART3_MspDeInit 1 */</span>
 
   <span class="cm">/* USER CODE END USART3_MspDeInit 1 */</span>

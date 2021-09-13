@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2main_8h_1a2f02486f70ed4805250837958fb760d6:
+
+Define AIRM_OFF_GPIO_Port
+=========================
+
+- Defined in :ref:`file_mainboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: AIRM_OFF_GPIO_Port

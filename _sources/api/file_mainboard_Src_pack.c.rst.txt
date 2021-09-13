@@ -48,8 +48,6 @@ Includes
 
 - ``feedback.h`` (:ref:`file_mainboard_Inc_feedback.h`)
 
-- ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
-
 - ``pack.h`` (:ref:`file_mainboard_Inc_pack.h`)
 
 - ``peripherals/si8900.h`` (:ref:`file_mainboard_Inc_peripherals_si8900.h`)
@@ -118,17 +116,13 @@ Functions
 
 - :ref:`exhale_function_pack_8c_1a2f41a2ff4246719c3c4d066a2f399540`
 
-- :ref:`exhale_function_pack_8c_1aedb421169a0db9c0449c6265ca70109f`
-
 - :ref:`exhale_function_pack_8c_1a3782000773cedf437a76f81240856dd7`
 
 - :ref:`exhale_function_pack_8c_1ab2b35f6b2db327d1614bc09d976bc482`
 
-- :ref:`exhale_function_pack_8c_1a773a6a93c82094e37b85c0e139e67018`
-
 - :ref:`exhale_function_pack_8c_1a6d7f45189cc82cf7a910d844fd14d7d8`
 
-- :ref:`exhale_function_pack_8c_1a08455a4cb9e36189817909bc4b3c41d9`
+- :ref:`exhale_function_pack_8c_1a7c06c9a1f0931d8f3b9f5fda36a8ad93`
 
 
 Defines

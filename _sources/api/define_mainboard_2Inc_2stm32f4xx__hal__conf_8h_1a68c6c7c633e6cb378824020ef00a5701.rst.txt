@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2stm32f4xx__hal__conf_8h_1a68c6c7c633e6cb378824020ef00a5701:
+
+Define USE_HAL_UART_REGISTER_CALLBACKS
+======================================
+
+- Defined in :ref:`file_mainboard_Inc_stm32f4xx_hal_conf.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: USE_HAL_UART_REGISTER_CALLBACKS

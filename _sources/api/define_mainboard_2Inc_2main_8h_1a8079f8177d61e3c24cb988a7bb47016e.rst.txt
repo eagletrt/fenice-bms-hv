@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2main_8h_1a8079f8177d61e3c24cb988a7bb47016e:
+
+Define FD_RELAY_LV_Pin
+======================
+
+- Defined in :ref:`file_mainboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: FD_RELAY_LV_Pin

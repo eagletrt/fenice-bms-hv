@@ -63,15 +63,9 @@ Included By
 
 - :ref:`file_mainboard_Src_main.c`
 
-- :ref:`file_mainboard_Src_pack.c`
+- :ref:`file_mainboard_Src_stm32f4xx_hal_msp.c`
 
-- :ref:`file_mainboard_Src_peripherals_ltc6813.c`
-
-- :ref:`file_mainboard_Src_peripherals_ltc6813_utils.c`
-
-- :ref:`file_mainboard_Src_stm32g4xx_hal_msp.c`
-
-- :ref:`file_mainboard_Src_stm32g4xx_it.c`
+- :ref:`file_mainboard_Src_stm32f4xx_it.c`
 
 - :ref:`file_mainboard_Src_super_fsm.c`
 

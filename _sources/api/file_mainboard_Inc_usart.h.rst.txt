@@ -70,16 +70,25 @@ Functions
 ---------
 
 
-- :ref:`exhale_function_usart_8h_1a6db1014d713f6f5c0f52a13299ee0733`
+- :ref:`exhale_function_usart_8h_1a57d1167735baafab8e3288526c424929`
 
 - :ref:`exhale_function_usart_8h_1a3d04b903a77089f6ce08dd0bf1c81a81`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_usart_8h_1ac9bff36224d27b70f81984c323e5588c`
+
+- :ref:`exhale_define_usart_8h_1aabc6d6fbcdd3e068111445b8ca016944`
 
 
 Variables
 ---------
 
 
-- :ref:`exhale_variable_usart_8h_1aa9479c261d65eecedd3d9582f7f0f89c`
+- :ref:`exhale_variable_usart_8h_1a2cf715bef37f7e8ef385a30974a5f0d5`
 
 - :ref:`exhale_variable_usart_8h_1ab7c63c1b0f65db92b6a4ea19edf957e1`
 

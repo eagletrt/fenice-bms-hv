@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2main_8h_1a72f961f8863b831c631ff8c1282b2166:
+
+Define FB_IMD_FAULT_Pin
+=======================
+
+- Defined in :ref:`file_mainboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: FB_IMD_FAULT_Pin

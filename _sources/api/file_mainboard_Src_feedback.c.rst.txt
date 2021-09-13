@@ -48,8 +48,6 @@ Includes
 
 - ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
 
-- ``stm32g4xx_hal.h``
-
 
 
 

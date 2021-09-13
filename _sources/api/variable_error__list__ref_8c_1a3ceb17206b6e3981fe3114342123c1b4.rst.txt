@@ -1,0 +1,13 @@
+.. _exhale_variable_error__list__ref_8c_1a3ceb17206b6e3981fe3114342123c1b4:
+
+Variable error_cellboard_comm
+=============================
+
+- Defined in :ref:`file_mainboard_Src_error_error_list_ref.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: error_cellboard_comm

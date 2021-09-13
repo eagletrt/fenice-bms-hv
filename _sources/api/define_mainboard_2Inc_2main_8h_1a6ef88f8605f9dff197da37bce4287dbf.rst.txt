@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2main_8h_1a6ef88f8605f9dff197da37bce4287dbf:
+
+Define FB_IMD_FAULT_GPIO_Port
+=============================
+
+- Defined in :ref:`file_mainboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: FB_IMD_FAULT_GPIO_Port

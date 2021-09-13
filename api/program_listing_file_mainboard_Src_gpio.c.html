@@ -183,87 +183,86 @@
 
   <span class="cm">/* GPIO Ports Clock Enable */</span>
   <span class="n">__HAL_RCC_GPIOC_CLK_ENABLE</span><span class="p">();</span>
-  <span class="n">__HAL_RCC_GPIOF_CLK_ENABLE</span><span class="p">();</span>
+  <span class="n">__HAL_RCC_GPIOH_CLK_ENABLE</span><span class="p">();</span>
   <span class="n">__HAL_RCC_GPIOA_CLK_ENABLE</span><span class="p">();</span>
   <span class="n">__HAL_RCC_GPIOB_CLK_ENABLE</span><span class="p">();</span>
+  <span class="n">__HAL_RCC_GPIOD_CLK_ENABLE</span><span class="p">();</span>
 
   <span class="cm">/*Configure GPIO pin Output Level */</span>
-  <span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">CS_EEPROM_GPIO_Port</span><span class="p">,</span> <span class="n">CS_EEPROM_Pin</span><span class="p">,</span> <span class="n">GPIO_PIN_RESET</span><span class="p">);</span>
+  <span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">GPIOC</span><span class="p">,</span> <span class="n">GPIO9_Pin</span><span class="o">|</span><span class="n">GPIO8_Pin</span><span class="o">|</span><span class="n">MUX_A3_Pin</span><span class="o">|</span><span class="n">EEPROM_CS_Pin</span>
+                          <span class="o">|</span><span class="n">EEPROM_HOLD_Pin</span><span class="o">|</span><span class="n">CARD_CS_Pin</span><span class="o">|</span><span class="n">BMS_FAULT_Pin</span><span class="o">|</span><span class="n">TS_ON_Pin</span>
+                          <span class="o">|</span><span class="n">AIRP_OFF_Pin</span><span class="p">,</span> <span class="n">GPIO_PIN_RESET</span><span class="p">);</span>
 
   <span class="cm">/*Configure GPIO pin Output Level */</span>
-  <span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">ANALOG_DATA_GPIO_Port</span><span class="p">,</span> <span class="n">ANALOG_DATA_Pin</span><span class="p">,</span> <span class="n">GPIO_PIN_RESET</span><span class="p">);</span>
+  <span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">GPIOA</span><span class="p">,</span> <span class="n">GPIO7_Pin</span><span class="o">|</span><span class="n">MUX_A0_Pin</span><span class="o">|</span><span class="n">MUX_A1_Pin</span><span class="o">|</span><span class="n">MUX_A2_Pin</span>
+                          <span class="o">|</span><span class="n">GPIO6_Pin</span><span class="o">|</span><span class="n">GPIO2_Pin</span><span class="p">,</span> <span class="n">GPIO_PIN_RESET</span><span class="p">);</span>
 
   <span class="cm">/*Configure GPIO pin Output Level */</span>
-  <span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">GPIOA</span><span class="p">,</span> <span class="n">MUX_A2_Pin</span><span class="o">|</span><span class="n">MUX_A3_Pin</span><span class="o">|</span><span class="n">CS_LTC_Pin</span><span class="o">|</span><span class="n">BMS_FAULT_Pin</span>
-                          <span class="o">|</span><span class="n">TS_ON_Pin</span><span class="o">|</span><span class="n">PC_ENDED_Pin</span><span class="o">|</span><span class="n">HOLD_Pin</span><span class="p">,</span> <span class="n">GPIO_PIN_RESET</span><span class="p">);</span>
+  <span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">GPIOB</span><span class="p">,</span> <span class="n">ADC_SIN_Pin</span><span class="o">|</span><span class="n">GPIO5_Pin</span><span class="o">|</span><span class="n">GPIO4_Pin</span><span class="o">|</span><span class="n">GPIO1_Pin</span>
+                          <span class="o">|</span><span class="n">GPIO3_Pin</span><span class="o">|</span><span class="n">LED2_Pin</span><span class="o">|</span><span class="n">LED1_Pin</span><span class="p">,</span> <span class="n">GPIO_PIN_RESET</span><span class="p">);</span>
 
   <span class="cm">/*Configure GPIO pin Output Level */</span>
-  <span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">GPIOB</span><span class="p">,</span> <span class="n">ADC_SIN_Pin</span><span class="o">|</span><span class="n">MUX_A1_Pin</span><span class="o">|</span><span class="n">MUX_A0_Pin</span><span class="o">|</span><span class="n">CS_SD_Pin</span>
-                          <span class="o">|</span><span class="n">LED_2_Pin</span><span class="o">|</span><span class="n">LED_1_Pin</span><span class="p">,</span> <span class="n">GPIO_PIN_RESET</span><span class="p">);</span>
+  <span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">AIRM_OFF_GPIO_Port</span><span class="p">,</span> <span class="n">AIRM_OFF_Pin</span><span class="p">,</span> <span class="n">GPIO_PIN_SET</span><span class="p">);</span>
 
-  <span class="cm">/*Configure GPIO pin : PtPin */</span>
-  <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pin</span> <span class="o">=</span> <span class="n">CS_EEPROM_Pin</span><span class="p">;</span>
+  <span class="cm">/*Configure GPIO pins : PCPin PCPin PCPin PCPin</span>
+<span class="cm">                           PCPin PCPin PCPin PCPin</span>
+<span class="cm">                           PCPin */</span>
+  <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pin</span> <span class="o">=</span> <span class="n">GPIO9_Pin</span><span class="o">|</span><span class="n">GPIO8_Pin</span><span class="o">|</span><span class="n">MUX_A3_Pin</span><span class="o">|</span><span class="n">EEPROM_CS_Pin</span>
+                          <span class="o">|</span><span class="n">EEPROM_HOLD_Pin</span><span class="o">|</span><span class="n">CARD_CS_Pin</span><span class="o">|</span><span class="n">BMS_FAULT_Pin</span><span class="o">|</span><span class="n">TS_ON_Pin</span>
+                          <span class="o">|</span><span class="n">AIRP_OFF_Pin</span><span class="p">;</span>
   <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Mode</span> <span class="o">=</span> <span class="n">GPIO_MODE_OUTPUT_PP</span><span class="p">;</span>
   <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pull</span> <span class="o">=</span> <span class="n">GPIO_NOPULL</span><span class="p">;</span>
   <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Speed</span> <span class="o">=</span> <span class="n">GPIO_SPEED_FREQ_LOW</span><span class="p">;</span>
-  <span class="n">HAL_GPIO_Init</span><span class="p">(</span><span class="n">CS_EEPROM_GPIO_Port</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">GPIO_InitStruct</span><span class="p">);</span>
+  <span class="n">HAL_GPIO_Init</span><span class="p">(</span><span class="n">GPIOC</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">GPIO_InitStruct</span><span class="p">);</span>
 
-  <span class="cm">/*Configure GPIO pins : PCPin PCPin */</span>
-  <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pin</span> <span class="o">=</span> <span class="n">IP_LOW_Pin</span><span class="o">|</span><span class="n">IP_HIGH_Pin</span><span class="p">;</span>
+  <span class="cm">/*Configure GPIO pins : PC14 PC15 */</span>
+  <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pin</span> <span class="o">=</span> <span class="n">GPIO_PIN_14</span><span class="o">|</span><span class="n">GPIO_PIN_15</span><span class="p">;</span>
   <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Mode</span> <span class="o">=</span> <span class="n">GPIO_MODE_ANALOG</span><span class="p">;</span>
   <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pull</span> <span class="o">=</span> <span class="n">GPIO_NOPULL</span><span class="p">;</span>
   <span class="n">HAL_GPIO_Init</span><span class="p">(</span><span class="n">GPIOC</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">GPIO_InitStruct</span><span class="p">);</span>
 
-  <span class="cm">/*Configure GPIO pin : PtPin */</span>
-  <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pin</span> <span class="o">=</span> <span class="n">ANALOG_DATA_Pin</span><span class="p">;</span>
-  <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Mode</span> <span class="o">=</span> <span class="n">GPIO_MODE_OUTPUT_PP</span><span class="p">;</span>
-  <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pull</span> <span class="o">=</span> <span class="n">GPIO_NOPULL</span><span class="p">;</span>
-  <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Speed</span> <span class="o">=</span> <span class="n">GPIO_SPEED_FREQ_LOW</span><span class="p">;</span>
-  <span class="n">HAL_GPIO_Init</span><span class="p">(</span><span class="n">ANALOG_DATA_GPIO_Port</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">GPIO_InitStruct</span><span class="p">);</span>
-
-  <span class="cm">/*Configure GPIO pin : PtPin */</span>
-  <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pin</span> <span class="o">=</span> <span class="n">CARD_INSERT_Pin</span><span class="p">;</span>
+  <span class="cm">/*Configure GPIO pins : PCPin PCPin */</span>
+  <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pin</span> <span class="o">=</span> <span class="n">CHARGE_Pin</span><span class="o">|</span><span class="n">CARD_OK_Pin</span><span class="p">;</span>
   <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Mode</span> <span class="o">=</span> <span class="n">GPIO_MODE_INPUT</span><span class="p">;</span>
   <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pull</span> <span class="o">=</span> <span class="n">GPIO_NOPULL</span><span class="p">;</span>
-  <span class="n">HAL_GPIO_Init</span><span class="p">(</span><span class="n">CARD_INSERT_GPIO_Port</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">GPIO_InitStruct</span><span class="p">);</span>
+  <span class="n">HAL_GPIO_Init</span><span class="p">(</span><span class="n">GPIOC</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">GPIO_InitStruct</span><span class="p">);</span>
+
+  <span class="cm">/*Configure GPIO pins : PAPin PAPin PAPin PAPin */</span>
+  <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pin</span> <span class="o">=</span> <span class="n">FB_FROM_TSMS_Pin</span><span class="o">|</span><span class="n">FD_RELAY_LV_Pin</span><span class="o">|</span><span class="n">FB_IMD_FAULT_Pin</span><span class="o">|</span><span class="n">MUX_IN_Pin</span><span class="p">;</span>
+  <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Mode</span> <span class="o">=</span> <span class="n">GPIO_MODE_INPUT</span><span class="p">;</span>
+  <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pull</span> <span class="o">=</span> <span class="n">GPIO_NOPULL</span><span class="p">;</span>
+  <span class="n">HAL_GPIO_Init</span><span class="p">(</span><span class="n">GPIOA</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">GPIO_InitStruct</span><span class="p">);</span>
 
   <span class="cm">/*Configure GPIO pins : PAPin PAPin PAPin PAPin</span>
-<span class="cm">                           PAPin PAPin PAPin */</span>
-  <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pin</span> <span class="o">=</span> <span class="n">MUX_A2_Pin</span><span class="o">|</span><span class="n">MUX_A3_Pin</span><span class="o">|</span><span class="n">CS_LTC_Pin</span><span class="o">|</span><span class="n">BMS_FAULT_Pin</span>
-                          <span class="o">|</span><span class="n">TS_ON_Pin</span><span class="o">|</span><span class="n">PC_ENDED_Pin</span><span class="o">|</span><span class="n">HOLD_Pin</span><span class="p">;</span>
+<span class="cm">                           PAPin PAPin */</span>
+  <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pin</span> <span class="o">=</span> <span class="n">GPIO7_Pin</span><span class="o">|</span><span class="n">MUX_A0_Pin</span><span class="o">|</span><span class="n">MUX_A1_Pin</span><span class="o">|</span><span class="n">MUX_A2_Pin</span>
+                          <span class="o">|</span><span class="n">GPIO6_Pin</span><span class="o">|</span><span class="n">GPIO2_Pin</span><span class="p">;</span>
   <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Mode</span> <span class="o">=</span> <span class="n">GPIO_MODE_OUTPUT_PP</span><span class="p">;</span>
   <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pull</span> <span class="o">=</span> <span class="n">GPIO_NOPULL</span><span class="p">;</span>
   <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Speed</span> <span class="o">=</span> <span class="n">GPIO_SPEED_FREQ_LOW</span><span class="p">;</span>
   <span class="n">HAL_GPIO_Init</span><span class="p">(</span><span class="n">GPIOA</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">GPIO_InitStruct</span><span class="p">);</span>
 
   <span class="cm">/*Configure GPIO pins : PBPin PBPin PBPin PBPin</span>
-<span class="cm">                           PBPin PBPin */</span>
-  <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pin</span> <span class="o">=</span> <span class="n">ADC_SIN_Pin</span><span class="o">|</span><span class="n">MUX_A1_Pin</span><span class="o">|</span><span class="n">MUX_A0_Pin</span><span class="o">|</span><span class="n">CS_SD_Pin</span>
-                          <span class="o">|</span><span class="n">LED_2_Pin</span><span class="o">|</span><span class="n">LED_1_Pin</span><span class="p">;</span>
+<span class="cm">                           PBPin PBPin PBPin */</span>
+  <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pin</span> <span class="o">=</span> <span class="n">ADC_SIN_Pin</span><span class="o">|</span><span class="n">GPIO5_Pin</span><span class="o">|</span><span class="n">GPIO4_Pin</span><span class="o">|</span><span class="n">GPIO1_Pin</span>
+                          <span class="o">|</span><span class="n">GPIO3_Pin</span><span class="o">|</span><span class="n">LED2_Pin</span><span class="o">|</span><span class="n">LED1_Pin</span><span class="p">;</span>
   <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Mode</span> <span class="o">=</span> <span class="n">GPIO_MODE_OUTPUT_PP</span><span class="p">;</span>
   <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pull</span> <span class="o">=</span> <span class="n">GPIO_NOPULL</span><span class="p">;</span>
   <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Speed</span> <span class="o">=</span> <span class="n">GPIO_SPEED_FREQ_LOW</span><span class="p">;</span>
   <span class="n">HAL_GPIO_Init</span><span class="p">(</span><span class="n">GPIOB</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">GPIO_InitStruct</span><span class="p">);</span>
 
   <span class="cm">/*Configure GPIO pin : PtPin */</span>
-  <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pin</span> <span class="o">=</span> <span class="n">PWM_IMD_Pin</span><span class="p">;</span>
+  <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pin</span> <span class="o">=</span> <span class="n">IMD_PWM_Pin</span><span class="p">;</span>
   <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Mode</span> <span class="o">=</span> <span class="n">GPIO_MODE_INPUT</span><span class="p">;</span>
   <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pull</span> <span class="o">=</span> <span class="n">GPIO_NOPULL</span><span class="p">;</span>
-  <span class="n">HAL_GPIO_Init</span><span class="p">(</span><span class="n">PWM_IMD_GPIO_Port</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">GPIO_InitStruct</span><span class="p">);</span>
-
-  <span class="cm">/*Configure GPIO pin : PB4 */</span>
-  <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pin</span> <span class="o">=</span> <span class="n">GPIO_PIN_4</span><span class="p">;</span>
-  <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Mode</span> <span class="o">=</span> <span class="n">GPIO_MODE_AF_PP</span><span class="p">;</span>
-  <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pull</span> <span class="o">=</span> <span class="n">GPIO_NOPULL</span><span class="p">;</span>
-  <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Speed</span> <span class="o">=</span> <span class="n">GPIO_SPEED_FREQ_LOW</span><span class="p">;</span>
-  <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Alternate</span> <span class="o">=</span> <span class="n">GPIO_AF11_FDCAN3</span><span class="p">;</span>
-  <span class="n">HAL_GPIO_Init</span><span class="p">(</span><span class="n">GPIOB</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">GPIO_InitStruct</span><span class="p">);</span>
+  <span class="n">HAL_GPIO_Init</span><span class="p">(</span><span class="n">IMD_PWM_GPIO_Port</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">GPIO_InitStruct</span><span class="p">);</span>
 
   <span class="cm">/*Configure GPIO pin : PtPin */</span>
-  <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pin</span> <span class="o">=</span> <span class="n">CHARGE_Pin</span><span class="p">;</span>
-  <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Mode</span> <span class="o">=</span> <span class="n">GPIO_MODE_INPUT</span><span class="p">;</span>
+  <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pin</span> <span class="o">=</span> <span class="n">AIRM_OFF_Pin</span><span class="p">;</span>
+  <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Mode</span> <span class="o">=</span> <span class="n">GPIO_MODE_OUTPUT_PP</span><span class="p">;</span>
   <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pull</span> <span class="o">=</span> <span class="n">GPIO_NOPULL</span><span class="p">;</span>
-  <span class="n">HAL_GPIO_Init</span><span class="p">(</span><span class="n">CHARGE_GPIO_Port</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">GPIO_InitStruct</span><span class="p">);</span>
+  <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Speed</span> <span class="o">=</span> <span class="n">GPIO_SPEED_FREQ_LOW</span><span class="p">;</span>
+  <span class="n">HAL_GPIO_Init</span><span class="p">(</span><span class="n">AIRM_OFF_GPIO_Port</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">GPIO_InitStruct</span><span class="p">);</span>
 
 <span class="p">}</span>
 

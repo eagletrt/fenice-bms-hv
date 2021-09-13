@@ -167,7 +167,6 @@
 <span class="cp">#include</span> <span class="cpf">&quot;cli_bms.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;config.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;fenice_config.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;ltc6813_utils.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;pack.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;spi.h&quot;</span><span class="cp"></span>
 
@@ -184,11 +183,11 @@
 <span class="n">config_t</span> <span class="n">config</span><span class="p">;</span>
 
 <span class="kt">void</span> <span class="nf">off_entry</span><span class="p">(</span><span class="n">fsm</span> <span class="n">FSM</span><span class="p">);</span>
-<span class="n">event_result</span> <span class="nf">off_handler</span><span class="p">(</span><span class="n">fsm</span> <span class="n">FSM</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">event</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">off_handler</span><span class="p">(</span><span class="n">fsm</span> <span class="n">FSM</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">event</span><span class="p">);</span>
 <span class="kt">void</span> <span class="nf">compute_entry</span><span class="p">(</span><span class="n">fsm</span> <span class="n">FSM</span><span class="p">);</span>
 <span class="kt">void</span> <span class="nf">discharge_entry</span><span class="p">(</span><span class="n">fsm</span> <span class="n">FSM</span><span class="p">);</span>
-<span class="n">event_result</span> <span class="nf">discharge_handler</span><span class="p">(</span><span class="n">fsm</span> <span class="n">FSM</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">event</span><span class="p">);</span>
-<span class="n">event_result</span> <span class="nf">cooldown_handler</span><span class="p">(</span><span class="n">fsm</span> <span class="n">FSM</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">event</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">discharge_handler</span><span class="p">(</span><span class="n">fsm</span> <span class="n">FSM</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">event</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">cooldown_handler</span><span class="p">(</span><span class="n">fsm</span> <span class="n">FSM</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">event</span><span class="p">);</span>
 
 <span class="n">voltage_t</span> <span class="nf">bal_get_threshold</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">return</span> <span class="p">((</span><span class="n">bal_params</span> <span class="o">*</span><span class="p">)</span><span class="n">config_get</span><span class="p">(</span><span class="n">config</span><span class="p">))</span><span class="o">-&gt;</span><span class="n">threshold</span><span class="p">;</span>
@@ -204,7 +203,7 @@
 
 <span class="kt">void</span> <span class="nf">bal_fsm_init</span><span class="p">()</span> <span class="p">{</span>
     <span class="n">bal</span><span class="p">.</span><span class="n">cycle_length</span> <span class="o">=</span> <span class="n">BAL_CYCLE_LENGTH</span><span class="p">;</span>
-    <span class="n">bal</span><span class="p">.</span><span class="n">fsm</span>          <span class="o">=</span> <span class="n">fsm_init</span><span class="p">(</span><span class="n">BAL_NUM_STATES</span><span class="p">,</span> <span class="n">BAL_EV_NUM</span><span class="p">);</span>
+    <span class="n">bal</span><span class="p">.</span><span class="n">fsm</span>          <span class="o">=</span> <span class="n">fsm_init</span><span class="p">(</span><span class="n">BAL_NUM_STATES</span><span class="p">,</span> <span class="n">BAL_EV_NUM</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
 
     <span class="n">fsm_state</span> <span class="n">state</span><span class="p">;</span>
     <span class="n">state</span><span class="p">.</span><span class="n">handler</span> <span class="o">=</span> <span class="n">off_handler</span><span class="p">;</span>
@@ -232,17 +231,14 @@
 
 <span class="kt">void</span> <span class="nf">off_entry</span><span class="p">(</span><span class="n">fsm</span> <span class="n">FSM</span><span class="p">)</span> <span class="p">{</span>
     <span class="kt">uint16_t</span> <span class="n">cells</span><span class="p">[</span><span class="n">PACK_CELL_COUNT</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
-    <span class="n">ltc6813_set_balancing</span><span class="p">(</span><span class="o">&amp;</span><span class="n">LTC6813_PERIPHERAL</span><span class="p">,</span> <span class="n">cells</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="n">event_result</span> <span class="nf">off_handler</span><span class="p">(</span><span class="n">fsm</span> <span class="n">FSM</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">event</span><span class="p">)</span> <span class="p">{</span>
+<span class="kt">void</span> <span class="nf">off_handler</span><span class="p">(</span><span class="n">fsm</span> <span class="n">FSM</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">event</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">switch</span> <span class="p">(</span><span class="n">event</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">case</span> <span class="nl">EV_BAL_START</span><span class="p">:</span>
             <span class="n">fsm_transition</span><span class="p">(</span><span class="n">FSM</span><span class="p">,</span> <span class="n">BAL_COMPUTE</span><span class="p">);</span>
-            <span class="k">return</span> <span class="n">EVENT_HANDLED</span><span class="p">;</span>
             <span class="k">break</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="k">return</span> <span class="n">EVENT_UNKNOWN</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">compute_entry</span><span class="p">(</span><span class="n">fsm</span> <span class="n">FSM</span><span class="p">)</span> <span class="p">{</span>
@@ -255,44 +251,37 @@
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">discharge_entry</span><span class="p">(</span><span class="n">fsm</span> <span class="n">FSM</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">ltc6813_set_balancing</span><span class="p">(</span><span class="o">&amp;</span><span class="n">LTC6813_PERIPHERAL</span><span class="p">,</span> <span class="n">bal</span><span class="p">.</span><span class="n">cells</span><span class="p">,</span> <span class="n">bal</span><span class="p">.</span><span class="n">cycle_length</span><span class="p">);</span>
     <span class="n">bal</span><span class="p">.</span><span class="n">discharge_time</span> <span class="o">=</span> <span class="n">HAL_GetTick</span><span class="p">();</span>
     <span class="n">cli_bms_debug</span><span class="p">(</span><span class="s">&quot;Discharging cells&quot;</span><span class="p">,</span> <span class="mi">18</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="n">event_result</span> <span class="nf">discharge_handler</span><span class="p">(</span><span class="n">fsm</span> <span class="n">FSM</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">event</span><span class="p">)</span> <span class="p">{</span>
+<span class="kt">void</span> <span class="nf">discharge_handler</span><span class="p">(</span><span class="n">fsm</span> <span class="n">FSM</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">event</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">switch</span> <span class="p">(</span><span class="n">event</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">case</span> <span class="nl">EV_BAL_STOP</span><span class="p">:</span>
             <span class="n">fsm_transition</span><span class="p">(</span><span class="n">FSM</span><span class="p">,</span> <span class="n">BAL_OFF</span><span class="p">);</span>
-            <span class="k">return</span> <span class="n">EVENT_HANDLED</span><span class="p">;</span>
             <span class="k">break</span><span class="p">;</span>
         <span class="k">case</span> <span class="nl">EV_BAL_CHECK_TIMER</span><span class="p">:</span>
             <span class="k">if</span> <span class="p">(</span><span class="n">bal</span><span class="p">.</span><span class="n">discharge_time</span> <span class="o">-</span> <span class="n">HAL_GetTick</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="n">bal</span><span class="p">.</span><span class="n">cycle_length</span><span class="p">)</span> <span class="p">{</span>
                 <span class="n">fsm_transition</span><span class="p">(</span><span class="n">FSM</span><span class="p">,</span> <span class="n">BAL_COOLDOWN</span><span class="p">);</span>
             <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-                <span class="n">fsm_catch_event</span><span class="p">(</span><span class="n">FSM</span><span class="p">,</span> <span class="n">EV_BAL_CHECK_TIMER</span><span class="p">);</span>
+                <span class="n">fsm_trigger_event</span><span class="p">(</span><span class="n">FSM</span><span class="p">,</span> <span class="n">EV_BAL_CHECK_TIMER</span><span class="p">);</span>
             <span class="p">}</span>
-            <span class="k">return</span> <span class="n">EVENT_HANDLED</span><span class="p">;</span>
             <span class="k">break</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="k">return</span> <span class="n">EVENT_UNKNOWN</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="n">event_result</span> <span class="nf">cooldown_handler</span><span class="p">(</span><span class="n">fsm</span> <span class="n">FSM</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">event</span><span class="p">)</span> <span class="p">{</span>
+<span class="kt">void</span> <span class="nf">cooldown_handler</span><span class="p">(</span><span class="n">fsm</span> <span class="n">FSM</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">event</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">switch</span> <span class="p">(</span><span class="n">event</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">case</span> <span class="nl">EV_BAL_STOP</span><span class="p">:</span>
             <span class="n">fsm_transition</span><span class="p">(</span><span class="n">FSM</span><span class="p">,</span> <span class="n">BAL_OFF</span><span class="p">);</span>
-            <span class="k">return</span> <span class="n">EVENT_HANDLED</span><span class="p">;</span>
         <span class="k">case</span> <span class="nl">EV_BAL_CHECK_TIMER</span><span class="p">:</span>
             <span class="k">if</span> <span class="p">(</span><span class="n">bal</span><span class="p">.</span><span class="n">discharge_time</span> <span class="o">-</span> <span class="n">HAL_GetTick</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="n">bal</span><span class="p">.</span><span class="n">cycle_length</span> <span class="o">+</span> <span class="n">BAL_COOLDOWN_DELAY</span><span class="p">)</span> <span class="p">{</span>
                 <span class="n">fsm_transition</span><span class="p">(</span><span class="n">FSM</span><span class="p">,</span> <span class="n">BAL_COMPUTE</span><span class="p">);</span>
             <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-                <span class="n">fsm_catch_event</span><span class="p">(</span><span class="n">FSM</span><span class="p">,</span> <span class="n">EV_BAL_CHECK_TIMER</span><span class="p">);</span>
+                <span class="n">fsm_trigger_event</span><span class="p">(</span><span class="n">FSM</span><span class="p">,</span> <span class="n">EV_BAL_CHECK_TIMER</span><span class="p">);</span>
             <span class="p">}</span>
-            <span class="k">return</span> <span class="n">EVENT_HANDLED</span><span class="p">;</span>
             <span class="k">break</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="k">return</span> <span class="n">EVENT_UNKNOWN</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>

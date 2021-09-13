@@ -1,0 +1,791 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Program Listing for File system_stm32f4xx.c &mdash; Fenice BMS HV 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Fenice BMS HV
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Software</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Fenice BMS HV</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Program Listing for File system_stm32f4xx.c</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/api/program_listing_file_mainboard_Src_system_stm32f4xx.c.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="program-listing-for-file-system-stm32f4xx-c">
+<span id="program-listing-file-mainboard-src-system-stm32f4xx-c"></span><h1>Program Listing for File system_stm32f4xx.c<a class="headerlink" href="#program-listing-for-file-system-stm32f4xx-c" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_mainboard_Src_system_stm32f4xx.c.html#file-mainboard-src-system-stm32f4xx-c"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">mainboard/Src/system_stm32f4xx.c</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;stm32f4xx.h&quot;</span><span class="cp"></span>
+
+<span class="cp">#if !defined  (HSE_VALUE)</span>
+  <span class="cp">#define HSE_VALUE    ((uint32_t)25000000)</span>
+<span class="cp">#endif </span><span class="cm">/* HSE_VALUE */</span><span class="cp"></span>
+
+<span class="cp">#if !defined  (HSI_VALUE)</span>
+  <span class="cp">#define HSI_VALUE    ((uint32_t)16000000)</span>
+<span class="cp">#endif </span><span class="cm">/* HSI_VALUE */</span><span class="cp"></span>
+
+<span class="cm">/************************* Miscellaneous Configuration ************************/</span>
+<span class="cp">#if defined(STM32F405xx) || defined(STM32F415xx) || defined(STM32F407xx) || defined(STM32F417xx)\</span>
+<span class="cp"> || defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx)\</span>
+<span class="cp"> || defined(STM32F469xx) || defined(STM32F479xx) || defined(STM32F412Zx) || defined(STM32F412Vx)</span>
+<span class="cm">/* #define DATA_IN_ExtSRAM */</span>
+<span class="cp">#endif </span><span class="cm">/* STM32F40xxx || STM32F41xxx || STM32F42xxx || STM32F43xxx || STM32F469xx || STM32F479xx ||\</span>
+<span class="cm">          STM32F412Zx || STM32F412Vx */</span><span class="cp"></span>
+
+<span class="cp">#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx)\</span>
+<span class="cp"> || defined(STM32F446xx) || defined(STM32F469xx) || defined(STM32F479xx)</span>
+<span class="cm">/* #define DATA_IN_ExtSDRAM */</span>
+<span class="cp">#endif </span><span class="cm">/* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx || STM32F446xx || STM32F469xx ||\</span>
+<span class="cm">          STM32F479xx */</span><span class="cp"></span>
+
+<span class="cm">/* Note: Following vector table addresses must be defined in line with linker</span>
+<span class="cm">         configuration. */</span>
+<span class="cm">/* #define USER_VECT_TAB_ADDRESS */</span>
+
+<span class="cp">#if defined(USER_VECT_TAB_ADDRESS)</span>
+
+<span class="cm">/* #define VECT_TAB_SRAM */</span>
+<span class="cp">#if defined(VECT_TAB_SRAM)</span>
+<span class="cp">#define VECT_TAB_BASE_ADDRESS   SRAM_BASE</span>
+<span class="cp">#define VECT_TAB_OFFSET         0x00000000U</span>
+<span class="cp">#else</span>
+<span class="cp">#define VECT_TAB_BASE_ADDRESS   FLASH_BASE</span>
+<span class="cp">#define VECT_TAB_OFFSET         0x00000000U</span>
+<span class="cp">#endif </span><span class="cm">/* VECT_TAB_SRAM */</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* USER_VECT_TAB_ADDRESS */</span><span class="cp"></span>
+<span class="cm">/******************************************************************************/</span>
+
+  <span class="cm">/* This variable is updated in three ways:</span>
+<span class="cm">      1) by calling CMSIS function SystemCoreClockUpdate()</span>
+<span class="cm">      2) by calling HAL API function HAL_RCC_GetHCLKFreq()</span>
+<span class="cm">      3) each time HAL_RCC_ClockConfig() is called to configure the system clock frequency</span>
+<span class="cm">         Note: If you use this function to configure the system clock; then there</span>
+<span class="cm">               is no need to call the 2 first functions listed above, since SystemCoreClock</span>
+<span class="cm">               variable is updated automatically.</span>
+<span class="cm">  */</span>
+<span class="kt">uint32_t</span> <span class="n">SystemCoreClock</span> <span class="o">=</span> <span class="mi">16000000</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">uint8_t</span> <span class="n">AHBPrescTable</span><span class="p">[</span><span class="mi">16</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">};</span>
+<span class="k">const</span> <span class="kt">uint8_t</span> <span class="n">APBPrescTable</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span>  <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">};</span>
+<span class="cp">#if defined (DATA_IN_ExtSRAM) || defined (DATA_IN_ExtSDRAM)</span>
+  <span class="k">static</span> <span class="kt">void</span> <span class="nf">SystemInit_ExtMemCtl</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="cp">#endif </span><span class="cm">/* DATA_IN_ExtSRAM || DATA_IN_ExtSDRAM */</span><span class="cp"></span>
+
+<span class="kt">void</span> <span class="nf">SystemInit</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="cm">/* FPU settings ------------------------------------------------------------*/</span>
+  <span class="cp">#if (__FPU_PRESENT == 1) &amp;&amp; (__FPU_USED == 1)</span>
+    <span class="n">SCB</span><span class="o">-&gt;</span><span class="n">CPACR</span> <span class="o">|=</span> <span class="p">((</span><span class="mi">3UL</span> <span class="o">&lt;&lt;</span> <span class="mi">10</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span><span class="o">|</span><span class="p">(</span><span class="mi">3UL</span> <span class="o">&lt;&lt;</span> <span class="mi">11</span><span class="o">*</span><span class="mi">2</span><span class="p">));</span>  <span class="cm">/* set CP10 and CP11 Full Access */</span>
+  <span class="cp">#endif</span>
+
+<span class="cp">#if defined (DATA_IN_ExtSRAM) || defined (DATA_IN_ExtSDRAM)</span>
+  <span class="n">SystemInit_ExtMemCtl</span><span class="p">();</span>
+<span class="cp">#endif </span><span class="cm">/* DATA_IN_ExtSRAM || DATA_IN_ExtSDRAM */</span><span class="cp"></span>
+
+  <span class="cm">/* Configure the Vector Table location -------------------------------------*/</span>
+<span class="cp">#if defined(USER_VECT_TAB_ADDRESS)</span>
+  <span class="n">SCB</span><span class="o">-&gt;</span><span class="n">VTOR</span> <span class="o">=</span> <span class="n">VECT_TAB_BASE_ADDRESS</span> <span class="o">|</span> <span class="n">VECT_TAB_OFFSET</span><span class="p">;</span> <span class="cm">/* Vector Table Relocation in Internal SRAM */</span>
+<span class="cp">#endif </span><span class="cm">/* USER_VECT_TAB_ADDRESS */</span><span class="cp"></span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">SystemCoreClockUpdate</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">uint32_t</span> <span class="n">tmp</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">pllvco</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">pllp</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">pllsource</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">pllm</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+  <span class="cm">/* Get SYSCLK source -------------------------------------------------------*/</span>
+  <span class="n">tmp</span> <span class="o">=</span> <span class="n">RCC</span><span class="o">-&gt;</span><span class="n">CFGR</span> <span class="o">&amp;</span> <span class="n">RCC_CFGR_SWS</span><span class="p">;</span>
+
+  <span class="k">switch</span> <span class="p">(</span><span class="n">tmp</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="k">case</span> <span class="mh">0x00</span><span class="o">:</span>  <span class="cm">/* HSI used as system clock source */</span>
+      <span class="n">SystemCoreClock</span> <span class="o">=</span> <span class="n">HSI_VALUE</span><span class="p">;</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="mh">0x04</span><span class="o">:</span>  <span class="cm">/* HSE used as system clock source */</span>
+      <span class="n">SystemCoreClock</span> <span class="o">=</span> <span class="n">HSE_VALUE</span><span class="p">;</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="mh">0x08</span><span class="o">:</span>  <span class="cm">/* PLL used as system clock source */</span>
+
+      <span class="cm">/* PLL_VCO = (HSE_VALUE or HSI_VALUE / PLL_M) * PLL_N</span>
+<span class="cm">         SYSCLK = PLL_VCO / PLL_P</span>
+<span class="cm">         */</span>
+      <span class="n">pllsource</span> <span class="o">=</span> <span class="p">(</span><span class="n">RCC</span><span class="o">-&gt;</span><span class="n">PLLCFGR</span> <span class="o">&amp;</span> <span class="n">RCC_PLLCFGR_PLLSRC</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="mi">22</span><span class="p">;</span>
+      <span class="n">pllm</span> <span class="o">=</span> <span class="n">RCC</span><span class="o">-&gt;</span><span class="n">PLLCFGR</span> <span class="o">&amp;</span> <span class="n">RCC_PLLCFGR_PLLM</span><span class="p">;</span>
+
+      <span class="k">if</span> <span class="p">(</span><span class="n">pllsource</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
+      <span class="p">{</span>
+        <span class="cm">/* HSE used as PLL clock source */</span>
+        <span class="n">pllvco</span> <span class="o">=</span> <span class="p">(</span><span class="n">HSE_VALUE</span> <span class="o">/</span> <span class="n">pllm</span><span class="p">)</span> <span class="o">*</span> <span class="p">((</span><span class="n">RCC</span><span class="o">-&gt;</span><span class="n">PLLCFGR</span> <span class="o">&amp;</span> <span class="n">RCC_PLLCFGR_PLLN</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="mi">6</span><span class="p">);</span>
+      <span class="p">}</span>
+      <span class="k">else</span>
+      <span class="p">{</span>
+        <span class="cm">/* HSI used as PLL clock source */</span>
+        <span class="n">pllvco</span> <span class="o">=</span> <span class="p">(</span><span class="n">HSI_VALUE</span> <span class="o">/</span> <span class="n">pllm</span><span class="p">)</span> <span class="o">*</span> <span class="p">((</span><span class="n">RCC</span><span class="o">-&gt;</span><span class="n">PLLCFGR</span> <span class="o">&amp;</span> <span class="n">RCC_PLLCFGR_PLLN</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="mi">6</span><span class="p">);</span>
+      <span class="p">}</span>
+
+      <span class="n">pllp</span> <span class="o">=</span> <span class="p">(((</span><span class="n">RCC</span><span class="o">-&gt;</span><span class="n">PLLCFGR</span> <span class="o">&amp;</span> <span class="n">RCC_PLLCFGR_PLLP</span><span class="p">)</span> <span class="o">&gt;&gt;</span><span class="mi">16</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">)</span> <span class="o">*</span><span class="mi">2</span><span class="p">;</span>
+      <span class="n">SystemCoreClock</span> <span class="o">=</span> <span class="n">pllvco</span><span class="o">/</span><span class="n">pllp</span><span class="p">;</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="k">default</span><span class="o">:</span>
+      <span class="n">SystemCoreClock</span> <span class="o">=</span> <span class="n">HSI_VALUE</span><span class="p">;</span>
+      <span class="k">break</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="cm">/* Compute HCLK frequency --------------------------------------------------*/</span>
+  <span class="cm">/* Get HCLK prescaler */</span>
+  <span class="n">tmp</span> <span class="o">=</span> <span class="n">AHBPrescTable</span><span class="p">[((</span><span class="n">RCC</span><span class="o">-&gt;</span><span class="n">CFGR</span> <span class="o">&amp;</span> <span class="n">RCC_CFGR_HPRE</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="mi">4</span><span class="p">)];</span>
+  <span class="cm">/* HCLK frequency */</span>
+  <span class="n">SystemCoreClock</span> <span class="o">&gt;&gt;=</span> <span class="n">tmp</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cp">#if defined (DATA_IN_ExtSRAM) &amp;&amp; defined (DATA_IN_ExtSDRAM)</span>
+<span class="cp">#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx)\</span>
+<span class="cp"> || defined(STM32F469xx) || defined(STM32F479xx)</span>
+
+<span class="kt">void</span> <span class="nf">SystemInit_ExtMemCtl</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">__IO</span> <span class="kt">uint32_t</span> <span class="n">tmp</span> <span class="o">=</span> <span class="mh">0x00</span><span class="p">;</span>
+
+  <span class="k">register</span> <span class="kt">uint32_t</span> <span class="n">tmpreg</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">timeout</span> <span class="o">=</span> <span class="mh">0xFFFF</span><span class="p">;</span>
+  <span class="k">register</span> <span class="n">__IO</span> <span class="kt">uint32_t</span> <span class="n">index</span><span class="p">;</span>
+
+  <span class="cm">/* Enable GPIOC, GPIOD, GPIOE, GPIOF, GPIOG, GPIOH and GPIOI interface clock */</span>
+  <span class="n">RCC</span><span class="o">-&gt;</span><span class="n">AHB1ENR</span> <span class="o">|=</span> <span class="mh">0x000001F8</span><span class="p">;</span>
+
+  <span class="cm">/* Delay after an RCC peripheral clock enabling */</span>
+  <span class="n">tmp</span> <span class="o">=</span> <span class="n">READ_BIT</span><span class="p">(</span><span class="n">RCC</span><span class="o">-&gt;</span><span class="n">AHB1ENR</span><span class="p">,</span> <span class="n">RCC_AHB1ENR_GPIOCEN</span><span class="p">);</span>
+
+  <span class="cm">/* Connect PDx pins to FMC Alternate function */</span>
+  <span class="n">GPIOD</span><span class="o">-&gt;</span><span class="n">AFR</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0x00CCC0CC</span><span class="p">;</span>
+  <span class="n">GPIOD</span><span class="o">-&gt;</span><span class="n">AFR</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0xCCCCCCCC</span><span class="p">;</span>
+  <span class="cm">/* Configure PDx pins in Alternate function mode */</span>
+  <span class="n">GPIOD</span><span class="o">-&gt;</span><span class="n">MODER</span>   <span class="o">=</span> <span class="mh">0xAAAA0A8A</span><span class="p">;</span>
+  <span class="cm">/* Configure PDx pins speed to 100 MHz */</span>
+  <span class="n">GPIOD</span><span class="o">-&gt;</span><span class="n">OSPEEDR</span> <span class="o">=</span> <span class="mh">0xFFFF0FCF</span><span class="p">;</span>
+  <span class="cm">/* Configure PDx pins Output type to push-pull */</span>
+  <span class="n">GPIOD</span><span class="o">-&gt;</span><span class="n">OTYPER</span>  <span class="o">=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+  <span class="cm">/* No pull-up, pull-down for PDx pins */</span>
+  <span class="n">GPIOD</span><span class="o">-&gt;</span><span class="n">PUPDR</span>   <span class="o">=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+
+  <span class="cm">/* Connect PEx pins to FMC Alternate function */</span>
+  <span class="n">GPIOE</span><span class="o">-&gt;</span><span class="n">AFR</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0xC00CC0CC</span><span class="p">;</span>
+  <span class="n">GPIOE</span><span class="o">-&gt;</span><span class="n">AFR</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0xCCCCCCCC</span><span class="p">;</span>
+  <span class="cm">/* Configure PEx pins in Alternate function mode */</span>
+  <span class="n">GPIOE</span><span class="o">-&gt;</span><span class="n">MODER</span>   <span class="o">=</span> <span class="mh">0xAAAA828A</span><span class="p">;</span>
+  <span class="cm">/* Configure PEx pins speed to 100 MHz */</span>
+  <span class="n">GPIOE</span><span class="o">-&gt;</span><span class="n">OSPEEDR</span> <span class="o">=</span> <span class="mh">0xFFFFC3CF</span><span class="p">;</span>
+  <span class="cm">/* Configure PEx pins Output type to push-pull */</span>
+  <span class="n">GPIOE</span><span class="o">-&gt;</span><span class="n">OTYPER</span>  <span class="o">=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+  <span class="cm">/* No pull-up, pull-down for PEx pins */</span>
+  <span class="n">GPIOE</span><span class="o">-&gt;</span><span class="n">PUPDR</span>   <span class="o">=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+
+  <span class="cm">/* Connect PFx pins to FMC Alternate function */</span>
+  <span class="n">GPIOF</span><span class="o">-&gt;</span><span class="n">AFR</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0xCCCCCCCC</span><span class="p">;</span>
+  <span class="n">GPIOF</span><span class="o">-&gt;</span><span class="n">AFR</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0xCCCCCCCC</span><span class="p">;</span>
+  <span class="cm">/* Configure PFx pins in Alternate function mode */</span>
+  <span class="n">GPIOF</span><span class="o">-&gt;</span><span class="n">MODER</span>   <span class="o">=</span> <span class="mh">0xAA800AAA</span><span class="p">;</span>
+  <span class="cm">/* Configure PFx pins speed to 50 MHz */</span>
+  <span class="n">GPIOF</span><span class="o">-&gt;</span><span class="n">OSPEEDR</span> <span class="o">=</span> <span class="mh">0xAA800AAA</span><span class="p">;</span>
+  <span class="cm">/* Configure PFx pins Output type to push-pull */</span>
+  <span class="n">GPIOF</span><span class="o">-&gt;</span><span class="n">OTYPER</span>  <span class="o">=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+  <span class="cm">/* No pull-up, pull-down for PFx pins */</span>
+  <span class="n">GPIOF</span><span class="o">-&gt;</span><span class="n">PUPDR</span>   <span class="o">=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+
+  <span class="cm">/* Connect PGx pins to FMC Alternate function */</span>
+  <span class="n">GPIOG</span><span class="o">-&gt;</span><span class="n">AFR</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0xCCCCCCCC</span><span class="p">;</span>
+  <span class="n">GPIOG</span><span class="o">-&gt;</span><span class="n">AFR</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0xCCCCCCCC</span><span class="p">;</span>
+  <span class="cm">/* Configure PGx pins in Alternate function mode */</span>
+  <span class="n">GPIOG</span><span class="o">-&gt;</span><span class="n">MODER</span>   <span class="o">=</span> <span class="mh">0xAAAAAAAA</span><span class="p">;</span>
+  <span class="cm">/* Configure PGx pins speed to 50 MHz */</span>
+  <span class="n">GPIOG</span><span class="o">-&gt;</span><span class="n">OSPEEDR</span> <span class="o">=</span> <span class="mh">0xAAAAAAAA</span><span class="p">;</span>
+  <span class="cm">/* Configure PGx pins Output type to push-pull */</span>
+  <span class="n">GPIOG</span><span class="o">-&gt;</span><span class="n">OTYPER</span>  <span class="o">=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+  <span class="cm">/* No pull-up, pull-down for PGx pins */</span>
+  <span class="n">GPIOG</span><span class="o">-&gt;</span><span class="n">PUPDR</span>   <span class="o">=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+
+  <span class="cm">/* Connect PHx pins to FMC Alternate function */</span>
+  <span class="n">GPIOH</span><span class="o">-&gt;</span><span class="n">AFR</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0x00C0CC00</span><span class="p">;</span>
+  <span class="n">GPIOH</span><span class="o">-&gt;</span><span class="n">AFR</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0xCCCCCCCC</span><span class="p">;</span>
+  <span class="cm">/* Configure PHx pins in Alternate function mode */</span>
+  <span class="n">GPIOH</span><span class="o">-&gt;</span><span class="n">MODER</span>   <span class="o">=</span> <span class="mh">0xAAAA08A0</span><span class="p">;</span>
+  <span class="cm">/* Configure PHx pins speed to 50 MHz */</span>
+  <span class="n">GPIOH</span><span class="o">-&gt;</span><span class="n">OSPEEDR</span> <span class="o">=</span> <span class="mh">0xAAAA08A0</span><span class="p">;</span>
+  <span class="cm">/* Configure PHx pins Output type to push-pull */</span>
+  <span class="n">GPIOH</span><span class="o">-&gt;</span><span class="n">OTYPER</span>  <span class="o">=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+  <span class="cm">/* No pull-up, pull-down for PHx pins */</span>
+  <span class="n">GPIOH</span><span class="o">-&gt;</span><span class="n">PUPDR</span>   <span class="o">=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+
+  <span class="cm">/* Connect PIx pins to FMC Alternate function */</span>
+  <span class="n">GPIOI</span><span class="o">-&gt;</span><span class="n">AFR</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0xCCCCCCCC</span><span class="p">;</span>
+  <span class="n">GPIOI</span><span class="o">-&gt;</span><span class="n">AFR</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0x00000CC0</span><span class="p">;</span>
+  <span class="cm">/* Configure PIx pins in Alternate function mode */</span>
+  <span class="n">GPIOI</span><span class="o">-&gt;</span><span class="n">MODER</span>   <span class="o">=</span> <span class="mh">0x0028AAAA</span><span class="p">;</span>
+  <span class="cm">/* Configure PIx pins speed to 50 MHz */</span>
+  <span class="n">GPIOI</span><span class="o">-&gt;</span><span class="n">OSPEEDR</span> <span class="o">=</span> <span class="mh">0x0028AAAA</span><span class="p">;</span>
+  <span class="cm">/* Configure PIx pins Output type to push-pull */</span>
+  <span class="n">GPIOI</span><span class="o">-&gt;</span><span class="n">OTYPER</span>  <span class="o">=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+  <span class="cm">/* No pull-up, pull-down for PIx pins */</span>
+  <span class="n">GPIOI</span><span class="o">-&gt;</span><span class="n">PUPDR</span>   <span class="o">=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+
+<span class="cm">/*-- FMC Configuration -------------------------------------------------------*/</span>
+  <span class="cm">/* Enable the FMC interface clock */</span>
+  <span class="n">RCC</span><span class="o">-&gt;</span><span class="n">AHB3ENR</span> <span class="o">|=</span> <span class="mh">0x00000001</span><span class="p">;</span>
+  <span class="cm">/* Delay after an RCC peripheral clock enabling */</span>
+  <span class="n">tmp</span> <span class="o">=</span> <span class="n">READ_BIT</span><span class="p">(</span><span class="n">RCC</span><span class="o">-&gt;</span><span class="n">AHB3ENR</span><span class="p">,</span> <span class="n">RCC_AHB3ENR_FMCEN</span><span class="p">);</span>
+
+  <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDCR</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0x000019E4</span><span class="p">;</span>
+  <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDTR</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0x01115351</span><span class="p">;</span>
+
+  <span class="cm">/* SDRAM initialization sequence */</span>
+  <span class="cm">/* Clock enable command */</span>
+  <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDCMR</span> <span class="o">=</span> <span class="mh">0x00000011</span><span class="p">;</span>
+  <span class="n">tmpreg</span> <span class="o">=</span> <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDSR</span> <span class="o">&amp;</span> <span class="mh">0x00000020</span><span class="p">;</span>
+  <span class="k">while</span><span class="p">((</span><span class="n">tmpreg</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">timeout</span><span class="o">--</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">))</span>
+  <span class="p">{</span>
+    <span class="n">tmpreg</span> <span class="o">=</span> <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDSR</span> <span class="o">&amp;</span> <span class="mh">0x00000020</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="cm">/* Delay */</span>
+  <span class="k">for</span> <span class="p">(</span><span class="n">index</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">index</span><span class="o">&lt;</span><span class="mi">1000</span><span class="p">;</span> <span class="n">index</span><span class="o">++</span><span class="p">);</span>
+
+  <span class="cm">/* PALL command */</span>
+  <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDCMR</span> <span class="o">=</span> <span class="mh">0x00000012</span><span class="p">;</span>
+  <span class="n">tmpreg</span> <span class="o">=</span> <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDSR</span> <span class="o">&amp;</span> <span class="mh">0x00000020</span><span class="p">;</span>
+  <span class="n">timeout</span> <span class="o">=</span> <span class="mh">0xFFFF</span><span class="p">;</span>
+  <span class="k">while</span><span class="p">((</span><span class="n">tmpreg</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">timeout</span><span class="o">--</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">))</span>
+  <span class="p">{</span>
+    <span class="n">tmpreg</span> <span class="o">=</span> <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDSR</span> <span class="o">&amp;</span> <span class="mh">0x00000020</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="cm">/* Auto refresh command */</span>
+  <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDCMR</span> <span class="o">=</span> <span class="mh">0x00000073</span><span class="p">;</span>
+  <span class="n">tmpreg</span> <span class="o">=</span> <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDSR</span> <span class="o">&amp;</span> <span class="mh">0x00000020</span><span class="p">;</span>
+  <span class="n">timeout</span> <span class="o">=</span> <span class="mh">0xFFFF</span><span class="p">;</span>
+  <span class="k">while</span><span class="p">((</span><span class="n">tmpreg</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">timeout</span><span class="o">--</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">))</span>
+  <span class="p">{</span>
+    <span class="n">tmpreg</span> <span class="o">=</span> <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDSR</span> <span class="o">&amp;</span> <span class="mh">0x00000020</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="cm">/* MRD register program */</span>
+  <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDCMR</span> <span class="o">=</span> <span class="mh">0x00046014</span><span class="p">;</span>
+  <span class="n">tmpreg</span> <span class="o">=</span> <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDSR</span> <span class="o">&amp;</span> <span class="mh">0x00000020</span><span class="p">;</span>
+  <span class="n">timeout</span> <span class="o">=</span> <span class="mh">0xFFFF</span><span class="p">;</span>
+  <span class="k">while</span><span class="p">((</span><span class="n">tmpreg</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">timeout</span><span class="o">--</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">))</span>
+  <span class="p">{</span>
+    <span class="n">tmpreg</span> <span class="o">=</span> <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDSR</span> <span class="o">&amp;</span> <span class="mh">0x00000020</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="cm">/* Set refresh count */</span>
+  <span class="n">tmpreg</span> <span class="o">=</span> <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDRTR</span><span class="p">;</span>
+  <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDRTR</span> <span class="o">=</span> <span class="p">(</span><span class="n">tmpreg</span> <span class="o">|</span> <span class="p">(</span><span class="mh">0x0000027C</span><span class="o">&lt;&lt;</span><span class="mi">1</span><span class="p">));</span>
+
+  <span class="cm">/* Disable write protection */</span>
+  <span class="n">tmpreg</span> <span class="o">=</span> <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDCR</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+  <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDCR</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">tmpreg</span> <span class="o">&amp;</span> <span class="mh">0xFFFFFDFF</span><span class="p">);</span>
+
+<span class="cp">#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx)</span>
+  <span class="cm">/* Configure and enable Bank1_SRAM2 */</span>
+  <span class="n">FMC_Bank1</span><span class="o">-&gt;</span><span class="n">BTCR</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0x00001011</span><span class="p">;</span>
+  <span class="n">FMC_Bank1</span><span class="o">-&gt;</span><span class="n">BTCR</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0x00000201</span><span class="p">;</span>
+  <span class="n">FMC_Bank1E</span><span class="o">-&gt;</span><span class="n">BWTR</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0x0fffffff</span><span class="p">;</span>
+<span class="cp">#endif </span><span class="cm">/* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx */</span><span class="cp"></span>
+<span class="cp">#if defined(STM32F469xx) || defined(STM32F479xx)</span>
+  <span class="cm">/* Configure and enable Bank1_SRAM2 */</span>
+  <span class="n">FMC_Bank1</span><span class="o">-&gt;</span><span class="n">BTCR</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0x00001091</span><span class="p">;</span>
+  <span class="n">FMC_Bank1</span><span class="o">-&gt;</span><span class="n">BTCR</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0x00110212</span><span class="p">;</span>
+  <span class="n">FMC_Bank1E</span><span class="o">-&gt;</span><span class="n">BWTR</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0x0fffffff</span><span class="p">;</span>
+<span class="cp">#endif </span><span class="cm">/* STM32F469xx || STM32F479xx */</span><span class="cp"></span>
+
+  <span class="p">(</span><span class="kt">void</span><span class="p">)(</span><span class="n">tmp</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="cp">#endif </span><span class="cm">/* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx || STM32F469xx || STM32F479xx */</span><span class="cp"></span>
+<span class="cp">#elif defined (DATA_IN_ExtSRAM) || defined (DATA_IN_ExtSDRAM)</span>
+
+<span class="kt">void</span> <span class="nf">SystemInit_ExtMemCtl</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">__IO</span> <span class="kt">uint32_t</span> <span class="n">tmp</span> <span class="o">=</span> <span class="mh">0x00</span><span class="p">;</span>
+<span class="cp">#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx)\</span>
+<span class="cp"> || defined(STM32F446xx) || defined(STM32F469xx) || defined(STM32F479xx)</span>
+<span class="cp">#if defined (DATA_IN_ExtSDRAM)</span>
+  <span class="k">register</span> <span class="kt">uint32_t</span> <span class="n">tmpreg</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">timeout</span> <span class="o">=</span> <span class="mh">0xFFFF</span><span class="p">;</span>
+  <span class="k">register</span> <span class="n">__IO</span> <span class="kt">uint32_t</span> <span class="n">index</span><span class="p">;</span>
+
+<span class="cp">#if defined(STM32F446xx)</span>
+  <span class="cm">/* Enable GPIOA, GPIOC, GPIOD, GPIOE, GPIOF, GPIOG interface</span>
+<span class="cm">      clock */</span>
+  <span class="n">RCC</span><span class="o">-&gt;</span><span class="n">AHB1ENR</span> <span class="o">|=</span> <span class="mh">0x0000007D</span><span class="p">;</span>
+<span class="cp">#else</span>
+  <span class="cm">/* Enable GPIOC, GPIOD, GPIOE, GPIOF, GPIOG, GPIOH and GPIOI interface</span>
+<span class="cm">      clock */</span>
+  <span class="n">RCC</span><span class="o">-&gt;</span><span class="n">AHB1ENR</span> <span class="o">|=</span> <span class="mh">0x000001F8</span><span class="p">;</span>
+<span class="cp">#endif </span><span class="cm">/* STM32F446xx */</span><span class="cp"></span>
+  <span class="cm">/* Delay after an RCC peripheral clock enabling */</span>
+  <span class="n">tmp</span> <span class="o">=</span> <span class="n">READ_BIT</span><span class="p">(</span><span class="n">RCC</span><span class="o">-&gt;</span><span class="n">AHB1ENR</span><span class="p">,</span> <span class="n">RCC_AHB1ENR_GPIOCEN</span><span class="p">);</span>
+
+<span class="cp">#if defined(STM32F446xx)</span>
+  <span class="cm">/* Connect PAx pins to FMC Alternate function */</span>
+  <span class="n">GPIOA</span><span class="o">-&gt;</span><span class="n">AFR</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="o">|=</span> <span class="mh">0xC0000000</span><span class="p">;</span>
+  <span class="n">GPIOA</span><span class="o">-&gt;</span><span class="n">AFR</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="o">|=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+  <span class="cm">/* Configure PDx pins in Alternate function mode */</span>
+  <span class="n">GPIOA</span><span class="o">-&gt;</span><span class="n">MODER</span>   <span class="o">|=</span> <span class="mh">0x00008000</span><span class="p">;</span>
+  <span class="cm">/* Configure PDx pins speed to 50 MHz */</span>
+  <span class="n">GPIOA</span><span class="o">-&gt;</span><span class="n">OSPEEDR</span> <span class="o">|=</span> <span class="mh">0x00008000</span><span class="p">;</span>
+  <span class="cm">/* Configure PDx pins Output type to push-pull */</span>
+  <span class="n">GPIOA</span><span class="o">-&gt;</span><span class="n">OTYPER</span>  <span class="o">|=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+  <span class="cm">/* No pull-up, pull-down for PDx pins */</span>
+  <span class="n">GPIOA</span><span class="o">-&gt;</span><span class="n">PUPDR</span>   <span class="o">|=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+
+  <span class="cm">/* Connect PCx pins to FMC Alternate function */</span>
+  <span class="n">GPIOC</span><span class="o">-&gt;</span><span class="n">AFR</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="o">|=</span> <span class="mh">0x00CC0000</span><span class="p">;</span>
+  <span class="n">GPIOC</span><span class="o">-&gt;</span><span class="n">AFR</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="o">|=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+  <span class="cm">/* Configure PDx pins in Alternate function mode */</span>
+  <span class="n">GPIOC</span><span class="o">-&gt;</span><span class="n">MODER</span>   <span class="o">|=</span> <span class="mh">0x00000A00</span><span class="p">;</span>
+  <span class="cm">/* Configure PDx pins speed to 50 MHz */</span>
+  <span class="n">GPIOC</span><span class="o">-&gt;</span><span class="n">OSPEEDR</span> <span class="o">|=</span> <span class="mh">0x00000A00</span><span class="p">;</span>
+  <span class="cm">/* Configure PDx pins Output type to push-pull */</span>
+  <span class="n">GPIOC</span><span class="o">-&gt;</span><span class="n">OTYPER</span>  <span class="o">|=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+  <span class="cm">/* No pull-up, pull-down for PDx pins */</span>
+  <span class="n">GPIOC</span><span class="o">-&gt;</span><span class="n">PUPDR</span>   <span class="o">|=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+<span class="cp">#endif </span><span class="cm">/* STM32F446xx */</span><span class="cp"></span>
+
+  <span class="cm">/* Connect PDx pins to FMC Alternate function */</span>
+  <span class="n">GPIOD</span><span class="o">-&gt;</span><span class="n">AFR</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0x000000CC</span><span class="p">;</span>
+  <span class="n">GPIOD</span><span class="o">-&gt;</span><span class="n">AFR</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0xCC000CCC</span><span class="p">;</span>
+  <span class="cm">/* Configure PDx pins in Alternate function mode */</span>
+  <span class="n">GPIOD</span><span class="o">-&gt;</span><span class="n">MODER</span>   <span class="o">=</span> <span class="mh">0xA02A000A</span><span class="p">;</span>
+  <span class="cm">/* Configure PDx pins speed to 50 MHz */</span>
+  <span class="n">GPIOD</span><span class="o">-&gt;</span><span class="n">OSPEEDR</span> <span class="o">=</span> <span class="mh">0xA02A000A</span><span class="p">;</span>
+  <span class="cm">/* Configure PDx pins Output type to push-pull */</span>
+  <span class="n">GPIOD</span><span class="o">-&gt;</span><span class="n">OTYPER</span>  <span class="o">=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+  <span class="cm">/* No pull-up, pull-down for PDx pins */</span>
+  <span class="n">GPIOD</span><span class="o">-&gt;</span><span class="n">PUPDR</span>   <span class="o">=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+
+  <span class="cm">/* Connect PEx pins to FMC Alternate function */</span>
+  <span class="n">GPIOE</span><span class="o">-&gt;</span><span class="n">AFR</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0xC00000CC</span><span class="p">;</span>
+  <span class="n">GPIOE</span><span class="o">-&gt;</span><span class="n">AFR</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0xCCCCCCCC</span><span class="p">;</span>
+  <span class="cm">/* Configure PEx pins in Alternate function mode */</span>
+  <span class="n">GPIOE</span><span class="o">-&gt;</span><span class="n">MODER</span>   <span class="o">=</span> <span class="mh">0xAAAA800A</span><span class="p">;</span>
+  <span class="cm">/* Configure PEx pins speed to 50 MHz */</span>
+  <span class="n">GPIOE</span><span class="o">-&gt;</span><span class="n">OSPEEDR</span> <span class="o">=</span> <span class="mh">0xAAAA800A</span><span class="p">;</span>
+  <span class="cm">/* Configure PEx pins Output type to push-pull */</span>
+  <span class="n">GPIOE</span><span class="o">-&gt;</span><span class="n">OTYPER</span>  <span class="o">=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+  <span class="cm">/* No pull-up, pull-down for PEx pins */</span>
+  <span class="n">GPIOE</span><span class="o">-&gt;</span><span class="n">PUPDR</span>   <span class="o">=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+
+  <span class="cm">/* Connect PFx pins to FMC Alternate function */</span>
+  <span class="n">GPIOF</span><span class="o">-&gt;</span><span class="n">AFR</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0xCCCCCCCC</span><span class="p">;</span>
+  <span class="n">GPIOF</span><span class="o">-&gt;</span><span class="n">AFR</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0xCCCCCCCC</span><span class="p">;</span>
+  <span class="cm">/* Configure PFx pins in Alternate function mode */</span>
+  <span class="n">GPIOF</span><span class="o">-&gt;</span><span class="n">MODER</span>   <span class="o">=</span> <span class="mh">0xAA800AAA</span><span class="p">;</span>
+  <span class="cm">/* Configure PFx pins speed to 50 MHz */</span>
+  <span class="n">GPIOF</span><span class="o">-&gt;</span><span class="n">OSPEEDR</span> <span class="o">=</span> <span class="mh">0xAA800AAA</span><span class="p">;</span>
+  <span class="cm">/* Configure PFx pins Output type to push-pull */</span>
+  <span class="n">GPIOF</span><span class="o">-&gt;</span><span class="n">OTYPER</span>  <span class="o">=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+  <span class="cm">/* No pull-up, pull-down for PFx pins */</span>
+  <span class="n">GPIOF</span><span class="o">-&gt;</span><span class="n">PUPDR</span>   <span class="o">=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+
+  <span class="cm">/* Connect PGx pins to FMC Alternate function */</span>
+  <span class="n">GPIOG</span><span class="o">-&gt;</span><span class="n">AFR</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0xCCCCCCCC</span><span class="p">;</span>
+  <span class="n">GPIOG</span><span class="o">-&gt;</span><span class="n">AFR</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0xCCCCCCCC</span><span class="p">;</span>
+  <span class="cm">/* Configure PGx pins in Alternate function mode */</span>
+  <span class="n">GPIOG</span><span class="o">-&gt;</span><span class="n">MODER</span>   <span class="o">=</span> <span class="mh">0xAAAAAAAA</span><span class="p">;</span>
+  <span class="cm">/* Configure PGx pins speed to 50 MHz */</span>
+  <span class="n">GPIOG</span><span class="o">-&gt;</span><span class="n">OSPEEDR</span> <span class="o">=</span> <span class="mh">0xAAAAAAAA</span><span class="p">;</span>
+  <span class="cm">/* Configure PGx pins Output type to push-pull */</span>
+  <span class="n">GPIOG</span><span class="o">-&gt;</span><span class="n">OTYPER</span>  <span class="o">=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+  <span class="cm">/* No pull-up, pull-down for PGx pins */</span>
+  <span class="n">GPIOG</span><span class="o">-&gt;</span><span class="n">PUPDR</span>   <span class="o">=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+
+<span class="cp">#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx)\</span>
+<span class="cp"> || defined(STM32F469xx) || defined(STM32F479xx)</span>
+  <span class="cm">/* Connect PHx pins to FMC Alternate function */</span>
+  <span class="n">GPIOH</span><span class="o">-&gt;</span><span class="n">AFR</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0x00C0CC00</span><span class="p">;</span>
+  <span class="n">GPIOH</span><span class="o">-&gt;</span><span class="n">AFR</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0xCCCCCCCC</span><span class="p">;</span>
+  <span class="cm">/* Configure PHx pins in Alternate function mode */</span>
+  <span class="n">GPIOH</span><span class="o">-&gt;</span><span class="n">MODER</span>   <span class="o">=</span> <span class="mh">0xAAAA08A0</span><span class="p">;</span>
+  <span class="cm">/* Configure PHx pins speed to 50 MHz */</span>
+  <span class="n">GPIOH</span><span class="o">-&gt;</span><span class="n">OSPEEDR</span> <span class="o">=</span> <span class="mh">0xAAAA08A0</span><span class="p">;</span>
+  <span class="cm">/* Configure PHx pins Output type to push-pull */</span>
+  <span class="n">GPIOH</span><span class="o">-&gt;</span><span class="n">OTYPER</span>  <span class="o">=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+  <span class="cm">/* No pull-up, pull-down for PHx pins */</span>
+  <span class="n">GPIOH</span><span class="o">-&gt;</span><span class="n">PUPDR</span>   <span class="o">=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+
+  <span class="cm">/* Connect PIx pins to FMC Alternate function */</span>
+  <span class="n">GPIOI</span><span class="o">-&gt;</span><span class="n">AFR</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0xCCCCCCCC</span><span class="p">;</span>
+  <span class="n">GPIOI</span><span class="o">-&gt;</span><span class="n">AFR</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0x00000CC0</span><span class="p">;</span>
+  <span class="cm">/* Configure PIx pins in Alternate function mode */</span>
+  <span class="n">GPIOI</span><span class="o">-&gt;</span><span class="n">MODER</span>   <span class="o">=</span> <span class="mh">0x0028AAAA</span><span class="p">;</span>
+  <span class="cm">/* Configure PIx pins speed to 50 MHz */</span>
+  <span class="n">GPIOI</span><span class="o">-&gt;</span><span class="n">OSPEEDR</span> <span class="o">=</span> <span class="mh">0x0028AAAA</span><span class="p">;</span>
+  <span class="cm">/* Configure PIx pins Output type to push-pull */</span>
+  <span class="n">GPIOI</span><span class="o">-&gt;</span><span class="n">OTYPER</span>  <span class="o">=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+  <span class="cm">/* No pull-up, pull-down for PIx pins */</span>
+  <span class="n">GPIOI</span><span class="o">-&gt;</span><span class="n">PUPDR</span>   <span class="o">=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+<span class="cp">#endif </span><span class="cm">/* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx || STM32F469xx || STM32F479xx */</span><span class="cp"></span>
+
+<span class="cm">/*-- FMC Configuration -------------------------------------------------------*/</span>
+  <span class="cm">/* Enable the FMC interface clock */</span>
+  <span class="n">RCC</span><span class="o">-&gt;</span><span class="n">AHB3ENR</span> <span class="o">|=</span> <span class="mh">0x00000001</span><span class="p">;</span>
+  <span class="cm">/* Delay after an RCC peripheral clock enabling */</span>
+  <span class="n">tmp</span> <span class="o">=</span> <span class="n">READ_BIT</span><span class="p">(</span><span class="n">RCC</span><span class="o">-&gt;</span><span class="n">AHB3ENR</span><span class="p">,</span> <span class="n">RCC_AHB3ENR_FMCEN</span><span class="p">);</span>
+
+  <span class="cm">/* Configure and enable SDRAM bank1 */</span>
+<span class="cp">#if defined(STM32F446xx)</span>
+  <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDCR</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0x00001954</span><span class="p">;</span>
+<span class="cp">#else</span>
+  <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDCR</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0x000019E4</span><span class="p">;</span>
+<span class="cp">#endif </span><span class="cm">/* STM32F446xx */</span><span class="cp"></span>
+  <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDTR</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0x01115351</span><span class="p">;</span>
+
+  <span class="cm">/* SDRAM initialization sequence */</span>
+  <span class="cm">/* Clock enable command */</span>
+  <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDCMR</span> <span class="o">=</span> <span class="mh">0x00000011</span><span class="p">;</span>
+  <span class="n">tmpreg</span> <span class="o">=</span> <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDSR</span> <span class="o">&amp;</span> <span class="mh">0x00000020</span><span class="p">;</span>
+  <span class="k">while</span><span class="p">((</span><span class="n">tmpreg</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">timeout</span><span class="o">--</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">))</span>
+  <span class="p">{</span>
+    <span class="n">tmpreg</span> <span class="o">=</span> <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDSR</span> <span class="o">&amp;</span> <span class="mh">0x00000020</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="cm">/* Delay */</span>
+  <span class="k">for</span> <span class="p">(</span><span class="n">index</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">index</span><span class="o">&lt;</span><span class="mi">1000</span><span class="p">;</span> <span class="n">index</span><span class="o">++</span><span class="p">);</span>
+
+  <span class="cm">/* PALL command */</span>
+  <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDCMR</span> <span class="o">=</span> <span class="mh">0x00000012</span><span class="p">;</span>
+  <span class="n">tmpreg</span> <span class="o">=</span> <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDSR</span> <span class="o">&amp;</span> <span class="mh">0x00000020</span><span class="p">;</span>
+  <span class="n">timeout</span> <span class="o">=</span> <span class="mh">0xFFFF</span><span class="p">;</span>
+  <span class="k">while</span><span class="p">((</span><span class="n">tmpreg</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">timeout</span><span class="o">--</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">))</span>
+  <span class="p">{</span>
+    <span class="n">tmpreg</span> <span class="o">=</span> <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDSR</span> <span class="o">&amp;</span> <span class="mh">0x00000020</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="cm">/* Auto refresh command */</span>
+<span class="cp">#if defined(STM32F446xx)</span>
+  <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDCMR</span> <span class="o">=</span> <span class="mh">0x000000F3</span><span class="p">;</span>
+<span class="cp">#else</span>
+  <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDCMR</span> <span class="o">=</span> <span class="mh">0x00000073</span><span class="p">;</span>
+<span class="cp">#endif </span><span class="cm">/* STM32F446xx */</span><span class="cp"></span>
+  <span class="n">tmpreg</span> <span class="o">=</span> <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDSR</span> <span class="o">&amp;</span> <span class="mh">0x00000020</span><span class="p">;</span>
+  <span class="n">timeout</span> <span class="o">=</span> <span class="mh">0xFFFF</span><span class="p">;</span>
+  <span class="k">while</span><span class="p">((</span><span class="n">tmpreg</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">timeout</span><span class="o">--</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">))</span>
+  <span class="p">{</span>
+    <span class="n">tmpreg</span> <span class="o">=</span> <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDSR</span> <span class="o">&amp;</span> <span class="mh">0x00000020</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="cm">/* MRD register program */</span>
+<span class="cp">#if defined(STM32F446xx)</span>
+  <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDCMR</span> <span class="o">=</span> <span class="mh">0x00044014</span><span class="p">;</span>
+<span class="cp">#else</span>
+  <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDCMR</span> <span class="o">=</span> <span class="mh">0x00046014</span><span class="p">;</span>
+<span class="cp">#endif </span><span class="cm">/* STM32F446xx */</span><span class="cp"></span>
+  <span class="n">tmpreg</span> <span class="o">=</span> <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDSR</span> <span class="o">&amp;</span> <span class="mh">0x00000020</span><span class="p">;</span>
+  <span class="n">timeout</span> <span class="o">=</span> <span class="mh">0xFFFF</span><span class="p">;</span>
+  <span class="k">while</span><span class="p">((</span><span class="n">tmpreg</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">timeout</span><span class="o">--</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">))</span>
+  <span class="p">{</span>
+    <span class="n">tmpreg</span> <span class="o">=</span> <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDSR</span> <span class="o">&amp;</span> <span class="mh">0x00000020</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="cm">/* Set refresh count */</span>
+  <span class="n">tmpreg</span> <span class="o">=</span> <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDRTR</span><span class="p">;</span>
+<span class="cp">#if defined(STM32F446xx)</span>
+  <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDRTR</span> <span class="o">=</span> <span class="p">(</span><span class="n">tmpreg</span> <span class="o">|</span> <span class="p">(</span><span class="mh">0x0000050C</span><span class="o">&lt;&lt;</span><span class="mi">1</span><span class="p">));</span>
+<span class="cp">#else</span>
+  <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDRTR</span> <span class="o">=</span> <span class="p">(</span><span class="n">tmpreg</span> <span class="o">|</span> <span class="p">(</span><span class="mh">0x0000027C</span><span class="o">&lt;&lt;</span><span class="mi">1</span><span class="p">));</span>
+<span class="cp">#endif </span><span class="cm">/* STM32F446xx */</span><span class="cp"></span>
+
+  <span class="cm">/* Disable write protection */</span>
+  <span class="n">tmpreg</span> <span class="o">=</span> <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDCR</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+  <span class="n">FMC_Bank5_6</span><span class="o">-&gt;</span><span class="n">SDCR</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">tmpreg</span> <span class="o">&amp;</span> <span class="mh">0xFFFFFDFF</span><span class="p">);</span>
+<span class="cp">#endif </span><span class="cm">/* DATA_IN_ExtSDRAM */</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx || STM32F446xx || STM32F469xx || STM32F479xx */</span><span class="cp"></span>
+
+<span class="cp">#if defined(STM32F405xx) || defined(STM32F415xx) || defined(STM32F407xx) || defined(STM32F417xx)\</span>
+<span class="cp"> || defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx)\</span>
+<span class="cp"> || defined(STM32F469xx) || defined(STM32F479xx) || defined(STM32F412Zx) || defined(STM32F412Vx)</span>
+
+<span class="cp">#if defined(DATA_IN_ExtSRAM)</span>
+<span class="cm">/*-- GPIOs Configuration -----------------------------------------------------*/</span>
+   <span class="cm">/* Enable GPIOD, GPIOE, GPIOF and GPIOG interface clock */</span>
+  <span class="n">RCC</span><span class="o">-&gt;</span><span class="n">AHB1ENR</span>   <span class="o">|=</span> <span class="mh">0x00000078</span><span class="p">;</span>
+  <span class="cm">/* Delay after an RCC peripheral clock enabling */</span>
+  <span class="n">tmp</span> <span class="o">=</span> <span class="n">READ_BIT</span><span class="p">(</span><span class="n">RCC</span><span class="o">-&gt;</span><span class="n">AHB1ENR</span><span class="p">,</span> <span class="n">RCC_AHB1ENR_GPIODEN</span><span class="p">);</span>
+
+  <span class="cm">/* Connect PDx pins to FMC Alternate function */</span>
+  <span class="n">GPIOD</span><span class="o">-&gt;</span><span class="n">AFR</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0x00CCC0CC</span><span class="p">;</span>
+  <span class="n">GPIOD</span><span class="o">-&gt;</span><span class="n">AFR</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0xCCCCCCCC</span><span class="p">;</span>
+  <span class="cm">/* Configure PDx pins in Alternate function mode */</span>
+  <span class="n">GPIOD</span><span class="o">-&gt;</span><span class="n">MODER</span>   <span class="o">=</span> <span class="mh">0xAAAA0A8A</span><span class="p">;</span>
+  <span class="cm">/* Configure PDx pins speed to 100 MHz */</span>
+  <span class="n">GPIOD</span><span class="o">-&gt;</span><span class="n">OSPEEDR</span> <span class="o">=</span> <span class="mh">0xFFFF0FCF</span><span class="p">;</span>
+  <span class="cm">/* Configure PDx pins Output type to push-pull */</span>
+  <span class="n">GPIOD</span><span class="o">-&gt;</span><span class="n">OTYPER</span>  <span class="o">=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+  <span class="cm">/* No pull-up, pull-down for PDx pins */</span>
+  <span class="n">GPIOD</span><span class="o">-&gt;</span><span class="n">PUPDR</span>   <span class="o">=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+
+  <span class="cm">/* Connect PEx pins to FMC Alternate function */</span>
+  <span class="n">GPIOE</span><span class="o">-&gt;</span><span class="n">AFR</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0xC00CC0CC</span><span class="p">;</span>
+  <span class="n">GPIOE</span><span class="o">-&gt;</span><span class="n">AFR</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0xCCCCCCCC</span><span class="p">;</span>
+  <span class="cm">/* Configure PEx pins in Alternate function mode */</span>
+  <span class="n">GPIOE</span><span class="o">-&gt;</span><span class="n">MODER</span>   <span class="o">=</span> <span class="mh">0xAAAA828A</span><span class="p">;</span>
+  <span class="cm">/* Configure PEx pins speed to 100 MHz */</span>
+  <span class="n">GPIOE</span><span class="o">-&gt;</span><span class="n">OSPEEDR</span> <span class="o">=</span> <span class="mh">0xFFFFC3CF</span><span class="p">;</span>
+  <span class="cm">/* Configure PEx pins Output type to push-pull */</span>
+  <span class="n">GPIOE</span><span class="o">-&gt;</span><span class="n">OTYPER</span>  <span class="o">=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+  <span class="cm">/* No pull-up, pull-down for PEx pins */</span>
+  <span class="n">GPIOE</span><span class="o">-&gt;</span><span class="n">PUPDR</span>   <span class="o">=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+
+  <span class="cm">/* Connect PFx pins to FMC Alternate function */</span>
+  <span class="n">GPIOF</span><span class="o">-&gt;</span><span class="n">AFR</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0x00CCCCCC</span><span class="p">;</span>
+  <span class="n">GPIOF</span><span class="o">-&gt;</span><span class="n">AFR</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0xCCCC0000</span><span class="p">;</span>
+  <span class="cm">/* Configure PFx pins in Alternate function mode */</span>
+  <span class="n">GPIOF</span><span class="o">-&gt;</span><span class="n">MODER</span>   <span class="o">=</span> <span class="mh">0xAA000AAA</span><span class="p">;</span>
+  <span class="cm">/* Configure PFx pins speed to 100 MHz */</span>
+  <span class="n">GPIOF</span><span class="o">-&gt;</span><span class="n">OSPEEDR</span> <span class="o">=</span> <span class="mh">0xFF000FFF</span><span class="p">;</span>
+  <span class="cm">/* Configure PFx pins Output type to push-pull */</span>
+  <span class="n">GPIOF</span><span class="o">-&gt;</span><span class="n">OTYPER</span>  <span class="o">=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+  <span class="cm">/* No pull-up, pull-down for PFx pins */</span>
+  <span class="n">GPIOF</span><span class="o">-&gt;</span><span class="n">PUPDR</span>   <span class="o">=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+
+  <span class="cm">/* Connect PGx pins to FMC Alternate function */</span>
+  <span class="n">GPIOG</span><span class="o">-&gt;</span><span class="n">AFR</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0x00CCCCCC</span><span class="p">;</span>
+  <span class="n">GPIOG</span><span class="o">-&gt;</span><span class="n">AFR</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0x000000C0</span><span class="p">;</span>
+  <span class="cm">/* Configure PGx pins in Alternate function mode */</span>
+  <span class="n">GPIOG</span><span class="o">-&gt;</span><span class="n">MODER</span>   <span class="o">=</span> <span class="mh">0x00085AAA</span><span class="p">;</span>
+  <span class="cm">/* Configure PGx pins speed to 100 MHz */</span>
+  <span class="n">GPIOG</span><span class="o">-&gt;</span><span class="n">OSPEEDR</span> <span class="o">=</span> <span class="mh">0x000CAFFF</span><span class="p">;</span>
+  <span class="cm">/* Configure PGx pins Output type to push-pull */</span>
+  <span class="n">GPIOG</span><span class="o">-&gt;</span><span class="n">OTYPER</span>  <span class="o">=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+  <span class="cm">/* No pull-up, pull-down for PGx pins */</span>
+  <span class="n">GPIOG</span><span class="o">-&gt;</span><span class="n">PUPDR</span>   <span class="o">=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+
+<span class="cm">/*-- FMC/FSMC Configuration --------------------------------------------------*/</span>
+  <span class="cm">/* Enable the FMC/FSMC interface clock */</span>
+  <span class="n">RCC</span><span class="o">-&gt;</span><span class="n">AHB3ENR</span>         <span class="o">|=</span> <span class="mh">0x00000001</span><span class="p">;</span>
+
+<span class="cp">#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx)</span>
+  <span class="cm">/* Delay after an RCC peripheral clock enabling */</span>
+  <span class="n">tmp</span> <span class="o">=</span> <span class="n">READ_BIT</span><span class="p">(</span><span class="n">RCC</span><span class="o">-&gt;</span><span class="n">AHB3ENR</span><span class="p">,</span> <span class="n">RCC_AHB3ENR_FMCEN</span><span class="p">);</span>
+  <span class="cm">/* Configure and enable Bank1_SRAM2 */</span>
+  <span class="n">FMC_Bank1</span><span class="o">-&gt;</span><span class="n">BTCR</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0x00001011</span><span class="p">;</span>
+  <span class="n">FMC_Bank1</span><span class="o">-&gt;</span><span class="n">BTCR</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0x00000201</span><span class="p">;</span>
+  <span class="n">FMC_Bank1E</span><span class="o">-&gt;</span><span class="n">BWTR</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0x0fffffff</span><span class="p">;</span>
+<span class="cp">#endif </span><span class="cm">/* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx */</span><span class="cp"></span>
+<span class="cp">#if defined(STM32F469xx) || defined(STM32F479xx)</span>
+  <span class="cm">/* Delay after an RCC peripheral clock enabling */</span>
+  <span class="n">tmp</span> <span class="o">=</span> <span class="n">READ_BIT</span><span class="p">(</span><span class="n">RCC</span><span class="o">-&gt;</span><span class="n">AHB3ENR</span><span class="p">,</span> <span class="n">RCC_AHB3ENR_FMCEN</span><span class="p">);</span>
+  <span class="cm">/* Configure and enable Bank1_SRAM2 */</span>
+  <span class="n">FMC_Bank1</span><span class="o">-&gt;</span><span class="n">BTCR</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0x00001091</span><span class="p">;</span>
+  <span class="n">FMC_Bank1</span><span class="o">-&gt;</span><span class="n">BTCR</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0x00110212</span><span class="p">;</span>
+  <span class="n">FMC_Bank1E</span><span class="o">-&gt;</span><span class="n">BWTR</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0x0fffffff</span><span class="p">;</span>
+<span class="cp">#endif </span><span class="cm">/* STM32F469xx || STM32F479xx */</span><span class="cp"></span>
+<span class="cp">#if defined(STM32F405xx) || defined(STM32F415xx) || defined(STM32F407xx)|| defined(STM32F417xx)\</span>
+<span class="cp">   || defined(STM32F412Zx) || defined(STM32F412Vx)</span>
+  <span class="cm">/* Delay after an RCC peripheral clock enabling */</span>
+  <span class="n">tmp</span> <span class="o">=</span> <span class="n">READ_BIT</span><span class="p">(</span><span class="n">RCC</span><span class="o">-&gt;</span><span class="n">AHB3ENR</span><span class="p">,</span> <span class="n">RCC_AHB3ENR_FSMCEN</span><span class="p">);</span>
+  <span class="cm">/* Configure and enable Bank1_SRAM2 */</span>
+  <span class="n">FSMC_Bank1</span><span class="o">-&gt;</span><span class="n">BTCR</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0x00001011</span><span class="p">;</span>
+  <span class="n">FSMC_Bank1</span><span class="o">-&gt;</span><span class="n">BTCR</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0x00000201</span><span class="p">;</span>
+  <span class="n">FSMC_Bank1E</span><span class="o">-&gt;</span><span class="n">BWTR</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0x0FFFFFFF</span><span class="p">;</span>
+<span class="cp">#endif </span><span class="cm">/* STM32F405xx || STM32F415xx || STM32F407xx || STM32F417xx || STM32F412Zx || STM32F412Vx */</span><span class="cp"></span>
+
+<span class="cp">#endif </span><span class="cm">/* DATA_IN_ExtSRAM */</span><span class="cp"></span>
+<span class="cp">#endif </span><span class="cm">/* STM32F405xx || STM32F415xx || STM32F407xx || STM32F417xx || STM32F427xx || STM32F437xx ||\</span>
+<span class="cm">          STM32F429xx || STM32F439xx || STM32F469xx || STM32F479xx || STM32F412Zx || STM32F412Vx  */</span><span class="cp"></span>
+  <span class="p">(</span><span class="kt">void</span><span class="p">)(</span><span class="n">tmp</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="cp">#endif </span><span class="cm">/* DATA_IN_ExtSRAM &amp;&amp; DATA_IN_ExtSDRAM */</span><span class="cp"></span>
+
+<span class="cm">/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, E-Agle TRT.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

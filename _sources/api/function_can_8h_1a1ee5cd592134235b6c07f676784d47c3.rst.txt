@@ -1,0 +1,13 @@
+.. _exhale_function_can_8h_1a1ee5cd592134235b6c07f676784d47c3:
+
+Function MX_CAN2_Init(void)
+===========================
+
+- Defined in :ref:`file_mainboard_Inc_can.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: MX_CAN2_Init(void)

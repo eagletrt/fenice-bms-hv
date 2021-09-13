@@ -1,0 +1,13 @@
+.. _exhale_variable_can_8h_1a1618d731d18d69e906e8a357b7cd3c8d:
+
+Variable hcan1
+==============
+
+- Defined in :ref:`file_mainboard_Inc_can.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: hcan1

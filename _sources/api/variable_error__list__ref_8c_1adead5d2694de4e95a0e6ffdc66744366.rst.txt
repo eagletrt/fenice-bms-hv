@@ -1,0 +1,13 @@
+.. _exhale_variable_error__list__ref_8c_1adead5d2694de4e95a0e6ffdc66744366:
+
+Variable error_list_ref_low_voltages
+====================================
+
+- Defined in :ref:`file_mainboard_Src_error_error_list_ref.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: error_list_ref_low_voltages

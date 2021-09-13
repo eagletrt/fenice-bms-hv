@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2main_8h_1a8c599750b26563c7869b68c34eb25d01:
+
+Define AIRP_OFF_GPIO_Port
+=========================
+
+- Defined in :ref:`file_mainboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: AIRP_OFF_GPIO_Port

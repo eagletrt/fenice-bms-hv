@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2main_8h_1a843cc5ecf05da262dd799bdc21e3eff2:
+
+Define SI8900_RX_GPIO_Port
+==========================
+
+- Defined in :ref:`file_mainboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: SI8900_RX_GPIO_Port

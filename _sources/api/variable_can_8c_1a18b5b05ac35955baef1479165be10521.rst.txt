@@ -1,0 +1,13 @@
+.. _exhale_variable_can_8c_1a18b5b05ac35955baef1479165be10521:
+
+Variable HAL_RCC_CAN1_CLK_ENABLED
+=================================
+
+- Defined in :ref:`file_mainboard_Src_can.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: HAL_RCC_CAN1_CLK_ENABLED

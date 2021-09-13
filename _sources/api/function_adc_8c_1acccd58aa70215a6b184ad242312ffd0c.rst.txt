@@ -1,0 +1,13 @@
+.. _exhale_function_adc_8c_1acccd58aa70215a6b184ad242312ffd0c:
+
+Function MX_ADC1_Init(void)
+===========================
+
+- Defined in :ref:`file_mainboard_Src_adc.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: MX_ADC1_Init(void)

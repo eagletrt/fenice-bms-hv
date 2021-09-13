@@ -13,8 +13,6 @@ Program Listing for File feedback.c
    
    #include "feedback.h"
    
-   #include <stm32g4xx_hal.h>
-   
    #include "main.h"
    
    feedback_t feedback;
@@ -29,7 +27,7 @@ Program Listing for File feedback.c
                HAL_GPIO_WritePin(MUX_A2_GPIO_Port, MUX_A2_Pin, (i & 0b00000100));
                HAL_GPIO_WritePin(MUX_A3_GPIO_Port, MUX_A3_Pin, (i & 0b00001000));
    
-               feedback |= (HAL_GPIO_ReadPin(ANALOG_DATA_GPIO_Port, ANALOG_DATA_Pin) << i);
+               feedback |= (HAL_GPIO_ReadPin(MUX_IN_GPIO_Port, MUX_IN_Pin) << i);
            }
        }
    }
@@ -47,7 +45,7 @@ Program Listing for File feedback.c
        return feedback == fb_value;
    }
    
-   // //this ckeck is performed during ON state and from PRECHARGE TO ON
+   // //this check is performed during ON state and from PRECHARGE TO ON
    // bool pack_feedback_check_on() {
    //  uint16_t difference = pd_feedback ^ FEEDBACK_ON;
    

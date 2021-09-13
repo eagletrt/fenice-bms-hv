@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2main_8h_1a5f7d8ccd600220238e096ce38d393581:
+
+Define EEPROM_CS_GPIO_Port
+==========================
+
+- Defined in :ref:`file_mainboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: EEPROM_CS_GPIO_Port

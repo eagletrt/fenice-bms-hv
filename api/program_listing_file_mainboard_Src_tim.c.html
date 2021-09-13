@@ -188,9 +188,9 @@
 
     <span class="cm">/* USER CODE END TIM2_Init 1 */</span>
     <span class="n">htim2</span><span class="p">.</span><span class="n">Instance</span>               <span class="o">=</span> <span class="n">TIM2</span><span class="p">;</span>
-    <span class="n">htim2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Prescaler</span>         <span class="o">=</span> <span class="mi">16999</span><span class="p">;</span>
+    <span class="n">htim2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Prescaler</span>         <span class="o">=</span> <span class="mi">8999</span><span class="p">;</span>
     <span class="n">htim2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">CounterMode</span>       <span class="o">=</span> <span class="n">TIM_COUNTERMODE_UP</span><span class="p">;</span>
-    <span class="n">htim2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Period</span>            <span class="o">=</span> <span class="mf">4.294967295E9</span><span class="p">;</span>
+    <span class="n">htim2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Period</span>            <span class="o">=</span> <span class="mh">0xFFFFFFFF</span><span class="p">;</span>
     <span class="n">htim2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">ClockDivision</span>     <span class="o">=</span> <span class="n">TIM_CLOCKDIVISION_DIV1</span><span class="p">;</span>
     <span class="n">htim2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">AutoReloadPreload</span> <span class="o">=</span> <span class="n">TIM_AUTORELOAD_PRELOAD_DISABLE</span><span class="p">;</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_Base_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim2</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
@@ -215,7 +215,7 @@
     <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_OC_ConfigChannel</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sConfigOC</span><span class="p">,</span> <span class="n">TIM_CHANNEL_1</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">Error_Handler</span><span class="p">();</span>
     <span class="p">}</span>
-    <span class="n">sConfigOC</span><span class="p">.</span><span class="n">Pulse</span> <span class="o">=</span> <span class="mi">100000</span><span class="p">;</span>
+    <span class="n">sConfigOC</span><span class="p">.</span><span class="n">Pulse</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">;</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_OC_ConfigChannel</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sConfigOC</span><span class="p">,</span> <span class="n">TIM_CHANNEL_2</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">Error_Handler</span><span class="p">();</span>
     <span class="p">}</span>
@@ -244,7 +244,7 @@
 
     <span class="cm">/* USER CODE END TIM3_Init 1 */</span>
     <span class="n">htim3</span><span class="p">.</span><span class="n">Instance</span>               <span class="o">=</span> <span class="n">TIM3</span><span class="p">;</span>
-    <span class="n">htim3</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Prescaler</span>         <span class="o">=</span> <span class="mi">16999</span><span class="p">;</span>
+    <span class="n">htim3</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Prescaler</span>         <span class="o">=</span> <span class="mi">8999</span><span class="p">;</span>
     <span class="n">htim3</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">CounterMode</span>       <span class="o">=</span> <span class="n">TIM_COUNTERMODE_UP</span><span class="p">;</span>
     <span class="n">htim3</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Period</span>            <span class="o">=</span> <span class="mi">65535</span><span class="p">;</span>
     <span class="n">htim3</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">ClockDivision</span>     <span class="o">=</span> <span class="n">TIM_CLOCKDIVISION_DIV1</span><span class="p">;</span>
@@ -268,7 +268,7 @@
         <span class="n">Error_Handler</span><span class="p">();</span>
     <span class="p">}</span>
     <span class="n">sConfigOC</span><span class="p">.</span><span class="n">OCMode</span>     <span class="o">=</span> <span class="n">TIM_OCMODE_TIMING</span><span class="p">;</span>
-    <span class="n">sConfigOC</span><span class="p">.</span><span class="n">Pulse</span>      <span class="o">=</span> <span class="mi">10000</span><span class="p">;</span>
+    <span class="n">sConfigOC</span><span class="p">.</span><span class="n">Pulse</span>      <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span>
     <span class="n">sConfigOC</span><span class="p">.</span><span class="n">OCPolarity</span> <span class="o">=</span> <span class="n">TIM_OCPOLARITY_HIGH</span><span class="p">;</span>
     <span class="n">sConfigOC</span><span class="p">.</span><span class="n">OCFastMode</span> <span class="o">=</span> <span class="n">TIM_OCFAST_DISABLE</span><span class="p">;</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_OC_ConfigChannel</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim3</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sConfigOC</span><span class="p">,</span> <span class="n">TIM_CHANNEL_1</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
@@ -292,7 +292,7 @@
 
     <span class="cm">/* USER CODE END TIM4_Init 1 */</span>
     <span class="n">htim4</span><span class="p">.</span><span class="n">Instance</span>               <span class="o">=</span> <span class="n">TIM4</span><span class="p">;</span>
-    <span class="n">htim4</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Prescaler</span>         <span class="o">=</span> <span class="mi">16999</span><span class="p">;</span>
+    <span class="n">htim4</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Prescaler</span>         <span class="o">=</span> <span class="mi">8999</span><span class="p">;</span>
     <span class="n">htim4</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">CounterMode</span>       <span class="o">=</span> <span class="n">TIM_COUNTERMODE_UP</span><span class="p">;</span>
     <span class="n">htim4</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Period</span>            <span class="o">=</span> <span class="mi">65535</span><span class="p">;</span>
     <span class="n">htim4</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">ClockDivision</span>     <span class="o">=</span> <span class="n">TIM_CLOCKDIVISION_DIV1</span><span class="p">;</span>
@@ -415,7 +415,9 @@
 <span class="kt">void</span> <span class="nf">HAL_TIM_OC_DelayElapsedCallback</span><span class="p">(</span><span class="n">TIM_HandleTypeDef</span> <span class="o">*</span><span class="n">htim</span><span class="p">)</span> <span class="p">{</span>
     <span class="kt">uint32_t</span> <span class="n">pulse</span><span class="p">;</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">htim</span><span class="o">-&gt;</span><span class="n">Instance</span> <span class="o">==</span> <span class="n">htim_err</span><span class="p">.</span><span class="n">Instance</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">fsm_catch_event</span><span class="p">(</span><span class="n">bms</span><span class="p">.</span><span class="n">fsm</span><span class="p">,</span> <span class="n">BMS_EV_HALT</span><span class="p">);</span>
+        <span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">GPIO1_GPIO_Port</span><span class="p">,</span> <span class="n">GPIO1_Pin</span><span class="p">,</span> <span class="n">GPIO_PIN_RESET</span><span class="p">);</span>
+        <span class="c1">//fsm_trigger_event(bms.fsm, BMS_EV_HALT);</span>
+        <span class="n">fsm_transition</span><span class="p">(</span><span class="n">bms</span><span class="p">.</span><span class="n">fsm</span><span class="p">,</span> <span class="n">BMS_HALT</span><span class="p">);</span>
         <span class="n">error_set_fatal</span><span class="p">(</span><span class="n">error_get_top</span><span class="p">());</span>
     <span class="p">}</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">htim</span><span class="o">-&gt;</span><span class="n">Instance</span> <span class="o">==</span> <span class="n">htim_bms</span><span class="p">.</span><span class="n">Instance</span><span class="p">)</span> <span class="p">{</span>
@@ -424,10 +426,10 @@
                 <span class="n">pulse</span> <span class="o">=</span> <span class="n">HAL_TIM_ReadCapturedValue</span><span class="p">(</span><span class="n">htim</span><span class="p">,</span> <span class="n">TIM_CHANNEL_1</span><span class="p">);</span>
                 <span class="n">__HAL_TIM_SET_COMPARE</span><span class="p">(</span><span class="n">htim</span><span class="p">,</span> <span class="n">TIM_CHANNEL_1</span><span class="p">,</span> <span class="p">(</span><span class="n">pulse</span> <span class="o">+</span> <span class="n">PRECHARGE_CHECK_INTERVAL</span> <span class="o">*</span> <span class="mi">10U</span><span class="p">));</span>
 
-                <span class="n">fsm_catch_event</span><span class="p">(</span><span class="n">bms</span><span class="p">.</span><span class="n">fsm</span><span class="p">,</span> <span class="n">BMS_EV_PRECHARGE_CHECK</span><span class="p">);</span>
+                <span class="n">fsm_trigger_event</span><span class="p">(</span><span class="n">bms</span><span class="p">.</span><span class="n">fsm</span><span class="p">,</span> <span class="n">BMS_EV_PRECHARGE_CHECK</span><span class="p">);</span>
                 <span class="k">break</span><span class="p">;</span>
             <span class="k">case</span> <span class="nl">HAL_TIM_ACTIVE_CHANNEL_2</span><span class="p">:</span>
-                <span class="n">fsm_catch_event</span><span class="p">(</span><span class="n">bms</span><span class="p">.</span><span class="n">fsm</span><span class="p">,</span> <span class="n">BMS_EV_PRECHARGE_TIMEOUT</span><span class="p">);</span>
+                <span class="n">fsm_trigger_event</span><span class="p">(</span><span class="n">bms</span><span class="p">.</span><span class="n">fsm</span><span class="p">,</span> <span class="n">BMS_EV_PRECHARGE_TIMEOUT</span><span class="p">);</span>
                 <span class="k">break</span><span class="p">;</span>
             <span class="k">default</span><span class="o">:</span>
                 <span class="k">break</span><span class="p">;</span>
@@ -439,13 +441,13 @@
                 <span class="n">pulse</span> <span class="o">=</span> <span class="n">HAL_TIM_ReadCapturedValue</span><span class="p">(</span><span class="n">htim</span><span class="p">,</span> <span class="n">TIM_CHANNEL_1</span><span class="p">);</span>
                 <span class="n">__HAL_TIM_SET_COMPARE</span><span class="p">(</span><span class="n">htim</span><span class="p">,</span> <span class="n">TIM_CHANNEL_1</span><span class="p">,</span> <span class="p">(</span><span class="n">pulse</span> <span class="o">+</span> <span class="n">VOLTS_READ_INTERVAL</span> <span class="o">*</span> <span class="mi">10</span><span class="p">));</span>
 
-                <span class="n">fsm_catch_event</span><span class="p">(</span><span class="n">super_fsm</span><span class="p">,</span> <span class="n">SUPER_EV_MEASURE_VOLTS</span><span class="p">);</span>
+                <span class="n">fsm_trigger_event</span><span class="p">(</span><span class="n">super_fsm</span><span class="p">,</span> <span class="n">SUPER_EV_MEASURE_VOLTS</span><span class="p">);</span>
                 <span class="k">break</span><span class="p">;</span>
             <span class="k">case</span> <span class="nl">HAL_TIM_ACTIVE_CHANNEL_2</span><span class="p">:</span>
                 <span class="n">pulse</span> <span class="o">=</span> <span class="n">HAL_TIM_ReadCapturedValue</span><span class="p">(</span><span class="n">htim</span><span class="p">,</span> <span class="n">TIM_CHANNEL_2</span><span class="p">);</span>
                 <span class="n">__HAL_TIM_SET_COMPARE</span><span class="p">(</span><span class="n">htim</span><span class="p">,</span> <span class="n">TIM_CHANNEL_2</span><span class="p">,</span> <span class="p">(</span><span class="n">pulse</span> <span class="o">+</span> <span class="n">TEMPS_READ_INTERVAL</span> <span class="o">*</span> <span class="mi">10</span><span class="p">));</span>
 
-                <span class="n">fsm_catch_event</span><span class="p">(</span><span class="n">super_fsm</span><span class="p">,</span> <span class="n">SUPER_EV_MEASURE_TEMPS</span><span class="p">);</span>
+                <span class="c1">//fsm_trigger_event(super_fsm, SUPER_EV_MEASURE_TEMPS);</span>
                 <span class="k">break</span><span class="p">;</span>
             <span class="k">default</span><span class="o">:</span>
                 <span class="k">break</span><span class="p">;</span>

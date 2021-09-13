@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2main_8h_1a0fe6758099423604df9ee73068b4eb9a:
+
+Define GPIO8_GPIO_Port
+======================
+
+- Defined in :ref:`file_mainboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: GPIO8_GPIO_Port

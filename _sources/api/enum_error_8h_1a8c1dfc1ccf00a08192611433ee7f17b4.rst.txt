@@ -1,0 +1,13 @@
+.. _exhale_enum_error_8h_1a8c1dfc1ccf00a08192611433ee7f17b4:
+
+Enum __attribute__
+==================
+
+- Defined in :ref:`file_mainboard_Inc_error_error.h`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: __attribute__

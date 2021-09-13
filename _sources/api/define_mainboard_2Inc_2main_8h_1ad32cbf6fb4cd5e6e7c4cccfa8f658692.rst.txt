@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2main_8h_1ad32cbf6fb4cd5e6e7c4cccfa8f658692:
+
+Define GPIO7_Pin
+================
+
+- Defined in :ref:`file_mainboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: GPIO7_Pin

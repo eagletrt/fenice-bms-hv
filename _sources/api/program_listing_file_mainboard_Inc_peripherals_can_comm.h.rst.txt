@@ -1,0 +1,23 @@
+
+.. _program_listing_file_mainboard_Inc_peripherals_can_comm.h:
+
+Program Listing for File can_comm.h
+===================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_mainboard_Inc_peripherals_can_comm.h>` (``mainboard/Inc/peripherals/can_comm.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   #pragma once
+   
+   #include "../Primary/ids.h"
+   //#include "../lib/can/includes_generator/bms/ids.h"
+   #include "../../Primary/c/Primary.h"
+   //#include "../lib/can/naked_generator/bms/c/bms.h"
+   #include "can.h"
+   
+   void can_init();
+   HAL_StatusTypeDef can_send(uint16_t id);

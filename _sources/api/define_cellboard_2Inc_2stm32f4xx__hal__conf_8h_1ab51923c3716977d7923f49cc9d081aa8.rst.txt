@@ -1,0 +1,13 @@
+.. _exhale_define_cellboard_2Inc_2stm32f4xx__hal__conf_8h_1ab51923c3716977d7923f49cc9d081aa8:
+
+Define HAL_PWR_MODULE_ENABLED
+=============================
+
+- Defined in :ref:`file_cellboard_Inc_stm32f4xx_hal_conf.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: HAL_PWR_MODULE_ENABLED

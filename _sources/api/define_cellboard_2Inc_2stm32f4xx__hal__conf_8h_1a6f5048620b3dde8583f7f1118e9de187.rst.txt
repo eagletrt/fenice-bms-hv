@@ -1,0 +1,13 @@
+.. _exhale_define_cellboard_2Inc_2stm32f4xx__hal__conf_8h_1a6f5048620b3dde8583f7f1118e9de187:
+
+Define PHY_RESET
+================
+
+- Defined in :ref:`file_cellboard_Inc_stm32f4xx_hal_conf.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: PHY_RESET

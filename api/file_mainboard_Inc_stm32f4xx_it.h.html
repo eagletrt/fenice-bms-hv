@@ -1,0 +1,259 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>File stm32f4xx_it.h &mdash; Fenice BMS HV 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Fenice BMS HV
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Software</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Fenice BMS HV</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>File stm32f4xx_it.h</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/api/file_mainboard_Inc_stm32f4xx_it.h.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div class="libGraph"><img src="png/stm32f4xx__it_8h__dep__incl.png" alt="depGraph" style="position:relative;left: 5%;"></div><div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="file-stm32f4xx-it-h">
+<span id="file-mainboard-inc-stm32f4xx-it-h"></span><h1>File stm32f4xx_it.h<a class="headerlink" href="#file-stm32f4xx-it-h" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="dir_mainboard_Inc.html#dir-mainboard-inc"><span class="std std-ref">Parent directory</span></a> (<code class="docutils literal notranslate"><span class="pre">mainboard/Inc</span></code>)</p>
+<p>This file contains the headers of the interrupt handlers.</p>
+<div class="contents local topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#definition-mainboard-inc-stm32f4xx-it-h" id="id1">Definition (<code class="docutils literal notranslate"><span class="pre">mainboard/Inc/stm32f4xx_it.h</span></code>)</a></li>
+<li><a class="reference internal" href="#detailed-description" id="id2">Detailed Description</a></li>
+<li><a class="reference internal" href="#functions" id="id3">Functions</a></li>
+</ul>
+</div>
+<div class="section" id="definition-mainboard-inc-stm32f4xx-it-h">
+<h2>Definition (<code class="docutils literal notranslate"><span class="pre">mainboard/Inc/stm32f4xx_it.h</span></code>)<a class="headerlink" href="#definition-mainboard-inc-stm32f4xx-it-h" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="program_listing_file_mainboard_Inc_stm32f4xx_it.h.html">Program Listing for File stm32f4xx_it.h</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="detailed-description">
+<h2>Detailed Description<a class="headerlink" href="#detailed-description" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>Copyright (c) 2021 STMicroelectronics. All rights reserved.</div></blockquote>
+<p>This software component is licensed by ST under Ultimate Liberty license SLA0044, the “License”; You may not use this file except in compliance with the License. You may obtain a copy of the License at: www.st.com/SLA0044</p>
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="function_mainboard_2Inc_2stm32f4xx__it_8h_1a850cefb17a977292ae5eb4cafa9976c3.html#exhale-function-mainboard-2inc-2stm32f4xx-it-8h-1a850cefb17a977292ae5eb4cafa9976c3"><span class="std std-ref">Function BusFault_Handler(void)</span></a></li>
+<li><a class="reference internal" href="function_mainboard_2Inc_2stm32f4xx__it_8h_1a4dcf621094d563287c456f7aa751e86b.html#exhale-function-mainboard-2inc-2stm32f4xx-it-8h-1a4dcf621094d563287c456f7aa751e86b"><span class="std std-ref">Function CAN1_RX0_IRQHandler(void)</span></a></li>
+<li><a class="reference internal" href="function_mainboard_2Inc_2stm32f4xx__it_8h_1aa1a82ca3e49421333b17a4ec6996d03d.html#exhale-function-mainboard-2inc-2stm32f4xx-it-8h-1aa1a82ca3e49421333b17a4ec6996d03d"><span class="std std-ref">Function CAN1_RX1_IRQHandler(void)</span></a></li>
+<li><a class="reference internal" href="function_mainboard_2Inc_2stm32f4xx__it_8h_1a8a8136b4640f219eef7e98372993186b.html#exhale-function-mainboard-2inc-2stm32f4xx-it-8h-1a8a8136b4640f219eef7e98372993186b"><span class="std std-ref">Function CAN1_SCE_IRQHandler(void)</span></a></li>
+<li><a class="reference internal" href="function_mainboard_2Inc_2stm32f4xx__it_8h_1abf0ada95bd65ea0a24a25606a59a319d.html#exhale-function-mainboard-2inc-2stm32f4xx-it-8h-1abf0ada95bd65ea0a24a25606a59a319d"><span class="std std-ref">Function CAN2_RX0_IRQHandler(void)</span></a></li>
+<li><a class="reference internal" href="function_mainboard_2Inc_2stm32f4xx__it_8h_1ac67a8abbbb2e08b8c48726f65716295f.html#exhale-function-mainboard-2inc-2stm32f4xx-it-8h-1ac67a8abbbb2e08b8c48726f65716295f"><span class="std std-ref">Function CAN2_RX1_IRQHandler(void)</span></a></li>
+<li><a class="reference internal" href="function_mainboard_2Inc_2stm32f4xx__it_8h_1a3810eef71ac476c42c8a858951c2607d.html#exhale-function-mainboard-2inc-2stm32f4xx-it-8h-1a3810eef71ac476c42c8a858951c2607d"><span class="std std-ref">Function CAN2_SCE_IRQHandler(void)</span></a></li>
+<li><a class="reference internal" href="function_mainboard_2Inc_2stm32f4xx__it_8h_1adbdfb05858cc36fc520974df37ec3cb0.html#exhale-function-mainboard-2inc-2stm32f4xx-it-8h-1adbdfb05858cc36fc520974df37ec3cb0"><span class="std std-ref">Function DebugMon_Handler(void)</span></a></li>
+<li><a class="reference internal" href="function_mainboard_2Inc_2stm32f4xx__it_8h_1a2bffc10d5bd4106753b7c30e86903bea.html#exhale-function-mainboard-2inc-2stm32f4xx-it-8h-1a2bffc10d5bd4106753b7c30e86903bea"><span class="std std-ref">Function HardFault_Handler(void)</span></a></li>
+<li><a class="reference internal" href="function_mainboard_2Inc_2stm32f4xx__it_8h_1a3150f74512510287a942624aa9b44cc5.html#exhale-function-mainboard-2inc-2stm32f4xx-it-8h-1a3150f74512510287a942624aa9b44cc5"><span class="std std-ref">Function MemManage_Handler(void)</span></a></li>
+<li><a class="reference internal" href="function_mainboard_2Inc_2stm32f4xx__it_8h_1a6ad7a5e3ee69cb6db6a6b9111ba898bc.html#exhale-function-mainboard-2inc-2stm32f4xx-it-8h-1a6ad7a5e3ee69cb6db6a6b9111ba898bc"><span class="std std-ref">Function NMI_Handler(void)</span></a></li>
+<li><a class="reference internal" href="function_mainboard_2Inc_2stm32f4xx__it_8h_1a6303e1f258cbdc1f970ce579cc015623.html#exhale-function-mainboard-2inc-2stm32f4xx-it-8h-1a6303e1f258cbdc1f970ce579cc015623"><span class="std std-ref">Function PendSV_Handler(void)</span></a></li>
+<li><a class="reference internal" href="function_mainboard_2Inc_2stm32f4xx__it_8h_1a3e5ddb3df0d62f2dc357e64a3f04a6ce.html#exhale-function-mainboard-2inc-2stm32f4xx-it-8h-1a3e5ddb3df0d62f2dc357e64a3f04a6ce"><span class="std std-ref">Function SVC_Handler(void)</span></a></li>
+<li><a class="reference internal" href="function_mainboard_2Inc_2stm32f4xx__it_8h_1ab5e09814056d617c521549e542639b7e.html#exhale-function-mainboard-2inc-2stm32f4xx-it-8h-1ab5e09814056d617c521549e542639b7e"><span class="std std-ref">Function SysTick_Handler(void)</span></a></li>
+<li><a class="reference internal" href="function_mainboard_2Inc_2stm32f4xx__it_8h_1a38ad4725462bdc5e86c4ead4f04b9fc2.html#exhale-function-mainboard-2inc-2stm32f4xx-it-8h-1a38ad4725462bdc5e86c4ead4f04b9fc2"><span class="std std-ref">Function TIM2_IRQHandler(void)</span></a></li>
+<li><a class="reference internal" href="function_mainboard_2Inc_2stm32f4xx__it_8h_1ac8e51d2183b5230cbd5481f8867adce9.html#exhale-function-mainboard-2inc-2stm32f4xx-it-8h-1ac8e51d2183b5230cbd5481f8867adce9"><span class="std std-ref">Function TIM3_IRQHandler(void)</span></a></li>
+<li><a class="reference internal" href="function_mainboard_2Inc_2stm32f4xx__it_8h_1a7133f3f78767503641d307386e68bd28.html#exhale-function-mainboard-2inc-2stm32f4xx-it-8h-1a7133f3f78767503641d307386e68bd28"><span class="std std-ref">Function TIM4_IRQHandler(void)</span></a></li>
+<li><a class="reference internal" href="function_mainboard_2Inc_2stm32f4xx__it_8h_1a1d98923de2ed6b7309b66f9ba2971647.html#exhale-function-mainboard-2inc-2stm32f4xx-it-8h-1a1d98923de2ed6b7309b66f9ba2971647"><span class="std std-ref">Function UsageFault_Handler(void)</span></a></li>
+<li><a class="reference internal" href="function_mainboard_2Inc_2stm32f4xx__it_8h_1a7139cd4baabbbcbab0c1fe6d7d4ae1cc.html#exhale-function-mainboard-2inc-2stm32f4xx-it-8h-1a7139cd4baabbbcbab0c1fe6d7d4ae1cc"><span class="std std-ref">Function USART1_IRQHandler(void)</span></a></li>
+<li><a class="reference internal" href="function_mainboard_2Inc_2stm32f4xx__it_8h_1a0d108a3468b2051548183ee5ca2158a0.html#exhale-function-mainboard-2inc-2stm32f4xx-it-8h-1a0d108a3468b2051548183ee5ca2158a0"><span class="std std-ref">Function USART3_IRQHandler(void)</span></a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, E-Agle TRT.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

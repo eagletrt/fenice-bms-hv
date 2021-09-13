@@ -1,7 +1,7 @@
 .. _exhale_function_cellboard_2Src_2main_8c_1a6db1014d713f6f5c0f52a13299ee0733:
 
-Function MX_USART2_UART_Init(void)
-==================================
+Function MX_USART2_UART_Init
+============================
 
 - Defined in :ref:`file_cellboard_Src_main.c`
 

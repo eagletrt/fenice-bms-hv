@@ -1,0 +1,13 @@
+.. _exhale_define_cellboard_2Inc_2stm32f4xx__hal__conf_8h_1a85e6fc812dc26f7161a04be2568a5462:
+
+Define LSE_STARTUP_TIMEOUT
+==========================
+
+- Defined in :ref:`file_cellboard_Inc_stm32f4xx_hal_conf.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: LSE_STARTUP_TIMEOUT

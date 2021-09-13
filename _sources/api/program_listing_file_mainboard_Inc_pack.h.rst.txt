@@ -13,18 +13,15 @@ Program Listing for File pack.h
    
    #pragma once
    
-   #include <inttypes.h>
-   
    #include "error/error.h"
    #include "fenice_config.h"
-   #include "peripherals/ltc6813_utils.h"
+   #include "main.h"
+   
+   #include <inttypes.h>
    
    void pack_init();
    
-   void pack_update_voltages(SPI_HandleTypeDef *hspi, UART_HandleTypeDef *huart);
-   
-   void pack_update_temperatures(SPI_HandleTypeDef *hspi);
-   void pack_update_temperatures_all(SPI_HandleTypeDef *hspi);
+   void pack_update_voltages(UART_HandleTypeDef *huart);
    
    void pack_update_current();
    

@@ -1,0 +1,13 @@
+.. _exhale_function_error_8c_1a46223f8bcd03d0e69fecfcf12080a711:
+
+Function error_get_fatal()
+==========================
+
+- Defined in :ref:`file_mainboard_Src_error_error.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: error_get_fatal()

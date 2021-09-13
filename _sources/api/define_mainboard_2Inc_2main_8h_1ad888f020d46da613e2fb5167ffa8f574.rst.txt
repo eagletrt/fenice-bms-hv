@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2main_8h_1ad888f020d46da613e2fb5167ffa8f574:
+
+Define CARD_CS_Pin
+==================
+
+- Defined in :ref:`file_mainboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CARD_CS_Pin

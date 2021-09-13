@@ -1,0 +1,13 @@
+.. _exhale_define_usart_8h_1ac9bff36224d27b70f81984c323e5588c:
+
+Define CLI_UART
+===============
+
+- Defined in :ref:`file_mainboard_Inc_usart.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CLI_UART

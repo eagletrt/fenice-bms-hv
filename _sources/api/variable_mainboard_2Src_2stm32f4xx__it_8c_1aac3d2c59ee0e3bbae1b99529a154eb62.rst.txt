@@ -1,0 +1,13 @@
+.. _exhale_variable_mainboard_2Src_2stm32f4xx__it_8c_1aac3d2c59ee0e3bbae1b99529a154eb62:
+
+Variable htim3
+==============
+
+- Defined in :ref:`file_mainboard_Src_stm32f4xx_it.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: htim3

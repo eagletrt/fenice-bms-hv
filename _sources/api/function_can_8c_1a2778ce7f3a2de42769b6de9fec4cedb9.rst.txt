@@ -1,0 +1,13 @@
+.. _exhale_function_can_8c_1a2778ce7f3a2de42769b6de9fec4cedb9:
+
+Function HAL_CAN_MspInit
+========================
+
+- Defined in :ref:`file_mainboard_Src_can.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: HAL_CAN_MspInit(CAN_HandleTypeDef *)

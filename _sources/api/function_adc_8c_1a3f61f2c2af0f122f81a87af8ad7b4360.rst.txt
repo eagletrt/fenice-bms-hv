@@ -1,0 +1,13 @@
+.. _exhale_function_adc_8c_1a3f61f2c2af0f122f81a87af8ad7b4360:
+
+Function HAL_ADC_MspDeInit
+==========================
+
+- Defined in :ref:`file_mainboard_Src_adc.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: HAL_ADC_MspDeInit(ADC_HandleTypeDef *)
