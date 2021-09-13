@@ -1,0 +1,13 @@
+.. _exhale_variable_error__list__ref_8c_1a63dceab7552c9b95fb8922f30d16b76c:
+
+Variable error_eeprom_comm
+==========================
+
+- Defined in :ref:`file_mainboard_Src_error_error_list_ref.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: error_eeprom_comm

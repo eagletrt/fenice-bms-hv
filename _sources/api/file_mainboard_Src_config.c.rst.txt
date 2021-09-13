@@ -46,6 +46,8 @@ Includes
 
 - ``config.h`` (:ref:`file_mainboard_Inc_config.h`)
 
+- ``error.h`` (:ref:`file_mainboard_Inc_error_error.h`)
+
 - ``fenice_config.h`` (:ref:`file_mainboard_Inc_fenice_config.h`)
 
 - ``spi.h`` (:ref:`file_mainboard_Inc_spi.h`)

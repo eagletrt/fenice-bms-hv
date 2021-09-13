@@ -1,0 +1,13 @@
+.. _exhale_function_error_8c_1a653924a8ae928fc2f4859c833fdf752d:
+
+Function error_reset(error_id, uint8_t)
+=======================================
+
+- Defined in :ref:`file_mainboard_Src_error_error.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: error_reset(error_id, uint8_t)

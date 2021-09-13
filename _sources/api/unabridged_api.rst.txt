@@ -612,6 +612,16 @@ Functions
 .. toctree::
    :maxdepth: 5
 
+   function_error_8h_1a548b7ec812db3adf99fb3a09cec83242.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_error_8c_1a653924a8ae928fc2f4859c833fdf752d.rst
+
+.. toctree::
+   :maxdepth: 5
+
    function_error_8h_1a088a6ef471aa61175b288a40b17dfd74.rst
 
 .. toctree::
@@ -633,16 +643,6 @@ Functions
    :maxdepth: 5
 
    function_error_8c_1ab141b610cef83979b66d4e1e158ea8fa.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_error_8h_1a2b76c39387439d7909a1275fdd2ba2f5.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_error_8c_1afb94a3a257e2bdafbc186960699bc5a3.rst
 
 .. toctree::
    :maxdepth: 5
@@ -1912,6 +1912,11 @@ Variables
    :maxdepth: 5
 
    variable_error__list__ref_8c_1a2bd297458226e83223e775b2b2aa0ea3.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   variable_error__list__ref_8c_1a63dceab7552c9b95fb8922f30d16b76c.rst
 
 .. toctree::
    :maxdepth: 5

@@ -59,7 +59,7 @@ Program Listing for File si8900.c
            error_set(ERROR_ADC_INIT, 0, HAL_GetTick());
            return false;
        }
-       error_unset(ERROR_ADC_INIT, 0);
+       error_reset(ERROR_ADC_INIT, 0);
        return true;
    }
    
@@ -82,7 +82,7 @@ Program Listing for File si8900.c
            HAL_UART_Receive(huart, data, 2, 1);
            *voltage = si8900_convert_voltage(data);
    
-           error_unset(ERROR_ADC_TIMEOUT, 0);
+           error_reset(ERROR_ADC_TIMEOUT, 0);
            return true;
        }
        return false;

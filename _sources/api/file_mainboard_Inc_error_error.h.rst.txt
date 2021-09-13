@@ -72,6 +72,8 @@ Included By
 
 - :ref:`file_mainboard_Src_cli_bms.c`
 
+- :ref:`file_mainboard_Src_config.c`
+
 - :ref:`file_mainboard_Src_error_error.c`
 
 - :ref:`file_mainboard_Src_main.c`
@@ -117,11 +119,11 @@ Functions
 
 - :ref:`exhale_function_error_8h_1a366492838020f38e468861b2034b90ba`
 
+- :ref:`exhale_function_error_8h_1a548b7ec812db3adf99fb3a09cec83242`
+
 - :ref:`exhale_function_error_8h_1a088a6ef471aa61175b288a40b17dfd74`
 
 - :ref:`exhale_function_error_8h_1ae86f203b676a3c6a854b7e1f55e49a6d`
-
-- :ref:`exhale_function_error_8h_1a2b76c39387439d7909a1275fdd2ba2f5`
 
 
 Defines

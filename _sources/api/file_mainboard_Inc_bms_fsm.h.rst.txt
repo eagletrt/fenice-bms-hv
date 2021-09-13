@@ -60,8 +60,6 @@ Included By
 
 - :ref:`file_mainboard_Src_cli_bms.c`
 
-- :ref:`file_mainboard_Src_error_error.c`
-
 - :ref:`file_mainboard_Src_main.c`
 
 - :ref:`file_mainboard_Src_peripherals_can_comm.c`

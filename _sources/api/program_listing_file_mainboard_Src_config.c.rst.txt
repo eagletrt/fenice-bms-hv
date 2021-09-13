@@ -13,6 +13,7 @@ Program Listing for File config.c
    
    #include "config.h"
    
+   #include "error.h"
    #include "fenice_config.h"
    #include "spi.h"
    
@@ -41,6 +42,7 @@ Program Listing for File config.c
        }
    
        if (config_read(*config)) {
+           error_reset(ERROR_EEPROM_COMM, 0);
            if (((uint8_t *)(*config)->data)[0] == ((uint8_t *)default_data)[0]) {
                return true;
            }
@@ -50,7 +52,7 @@ Program Listing for File config.c
    
            return false;
        }
-       // TODO: trigger warning?
+       error_set(ERROR_EEPROM_COMM, 0, HAL_GetTick());
        return false;
    }
    
@@ -63,11 +65,13 @@ Program Listing for File config.c
        uint8_t tmpdata[config->size];
    
        if (m95256_ReadBuffer(eeprom, tmpdata, config->address, config->size) == EEPROM_STATUS_COMPLETE) {
+           error_reset(ERROR_EEPROM_COMM, 0);
            memcpy(config->data, tmpdata, config->size);
            config->dirty = false;
            return true;
        }
    
+       error_set(ERROR_EEPROM_COMM, 0, HAL_GetTick());
        return false;
    }
    
@@ -77,8 +81,12 @@ Program Listing for File config.c
                EEPROM_STATUS_COMPLETE) {
                config->dirty = false;
                return true;
+           } else {
+               error_set(ERROR_EEPROM_COMM, 0, HAL_GetTick());
+               return false;
            }
        }
+       error_reset(ERROR_EEPROM_COMM, 0);
        return true;
    }
    
