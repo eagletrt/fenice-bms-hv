@@ -10,6 +10,7 @@ Program Listing for File energy.c
 
 .. code-block:: cpp
 
+   
    #include "energy.h"
    
    #include "soc.h"

@@ -9,7 +9,7 @@ File energy.c
 .. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
 
 
-File containing energy management functions for state of charge estimation, storage and retrieval. 
+File containing energy management functions for SoC management. 
 
 
 

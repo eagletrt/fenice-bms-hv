@@ -8,6 +8,11 @@ File energy.h
 
 .. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
 
+
+File containing energy management functions for SoC management. 
+
+
+
 .. contents:: Contents
    :local:
    :backlinks: none
@@ -20,6 +25,16 @@ Definition (``mainboard/Inc/energy.h``)
    :maxdepth: 1
 
    program_listing_file_mainboard_Inc_energy.h.rst
+
+
+
+Detailed Description
+--------------------
+
+Sep 25, 2021
+
+Matteo Bonora [matteo.bonora@studenti.unitn.it] 
+
 
 
 
