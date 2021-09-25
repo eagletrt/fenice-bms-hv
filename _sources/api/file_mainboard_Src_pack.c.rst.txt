@@ -69,8 +69,6 @@ Classes
 
 - :ref:`exhale_struct_structcells__t`
 
-- :ref:`exhale_struct_structsoc__params`
-
 
 Functions
 ---------
@@ -79,10 +77,6 @@ Functions
 - :ref:`exhale_function_pack_8c_1aa61e85cd7f306656a67272edaf145f6c`
 
 - :ref:`exhale_function_pack_8c_1a62b44ad3586608b81dce6a617b3e7f31`
-
-- :ref:`exhale_function_pack_8c_1ad1e9b42775c2e8c5bf7ed8ea52693e9c`
-
-- :ref:`exhale_function_pack_8c_1a5bb197071cb89c5742292bede85eda74`
 
 - :ref:`exhale_function_pack_8c_1a0e3de3b0a68560c145c795f7debfb95d`
 
@@ -96,15 +90,11 @@ Functions
 
 - :ref:`exhale_function_pack_8c_1a72b388852db07771e836901e5561503e`
 
-- :ref:`exhale_function_pack_8c_1a5b45e29469ef41118d8f8ea0b2967543`
-
 - :ref:`exhale_function_pack_8c_1a51f16a179823be9e0b981fa7ccdaa7dd`
 
 - :ref:`exhale_function_pack_8c_1a91acae66b5ea4b819e36a88c776baf3f`
 
 - :ref:`exhale_function_pack_8c_1a9d97a0ffd5453bbe2b7e55b73eb0131a`
-
-- :ref:`exhale_function_pack_8c_1ad349c1b12d10dabd93f3a6400a99ef9a`
 
 - :ref:`exhale_function_pack_8c_1a11b76b127aed2ee361e2615bd9ba6d1a`
 
@@ -123,17 +113,9 @@ Defines
 -------
 
 
-- :ref:`exhale_define_pack_8c_1aa7ea986bc4c9a1c93ff64f92a0fdd296`
-
 - :ref:`exhale_define_pack_8c_1affe776513b24d84b39af8ab0930fef7f`
 
 - :ref:`exhale_define_pack_8c_1ac6afabdc09a49a433ee19d8a9486056d`
-
-- :ref:`exhale_define_pack_8c_1a25fdc63f0f31003ac8d4646d262d90fd`
-
-- :ref:`exhale_define_pack_8c_1ab4f531691d71e5669a903c54018b13bf`
-
-- :ref:`exhale_define_pack_8c_1a8baa943c563bf485d375f07a862bc62c`
 
 
 Variables
@@ -141,18 +123,4 @@ Variables
 
 
 - :ref:`exhale_variable_pack_8c_1a22fb404da4d9ebc546ffb3bd5a9ad469`
-
-- :ref:`exhale_variable_pack_8c_1a145ff3ef9e53de3d83064acbf72f0b9f`
-
-- :ref:`exhale_variable_pack_8c_1af0efb692b8d404ba4e4986dff19619f1`
-
-- :ref:`exhale_variable_pack_8c_1a9e43ec2e7da68d7802a24f123bb30a0d`
-
-- :ref:`exhale_variable_pack_8c_1a29e86de29809135c63fb780dad514155`
-
-- :ref:`exhale_variable_pack_8c_1a409e04db659286c5d291207fa8af4fcf`
-
-- :ref:`exhale_variable_pack_8c_1a182e5dd719201aff2b6217defb8aacc1`
-
-- :ref:`exhale_variable_pack_8c_1a232b686d286a16d23e8f9e39d5fc346a`
 

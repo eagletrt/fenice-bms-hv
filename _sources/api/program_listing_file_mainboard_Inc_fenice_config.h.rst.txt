@@ -73,7 +73,7 @@ Program Listing for File fenice_config.h
    
    #define PACK_TEMP_COUNT (TEMP_SENSOR_COUNT * LTC6813_COUNT)
    
-   #define PACK_MAX_CURRENT 2000
+   #define PACK_MAX_CURRENT 180.0f
    
    #define CELL_WARN_VOLTAGE 28000
    #define CELL_MIN_VOLTAGE  25000

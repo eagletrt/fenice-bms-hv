@@ -15,6 +15,7 @@ Program Listing for File cli_bms.c
    
    #include "bal_fsm.h"
    #include "bms_fsm.h"
+   #include "energy.h"
    #include "error/error.h"
    #include "pack.h"
    #include "soc.h"
@@ -277,7 +278,7 @@ Program Listing for File cli_bms.c
    }
    void _cli_soc(uint16_t argc, char **argv, char *out) {
        if (strcmp(argv[1], "reset") == 0) {
-           pack_reset_soc();
+           energy_reset_soc();
            sprintf(out, "Resetting energy meter\r\n");
        } else {
            sprintf(
@@ -285,9 +286,9 @@ Program Listing for File cli_bms.c
                "SoC: %.2f %%\r\n"
                "Energy: %.1f Wh\r\n"
                "Energy total: %.1f Wh\r\n",
-               pack_get_soc(),
-               pack_get_energy_last_charge(),
-               pack_get_energy_total());
+               energy_get_soc(),
+               energy_get_energy_last_charge(),
+               energy_get_energy_total());
        }
    }
    

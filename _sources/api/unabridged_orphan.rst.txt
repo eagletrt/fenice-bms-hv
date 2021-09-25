@@ -165,6 +165,16 @@ Files
 .. toctree::
    :maxdepth: 5
 
+   file_mainboard_Src_energy.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Inc_energy.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
    file_mainboard_Src_error_error.c.rst
 
 .. toctree::

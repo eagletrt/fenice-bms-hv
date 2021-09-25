@@ -52,6 +52,8 @@ Included By
 -----------
 
 
+- :ref:`file_mainboard_Inc_energy.h`
+
 - :ref:`file_mainboard_Inc_soc.h`
 
 - :ref:`file_mainboard_Src_current.c`
@@ -69,7 +71,7 @@ Enums
 -----
 
 
-- :ref:`exhale_enum_current_8h_1a99fb83031ce9923c84392b4e92f956b5`
+- :ref:`exhale_enum_current_8h_1ae8d37f478f5909222d7ccfa3545ecb3d`
 
 
 Functions
@@ -82,7 +84,7 @@ Functions
 
 - :ref:`exhale_function_current_8h_1a4594d13415e02237330119f5e1f4b891`
 
-- :ref:`exhale_function_current_8h_1af2fd48caec222bb0240e19ac7d046fc7`
+- :ref:`exhale_function_current_8h_1a073ffbf1b95ce2ea8cd1a52d1c875132`
 
 - :ref:`exhale_function_current_8h_1aefe9d7b8993ca385f9d75117fc4dfb9a`
 

@@ -1,0 +1,29 @@
+
+.. _program_listing_file_mainboard_Inc_energy.h:
+
+Program Listing for File energy.h
+=================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_mainboard_Inc_energy.h>` (``mainboard/Inc/energy.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   #pragma once
+   
+   #include "config.h"
+   #include "current.h"
+   
+   void energy_init();
+   
+   void energy_sample_current(uint32_t timestamp);
+   
+   void energy_reset_soc();
+   
+   float energy_get_soc();
+   
+   float energy_get_energy_total();
+   
+   float energy_get_energy_last_charge();

@@ -48,6 +48,8 @@ Includes
 
 - ``current.h`` (:ref:`file_mainboard_Inc_current.h`)
 
+- ``error.h`` (:ref:`file_mainboard_Inc_error_error.h`)
+
 - ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
 
 
@@ -71,7 +73,7 @@ Functions
 
 - :ref:`exhale_function_current_8c_1a4594d13415e02237330119f5e1f4b891`
 
-- :ref:`exhale_function_current_8c_1af2fd48caec222bb0240e19ac7d046fc7`
+- :ref:`exhale_function_current_8c_1a073ffbf1b95ce2ea8cd1a52d1c875132`
 
 - :ref:`exhale_function_current_8c_1aefe9d7b8993ca385f9d75117fc4dfb9a`
 
@@ -87,7 +89,7 @@ Variables
 ---------
 
 
-- :ref:`exhale_variable_current_8c_1a0c5b7acb7b879205773a41d497fd299b`
+- :ref:`exhale_variable_current_8c_1a281180d9321f9001e36846c34a3abd88`
 
-- :ref:`exhale_variable_current_8c_1abc13d8ec5d0b7efc1f5ab2fed7fa33f5`
+- :ref:`exhale_variable_current_8c_1ad2cfd3e3b81028a258fc8ef57d260098`
 

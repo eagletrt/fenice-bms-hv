@@ -1,0 +1,13 @@
+.. _exhale_enum_current_8h_1ae8d37f478f5909222d7ccfa3545ecb3d:
+
+Enum CURRENT_SENSORS
+====================
+
+- Defined in :ref:`file_mainboard_Inc_current.h`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: CURRENT_SENSORS

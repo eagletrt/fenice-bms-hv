@@ -74,14 +74,18 @@
 
 <span class="cp">#include</span> <span class="cpf">&lt;fenice_config.h&gt;</span><span class="cp"></span>
 
-<span class="k">enum</span> <span class="p">{</span> <span class="n">CURRENT_SENSOR_50</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">CURRENT_SENSOR_300</span><span class="p">,</span> <span class="n">CURRENT_SENSOR_SHUNT</span><span class="p">,</span> <span class="n">CURRENT_SENSOR_AMOUNT</span> <span class="p">};</span>
+<span class="k">enum</span> <span class="n">CURRENT_SENSORS</span> <span class="p">{</span> <span class="n">CURRENT_SENSOR_50</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">CURRENT_SENSOR_300</span><span class="p">,</span> <span class="n">CURRENT_SENSOR_SHUNT</span><span class="p">,</span> <span class="n">CURRENT_SENSOR_NUM</span> <span class="p">};</span>
 
 <span class="k">typedef</span> <span class="kt">float</span> <span class="n">current_t</span><span class="p">;</span>
 
-<span class="kt">void</span> <span class="nf">current_measure</span><span class="p">();</span>
+<span class="kt">uint32_t</span> <span class="nf">current_measure</span><span class="p">();</span>
+
 <span class="kt">void</span> <span class="nf">current_zero</span><span class="p">();</span>
+
 <span class="n">current_t</span> <span class="nf">current_get_current</span><span class="p">();</span>
+
 <span class="n">current_t</span> <span class="o">*</span><span class="nf">current_get_current_sensors</span><span class="p">();</span>
+
 <span class="n">current_t</span> <span class="o">*</span><span class="nf">current_get_zero</span><span class="p">();</span>
 </pre></div>
 </div>

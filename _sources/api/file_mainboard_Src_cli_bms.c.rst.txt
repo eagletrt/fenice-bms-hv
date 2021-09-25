@@ -52,6 +52,8 @@ Includes
 
 - ``cli_bms.h`` (:ref:`file_mainboard_Inc_cli_bms.h`)
 
+- ``energy.h`` (:ref:`file_mainboard_Inc_energy.h`)
+
 - ``error/error.h`` (:ref:`file_mainboard_Inc_error_error.h`)
 
 - ``pack.h`` (:ref:`file_mainboard_Inc_pack.h`)

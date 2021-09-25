@@ -73,20 +73,13 @@
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;current.h&quot;</span><span class="cp"></span>
 
 <span class="cp">#include</span> <span class="cpf">&quot;adc.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;error.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;main.h&quot;</span><span class="cp"></span>
 
 <span class="cp">#define ROLLING_AVERAGE_FACTOR 0.75f</span>
 
-<span class="n">current_t</span> <span class="n">current</span><span class="p">[</span><span class="n">CURRENT_SENSOR_AMOUNT</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mf">0.f</span><span class="p">};</span>
-<span class="n">current_t</span> <span class="n">zero</span><span class="p">[</span><span class="n">CURRENT_SENSOR_AMOUNT</span><span class="p">]</span>    <span class="o">=</span> <span class="p">{</span><span class="mf">0.f</span><span class="p">};</span>
-
-<span class="c1">//current_t zero_low    = 0;</span>
-<span class="c1">//current_t current_low = 0;</span>
-<span class="c1">//</span>
-<span class="c1">//current_t zero_high    = 0;</span>
-<span class="c1">//current_t current_high = 0;</span>
-<span class="c1">//</span>
-<span class="c1">//current_t current = 0;</span>
+<span class="n">current_t</span> <span class="n">current</span><span class="p">[</span><span class="n">CURRENT_SENSOR_NUM</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mf">0.f</span><span class="p">};</span>
+<span class="n">current_t</span> <span class="n">zero</span><span class="p">[</span><span class="n">CURRENT_SENSOR_NUM</span><span class="p">]</span>    <span class="o">=</span> <span class="p">{</span><span class="mf">0.f</span><span class="p">};</span>
 
 <span class="n">current_t</span> <span class="nf">_current_convert_low</span><span class="p">(</span><span class="kt">float</span> <span class="n">volt</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="p">((</span><span class="mi">1</span> <span class="o">/</span> <span class="mf">40.0e-3</span><span class="n">f</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">volt</span> <span class="o">/</span> <span class="p">(</span><span class="mf">330.f</span> <span class="o">/</span> <span class="p">(</span><span class="mi">330</span> <span class="o">+</span> <span class="mi">169</span><span class="p">))</span> <span class="o">-</span> <span class="mf">2.5f</span><span class="p">)</span> <span class="o">-</span> <span class="n">zero</span><span class="p">[</span><span class="n">CURRENT_SENSOR_50</span><span class="p">]);</span>
@@ -100,22 +93,32 @@
     <span class="k">return</span> <span class="mf">0.f</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="kt">void</span> <span class="nf">current_measure</span><span class="p">()</span> <span class="p">{</span>
+<span class="kt">uint32_t</span> <span class="nf">current_measure</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Start ADC measurements for every sensor</span>
     <span class="n">HAL_ADC_Start</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hadc1</span><span class="p">);</span>
     <span class="n">HAL_ADC_Start</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hadc2</span><span class="p">);</span>
+    <span class="c1">//TODO: measure shunt</span>
 
-    <span class="n">HAL_ADC_PollForConversion</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hadc1</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
-    <span class="kt">uint16_t</span> <span class="n">adcval</span> <span class="o">=</span> <span class="n">HAL_ADC_GetValue</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hadc1</span><span class="p">);</span>
-    <span class="kt">float</span> <span class="n">volt</span>      <span class="o">=</span> <span class="p">(</span><span class="n">adcval</span> <span class="o">*</span> <span class="mf">3.3f</span><span class="p">)</span> <span class="o">/</span> <span class="mi">4095</span><span class="p">;</span>
+    <span class="n">HAL_ADC_PollForConversion</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hadc1</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="n">HAL_ADC_PollForConversion</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hadc2</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="kt">uint32_t</span> <span class="n">time</span> <span class="o">=</span> <span class="n">HAL_GetTick</span><span class="p">();</span>
 
+    <span class="c1">// Convert Hall-low (50A) and save rolling average</span>
+    <span class="kt">uint16_t</span> <span class="n">adcval</span>            <span class="o">=</span> <span class="n">HAL_ADC_GetValue</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hadc1</span><span class="p">);</span>
+    <span class="kt">float</span> <span class="n">volt</span>                 <span class="o">=</span> <span class="p">(</span><span class="n">adcval</span> <span class="o">*</span> <span class="mf">3.3f</span><span class="p">)</span> <span class="o">/</span> <span class="mi">4095</span><span class="p">;</span>
     <span class="n">current</span><span class="p">[</span><span class="n">CURRENT_SENSOR_50</span><span class="p">]</span> <span class="o">=</span> <span class="n">ROLLING_AVERAGE_FACTOR</span> <span class="o">*</span> <span class="n">_current_convert_low</span><span class="p">(</span><span class="n">volt</span><span class="p">)</span> <span class="o">+</span>
                                  <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">ROLLING_AVERAGE_FACTOR</span><span class="p">)</span> <span class="o">*</span> <span class="n">current</span><span class="p">[</span><span class="n">CURRENT_SENSOR_50</span><span class="p">];</span>
 
-    <span class="n">HAL_ADC_PollForConversion</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hadc2</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+    <span class="c1">// Convert Hall-high (300A) and save rolling average</span>
     <span class="n">adcval</span>                      <span class="o">=</span> <span class="n">HAL_ADC_GetValue</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hadc2</span><span class="p">);</span>
     <span class="n">volt</span>                        <span class="o">=</span> <span class="p">(</span><span class="n">adcval</span> <span class="o">*</span> <span class="mf">3.3f</span><span class="p">)</span> <span class="o">/</span> <span class="mi">4095</span><span class="p">;</span>
     <span class="n">current</span><span class="p">[</span><span class="n">CURRENT_SENSOR_300</span><span class="p">]</span> <span class="o">=</span> <span class="n">ROLLING_AVERAGE_FACTOR</span> <span class="o">*</span> <span class="n">_current_convert_high</span><span class="p">(</span><span class="n">volt</span><span class="p">)</span> <span class="o">+</span>
                                   <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">ROLLING_AVERAGE_FACTOR</span><span class="p">)</span> <span class="o">*</span> <span class="n">current</span><span class="p">[</span><span class="n">CURRENT_SENSOR_300</span><span class="p">];</span>
+
+    <span class="c1">// Check for over-current</span>
+    <span class="n">error_toggle_check</span><span class="p">(</span><span class="n">current_get_current</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">PACK_MAX_CURRENT</span><span class="p">,</span> <span class="n">ERROR_OVER_CURRENT</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="n">time</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">current_zero</span><span class="p">()</span> <span class="p">{</span>

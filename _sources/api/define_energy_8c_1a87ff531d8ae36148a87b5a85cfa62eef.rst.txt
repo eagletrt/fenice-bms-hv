@@ -1,0 +1,13 @@
+.. _exhale_define_energy_8c_1a87ff531d8ae36148a87b5a85cfa62eef:
+
+Define ENERGY_VERSION
+=====================
+
+- Defined in :ref:`file_mainboard_Src_energy.c`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: ENERGY_VERSION

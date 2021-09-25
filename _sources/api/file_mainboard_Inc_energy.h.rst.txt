@@ -1,0 +1,68 @@
+
+.. _file_mainboard_Inc_energy.h:
+
+File energy.h
+=============
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Inc>` (``mainboard/Inc``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Inc/energy.h``)
+---------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Inc_energy.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``config.h`` (:ref:`file_mainboard_Inc_config.h`)
+
+- ``current.h`` (:ref:`file_mainboard_Inc_current.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_mainboard_Src_cli_bms.c`
+
+- :ref:`file_mainboard_Src_energy.c`
+
+- :ref:`file_mainboard_Src_main.c`
+
+- :ref:`file_mainboard_Src_super_fsm.c`
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_energy_8h_1a513ab9d6e4978a29e736d458c0de2df8`
+
+- :ref:`exhale_function_energy_8h_1a7b3add16bef5bb0f5e6c3705d4fb3bbb`
+
+- :ref:`exhale_function_energy_8h_1a9d21f4d084a49036ad0958113db0c1e6`
+
+- :ref:`exhale_function_energy_8h_1a62b8b13853cf40bbb475773bd5828dd5`
+
+- :ref:`exhale_function_energy_8h_1af313b1b7da0de8a095e819568f4b8d92`
+
+- :ref:`exhale_function_energy_8h_1aafeef7c3592552245571659689e4825e`
+

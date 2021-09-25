@@ -1,0 +1,13 @@
+.. _exhale_function_energy_8h_1a513ab9d6e4978a29e736d458c0de2df8:
+
+Function energy_get_energy_last_charge()
+========================================
+
+- Defined in :ref:`file_mainboard_Inc_energy.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: energy_get_energy_last_charge()

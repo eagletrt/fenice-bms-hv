@@ -50,6 +50,8 @@ Includes
 
 - ``current.h`` (:ref:`file_mainboard_Inc_current.h`)
 
+- ``energy.h`` (:ref:`file_mainboard_Inc_energy.h`)
+
 - ``inttypes.h``
 
 - ``main.h`` (:ref:`file_mainboard_Inc_main.h`)

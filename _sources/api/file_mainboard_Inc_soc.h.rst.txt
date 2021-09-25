@@ -58,6 +58,8 @@ Included By
 
 - :ref:`file_mainboard_Src_cli_bms.c`
 
+- :ref:`file_mainboard_Src_energy.c`
+
 - :ref:`file_mainboard_Src_pack.c`
 
 - :ref:`file_mainboard_Src_soc.c`

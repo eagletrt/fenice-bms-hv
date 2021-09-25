@@ -74,6 +74,8 @@ Included By
 
 - :ref:`file_mainboard_Src_config.c`
 
+- :ref:`file_mainboard_Src_current.c`
+
 - :ref:`file_mainboard_Src_error_error.c`
 
 - :ref:`file_mainboard_Src_main.c`

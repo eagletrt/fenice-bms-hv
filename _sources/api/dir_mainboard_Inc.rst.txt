@@ -30,6 +30,7 @@ Files
 - :ref:`file_mainboard_Inc_config.h`
 - :ref:`file_mainboard_Inc_current.h`
 - :ref:`file_mainboard_Inc_dma.h`
+- :ref:`file_mainboard_Inc_energy.h`
 - :ref:`file_mainboard_Inc_feedback.h`
 - :ref:`file_mainboard_Inc_fenice_config.h`
 - :ref:`file_mainboard_Inc_gpio.h`

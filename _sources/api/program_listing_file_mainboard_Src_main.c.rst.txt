@@ -26,6 +26,7 @@ Program Listing for File main.c
    /* Private includes ----------------------------------------------------------*/
    /* USER CODE BEGIN Includes */
    #include "bal_fsm.h"
+   #include "energy.h"
    #include "bms_fsm.h"
    #include "cli_bms.h"
    #include "config.h"
@@ -121,6 +122,7 @@ Program Listing for File main.c
        super_fsm_init();
        current_measure();
        current_zero();
+       energy_init();
    
        /* USER CODE END 2 */
    

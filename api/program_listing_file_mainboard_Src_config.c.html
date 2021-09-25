@@ -121,11 +121,11 @@
 <span class="p">}</span>
 
 <span class="kt">bool</span> <span class="nf">config_read</span><span class="p">(</span><span class="n">config_t</span> <span class="n">config</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kt">uint8_t</span> <span class="n">tmpdata</span><span class="p">[</span><span class="n">config</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">];</span>
+    <span class="kt">uint8_t</span> <span class="n">buffer</span><span class="p">[</span><span class="mi">64</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="n">m95256_ReadBuffer</span><span class="p">(</span><span class="n">eeprom</span><span class="p">,</span> <span class="n">tmpdata</span><span class="p">,</span> <span class="n">config</span><span class="o">-&gt;</span><span class="n">address</span><span class="p">,</span> <span class="n">config</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">)</span> <span class="o">==</span> <span class="n">EEPROM_STATUS_COMPLETE</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">m95256_ReadBuffer</span><span class="p">(</span><span class="n">eeprom</span><span class="p">,</span> <span class="n">buffer</span><span class="p">,</span> <span class="n">config</span><span class="o">-&gt;</span><span class="n">address</span><span class="p">,</span> <span class="n">config</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">)</span> <span class="o">==</span> <span class="n">EEPROM_STATUS_COMPLETE</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">error_reset</span><span class="p">(</span><span class="n">ERROR_EEPROM_COMM</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-        <span class="n">memcpy</span><span class="p">(</span><span class="n">config</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">,</span> <span class="n">tmpdata</span><span class="p">,</span> <span class="n">config</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">);</span>
+        <span class="n">memcpy</span><span class="p">(</span><span class="n">config</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">,</span> <span class="n">buffer</span><span class="p">,</span> <span class="n">config</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">);</span>
         <span class="n">config</span><span class="o">-&gt;</span><span class="n">dirty</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
         <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
     <span class="p">}</span>

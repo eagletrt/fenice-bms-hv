@@ -1,0 +1,13 @@
+.. _exhale_variable_current_8c_1ad2cfd3e3b81028a258fc8ef57d260098:
+
+Variable zero
+=============
+
+- Defined in :ref:`file_mainboard_Src_current.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: zero

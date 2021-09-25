@@ -74,6 +74,7 @@
 
 <span class="cp">#include</span> <span class="cpf">&quot;bal_fsm.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;bms_fsm.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;energy.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;error/error.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;pack.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;soc.h&quot;</span><span class="cp"></span>
@@ -336,7 +337,7 @@
 <span class="p">}</span>
 <span class="kt">void</span> <span class="nf">_cli_soc</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">out</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">&quot;reset&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">pack_reset_soc</span><span class="p">();</span>
+        <span class="n">energy_reset_soc</span><span class="p">();</span>
         <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s">&quot;Resetting energy meter</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">);</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
         <span class="n">sprintf</span><span class="p">(</span>
@@ -344,9 +345,9 @@
             <span class="s">&quot;SoC: %.2f %%</span><span class="se">\r\n</span><span class="s">&quot;</span>
             <span class="s">&quot;Energy: %.1f Wh</span><span class="se">\r\n</span><span class="s">&quot;</span>
             <span class="s">&quot;Energy total: %.1f Wh</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span>
-            <span class="n">pack_get_soc</span><span class="p">(),</span>
-            <span class="n">pack_get_energy_last_charge</span><span class="p">(),</span>
-            <span class="n">pack_get_energy_total</span><span class="p">());</span>
+            <span class="n">energy_get_soc</span><span class="p">(),</span>
+            <span class="n">energy_get_energy_last_charge</span><span class="p">(),</span>
+            <span class="n">energy_get_energy_total</span><span class="p">());</span>
     <span class="p">}</span>
 <span class="p">}</span>
 

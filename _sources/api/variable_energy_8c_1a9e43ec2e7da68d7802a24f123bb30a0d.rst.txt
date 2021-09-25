@@ -1,0 +1,13 @@
+.. _exhale_variable_energy_8c_1a9e43ec2e7da68d7802a24f123bb30a0d:
+
+Variable soc_config
+===================
+
+- Defined in :ref:`file_mainboard_Src_energy.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: soc_config

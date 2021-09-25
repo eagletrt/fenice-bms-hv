@@ -1,0 +1,13 @@
+.. _exhale_variable_current_8c_1a281180d9321f9001e36846c34a3abd88:
+
+Variable current
+================
+
+- Defined in :ref:`file_mainboard_Src_current.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: current
