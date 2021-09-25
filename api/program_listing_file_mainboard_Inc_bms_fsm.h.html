@@ -73,12 +73,13 @@
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifndef BMS_FSM_H</span>
 <span class="cp">#define BMS_FSM_H</span>
 
+<span class="cp">#include</span> <span class="cpf">&quot;blink.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;fsm.h&quot;</span><span class="cp"></span>
 
 <span class="cp">#include</span> <span class="cpf">&lt;stdbool.h&gt;</span><span class="cp"></span>
-<span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span> <span class="n">BMS_IDLE</span><span class="p">,</span> <span class="n">BMS_PRECHARGE</span><span class="p">,</span> <span class="n">BMS_ON</span><span class="p">,</span> <span class="n">BMS_HALT</span><span class="p">,</span> <span class="n">BMS_NUM_STATES</span> <span class="p">}</span> <span class="n">bms_states</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span> <span class="n">BMS_IDLE</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">BMS_PRECHARGE</span><span class="p">,</span> <span class="n">BMS_ON</span><span class="p">,</span> <span class="n">BMS_HALT</span><span class="p">,</span> <span class="n">BMS_NUM_STATES</span> <span class="p">}</span> <span class="n">bms_states</span><span class="p">;</span>
 <span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span>
-    <span class="n">BMS_EV_HALT</span><span class="p">,</span>
+    <span class="n">BMS_EV_HALT</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
     <span class="n">BMS_EV_TS_OFF</span><span class="p">,</span>
     <span class="n">BMS_EV_TS_ON</span><span class="p">,</span>
     <span class="n">BMS_EV_VOLT_MEASURE</span><span class="p">,</span>
@@ -91,6 +92,7 @@
 
 <span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
     <span class="n">fsm</span> <span class="n">fsm</span><span class="p">;</span>
+    <span class="n">blink_t</span> <span class="n">led</span><span class="p">;</span>
 <span class="p">}</span> <span class="n">bms_fsm</span><span class="p">;</span>
 
 <span class="k">extern</span> <span class="n">bms_fsm</span> <span class="n">bms</span><span class="p">;</span>

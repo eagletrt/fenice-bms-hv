@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard__config_8h_1a47d2c283340ac0c8eb6ebd06afdb407a:
+
+Define STATE_LED_PIN
+====================
+
+- Defined in :ref:`file_mainboard_Inc_mainboard_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: STATE_LED_PIN

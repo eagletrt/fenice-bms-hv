@@ -74,6 +74,7 @@
 
 <span class="cp">#include</span> <span class="cpf">&quot;bms_fsm.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;cli_bms.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;current.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;pack.h&quot;</span><span class="cp"></span>
 
 <span class="n">CAN_TxHeaderTypeDef</span> <span class="n">tx_header</span><span class="p">;</span>
@@ -90,7 +91,7 @@
         <span class="n">serialize_Primary_HV_VOLTAGE</span><span class="p">(</span>
             <span class="n">buffer</span><span class="p">,</span> <span class="n">pack_get_int_voltage</span><span class="p">(),</span> <span class="n">pack_get_bus_voltage</span><span class="p">(),</span> <span class="n">pack_get_max_voltage</span><span class="p">(),</span> <span class="n">pack_get_min_voltage</span><span class="p">());</span>
     <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">id</span> <span class="o">==</span> <span class="n">ID_HV_CURRENT</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">serialize_Primary_HV_CURRENT</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">pack_get_current</span><span class="p">(),</span> <span class="n">pack_get_power</span><span class="p">());</span>
+        <span class="n">serialize_Primary_HV_CURRENT</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">current_get_current</span><span class="p">(),</span> <span class="n">current_get_current</span><span class="p">()</span> <span class="o">*</span> <span class="n">pack_get_bus_voltage</span><span class="p">());</span>
     <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">id</span> <span class="o">==</span> <span class="n">ID_TS_STATUS</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">serialize_Primary_TS_STATUS</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">Primary_Ts_Status_ON</span><span class="p">);</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
@@ -105,7 +106,7 @@
     <span class="n">HAL_StatusTypeDef</span> <span class="n">status</span> <span class="o">=</span> <span class="n">HAL_CAN_AddTxMessage</span><span class="p">(</span><span class="o">&amp;</span><span class="n">CAR_CAN</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">tx_header</span><span class="p">,</span> <span class="n">buffer</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">mailbox</span><span class="p">);</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">status</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">error_set</span><span class="p">(</span><span class="n">ERROR_CAN</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">HAL_GetTick</span><span class="p">());</span>
-        <span class="n">cli_bms_debug</span><span class="p">(</span><span class="s">&quot;CAN: Error sending message&quot;</span><span class="p">,</span> <span class="mi">27</span><span class="p">);</span>
+        <span class="c1">//cli_bms_debug(&quot;CAN: Error sending message&quot;, 27);</span>
 
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
         <span class="n">error_reset</span><span class="p">(</span><span class="n">ERROR_CAN</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>

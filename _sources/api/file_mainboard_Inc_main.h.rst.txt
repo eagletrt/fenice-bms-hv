@@ -59,6 +59,8 @@ Included By
 
 - :ref:`file_mainboard_Inc_can.h`
 
+- :ref:`file_mainboard_Inc_dma.h`
+
 - :ref:`file_mainboard_Inc_gpio.h`
 
 - :ref:`file_mainboard_Inc_spi.h`

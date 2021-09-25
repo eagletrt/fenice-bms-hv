@@ -59,6 +59,8 @@ Included By
 
 - :ref:`file_mainboard_Src_bms_fsm.c`
 
+- :ref:`file_mainboard_Src_current.c`
+
 - :ref:`file_mainboard_Src_feedback.c`
 
 - :ref:`file_mainboard_Src_main.c`

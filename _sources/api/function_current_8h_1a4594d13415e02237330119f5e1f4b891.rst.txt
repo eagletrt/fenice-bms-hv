@@ -1,0 +1,13 @@
+.. _exhale_function_current_8h_1a4594d13415e02237330119f5e1f4b891:
+
+Function current_get_zero()
+===========================
+
+- Defined in :ref:`file_mainboard_Inc_current.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: current_get_zero()

@@ -50,6 +50,8 @@ Includes
 
 - ``cli_bms.h`` (:ref:`file_mainboard_Inc_cli_bms.h`)
 
+- ``current.h`` (:ref:`file_mainboard_Inc_current.h`)
+
 - ``pack.h`` (:ref:`file_mainboard_Inc_pack.h`)
 
 

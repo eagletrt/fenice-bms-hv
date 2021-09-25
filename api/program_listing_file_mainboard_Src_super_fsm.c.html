@@ -74,6 +74,7 @@
 
 <span class="cp">#include</span> <span class="cpf">&quot;bms_fsm.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;can_comm.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;current.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;main.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;pack.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;spi.h&quot;</span><span class="cp"></span>
@@ -90,9 +91,10 @@
 <span class="kt">void</span> <span class="nf">super_measure_volts</span><span class="p">(</span><span class="n">fsm</span> <span class="n">handle</span><span class="p">,</span> <span class="n">super_events</span> <span class="n">event</span><span class="p">);</span>
 
 <span class="kt">void</span> <span class="nf">super_fsm_init</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">super_fsm</span> <span class="o">=</span> <span class="n">fsm_init</span><span class="p">(</span><span class="n">SUPER_NUM_STATES</span><span class="p">,</span> <span class="n">SUPER_EV_NUM</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+    <span class="n">super_fsm</span> <span class="o">=</span> <span class="n">fsm_init</span><span class="p">(</span><span class="n">SUPER_NUM_STATES</span><span class="p">,</span> <span class="n">SUPER_EV_NUM</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
 
     <span class="n">fsm_state</span> <span class="n">state</span><span class="p">;</span>
+    <span class="n">state</span><span class="p">.</span><span class="n">run</span>     <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
     <span class="n">state</span><span class="p">.</span><span class="n">handler</span> <span class="o">=</span> <span class="n">super_bms</span><span class="p">;</span>
     <span class="n">state</span><span class="p">.</span><span class="n">entry</span>   <span class="o">=</span> <span class="n">super_bms_entry</span><span class="p">;</span>
     <span class="n">state</span><span class="p">.</span><span class="n">exit</span>    <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
@@ -127,8 +129,9 @@
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">super_measure_volts</span><span class="p">(</span><span class="n">fsm</span> <span class="n">handle</span><span class="p">,</span> <span class="n">super_events</span> <span class="n">event</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">pack_update_voltages</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart3</span><span class="p">);</span>
-    <span class="n">pack_update_current</span><span class="p">();</span>
+    <span class="n">pack_update_voltages</span><span class="p">(</span><span class="o">&amp;</span><span class="n">SI8900_UART</span><span class="p">);</span>
+    <span class="n">current_measure</span><span class="p">();</span>
+
     <span class="n">can_send</span><span class="p">(</span><span class="n">ID_HV_CURRENT</span><span class="p">);</span>
 
     <span class="n">fsm_transition</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">SUPER_BMS</span><span class="p">);</span>

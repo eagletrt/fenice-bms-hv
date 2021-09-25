@@ -111,9 +111,10 @@
 
 <span class="kt">void</span> <span class="nf">bal_fsm_init</span><span class="p">()</span> <span class="p">{</span>
     <span class="n">bal</span><span class="p">.</span><span class="n">cycle_length</span> <span class="o">=</span> <span class="n">BAL_CYCLE_LENGTH</span><span class="p">;</span>
-    <span class="n">bal</span><span class="p">.</span><span class="n">fsm</span>          <span class="o">=</span> <span class="n">fsm_init</span><span class="p">(</span><span class="n">BAL_NUM_STATES</span><span class="p">,</span> <span class="n">BAL_EV_NUM</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+    <span class="n">bal</span><span class="p">.</span><span class="n">fsm</span>          <span class="o">=</span> <span class="n">fsm_init</span><span class="p">(</span><span class="n">BAL_NUM_STATES</span><span class="p">,</span> <span class="n">BAL_EV_NUM</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
 
     <span class="n">fsm_state</span> <span class="n">state</span><span class="p">;</span>
+    <span class="n">state</span><span class="p">.</span><span class="n">run</span>     <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
     <span class="n">state</span><span class="p">.</span><span class="n">handler</span> <span class="o">=</span> <span class="n">off_handler</span><span class="p">;</span>
     <span class="n">state</span><span class="p">.</span><span class="n">entry</span>   <span class="o">=</span> <span class="n">off_entry</span><span class="p">;</span>
     <span class="n">state</span><span class="p">.</span><span class="n">exit</span>    <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
@@ -138,7 +139,6 @@
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">off_entry</span><span class="p">(</span><span class="n">fsm</span> <span class="n">FSM</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kt">uint16_t</span> <span class="n">cells</span><span class="p">[</span><span class="n">PACK_CELL_COUNT</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">off_handler</span><span class="p">(</span><span class="n">fsm</span> <span class="n">FSM</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">event</span><span class="p">)</span> <span class="p">{</span>

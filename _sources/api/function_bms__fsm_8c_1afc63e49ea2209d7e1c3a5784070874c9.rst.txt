@@ -1,0 +1,13 @@
+.. _exhale_function_bms__fsm_8c_1afc63e49ea2209d7e1c3a5784070874c9:
+
+Function _precharge_entry
+=========================
+
+- Defined in :ref:`file_mainboard_Src_bms_fsm.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: _precharge_entry(fsm)

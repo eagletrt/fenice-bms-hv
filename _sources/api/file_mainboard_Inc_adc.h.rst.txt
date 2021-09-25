@@ -55,6 +55,8 @@ Included By
 
 - :ref:`file_mainboard_Src_adc.c`
 
+- :ref:`file_mainboard_Src_current.c`
+
 - :ref:`file_mainboard_Src_main.c`
 
 
@@ -66,10 +68,14 @@ Functions
 
 - :ref:`exhale_function_adc_8h_1acccd58aa70215a6b184ad242312ffd0c`
 
+- :ref:`exhale_function_adc_8h_1a101e2e3433dfe72bbbd0ae3a84489263`
+
 
 Variables
 ---------
 
 
 - :ref:`exhale_variable_adc_8h_1a22b804736f5648d52f639b2647d4ed13`
+
+- :ref:`exhale_variable_adc_8h_1acd9221f1aa19aebfe0b744947f2daf49`
 

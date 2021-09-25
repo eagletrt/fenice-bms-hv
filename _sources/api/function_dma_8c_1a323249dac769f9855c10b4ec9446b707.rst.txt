@@ -1,0 +1,13 @@
+.. _exhale_function_dma_8c_1a323249dac769f9855c10b4ec9446b707:
+
+Function MX_DMA_Init(void)
+==========================
+
+- Defined in :ref:`file_mainboard_Src_dma.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: MX_DMA_Init(void)

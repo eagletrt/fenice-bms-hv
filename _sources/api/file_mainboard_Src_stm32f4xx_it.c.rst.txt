@@ -58,6 +58,8 @@ Functions
 ---------
 
 
+- :ref:`exhale_function_mainboard_2Src_2stm32f4xx__it_8c_1a06406eadf297fa89a6eaf9586b227a69`
+
 - :ref:`exhale_function_mainboard_2Src_2stm32f4xx__it_8c_1a850cefb17a977292ae5eb4cafa9976c3`
 
 - :ref:`exhale_function_mainboard_2Src_2stm32f4xx__it_8c_1a4dcf621094d563287c456f7aa751e86b`
@@ -73,6 +75,10 @@ Functions
 - :ref:`exhale_function_mainboard_2Src_2stm32f4xx__it_8c_1a3810eef71ac476c42c8a858951c2607d`
 
 - :ref:`exhale_function_mainboard_2Src_2stm32f4xx__it_8c_1adbdfb05858cc36fc520974df37ec3cb0`
+
+- :ref:`exhale_function_mainboard_2Src_2stm32f4xx__it_8c_1aaf6ce196dde98712e1223b99766e06c0`
+
+- :ref:`exhale_function_mainboard_2Src_2stm32f4xx__it_8c_1a7e367d7c7b74485c4c75cdef30ad01e1`
 
 - :ref:`exhale_function_mainboard_2Src_2stm32f4xx__it_8c_1a2bffc10d5bd4106753b7c30e86903bea`
 
@@ -103,9 +109,17 @@ Variables
 ---------
 
 
+- :ref:`exhale_variable_mainboard_2Src_2stm32f4xx__it_8c_1a22b804736f5648d52f639b2647d4ed13`
+
+- :ref:`exhale_variable_mainboard_2Src_2stm32f4xx__it_8c_1acd9221f1aa19aebfe0b744947f2daf49`
+
 - :ref:`exhale_variable_mainboard_2Src_2stm32f4xx__it_8c_1a1618d731d18d69e906e8a357b7cd3c8d`
 
 - :ref:`exhale_variable_mainboard_2Src_2stm32f4xx__it_8c_1ab77168d14df04ccca5d48612ee21ced8`
+
+- :ref:`exhale_variable_mainboard_2Src_2stm32f4xx__it_8c_1a1c126854bb1813d31ab4776b21dcc51f`
+
+- :ref:`exhale_variable_mainboard_2Src_2stm32f4xx__it_8c_1ad99dd74cc50b61cf07680c1adaf80337`
 
 - :ref:`exhale_variable_mainboard_2Src_2stm32f4xx__it_8c_1a2c80fd5510e2990a59a5c90d745c716c`
 

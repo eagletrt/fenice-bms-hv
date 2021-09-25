@@ -1,0 +1,13 @@
+.. _exhale_function_current_8c_1a49ebe20e67c4794c4a556a9a594e9fef:
+
+Function current_get_current_sensors()
+======================================
+
+- Defined in :ref:`file_mainboard_Src_current.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: current_get_current_sensors()

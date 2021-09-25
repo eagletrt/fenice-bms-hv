@@ -51,6 +51,7 @@ Program Listing for File stm32f4xx_it.h
    void DebugMon_Handler(void);
    void PendSV_Handler(void);
    void SysTick_Handler(void);
+   void ADC_IRQHandler(void);
    void CAN1_RX0_IRQHandler(void);
    void CAN1_RX1_IRQHandler(void);
    void CAN1_SCE_IRQHandler(void);
@@ -59,6 +60,8 @@ Program Listing for File stm32f4xx_it.h
    void TIM4_IRQHandler(void);
    void USART1_IRQHandler(void);
    void USART3_IRQHandler(void);
+   void DMA2_Stream0_IRQHandler(void);
+   void DMA2_Stream2_IRQHandler(void);
    void CAN2_RX0_IRQHandler(void);
    void CAN2_RX1_IRQHandler(void);
    void CAN2_SCE_IRQHandler(void);

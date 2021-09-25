@@ -1,0 +1,13 @@
+.. _exhale_function_current_8c_1aee6d144d314326f30167c2798008dce5:
+
+Function _current_convert_shunt
+===============================
+
+- Defined in :ref:`file_mainboard_Src_current.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: _current_convert_shunt()

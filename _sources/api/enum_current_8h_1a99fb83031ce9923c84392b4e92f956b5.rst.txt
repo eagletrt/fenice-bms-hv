@@ -1,0 +1,13 @@
+.. _exhale_enum_current_8h_1a99fb83031ce9923c84392b4e92f956b5:
+
+Enum @2
+=======
+
+- Defined in :ref:`file_mainboard_Inc_current.h`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: @2

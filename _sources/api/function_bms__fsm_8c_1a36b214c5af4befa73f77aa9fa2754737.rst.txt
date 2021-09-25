@@ -1,0 +1,13 @@
+.. _exhale_function_bms__fsm_8c_1a36b214c5af4befa73f77aa9fa2754737:
+
+Function _precharge_handler
+===========================
+
+- Defined in :ref:`file_mainboard_Src_bms_fsm.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: _precharge_handler(fsm, uint8_t)

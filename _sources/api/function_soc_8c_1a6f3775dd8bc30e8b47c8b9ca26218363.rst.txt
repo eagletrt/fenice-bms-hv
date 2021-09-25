@@ -1,0 +1,13 @@
+.. _exhale_function_soc_8c_1a6f3775dd8bc30e8b47c8b9ca26218363:
+
+Function soc_get_joule(soc_t)
+=============================
+
+- Defined in :ref:`file_mainboard_Src_soc.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: soc_get_joule(soc_t)

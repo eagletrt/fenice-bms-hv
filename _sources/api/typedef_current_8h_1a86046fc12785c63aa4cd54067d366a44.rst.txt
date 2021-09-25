@@ -1,0 +1,13 @@
+.. _exhale_typedef_current_8h_1a86046fc12785c63aa4cd54067d366a44:
+
+Typedef current_t
+=================
+
+- Defined in :ref:`file_mainboard_Inc_current.h`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: current_t

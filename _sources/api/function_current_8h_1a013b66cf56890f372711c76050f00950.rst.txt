@@ -1,0 +1,13 @@
+.. _exhale_function_current_8h_1a013b66cf56890f372711c76050f00950:
+
+Function current_get_current()
+==============================
+
+- Defined in :ref:`file_mainboard_Inc_current.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: current_get_current()

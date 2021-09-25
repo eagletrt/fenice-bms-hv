@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard__config_8h_1a2efabd7f4edff562f4533c66053b173d:
+
+Define STATE_LED_GPIO
+=====================
+
+- Defined in :ref:`file_mainboard_Inc_mainboard_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: STATE_LED_GPIO

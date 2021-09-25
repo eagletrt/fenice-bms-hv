@@ -1,0 +1,13 @@
+.. _exhale_function_soc_8c_1a3580e75a485c2c2568cf5fb044894d8e:
+
+Function soc_get_wh(soc_t)
+==========================
+
+- Defined in :ref:`file_mainboard_Src_soc.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: soc_get_wh(soc_t)

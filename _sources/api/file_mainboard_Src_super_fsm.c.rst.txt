@@ -48,6 +48,8 @@ Includes
 
 - ``can_comm.h`` (:ref:`file_mainboard_Inc_peripherals_can_comm.h`)
 
+- ``current.h`` (:ref:`file_mainboard_Inc_current.h`)
+
 - ``inttypes.h``
 
 - ``main.h`` (:ref:`file_mainboard_Inc_main.h`)

@@ -1,0 +1,13 @@
+.. _exhale_function_bms__fsm_8c_1abd9fb9858e647121ad68b37d46b985c2:
+
+Function _on_entry
+==================
+
+- Defined in :ref:`file_mainboard_Src_bms_fsm.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: _on_entry(fsm)

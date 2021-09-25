@@ -145,6 +145,26 @@ Files
 .. toctree::
    :maxdepth: 5
 
+   file_mainboard_Src_current.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Inc_current.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Src_dma.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Inc_dma.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
    file_mainboard_Src_error_error.c.rst
 
 .. toctree::

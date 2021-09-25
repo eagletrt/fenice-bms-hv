@@ -1,0 +1,13 @@
+.. _exhale_define_current_8c_1a277dc742590fab8ab5b2d552f062f8ab:
+
+Define ROLLING_AVERAGE_FACTOR
+=============================
+
+- Defined in :ref:`file_mainboard_Src_current.c`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: ROLLING_AVERAGE_FACTOR

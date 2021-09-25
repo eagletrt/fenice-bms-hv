@@ -1,0 +1,13 @@
+.. _exhale_function_current_8h_1af2fd48caec222bb0240e19ac7d046fc7:
+
+Function current_measure()
+==========================
+
+- Defined in :ref:`file_mainboard_Inc_current.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: current_measure()

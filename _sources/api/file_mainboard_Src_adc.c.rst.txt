@@ -62,10 +62,18 @@ Functions
 
 - :ref:`exhale_function_adc_8c_1acccd58aa70215a6b184ad242312ffd0c`
 
+- :ref:`exhale_function_adc_8c_1a101e2e3433dfe72bbbd0ae3a84489263`
+
 
 Variables
 ---------
 
 
 - :ref:`exhale_variable_adc_8c_1a22b804736f5648d52f639b2647d4ed13`
+
+- :ref:`exhale_variable_adc_8c_1acd9221f1aa19aebfe0b744947f2daf49`
+
+- :ref:`exhale_variable_adc_8c_1a1c126854bb1813d31ab4776b21dcc51f`
+
+- :ref:`exhale_variable_adc_8c_1ad99dd74cc50b61cf07680c1adaf80337`
 

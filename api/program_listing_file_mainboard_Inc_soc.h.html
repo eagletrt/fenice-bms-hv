@@ -75,18 +75,19 @@
 <span class="cp">#define _SOC_H_</span>
 
 <span class="cm">/* Includes ------------------------------------------------------------------*/</span>
-<span class="cp">#include</span> <span class="cpf">&lt;inttypes.h&gt;</span><span class="cp"></span>
-
+<span class="cp">#include</span> <span class="cpf">&quot;current.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;fenice_config.h&quot;</span><span class="cp"></span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;inttypes.h&gt;</span><span class="cp"></span>
 <span class="cm">/* Exported types ------------------------------------------------------------*/</span>
-<span class="k">typedef</span> <span class="k">struct</span> <span class="n">soc</span><span class="o">*</span> <span class="n">soc_t</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="k">struct</span> <span class="n">soc</span> <span class="o">*</span><span class="n">soc_t</span><span class="p">;</span>
 <span class="cm">/* Exported constants --------------------------------------------------------*/</span>
 <span class="cm">/* Exported macros -----------------------------------------------------------*/</span>
 <span class="cm">/* Exported functions --------------------------------------------------------*/</span>
 
-<span class="kt">void</span> <span class="nf">soc_init</span><span class="p">(</span><span class="n">soc_t</span><span class="o">*</span> <span class="n">handle</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">soc_init</span><span class="p">(</span><span class="n">soc_t</span> <span class="o">*</span><span class="n">handle</span><span class="p">);</span>
 
-<span class="kt">void</span> <span class="nf">soc_deinit</span><span class="p">(</span><span class="n">soc_t</span><span class="o">*</span> <span class="n">handle</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">soc_deinit</span><span class="p">(</span><span class="n">soc_t</span> <span class="o">*</span><span class="n">handle</span><span class="p">);</span>
 
 <span class="kt">void</span> <span class="nf">soc_load</span><span class="p">(</span><span class="n">soc_t</span> <span class="n">handle</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">joule</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">time</span><span class="p">);</span>
 
@@ -96,8 +97,8 @@
 
 <span class="kt">void</span> <span class="nf">soc_sample_current</span><span class="p">(</span><span class="n">soc_t</span> <span class="n">handle</span><span class="p">,</span> <span class="n">current_t</span> <span class="n">current</span><span class="p">,</span> <span class="n">voltage_t</span> <span class="n">voltage</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">time</span><span class="p">);</span>
 
-<span class="kt">double</span> <span class="nf">soc_get_wh</span><span class="p">(</span><span class="n">soc_t</span> <span class="n">handle</span><span class="p">);</span>
-<span class="kt">double</span> <span class="nf">soc_get_joule</span><span class="p">(</span><span class="n">soc_t</span> <span class="n">handle</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">soc_get_wh</span><span class="p">(</span><span class="n">soc_t</span> <span class="n">handle</span><span class="p">);</span>
+<span class="kt">float</span> <span class="nf">soc_get_joule</span><span class="p">(</span><span class="n">soc_t</span> <span class="n">handle</span><span class="p">);</span>
 
 <span class="cm">/* Private types -------------------------------------------------------------*/</span>
 <span class="cm">/* Private variables ---------------------------------------------------------*/</span>

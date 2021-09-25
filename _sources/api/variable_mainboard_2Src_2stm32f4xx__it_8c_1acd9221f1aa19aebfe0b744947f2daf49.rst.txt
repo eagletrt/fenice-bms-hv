@@ -1,0 +1,13 @@
+.. _exhale_variable_mainboard_2Src_2stm32f4xx__it_8c_1acd9221f1aa19aebfe0b744947f2daf49:
+
+Variable hadc2
+==============
+
+- Defined in :ref:`file_mainboard_Src_stm32f4xx_it.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: hadc2

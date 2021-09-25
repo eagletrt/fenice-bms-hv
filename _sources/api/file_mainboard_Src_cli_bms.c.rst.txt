@@ -77,6 +77,8 @@ Functions
 
 - :ref:`exhale_function_cli__bms_8c_1ade814779a92b390ef1873c571fe20473`
 
+- :ref:`exhale_function_cli__bms_8c_1a187e55e1df6630ca080a76ed90c4d709`
+
 - :ref:`exhale_function_cli__bms_8c_1af5c00593dd5b36bdf22fafe638a455af`
 
 - :ref:`exhale_function_cli__bms_8c_1aad34c4a4aa15033a1912e6d41d00081b`
@@ -121,6 +123,8 @@ Variables
 
 - :ref:`exhale_variable_cli__bms_8c_1acc100851880dc789b4632223edc5a941`
 
+- :ref:`exhale_variable_cli__bms_8c_1a727eef20b5c1760d3b4f58d82b304bff`
+
 - :ref:`exhale_variable_cli__bms_8c_1afd73f9b85e1f4138fa6f333f763d654d`
 
 - :ref:`exhale_variable_cli__bms_8c_1a97089cbba6264fbfc9a1579ac9351a0d`
@@ -151,9 +155,9 @@ Variables
 
 - :ref:`exhale_variable_cli__bms_8c_1ae97f49f74719578ca4823d58d8e74c19`
 
-- :ref:`exhale_variable_cli__bms_8c_1ac46f13f37b615ba6530b891875b2fcc8`
+- :ref:`exhale_variable_cli__bms_8c_1ad879b7746f178bf7a80d1c3a6d34c75f`
 
-- :ref:`exhale_variable_cli__bms_8c_1a8f42799c97f502ea64dec3f953d6f131`
+- :ref:`exhale_variable_cli__bms_8c_1a4e96bf2b9da81f5f7daa493b9fd005ee`
 
 - :ref:`exhale_variable_cli__bms_8c_1a0f73a38703f79ee46de42bb0eed53d2e`
 

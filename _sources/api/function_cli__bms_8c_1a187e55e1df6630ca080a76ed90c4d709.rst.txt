@@ -1,0 +1,13 @@
+.. _exhale_function_cli__bms_8c_1a187e55e1df6630ca080a76ed90c4d709:
+
+Function _cli_current
+=====================
+
+- Defined in :ref:`file_mainboard_Src_cli_bms.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: _cli_current(uint16_t, char **, char *)

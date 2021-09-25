@@ -28,6 +28,8 @@ Files
 - :ref:`file_mainboard_Src_can.c`
 - :ref:`file_mainboard_Src_cli_bms.c`
 - :ref:`file_mainboard_Src_config.c`
+- :ref:`file_mainboard_Src_current.c`
+- :ref:`file_mainboard_Src_dma.c`
 - :ref:`file_mainboard_Src_feedback.c`
 - :ref:`file_mainboard_Src_gpio.c`
 - :ref:`file_mainboard_Src_main.c`

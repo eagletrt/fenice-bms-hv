@@ -1,0 +1,13 @@
+.. _exhale_function_bms__fsm_8c_1a46022db99692292b7a1cffeaf0e8bd48:
+
+Function _on_exit
+=================
+
+- Defined in :ref:`file_mainboard_Src_bms_fsm.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: _on_exit(fsm)

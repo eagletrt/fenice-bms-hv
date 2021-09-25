@@ -1,0 +1,13 @@
+.. _exhale_function_mainboard_2Src_2stm32f4xx__it_8c_1a06406eadf297fa89a6eaf9586b227a69:
+
+Function ADC_IRQHandler(void)
+=============================
+
+- Defined in :ref:`file_mainboard_Src_stm32f4xx_it.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ADC_IRQHandler(void)

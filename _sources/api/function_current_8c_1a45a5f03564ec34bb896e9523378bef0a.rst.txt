@@ -1,0 +1,13 @@
+.. _exhale_function_current_8c_1a45a5f03564ec34bb896e9523378bef0a:
+
+Function _current_convert_high
+==============================
+
+- Defined in :ref:`file_mainboard_Src_current.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: _current_convert_high(float)

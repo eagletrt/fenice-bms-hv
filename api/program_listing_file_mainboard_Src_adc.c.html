@@ -78,6 +78,9 @@
 <span class="cm">/* USER CODE END 0 */</span>
 
 <span class="n">ADC_HandleTypeDef</span> <span class="n">hadc1</span><span class="p">;</span>
+<span class="n">ADC_HandleTypeDef</span> <span class="n">hadc2</span><span class="p">;</span>
+<span class="n">DMA_HandleTypeDef</span> <span class="n">hdma_adc1</span><span class="p">;</span>
+<span class="n">DMA_HandleTypeDef</span> <span class="n">hdma_adc2</span><span class="p">;</span>
 
 <span class="cm">/* ADC1 init function */</span>
 <span class="kt">void</span> <span class="nf">MX_ADC1_Init</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
@@ -93,24 +96,24 @@
 
   <span class="cm">/* USER CODE END ADC1_Init 1 */</span>
   <span class="n">hadc1</span><span class="p">.</span><span class="n">Instance</span> <span class="o">=</span> <span class="n">ADC1</span><span class="p">;</span>
-  <span class="n">hadc1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">ClockPrescaler</span> <span class="o">=</span> <span class="n">ADC_CLOCK_SYNC_PCLK_DIV4</span><span class="p">;</span>
+  <span class="n">hadc1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">ClockPrescaler</span> <span class="o">=</span> <span class="n">ADC_CLOCK_SYNC_PCLK_DIV8</span><span class="p">;</span>
   <span class="n">hadc1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Resolution</span> <span class="o">=</span> <span class="n">ADC_RESOLUTION_12B</span><span class="p">;</span>
   <span class="n">hadc1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">ScanConvMode</span> <span class="o">=</span> <span class="n">DISABLE</span><span class="p">;</span>
-  <span class="n">hadc1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">ContinuousConvMode</span> <span class="o">=</span> <span class="n">DISABLE</span><span class="p">;</span>
+  <span class="n">hadc1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">ContinuousConvMode</span> <span class="o">=</span> <span class="n">ENABLE</span><span class="p">;</span>
   <span class="n">hadc1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">DiscontinuousConvMode</span> <span class="o">=</span> <span class="n">DISABLE</span><span class="p">;</span>
   <span class="n">hadc1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">ExternalTrigConvEdge</span> <span class="o">=</span> <span class="n">ADC_EXTERNALTRIGCONVEDGE_NONE</span><span class="p">;</span>
   <span class="n">hadc1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">ExternalTrigConv</span> <span class="o">=</span> <span class="n">ADC_SOFTWARE_START</span><span class="p">;</span>
   <span class="n">hadc1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">DataAlign</span> <span class="o">=</span> <span class="n">ADC_DATAALIGN_RIGHT</span><span class="p">;</span>
   <span class="n">hadc1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">NbrOfConversion</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-  <span class="n">hadc1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">DMAContinuousRequests</span> <span class="o">=</span> <span class="n">DISABLE</span><span class="p">;</span>
+  <span class="n">hadc1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">DMAContinuousRequests</span> <span class="o">=</span> <span class="n">ENABLE</span><span class="p">;</span>
   <span class="n">hadc1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">EOCSelection</span> <span class="o">=</span> <span class="n">ADC_EOC_SINGLE_CONV</span><span class="p">;</span>
   <span class="k">if</span> <span class="p">(</span><span class="n">HAL_ADC_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hadc1</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
   <span class="p">{</span>
     <span class="n">Error_Handler</span><span class="p">();</span>
   <span class="p">}</span>
-  <span class="n">sConfig</span><span class="p">.</span><span class="n">Channel</span> <span class="o">=</span> <span class="n">ADC_CHANNEL_13</span><span class="p">;</span>
+  <span class="n">sConfig</span><span class="p">.</span><span class="n">Channel</span> <span class="o">=</span> <span class="n">ADC_CHANNEL_12</span><span class="p">;</span>
   <span class="n">sConfig</span><span class="p">.</span><span class="n">Rank</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-  <span class="n">sConfig</span><span class="p">.</span><span class="n">SamplingTime</span> <span class="o">=</span> <span class="n">ADC_SAMPLETIME_3CYCLES</span><span class="p">;</span>
+  <span class="n">sConfig</span><span class="p">.</span><span class="n">SamplingTime</span> <span class="o">=</span> <span class="n">ADC_SAMPLETIME_480CYCLES</span><span class="p">;</span>
   <span class="k">if</span> <span class="p">(</span><span class="n">HAL_ADC_ConfigChannel</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hadc1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sConfig</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
   <span class="p">{</span>
     <span class="n">Error_Handler</span><span class="p">();</span>
@@ -118,6 +121,47 @@
   <span class="cm">/* USER CODE BEGIN ADC1_Init 2 */</span>
 
   <span class="cm">/* USER CODE END ADC1_Init 2 */</span>
+
+<span class="p">}</span>
+<span class="cm">/* ADC2 init function */</span>
+<span class="kt">void</span> <span class="nf">MX_ADC2_Init</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+
+  <span class="cm">/* USER CODE BEGIN ADC2_Init 0 */</span>
+
+  <span class="cm">/* USER CODE END ADC2_Init 0 */</span>
+
+  <span class="n">ADC_ChannelConfTypeDef</span> <span class="n">sConfig</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+
+  <span class="cm">/* USER CODE BEGIN ADC2_Init 1 */</span>
+
+  <span class="cm">/* USER CODE END ADC2_Init 1 */</span>
+  <span class="n">hadc2</span><span class="p">.</span><span class="n">Instance</span> <span class="o">=</span> <span class="n">ADC2</span><span class="p">;</span>
+  <span class="n">hadc2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">ClockPrescaler</span> <span class="o">=</span> <span class="n">ADC_CLOCK_SYNC_PCLK_DIV8</span><span class="p">;</span>
+  <span class="n">hadc2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Resolution</span> <span class="o">=</span> <span class="n">ADC_RESOLUTION_12B</span><span class="p">;</span>
+  <span class="n">hadc2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">ScanConvMode</span> <span class="o">=</span> <span class="n">DISABLE</span><span class="p">;</span>
+  <span class="n">hadc2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">ContinuousConvMode</span> <span class="o">=</span> <span class="n">ENABLE</span><span class="p">;</span>
+  <span class="n">hadc2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">DiscontinuousConvMode</span> <span class="o">=</span> <span class="n">DISABLE</span><span class="p">;</span>
+  <span class="n">hadc2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">ExternalTrigConvEdge</span> <span class="o">=</span> <span class="n">ADC_EXTERNALTRIGCONVEDGE_NONE</span><span class="p">;</span>
+  <span class="n">hadc2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">ExternalTrigConv</span> <span class="o">=</span> <span class="n">ADC_SOFTWARE_START</span><span class="p">;</span>
+  <span class="n">hadc2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">DataAlign</span> <span class="o">=</span> <span class="n">ADC_DATAALIGN_RIGHT</span><span class="p">;</span>
+  <span class="n">hadc2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">NbrOfConversion</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="n">hadc2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">DMAContinuousRequests</span> <span class="o">=</span> <span class="n">ENABLE</span><span class="p">;</span>
+  <span class="n">hadc2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">EOCSelection</span> <span class="o">=</span> <span class="n">ADC_EOC_SINGLE_CONV</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">HAL_ADC_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hadc2</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">Error_Handler</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="n">sConfig</span><span class="p">.</span><span class="n">Channel</span> <span class="o">=</span> <span class="n">ADC_CHANNEL_13</span><span class="p">;</span>
+  <span class="n">sConfig</span><span class="p">.</span><span class="n">Rank</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="n">sConfig</span><span class="p">.</span><span class="n">SamplingTime</span> <span class="o">=</span> <span class="n">ADC_SAMPLETIME_480CYCLES</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">HAL_ADC_ConfigChannel</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hadc2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sConfig</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">Error_Handler</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="cm">/* USER CODE BEGIN ADC2_Init 2 */</span>
+
+  <span class="cm">/* USER CODE END ADC2_Init 2 */</span>
 
 <span class="p">}</span>
 
@@ -134,14 +178,76 @@
     <span class="n">__HAL_RCC_ADC1_CLK_ENABLE</span><span class="p">();</span>
 
     <span class="n">__HAL_RCC_GPIOC_CLK_ENABLE</span><span class="p">();</span>
-    <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pin</span> <span class="o">=</span> <span class="n">IP_LOW_Pin</span><span class="o">|</span><span class="n">IP_HIGH_Pin</span><span class="p">;</span>
+    <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pin</span> <span class="o">=</span> <span class="n">IP_LOW_Pin</span><span class="p">;</span>
     <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Mode</span> <span class="o">=</span> <span class="n">GPIO_MODE_ANALOG</span><span class="p">;</span>
     <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pull</span> <span class="o">=</span> <span class="n">GPIO_NOPULL</span><span class="p">;</span>
-    <span class="n">HAL_GPIO_Init</span><span class="p">(</span><span class="n">GPIOC</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">GPIO_InitStruct</span><span class="p">);</span>
+    <span class="n">HAL_GPIO_Init</span><span class="p">(</span><span class="n">IP_LOW_GPIO_Port</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">GPIO_InitStruct</span><span class="p">);</span>
 
+    <span class="cm">/* ADC1 DMA Init */</span>
+    <span class="cm">/* ADC1 Init */</span>
+    <span class="n">hdma_adc1</span><span class="p">.</span><span class="n">Instance</span> <span class="o">=</span> <span class="n">DMA2_Stream0</span><span class="p">;</span>
+    <span class="n">hdma_adc1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Channel</span> <span class="o">=</span> <span class="n">DMA_CHANNEL_0</span><span class="p">;</span>
+    <span class="n">hdma_adc1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Direction</span> <span class="o">=</span> <span class="n">DMA_PERIPH_TO_MEMORY</span><span class="p">;</span>
+    <span class="n">hdma_adc1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">PeriphInc</span> <span class="o">=</span> <span class="n">DMA_PINC_DISABLE</span><span class="p">;</span>
+    <span class="n">hdma_adc1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">MemInc</span> <span class="o">=</span> <span class="n">DMA_MINC_ENABLE</span><span class="p">;</span>
+    <span class="n">hdma_adc1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">PeriphDataAlignment</span> <span class="o">=</span> <span class="n">DMA_PDATAALIGN_HALFWORD</span><span class="p">;</span>
+    <span class="n">hdma_adc1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">MemDataAlignment</span> <span class="o">=</span> <span class="n">DMA_MDATAALIGN_HALFWORD</span><span class="p">;</span>
+    <span class="n">hdma_adc1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Mode</span> <span class="o">=</span> <span class="n">DMA_CIRCULAR</span><span class="p">;</span>
+    <span class="n">hdma_adc1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Priority</span> <span class="o">=</span> <span class="n">DMA_PRIORITY_HIGH</span><span class="p">;</span>
+    <span class="n">hdma_adc1</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">FIFOMode</span> <span class="o">=</span> <span class="n">DMA_FIFOMODE_DISABLE</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">HAL_DMA_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hdma_adc1</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
+    <span class="p">{</span>
+      <span class="n">Error_Handler</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="n">__HAL_LINKDMA</span><span class="p">(</span><span class="n">adcHandle</span><span class="p">,</span><span class="n">DMA_Handle</span><span class="p">,</span><span class="n">hdma_adc1</span><span class="p">);</span>
+
+    <span class="cm">/* ADC1 interrupt Init */</span>
+    <span class="n">HAL_NVIC_SetPriority</span><span class="p">(</span><span class="n">ADC_IRQn</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="n">HAL_NVIC_EnableIRQ</span><span class="p">(</span><span class="n">ADC_IRQn</span><span class="p">);</span>
   <span class="cm">/* USER CODE BEGIN ADC1_MspInit 1 */</span>
 
   <span class="cm">/* USER CODE END ADC1_MspInit 1 */</span>
+  <span class="p">}</span>
+  <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">adcHandle</span><span class="o">-&gt;</span><span class="n">Instance</span><span class="o">==</span><span class="n">ADC2</span><span class="p">)</span>
+  <span class="p">{</span>
+  <span class="cm">/* USER CODE BEGIN ADC2_MspInit 0 */</span>
+
+  <span class="cm">/* USER CODE END ADC2_MspInit 0 */</span>
+    <span class="cm">/* ADC2 clock enable */</span>
+    <span class="n">__HAL_RCC_ADC2_CLK_ENABLE</span><span class="p">();</span>
+
+    <span class="n">__HAL_RCC_GPIOC_CLK_ENABLE</span><span class="p">();</span>
+    <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pin</span> <span class="o">=</span> <span class="n">IP_HIGH_Pin</span><span class="p">;</span>
+    <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Mode</span> <span class="o">=</span> <span class="n">GPIO_MODE_ANALOG</span><span class="p">;</span>
+    <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pull</span> <span class="o">=</span> <span class="n">GPIO_NOPULL</span><span class="p">;</span>
+    <span class="n">HAL_GPIO_Init</span><span class="p">(</span><span class="n">IP_HIGH_GPIO_Port</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">GPIO_InitStruct</span><span class="p">);</span>
+
+    <span class="cm">/* ADC2 DMA Init */</span>
+    <span class="cm">/* ADC2 Init */</span>
+    <span class="n">hdma_adc2</span><span class="p">.</span><span class="n">Instance</span> <span class="o">=</span> <span class="n">DMA2_Stream2</span><span class="p">;</span>
+    <span class="n">hdma_adc2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Channel</span> <span class="o">=</span> <span class="n">DMA_CHANNEL_1</span><span class="p">;</span>
+    <span class="n">hdma_adc2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Direction</span> <span class="o">=</span> <span class="n">DMA_PERIPH_TO_MEMORY</span><span class="p">;</span>
+    <span class="n">hdma_adc2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">PeriphInc</span> <span class="o">=</span> <span class="n">DMA_PINC_DISABLE</span><span class="p">;</span>
+    <span class="n">hdma_adc2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">MemInc</span> <span class="o">=</span> <span class="n">DMA_MINC_ENABLE</span><span class="p">;</span>
+    <span class="n">hdma_adc2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">PeriphDataAlignment</span> <span class="o">=</span> <span class="n">DMA_PDATAALIGN_HALFWORD</span><span class="p">;</span>
+    <span class="n">hdma_adc2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">MemDataAlignment</span> <span class="o">=</span> <span class="n">DMA_MDATAALIGN_HALFWORD</span><span class="p">;</span>
+    <span class="n">hdma_adc2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Mode</span> <span class="o">=</span> <span class="n">DMA_CIRCULAR</span><span class="p">;</span>
+    <span class="n">hdma_adc2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Priority</span> <span class="o">=</span> <span class="n">DMA_PRIORITY_HIGH</span><span class="p">;</span>
+    <span class="n">hdma_adc2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">FIFOMode</span> <span class="o">=</span> <span class="n">DMA_FIFOMODE_DISABLE</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">HAL_DMA_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hdma_adc2</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
+    <span class="p">{</span>
+      <span class="n">Error_Handler</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="n">__HAL_LINKDMA</span><span class="p">(</span><span class="n">adcHandle</span><span class="p">,</span><span class="n">DMA_Handle</span><span class="p">,</span><span class="n">hdma_adc2</span><span class="p">);</span>
+
+    <span class="cm">/* ADC2 interrupt Init */</span>
+    <span class="n">HAL_NVIC_SetPriority</span><span class="p">(</span><span class="n">ADC_IRQn</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="n">HAL_NVIC_EnableIRQ</span><span class="p">(</span><span class="n">ADC_IRQn</span><span class="p">);</span>
+  <span class="cm">/* USER CODE BEGIN ADC2_MspInit 1 */</span>
+
+  <span class="cm">/* USER CODE END ADC2_MspInit 1 */</span>
   <span class="p">}</span>
 <span class="p">}</span>
 
@@ -156,11 +262,41 @@
     <span class="cm">/* Peripheral clock disable */</span>
     <span class="n">__HAL_RCC_ADC1_CLK_DISABLE</span><span class="p">();</span>
 
-    <span class="n">HAL_GPIO_DeInit</span><span class="p">(</span><span class="n">GPIOC</span><span class="p">,</span> <span class="n">IP_LOW_Pin</span><span class="o">|</span><span class="n">IP_HIGH_Pin</span><span class="p">);</span>
+    <span class="n">HAL_GPIO_DeInit</span><span class="p">(</span><span class="n">IP_LOW_GPIO_Port</span><span class="p">,</span> <span class="n">IP_LOW_Pin</span><span class="p">);</span>
+
+    <span class="cm">/* ADC1 DMA DeInit */</span>
+    <span class="n">HAL_DMA_DeInit</span><span class="p">(</span><span class="n">adcHandle</span><span class="o">-&gt;</span><span class="n">DMA_Handle</span><span class="p">);</span>
+
+    <span class="cm">/* ADC1 interrupt Deinit */</span>
+  <span class="cm">/* USER CODE BEGIN ADC1:ADC_IRQn disable */</span>
+        <span class="cm">/* HAL_NVIC_DisableIRQ(ADC_IRQn); */</span>
+  <span class="cm">/* USER CODE END ADC1:ADC_IRQn disable */</span>
 
   <span class="cm">/* USER CODE BEGIN ADC1_MspDeInit 1 */</span>
 
   <span class="cm">/* USER CODE END ADC1_MspDeInit 1 */</span>
+  <span class="p">}</span>
+  <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">adcHandle</span><span class="o">-&gt;</span><span class="n">Instance</span><span class="o">==</span><span class="n">ADC2</span><span class="p">)</span>
+  <span class="p">{</span>
+  <span class="cm">/* USER CODE BEGIN ADC2_MspDeInit 0 */</span>
+
+  <span class="cm">/* USER CODE END ADC2_MspDeInit 0 */</span>
+    <span class="cm">/* Peripheral clock disable */</span>
+    <span class="n">__HAL_RCC_ADC2_CLK_DISABLE</span><span class="p">();</span>
+
+    <span class="n">HAL_GPIO_DeInit</span><span class="p">(</span><span class="n">IP_HIGH_GPIO_Port</span><span class="p">,</span> <span class="n">IP_HIGH_Pin</span><span class="p">);</span>
+
+    <span class="cm">/* ADC2 DMA DeInit */</span>
+    <span class="n">HAL_DMA_DeInit</span><span class="p">(</span><span class="n">adcHandle</span><span class="o">-&gt;</span><span class="n">DMA_Handle</span><span class="p">);</span>
+
+    <span class="cm">/* ADC2 interrupt Deinit */</span>
+  <span class="cm">/* USER CODE BEGIN ADC2:ADC_IRQn disable */</span>
+        <span class="cm">/* HAL_NVIC_DisableIRQ(ADC_IRQn); */</span>
+  <span class="cm">/* USER CODE END ADC2:ADC_IRQn disable */</span>
+
+  <span class="cm">/* USER CODE BEGIN ADC2_MspDeInit 1 */</span>
+
+  <span class="cm">/* USER CODE END ADC2_MspDeInit 1 */</span>
   <span class="p">}</span>
 <span class="p">}</span>
 

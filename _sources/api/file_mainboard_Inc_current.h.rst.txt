@@ -1,0 +1,95 @@
+
+.. _file_mainboard_Inc_current.h:
+
+File current.h
+==============
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Inc>` (``mainboard/Inc``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+Functions that handle current measurement. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Inc/current.h``)
+----------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Inc_current.h.rst
+
+
+
+Detailed Description
+--------------------
+
+Sep 24, 2021
+
+Matteo Bonora [matteo.bonora@studenti.unitn.it] 
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``fenice_config.h`` (:ref:`file_mainboard_Inc_fenice_config.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_mainboard_Inc_soc.h`
+
+- :ref:`file_mainboard_Src_current.c`
+
+- :ref:`file_mainboard_Src_main.c`
+
+- :ref:`file_mainboard_Src_peripherals_can_comm.c`
+
+- :ref:`file_mainboard_Src_super_fsm.c`
+
+
+
+
+Enums
+-----
+
+
+- :ref:`exhale_enum_current_8h_1a99fb83031ce9923c84392b4e92f956b5`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_current_8h_1a013b66cf56890f372711c76050f00950`
+
+- :ref:`exhale_function_current_8h_1a49ebe20e67c4794c4a556a9a594e9fef`
+
+- :ref:`exhale_function_current_8h_1a4594d13415e02237330119f5e1f4b891`
+
+- :ref:`exhale_function_current_8h_1af2fd48caec222bb0240e19ac7d046fc7`
+
+- :ref:`exhale_function_current_8h_1aefe9d7b8993ca385f9d75117fc4dfb9a`
+
+
+Typedefs
+--------
+
+
+- :ref:`exhale_typedef_current_8h_1a86046fc12785c63aa4cd54067d366a44`
+

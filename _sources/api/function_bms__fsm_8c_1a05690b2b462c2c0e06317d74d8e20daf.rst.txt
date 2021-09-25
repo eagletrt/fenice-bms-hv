@@ -1,0 +1,13 @@
+.. _exhale_function_bms__fsm_8c_1a05690b2b462c2c0e06317d74d8e20daf:
+
+Function _halt_entry
+====================
+
+- Defined in :ref:`file_mainboard_Src_bms_fsm.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: _halt_entry(fsm)

@@ -1,0 +1,13 @@
+.. _exhale_function_mainboard_2Src_2stm32f4xx__it_8c_1a7e367d7c7b74485c4c75cdef30ad01e1:
+
+Function DMA2_Stream2_IRQHandler(void)
+======================================
+
+- Defined in :ref:`file_mainboard_Src_stm32f4xx_it.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: DMA2_Stream2_IRQHandler(void)

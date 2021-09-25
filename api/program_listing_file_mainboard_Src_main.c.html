@@ -77,6 +77,7 @@
 
 <span class="cp">#include</span> <span class="cpf">&quot;adc.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;can.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;dma.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;gpio.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;spi.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;tim.h&quot;</span><span class="cp"></span>
@@ -88,6 +89,7 @@
 <span class="cp">#include</span> <span class="cpf">&quot;bms_fsm.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;cli_bms.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;config.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;current.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;error/error.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;fenice_config.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;m95256.h&quot;</span><span class="cp"></span>
@@ -113,7 +115,6 @@
 <span class="cm">/* Private variables ---------------------------------------------------------*/</span>
 
 <span class="cm">/* USER CODE BEGIN PV */</span>
-<span class="n">DMA_HandleTypeDef</span> <span class="n">hdma_adc1</span><span class="p">;</span>
 
 <span class="n">fsm</span> <span class="n">super_fsm</span><span class="p">;</span>
 
@@ -162,19 +163,10 @@
     <span class="n">MX_TIM3_Init</span><span class="p">();</span>
     <span class="n">MX_TIM4_Init</span><span class="p">();</span>
     <span class="n">MX_USART1_UART_Init</span><span class="p">();</span>
+    <span class="n">MX_DMA_Init</span><span class="p">();</span>
+    <span class="n">MX_ADC2_Init</span><span class="p">();</span>
     <span class="cm">/* USER CODE BEGIN 2 */</span>
     <span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">EEPROM_HOLD_GPIO_Port</span><span class="p">,</span> <span class="n">EEPROM_HOLD_Pin</span><span class="p">,</span> <span class="n">GPIO_PIN_SET</span><span class="p">);</span>
-
-    <span class="c1">// Blink</span>
-    <span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">LED2_GPIO_Port</span><span class="p">,</span> <span class="n">LED2_Pin</span><span class="p">,</span> <span class="n">GPIO_PIN_SET</span><span class="p">);</span>
-    <span class="n">HAL_Delay</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
-    <span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">LED2_GPIO_Port</span><span class="p">,</span> <span class="n">LED2_Pin</span><span class="p">,</span> <span class="n">GPIO_PIN_RESET</span><span class="p">);</span>
-    <span class="n">HAL_Delay</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
-    <span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">LED2_GPIO_Port</span><span class="p">,</span> <span class="n">LED2_Pin</span><span class="p">,</span> <span class="n">GPIO_PIN_SET</span><span class="p">);</span>
-    <span class="n">HAL_Delay</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
-    <span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">LED2_GPIO_Port</span><span class="p">,</span> <span class="n">LED2_Pin</span><span class="p">,</span> <span class="n">GPIO_PIN_RESET</span><span class="p">);</span>
-    <span class="n">HAL_Delay</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
-    <span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">LED2_GPIO_Port</span><span class="p">,</span> <span class="n">LED2_Pin</span><span class="p">,</span> <span class="n">GPIO_PIN_SET</span><span class="p">);</span>
 
     <span class="n">can_init</span><span class="p">();</span>
 
@@ -187,6 +179,8 @@
     <span class="n">bal_fsm_init</span><span class="p">();</span>
     <span class="n">bms_fsm_init</span><span class="p">();</span>
     <span class="n">super_fsm_init</span><span class="p">();</span>
+    <span class="n">current_measure</span><span class="p">();</span>
+    <span class="n">current_zero</span><span class="p">();</span>
 
     <span class="cm">/* USER CODE END 2 */</span>
 
@@ -196,6 +190,7 @@
         <span class="cm">/* USER CODE END WHILE */</span>
 
         <span class="cm">/* USER CODE BEGIN 3 */</span>
+
         <span class="n">fsm_run</span><span class="p">(</span><span class="n">super_fsm</span><span class="p">);</span>
 
         <span class="n">cli_loop</span><span class="p">(</span><span class="o">&amp;</span><span class="n">cli_bms</span><span class="p">);</span>
@@ -230,7 +225,7 @@
     <span class="n">RCC_ClkInitStruct</span><span class="p">.</span><span class="n">SYSCLKSource</span>   <span class="o">=</span> <span class="n">RCC_SYSCLKSOURCE_PLLCLK</span><span class="p">;</span>
     <span class="n">RCC_ClkInitStruct</span><span class="p">.</span><span class="n">AHBCLKDivider</span>  <span class="o">=</span> <span class="n">RCC_SYSCLK_DIV1</span><span class="p">;</span>
     <span class="n">RCC_ClkInitStruct</span><span class="p">.</span><span class="n">APB1CLKDivider</span> <span class="o">=</span> <span class="n">RCC_HCLK_DIV4</span><span class="p">;</span>
-    <span class="n">RCC_ClkInitStruct</span><span class="p">.</span><span class="n">APB2CLKDivider</span> <span class="o">=</span> <span class="n">RCC_HCLK_DIV2</span><span class="p">;</span>
+    <span class="n">RCC_ClkInitStruct</span><span class="p">.</span><span class="n">APB2CLKDivider</span> <span class="o">=</span> <span class="n">RCC_HCLK_DIV4</span><span class="p">;</span>
 
     <span class="k">if</span> <span class="p">(</span><span class="n">HAL_RCC_ClockConfig</span><span class="p">(</span><span class="o">&amp;</span><span class="n">RCC_ClkInitStruct</span><span class="p">,</span> <span class="n">FLASH_LATENCY_5</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">Error_Handler</span><span class="p">();</span>

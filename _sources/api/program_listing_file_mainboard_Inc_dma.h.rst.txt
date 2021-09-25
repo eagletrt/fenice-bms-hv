@@ -1,0 +1,47 @@
+
+.. _program_listing_file_mainboard_Inc_dma.h:
+
+Program Listing for File dma.h
+==============================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_mainboard_Inc_dma.h>` (``mainboard/Inc/dma.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   /* Define to prevent recursive inclusion -------------------------------------*/
+   #ifndef __DMA_H__
+   #define __DMA_H__
+   
+   #ifdef __cplusplus
+   extern "C" {
+   #endif
+   
+   /* Includes ------------------------------------------------------------------*/
+   #include "main.h"
+   
+   /* DMA memory to memory transfer handles -------------------------------------*/
+   
+   /* USER CODE BEGIN Includes */
+   
+   /* USER CODE END Includes */
+   
+   /* USER CODE BEGIN Private defines */
+   
+   /* USER CODE END Private defines */
+   
+   void MX_DMA_Init(void);
+   
+   /* USER CODE BEGIN Prototypes */
+   
+   /* USER CODE END Prototypes */
+   
+   #ifdef __cplusplus
+   }
+   #endif
+   
+   #endif /* __DMA_H__ */
+   
+   /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

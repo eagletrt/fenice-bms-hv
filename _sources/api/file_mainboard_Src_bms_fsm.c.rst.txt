@@ -56,6 +56,8 @@ Includes
 
 - ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
 
+- ``mainboard_config.h`` (:ref:`file_mainboard_Inc_mainboard_config.h`)
+
 - ``pack.h`` (:ref:`file_mainboard_Inc_pack.h`)
 
 - ``peripherals/can_comm.h`` (:ref:`file_mainboard_Inc_peripherals_can_comm.h`)
@@ -75,29 +77,35 @@ Functions
 ---------
 
 
+- :ref:`exhale_function_bms__fsm_8c_1a05690b2b462c2c0e06317d74d8e20daf`
+
+- :ref:`exhale_function_bms__fsm_8c_1a94fc62c8220b2fa1b2ce63ca4d2e4354`
+
+- :ref:`exhale_function_bms__fsm_8c_1a96af2811b619d1c25da8f915c5a459ec`
+
+- :ref:`exhale_function_bms__fsm_8c_1a8f0304f701b519965c246aab2114ed31`
+
+- :ref:`exhale_function_bms__fsm_8c_1a395f06204ea5ead8252e4e26e5de37be`
+
+- :ref:`exhale_function_bms__fsm_8c_1a3fb691a8805975400d8c59917a451fe7`
+
+- :ref:`exhale_function_bms__fsm_8c_1abd9fb9858e647121ad68b37d46b985c2`
+
+- :ref:`exhale_function_bms__fsm_8c_1a46022db99692292b7a1cffeaf0e8bd48`
+
+- :ref:`exhale_function_bms__fsm_8c_1aaf1cec655e0f396b9da61e06ac6e53c6`
+
+- :ref:`exhale_function_bms__fsm_8c_1afc63e49ea2209d7e1c3a5784070874c9`
+
+- :ref:`exhale_function_bms__fsm_8c_1a32c07e3463b196f778ff608bceca025a`
+
+- :ref:`exhale_function_bms__fsm_8c_1a36b214c5af4befa73f77aa9fa2754737`
+
+- :ref:`exhale_function_bms__fsm_8c_1a5570e7844e47863b1bd9122bddcaf204`
+
 - :ref:`exhale_function_bms__fsm_8c_1ab27416dfde693265de1ef0588e9c37b4`
 
-- :ref:`exhale_function_bms__fsm_8c_1ad04590a7a4f1683ca2137f8d84587e45`
-
-- :ref:`exhale_function_bms__fsm_8c_1a2df1e01f8cb8a51c3dfebed0b38fcf45`
-
-- :ref:`exhale_function_bms__fsm_8c_1afa94cc1c72969fb7af31c8c720028fe8`
-
-- :ref:`exhale_function_bms__fsm_8c_1ac5498612908569629136d04a57d98475`
-
-- :ref:`exhale_function_bms__fsm_8c_1a3e1f77f89cc4583ff6c036dbd40f8840`
-
-- :ref:`exhale_function_bms__fsm_8c_1aa1b386c06e032fec1efcb88827041b8c`
-
-- :ref:`exhale_function_bms__fsm_8c_1a3654ce5f2c4b8516e6b4271c43cf5e21`
-
-- :ref:`exhale_function_bms__fsm_8c_1aa6907bdbcd1a7f221c162ce095ed5e1f`
-
-- :ref:`exhale_function_bms__fsm_8c_1af04c6a3e6539a800d964a3383df6cd73`
-
-- :ref:`exhale_function_bms__fsm_8c_1a91f44e4595bb6072696755ad0e4d6deb`
-
-- :ref:`exhale_function_bms__fsm_8c_1a409b9b0698ba12f8658b3a7be6fb43ff`
+- :ref:`exhale_function_bms__fsm_8c_1a520b7803191842fde41431fc60a6c7c9`
 
 
 Variables

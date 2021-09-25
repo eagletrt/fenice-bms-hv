@@ -16,18 +16,19 @@ Program Listing for File soc.h
    #define _SOC_H_
    
    /* Includes ------------------------------------------------------------------*/
-   #include <inttypes.h>
-   
+   #include "current.h"
    #include "fenice_config.h"
+   
+   #include <inttypes.h>
    /* Exported types ------------------------------------------------------------*/
-   typedef struct soc* soc_t;
+   typedef struct soc *soc_t;
    /* Exported constants --------------------------------------------------------*/
    /* Exported macros -----------------------------------------------------------*/
    /* Exported functions --------------------------------------------------------*/
    
-   void soc_init(soc_t* handle);
+   void soc_init(soc_t *handle);
    
-   void soc_deinit(soc_t* handle);
+   void soc_deinit(soc_t *handle);
    
    void soc_load(soc_t handle, uint32_t joule, uint32_t time);
    
@@ -37,8 +38,8 @@ Program Listing for File soc.h
    
    void soc_sample_current(soc_t handle, current_t current, voltage_t voltage, uint32_t time);
    
-   double soc_get_wh(soc_t handle);
-   double soc_get_joule(soc_t handle);
+   float soc_get_wh(soc_t handle);
+   float soc_get_joule(soc_t handle);
    
    /* Private types -------------------------------------------------------------*/
    /* Private variables ---------------------------------------------------------*/

@@ -58,6 +58,8 @@ Included By
 
 - :ref:`file_mainboard_Inc_bal.h`
 
+- :ref:`file_mainboard_Inc_current.h`
+
 - :ref:`file_mainboard_Inc_feedback.h`
 
 - :ref:`file_mainboard_Inc_soc.h`
@@ -69,7 +71,7 @@ Enums
 -----
 
 
-- :ref:`exhale_enum_mainboard_2Inc_2fenice__config_8h_1a99fb83031ce9923c84392b4e92f956b5`
+- :ref:`exhale_enum_mainboard_2Inc_2fenice__config_8h_1abc6126af1d45847bc59afa0aa3216b04`
 
 
 Defines
@@ -196,8 +198,6 @@ Defines
 Typedefs
 --------
 
-
-- :ref:`exhale_typedef_mainboard_2Inc_2fenice__config_8h_1a10dbe1ad50d7aed2fe64419786f3ea77`
 
 - :ref:`exhale_typedef_mainboard_2Inc_2fenice__config_8h_1a7f0e4c8e257063101aa9f4cc03644195`
 

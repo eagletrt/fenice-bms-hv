@@ -1,0 +1,93 @@
+
+.. _file_mainboard_Src_current.c:
+
+File current.c
+==============
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Src>` (``mainboard/Src``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+Functions that handle current measurement. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Src/current.c``)
+----------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Src_current.c.rst
+
+
+
+Detailed Description
+--------------------
+
+Sep 24, 2021
+
+Matteo Bonora [matteo.bonora@studenti.unitn.it] 
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``adc.h`` (:ref:`file_mainboard_Inc_adc.h`)
+
+- ``current.h`` (:ref:`file_mainboard_Inc_current.h`)
+
+- ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
+
+
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_current_8c_1a45a5f03564ec34bb896e9523378bef0a`
+
+- :ref:`exhale_function_current_8c_1a94ec401c472aa6000fddc79aada3add8`
+
+- :ref:`exhale_function_current_8c_1aee6d144d314326f30167c2798008dce5`
+
+- :ref:`exhale_function_current_8c_1a013b66cf56890f372711c76050f00950`
+
+- :ref:`exhale_function_current_8c_1a49ebe20e67c4794c4a556a9a594e9fef`
+
+- :ref:`exhale_function_current_8c_1a4594d13415e02237330119f5e1f4b891`
+
+- :ref:`exhale_function_current_8c_1af2fd48caec222bb0240e19ac7d046fc7`
+
+- :ref:`exhale_function_current_8c_1aefe9d7b8993ca385f9d75117fc4dfb9a`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_current_8c_1a277dc742590fab8ab5b2d552f062f8ab`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_current_8c_1a0c5b7acb7b879205773a41d497fd299b`
+
+- :ref:`exhale_variable_current_8c_1abc13d8ec5d0b7efc1f5ab2fed7fa33f5`
+

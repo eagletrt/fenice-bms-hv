@@ -1,0 +1,13 @@
+.. _exhale_function_bms__fsm_8c_1a94fc62c8220b2fa1b2ce63ca4d2e4354:
+
+Function _halt_handler
+======================
+
+- Defined in :ref:`file_mainboard_Src_bms_fsm.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: _halt_handler(fsm, uint8_t)

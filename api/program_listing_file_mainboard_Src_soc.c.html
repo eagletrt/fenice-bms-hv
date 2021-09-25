@@ -79,7 +79,7 @@
 <span class="cm">/* Private typedef -----------------------------------------------------------*/</span>
 <span class="k">struct</span> <span class="n">soc</span> <span class="p">{</span>
     <span class="kt">uint32_t</span> <span class="n">last_sample</span><span class="p">;</span>
-    <span class="kt">double</span> <span class="n">joule</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">joule</span><span class="p">;</span>
     <span class="n">current_t</span> <span class="n">last_current</span><span class="p">;</span>
 <span class="p">};</span>
 
@@ -89,12 +89,12 @@
 <span class="cm">/* Private function prototypes -----------------------------------------------*/</span>
 <span class="cm">/* Exported functions --------------------------------------------------------*/</span>
 
-<span class="kt">void</span> <span class="nf">soc_init</span><span class="p">(</span><span class="n">soc_t</span><span class="o">*</span> <span class="n">handle</span><span class="p">)</span> <span class="p">{</span>
+<span class="kt">void</span> <span class="nf">soc_init</span><span class="p">(</span><span class="n">soc_t</span> <span class="o">*</span><span class="n">handle</span><span class="p">)</span> <span class="p">{</span>
     <span class="o">*</span><span class="n">handle</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">soc</span><span class="p">));</span>
     <span class="n">soc_reset_count</span><span class="p">(</span><span class="o">*</span><span class="n">handle</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="kt">void</span> <span class="nf">soc_deinit</span><span class="p">(</span><span class="n">soc_t</span><span class="o">*</span> <span class="n">handle</span><span class="p">)</span> <span class="p">{</span>
+<span class="kt">void</span> <span class="nf">soc_deinit</span><span class="p">(</span><span class="n">soc_t</span> <span class="o">*</span><span class="n">handle</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">free</span><span class="p">(</span><span class="o">*</span><span class="n">handle</span><span class="p">);</span>
 <span class="p">}</span>
 
@@ -104,7 +104,7 @@
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">soc_reset_time</span><span class="p">(</span><span class="n">soc_t</span> <span class="n">handle</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">time</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">handle</span><span class="o">-&gt;</span><span class="n">last_sample</span> <span class="o">=</span> <span class="n">time</span><span class="p">;</span>
+    <span class="n">handle</span><span class="o">-&gt;</span><span class="n">last_sample</span>  <span class="o">=</span> <span class="n">time</span><span class="p">;</span>
     <span class="n">handle</span><span class="o">-&gt;</span><span class="n">last_current</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
@@ -115,21 +115,21 @@
 
 <span class="kt">void</span> <span class="nf">soc_sample_current</span><span class="p">(</span><span class="n">soc_t</span> <span class="n">handle</span><span class="p">,</span> <span class="n">current_t</span> <span class="n">current</span><span class="p">,</span> <span class="n">voltage_t</span> <span class="n">voltage</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">time</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// C = ∫I dt = I*Δt</span>
-    <span class="kt">double</span> <span class="n">coulomb</span> <span class="o">=</span> <span class="p">((</span><span class="kt">double</span><span class="p">)(</span><span class="n">handle</span><span class="o">-&gt;</span><span class="n">last_current</span> <span class="o">+</span> <span class="n">current</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">time</span> <span class="o">-</span> <span class="n">handle</span><span class="o">-&gt;</span><span class="n">last_sample</span><span class="p">))</span> <span class="o">/</span> <span class="mf">20000.0</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">coulomb</span> <span class="o">=</span> <span class="p">((</span><span class="kt">float</span><span class="p">)(</span><span class="n">handle</span><span class="o">-&gt;</span><span class="n">last_current</span> <span class="o">+</span> <span class="n">current</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">time</span> <span class="o">-</span> <span class="n">handle</span><span class="o">-&gt;</span><span class="n">last_sample</span><span class="p">))</span> <span class="o">/</span> <span class="mf">20000.0</span><span class="p">;</span>
 
     <span class="c1">// J = C*V</span>
     <span class="n">handle</span><span class="o">-&gt;</span><span class="n">joule</span> <span class="o">+=</span> <span class="p">(</span><span class="n">coulomb</span> <span class="o">*</span> <span class="n">voltage</span><span class="p">)</span> <span class="o">/</span> <span class="mf">100.0</span><span class="p">;</span>
 
     <span class="n">handle</span><span class="o">-&gt;</span><span class="n">last_current</span> <span class="o">=</span> <span class="n">current</span><span class="p">;</span>
-    <span class="n">handle</span><span class="o">-&gt;</span><span class="n">last_sample</span> <span class="o">=</span> <span class="n">time</span><span class="p">;</span>
+    <span class="n">handle</span><span class="o">-&gt;</span><span class="n">last_sample</span>  <span class="o">=</span> <span class="n">time</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="kt">double</span> <span class="nf">soc_get_wh</span><span class="p">(</span><span class="n">soc_t</span> <span class="n">handle</span><span class="p">)</span> <span class="p">{</span>
+<span class="kt">float</span> <span class="nf">soc_get_wh</span><span class="p">(</span><span class="n">soc_t</span> <span class="n">handle</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// 1 J = 1/3600s Wh</span>
     <span class="k">return</span> <span class="n">handle</span><span class="o">-&gt;</span><span class="n">joule</span> <span class="o">/</span> <span class="mi">3600</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="kt">double</span> <span class="nf">soc_get_joule</span><span class="p">(</span><span class="n">soc_t</span> <span class="n">handle</span><span class="p">)</span> <span class="p">{</span>
+<span class="kt">float</span> <span class="nf">soc_get_joule</span><span class="p">(</span><span class="n">soc_t</span> <span class="n">handle</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="n">handle</span><span class="o">-&gt;</span><span class="n">joule</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>

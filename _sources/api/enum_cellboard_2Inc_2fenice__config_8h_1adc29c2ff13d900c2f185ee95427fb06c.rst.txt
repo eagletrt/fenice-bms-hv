@@ -1,0 +1,13 @@
+.. _exhale_enum_cellboard_2Inc_2fenice__config_8h_1adc29c2ff13d900c2f185ee95427fb06c:
+
+Enum @4
+=======
+
+- Defined in :ref:`file_cellboard_Inc_fenice_config.h`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: @4

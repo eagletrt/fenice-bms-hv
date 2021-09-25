@@ -44,6 +44,8 @@ Includes
 --------
 
 
+- ``current.h`` (:ref:`file_mainboard_Inc_current.h`)
+
 - ``fenice_config.h`` (:ref:`file_mainboard_Inc_fenice_config.h`)
 
 - ``inttypes.h``
@@ -69,9 +71,9 @@ Functions
 
 - :ref:`exhale_function_soc_8h_1a3a9387c3f027f01060a1c35e64b83450`
 
-- :ref:`exhale_function_soc_8h_1aa9b1a5f1e57898a6e179250c98e37538`
+- :ref:`exhale_function_soc_8h_1a6f3775dd8bc30e8b47c8b9ca26218363`
 
-- :ref:`exhale_function_soc_8h_1a0a8b3494f4378341cd132fbca26a0a22`
+- :ref:`exhale_function_soc_8h_1a3580e75a485c2c2568cf5fb044894d8e`
 
 - :ref:`exhale_function_soc_8h_1a94c5db2ad4f8d40c91efcb364a6966d8`
 
