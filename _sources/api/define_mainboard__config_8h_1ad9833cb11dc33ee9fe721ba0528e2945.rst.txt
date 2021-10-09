@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard__config_8h_1ad9833cb11dc33ee9fe721ba0528e2945:
+
+Define HTIM_ERR
+===============
+
+- Defined in :ref:`file_mainboard_Inc_mainboard_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: HTIM_ERR

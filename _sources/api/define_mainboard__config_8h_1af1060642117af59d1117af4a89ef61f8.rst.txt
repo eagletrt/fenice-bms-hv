@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard__config_8h_1af1060642117af59d1117af4a89ef61f8:
+
+Define HTIM_BMS
+===============
+
+- Defined in :ref:`file_mainboard_Inc_mainboard_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: HTIM_BMS

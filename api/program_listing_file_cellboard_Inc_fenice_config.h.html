@@ -79,12 +79,6 @@
 <span class="c1">//=================================== General ===============================</span>
 <span class="c1">//===========================================================================</span>
 
-<span class="cp">#define htim_err   htim3</span>
-<span class="cp">#define htim_bms   htim2</span>
-<span class="cp">#define htim_super htim4</span>
-
-<span class="cp">#define spi_eeprom hspi2</span>
-
 <span class="cp">#define CAN_MAX_PAYLOAD_LENGTH 8</span>
 
 <span class="c1">//===========================================================================</span>
@@ -152,78 +146,8 @@
 
 <span class="cp">#define BAL_COOLDOWN_DELAY 5000</span>
 
-<span class="c1">// @section Pre-charge</span>
-
-<span class="cp">#define PRECHARGE_TIMEOUT           10000U</span>
-<span class="cp">#define PRECHARGE_CHECK_INTERVAL    100U</span>
-<span class="cp">#define PRECHARGE_VOLTAGE_THRESHOLD 0.95</span>
-
 <span class="k">typedef</span> <span class="kt">uint16_t</span> <span class="n">voltage_t</span><span class="p">;</span>
 <span class="k">typedef</span> <span class="kt">uint8_t</span> <span class="n">temperature_t</span><span class="p">;</span>
-
-<span class="k">enum</span> <span class="p">{</span>
-    <span class="n">FEEDBACK_VREF_POS</span><span class="p">,</span>
-    <span class="n">FEEDBACK_FROM_TSMS_POS</span><span class="p">,</span>
-    <span class="n">FEEDBACK_TO_TSMS_POS</span><span class="p">,</span>
-    <span class="n">FEEDBACK_FROM_SHUTDOWN_POS</span><span class="p">,</span>
-    <span class="n">FEEDBACK_LATCH_IMD_POS</span><span class="p">,</span>
-    <span class="n">FEEDBACK_LATCH_BMS_POS</span><span class="p">,</span>
-    <span class="n">FEEDBACK_IMD_FAULT_POS</span><span class="p">,</span>
-    <span class="n">FEEDBACK_BMS_FAULT_POS</span><span class="p">,</span>
-    <span class="n">FEEDBACK_TSAL_HV_POS</span><span class="p">,</span>
-    <span class="n">FEEDBACK_AIR_POSITIVE_POS</span><span class="p">,</span>
-    <span class="n">FEEDBACK_AIR_NEGATIVE_POS</span><span class="p">,</span>
-    <span class="n">FEEDBACK_PC_END_POS</span><span class="p">,</span>
-    <span class="n">FEEDBACK_RELAY_LV_POS</span><span class="p">,</span>
-    <span class="n">FEEDBACK_IMD_SHUTDOWN_POS</span><span class="p">,</span>
-    <span class="n">FEEDBACK_BMS_SHUTDOWN_POS</span><span class="p">,</span>
-    <span class="n">FEEDBACK_TS_ON_POS</span><span class="p">,</span>
-
-    <span class="c1">//do not move FEEDBACK_N</span>
-    <span class="n">FEEDBACK_N</span><span class="p">,</span>
-<span class="p">};</span>
-
-<span class="cp">#define FEEDBACK_NULL          0</span>
-<span class="cp">#define FEEDBACK_VREF          ((feedback_t)1 &lt;&lt; FEEDBACK_VREF_POS)</span>
-<span class="cp">#define FEEDBACK_FROM_TSMS     ((feedback_t)1 &lt;&lt; FEEDBACK_FROM_TSMS_POS)</span>
-<span class="cp">#define FEEDBACK_TO_TSMS       ((feedback_t)1 &lt;&lt; FEEDBACK_TO_TSMS_POS)</span>
-<span class="cp">#define FEEDBACK_FROM_SHUTDOWN ((feedback_t)1 &lt;&lt; FEEDBACK_FROM_SHUTDOWN_POS)</span>
-<span class="cp">#define FEEDBACK_LATCH_IMD     ((feedback_t)1 &lt;&lt; FEEDBACK_LATCH_IMD_POS)</span>
-<span class="cp">#define FEEDBACK_LATCH_BMS     ((feedback_t)1 &lt;&lt; FEEDBACK_LATCH_BMS_POS)</span>
-<span class="cp">#define FEEDBACK_IMD_FAULT     ((feedback_t)1 &lt;&lt; FEEDBACK_IMD_FAULT_POS)</span>
-<span class="cp">#define FEEDBACK_BMS_FAULT     ((feedback_t)1 &lt;&lt; FEEDBACK_BMS_FAULT_POS)</span>
-<span class="cp">#define FEEDBACK_TSAL_HV       ((feedback_t)1 &lt;&lt; FEEDBACK_TSAL_HV_POS)</span>
-<span class="cp">#define FEEDBACK_AIR_POSITIVE  ((feedback_t)1 &lt;&lt; FEEDBACK_AIR_POSITIVE_POS)</span>
-<span class="cp">#define FEEDBACK_AIR_NEGATIVE  ((feedback_t)1 &lt;&lt; FEEDBACK_AIR_NEGATIVE_POS)</span>
-<span class="cp">#define FEEDBACK_PC_END        ((feedback_t)1 &lt;&lt; FEEDBACK_PC_END_POS)</span>
-<span class="cp">#define FEEDBACK_RELAY_LV      ((feedback_t)1 &lt;&lt; FEEDBACK_RELAY_LV_POS)</span>
-<span class="cp">#define FEEDBACK_IMD_SHUTDOWN  ((feedback_t)1 &lt;&lt; FEEDBACK_IMD_SHUTDOWN_POS)</span>
-<span class="cp">#define FEEDBACK_BMS_SHUTDOWN  ((feedback_t)1 &lt;&lt; FEEDBACK_BMS_SHUTDOWN_POS)</span>
-<span class="cp">#define FEEDBACK_TS_ON         ((feedback_t)1 &lt;&lt; FEEDBACK_TS_ON_POS)</span>
-<span class="cp">#define FEEDBACK_ALL           (feedback_t)(((feedback_t)1 &lt;&lt; FEEDBACK_N) - 1)</span>
-
-<span class="c1">//===========================================================================</span>
-<span class="c1">//=========================== S160 current transducer =======================</span>
-<span class="c1">//===========================================================================</span>
-
-<span class="c1">// 0A voltage level</span>
-<span class="cp">#define S160_OFFSET (3.33 / 2)</span>
-
-<span class="c1">// Sensitivity of the 50A sensor</span>
-<span class="cp">#define S160_50A_SENS 6.67</span>
-
-<span class="c1">//Sensitivity of the 300A sensor</span>
-<span class="cp">#define S160_300A_SENS 40</span>
-
-<span class="c1">//===========================================================================</span>
-<span class="c1">//=============================== SI8900 Settings ===========================</span>
-<span class="c1">//===========================================================================</span>
-
-<span class="cp">#define SI8900_INIT_TIMEOUT 400</span>
-
-<span class="cp">#define SI8900_TIMEOUT 5</span>
-
-<span class="cp">#define SI8900_VREF 3.33</span>
 
 <span class="cm">/*</span>
 <span class="cm"> * If the cli should echo the input</span>

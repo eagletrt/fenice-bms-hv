@@ -1,0 +1,13 @@
+.. _exhale_define_feedback_8h_1a89fc54d810ffb4e44df4694793d80863:
+
+Define FEEDBACK_IMD_FAULT
+=========================
+
+- Defined in :ref:`file_mainboard_Inc_feedback.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: FEEDBACK_IMD_FAULT

@@ -46,11 +46,11 @@ Includes
 
 - ``error/error.h`` (:ref:`file_mainboard_Inc_error_error.h`)
 
-- ``fenice_config.h`` (:ref:`file_mainboard_Inc_fenice_config.h`)
-
 - ``inttypes.h``
 
 - ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
+
+- ``mainboard_config.h`` (:ref:`file_mainboard_Inc_mainboard_config.h`)
 
 
 

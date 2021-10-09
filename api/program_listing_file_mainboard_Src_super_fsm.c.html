@@ -77,6 +77,7 @@
 <span class="cp">#include</span> <span class="cpf">&quot;current.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;energy.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;main.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;mainboard_config.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;pack.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;spi.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;tim.h&quot;</span><span class="cp"></span>
@@ -106,8 +107,8 @@
     <span class="n">state</span><span class="p">.</span><span class="n">exit</span>    <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
     <span class="n">fsm_set_state</span><span class="p">(</span><span class="n">super_fsm</span><span class="p">,</span> <span class="n">SUPER_MEASURE_VOLTS</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">state</span><span class="p">);</span>
 
-    <span class="n">HAL_TIM_OC_Start_IT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim_super</span><span class="p">,</span> <span class="n">TIM_CHANNEL_1</span><span class="p">);</span>
-    <span class="n">HAL_TIM_OC_Start_IT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim_super</span><span class="p">,</span> <span class="n">TIM_CHANNEL_2</span><span class="p">);</span>
+    <span class="n">HAL_TIM_OC_Start_IT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">HTIM_SUPER</span><span class="p">,</span> <span class="n">TIM_CHANNEL_1</span><span class="p">);</span>
+    <span class="n">HAL_TIM_OC_Start_IT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">HTIM_SUPER</span><span class="p">,</span> <span class="n">TIM_CHANNEL_2</span><span class="p">);</span>
     <span class="n">fsm_start</span><span class="p">(</span><span class="n">super_fsm</span><span class="p">);</span>
 <span class="p">}</span>
 

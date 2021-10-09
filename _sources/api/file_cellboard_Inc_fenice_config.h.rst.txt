@@ -54,28 +54,15 @@ Included By
 -----------
 
 
-- :ref:`file_mainboard_Inc_error_error_list_ref.h`
-
 - :ref:`file_mainboard_Src_bal_fsm.c`
 
 - :ref:`file_mainboard_Src_config.c`
-
-- :ref:`file_mainboard_Src_main.c`
-
-- :ref:`file_mainboard_Src_peripherals_si8900.c`
 
 - :ref:`file_cellboard_Inc_main.h`
 
 - :ref:`file_cellboard_Inc_temperature.h`
 
 
-
-
-Enums
------
-
-
-- :ref:`exhale_enum_cellboard_2Inc_2fenice__config_8h_1abc6126af1d45847bc59afa0aa3216b04`
 
 
 Defines
@@ -102,48 +89,6 @@ Defines
 
 - :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1ad36e907430b027eb6067e1a40edcfa75`
 
-- :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1a6518732d47d3c62703bb81d1cc4f7bdc`
-
-- :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1a967e38a47e1ae71543e1903555d28abf`
-
-- :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1a04107a61d000fd6656664fde5401d334`
-
-- :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1af313533a4eb32bafcbddd19b5e2154cc`
-
-- :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1ac6c25dcc28c3841d095287674c262136`
-
-- :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1a9912a7389caf6887b3ad3ceea19cf9b6`
-
-- :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1afeade4a3aa68e8a17d4b6653dd118f3c`
-
-- :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1a89fc54d810ffb4e44df4694793d80863`
-
-- :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1aacb1f83a54dd505fedda5ae061986c76`
-
-- :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1afc031ad8d471245104a20627db9c5242`
-
-- :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1a17279386c8315cbc09ae36214e765674`
-
-- :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1a1f337074220e345427c393e4dfe72c9d`
-
-- :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1a28406ab7a2ebc1b2fd97b655b173dbfa`
-
-- :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1a0c42839ebbedb7b0a4722a0c89f2768e`
-
-- :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1ae96f45706c849a95b8912193be3a6cee`
-
-- :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1a1b9c0102efa9b5f2ba6e0ec6ca959e8a`
-
-- :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1a6eb87d577456b165cca34c87be6e4c17`
-
-- :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1ad25baf1309e63341af5a37332165047b`
-
-- :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1aa5da6226d68d66c83e73de55e5790115`
-
-- :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1a258ded157859527b5296e12210f61b63`
-
-- :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1a7ded33a4d024b4c85cb466a5de305133`
-
 - :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1a3133a13843f98869bb1359d9e8f4bb54`
 
 - :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1a35bb2e9e977e1567a262f45cac9bf265`
@@ -165,26 +110,6 @@ Defines
 - :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1a9ceb6fa3a1b3065b18963506642d0d06`
 
 - :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1ab4ac28b6065c859687ae8a9d0c6ce9f4`
-
-- :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1a87aa6e0b0f11113630f2bd190de08091`
-
-- :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1ae0749bc3a20fd01dea3168777acdb529`
-
-- :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1a5e2a19a0e90ed9912932dd358475c976`
-
-- :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1a67720b9c5621001851dae7a32777194a`
-
-- :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1a8d894a48d348f81c893d78ecabb942d2`
-
-- :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1aa3d96ce23725ae50959615d694e13e4f`
-
-- :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1a9f31035b77acd470741a7e2fe533f175`
-
-- :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1aabde0ed9a71a7df4aa5b0b1630130d81`
-
-- :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1a7106675a03b716a4eaed676ecac40431`
-
-- :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1ae29095c7d8f1949c76d4770d100fe9d2`
 
 - :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1a269b2ac5a85295f75c79d8897ac7d556`
 

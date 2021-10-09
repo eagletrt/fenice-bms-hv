@@ -46,8 +46,6 @@ Includes
 
 - ``error.h`` (:ref:`file_mainboard_Inc_error_error.h`)
 
-- ``fenice_config.h`` (:ref:`file_mainboard_Inc_fenice_config.h`)
-
 - ``inttypes.h``
 
 
@@ -56,11 +54,20 @@ Included By
 -----------
 
 
+- :ref:`file_mainboard_Src_cli_bms.c`
+
 - :ref:`file_mainboard_Src_feedback.c`
 
 - :ref:`file_mainboard_Src_pack.c`
 
 
+
+
+Enums
+-----
+
+
+- :ref:`exhale_enum_feedback_8h_1a99fb83031ce9923c84392b4e92f956b5`
 
 
 Functions
@@ -82,21 +89,57 @@ Defines
 -------
 
 
+- :ref:`exhale_define_feedback_8h_1a6518732d47d3c62703bb81d1cc4f7bdc`
+
+- :ref:`exhale_define_feedback_8h_1a967e38a47e1ae71543e1903555d28abf`
+
+- :ref:`exhale_define_feedback_8h_1a04107a61d000fd6656664fde5401d334`
+
+- :ref:`exhale_define_feedback_8h_1af313533a4eb32bafcbddd19b5e2154cc`
+
+- :ref:`exhale_define_feedback_8h_1ac6c25dcc28c3841d095287674c262136`
+
+- :ref:`exhale_define_feedback_8h_1a9912a7389caf6887b3ad3ceea19cf9b6`
+
+- :ref:`exhale_define_feedback_8h_1afeade4a3aa68e8a17d4b6653dd118f3c`
+
 - :ref:`exhale_define_feedback_8h_1a4619c2dd34ea61bef213fdcbd01f3d94`
 
 - :ref:`exhale_define_feedback_8h_1a06c1426a4eb70820354b7d48da771b98`
+
+- :ref:`exhale_define_feedback_8h_1a89fc54d810ffb4e44df4694793d80863`
+
+- :ref:`exhale_define_feedback_8h_1aacb1f83a54dd505fedda5ae061986c76`
+
+- :ref:`exhale_define_feedback_8h_1afc031ad8d471245104a20627db9c5242`
+
+- :ref:`exhale_define_feedback_8h_1a17279386c8315cbc09ae36214e765674`
+
+- :ref:`exhale_define_feedback_8h_1a1f337074220e345427c393e4dfe72c9d`
 
 - :ref:`exhale_define_feedback_8h_1a3a0b7ba137ef727f147136ccf2057934`
 
 - :ref:`exhale_define_feedback_8h_1a57c36d488a2206d263f9376d1f597f03`
 
+- :ref:`exhale_define_feedback_8h_1a28406ab7a2ebc1b2fd97b655b173dbfa`
+
+- :ref:`exhale_define_feedback_8h_1a0c42839ebbedb7b0a4722a0c89f2768e`
+
 - :ref:`exhale_define_feedback_8h_1aa0da3aea328b174db9ea189b4194c08a`
 
 - :ref:`exhale_define_feedback_8h_1a7a24db70ee6b8e872e7afca72fcbb536`
 
+- :ref:`exhale_define_feedback_8h_1ae96f45706c849a95b8912193be3a6cee`
+
 - :ref:`exhale_define_feedback_8h_1a72194c3f60b2be52883873a649796e9d`
 
 - :ref:`exhale_define_feedback_8h_1a1bbdce9c6c40d309e6a925042bf15d31`
+
+- :ref:`exhale_define_feedback_8h_1a1b9c0102efa9b5f2ba6e0ec6ca959e8a`
+
+- :ref:`exhale_define_feedback_8h_1a6eb87d577456b165cca34c87be6e4c17`
+
+- :ref:`exhale_define_feedback_8h_1ad25baf1309e63341af5a37332165047b`
 
 
 Typedefs

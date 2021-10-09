@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard__config_8h_1a7106675a03b716a4eaed676ecac40431:
+
+Define SI8900_VREF
+==================
+
+- Defined in :ref:`file_mainboard_Inc_mainboard_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: SI8900_VREF

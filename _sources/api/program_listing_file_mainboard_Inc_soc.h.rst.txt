@@ -17,7 +17,7 @@ Program Listing for File soc.h
    
    /* Includes ------------------------------------------------------------------*/
    #include "current.h"
-   #include "fenice_config.h"
+   #include "mainboard_config.h"
    
    #include <inttypes.h>
    /* Exported types ------------------------------------------------------------*/

@@ -56,6 +56,8 @@ Includes
 
 - ``error/error.h`` (:ref:`file_mainboard_Inc_error_error.h`)
 
+- ``feedback.h`` (:ref:`file_mainboard_Inc_feedback.h`)
+
 - ``pack.h`` (:ref:`file_mainboard_Inc_pack.h`)
 
 - ``soc.h`` (:ref:`file_mainboard_Inc_soc.h`)

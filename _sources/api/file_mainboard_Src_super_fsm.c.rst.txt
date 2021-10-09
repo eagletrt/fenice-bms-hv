@@ -56,6 +56,8 @@ Includes
 
 - ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
 
+- ``mainboard_config.h`` (:ref:`file_mainboard_Inc_mainboard_config.h`)
+
 - ``pack.h`` (:ref:`file_mainboard_Inc_pack.h`)
 
 - ``spi.h`` (:ref:`file_mainboard_Inc_spi.h`)

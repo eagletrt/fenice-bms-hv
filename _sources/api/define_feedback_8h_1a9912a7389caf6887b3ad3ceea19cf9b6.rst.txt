@@ -1,0 +1,13 @@
+.. _exhale_define_feedback_8h_1a9912a7389caf6887b3ad3ceea19cf9b6:
+
+Define FEEDBACK_FROM_SHUTDOWN
+=============================
+
+- Defined in :ref:`file_mainboard_Inc_feedback.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: FEEDBACK_FROM_SHUTDOWN

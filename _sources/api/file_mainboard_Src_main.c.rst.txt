@@ -49,13 +49,13 @@ Includes
 
 - ``error/error.h`` (:ref:`file_mainboard_Inc_error_error.h`)
 
-- ``fenice_config.h`` (:ref:`file_mainboard_Inc_fenice_config.h`)
-
 - ``gpio.h`` (:ref:`file_mainboard_Inc_gpio.h`)
 
 - ``m95256.h``
 
 - ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
+
+- ``mainboard_config.h`` (:ref:`file_mainboard_Inc_mainboard_config.h`)
 
 - ``peripherals/can_comm.h`` (:ref:`file_mainboard_Inc_peripherals_can_comm.h`)
 

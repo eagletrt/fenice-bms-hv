@@ -54,6 +54,8 @@ Includes
 
 - ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
 
+- ``mainboard_config.h`` (:ref:`file_mainboard_Inc_mainboard_config.h`)
+
 - ``string.h``
 
 

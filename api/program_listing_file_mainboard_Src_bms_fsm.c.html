@@ -129,7 +129,7 @@
     <span class="n">state</span><span class="p">.</span><span class="n">exit</span>    <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
     <span class="n">fsm_set_state</span><span class="p">(</span><span class="n">bms</span><span class="p">.</span><span class="n">fsm</span><span class="p">,</span> <span class="n">BMS_HALT</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">state</span><span class="p">);</span>
 
-    <span class="n">HAL_TIM_Base_Start_IT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim_bms</span><span class="p">);</span>
+    <span class="n">HAL_TIM_Base_Start_IT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">HTIM_BMS</span><span class="p">);</span>
     <span class="n">fsm_start</span><span class="p">(</span><span class="n">bms</span><span class="p">.</span><span class="n">fsm</span><span class="p">);</span>
 
     <span class="n">bms</span><span class="p">.</span><span class="n">led</span><span class="p">.</span><span class="n">port</span> <span class="o">=</span> <span class="n">STATE_LED_GPIO</span><span class="p">;</span>
@@ -188,12 +188,12 @@
     <span class="c1">// Precharge</span>
     <span class="n">pack_set_pc_start</span><span class="p">();</span>
 
-    <span class="kt">uint32_t</span> <span class="n">cnt</span> <span class="o">=</span> <span class="n">__HAL_TIM_GET_COUNTER</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim_bms</span><span class="p">);</span>
-    <span class="n">__HAL_TIM_SET_COMPARE</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim_bms</span><span class="p">,</span> <span class="n">TIM_CHANNEL_1</span><span class="p">,</span> <span class="p">(</span><span class="n">cnt</span> <span class="o">+</span> <span class="n">PRECHARGE_CHECK_INTERVAL</span> <span class="o">*</span> <span class="mi">10</span><span class="p">));</span>
-    <span class="n">__HAL_TIM_SET_COMPARE</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim_bms</span><span class="p">,</span> <span class="n">TIM_CHANNEL_2</span><span class="p">,</span> <span class="p">(</span><span class="n">cnt</span> <span class="o">+</span> <span class="n">PRECHARGE_TIMEOUT</span> <span class="o">*</span> <span class="mi">10</span><span class="p">));</span>
+    <span class="kt">uint32_t</span> <span class="n">cnt</span> <span class="o">=</span> <span class="n">__HAL_TIM_GET_COUNTER</span><span class="p">(</span><span class="o">&amp;</span><span class="n">HTIM_BMS</span><span class="p">);</span>
+    <span class="n">__HAL_TIM_SET_COMPARE</span><span class="p">(</span><span class="o">&amp;</span><span class="n">HTIM_BMS</span><span class="p">,</span> <span class="n">TIM_CHANNEL_1</span><span class="p">,</span> <span class="p">(</span><span class="n">cnt</span> <span class="o">+</span> <span class="n">PRECHARGE_CHECK_INTERVAL</span> <span class="o">*</span> <span class="mi">10</span><span class="p">));</span>
+    <span class="n">__HAL_TIM_SET_COMPARE</span><span class="p">(</span><span class="o">&amp;</span><span class="n">HTIM_BMS</span><span class="p">,</span> <span class="n">TIM_CHANNEL_2</span><span class="p">,</span> <span class="p">(</span><span class="n">cnt</span> <span class="o">+</span> <span class="n">PRECHARGE_TIMEOUT</span> <span class="o">*</span> <span class="mi">10</span><span class="p">));</span>
 
-    <span class="n">HAL_TIM_OC_Start_IT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim_bms</span><span class="p">,</span> <span class="n">TIM_CHANNEL_1</span><span class="p">);</span>
-    <span class="n">HAL_TIM_OC_Start_IT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim_bms</span><span class="p">,</span> <span class="n">TIM_CHANNEL_2</span><span class="p">);</span>
+    <span class="n">HAL_TIM_OC_Start_IT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">HTIM_BMS</span><span class="p">,</span> <span class="n">TIM_CHANNEL_1</span><span class="p">);</span>
+    <span class="n">HAL_TIM_OC_Start_IT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">HTIM_BMS</span><span class="p">,</span> <span class="n">TIM_CHANNEL_2</span><span class="p">);</span>
 
     <span class="n">cli_bms_debug</span><span class="p">(</span><span class="s">&quot;Entered precharge&quot;</span><span class="p">,</span> <span class="mi">18</span><span class="p">);</span>
 <span class="p">}</span>
@@ -224,8 +224,8 @@
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">_precharge_exit</span><span class="p">(</span><span class="n">fsm</span> <span class="n">FSM</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">HAL_TIM_OC_Stop_IT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim_bms</span><span class="p">,</span> <span class="n">TIM_CHANNEL_1</span><span class="p">);</span>
-    <span class="n">HAL_TIM_OC_Stop_IT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim_bms</span><span class="p">,</span> <span class="n">TIM_CHANNEL_2</span><span class="p">);</span>
+    <span class="n">HAL_TIM_OC_Stop_IT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">HTIM_BMS</span><span class="p">,</span> <span class="n">TIM_CHANNEL_1</span><span class="p">);</span>
+    <span class="n">HAL_TIM_OC_Stop_IT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">HTIM_BMS</span><span class="p">,</span> <span class="n">TIM_CHANNEL_2</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">_on_entry</span><span class="p">(</span><span class="n">fsm</span> <span class="n">FSM</span><span class="p">)</span> <span class="p">{</span>

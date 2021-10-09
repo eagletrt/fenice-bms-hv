@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard__config_8h_1aed2914fa4c14f09e746c2141d62146fa:
+
+Define ADC_HALL50
+=================
+
+- Defined in :ref:`file_mainboard_Inc_mainboard_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: ADC_HALL50

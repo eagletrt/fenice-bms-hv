@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard__config_8h_1ac889f835c99d5579013c8dd5915f5341:
+
+Define ADC_HALL300
+==================
+
+- Defined in :ref:`file_mainboard_Inc_mainboard_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: ADC_HALL300

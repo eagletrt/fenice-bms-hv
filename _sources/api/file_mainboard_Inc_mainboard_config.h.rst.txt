@@ -46,15 +46,33 @@ Includes
 
 - ``../../fenice_config.h``
 
-- ``inttypes.h``
-
 
 
 Included By
 -----------
 
 
+- :ref:`file_mainboard_Inc_pack.h`
+
+- :ref:`file_mainboard_Inc_bal.h`
+
+- :ref:`file_mainboard_Inc_error_error_list_ref.h`
+
+- :ref:`file_mainboard_Inc_soc.h`
+
 - :ref:`file_mainboard_Src_bms_fsm.c`
+
+- :ref:`file_mainboard_Src_current.c`
+
+- :ref:`file_mainboard_Src_error_error.c`
+
+- :ref:`file_mainboard_Src_main.c`
+
+- :ref:`file_mainboard_Src_peripherals_si8900.c`
+
+- :ref:`file_mainboard_Src_super_fsm.c`
+
+- :ref:`file_mainboard_Src_tim.c`
 
 
 
@@ -63,15 +81,29 @@ Defines
 -------
 
 
-- :ref:`exhale_define_mainboard__config_8h_1a0e0180367f5c12c25c24269e63fa4fea`
+- :ref:`exhale_define_mainboard__config_8h_1ac889f835c99d5579013c8dd5915f5341`
 
-- :ref:`exhale_define_mainboard__config_8h_1aa5da6226d68d66c83e73de55e5790115`
+- :ref:`exhale_define_mainboard__config_8h_1aed2914fa4c14f09e746c2141d62146fa`
 
-- :ref:`exhale_define_mainboard__config_8h_1a258ded157859527b5296e12210f61b63`
+- :ref:`exhale_define_mainboard__config_8h_1af1060642117af59d1117af4a89ef61f8`
 
-- :ref:`exhale_define_mainboard__config_8h_1a7ded33a4d024b4c85cb466a5de305133`
+- :ref:`exhale_define_mainboard__config_8h_1ad9833cb11dc33ee9fe721ba0528e2945`
 
-- :ref:`exhale_define_mainboard__config_8h_1ae29095c7d8f1949c76d4770d100fe9d2`
+- :ref:`exhale_define_mainboard__config_8h_1a8dfbbf7fea63d29615e884a22a67765a`
+
+- :ref:`exhale_define_mainboard__config_8h_1a87aa6e0b0f11113630f2bd190de08091`
+
+- :ref:`exhale_define_mainboard__config_8h_1ae0749bc3a20fd01dea3168777acdb529`
+
+- :ref:`exhale_define_mainboard__config_8h_1a5e2a19a0e90ed9912932dd358475c976`
+
+- :ref:`exhale_define_mainboard__config_8h_1a9f31035b77acd470741a7e2fe533f175`
+
+- :ref:`exhale_define_mainboard__config_8h_1aabde0ed9a71a7df4aa5b0b1630130d81`
+
+- :ref:`exhale_define_mainboard__config_8h_1a7106675a03b716a4eaed676ecac40431`
+
+- :ref:`exhale_define_mainboard__config_8h_1ac4315cb2cd98efcabf8cd291bc86e76f`
 
 - :ref:`exhale_define_mainboard__config_8h_1a2efabd7f4edff562f4533c66053b173d`
 

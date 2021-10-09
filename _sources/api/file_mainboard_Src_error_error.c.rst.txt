@@ -48,6 +48,8 @@ Includes
 
 - ``error/error_list_ref.h`` (:ref:`file_mainboard_Inc_error_error_list_ref.h`)
 
+- ``mainboard_config.h`` (:ref:`file_mainboard_Inc_mainboard_config.h`)
+
 - ``stdlib.h``
 
 - ``tim.h`` (:ref:`file_mainboard_Inc_tim.h`)

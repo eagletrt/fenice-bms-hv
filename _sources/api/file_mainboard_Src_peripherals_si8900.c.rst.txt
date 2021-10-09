@@ -48,7 +48,7 @@ Includes
 
 - ``error/error.h`` (:ref:`file_mainboard_Inc_error_error.h`)
 
-- ``fenice_config.h`` (:ref:`file_mainboard_Inc_fenice_config.h`)
+- ``mainboard_config.h`` (:ref:`file_mainboard_Inc_mainboard_config.h`)
 
 - ``peripherals/si8900.h`` (:ref:`file_mainboard_Inc_peripherals_si8900.h`)
 

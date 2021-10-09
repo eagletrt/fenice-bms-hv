@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard__config_8h_1a8dfbbf7fea63d29615e884a22a67765a:
+
+Define HTIM_SUPER
+=================
+
+- Defined in :ref:`file_mainboard_Inc_mainboard_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: HTIM_SUPER

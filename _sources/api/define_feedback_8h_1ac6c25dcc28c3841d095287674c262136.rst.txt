@@ -1,0 +1,13 @@
+.. _exhale_define_feedback_8h_1ac6c25dcc28c3841d095287674c262136:
+
+Define FEEDBACK_BMS_SHUTDOWN
+============================
+
+- Defined in :ref:`file_mainboard_Inc_feedback.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: FEEDBACK_BMS_SHUTDOWN

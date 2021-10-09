@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard__config_8h_1a5e2a19a0e90ed9912932dd358475c976:
+
+Define PRECHARGE_VOLTAGE_THRESHOLD
+==================================
+
+- Defined in :ref:`file_mainboard_Inc_mainboard_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: PRECHARGE_VOLTAGE_THRESHOLD

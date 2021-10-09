@@ -45,6 +45,8 @@ Includes
 --------
 
 
+- ``inttypes.h``
+
 - ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
 
 

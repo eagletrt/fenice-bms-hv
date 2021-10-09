@@ -46,9 +46,9 @@ Includes
 
 - ``current.h`` (:ref:`file_mainboard_Inc_current.h`)
 
-- ``fenice_config.h`` (:ref:`file_mainboard_Inc_fenice_config.h`)
-
 - ``inttypes.h``
+
+- ``mainboard_config.h`` (:ref:`file_mainboard_Inc_mainboard_config.h`)
 
 
 

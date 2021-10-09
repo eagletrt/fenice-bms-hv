@@ -72,43 +72,73 @@
 <p>↰ <a class="reference internal" href="file_mainboard_Inc_feedback.h.html#file-mainboard-inc-feedback-h"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">mainboard/Inc/feedback.h</span></code>)</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#pragma once</span>
 
-<span class="cp">#include</span> <span class="cpf">&lt;inttypes.h&gt;</span><span class="cp"></span>
-
 <span class="cp">#include</span> <span class="cpf">&quot;error.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;fenice_config.h&quot;</span><span class="cp"></span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;inttypes.h&gt;</span><span class="cp"></span>
 
 <span class="k">typedef</span> <span class="kt">uint16_t</span> <span class="n">feedback_t</span><span class="p">;</span>
 
 <span class="k">extern</span> <span class="n">feedback_t</span> <span class="n">feedback</span><span class="p">;</span>
 
+<span class="k">enum</span> <span class="p">{</span>
+    <span class="n">FEEDBACK_VREF_POS</span><span class="p">,</span>
+    <span class="n">FEEDBACK_FROM_TSMS_POS</span><span class="p">,</span>
+    <span class="n">FEEDBACK_TO_TSMS_POS</span><span class="p">,</span>
+    <span class="n">FEEDBACK_FROM_SHUTDOWN_POS</span><span class="p">,</span>
+    <span class="n">FEEDBACK_LATCH_IMD_POS</span><span class="p">,</span>
+    <span class="n">FEEDBACK_LATCH_BMS_POS</span><span class="p">,</span>
+    <span class="n">FEEDBACK_IMD_FAULT_POS</span><span class="p">,</span>
+    <span class="n">FEEDBACK_BMS_FAULT_POS</span><span class="p">,</span>
+    <span class="n">FEEDBACK_TSAL_HV_POS</span><span class="p">,</span>
+    <span class="n">FEEDBACK_AIR_POSITIVE_POS</span><span class="p">,</span>
+    <span class="n">FEEDBACK_AIR_NEGATIVE_POS</span><span class="p">,</span>
+    <span class="n">FEEDBACK_PC_END_POS</span><span class="p">,</span>
+    <span class="n">FEEDBACK_RELAY_LV_POS</span><span class="p">,</span>
+    <span class="n">FEEDBACK_IMD_SHUTDOWN_POS</span><span class="p">,</span>
+    <span class="n">FEEDBACK_BMS_SHUTDOWN_POS</span><span class="p">,</span>
+    <span class="n">FEEDBACK_TS_ON_POS</span><span class="p">,</span>
+
+    <span class="c1">//do not move FEEDBACK_N</span>
+    <span class="n">FEEDBACK_N</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="cp">#define FEEDBACK_NULL          0</span>
+<span class="cp">#define FEEDBACK_VREF          ((feedback_t)1 &lt;&lt; FEEDBACK_VREF_POS)</span>
+<span class="cp">#define FEEDBACK_FROM_TSMS     ((feedback_t)1 &lt;&lt; FEEDBACK_FROM_TSMS_POS)</span>
+<span class="cp">#define FEEDBACK_TO_TSMS       ((feedback_t)1 &lt;&lt; FEEDBACK_TO_TSMS_POS)</span>
+<span class="cp">#define FEEDBACK_FROM_SHUTDOWN ((feedback_t)1 &lt;&lt; FEEDBACK_FROM_SHUTDOWN_POS)</span>
+<span class="cp">#define FEEDBACK_LATCH_IMD     ((feedback_t)1 &lt;&lt; FEEDBACK_LATCH_IMD_POS)</span>
+<span class="cp">#define FEEDBACK_LATCH_BMS     ((feedback_t)1 &lt;&lt; FEEDBACK_LATCH_BMS_POS)</span>
+<span class="cp">#define FEEDBACK_IMD_FAULT     ((feedback_t)1 &lt;&lt; FEEDBACK_IMD_FAULT_POS)</span>
+<span class="cp">#define FEEDBACK_BMS_FAULT     ((feedback_t)1 &lt;&lt; FEEDBACK_BMS_FAULT_POS)</span>
+<span class="cp">#define FEEDBACK_TSAL_HV       ((feedback_t)1 &lt;&lt; FEEDBACK_TSAL_HV_POS)</span>
+<span class="cp">#define FEEDBACK_AIR_POSITIVE  ((feedback_t)1 &lt;&lt; FEEDBACK_AIR_POSITIVE_POS)</span>
+<span class="cp">#define FEEDBACK_AIR_NEGATIVE  ((feedback_t)1 &lt;&lt; FEEDBACK_AIR_NEGATIVE_POS)</span>
+<span class="cp">#define FEEDBACK_PC_END        ((feedback_t)1 &lt;&lt; FEEDBACK_PC_END_POS)</span>
+<span class="cp">#define FEEDBACK_RELAY_LV      ((feedback_t)1 &lt;&lt; FEEDBACK_RELAY_LV_POS)</span>
+<span class="cp">#define FEEDBACK_IMD_SHUTDOWN  ((feedback_t)1 &lt;&lt; FEEDBACK_IMD_SHUTDOWN_POS)</span>
+<span class="cp">#define FEEDBACK_BMS_SHUTDOWN  ((feedback_t)1 &lt;&lt; FEEDBACK_BMS_SHUTDOWN_POS)</span>
+<span class="cp">#define FEEDBACK_TS_ON         ((feedback_t)1 &lt;&lt; FEEDBACK_TS_ON_POS)</span>
+<span class="cp">#define FEEDBACK_ALL           (feedback_t)(((feedback_t)1 &lt;&lt; FEEDBACK_N) - 1)</span>
+
 <span class="c1">// Feedbacks to check after TS OFF</span>
 <span class="cp">#define FEEDBACK_TS_OFF_VAL FEEDBACK_VREF</span>
-<span class="cp">#define FEEDBACK_TS_OFF_MASK FEEDBACK_VREF | FEEDBACK_AIR_POSITIVE | FEEDBACK_AIR_NEGATIVE | FEEDBACK_PC_END | FEEDBACK_TS_ON</span>
+<span class="cp">#define FEEDBACK_TS_OFF_MASK \</span>
+<span class="cp">    FEEDBACK_VREF | FEEDBACK_AIR_POSITIVE | FEEDBACK_AIR_NEGATIVE | FEEDBACK_PC_END | FEEDBACK_TS_ON</span>
 
 <span class="c1">// Feedback states before closing AIR- and trigger PC</span>
-<span class="cp">#define FEEDBACK_IDLE_TS_ON_TRIGGER_VAL \</span>
-<span class="cp">    (FEEDBACK_VREF |                    \</span>
-<span class="cp">     FEEDBACK_FROM_TSMS |               \</span>
-<span class="cp">     FEEDBACK_TO_TSMS |                 \</span>
-<span class="cp">     FEEDBACK_FROM_SHUTDOWN |           \</span>
-<span class="cp">     FEEDBACK_LATCH_IMD |               \</span>
-<span class="cp">     FEEDBACK_LATCH_BMS |               \</span>
-<span class="cp">     FEEDBACK_IMD_FAULT |               \</span>
-<span class="cp">     FEEDBACK_BMS_FAULT)</span>
+<span class="cp">#define FEEDBACK_IDLE_TS_ON_TRIGGER_VAL                                                                    \</span>
+<span class="cp">    (FEEDBACK_VREF | FEEDBACK_FROM_TSMS | FEEDBACK_TO_TSMS | FEEDBACK_FROM_SHUTDOWN | FEEDBACK_LATCH_IMD | \</span>
+<span class="cp">     FEEDBACK_LATCH_BMS | FEEDBACK_IMD_FAULT | FEEDBACK_BMS_FAULT)</span>
 <span class="cp">#define FEEDBACK_IDLE_TS_ON_TRIGGER_MASK FEEDBACK_ALL</span>
 
 <span class="c1">// Feedback states after closing AIR-</span>
-<span class="cp">#define FEEDBACK_TO_PRECHARGE_VAL      \</span>
-<span class="cp">    (FEEDBACK_IDLE_TS_ON_TRIGGER_VAL | \</span>
-<span class="cp">     FEEDBACK_AIR_NEGATIVE |           \</span>
-<span class="cp">     FEEDBACK_RELAY_LV |               \</span>
-<span class="cp">     FEEDBACK_IMD_SHUTDOWN |           \</span>
-<span class="cp">     FEEDBACK_BMS_FAULT |              \</span>
-<span class="cp">     FEEDBACK_BMS_SHUTDOWN |           \</span>
-<span class="cp">     FEEDBACK_TS_ON)</span>
+<span class="cp">#define FEEDBACK_TO_PRECHARGE_VAL                                                                          \</span>
+<span class="cp">    (FEEDBACK_IDLE_TS_ON_TRIGGER_VAL | FEEDBACK_AIR_NEGATIVE | FEEDBACK_RELAY_LV | FEEDBACK_IMD_SHUTDOWN | \</span>
+<span class="cp">     FEEDBACK_BMS_FAULT | FEEDBACK_BMS_SHUTDOWN | FEEDBACK_TS_ON)</span>
 <span class="cp">#define FEEDBACK_TO_PRECHARGE_MASK FEEDBACK_ALL &amp;(~FEEDBACK_TSAL_HV)</span>
 
-<span class="cp">#define FEEDBACK_ON_VAL FEEDBACK_TO_PRECHARGE_VAL | FEEDBACK_TSAL_HV</span>
+<span class="cp">#define FEEDBACK_ON_VAL  FEEDBACK_TO_PRECHARGE_VAL | FEEDBACK_TSAL_HV</span>
 <span class="cp">#define FEEDBACK_ON_MASK FEEDBACK_ALL</span>
 
 <span class="kt">bool</span> <span class="nf">feedback_check</span><span class="p">(</span><span class="n">feedback_t</span> <span class="n">fb_check_mask</span><span class="p">,</span> <span class="n">feedback_t</span> <span class="n">fb_value</span><span class="p">,</span> <span class="n">error_id</span> <span class="n">error_id</span><span class="p">);</span>

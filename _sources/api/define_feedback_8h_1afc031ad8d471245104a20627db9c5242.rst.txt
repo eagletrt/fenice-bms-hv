@@ -1,0 +1,13 @@
+.. _exhale_define_feedback_8h_1afc031ad8d471245104a20627db9c5242:
+
+Define FEEDBACK_LATCH_BMS
+=========================
+
+- Defined in :ref:`file_mainboard_Inc_feedback.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: FEEDBACK_LATCH_BMS

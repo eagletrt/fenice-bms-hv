@@ -47,6 +47,8 @@ Includes
 
 - ``bms_fsm.h`` (:ref:`file_mainboard_Inc_bms_fsm.h`)
 
+- ``mainboard_config.h`` (:ref:`file_mainboard_Inc_mainboard_config.h`)
+
 - ``super_fsm.h`` (:ref:`file_mainboard_Inc_super_fsm.h`)
 
 - ``tim.h`` (:ref:`file_mainboard_Inc_tim.h`)

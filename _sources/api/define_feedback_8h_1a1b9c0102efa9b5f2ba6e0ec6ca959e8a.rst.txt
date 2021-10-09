@@ -1,0 +1,13 @@
+.. _exhale_define_feedback_8h_1a1b9c0102efa9b5f2ba6e0ec6ca959e8a:
+
+Define FEEDBACK_TS_ON
+=====================
+
+- Defined in :ref:`file_mainboard_Inc_feedback.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: FEEDBACK_TS_ON

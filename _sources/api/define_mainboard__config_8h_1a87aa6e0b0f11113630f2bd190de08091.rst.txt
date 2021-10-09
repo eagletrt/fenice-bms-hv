@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard__config_8h_1a87aa6e0b0f11113630f2bd190de08091:
+
+Define PRECHARGE_CHECK_INTERVAL
+===============================
+
+- Defined in :ref:`file_mainboard_Inc_mainboard_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: PRECHARGE_CHECK_INTERVAL

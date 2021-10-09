@@ -76,6 +76,7 @@
 <span class="cp">#include</span> <span class="cpf">&quot;cli_bms.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;error.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;main.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;mainboard_config.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;string.h&quot;</span><span class="cp"></span>
 
 <span class="cp">#define ROLLING_AVERAGE_FACTOR 0.75f</span>
@@ -100,8 +101,8 @@
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">current_start_measure</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">HAL_ADC_Start_DMA</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hadc3</span><span class="p">,</span> <span class="p">(</span><span class="kt">uint32_t</span> <span class="o">*</span><span class="p">)</span><span class="n">adc_50</span><span class="p">,</span> <span class="n">MEASURE_SAMPLE_SIZE</span><span class="p">);</span>
-    <span class="n">HAL_ADC_Start_DMA</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hadc2</span><span class="p">,</span> <span class="p">(</span><span class="kt">uint32_t</span> <span class="o">*</span><span class="p">)</span><span class="n">adc_300</span><span class="p">,</span> <span class="n">MEASURE_SAMPLE_SIZE</span><span class="p">);</span>
+    <span class="n">HAL_ADC_Start_DMA</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ADC_HALL50</span><span class="p">,</span> <span class="p">(</span><span class="kt">uint32_t</span> <span class="o">*</span><span class="p">)</span><span class="n">adc_50</span><span class="p">,</span> <span class="n">MEASURE_SAMPLE_SIZE</span><span class="p">);</span>
+    <span class="n">HAL_ADC_Start_DMA</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ADC_HALL300</span><span class="p">,</span> <span class="p">(</span><span class="kt">uint32_t</span> <span class="o">*</span><span class="p">)</span><span class="n">adc_300</span><span class="p">,</span> <span class="n">MEASURE_SAMPLE_SIZE</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="kt">uint32_t</span> <span class="nf">current_read</span><span class="p">()</span> <span class="p">{</span>

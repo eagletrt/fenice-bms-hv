@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard__config_8h_1ac4315cb2cd98efcabf8cd291bc86e76f:
+
+Define SPI_EEPROM
+=================
+
+- Defined in :ref:`file_mainboard_Inc_mainboard_config.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: SPI_EEPROM
