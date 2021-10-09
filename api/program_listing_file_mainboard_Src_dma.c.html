@@ -85,24 +85,22 @@
 
 <span class="cm">/* USER CODE END 1 */</span>
 
-<span class="kt">void</span> <span class="nf">MX_DMA_Init</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
-<span class="p">{</span>
+<span class="kt">void</span> <span class="nf">MX_DMA_Init</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+    <span class="cm">/* DMA controller clock enable */</span>
+    <span class="n">__HAL_RCC_DMA2_CLK_ENABLE</span><span class="p">();</span>
 
-  <span class="cm">/* DMA controller clock enable */</span>
-  <span class="n">__HAL_RCC_DMA2_CLK_ENABLE</span><span class="p">();</span>
-
-  <span class="cm">/* DMA interrupt init */</span>
-  <span class="cm">/* DMA2_Stream0_IRQn interrupt configuration */</span>
-  <span class="n">HAL_NVIC_SetPriority</span><span class="p">(</span><span class="n">DMA2_Stream0_IRQn</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-  <span class="n">HAL_NVIC_EnableIRQ</span><span class="p">(</span><span class="n">DMA2_Stream0_IRQn</span><span class="p">);</span>
-  <span class="cm">/* DMA2_Stream2_IRQn interrupt configuration */</span>
-  <span class="n">HAL_NVIC_SetPriority</span><span class="p">(</span><span class="n">DMA2_Stream2_IRQn</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-  <span class="n">HAL_NVIC_EnableIRQ</span><span class="p">(</span><span class="n">DMA2_Stream2_IRQn</span><span class="p">);</span>
-
+    <span class="cm">/* DMA interrupt init */</span>
+    <span class="cm">/* DMA2_Stream0_IRQn interrupt configuration */</span>
+    <span class="n">HAL_NVIC_SetPriority</span><span class="p">(</span><span class="n">DMA2_Stream0_IRQn</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="n">HAL_NVIC_EnableIRQ</span><span class="p">(</span><span class="n">DMA2_Stream0_IRQn</span><span class="p">);</span>
+    <span class="cm">/* DMA2_Stream2_IRQn interrupt configuration */</span>
+    <span class="n">HAL_NVIC_SetPriority</span><span class="p">(</span><span class="n">DMA2_Stream2_IRQn</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="n">HAL_NVIC_EnableIRQ</span><span class="p">(</span><span class="n">DMA2_Stream2_IRQn</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="cm">/* USER CODE BEGIN 2 */</span>
-
+<span class="kt">void</span> <span class="nf">HAL_ADC_ConvCpltCallback</span><span class="p">(</span><span class="n">ADC_HandleTypeDef</span> <span class="o">*</span><span class="n">hadc</span><span class="p">)</span> <span class="p">{</span>
+<span class="p">}</span>
 <span class="cm">/* USER CODE END 2 */</span>
 
 <span class="cm">/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/</span>

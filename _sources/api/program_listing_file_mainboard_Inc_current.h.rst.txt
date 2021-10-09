@@ -19,7 +19,9 @@ Program Listing for File current.h
    
    typedef float current_t;
    
-   uint32_t current_measure();
+   void current_start_measure();
+   
+   uint32_t current_read();
    
    void current_zero();
    

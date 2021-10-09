@@ -1,0 +1,13 @@
+.. _exhale_variable_adc_8h_1a984624bcf28d1b2fb7e4e18349f65d5c:
+
+Variable hadc3
+==============
+
+- Defined in :ref:`file_mainboard_Inc_adc.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: hadc3

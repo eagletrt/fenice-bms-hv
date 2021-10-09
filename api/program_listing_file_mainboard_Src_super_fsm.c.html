@@ -132,7 +132,7 @@
 <span class="kt">void</span> <span class="nf">super_measure_volts</span><span class="p">(</span><span class="n">fsm</span> <span class="n">handle</span><span class="p">,</span> <span class="n">super_events</span> <span class="n">event</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">pack_update_voltages</span><span class="p">(</span><span class="o">&amp;</span><span class="n">SI8900_UART</span><span class="p">);</span>
 
-    <span class="n">energy_sample_current</span><span class="p">(</span><span class="n">current_measure</span><span class="p">());</span>
+    <span class="n">energy_sample_current</span><span class="p">(</span><span class="n">current_read</span><span class="p">());</span>
 
     <span class="n">can_send</span><span class="p">(</span><span class="n">ID_HV_CURRENT</span><span class="p">);</span>
 

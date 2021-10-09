@@ -123,8 +123,8 @@
   <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Speed</span> <span class="o">=</span> <span class="n">GPIO_SPEED_FREQ_LOW</span><span class="p">;</span>
   <span class="n">HAL_GPIO_Init</span><span class="p">(</span><span class="n">GPIOC</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">GPIO_InitStruct</span><span class="p">);</span>
 
-  <span class="cm">/*Configure GPIO pins : PC14 PC15 */</span>
-  <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pin</span> <span class="o">=</span> <span class="n">GPIO_PIN_14</span><span class="o">|</span><span class="n">GPIO_PIN_15</span><span class="p">;</span>
+  <span class="cm">/*Configure GPIO pins : PC14 PC15 PCPin */</span>
+  <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pin</span> <span class="o">=</span> <span class="n">GPIO_PIN_14</span><span class="o">|</span><span class="n">GPIO_PIN_15</span><span class="o">|</span><span class="n">IP_LOW_Pin</span><span class="p">;</span>
   <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Mode</span> <span class="o">=</span> <span class="n">GPIO_MODE_ANALOG</span><span class="p">;</span>
   <span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pull</span> <span class="o">=</span> <span class="n">GPIO_NOPULL</span><span class="p">;</span>
   <span class="n">HAL_GPIO_Init</span><span class="p">(</span><span class="n">GPIOC</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">GPIO_InitStruct</span><span class="p">);</span>

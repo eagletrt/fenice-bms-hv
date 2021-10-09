@@ -46,11 +46,15 @@ Includes
 
 - ``adc.h`` (:ref:`file_mainboard_Inc_adc.h`)
 
+- ``cli_bms.h`` (:ref:`file_mainboard_Inc_cli_bms.h`)
+
 - ``current.h`` (:ref:`file_mainboard_Inc_current.h`)
 
 - ``error.h`` (:ref:`file_mainboard_Inc_error_error.h`)
 
 - ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
+
+- ``string.h``
 
 
 
@@ -73,7 +77,9 @@ Functions
 
 - :ref:`exhale_function_current_8c_1a4594d13415e02237330119f5e1f4b891`
 
-- :ref:`exhale_function_current_8c_1a073ffbf1b95ce2ea8cd1a52d1c875132`
+- :ref:`exhale_function_current_8c_1a42991298db64ed7e5aec7e6f0f273ef5`
+
+- :ref:`exhale_function_current_8c_1a8c9a34961c38ef46163f35f8038f28b9`
 
 - :ref:`exhale_function_current_8c_1aefe9d7b8993ca385f9d75117fc4dfb9a`
 
@@ -82,12 +88,18 @@ Defines
 -------
 
 
+- :ref:`exhale_define_current_8c_1a0c5bf205f2c3ac62204feb12e1d57c65`
+
 - :ref:`exhale_define_current_8c_1a277dc742590fab8ab5b2d552f062f8ab`
 
 
 Variables
 ---------
 
+
+- :ref:`exhale_variable_current_8c_1af85bb4a6e4ff7d1f8431f06340b58785`
+
+- :ref:`exhale_variable_current_8c_1a9f1d52a09840d48e63e4eeddb756955f`
 
 - :ref:`exhale_variable_current_8c_1a281180d9321f9001e36846c34a3abd88`
 

@@ -109,17 +109,17 @@ Variables
 ---------
 
 
-- :ref:`exhale_variable_mainboard_2Src_2stm32f4xx__it_8c_1a22b804736f5648d52f639b2647d4ed13`
-
 - :ref:`exhale_variable_mainboard_2Src_2stm32f4xx__it_8c_1acd9221f1aa19aebfe0b744947f2daf49`
+
+- :ref:`exhale_variable_mainboard_2Src_2stm32f4xx__it_8c_1a984624bcf28d1b2fb7e4e18349f65d5c`
 
 - :ref:`exhale_variable_mainboard_2Src_2stm32f4xx__it_8c_1a1618d731d18d69e906e8a357b7cd3c8d`
 
 - :ref:`exhale_variable_mainboard_2Src_2stm32f4xx__it_8c_1ab77168d14df04ccca5d48612ee21ced8`
 
-- :ref:`exhale_variable_mainboard_2Src_2stm32f4xx__it_8c_1a1c126854bb1813d31ab4776b21dcc51f`
-
 - :ref:`exhale_variable_mainboard_2Src_2stm32f4xx__it_8c_1ad99dd74cc50b61cf07680c1adaf80337`
+
+- :ref:`exhale_variable_mainboard_2Src_2stm32f4xx__it_8c_1a348c49f75bc918736d17997ac3f02e82`
 
 - :ref:`exhale_variable_mainboard_2Src_2stm32f4xx__it_8c_1a2c80fd5510e2990a59a5c90d745c716c`
 

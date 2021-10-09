@@ -1,0 +1,13 @@
+.. _exhale_function_current_8c_1a8c9a34961c38ef46163f35f8038f28b9:
+
+Function current_start_measure()
+================================
+
+- Defined in :ref:`file_mainboard_Src_current.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: current_start_measure()

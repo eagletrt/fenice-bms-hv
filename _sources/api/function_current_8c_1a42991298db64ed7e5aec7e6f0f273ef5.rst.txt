@@ -1,0 +1,13 @@
+.. _exhale_function_current_8c_1a42991298db64ed7e5aec7e6f0f273ef5:
+
+Function current_read()
+=======================
+
+- Defined in :ref:`file_mainboard_Src_current.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: current_read()

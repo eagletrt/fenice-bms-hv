@@ -1,0 +1,13 @@
+.. _exhale_variable_current_8c_1a9f1d52a09840d48e63e4eeddb756955f:
+
+Variable adc_50
+===============
+
+- Defined in :ref:`file_mainboard_Src_current.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: adc_50

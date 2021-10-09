@@ -1,0 +1,13 @@
+.. _exhale_define_current_8c_1a0c5bf205f2c3ac62204feb12e1d57c65:
+
+Define MEASURE_SAMPLE_SIZE
+==========================
+
+- Defined in :ref:`file_mainboard_Src_current.c`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MEASURE_SAMPLE_SIZE

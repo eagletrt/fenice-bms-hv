@@ -1,0 +1,13 @@
+.. _exhale_variable_adc_8c_1a348c49f75bc918736d17997ac3f02e82:
+
+Variable hdma_adc3
+==================
+
+- Defined in :ref:`file_mainboard_Src_adc.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: hdma_adc3

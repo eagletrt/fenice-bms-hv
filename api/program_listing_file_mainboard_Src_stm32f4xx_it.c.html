@@ -111,10 +111,10 @@
 <span class="cm">/* USER CODE END 0 */</span>
 
 <span class="cm">/* External variables --------------------------------------------------------*/</span>
-<span class="k">extern</span> <span class="n">DMA_HandleTypeDef</span> <span class="n">hdma_adc1</span><span class="p">;</span>
 <span class="k">extern</span> <span class="n">DMA_HandleTypeDef</span> <span class="n">hdma_adc2</span><span class="p">;</span>
-<span class="k">extern</span> <span class="n">ADC_HandleTypeDef</span> <span class="n">hadc1</span><span class="p">;</span>
+<span class="k">extern</span> <span class="n">DMA_HandleTypeDef</span> <span class="n">hdma_adc3</span><span class="p">;</span>
 <span class="k">extern</span> <span class="n">ADC_HandleTypeDef</span> <span class="n">hadc2</span><span class="p">;</span>
+<span class="k">extern</span> <span class="n">ADC_HandleTypeDef</span> <span class="n">hadc3</span><span class="p">;</span>
 <span class="k">extern</span> <span class="n">CAN_HandleTypeDef</span> <span class="n">hcan1</span><span class="p">;</span>
 <span class="k">extern</span> <span class="n">CAN_HandleTypeDef</span> <span class="n">hcan2</span><span class="p">;</span>
 <span class="k">extern</span> <span class="n">TIM_HandleTypeDef</span> <span class="n">htim2</span><span class="p">;</span>
@@ -242,8 +242,8 @@
   <span class="cm">/* USER CODE BEGIN ADC_IRQn 0 */</span>
 
   <span class="cm">/* USER CODE END ADC_IRQn 0 */</span>
-  <span class="n">HAL_ADC_IRQHandler</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hadc1</span><span class="p">);</span>
   <span class="n">HAL_ADC_IRQHandler</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hadc2</span><span class="p">);</span>
+  <span class="n">HAL_ADC_IRQHandler</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hadc3</span><span class="p">);</span>
   <span class="cm">/* USER CODE BEGIN ADC_IRQn 1 */</span>
 
   <span class="cm">/* USER CODE END ADC_IRQn 1 */</span>
@@ -342,7 +342,7 @@
   <span class="cm">/* USER CODE BEGIN DMA2_Stream0_IRQn 0 */</span>
 
   <span class="cm">/* USER CODE END DMA2_Stream0_IRQn 0 */</span>
-  <span class="n">HAL_DMA_IRQHandler</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hdma_adc1</span><span class="p">);</span>
+  <span class="n">HAL_DMA_IRQHandler</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hdma_adc3</span><span class="p">);</span>
   <span class="cm">/* USER CODE BEGIN DMA2_Stream0_IRQn 1 */</span>
 
   <span class="cm">/* USER CODE END DMA2_Stream0_IRQn 1 */</span>

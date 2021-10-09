@@ -56,5 +56,7 @@ Functions
 ---------
 
 
+- :ref:`exhale_function_dma_8c_1af20a88180db1113be1e89266917d148b`
+
 - :ref:`exhale_function_dma_8c_1a323249dac769f9855c10b4ec9446b707`
 
