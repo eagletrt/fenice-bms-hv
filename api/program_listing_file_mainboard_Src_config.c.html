@@ -73,7 +73,7 @@
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;config.h&quot;</span><span class="cp"></span>
 
 <span class="cp">#include</span> <span class="cpf">&quot;error.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;fenice_config.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;mainboard_config.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;spi.h&quot;</span><span class="cp"></span>
 
 <span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
@@ -97,7 +97,7 @@
     <span class="p">(</span><span class="o">*</span><span class="n">config</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">dirty</span>   <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
 
     <span class="k">if</span> <span class="p">(</span><span class="n">eeprom</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">m95256_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">eeprom</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">spi_eeprom</span><span class="p">,</span> <span class="n">EEPROM_CS_GPIO_Port</span><span class="p">,</span> <span class="n">EEPROM_CS_Pin</span><span class="p">);</span>
+        <span class="n">m95256_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">eeprom</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">SPI_EEPROM</span><span class="p">,</span> <span class="n">EEPROM_CS_GPIO_Port</span><span class="p">,</span> <span class="n">EEPROM_CS_Pin</span><span class="p">);</span>
     <span class="p">}</span>
 
     <span class="k">if</span> <span class="p">(</span><span class="n">config_read</span><span class="p">(</span><span class="o">*</span><span class="n">config</span><span class="p">))</span> <span class="p">{</span>

@@ -14,7 +14,7 @@ Program Listing for File config.c
    #include "config.h"
    
    #include "error.h"
-   #include "fenice_config.h"
+   #include "mainboard_config.h"
    #include "spi.h"
    
    #include <stdlib.h>
@@ -38,7 +38,7 @@ Program Listing for File config.c
        (*config)->dirty   = false;
    
        if (eeprom == NULL) {
-           m95256_init(&eeprom, &spi_eeprom, EEPROM_CS_GPIO_Port, EEPROM_CS_Pin);
+           m95256_init(&eeprom, &SPI_EEPROM, EEPROM_CS_GPIO_Port, EEPROM_CS_Pin);
        }
    
        if (config_read(*config)) {
