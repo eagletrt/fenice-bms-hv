@@ -3850,11 +3850,6 @@ Defines
 .. toctree::
    :maxdepth: 5
 
-   define_current_8c_1a277dc742590fab8ab5b2d552f062f8ab.rst
-
-.. toctree::
-   :maxdepth: 5
-
    define_mainboard__config_8h_1a9f31035b77acd470741a7e2fe533f175.rst
 
 .. toctree::

@@ -79,8 +79,7 @@
 <span class="cp">#include</span> <span class="cpf">&quot;mainboard_config.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;string.h&quot;</span><span class="cp"></span>
 
-<span class="cp">#define ROLLING_AVERAGE_FACTOR 0.75f</span>
-<span class="cp">#define MEASURE_SAMPLE_SIZE    128</span>
+<span class="cp">#define MEASURE_SAMPLE_SIZE 128</span>
 
 <span class="kt">uint16_t</span> <span class="n">adc_50</span><span class="p">[</span><span class="n">MEASURE_SAMPLE_SIZE</span><span class="p">]</span>  <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
 <span class="kt">uint16_t</span> <span class="n">adc_300</span><span class="p">[</span><span class="n">MEASURE_SAMPLE_SIZE</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
@@ -118,17 +117,13 @@
     <span class="n">avg_50</span> <span class="o">/=</span> <span class="n">MEASURE_SAMPLE_SIZE</span><span class="p">;</span>
     <span class="n">avg_300</span> <span class="o">/=</span> <span class="n">MEASURE_SAMPLE_SIZE</span><span class="p">;</span>
 
-    <span class="c1">// Convert Hall-low (50A) and save rolling average</span>
+    <span class="c1">// Convert Hall-low (50A)</span>
     <span class="kt">float</span> <span class="n">volt</span>                 <span class="o">=</span> <span class="p">(</span><span class="n">avg_50</span> <span class="o">*</span> <span class="mf">3.3f</span><span class="p">)</span> <span class="o">/</span> <span class="mi">4095</span><span class="p">;</span>
-    <span class="n">current</span><span class="p">[</span><span class="n">CURRENT_SENSOR_50</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">ROLLING_AVERAGE_FACTOR</span> <span class="o">*</span> <span class="n">_current_convert_low</span><span class="p">(</span><span class="n">volt</span><span class="p">)</span> <span class="o">+</span>
-                                  <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">ROLLING_AVERAGE_FACTOR</span><span class="p">)</span> <span class="o">*</span> <span class="n">current</span><span class="p">[</span><span class="n">CURRENT_SENSOR_50</span><span class="p">])</span> <span class="o">-</span>
-                                 <span class="n">zero</span><span class="p">[</span><span class="n">CURRENT_SENSOR_50</span><span class="p">];</span>
+    <span class="n">current</span><span class="p">[</span><span class="n">CURRENT_SENSOR_50</span><span class="p">]</span> <span class="o">=</span> <span class="n">_current_convert_low</span><span class="p">(</span><span class="n">volt</span><span class="p">);</span>
 
-    <span class="c1">// Convert Hall-high (300A) and save rolling average</span>
+    <span class="c1">// Convert Hall-high (300A)</span>
     <span class="n">volt</span>                        <span class="o">=</span> <span class="p">(</span><span class="n">avg_300</span> <span class="o">*</span> <span class="mf">3.3f</span><span class="p">)</span> <span class="o">/</span> <span class="mi">4095</span><span class="p">;</span>
-    <span class="n">current</span><span class="p">[</span><span class="n">CURRENT_SENSOR_300</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">ROLLING_AVERAGE_FACTOR</span> <span class="o">*</span> <span class="n">_current_convert_high</span><span class="p">(</span><span class="n">volt</span><span class="p">)</span> <span class="o">+</span>
-                                   <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">ROLLING_AVERAGE_FACTOR</span><span class="p">)</span> <span class="o">*</span> <span class="n">current</span><span class="p">[</span><span class="n">CURRENT_SENSOR_300</span><span class="p">])</span> <span class="o">-</span>
-                                  <span class="n">zero</span><span class="p">[</span><span class="n">CURRENT_SENSOR_300</span><span class="p">];</span>
+    <span class="n">current</span><span class="p">[</span><span class="n">CURRENT_SENSOR_300</span><span class="p">]</span> <span class="o">=</span> <span class="n">_current_convert_high</span><span class="p">(</span><span class="n">volt</span><span class="p">);</span>
 
     <span class="c1">// Check for over-current</span>
     <span class="n">error_toggle_check</span><span class="p">(</span><span class="n">current_get_current</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">PACK_MAX_CURRENT</span><span class="p">,</span> <span class="n">ERROR_OVER_CURRENT</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
