@@ -59,6 +59,8 @@ Variables
 
 - :ref:`exhale_variable_error__list__ref_8c_1a63dceab7552c9b95fb8922f30d16b76c`
 
+- :ref:`exhale_variable_error__list__ref_8c_1a4d617028f6211ebd297dcda69c532ae1`
+
 - :ref:`exhale_variable_error__list__ref_8c_1a329d72a571ef83719aeaf63d78359a6a`
 
 - :ref:`exhale_variable_error__list__ref_8c_1a8af44e0ba60a74354ed515cdc9fae7f2`

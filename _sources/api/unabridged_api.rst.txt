@@ -2066,6 +2066,11 @@ Variables
 .. toctree::
    :maxdepth: 5
 
+   variable_error__list__ref_8c_1a4d617028f6211ebd297dcda69c532ae1.rst
+
+.. toctree::
+   :maxdepth: 5
+
    variable_error__list__ref_8c_1a329d72a571ef83719aeaf63d78359a6a.rst
 
 .. toctree::

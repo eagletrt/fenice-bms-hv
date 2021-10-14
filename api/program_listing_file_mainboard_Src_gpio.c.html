@@ -98,8 +98,7 @@
 
   <span class="cm">/*Configure GPIO pin Output Level */</span>
   <span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">GPIOC</span><span class="p">,</span> <span class="n">GPIO9_Pin</span><span class="o">|</span><span class="n">GPIO8_Pin</span><span class="o">|</span><span class="n">MUX_A3_Pin</span><span class="o">|</span><span class="n">EEPROM_CS_Pin</span>
-                          <span class="o">|</span><span class="n">EEPROM_HOLD_Pin</span><span class="o">|</span><span class="n">CARD_CS_Pin</span><span class="o">|</span><span class="n">BMS_FAULT_Pin</span><span class="o">|</span><span class="n">TS_ON_Pin</span>
-                          <span class="o">|</span><span class="n">AIRP_OFF_Pin</span><span class="p">,</span> <span class="n">GPIO_PIN_RESET</span><span class="p">);</span>
+                          <span class="o">|</span><span class="n">CARD_CS_Pin</span><span class="o">|</span><span class="n">BMS_FAULT_Pin</span><span class="o">|</span><span class="n">TS_ON_Pin</span><span class="o">|</span><span class="n">AIRP_OFF_Pin</span><span class="p">,</span> <span class="n">GPIO_PIN_RESET</span><span class="p">);</span>
 
   <span class="cm">/*Configure GPIO pin Output Level */</span>
   <span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">GPIOA</span><span class="p">,</span> <span class="n">GPIO7_Pin</span><span class="o">|</span><span class="n">MUX_A0_Pin</span><span class="o">|</span><span class="n">MUX_A1_Pin</span><span class="o">|</span><span class="n">MUX_A2_Pin</span>
@@ -108,6 +107,9 @@
   <span class="cm">/*Configure GPIO pin Output Level */</span>
   <span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">GPIOB</span><span class="p">,</span> <span class="n">ADC_SIN_Pin</span><span class="o">|</span><span class="n">GPIO5_Pin</span><span class="o">|</span><span class="n">GPIO4_Pin</span><span class="o">|</span><span class="n">GPIO1_Pin</span>
                           <span class="o">|</span><span class="n">GPIO3_Pin</span><span class="o">|</span><span class="n">LED2_Pin</span><span class="o">|</span><span class="n">LED1_Pin</span><span class="p">,</span> <span class="n">GPIO_PIN_RESET</span><span class="p">);</span>
+
+  <span class="cm">/*Configure GPIO pin Output Level */</span>
+  <span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">EEPROM_HOLD_GPIO_Port</span><span class="p">,</span> <span class="n">EEPROM_HOLD_Pin</span><span class="p">,</span> <span class="n">GPIO_PIN_SET</span><span class="p">);</span>
 
   <span class="cm">/*Configure GPIO pin Output Level */</span>
   <span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">AIRM_OFF_GPIO_Port</span><span class="p">,</span> <span class="n">AIRM_OFF_Pin</span><span class="p">,</span> <span class="n">GPIO_PIN_SET</span><span class="p">);</span>

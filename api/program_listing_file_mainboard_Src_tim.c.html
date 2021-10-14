@@ -84,240 +84,283 @@
 <span class="n">TIM_HandleTypeDef</span> <span class="n">htim4</span><span class="p">;</span>
 
 <span class="cm">/* TIM2 init function */</span>
-<span class="kt">void</span> <span class="nf">MX_TIM2_Init</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
-    <span class="cm">/* USER CODE BEGIN TIM2_Init 0 */</span>
+<span class="kt">void</span> <span class="nf">MX_TIM2_Init</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
 
-    <span class="cm">/* USER CODE END TIM2_Init 0 */</span>
+  <span class="cm">/* USER CODE BEGIN TIM2_Init 0 */</span>
 
-    <span class="n">TIM_ClockConfigTypeDef</span> <span class="n">sClockSourceConfig</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
-    <span class="n">TIM_MasterConfigTypeDef</span> <span class="n">sMasterConfig</span>     <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
-    <span class="n">TIM_OC_InitTypeDef</span> <span class="n">sConfigOC</span>              <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+  <span class="cm">/* USER CODE END TIM2_Init 0 */</span>
 
-    <span class="cm">/* USER CODE BEGIN TIM2_Init 1 */</span>
+  <span class="n">TIM_ClockConfigTypeDef</span> <span class="n">sClockSourceConfig</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+  <span class="n">TIM_MasterConfigTypeDef</span> <span class="n">sMasterConfig</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+  <span class="n">TIM_OC_InitTypeDef</span> <span class="n">sConfigOC</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
 
-    <span class="cm">/* USER CODE END TIM2_Init 1 */</span>
-    <span class="n">htim2</span><span class="p">.</span><span class="n">Instance</span>               <span class="o">=</span> <span class="n">TIM2</span><span class="p">;</span>
-    <span class="n">htim2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Prescaler</span>         <span class="o">=</span> <span class="mi">8999</span><span class="p">;</span>
-    <span class="n">htim2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">CounterMode</span>       <span class="o">=</span> <span class="n">TIM_COUNTERMODE_UP</span><span class="p">;</span>
-    <span class="n">htim2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Period</span>            <span class="o">=</span> <span class="mh">0xFFFFFFFF</span><span class="p">;</span>
-    <span class="n">htim2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">ClockDivision</span>     <span class="o">=</span> <span class="n">TIM_CLOCKDIVISION_DIV1</span><span class="p">;</span>
-    <span class="n">htim2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">AutoReloadPreload</span> <span class="o">=</span> <span class="n">TIM_AUTORELOAD_PRELOAD_DISABLE</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_Base_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim2</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Error_Handler</span><span class="p">();</span>
-    <span class="p">}</span>
-    <span class="n">sClockSourceConfig</span><span class="p">.</span><span class="n">ClockSource</span> <span class="o">=</span> <span class="n">TIM_CLOCKSOURCE_INTERNAL</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_ConfigClockSource</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sClockSourceConfig</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Error_Handler</span><span class="p">();</span>
-    <span class="p">}</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_OC_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim2</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Error_Handler</span><span class="p">();</span>
-    <span class="p">}</span>
-    <span class="n">sMasterConfig</span><span class="p">.</span><span class="n">MasterOutputTrigger</span> <span class="o">=</span> <span class="n">TIM_TRGO_RESET</span><span class="p">;</span>
-    <span class="n">sMasterConfig</span><span class="p">.</span><span class="n">MasterSlaveMode</span>     <span class="o">=</span> <span class="n">TIM_MASTERSLAVEMODE_DISABLE</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIMEx_MasterConfigSynchronization</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sMasterConfig</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Error_Handler</span><span class="p">();</span>
-    <span class="p">}</span>
-    <span class="n">sConfigOC</span><span class="p">.</span><span class="n">OCMode</span>     <span class="o">=</span> <span class="n">TIM_OCMODE_TIMING</span><span class="p">;</span>
-    <span class="n">sConfigOC</span><span class="p">.</span><span class="n">Pulse</span>      <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span>
-    <span class="n">sConfigOC</span><span class="p">.</span><span class="n">OCPolarity</span> <span class="o">=</span> <span class="n">TIM_OCPOLARITY_HIGH</span><span class="p">;</span>
-    <span class="n">sConfigOC</span><span class="p">.</span><span class="n">OCFastMode</span> <span class="o">=</span> <span class="n">TIM_OCFAST_DISABLE</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_OC_ConfigChannel</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sConfigOC</span><span class="p">,</span> <span class="n">TIM_CHANNEL_1</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Error_Handler</span><span class="p">();</span>
-    <span class="p">}</span>
-    <span class="n">sConfigOC</span><span class="p">.</span><span class="n">Pulse</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_OC_ConfigChannel</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sConfigOC</span><span class="p">,</span> <span class="n">TIM_CHANNEL_2</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Error_Handler</span><span class="p">();</span>
-    <span class="p">}</span>
-    <span class="n">sConfigOC</span><span class="p">.</span><span class="n">Pulse</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_OC_ConfigChannel</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sConfigOC</span><span class="p">,</span> <span class="n">TIM_CHANNEL_3</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Error_Handler</span><span class="p">();</span>
-    <span class="p">}</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_OC_ConfigChannel</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sConfigOC</span><span class="p">,</span> <span class="n">TIM_CHANNEL_4</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Error_Handler</span><span class="p">();</span>
-    <span class="p">}</span>
-    <span class="cm">/* USER CODE BEGIN TIM2_Init 2 */</span>
+  <span class="cm">/* USER CODE BEGIN TIM2_Init 1 */</span>
 
-    <span class="cm">/* USER CODE END TIM2_Init 2 */</span>
+  <span class="cm">/* USER CODE END TIM2_Init 1 */</span>
+  <span class="n">htim2</span><span class="p">.</span><span class="n">Instance</span> <span class="o">=</span> <span class="n">TIM2</span><span class="p">;</span>
+  <span class="n">htim2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Prescaler</span> <span class="o">=</span> <span class="mi">8999</span><span class="p">;</span>
+  <span class="n">htim2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">CounterMode</span> <span class="o">=</span> <span class="n">TIM_COUNTERMODE_UP</span><span class="p">;</span>
+  <span class="n">htim2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Period</span> <span class="o">=</span> <span class="mh">0xFFFFFFFF</span><span class="p">;</span>
+  <span class="n">htim2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">ClockDivision</span> <span class="o">=</span> <span class="n">TIM_CLOCKDIVISION_DIV1</span><span class="p">;</span>
+  <span class="n">htim2</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">AutoReloadPreload</span> <span class="o">=</span> <span class="n">TIM_AUTORELOAD_PRELOAD_DISABLE</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_Base_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim2</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">Error_Handler</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="n">sClockSourceConfig</span><span class="p">.</span><span class="n">ClockSource</span> <span class="o">=</span> <span class="n">TIM_CLOCKSOURCE_INTERNAL</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_ConfigClockSource</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sClockSourceConfig</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">Error_Handler</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_OC_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim2</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">Error_Handler</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="n">sMasterConfig</span><span class="p">.</span><span class="n">MasterOutputTrigger</span> <span class="o">=</span> <span class="n">TIM_TRGO_RESET</span><span class="p">;</span>
+  <span class="n">sMasterConfig</span><span class="p">.</span><span class="n">MasterSlaveMode</span> <span class="o">=</span> <span class="n">TIM_MASTERSLAVEMODE_DISABLE</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIMEx_MasterConfigSynchronization</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sMasterConfig</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">Error_Handler</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="n">sConfigOC</span><span class="p">.</span><span class="n">OCMode</span> <span class="o">=</span> <span class="n">TIM_OCMODE_TIMING</span><span class="p">;</span>
+  <span class="n">sConfigOC</span><span class="p">.</span><span class="n">Pulse</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span>
+  <span class="n">sConfigOC</span><span class="p">.</span><span class="n">OCPolarity</span> <span class="o">=</span> <span class="n">TIM_OCPOLARITY_HIGH</span><span class="p">;</span>
+  <span class="n">sConfigOC</span><span class="p">.</span><span class="n">OCFastMode</span> <span class="o">=</span> <span class="n">TIM_OCFAST_DISABLE</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_OC_ConfigChannel</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sConfigOC</span><span class="p">,</span> <span class="n">TIM_CHANNEL_1</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">Error_Handler</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="n">sConfigOC</span><span class="p">.</span><span class="n">Pulse</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_OC_ConfigChannel</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sConfigOC</span><span class="p">,</span> <span class="n">TIM_CHANNEL_2</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">Error_Handler</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="n">sConfigOC</span><span class="p">.</span><span class="n">Pulse</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_OC_ConfigChannel</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sConfigOC</span><span class="p">,</span> <span class="n">TIM_CHANNEL_3</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">Error_Handler</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_OC_ConfigChannel</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sConfigOC</span><span class="p">,</span> <span class="n">TIM_CHANNEL_4</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">Error_Handler</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="cm">/* USER CODE BEGIN TIM2_Init 2 */</span>
+
+  <span class="cm">/* USER CODE END TIM2_Init 2 */</span>
+
 <span class="p">}</span>
 <span class="cm">/* TIM3 init function */</span>
-<span class="kt">void</span> <span class="nf">MX_TIM3_Init</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
-    <span class="cm">/* USER CODE BEGIN TIM3_Init 0 */</span>
+<span class="kt">void</span> <span class="nf">MX_TIM3_Init</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
 
-    <span class="cm">/* USER CODE END TIM3_Init 0 */</span>
+  <span class="cm">/* USER CODE BEGIN TIM3_Init 0 */</span>
 
-    <span class="n">TIM_ClockConfigTypeDef</span> <span class="n">sClockSourceConfig</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
-    <span class="n">TIM_MasterConfigTypeDef</span> <span class="n">sMasterConfig</span>     <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
-    <span class="n">TIM_OC_InitTypeDef</span> <span class="n">sConfigOC</span>              <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+  <span class="cm">/* USER CODE END TIM3_Init 0 */</span>
 
-    <span class="cm">/* USER CODE BEGIN TIM3_Init 1 */</span>
+  <span class="n">TIM_ClockConfigTypeDef</span> <span class="n">sClockSourceConfig</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+  <span class="n">TIM_MasterConfigTypeDef</span> <span class="n">sMasterConfig</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+  <span class="n">TIM_OC_InitTypeDef</span> <span class="n">sConfigOC</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
 
-    <span class="cm">/* USER CODE END TIM3_Init 1 */</span>
-    <span class="n">htim3</span><span class="p">.</span><span class="n">Instance</span>               <span class="o">=</span> <span class="n">TIM3</span><span class="p">;</span>
-    <span class="n">htim3</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Prescaler</span>         <span class="o">=</span> <span class="mi">8999</span><span class="p">;</span>
-    <span class="n">htim3</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">CounterMode</span>       <span class="o">=</span> <span class="n">TIM_COUNTERMODE_UP</span><span class="p">;</span>
-    <span class="n">htim3</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Period</span>            <span class="o">=</span> <span class="mi">65535</span><span class="p">;</span>
-    <span class="n">htim3</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">ClockDivision</span>     <span class="o">=</span> <span class="n">TIM_CLOCKDIVISION_DIV1</span><span class="p">;</span>
-    <span class="n">htim3</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">AutoReloadPreload</span> <span class="o">=</span> <span class="n">TIM_AUTORELOAD_PRELOAD_DISABLE</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_Base_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim3</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Error_Handler</span><span class="p">();</span>
-    <span class="p">}</span>
-    <span class="n">sClockSourceConfig</span><span class="p">.</span><span class="n">ClockSource</span> <span class="o">=</span> <span class="n">TIM_CLOCKSOURCE_INTERNAL</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_ConfigClockSource</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim3</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sClockSourceConfig</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Error_Handler</span><span class="p">();</span>
-    <span class="p">}</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_OC_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim3</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Error_Handler</span><span class="p">();</span>
-    <span class="p">}</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_OnePulse_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim3</span><span class="p">,</span> <span class="n">TIM_OPMODE_SINGLE</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Error_Handler</span><span class="p">();</span>
-    <span class="p">}</span>
-    <span class="n">sMasterConfig</span><span class="p">.</span><span class="n">MasterOutputTrigger</span> <span class="o">=</span> <span class="n">TIM_TRGO_RESET</span><span class="p">;</span>
-    <span class="n">sMasterConfig</span><span class="p">.</span><span class="n">MasterSlaveMode</span>     <span class="o">=</span> <span class="n">TIM_MASTERSLAVEMODE_DISABLE</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIMEx_MasterConfigSynchronization</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim3</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sMasterConfig</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Error_Handler</span><span class="p">();</span>
-    <span class="p">}</span>
-    <span class="n">sConfigOC</span><span class="p">.</span><span class="n">OCMode</span>     <span class="o">=</span> <span class="n">TIM_OCMODE_TIMING</span><span class="p">;</span>
-    <span class="n">sConfigOC</span><span class="p">.</span><span class="n">Pulse</span>      <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span>
-    <span class="n">sConfigOC</span><span class="p">.</span><span class="n">OCPolarity</span> <span class="o">=</span> <span class="n">TIM_OCPOLARITY_HIGH</span><span class="p">;</span>
-    <span class="n">sConfigOC</span><span class="p">.</span><span class="n">OCFastMode</span> <span class="o">=</span> <span class="n">TIM_OCFAST_DISABLE</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_OC_ConfigChannel</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim3</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sConfigOC</span><span class="p">,</span> <span class="n">TIM_CHANNEL_1</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Error_Handler</span><span class="p">();</span>
-    <span class="p">}</span>
-    <span class="cm">/* USER CODE BEGIN TIM3_Init 2 */</span>
+  <span class="cm">/* USER CODE BEGIN TIM3_Init 1 */</span>
 
-    <span class="cm">/* USER CODE END TIM3_Init 2 */</span>
+  <span class="cm">/* USER CODE END TIM3_Init 1 */</span>
+  <span class="n">htim3</span><span class="p">.</span><span class="n">Instance</span> <span class="o">=</span> <span class="n">TIM3</span><span class="p">;</span>
+  <span class="n">htim3</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Prescaler</span> <span class="o">=</span> <span class="mi">8999</span><span class="p">;</span>
+  <span class="n">htim3</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">CounterMode</span> <span class="o">=</span> <span class="n">TIM_COUNTERMODE_UP</span><span class="p">;</span>
+  <span class="n">htim3</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Period</span> <span class="o">=</span> <span class="mi">65535</span><span class="p">;</span>
+  <span class="n">htim3</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">ClockDivision</span> <span class="o">=</span> <span class="n">TIM_CLOCKDIVISION_DIV1</span><span class="p">;</span>
+  <span class="n">htim3</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">AutoReloadPreload</span> <span class="o">=</span> <span class="n">TIM_AUTORELOAD_PRELOAD_DISABLE</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_Base_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim3</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">Error_Handler</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="n">sClockSourceConfig</span><span class="p">.</span><span class="n">ClockSource</span> <span class="o">=</span> <span class="n">TIM_CLOCKSOURCE_INTERNAL</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_ConfigClockSource</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim3</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sClockSourceConfig</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">Error_Handler</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_OC_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim3</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">Error_Handler</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_OnePulse_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim3</span><span class="p">,</span> <span class="n">TIM_OPMODE_SINGLE</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">Error_Handler</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="n">sMasterConfig</span><span class="p">.</span><span class="n">MasterOutputTrigger</span> <span class="o">=</span> <span class="n">TIM_TRGO_RESET</span><span class="p">;</span>
+  <span class="n">sMasterConfig</span><span class="p">.</span><span class="n">MasterSlaveMode</span> <span class="o">=</span> <span class="n">TIM_MASTERSLAVEMODE_DISABLE</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIMEx_MasterConfigSynchronization</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim3</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sMasterConfig</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">Error_Handler</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="n">sConfigOC</span><span class="p">.</span><span class="n">OCMode</span> <span class="o">=</span> <span class="n">TIM_OCMODE_TIMING</span><span class="p">;</span>
+  <span class="n">sConfigOC</span><span class="p">.</span><span class="n">Pulse</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span>
+  <span class="n">sConfigOC</span><span class="p">.</span><span class="n">OCPolarity</span> <span class="o">=</span> <span class="n">TIM_OCPOLARITY_HIGH</span><span class="p">;</span>
+  <span class="n">sConfigOC</span><span class="p">.</span><span class="n">OCFastMode</span> <span class="o">=</span> <span class="n">TIM_OCFAST_DISABLE</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_OC_ConfigChannel</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim3</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sConfigOC</span><span class="p">,</span> <span class="n">TIM_CHANNEL_1</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">Error_Handler</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="cm">/* USER CODE BEGIN TIM3_Init 2 */</span>
+
+  <span class="cm">/* USER CODE END TIM3_Init 2 */</span>
+
 <span class="p">}</span>
 <span class="cm">/* TIM4 init function */</span>
-<span class="kt">void</span> <span class="nf">MX_TIM4_Init</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
-    <span class="cm">/* USER CODE BEGIN TIM4_Init 0 */</span>
+<span class="kt">void</span> <span class="nf">MX_TIM4_Init</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
 
-    <span class="cm">/* USER CODE END TIM4_Init 0 */</span>
+  <span class="cm">/* USER CODE BEGIN TIM4_Init 0 */</span>
 
-    <span class="n">TIM_ClockConfigTypeDef</span> <span class="n">sClockSourceConfig</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
-    <span class="n">TIM_MasterConfigTypeDef</span> <span class="n">sMasterConfig</span>     <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
-    <span class="n">TIM_OC_InitTypeDef</span> <span class="n">sConfigOC</span>              <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+  <span class="cm">/* USER CODE END TIM4_Init 0 */</span>
 
-    <span class="cm">/* USER CODE BEGIN TIM4_Init 1 */</span>
+  <span class="n">TIM_ClockConfigTypeDef</span> <span class="n">sClockSourceConfig</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+  <span class="n">TIM_MasterConfigTypeDef</span> <span class="n">sMasterConfig</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+  <span class="n">TIM_OC_InitTypeDef</span> <span class="n">sConfigOC</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
 
-    <span class="cm">/* USER CODE END TIM4_Init 1 */</span>
-    <span class="n">htim4</span><span class="p">.</span><span class="n">Instance</span>               <span class="o">=</span> <span class="n">TIM4</span><span class="p">;</span>
-    <span class="n">htim4</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Prescaler</span>         <span class="o">=</span> <span class="mi">8999</span><span class="p">;</span>
-    <span class="n">htim4</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">CounterMode</span>       <span class="o">=</span> <span class="n">TIM_COUNTERMODE_UP</span><span class="p">;</span>
-    <span class="n">htim4</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Period</span>            <span class="o">=</span> <span class="mi">65535</span><span class="p">;</span>
-    <span class="n">htim4</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">ClockDivision</span>     <span class="o">=</span> <span class="n">TIM_CLOCKDIVISION_DIV1</span><span class="p">;</span>
-    <span class="n">htim4</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">AutoReloadPreload</span> <span class="o">=</span> <span class="n">TIM_AUTORELOAD_PRELOAD_DISABLE</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_Base_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim4</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Error_Handler</span><span class="p">();</span>
-    <span class="p">}</span>
-    <span class="n">sClockSourceConfig</span><span class="p">.</span><span class="n">ClockSource</span> <span class="o">=</span> <span class="n">TIM_CLOCKSOURCE_INTERNAL</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_ConfigClockSource</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim4</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sClockSourceConfig</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Error_Handler</span><span class="p">();</span>
-    <span class="p">}</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_OC_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim4</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Error_Handler</span><span class="p">();</span>
-    <span class="p">}</span>
-    <span class="n">sMasterConfig</span><span class="p">.</span><span class="n">MasterOutputTrigger</span> <span class="o">=</span> <span class="n">TIM_TRGO_RESET</span><span class="p">;</span>
-    <span class="n">sMasterConfig</span><span class="p">.</span><span class="n">MasterSlaveMode</span>     <span class="o">=</span> <span class="n">TIM_MASTERSLAVEMODE_DISABLE</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIMEx_MasterConfigSynchronization</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim4</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sMasterConfig</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Error_Handler</span><span class="p">();</span>
-    <span class="p">}</span>
-    <span class="n">sConfigOC</span><span class="p">.</span><span class="n">OCMode</span>     <span class="o">=</span> <span class="n">TIM_OCMODE_TIMING</span><span class="p">;</span>
-    <span class="n">sConfigOC</span><span class="p">.</span><span class="n">Pulse</span>      <span class="o">=</span> <span class="mi">200</span><span class="p">;</span>
-    <span class="n">sConfigOC</span><span class="p">.</span><span class="n">OCPolarity</span> <span class="o">=</span> <span class="n">TIM_OCPOLARITY_HIGH</span><span class="p">;</span>
-    <span class="n">sConfigOC</span><span class="p">.</span><span class="n">OCFastMode</span> <span class="o">=</span> <span class="n">TIM_OCFAST_DISABLE</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_OC_ConfigChannel</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim4</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sConfigOC</span><span class="p">,</span> <span class="n">TIM_CHANNEL_1</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Error_Handler</span><span class="p">();</span>
-    <span class="p">}</span>
-    <span class="n">sConfigOC</span><span class="p">.</span><span class="n">Pulse</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_OC_ConfigChannel</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim4</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sConfigOC</span><span class="p">,</span> <span class="n">TIM_CHANNEL_2</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Error_Handler</span><span class="p">();</span>
-    <span class="p">}</span>
-    <span class="cm">/* USER CODE BEGIN TIM4_Init 2 */</span>
+  <span class="cm">/* USER CODE BEGIN TIM4_Init 1 */</span>
 
-    <span class="cm">/* USER CODE END TIM4_Init 2 */</span>
+  <span class="cm">/* USER CODE END TIM4_Init 1 */</span>
+  <span class="n">htim4</span><span class="p">.</span><span class="n">Instance</span> <span class="o">=</span> <span class="n">TIM4</span><span class="p">;</span>
+  <span class="n">htim4</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Prescaler</span> <span class="o">=</span> <span class="mi">8999</span><span class="p">;</span>
+  <span class="n">htim4</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">CounterMode</span> <span class="o">=</span> <span class="n">TIM_COUNTERMODE_UP</span><span class="p">;</span>
+  <span class="n">htim4</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">Period</span> <span class="o">=</span> <span class="mi">65535</span><span class="p">;</span>
+  <span class="n">htim4</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">ClockDivision</span> <span class="o">=</span> <span class="n">TIM_CLOCKDIVISION_DIV1</span><span class="p">;</span>
+  <span class="n">htim4</span><span class="p">.</span><span class="n">Init</span><span class="p">.</span><span class="n">AutoReloadPreload</span> <span class="o">=</span> <span class="n">TIM_AUTORELOAD_PRELOAD_DISABLE</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_Base_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim4</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">Error_Handler</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="n">sClockSourceConfig</span><span class="p">.</span><span class="n">ClockSource</span> <span class="o">=</span> <span class="n">TIM_CLOCKSOURCE_INTERNAL</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_ConfigClockSource</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim4</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sClockSourceConfig</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">Error_Handler</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_OC_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim4</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">Error_Handler</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="n">sMasterConfig</span><span class="p">.</span><span class="n">MasterOutputTrigger</span> <span class="o">=</span> <span class="n">TIM_TRGO_RESET</span><span class="p">;</span>
+  <span class="n">sMasterConfig</span><span class="p">.</span><span class="n">MasterSlaveMode</span> <span class="o">=</span> <span class="n">TIM_MASTERSLAVEMODE_DISABLE</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIMEx_MasterConfigSynchronization</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim4</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sMasterConfig</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">Error_Handler</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="n">sConfigOC</span><span class="p">.</span><span class="n">OCMode</span> <span class="o">=</span> <span class="n">TIM_OCMODE_TIMING</span><span class="p">;</span>
+  <span class="n">sConfigOC</span><span class="p">.</span><span class="n">Pulse</span> <span class="o">=</span> <span class="mi">200</span><span class="p">;</span>
+  <span class="n">sConfigOC</span><span class="p">.</span><span class="n">OCPolarity</span> <span class="o">=</span> <span class="n">TIM_OCPOLARITY_HIGH</span><span class="p">;</span>
+  <span class="n">sConfigOC</span><span class="p">.</span><span class="n">OCFastMode</span> <span class="o">=</span> <span class="n">TIM_OCFAST_DISABLE</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_OC_ConfigChannel</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim4</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sConfigOC</span><span class="p">,</span> <span class="n">TIM_CHANNEL_1</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">Error_Handler</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="n">sConfigOC</span><span class="p">.</span><span class="n">Pulse</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">HAL_TIM_OC_ConfigChannel</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim4</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sConfigOC</span><span class="p">,</span> <span class="n">TIM_CHANNEL_2</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">Error_Handler</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="cm">/* USER CODE BEGIN TIM4_Init 2 */</span>
+
+  <span class="cm">/* USER CODE END TIM4_Init 2 */</span>
+
 <span class="p">}</span>
 
-<span class="kt">void</span> <span class="nf">HAL_TIM_Base_MspInit</span><span class="p">(</span><span class="n">TIM_HandleTypeDef</span> <span class="o">*</span><span class="n">tim_baseHandle</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">tim_baseHandle</span><span class="o">-&gt;</span><span class="n">Instance</span> <span class="o">==</span> <span class="n">TIM2</span><span class="p">)</span> <span class="p">{</span>
-        <span class="cm">/* USER CODE BEGIN TIM2_MspInit 0 */</span>
+<span class="kt">void</span> <span class="nf">HAL_TIM_Base_MspInit</span><span class="p">(</span><span class="n">TIM_HandleTypeDef</span><span class="o">*</span> <span class="n">tim_baseHandle</span><span class="p">)</span>
+<span class="p">{</span>
 
-        <span class="cm">/* USER CODE END TIM2_MspInit 0 */</span>
-        <span class="cm">/* TIM2 clock enable */</span>
-        <span class="n">__HAL_RCC_TIM2_CLK_ENABLE</span><span class="p">();</span>
+  <span class="k">if</span><span class="p">(</span><span class="n">tim_baseHandle</span><span class="o">-&gt;</span><span class="n">Instance</span><span class="o">==</span><span class="n">TIM2</span><span class="p">)</span>
+  <span class="p">{</span>
+  <span class="cm">/* USER CODE BEGIN TIM2_MspInit 0 */</span>
 
-        <span class="cm">/* TIM2 interrupt Init */</span>
-        <span class="n">HAL_NVIC_SetPriority</span><span class="p">(</span><span class="n">TIM2_IRQn</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-        <span class="n">HAL_NVIC_EnableIRQ</span><span class="p">(</span><span class="n">TIM2_IRQn</span><span class="p">);</span>
-        <span class="cm">/* USER CODE BEGIN TIM2_MspInit 1 */</span>
+  <span class="cm">/* USER CODE END TIM2_MspInit 0 */</span>
+    <span class="cm">/* TIM2 clock enable */</span>
+    <span class="n">__HAL_RCC_TIM2_CLK_ENABLE</span><span class="p">();</span>
 
-        <span class="cm">/* USER CODE END TIM2_MspInit 1 */</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">tim_baseHandle</span><span class="o">-&gt;</span><span class="n">Instance</span> <span class="o">==</span> <span class="n">TIM3</span><span class="p">)</span> <span class="p">{</span>
-        <span class="cm">/* USER CODE BEGIN TIM3_MspInit 0 */</span>
+    <span class="cm">/* TIM2 interrupt Init */</span>
+    <span class="n">HAL_NVIC_SetPriority</span><span class="p">(</span><span class="n">TIM2_IRQn</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="n">HAL_NVIC_EnableIRQ</span><span class="p">(</span><span class="n">TIM2_IRQn</span><span class="p">);</span>
+  <span class="cm">/* USER CODE BEGIN TIM2_MspInit 1 */</span>
 
-        <span class="cm">/* USER CODE END TIM3_MspInit 0 */</span>
-        <span class="cm">/* TIM3 clock enable */</span>
-        <span class="n">__HAL_RCC_TIM3_CLK_ENABLE</span><span class="p">();</span>
+  <span class="cm">/* USER CODE END TIM2_MspInit 1 */</span>
+  <span class="p">}</span>
+  <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">tim_baseHandle</span><span class="o">-&gt;</span><span class="n">Instance</span><span class="o">==</span><span class="n">TIM3</span><span class="p">)</span>
+  <span class="p">{</span>
+  <span class="cm">/* USER CODE BEGIN TIM3_MspInit 0 */</span>
 
-        <span class="cm">/* TIM3 interrupt Init */</span>
-        <span class="n">HAL_NVIC_SetPriority</span><span class="p">(</span><span class="n">TIM3_IRQn</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-        <span class="n">HAL_NVIC_EnableIRQ</span><span class="p">(</span><span class="n">TIM3_IRQn</span><span class="p">);</span>
-        <span class="cm">/* USER CODE BEGIN TIM3_MspInit 1 */</span>
+  <span class="cm">/* USER CODE END TIM3_MspInit 0 */</span>
+    <span class="cm">/* TIM3 clock enable */</span>
+    <span class="n">__HAL_RCC_TIM3_CLK_ENABLE</span><span class="p">();</span>
 
-        <span class="cm">/* USER CODE END TIM3_MspInit 1 */</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">tim_baseHandle</span><span class="o">-&gt;</span><span class="n">Instance</span> <span class="o">==</span> <span class="n">TIM4</span><span class="p">)</span> <span class="p">{</span>
-        <span class="cm">/* USER CODE BEGIN TIM4_MspInit 0 */</span>
+    <span class="cm">/* TIM3 interrupt Init */</span>
+    <span class="n">HAL_NVIC_SetPriority</span><span class="p">(</span><span class="n">TIM3_IRQn</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="n">HAL_NVIC_EnableIRQ</span><span class="p">(</span><span class="n">TIM3_IRQn</span><span class="p">);</span>
+  <span class="cm">/* USER CODE BEGIN TIM3_MspInit 1 */</span>
 
-        <span class="cm">/* USER CODE END TIM4_MspInit 0 */</span>
-        <span class="cm">/* TIM4 clock enable */</span>
-        <span class="n">__HAL_RCC_TIM4_CLK_ENABLE</span><span class="p">();</span>
+  <span class="cm">/* USER CODE END TIM3_MspInit 1 */</span>
+  <span class="p">}</span>
+  <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">tim_baseHandle</span><span class="o">-&gt;</span><span class="n">Instance</span><span class="o">==</span><span class="n">TIM4</span><span class="p">)</span>
+  <span class="p">{</span>
+  <span class="cm">/* USER CODE BEGIN TIM4_MspInit 0 */</span>
 
-        <span class="cm">/* TIM4 interrupt Init */</span>
-        <span class="n">HAL_NVIC_SetPriority</span><span class="p">(</span><span class="n">TIM4_IRQn</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-        <span class="n">HAL_NVIC_EnableIRQ</span><span class="p">(</span><span class="n">TIM4_IRQn</span><span class="p">);</span>
-        <span class="cm">/* USER CODE BEGIN TIM4_MspInit 1 */</span>
+  <span class="cm">/* USER CODE END TIM4_MspInit 0 */</span>
+    <span class="cm">/* TIM4 clock enable */</span>
+    <span class="n">__HAL_RCC_TIM4_CLK_ENABLE</span><span class="p">();</span>
 
-        <span class="cm">/* USER CODE END TIM4_MspInit 1 */</span>
-    <span class="p">}</span>
+    <span class="cm">/* TIM4 interrupt Init */</span>
+    <span class="n">HAL_NVIC_SetPriority</span><span class="p">(</span><span class="n">TIM4_IRQn</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="n">HAL_NVIC_EnableIRQ</span><span class="p">(</span><span class="n">TIM4_IRQn</span><span class="p">);</span>
+  <span class="cm">/* USER CODE BEGIN TIM4_MspInit 1 */</span>
+
+  <span class="cm">/* USER CODE END TIM4_MspInit 1 */</span>
+  <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="kt">void</span> <span class="nf">HAL_TIM_Base_MspDeInit</span><span class="p">(</span><span class="n">TIM_HandleTypeDef</span> <span class="o">*</span><span class="n">tim_baseHandle</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">tim_baseHandle</span><span class="o">-&gt;</span><span class="n">Instance</span> <span class="o">==</span> <span class="n">TIM2</span><span class="p">)</span> <span class="p">{</span>
-        <span class="cm">/* USER CODE BEGIN TIM2_MspDeInit 0 */</span>
+<span class="kt">void</span> <span class="nf">HAL_TIM_Base_MspDeInit</span><span class="p">(</span><span class="n">TIM_HandleTypeDef</span><span class="o">*</span> <span class="n">tim_baseHandle</span><span class="p">)</span>
+<span class="p">{</span>
 
-        <span class="cm">/* USER CODE END TIM2_MspDeInit 0 */</span>
-        <span class="cm">/* Peripheral clock disable */</span>
-        <span class="n">__HAL_RCC_TIM2_CLK_DISABLE</span><span class="p">();</span>
+  <span class="k">if</span><span class="p">(</span><span class="n">tim_baseHandle</span><span class="o">-&gt;</span><span class="n">Instance</span><span class="o">==</span><span class="n">TIM2</span><span class="p">)</span>
+  <span class="p">{</span>
+  <span class="cm">/* USER CODE BEGIN TIM2_MspDeInit 0 */</span>
 
-        <span class="cm">/* TIM2 interrupt Deinit */</span>
-        <span class="n">HAL_NVIC_DisableIRQ</span><span class="p">(</span><span class="n">TIM2_IRQn</span><span class="p">);</span>
-        <span class="cm">/* USER CODE BEGIN TIM2_MspDeInit 1 */</span>
+  <span class="cm">/* USER CODE END TIM2_MspDeInit 0 */</span>
+    <span class="cm">/* Peripheral clock disable */</span>
+    <span class="n">__HAL_RCC_TIM2_CLK_DISABLE</span><span class="p">();</span>
 
-        <span class="cm">/* USER CODE END TIM2_MspDeInit 1 */</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">tim_baseHandle</span><span class="o">-&gt;</span><span class="n">Instance</span> <span class="o">==</span> <span class="n">TIM3</span><span class="p">)</span> <span class="p">{</span>
-        <span class="cm">/* USER CODE BEGIN TIM3_MspDeInit 0 */</span>
+    <span class="cm">/* TIM2 interrupt Deinit */</span>
+    <span class="n">HAL_NVIC_DisableIRQ</span><span class="p">(</span><span class="n">TIM2_IRQn</span><span class="p">);</span>
+  <span class="cm">/* USER CODE BEGIN TIM2_MspDeInit 1 */</span>
 
-        <span class="cm">/* USER CODE END TIM3_MspDeInit 0 */</span>
-        <span class="cm">/* Peripheral clock disable */</span>
-        <span class="n">__HAL_RCC_TIM3_CLK_DISABLE</span><span class="p">();</span>
+  <span class="cm">/* USER CODE END TIM2_MspDeInit 1 */</span>
+  <span class="p">}</span>
+  <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">tim_baseHandle</span><span class="o">-&gt;</span><span class="n">Instance</span><span class="o">==</span><span class="n">TIM3</span><span class="p">)</span>
+  <span class="p">{</span>
+  <span class="cm">/* USER CODE BEGIN TIM3_MspDeInit 0 */</span>
 
-        <span class="cm">/* TIM3 interrupt Deinit */</span>
-        <span class="n">HAL_NVIC_DisableIRQ</span><span class="p">(</span><span class="n">TIM3_IRQn</span><span class="p">);</span>
-        <span class="cm">/* USER CODE BEGIN TIM3_MspDeInit 1 */</span>
+  <span class="cm">/* USER CODE END TIM3_MspDeInit 0 */</span>
+    <span class="cm">/* Peripheral clock disable */</span>
+    <span class="n">__HAL_RCC_TIM3_CLK_DISABLE</span><span class="p">();</span>
 
-        <span class="cm">/* USER CODE END TIM3_MspDeInit 1 */</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">tim_baseHandle</span><span class="o">-&gt;</span><span class="n">Instance</span> <span class="o">==</span> <span class="n">TIM4</span><span class="p">)</span> <span class="p">{</span>
-        <span class="cm">/* USER CODE BEGIN TIM4_MspDeInit 0 */</span>
+    <span class="cm">/* TIM3 interrupt Deinit */</span>
+    <span class="n">HAL_NVIC_DisableIRQ</span><span class="p">(</span><span class="n">TIM3_IRQn</span><span class="p">);</span>
+  <span class="cm">/* USER CODE BEGIN TIM3_MspDeInit 1 */</span>
 
-        <span class="cm">/* USER CODE END TIM4_MspDeInit 0 */</span>
-        <span class="cm">/* Peripheral clock disable */</span>
-        <span class="n">__HAL_RCC_TIM4_CLK_DISABLE</span><span class="p">();</span>
+  <span class="cm">/* USER CODE END TIM3_MspDeInit 1 */</span>
+  <span class="p">}</span>
+  <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">tim_baseHandle</span><span class="o">-&gt;</span><span class="n">Instance</span><span class="o">==</span><span class="n">TIM4</span><span class="p">)</span>
+  <span class="p">{</span>
+  <span class="cm">/* USER CODE BEGIN TIM4_MspDeInit 0 */</span>
 
-        <span class="cm">/* TIM4 interrupt Deinit */</span>
-        <span class="n">HAL_NVIC_DisableIRQ</span><span class="p">(</span><span class="n">TIM4_IRQn</span><span class="p">);</span>
-        <span class="cm">/* USER CODE BEGIN TIM4_MspDeInit 1 */</span>
+  <span class="cm">/* USER CODE END TIM4_MspDeInit 0 */</span>
+    <span class="cm">/* Peripheral clock disable */</span>
+    <span class="n">__HAL_RCC_TIM4_CLK_DISABLE</span><span class="p">();</span>
 
-        <span class="cm">/* USER CODE END TIM4_MspDeInit 1 */</span>
-    <span class="p">}</span>
+    <span class="cm">/* TIM4 interrupt Deinit */</span>
+    <span class="n">HAL_NVIC_DisableIRQ</span><span class="p">(</span><span class="n">TIM4_IRQn</span><span class="p">);</span>
+  <span class="cm">/* USER CODE BEGIN TIM4_MspDeInit 1 */</span>
+
+  <span class="cm">/* USER CODE END TIM4_MspDeInit 1 */</span>
+  <span class="p">}</span>
 <span class="p">}</span>
 
 <span class="cm">/* USER CODE BEGIN 1 */</span>

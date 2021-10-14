@@ -141,11 +141,11 @@
             <span class="c1">// Read memory to check write success</span>
             <span class="kt">uint8_t</span> <span class="n">testbuf</span><span class="p">[</span><span class="n">EEPROM_BUFFER_SIZE</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
             <span class="k">if</span> <span class="p">(</span><span class="n">m95256_ReadBuffer</span><span class="p">(</span><span class="n">eeprom</span><span class="p">,</span> <span class="n">testbuf</span><span class="p">,</span> <span class="n">config</span><span class="o">-&gt;</span><span class="n">address</span><span class="p">,</span> <span class="n">config</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">)</span> <span class="o">==</span> <span class="n">EEPROM_STATUS_COMPLETE</span><span class="p">)</span> <span class="p">{</span>
-                <span class="c1">// TODO: continue this</span>
-                <span class="c1">//if (strcmp(config-&gt;data, testbuf, config-&gt;size) != 0) {</span>
-                <span class="c1">//    error_set(ERROR_EEPROM_COMM, 0, HAL_GetTick());</span>
-                <span class="c1">//}</span>
-                <span class="c1">//error_unset(ERROR_EEPROM_COMM, 0);</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">memcmp</span><span class="p">(</span><span class="n">config</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">,</span> <span class="n">testbuf</span><span class="p">,</span> <span class="n">config</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">error_set</span><span class="p">(</span><span class="n">ERROR_EEPROM_WRITE</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">HAL_GetTick</span><span class="p">());</span>
+                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                    <span class="n">error_reset</span><span class="p">(</span><span class="n">ERROR_EEPROM_WRITE</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+                <span class="p">}</span>
             <span class="p">}</span>
 
             <span class="n">config</span><span class="o">-&gt;</span><span class="n">dirty</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>

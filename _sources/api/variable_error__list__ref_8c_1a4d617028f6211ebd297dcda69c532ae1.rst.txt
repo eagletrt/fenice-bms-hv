@@ -1,0 +1,13 @@
+.. _exhale_variable_error__list__ref_8c_1a4d617028f6211ebd297dcda69c532ae1:
+
+Variable error_eeprom_write
+===========================
+
+- Defined in :ref:`file_mainboard_Src_error_error_list_ref.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: error_eeprom_write
