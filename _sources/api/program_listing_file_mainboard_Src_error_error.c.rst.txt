@@ -39,7 +39,8 @@ Program Listing for File error.c
        [ERROR_CELLBOARD_COMM]        = 500,
        [ERROR_CELLBOARD_INTERNAL]    = 500,
        [ERROR_FEEDBACK]              = 500,
-       [ERROR_EEPROM_COMM]           = SOFT};
+       [ERROR_EEPROM_COMM]           = SOFT,
+       [ERROR_EEPROM_WRITE]          = SOFT};
    
    llist er_list = NULL;
    
