@@ -27,6 +27,10 @@ D Low Power, 1MBd Digital Optocoupler
 F https://4donline.ihs.com/images/VipMasterIC/IC/AVGO/AVGO-S-A0000031295/AVGO-S-A0000031295-1.pdf
 $ENDCMP
 #
+$CMP ADC124S
+K quad-input SPI
+$ENDCMP
+#
 $CMP Crystal_ABS25
 D Four pin crystal, GND on pins 2 and 3
 K quartz ceramic resonator oscillator
@@ -70,10 +74,10 @@ D KT Series Reed Relay
 F https://standexelectronics.com/viewer/pdfjs/web/viewer.php?file=https%3A%2F%2Fstandexelectronics.com%2Fwp-content%2Fuploads%2F2015%2F03%2FKT_V03.pdf
 $ENDCMP
 #
-$CMP LMV339
-D Quad General-Purpose Low-Voltage Comparator, SOIC-14/TSSOP-14
+$CMP LM393
+D Low-Power, Low-Offset Voltage, Dual Comparators, DIP-8/SOIC-8/TO-99-8
 K cmp open collector
-F https://www.st.com/resource/en/datasheet/lmv331.pdf
+F http://www.ti.com/lit/ds/symlink/lm393.pdf
 $ENDCMP
 #
 $CMP LP2989
@@ -127,6 +131,16 @@ $ENDCMP
 $CMP MAX16053
 D Adjustable Voltage Supervisor with PP Output
 F https://www.mouser.it/datasheet/2/256/MAX16052-MAX16053-97702.pdf
+$ENDCMP
+#
+$CMP MAX22245
+D Dual-channel digital isolator,1.8 to 5V, 150Mbs, 3kV
+K Dual-channel digital isolator
+$ENDCMP
+#
+$CMP MAX22246
+D Dual-channel digital isolator,1.8 to 5V, 150Mbs, 3kV
+K Dual-channel digital isolator
 $ENDCMP
 #
 $CMP MAX6071_2048VREF
@@ -239,10 +253,10 @@ D Window Comparator
 F http://www.ti.com/lit/ds/symlink/tps3700.pdf
 $ENDCMP
 #
-$CMP TS3704
-D Quad Differential Comparators, SO-14/TSSOP-14
-K cmp
-F https://www.st.com/resource/en/datasheet/lm139.pdf
+$CMP TS3702
+D Low-Power, Low-Offset Voltage, Dual Comparators, DIP-8/SOIC-8/SOP-8/TSSOP-8/VSSOP-8
+K cmp open collector
+F https://www.st.com/resource/en/datasheet/ts3702.pdf
 $ENDCMP
 #
 $CMP TS391I

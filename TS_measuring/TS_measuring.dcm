@@ -1,0 +1,15 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP LM393
+D Low-Power, Low-Offset Voltage, Dual Comparators, DIP-8/SOIC-8/TO-99-8
+K cmp open collector
+F http://www.ti.com/lit/ds/symlink/lm393.pdf
+$ENDCMP
+#
+$CMP TS3702
+D Low-Power, Low-Offset Voltage, Dual Comparators, DIP-8/SOIC-8/SOP-8/TSSOP-8/VSSOP-8
+K cmp open collector
+F https://www.st.com/resource/en/datasheet/ts3702.pdf
+$ENDCMP
+#
+#End Doc Library

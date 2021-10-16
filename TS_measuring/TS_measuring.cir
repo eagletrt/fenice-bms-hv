@@ -1,0 +1,14 @@
+.title KiCad schematic
+.include "spice/BC817-16W.lib"
+.include "spice/BZT52C13.lib"
+.include "spice/DMN80H2D0SCTI.lib"
+R1 /REG_GATE VCC 1Meg
+XQ2 VCC /REG_GATE /OUT_LIN DMN80H2D0SCTI
+Q1 /REG_GATE /FB 0 DI_BC807-16W
+R2 /FB /OUT_LIN 100k
+R3 0 /FB 10k
+XD1 0 /REG_GATE DI_BZT52C13
+C1 /OUT_LIN 0 1u
+V1 VCC 0 dc 600 ac 0
+.tran 1e-9 1e-3 0 
+.end
