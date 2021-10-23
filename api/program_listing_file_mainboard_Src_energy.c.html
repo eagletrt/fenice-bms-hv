@@ -74,21 +74,20 @@
 
 <span class="cp">#include</span> <span class="cpf">&quot;soc.h&quot;</span><span class="cp"></span>
 
+<span class="cp">#define ENERGY_VERSION 0x5555</span>
+<span class="cp">#define ENERGY_ADDR    0x30</span>
+
 <span class="cp">#define ENERGY_WRITE_INTERVAL 5000</span>
-<span class="cp">#define ENERGY_VERSION        0x01</span>
-<span class="cp">#define ENERGY_ADDR           0x30</span>
 
 <span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
-    <span class="kt">uint8_t</span> <span class="n">version</span><span class="p">;</span>
-
     <span class="kt">float</span> <span class="n">total_joule</span><span class="p">;</span>
     <span class="kt">float</span> <span class="n">charge_joule</span><span class="p">;</span>
 <span class="p">}</span> <span class="n">soc_params</span><span class="p">;</span>
-<span class="n">soc_params</span> <span class="n">soc_params_default</span> <span class="o">=</span> <span class="p">{</span><span class="n">ENERGY_VERSION</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">};</span>
+<span class="n">soc_params</span> <span class="n">soc_params_default</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">};</span>
 
 <span class="n">soc_t</span> <span class="n">soc_total</span><span class="p">;</span>        <span class="c1">// Total energy</span>
 <span class="n">soc_t</span> <span class="n">soc_last_charge</span><span class="p">;</span>  <span class="c1">// Energy since last charge</span>
-<span class="n">config_t</span> <span class="n">soc_config</span><span class="p">;</span>    <span class="c1">// Config definition for config.h</span>
+<span class="n">config_t</span> <span class="n">soc_config</span><span class="p">;</span>    <span class="c1">// Config data for config.h</span>
 
 <span class="kt">void</span> <span class="nf">energy_init</span><span class="p">()</span> <span class="p">{</span>
     <span class="c1">// Reset the counts</span>
@@ -96,7 +95,7 @@
     <span class="n">soc_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">soc_last_charge</span><span class="p">);</span>
 
     <span class="c1">// Try to load counts from memory. If errors, revert to default params</span>
-    <span class="n">config_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">soc_config</span><span class="p">,</span> <span class="n">ENERGY_ADDR</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">soc_params_default</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">soc_params</span><span class="p">));</span>
+    <span class="n">config_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">soc_config</span><span class="p">,</span> <span class="n">ENERGY_ADDR</span><span class="p">,</span> <span class="n">ENERGY_VERSION</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">soc_params_default</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">soc_params</span><span class="p">));</span>
 
     <span class="c1">// Save the loaded values in soc instances</span>
     <span class="n">soc_load</span><span class="p">(</span><span class="n">soc_total</span><span class="p">,</span> <span class="p">((</span><span class="n">soc_params</span> <span class="o">*</span><span class="p">)</span><span class="n">config_get</span><span class="p">(</span><span class="n">soc_config</span><span class="p">))</span><span class="o">-&gt;</span><span class="n">total_joule</span><span class="p">,</span> <span class="n">HAL_GetTick</span><span class="p">());</span>

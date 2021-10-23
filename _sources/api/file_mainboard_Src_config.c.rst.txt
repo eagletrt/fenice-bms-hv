@@ -76,13 +76,22 @@ Functions
 
 - :ref:`exhale_function_config_8c_1ab24ff619350298e3ffb146cc934323be`
 
-- :ref:`exhale_function_config_8c_1af90a1fc8182f2146aea757b74272eb57`
+- :ref:`exhale_function_config_8c_1a7774219f1299057a7ee07f1405fe3915`
 
 - :ref:`exhale_function_config_8c_1ae11e3c65652c97d87de8c35c93766866`
 
 - :ref:`exhale_function_config_8c_1aa0fb67c7cf86934180155622d1e3c8c7`
 
 - :ref:`exhale_function_config_8c_1ac145a5e5c5c7bd30dd4322f22f8184fd`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_config_8c_1afe01d4e5f1d715620b9593287967f3a8`
+
+- :ref:`exhale_define_config_8c_1aea8f08a3c52ff2927386b14a44bb617f`
 
 
 Variables

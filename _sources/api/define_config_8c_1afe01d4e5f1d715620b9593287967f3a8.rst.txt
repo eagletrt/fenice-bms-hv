@@ -1,0 +1,13 @@
+.. _exhale_define_config_8c_1afe01d4e5f1d715620b9593287967f3a8:
+
+Define VERSION_SIZE
+===================
+
+- Defined in :ref:`file_mainboard_Src_config.c`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: VERSION_SIZE

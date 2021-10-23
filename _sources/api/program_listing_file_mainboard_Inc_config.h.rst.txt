@@ -19,7 +19,7 @@ Program Listing for File config.h
    
    typedef struct config *config_t;
    
-   bool config_init(config_t *config, uint16_t address, void *default_data, size_t size);
+   bool config_init(config_t *config, uint16_t address, uint32_t version, void *default_data, size_t size);
    
    bool config_write(config_t config);
    

@@ -79,8 +79,10 @@
 <span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp"></span>
 
+<span class="cp">#define VERSION_TYPE uint32_t</span>
+<span class="cp">#define VERSION_SIZE sizeof(VERSION_TYPE)</span>
 <span class="k">struct</span> <span class="n">config</span> <span class="p">{</span>
-    <span class="kt">uint8_t</span> <span class="n">version</span><span class="p">;</span>
+    <span class="n">VERSION_TYPE</span> <span class="n">version</span><span class="p">;</span>
     <span class="kt">uint16_t</span> <span class="n">address</span><span class="p">;</span>
     <span class="kt">bool</span> <span class="n">dirty</span><span class="p">;</span>
     <span class="kt">size_t</span> <span class="n">size</span><span class="p">;</span>
@@ -88,12 +90,15 @@
 <span class="p">};</span>
 <span class="k">static</span> <span class="n">m95256_t</span> <span class="n">eeprom</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
 
-<span class="kt">bool</span> <span class="nf">config_init</span><span class="p">(</span><span class="n">config_t</span> <span class="o">*</span><span class="n">config</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="n">address</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">default_data</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">size</span><span class="p">)</span> <span class="p">{</span>
+<span class="kt">bool</span> <span class="nf">config_init</span><span class="p">(</span><span class="n">config_t</span> <span class="o">*</span><span class="n">config</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="n">address</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">version</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">default_data</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">size</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">assert</span><span class="p">(</span><span class="n">size</span> <span class="o">&lt;=</span> <span class="n">EEPROM_BUFFER_SIZE</span><span class="p">);</span>
+
     <span class="o">*</span><span class="n">config</span>         <span class="o">=</span> <span class="p">(</span><span class="n">config_t</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">config</span><span class="p">));</span>
     <span class="p">(</span><span class="o">*</span><span class="n">config</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="n">size</span><span class="p">);</span>
 
     <span class="p">(</span><span class="o">*</span><span class="n">config</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">address</span> <span class="o">=</span> <span class="n">address</span><span class="p">;</span>
-    <span class="p">(</span><span class="o">*</span><span class="n">config</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">size</span>    <span class="o">=</span> <span class="n">size</span><span class="p">;</span>
+    <span class="p">(</span><span class="o">*</span><span class="n">config</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">version</span> <span class="o">=</span> <span class="n">version</span><span class="p">;</span>
+    <span class="p">(</span><span class="o">*</span><span class="n">config</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">size</span>    <span class="o">=</span> <span class="n">size</span> <span class="o">+</span> <span class="n">VERSION_SIZE</span><span class="p">;</span>
     <span class="p">(</span><span class="o">*</span><span class="n">config</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">dirty</span>   <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
 
     <span class="k">if</span> <span class="p">(</span><span class="n">eeprom</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
@@ -101,17 +106,11 @@
     <span class="p">}</span>
 
     <span class="k">if</span> <span class="p">(</span><span class="n">config_read</span><span class="p">(</span><span class="o">*</span><span class="n">config</span><span class="p">))</span> <span class="p">{</span>
-        <span class="n">error_reset</span><span class="p">(</span><span class="n">ERROR_EEPROM_COMM</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-        <span class="k">if</span> <span class="p">(((</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="p">)(</span><span class="o">*</span><span class="n">config</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="p">((</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="p">)</span><span class="n">default_data</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
-        <span class="p">}</span>
+        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
         <span class="c1">// Data in eeprom is gibberish</span>
-        <span class="n">memcpy</span><span class="p">((</span><span class="o">*</span><span class="n">config</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">,</span> <span class="n">default_data</span><span class="p">,</span> <span class="n">size</span><span class="p">);</span>
-        <span class="p">(</span><span class="o">*</span><span class="n">config</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">dirty</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
-
-        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+        <span class="n">config_set</span><span class="p">(</span><span class="o">*</span><span class="n">config</span><span class="p">,</span> <span class="n">default_data</span><span class="p">);</span>
     <span class="p">}</span>
-    <span class="n">error_set</span><span class="p">(</span><span class="n">ERROR_EEPROM_COMM</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">HAL_GetTick</span><span class="p">());</span>
     <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
 <span class="p">}</span>
 
@@ -121,16 +120,21 @@
 <span class="p">}</span>
 
 <span class="kt">bool</span> <span class="nf">config_read</span><span class="p">(</span><span class="n">config_t</span> <span class="n">config</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kt">uint8_t</span> <span class="n">buffer</span><span class="p">[</span><span class="mi">64</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+    <span class="kt">uint8_t</span> <span class="n">buffer</span><span class="p">[</span><span class="n">EEPROM_BUFFER_SIZE</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
 
     <span class="k">if</span> <span class="p">(</span><span class="n">m95256_ReadBuffer</span><span class="p">(</span><span class="n">eeprom</span><span class="p">,</span> <span class="n">buffer</span><span class="p">,</span> <span class="n">config</span><span class="o">-&gt;</span><span class="n">address</span><span class="p">,</span> <span class="n">config</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">)</span> <span class="o">==</span> <span class="n">EEPROM_STATUS_COMPLETE</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">error_reset</span><span class="p">(</span><span class="n">ERROR_EEPROM_COMM</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-        <span class="n">memcpy</span><span class="p">(</span><span class="n">config</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">,</span> <span class="n">buffer</span><span class="p">,</span> <span class="n">config</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">);</span>
-        <span class="n">config</span><span class="o">-&gt;</span><span class="n">dirty</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
-        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
-    <span class="p">}</span>
 
-    <span class="n">error_set</span><span class="p">(</span><span class="n">ERROR_EEPROM_COMM</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">HAL_GetTick</span><span class="p">());</span>
+        <span class="c1">// Check if EEPROM&#39;s version matches config&#39;s</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="p">((</span><span class="n">VERSION_TYPE</span> <span class="o">*</span><span class="p">)</span><span class="n">buffer</span><span class="p">)</span> <span class="o">==</span> <span class="n">config</span><span class="o">-&gt;</span><span class="n">version</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">memcpy</span><span class="p">(</span><span class="n">config</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">,</span> <span class="n">buffer</span><span class="p">,</span> <span class="n">config</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">);</span>
+            <span class="n">config</span><span class="o">-&gt;</span><span class="n">dirty</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+
+            <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">error_set</span><span class="p">(</span><span class="n">ERROR_EEPROM_COMM</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">HAL_GetTick</span><span class="p">());</span>
+    <span class="p">}</span>
     <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
 <span class="p">}</span>
 
@@ -138,33 +142,36 @@
     <span class="k">if</span> <span class="p">(</span><span class="n">config</span><span class="o">-&gt;</span><span class="n">dirty</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">m95256_WriteBuffer</span><span class="p">(</span><span class="n">eeprom</span><span class="p">,</span> <span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="p">)</span><span class="n">config</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">,</span> <span class="n">config</span><span class="o">-&gt;</span><span class="n">address</span><span class="p">,</span> <span class="n">config</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">)</span> <span class="o">==</span>
             <span class="n">EEPROM_STATUS_COMPLETE</span><span class="p">)</span> <span class="p">{</span>
-            <span class="c1">// Read memory to check write success</span>
+            <span class="n">error_reset</span><span class="p">(</span><span class="n">ERROR_EEPROM_COMM</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+
+            <span class="c1">// Read just-written data and compare for errors</span>
             <span class="kt">uint8_t</span> <span class="n">testbuf</span><span class="p">[</span><span class="n">EEPROM_BUFFER_SIZE</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
             <span class="k">if</span> <span class="p">(</span><span class="n">m95256_ReadBuffer</span><span class="p">(</span><span class="n">eeprom</span><span class="p">,</span> <span class="n">testbuf</span><span class="p">,</span> <span class="n">config</span><span class="o">-&gt;</span><span class="n">address</span><span class="p">,</span> <span class="n">config</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">)</span> <span class="o">==</span> <span class="n">EEPROM_STATUS_COMPLETE</span><span class="p">)</span> <span class="p">{</span>
-                <span class="k">if</span> <span class="p">(</span><span class="n">memcmp</span><span class="p">(</span><span class="n">config</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">,</span> <span class="n">testbuf</span><span class="p">,</span> <span class="n">config</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-                    <span class="n">error_set</span><span class="p">(</span><span class="n">ERROR_EEPROM_WRITE</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">HAL_GetTick</span><span class="p">());</span>
-                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">memcmp</span><span class="p">(</span><span class="n">config</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">,</span> <span class="n">testbuf</span><span class="p">,</span> <span class="n">config</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
                     <span class="n">error_reset</span><span class="p">(</span><span class="n">ERROR_EEPROM_WRITE</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+                    <span class="n">config</span><span class="o">-&gt;</span><span class="n">dirty</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+                    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
                 <span class="p">}</span>
+
+                <span class="n">error_set</span><span class="p">(</span><span class="n">ERROR_EEPROM_WRITE</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">HAL_GetTick</span><span class="p">());</span>
+                <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
             <span class="p">}</span>
 
-            <span class="n">config</span><span class="o">-&gt;</span><span class="n">dirty</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
-            <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
         <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
             <span class="n">error_set</span><span class="p">(</span><span class="n">ERROR_EEPROM_COMM</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">HAL_GetTick</span><span class="p">());</span>
             <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
         <span class="p">}</span>
     <span class="p">}</span>
-    <span class="n">error_reset</span><span class="p">(</span><span class="n">ERROR_EEPROM_COMM</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
     <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="o">*</span><span class="nf">config_get</span><span class="p">(</span><span class="n">config_t</span> <span class="n">config</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="n">config</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">;</span>
+    <span class="k">return</span> <span class="p">((</span><span class="n">VERSION_TYPE</span> <span class="o">*</span><span class="p">)</span><span class="n">config</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">)</span> <span class="o">+</span> <span class="n">VERSION_SIZE</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">config_set</span><span class="p">(</span><span class="n">config_t</span> <span class="n">config</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">data</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">memcpy</span><span class="p">(</span><span class="n">config</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">config</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">);</span>
+    <span class="n">memcpy</span><span class="p">(</span><span class="n">config</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">config</span><span class="o">-&gt;</span><span class="n">version</span><span class="p">,</span> <span class="n">VERSION_SIZE</span><span class="p">);</span>                    <span class="c1">// Copy version</span>
+    <span class="n">memcpy</span><span class="p">(</span><span class="n">config</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">+</span> <span class="n">VERSION_SIZE</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">config</span><span class="o">-&gt;</span><span class="n">size</span> <span class="o">-</span> <span class="n">VERSION_SIZE</span><span class="p">);</span>  <span class="c1">// Copy data after version</span>
     <span class="n">config</span><span class="o">-&gt;</span><span class="n">dirty</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>

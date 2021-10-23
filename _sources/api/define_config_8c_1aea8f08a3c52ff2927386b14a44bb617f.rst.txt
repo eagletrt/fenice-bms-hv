@@ -1,0 +1,13 @@
+.. _exhale_define_config_8c_1aea8f08a3c52ff2927386b14a44bb617f:
+
+Define VERSION_TYPE
+===================
+
+- Defined in :ref:`file_mainboard_Src_config.c`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: VERSION_TYPE

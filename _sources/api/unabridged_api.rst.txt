@@ -532,12 +532,12 @@ Functions
 .. toctree::
    :maxdepth: 5
 
-   function_config_8h_1af90a1fc8182f2146aea757b74272eb57.rst
+   function_config_8h_1a7774219f1299057a7ee07f1405fe3915.rst
 
 .. toctree::
    :maxdepth: 5
 
-   function_config_8c_1af90a1fc8182f2146aea757b74272eb57.rst
+   function_config_8c_1a7774219f1299057a7ee07f1405fe3915.rst
 
 .. toctree::
    :maxdepth: 5
@@ -4271,6 +4271,16 @@ Defines
    :maxdepth: 5
 
    define_group__STM32F4xx__System__Private__Defines_1ga40e1495541cbb4acbe3f1819bd87a9fe.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_config_8c_1afe01d4e5f1d715620b9593287967f3a8.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   define_config_8c_1aea8f08a3c52ff2927386b14a44bb617f.rst
 
 .. toctree::
    :maxdepth: 5

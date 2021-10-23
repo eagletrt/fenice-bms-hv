@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Function config_init(config_t *, uint16_t, void *, size_t) &mdash; Fenice BMS HV 1.0.0 documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <title>Function config_init(config_t *, uint16_t, uint32_t, void *, size_t) &mdash; Fenice BMS HV 1.0.0 documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -19,7 +19,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Function config_init(config_t *, uint16_t, void *, size_t)" href="function_config_8c_1af90a1fc8182f2146aea757b74272eb57.html" />
+    <link rel="next" title="Function config_init(config_t *, uint16_t, uint32_t, void *, size_t)" href="function_config_8c_1a7774219f1299057a7ee07f1405fe3915.html" />
     <link rel="prev" title="Function config_get(config_t)" href="function_config_8c_1ab24ff619350298e3ffb146cc934323be.html" /> 
 </head>
 
@@ -60,9 +60,9 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="library_root.html">Software</a> &raquo;</li>
-      <li>Function config_init(config_t *, uint16_t, void *, size_t)</li>
+      <li>Function config_init(config_t *, uint16_t, uint32_t, void *, size_t)</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/api/function_config_8h_1af90a1fc8182f2146aea757b74272eb57.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/api/function_config_8h_1a7774219f1299057a7ee07f1405fe3915.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -70,26 +70,27 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="function-config-init-config-t-uint16-t-void-size-t">
-<span id="exhale-function-config-8h-1af90a1fc8182f2146aea757b74272eb57"></span><h1>Function config_init(config_t *, uint16_t, void *, size_t)<a class="headerlink" href="#function-config-init-config-t-uint16-t-void-size-t" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="function-config-init-config-t-uint16-t-uint32-t-void-size-t">
+<span id="exhale-function-config-8h-1a7774219f1299057a7ee07f1405fe3915"></span><h1>Function config_init(config_t *, uint16_t, uint32_t, void *, size_t)<a class="headerlink" href="#function-config-init-config-t-uint16-t-uint32-t-void-size-t" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li>Defined in <a class="reference internal" href="file_mainboard_Inc_config.h.html#file-mainboard-inc-config-h"><span class="std std-ref">File config.h</span></a></li>
 </ul>
 <div class="section" id="function-documentation">
 <h2>Function Documentation<a class="headerlink" href="#function-documentation" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
-<dt id="_CPPv411config_initP8config_t8uint16_tPv6size_t">
-<span id="_CPPv311config_initP8config_t8uint16_tPv6size_t"></span><span id="_CPPv211config_initP8config_t8uint16_tPv6size_t"></span><span id="config_init__config_tP.uint16_t.voidP.s"></span><span class="target" id="config_8h_1af90a1fc8182f2146aea757b74272eb57"></span>bool <code class="descname">config_init</code><span class="sig-paren">(</span><a class="reference internal" href="typedef_config_8h_1a290a4302983fc145cd4766f1ff7caadf.html#_CPPv48config_t" title="config_t">config_t</a> *<em>config</em>, uint16_t <em>address</em>, void *<em>default_data</em>, size_t <em>size</em><span class="sig-paren">)</span><br /></dt>
+<dt id="_CPPv411config_initP8config_t8uint16_t8uint32_tPv6size_t">
+<span id="_CPPv311config_initP8config_t8uint16_t8uint32_tPv6size_t"></span><span id="_CPPv211config_initP8config_t8uint16_t8uint32_tPv6size_t"></span><span id="config_init__config_tP.uint16_t.uint32_t.voidP.s"></span><span class="target" id="config_8h_1a7774219f1299057a7ee07f1405fe3915"></span>bool <code class="descname">config_init</code><span class="sig-paren">(</span><a class="reference internal" href="typedef_config_8h_1a290a4302983fc145cd4766f1ff7caadf.html#_CPPv48config_t" title="config_t">config_t</a> *<em>config</em>, uint16_t <em>address</em>, uint32_t <em>version</em>, void *<em>default_data</em>, size_t <em>size</em><span class="sig-paren">)</span><br /></dt>
 <dd><p>Initializes a config instance. </p>
 <p><dl class="docutils">
 <dt><strong>Return</strong></dt>
-<dd>true Initialization from EEPROM successfull </dd>
+<dd>true Initialization from EEPROM successful </dd>
 <dt><strong>Return</strong></dt>
-<dd>false The default config has been initialized </dd>
+<dd>false The default config has been initialized/error reading EEPROM </dd>
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">config</span></code>: The config handle </li>
 <li><code class="docutils literal notranslate"><span class="pre">address</span></code>: The handle to read/write the config to </li>
+<li><code class="docutils literal notranslate"><span class="pre">version</span></code>: The version string to be used as comparison </li>
 <li><code class="docutils literal notranslate"><span class="pre">default_data</span></code>: The default value for data. Used when the config in eeprom is invalid </li>
 <li><code class="docutils literal notranslate"><span class="pre">size</span></code>: Size of the data structure </li>
 </ul>
@@ -106,7 +107,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="function_config_8c_1ab24ff619350298e3ffb146cc934323be.html" class="btn btn-neutral float-left" title="Function config_get(config_t)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="function_config_8c_1af90a1fc8182f2146aea757b74272eb57.html" class="btn btn-neutral float-right" title="Function config_init(config_t *, uint16_t, void *, size_t)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="function_config_8c_1a7774219f1299057a7ee07f1405fe3915.html" class="btn btn-neutral float-right" title="Function config_init(config_t *, uint16_t, uint32_t, void *, size_t)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

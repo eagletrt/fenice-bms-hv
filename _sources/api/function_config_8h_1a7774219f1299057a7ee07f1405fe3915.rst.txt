@@ -1,0 +1,13 @@
+.. _exhale_function_config_8h_1a7774219f1299057a7ee07f1405fe3915:
+
+Function config_init(config_t \*, uint16_t, uint32_t, void \*, size_t)
+======================================================================
+
+- Defined in :ref:`file_mainboard_Inc_config.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: config_init(config_t *, uint16_t, uint32_t, void *, size_t)
