@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Function energy_load(energy_t, uint32_t, uint32_t) &mdash; Fenice BMS HV 1.0.0 documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <title>Function energy_sample_energy(energy_t, float, uint32_t) &mdash; Fenice BMS HV 1.0.0 documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -19,8 +19,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Function energy_reset_count(energy_t, uint32_t)" href="function_energy_8h_1a964dbfec9af37f2001217e0029b63334.html" />
-    <link rel="prev" title="Function energy_load(energy_t, uint32_t, uint32_t)" href="function_energy_8h_1a76136d0ec6eb393a91137e35b86b6ffc.html" /> 
+    <link rel="next" title="Function error_compare" href="function_error_8c_1a6d4fa5acedb7f22a6df926bf45720eec.html" />
+    <link rel="prev" title="Function energy_sample_energy(energy_t, float, uint32_t)" href="function_energy_8h_1a98ca1607190de7a97aaec4d36d77ea87.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -60,9 +60,9 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="library_root.html">Software</a> &raquo;</li>
-      <li>Function energy_load(energy_t, uint32_t, uint32_t)</li>
+      <li>Function energy_sample_energy(energy_t, float, uint32_t)</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/api/function_energy_8c_1a76136d0ec6eb393a91137e35b86b6ffc.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/api/function_energy_8c_1a98ca1607190de7a97aaec4d36d77ea87.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -70,17 +70,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="function-energy-load-energy-t-uint32-t-uint32-t">
-<span id="exhale-function-energy-8c-1a76136d0ec6eb393a91137e35b86b6ffc"></span><h1>Function energy_load(energy_t, uint32_t, uint32_t)<a class="headerlink" href="#function-energy-load-energy-t-uint32-t-uint32-t" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="function-energy-sample-energy-energy-t-float-uint32-t">
+<span id="exhale-function-energy-8c-1a98ca1607190de7a97aaec4d36d77ea87"></span><h1>Function energy_sample_energy(energy_t, float, uint32_t)<a class="headerlink" href="#function-energy-sample-energy-energy-t-float-uint32-t" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li>Defined in <a class="reference internal" href="file_mainboard_Src_energy.c.html#file-mainboard-src-energy-c"><span class="std std-ref">File energy.c</span></a></li>
 </ul>
 <div class="section" id="function-documentation">
 <h2>Function Documentation<a class="headerlink" href="#function-documentation" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
-<dt id="_CPPv411energy_load8energy_t8uint32_t8uint32_t">
-<span id="_CPPv311energy_load8energy_t8uint32_t8uint32_t"></span><span id="_CPPv211energy_load8energy_t8uint32_t8uint32_t"></span><span id="energy_load__energy_t.uint32_t.uint32_t"></span><span class="target" id="energy_8h_1a76136d0ec6eb393a91137e35b86b6ffc"></span>void <code class="descname">energy_load</code><span class="sig-paren">(</span><a class="reference internal" href="typedef_energy_8h_1a021813300c476a1b7a3dca889e3da893.html#_CPPv48energy_t" title="energy_t">energy_t</a> <em>handle</em>, uint32_t <em>joule</em>, uint32_t <em>time</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411energy_load8energy_t8uint32_t8uint32_t" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Loads saved values and resets timer. </p>
+<dt id="_CPPv420energy_sample_energy8energy_tf8uint32_t">
+<span id="_CPPv320energy_sample_energy8energy_tf8uint32_t"></span><span id="_CPPv220energy_sample_energy8energy_tf8uint32_t"></span><span id="energy_sample_energy__energy_t.float.uint32_t"></span><span class="target" id="energy_8h_1a98ca1607190de7a97aaec4d36d77ea87"></span>void <code class="descname">energy_sample_energy</code><span class="sig-paren">(</span><a class="reference internal" href="typedef_energy_8h_1a021813300c476a1b7a3dca889e3da893.html#_CPPv48energy_t" title="energy_t">energy_t</a> <em>handle</em>, float <em>power</em>, uint32_t <em>time</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420energy_sample_energy8energy_tf8uint32_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Updates joule counting with given data. </p>
 </dd></dl>
 
 </div>
@@ -90,8 +90,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="function_energy_8h_1a76136d0ec6eb393a91137e35b86b6ffc.html" class="btn btn-neutral float-left" title="Function energy_load(energy_t, uint32_t, uint32_t)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="function_energy_8h_1a964dbfec9af37f2001217e0029b63334.html" class="btn btn-neutral float-right" title="Function energy_reset_count(energy_t, uint32_t)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="function_energy_8h_1a98ca1607190de7a97aaec4d36d77ea87.html" class="btn btn-neutral float-left" title="Function energy_sample_energy(energy_t, float, uint32_t)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="function_error_8c_1a6d4fa5acedb7f22a6df926bf45720eec.html" class="btn btn-neutral float-right" title="Function error_compare" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -81,5 +81,5 @@ Functions
 
 - :ref:`exhale_function_soc_8h_1adfabf8d79a0818b29dda9a7199c640ed`
 
-- :ref:`exhale_function_soc_8h_1aa202c0e9b4183df7097cdea160a0059b`
+- :ref:`exhale_function_soc_8h_1ad4af9c4bc49b5bd93c63084c2cd4fa08`
 

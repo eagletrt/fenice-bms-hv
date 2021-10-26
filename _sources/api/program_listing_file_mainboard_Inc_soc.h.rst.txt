@@ -18,7 +18,7 @@ Program Listing for File soc.h
    
    void soc_init();
    
-   void soc_sample_current(uint32_t timestamp);
+   void soc_sample_energy(uint32_t timestamp);
    
    void soc_reset_soc();
    

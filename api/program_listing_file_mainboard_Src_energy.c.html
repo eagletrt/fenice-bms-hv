@@ -79,8 +79,8 @@
 <span class="cm">/* Private typedef -----------------------------------------------------------*/</span>
 <span class="k">struct</span> <span class="n">energy</span> <span class="p">{</span>
     <span class="kt">uint32_t</span> <span class="n">last_sample</span><span class="p">;</span>
-    <span class="kt">float</span> <span class="n">joule</span><span class="p">;</span>
-    <span class="kt">float</span> <span class="n">last_watt</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">energy</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">last_power</span><span class="p">;</span>
 <span class="p">};</span>
 
 <span class="cm">/* Private define ------------------------------------------------------------*/</span>
@@ -98,39 +98,37 @@
     <span class="n">free</span><span class="p">(</span><span class="o">*</span><span class="n">handle</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="kt">void</span> <span class="nf">energy_load</span><span class="p">(</span><span class="n">energy_t</span> <span class="n">handle</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">joule</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">time</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">handle</span><span class="o">-&gt;</span><span class="n">joule</span> <span class="o">=</span> <span class="n">joule</span><span class="p">;</span>
+<span class="kt">void</span> <span class="nf">energy_load</span><span class="p">(</span><span class="n">energy_t</span> <span class="n">handle</span><span class="p">,</span> <span class="kt">float</span> <span class="n">joule</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">time</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">handle</span><span class="o">-&gt;</span><span class="n">energy</span> <span class="o">=</span> <span class="n">joule</span><span class="p">;</span>
     <span class="n">energy_reset_time</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">time</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">energy_reset_time</span><span class="p">(</span><span class="n">energy_t</span> <span class="n">handle</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">time</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">handle</span><span class="o">-&gt;</span><span class="n">last_sample</span> <span class="o">=</span> <span class="n">time</span><span class="p">;</span>
-    <span class="n">handle</span><span class="o">-&gt;</span><span class="n">last_watt</span>   <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">handle</span><span class="o">-&gt;</span><span class="n">last_power</span>  <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">energy_reset_count</span><span class="p">(</span><span class="n">energy_t</span> <span class="n">handle</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">time</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">handle</span><span class="o">-&gt;</span><span class="n">joule</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">handle</span><span class="o">-&gt;</span><span class="n">energy</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="n">energy_reset_time</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">time</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="kt">void</span> <span class="nf">energy_sample_current</span><span class="p">(</span><span class="n">energy_t</span> <span class="n">handle</span><span class="p">,</span> <span class="n">current_t</span> <span class="n">current</span><span class="p">,</span> <span class="n">voltage_t</span> <span class="n">voltage</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">time</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kt">float</span> <span class="n">watt</span> <span class="o">=</span> <span class="n">current</span> <span class="o">*</span> <span class="p">(</span><span class="n">voltage</span> <span class="o">/</span> <span class="mf">10.0f</span><span class="p">);</span>
-
+<span class="kt">void</span> <span class="nf">energy_sample_energy</span><span class="p">(</span><span class="n">energy_t</span> <span class="n">handle</span><span class="p">,</span> <span class="kt">float</span> <span class="n">power</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">time</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// Use trapezoidal rule to approximate an integral</span>
     <span class="c1">// Energy = ∫Power dt = (1/2 * (P[i-1] + P[i])) * Δt</span>
-    <span class="n">handle</span><span class="o">-&gt;</span><span class="n">joule</span> <span class="o">+=</span> <span class="p">((</span><span class="n">handle</span><span class="o">-&gt;</span><span class="n">last_watt</span> <span class="o">+</span> <span class="n">watt</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">((</span><span class="n">time</span> <span class="o">-</span> <span class="n">handle</span><span class="o">-&gt;</span><span class="n">last_sample</span><span class="p">)</span> <span class="o">/</span> <span class="mf">1000.0f</span><span class="p">);</span>
+    <span class="n">handle</span><span class="o">-&gt;</span><span class="n">energy</span> <span class="o">+=</span> <span class="p">((</span><span class="n">handle</span><span class="o">-&gt;</span><span class="n">last_power</span> <span class="o">+</span> <span class="n">power</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">((</span><span class="n">time</span> <span class="o">-</span> <span class="n">handle</span><span class="o">-&gt;</span><span class="n">last_sample</span><span class="p">)</span> <span class="o">/</span> <span class="mf">1000.0f</span><span class="p">);</span>
 
-    <span class="n">handle</span><span class="o">-&gt;</span><span class="n">last_watt</span>   <span class="o">=</span> <span class="n">watt</span><span class="p">;</span>
+    <span class="n">handle</span><span class="o">-&gt;</span><span class="n">last_power</span>  <span class="o">=</span> <span class="n">power</span><span class="p">;</span>
     <span class="n">handle</span><span class="o">-&gt;</span><span class="n">last_sample</span> <span class="o">=</span> <span class="n">time</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kt">float</span> <span class="nf">energy_get_wh</span><span class="p">(</span><span class="n">energy_t</span> <span class="n">handle</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// 1 J = 1/3600s Wh</span>
-    <span class="k">return</span> <span class="n">handle</span><span class="o">-&gt;</span><span class="n">joule</span> <span class="o">/</span> <span class="mi">3600</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">handle</span><span class="o">-&gt;</span><span class="n">energy</span> <span class="o">/</span> <span class="mi">3600</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kt">float</span> <span class="nf">energy_get_joule</span><span class="p">(</span><span class="n">energy_t</span> <span class="n">handle</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="n">handle</span><span class="o">-&gt;</span><span class="n">joule</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">handle</span><span class="o">-&gt;</span><span class="n">energy</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>

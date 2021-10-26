@@ -1,0 +1,13 @@
+.. _exhale_variable_soc_8c_1a644f89dafeb4bf4524e189fa095e5181:
+
+Variable energy_total
+=====================
+
+- Defined in :ref:`file_mainboard_Src_soc.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: energy_total

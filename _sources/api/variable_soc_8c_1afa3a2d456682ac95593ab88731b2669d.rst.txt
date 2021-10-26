@@ -1,0 +1,13 @@
+.. _exhale_variable_soc_8c_1afa3a2d456682ac95593ab88731b2669d:
+
+Variable energy_last_charge
+===========================
+
+- Defined in :ref:`file_mainboard_Src_soc.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: energy_last_charge

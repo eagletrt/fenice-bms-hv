@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Function energy_sample_current(energy_t, current_t, voltage_t, uint32_t) &mdash; Fenice BMS HV 1.0.0 documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <title>Function soc_sample_energy(uint32_t) &mdash; Fenice BMS HV 1.0.0 documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -19,8 +19,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Function error_compare" href="function_error_8c_1a6d4fa5acedb7f22a6df926bf45720eec.html" />
-    <link rel="prev" title="Function energy_sample_current(energy_t, current_t, voltage_t, uint32_t)" href="function_energy_8h_1a23e7237d095ced4662f36e8a2412e85d.html" /> 
+    <link rel="next" title="Function spi_disable_cs(SPI_HandleTypeDef *, GPIO_TypeDef *, uint16_t)" href="function_spi_8h_1ad59b1470e3c09d41c88aecf7ae0ca806.html" />
+    <link rel="prev" title="Function soc_sample_energy(uint32_t)" href="function_soc_8h_1ad4af9c4bc49b5bd93c63084c2cd4fa08.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -60,9 +60,9 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="library_root.html">Software</a> &raquo;</li>
-      <li>Function energy_sample_current(energy_t, current_t, voltage_t, uint32_t)</li>
+      <li>Function soc_sample_energy(uint32_t)</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/api/function_energy_8c_1a23e7237d095ced4662f36e8a2412e85d.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/api/function_soc_8c_1ad4af9c4bc49b5bd93c63084c2cd4fa08.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -70,17 +70,25 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="function-energy-sample-current-energy-t-current-t-voltage-t-uint32-t">
-<span id="exhale-function-energy-8c-1a23e7237d095ced4662f36e8a2412e85d"></span><h1>Function energy_sample_current(energy_t, current_t, voltage_t, uint32_t)<a class="headerlink" href="#function-energy-sample-current-energy-t-current-t-voltage-t-uint32-t" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="function-soc-sample-energy-uint32-t">
+<span id="exhale-function-soc-8c-1ad4af9c4bc49b5bd93c63084c2cd4fa08"></span><h1>Function soc_sample_energy(uint32_t)<a class="headerlink" href="#function-soc-sample-energy-uint32-t" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li>Defined in <a class="reference internal" href="file_mainboard_Src_energy.c.html#file-mainboard-src-energy-c"><span class="std std-ref">File energy.c</span></a></li>
+<li>Defined in <a class="reference internal" href="file_mainboard_Src_soc.c.html#file-mainboard-src-soc-c"><span class="std std-ref">File soc.c</span></a></li>
 </ul>
 <div class="section" id="function-documentation">
 <h2>Function Documentation<a class="headerlink" href="#function-documentation" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
-<dt id="_CPPv421energy_sample_current8energy_t9current_t9voltage_t8uint32_t">
-<span id="_CPPv321energy_sample_current8energy_t9current_t9voltage_t8uint32_t"></span><span id="_CPPv221energy_sample_current8energy_t9current_t9voltage_t8uint32_t"></span><span id="energy_sample_current__energy_t.current_t.voltage_t.uint32_t"></span><span class="target" id="energy_8h_1a23e7237d095ced4662f36e8a2412e85d"></span>void <code class="descname">energy_sample_current</code><span class="sig-paren">(</span><a class="reference internal" href="typedef_energy_8h_1a021813300c476a1b7a3dca889e3da893.html#_CPPv48energy_t" title="energy_t">energy_t</a> <em>handle</em>, <a class="reference internal" href="typedef_current_8h_1a86046fc12785c63aa4cd54067d366a44.html#_CPPv49current_t" title="current_t">current_t</a> <em>current</em>, <a class="reference internal" href="typedef_cellboard_2Inc_2fenice__config_8h_1a919cc27d97b06cf5d67cf5a9bc181dc2.html#_CPPv49voltage_t" title="voltage_t">voltage_t</a> <em>voltage</em>, uint32_t <em>time</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421energy_sample_current8energy_t9current_t9voltage_t8uint32_t" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Updates joule counting with given data. </p>
+<dt id="_CPPv417soc_sample_energy8uint32_t">
+<span id="_CPPv317soc_sample_energy8uint32_t"></span><span id="_CPPv217soc_sample_energy8uint32_t"></span><span id="soc_sample_energy__uint32_t"></span><span class="target" id="soc_8h_1ad4af9c4bc49b5bd93c63084c2cd4fa08"></span>void <code class="descname">soc_sample_energy</code><span class="sig-paren">(</span>uint32_t <em>timestamp</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417soc_sample_energy8uint32_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Process a new current sample. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">timestamp</span></code>: The timestamp at which the measurement occurred </li>
+</ul>
+</dd>
+</dl>
+</p>
 </dd></dl>
 
 </div>
@@ -90,8 +98,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="function_energy_8h_1a23e7237d095ced4662f36e8a2412e85d.html" class="btn btn-neutral float-left" title="Function energy_sample_current(energy_t, current_t, voltage_t, uint32_t)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="function_error_8c_1a6d4fa5acedb7f22a6df926bf45720eec.html" class="btn btn-neutral float-right" title="Function error_compare" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="function_soc_8h_1ad4af9c4bc49b5bd93c63084c2cd4fa08.html" class="btn btn-neutral float-left" title="Function soc_sample_energy(uint32_t)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="function_spi_8h_1ad59b1470e3c09d41c88aecf7ae0ca806.html" class="btn btn-neutral float-right" title="Function spi_disable_cs(SPI_HandleTypeDef *, GPIO_TypeDef *, uint16_t)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

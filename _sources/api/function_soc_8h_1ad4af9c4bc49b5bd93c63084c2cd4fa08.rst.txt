@@ -1,0 +1,13 @@
+.. _exhale_function_soc_8h_1ad4af9c4bc49b5bd93c63084c2cd4fa08:
+
+Function soc_sample_energy(uint32_t)
+====================================
+
+- Defined in :ref:`file_mainboard_Inc_soc.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: soc_sample_energy(uint32_t)

@@ -30,13 +30,13 @@ Program Listing for File energy.h
    
    void energy_deinit(energy_t *handle);
    
-   void energy_load(energy_t handle, uint32_t joule, uint32_t time);
+   void energy_load(energy_t handle, float joule, uint32_t time);
    
    void energy_reset_time(energy_t handle, uint32_t time);
    
    void energy_reset_count(energy_t handle, uint32_t time);
    
-   void energy_sample_current(energy_t handle, current_t current, voltage_t voltage, uint32_t time);
+   void energy_sample_energy(energy_t handle, float power, uint32_t time);
    
    float energy_get_wh(energy_t handle);
    float energy_get_joule(energy_t handle);

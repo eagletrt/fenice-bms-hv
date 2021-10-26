@@ -1,0 +1,13 @@
+.. _exhale_function_energy_8h_1a98ca1607190de7a97aaec4d36d77ea87:
+
+Function energy_sample_energy(energy_t, float, uint32_t)
+========================================================
+
+- Defined in :ref:`file_mainboard_Inc_energy.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: energy_sample_energy(energy_t, float, uint32_t)

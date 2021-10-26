@@ -74,7 +74,7 @@ Functions
 
 - :ref:`exhale_function_soc_8c_1adfabf8d79a0818b29dda9a7199c640ed`
 
-- :ref:`exhale_function_soc_8c_1aa202c0e9b4183df7097cdea160a0059b`
+- :ref:`exhale_function_soc_8c_1ad4af9c4bc49b5bd93c63084c2cd4fa08`
 
 
 Defines
@@ -92,11 +92,11 @@ Variables
 ---------
 
 
+- :ref:`exhale_variable_soc_8c_1afa3a2d456682ac95593ab88731b2669d`
+
+- :ref:`exhale_variable_soc_8c_1a644f89dafeb4bf4524e189fa095e5181`
+
 - :ref:`exhale_variable_soc_8c_1a9e43ec2e7da68d7802a24f123bb30a0d`
 
-- :ref:`exhale_variable_soc_8c_1a1ecd5c0ff6ad0b442dc1f5626f7b6798`
-
 - :ref:`exhale_variable_soc_8c_1a409e04db659286c5d291207fa8af4fcf`
-
-- :ref:`exhale_variable_soc_8c_1a6d5890fe019a6bc25c93065115066d64`
 
