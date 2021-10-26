@@ -48,7 +48,7 @@ Includes
 
 - ``can_comm.h`` (:ref:`file_mainboard_Inc_peripherals_can_comm.h`)
 
-- ``current.h`` (:ref:`file_mainboard_Inc_current.h`)
+- ``energy.h`` (:ref:`file_mainboard_Inc_energy_energy.h`)
 
 - ``inttypes.h``
 
@@ -56,9 +56,11 @@ Includes
 
 - ``mainboard_config.h`` (:ref:`file_mainboard_Inc_mainboard_config.h`)
 
-- ``pack.h`` (:ref:`file_mainboard_Inc_pack.h`)
+- ``pack/current.h`` (:ref:`file_mainboard_Inc_pack_current.h`)
 
-- ``soc.h`` (:ref:`file_mainboard_Inc_soc.h`)
+- ``pack/voltage.h`` (:ref:`file_mainboard_Inc_pack_voltage.h`)
+
+- ``soc.h`` (:ref:`file_mainboard_Inc_energy_soc.h`)
 
 - ``spi.h`` (:ref:`file_mainboard_Inc_spi.h`)
 

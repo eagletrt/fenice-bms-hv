@@ -1,0 +1,13 @@
+.. _exhale_variable_mainboard_2Src_2pack_2temperature_8c_1afc42cda157138bd073855bde2445bbf2:
+
+Variable temperatures
+=====================
+
+- Defined in :ref:`file_mainboard_Src_pack_temperature.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: temperatures

@@ -1,0 +1,13 @@
+.. _exhale_function_cellboard_2Inc_2temperature_8h_1ad5f8dceaf82578550a4ae5379a4770fb:
+
+Function temperature_get_average(uint16_t, uint8_t)
+===================================================
+
+- Defined in :ref:`file_cellboard_Inc_temperature.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: temperature_get_average(uint16_t, uint8_t)

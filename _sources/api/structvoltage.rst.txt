@@ -1,0 +1,16 @@
+.. _exhale_struct_structvoltage:
+
+Struct voltage
+==============
+
+- Defined in :ref:`file_mainboard_Src_pack_voltage.c`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: voltage
+   :members:
+   :protected-members:
+   :undoc-members:

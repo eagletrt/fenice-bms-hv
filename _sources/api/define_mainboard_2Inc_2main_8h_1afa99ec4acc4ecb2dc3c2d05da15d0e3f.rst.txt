@@ -1,0 +1,13 @@
+.. _exhale_define_mainboard_2Inc_2main_8h_1afa99ec4acc4ecb2dc3c2d05da15d0e3f:
+
+Define MAX
+==========
+
+- Defined in :ref:`file_mainboard_Inc_main.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MAX

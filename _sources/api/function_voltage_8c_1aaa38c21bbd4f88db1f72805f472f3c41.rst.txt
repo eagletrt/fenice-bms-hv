@@ -1,0 +1,13 @@
+.. _exhale_function_voltage_8c_1aaa38c21bbd4f88db1f72805f472f3c41:
+
+Function voltage_get_cells()
+============================
+
+- Defined in :ref:`file_mainboard_Src_pack_voltage.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: voltage_get_cells()

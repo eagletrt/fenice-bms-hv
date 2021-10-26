@@ -1,0 +1,13 @@
+.. _exhale_function_energy_8h_1a09544ccc8f58bd4fe2a030ae944000e4:
+
+Function energy_set_count(energy_t, float)
+==========================================
+
+- Defined in :ref:`file_mainboard_Inc_energy_energy.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: energy_set_count(energy_t, float)

@@ -1,0 +1,83 @@
+
+.. _file_mainboard_Inc_energy_soc.h:
+
+File soc.h
+==========
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Inc_energy>` (``mainboard/Inc/energy``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+State of Charge estimation and management. Based on the energy subsystem. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Inc/energy/soc.h``)
+-------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Inc_energy_soc.h.rst
+
+
+
+Detailed Description
+--------------------
+
+Sep 25, 2021
+
+Matteo Bonora [matteo.bonora@studenti.unitn.it] 
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``config.h`` (:ref:`file_mainboard_Inc_config.h`)
+
+- ``pack/current.h`` (:ref:`file_mainboard_Inc_pack_current.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_mainboard_Src_cli_bms.c`
+
+- :ref:`file_mainboard_Src_energy_soc.c`
+
+- :ref:`file_mainboard_Src_main.c`
+
+- :ref:`file_mainboard_Src_super_fsm.c`
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_soc_8h_1aa0dd3f0acc2bdf12a1eae271d9ff5ec1`
+
+- :ref:`exhale_function_soc_8h_1a5a0887d1135eb35a7f29391f6edf847c`
+
+- :ref:`exhale_function_soc_8h_1a08258933c6fde4e3eccbb5e86902b85c`
+
+- :ref:`exhale_function_soc_8h_1a3b30c69bed2130f20c6d7faf08a23337`
+
+- :ref:`exhale_function_soc_8h_1adfabf8d79a0818b29dda9a7199c640ed`
+
+- :ref:`exhale_function_soc_8h_1ad4af9c4bc49b5bd93c63084c2cd4fa08`
+

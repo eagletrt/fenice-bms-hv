@@ -56,9 +56,13 @@ Includes
 
 - ``feedback.h`` (:ref:`file_mainboard_Inc_feedback.h`)
 
-- ``pack.h`` (:ref:`file_mainboard_Inc_pack.h`)
+- ``pack/pack.h`` (:ref:`file_mainboard_Inc_pack_pack.h`)
 
-- ``soc.h`` (:ref:`file_mainboard_Inc_soc.h`)
+- ``pack/temperature.h`` (:ref:`file_mainboard_Inc_pack_temperature.h`)
+
+- ``pack/voltage.h`` (:ref:`file_mainboard_Inc_pack_voltage.h`)
+
+- ``soc.h`` (:ref:`file_mainboard_Inc_energy_soc.h`)
 
 - ``stdio.h``
 

@@ -3,7 +3,7 @@
 Function pack_set_ts_off()
 ==========================
 
-- Defined in :ref:`file_mainboard_Src_pack.c`
+- Defined in :ref:`file_mainboard_Src_pack_pack.c`
 
 
 Function Documentation

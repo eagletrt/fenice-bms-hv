@@ -1,0 +1,84 @@
+
+.. _file_mainboard_Inc_pack_temperature.h:
+
+File temperature.h
+==================
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Inc_pack>` (``mainboard/Inc/pack``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+Functions to manage all cell temperatures. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Inc/pack/temperature.h``)
+-------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Inc_pack_temperature.h.rst
+
+
+
+Detailed Description
+--------------------
+
+Apr 11, 2019 
+
+Matteo Bonora [matteo.bonora@studenti.unitn.it] 
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``inttypes.h``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_mainboard_Src_cli_bms.c`
+
+- :ref:`file_mainboard_Src_pack_temperature.c`
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_mainboard_2Inc_2pack_2temperature_8h_1a467cb9d4ca7e3a0eac6cf217ab0b77c1`
+
+- :ref:`exhale_function_mainboard_2Inc_2pack_2temperature_8h_1ac047a12951f25f4c572700472f8663ea`
+
+- :ref:`exhale_function_mainboard_2Inc_2pack_2temperature_8h_1a159fd7055d0d106d12d86aee9b9dab06`
+
+- :ref:`exhale_function_mainboard_2Inc_2pack_2temperature_8h_1a5fc032fa424b7739c0d36584a8b9d434`
+
+- :ref:`exhale_function_mainboard_2Inc_2pack_2temperature_8h_1a5150dec03dce5db1a854c2021d186798`
+
+- :ref:`exhale_function_mainboard_2Inc_2pack_2temperature_8h_1abb0c1f74cbd0591c63858c57917c566e`
+
+
+Typedefs
+--------
+
+
+- :ref:`exhale_typedef_mainboard_2Inc_2pack_2temperature_8h_1a7f0e4c8e257063101aa9f4cc03644195`
+

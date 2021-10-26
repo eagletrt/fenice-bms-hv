@@ -3,7 +3,7 @@
 Struct energy
 =============
 
-- Defined in :ref:`file_mainboard_Src_energy.c`
+- Defined in :ref:`file_mainboard_Src_energy_energy.c`
 
 
 Struct Documentation

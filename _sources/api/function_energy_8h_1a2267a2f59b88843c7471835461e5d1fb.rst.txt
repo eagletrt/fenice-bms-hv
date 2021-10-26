@@ -1,0 +1,13 @@
+.. _exhale_function_energy_8h_1a2267a2f59b88843c7471835461e5d1fb:
+
+Function energy_set_time(energy_t, uint32_t)
+============================================
+
+- Defined in :ref:`file_mainboard_Inc_energy_energy.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: energy_set_time(energy_t, uint32_t)

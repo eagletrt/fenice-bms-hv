@@ -1,0 +1,13 @@
+.. _exhale_function_voltage_8h_1ae10b086f3b0cf83be3de5c6d2992e070:
+
+Function voltage_measure()
+==========================
+
+- Defined in :ref:`file_mainboard_Inc_pack_voltage.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: voltage_measure()

@@ -1,0 +1,13 @@
+.. _exhale_function_mainboard_2Inc_2pack_2temperature_8h_1a467cb9d4ca7e3a0eac6cf217ab0b77c1:
+
+Function temperature_check()
+============================
+
+- Defined in :ref:`file_mainboard_Inc_pack_temperature.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: temperature_check()

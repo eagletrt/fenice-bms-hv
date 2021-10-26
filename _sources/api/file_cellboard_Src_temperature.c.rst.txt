@@ -46,7 +46,7 @@ Includes
 
 - ``pct2075.h`` (:ref:`file_cellboard_Inc_pct2075.h`)
 
-- ``temperature.h`` (:ref:`file_cellboard_Inc_temperature.h`)
+- ``temperature.h`` (:ref:`file_mainboard_Inc_pack_temperature.h`)
 
 
 
@@ -57,9 +57,9 @@ Functions
 ---------
 
 
-- :ref:`exhale_function_temperature_8c_1a8100629669aaaec504d11d774f1011e4`
+- :ref:`exhale_function_cellboard_2Src_2temperature_8c_1a8100629669aaaec504d11d774f1011e4`
 
-- :ref:`exhale_function_temperature_8c_1a8e51dc2da655bcb0ea1690371fe10bb7`
+- :ref:`exhale_function_cellboard_2Src_2temperature_8c_1a8e51dc2da655bcb0ea1690371fe10bb7`
 
-- :ref:`exhale_function_temperature_8c_1a11e1b6884f668ef752078d35db919268`
+- :ref:`exhale_function_cellboard_2Src_2temperature_8c_1a11e1b6884f668ef752078d35db919268`
 

@@ -72,16 +72,16 @@ Functions
 ---------
 
 
-- :ref:`exhale_function_temperature_8h_1ad5f8dceaf82578550a4ae5379a4770fb`
+- :ref:`exhale_function_cellboard_2Inc_2temperature_8h_1ad5f8dceaf82578550a4ae5379a4770fb`
 
-- :ref:`exhale_function_temperature_8h_1a8e51dc2da655bcb0ea1690371fe10bb7`
+- :ref:`exhale_function_cellboard_2Inc_2temperature_8h_1a8e51dc2da655bcb0ea1690371fe10bb7`
 
-- :ref:`exhale_function_temperature_8h_1a0bed59ad24d186ed96112a5ad9d75d97`
+- :ref:`exhale_function_cellboard_2Inc_2temperature_8h_1a0bed59ad24d186ed96112a5ad9d75d97`
 
 
 Typedefs
 --------
 
 
-- :ref:`exhale_typedef_temperature_8h_1a77ac062b2f0d5b68b2755dc75fe485ef`
+- :ref:`exhale_typedef_cellboard_2Inc_2temperature_8h_1a77ac062b2f0d5b68b2755dc75fe485ef`
 

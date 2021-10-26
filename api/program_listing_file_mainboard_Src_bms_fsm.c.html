@@ -76,7 +76,8 @@
 <span class="cp">#include</span> <span class="cpf">&quot;error.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;main.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;mainboard_config.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;pack.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;pack/pack.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;pack/voltage.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;peripherals/can_comm.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;tim.h&quot;</span><span class="cp"></span>
 
@@ -104,7 +105,7 @@
 <span class="n">bms_fsm</span> <span class="n">bms</span><span class="p">;</span>
 
 <span class="kt">void</span> <span class="nf">bms_fsm_init</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">bms</span><span class="p">.</span><span class="n">fsm</span> <span class="o">=</span> <span class="n">fsm_init</span><span class="p">(</span><span class="n">BMS_NUM_STATES</span><span class="p">,</span> <span class="n">BMS_EV_NUM</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">bms_blink_led</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+    <span class="n">bms</span><span class="p">.</span><span class="n">fsm</span> <span class="o">=</span> <span class="n">fsm_init</span><span class="p">(</span><span class="n">BMS_NUM_STATES</span><span class="p">,</span> <span class="n">BMS_EV_NUM</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">bms_blink_led</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">bms_set_led_blinker</span><span class="p">);</span>
 
     <span class="n">fsm_state</span> <span class="n">state</span><span class="p">;</span>
     <span class="n">state</span><span class="p">.</span><span class="n">run</span>     <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
@@ -135,6 +136,8 @@
     <span class="n">bms</span><span class="p">.</span><span class="n">led</span><span class="p">.</span><span class="n">port</span> <span class="o">=</span> <span class="n">STATE_LED_GPIO</span><span class="p">;</span>
     <span class="n">bms</span><span class="p">.</span><span class="n">led</span><span class="p">.</span><span class="n">pin</span>  <span class="o">=</span> <span class="n">STATE_LED_PIN</span><span class="p">;</span>
     <span class="n">bms</span><span class="p">.</span><span class="n">led</span><span class="p">.</span><span class="n">time</span> <span class="o">=</span> <span class="n">HAL_GetTick</span><span class="p">();</span>
+
+    <span class="n">bms_set_led_blinker</span><span class="p">();</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">bms_set_led_blinker</span><span class="p">()</span> <span class="p">{</span>
@@ -143,7 +146,7 @@
     <span class="kt">uint32_t</span> <span class="n">state</span>                           <span class="o">=</span> <span class="n">fsm_get_state</span><span class="p">(</span><span class="n">bms</span><span class="p">.</span><span class="n">fsm</span><span class="p">);</span>
     <span class="kt">uint16_t</span> <span class="n">pattern</span><span class="p">[(</span><span class="n">BMS_NUM_STATES</span><span class="p">)</span><span class="o">*</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
 
-    <span class="n">pattern</span><span class="p">[</span><span class="n">pattern_count</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="mi">200</span><span class="p">;</span>  <span class="c1">// Big off</span>
+    <span class="n">pattern</span><span class="p">[</span><span class="n">pattern_count</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="mi">200</span><span class="p">;</span>  <span class="c1">// Off</span>
     <span class="k">while</span> <span class="p">(</span><span class="n">state_count</span> <span class="o">&lt;</span> <span class="n">state</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">pattern</span><span class="p">[</span><span class="n">pattern_count</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="mi">200</span><span class="p">;</span>  <span class="c1">// On</span>
         <span class="n">pattern</span><span class="p">[</span><span class="n">pattern_count</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="mi">200</span><span class="p">;</span>  <span class="c1">// Off</span>
@@ -153,17 +156,13 @@
 
     <span class="n">BLINK_SET_PATTERN</span><span class="p">(</span><span class="n">bms</span><span class="p">.</span><span class="n">led</span><span class="p">,</span> <span class="n">pattern</span><span class="p">,</span> <span class="n">pattern_count</span><span class="p">);</span>
     <span class="n">BLINK_SET_ENABLE</span><span class="p">(</span><span class="n">bms</span><span class="p">.</span><span class="n">led</span><span class="p">,</span> <span class="nb">true</span><span class="p">);</span>
-    <span class="n">BLINK_SET_REPEAT</span><span class="p">(</span><span class="n">bms</span><span class="p">.</span><span class="n">led</span><span class="p">,</span> <span class="nb">false</span><span class="p">);</span>
+    <span class="n">BLINK_SET_REPEAT</span><span class="p">(</span><span class="n">bms</span><span class="p">.</span><span class="n">led</span><span class="p">,</span> <span class="nb">true</span><span class="p">);</span>
 
     <span class="n">blink_reset</span><span class="p">(</span><span class="o">&amp;</span><span class="p">(</span><span class="n">bms</span><span class="p">.</span><span class="n">led</span><span class="p">));</span>
     <span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">bms</span><span class="p">.</span><span class="n">led</span><span class="p">.</span><span class="n">port</span><span class="p">,</span> <span class="n">bms</span><span class="p">.</span><span class="n">led</span><span class="p">.</span><span class="n">pin</span><span class="p">,</span> <span class="n">GPIO_PIN_SET</span><span class="p">);</span>
 <span class="p">}</span>
 <span class="kt">void</span> <span class="nf">bms_blink_led</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">BLINK_GET_ENABLE</span><span class="p">(</span><span class="n">bms</span><span class="p">.</span><span class="n">led</span><span class="p">))</span> <span class="p">{</span>
-        <span class="n">blink_run</span><span class="p">(</span><span class="o">&amp;</span><span class="n">bms</span><span class="p">.</span><span class="n">led</span><span class="p">);</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="n">bms_set_led_blinker</span><span class="p">();</span>
-    <span class="p">}</span>
+    <span class="n">blink_run</span><span class="p">(</span><span class="o">&amp;</span><span class="n">bms</span><span class="p">.</span><span class="n">led</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">_idle_entry</span><span class="p">(</span><span class="n">fsm</span> <span class="n">FSM</span><span class="p">)</span> <span class="p">{</span>
@@ -209,10 +208,10 @@
 
         <span class="k">case</span> <span class="nl">BMS_EV_PRECHARGE_CHECK</span><span class="p">:</span>
             <span class="kt">char</span> <span class="n">c</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="sc">&#39;\0&#39;</span><span class="p">};</span>
-            <span class="n">itoa</span><span class="p">(</span><span class="n">pack_get_bus_voltage</span><span class="p">()</span> <span class="o">/</span> <span class="n">pack_get_int_voltage</span><span class="p">()</span> <span class="o">*</span> <span class="n">PRECHARGE_VOLTAGE_THRESHOLD</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+            <span class="n">itoa</span><span class="p">(</span><span class="n">voltage_get_bus</span><span class="p">()</span> <span class="o">/</span> <span class="n">voltage_get_internal</span><span class="p">()</span> <span class="o">*</span> <span class="n">PRECHARGE_VOLTAGE_THRESHOLD</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
             <span class="n">cli_bms_debug</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
 
-            <span class="k">if</span> <span class="p">(</span><span class="n">pack_get_bus_voltage</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="n">pack_get_int_voltage</span><span class="p">()</span> <span class="o">*</span> <span class="n">PRECHARGE_VOLTAGE_THRESHOLD</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">voltage_get_bus</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="n">voltage_get_internal</span><span class="p">()</span> <span class="o">*</span> <span class="n">PRECHARGE_VOLTAGE_THRESHOLD</span><span class="p">)</span> <span class="p">{</span>
                 <span class="n">fsm_transition</span><span class="p">(</span><span class="n">bms</span><span class="p">.</span><span class="n">fsm</span><span class="p">,</span> <span class="n">BMS_ON</span><span class="p">);</span>
                 <span class="n">cli_bms_debug</span><span class="p">(</span><span class="s">&quot;Precharge ok&quot;</span><span class="p">,</span> <span class="mi">18</span><span class="p">);</span>
             <span class="p">}</span>

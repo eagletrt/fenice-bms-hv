@@ -62,11 +62,11 @@ Included By
 
 - :ref:`file_mainboard_Inc_main.h`
 
-- :ref:`file_mainboard_Inc_pack.h`
-
 - :ref:`file_mainboard_Inc_error_error_list_ref.h`
 
 - :ref:`file_mainboard_Inc_feedback.h`
+
+- :ref:`file_mainboard_Inc_pack_pack.h`
 
 - :ref:`file_mainboard_Src_bms_fsm.c`
 
@@ -74,11 +74,15 @@ Included By
 
 - :ref:`file_mainboard_Src_config.c`
 
-- :ref:`file_mainboard_Src_current.c`
-
 - :ref:`file_mainboard_Src_error_error.c`
 
 - :ref:`file_mainboard_Src_main.c`
+
+- :ref:`file_mainboard_Src_pack_current.c`
+
+- :ref:`file_mainboard_Src_pack_temperature.c`
+
+- :ref:`file_mainboard_Src_pack_voltage.c`
 
 - :ref:`file_mainboard_Src_peripherals_si8900.c`
 

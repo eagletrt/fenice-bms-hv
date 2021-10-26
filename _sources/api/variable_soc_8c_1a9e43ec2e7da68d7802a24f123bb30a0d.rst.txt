@@ -3,7 +3,7 @@
 Variable soc_config
 ===================
 
-- Defined in :ref:`file_mainboard_Src_soc.c`
+- Defined in :ref:`file_mainboard_Src_energy_soc.c`
 
 
 Variable Documentation

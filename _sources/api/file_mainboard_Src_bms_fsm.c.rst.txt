@@ -58,7 +58,9 @@ Includes
 
 - ``mainboard_config.h`` (:ref:`file_mainboard_Inc_mainboard_config.h`)
 
-- ``pack.h`` (:ref:`file_mainboard_Inc_pack.h`)
+- ``pack/pack.h`` (:ref:`file_mainboard_Inc_pack_pack.h`)
+
+- ``pack/voltage.h`` (:ref:`file_mainboard_Inc_pack_voltage.h`)
 
 - ``peripherals/can_comm.h`` (:ref:`file_mainboard_Inc_peripherals_can_comm.h`)
 

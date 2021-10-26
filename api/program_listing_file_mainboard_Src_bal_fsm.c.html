@@ -75,7 +75,7 @@
 <span class="cp">#include</span> <span class="cpf">&quot;cli_bms.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;config.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;fenice_config.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;pack.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;pack/pack.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;spi.h&quot;</span><span class="cp"></span>
 
 <span class="cp">#define CONF_VER  0x01</span>
@@ -149,7 +149,7 @@
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">compute_entry</span><span class="p">(</span><span class="n">fsm</span> <span class="n">FSM</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">bal_get_cells_to_discharge</span><span class="p">(</span><span class="n">pack_get_voltages</span><span class="p">(),</span> <span class="n">PACK_CELL_COUNT</span><span class="p">,</span> <span class="n">bal_get_threshold</span><span class="p">(),</span> <span class="n">bal</span><span class="p">.</span><span class="n">cells</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">bal_get_cells_to_discharge</span><span class="p">(</span><span class="n">voltage_get_cells</span><span class="p">(),</span> <span class="n">PACK_CELL_COUNT</span><span class="p">,</span> <span class="n">bal_get_threshold</span><span class="p">(),</span> <span class="n">bal</span><span class="p">.</span><span class="n">cells</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">fsm_transition</span><span class="p">(</span><span class="n">FSM</span><span class="p">,</span> <span class="n">BAL_DISCHARGE</span><span class="p">);</span>
         <span class="k">return</span><span class="p">;</span>
     <span class="p">}</span>

@@ -76,7 +76,9 @@
 <span class="cp">#include</span> <span class="cpf">&quot;bms_fsm.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;error/error.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;feedback.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;pack.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;pack/pack.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;pack/temperature.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;pack/voltage.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;soc.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;usart.h&quot;</span><span class="cp"></span>
 
@@ -200,8 +202,8 @@
 
 <span class="kt">void</span> <span class="nf">_cli_volts</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">out</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">&quot;&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">voltage_t</span> <span class="n">max</span> <span class="o">=</span> <span class="n">pack_get_max_voltage</span><span class="p">();</span>
-        <span class="n">voltage_t</span> <span class="n">min</span> <span class="o">=</span> <span class="n">pack_get_min_voltage</span><span class="p">();</span>
+        <span class="n">voltage_t</span> <span class="n">max</span> <span class="o">=</span> <span class="n">voltage_get_cell_max</span><span class="p">();</span>
+        <span class="n">voltage_t</span> <span class="n">min</span> <span class="o">=</span> <span class="n">voltage_get_cell_min</span><span class="p">();</span>
         <span class="n">sprintf</span><span class="p">(</span>
             <span class="n">out</span><span class="p">,</span>
             <span class="s">&quot;bus.......%.2f V</span><span class="se">\r\n</span><span class="s">&quot;</span>
@@ -210,9 +212,9 @@
             <span class="s">&quot;max.......%.3f V</span><span class="se">\r\n</span><span class="s">&quot;</span>
             <span class="s">&quot;min.......%.3f V</span><span class="se">\r\n</span><span class="s">&quot;</span>
             <span class="s">&quot;delta.....%.3f V</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span>
-            <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">pack_get_bus_voltage</span><span class="p">()</span> <span class="o">/</span> <span class="mi">100</span><span class="p">,</span>
-            <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">pack_get_int_voltage</span><span class="p">()</span> <span class="o">/</span> <span class="mi">100</span><span class="p">,</span>
-            <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">pack_get_int_voltage</span><span class="p">()</span> <span class="o">/</span> <span class="n">PACK_CELL_COUNT</span> <span class="o">/</span> <span class="mi">100</span><span class="p">,</span>
+            <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">voltage_get_bus</span><span class="p">()</span> <span class="o">/</span> <span class="mi">100</span><span class="p">,</span>
+            <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">voltage_get_internal</span><span class="p">()</span> <span class="o">/</span> <span class="mi">100</span><span class="p">,</span>
+            <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">voltage_get_internal</span><span class="p">()</span> <span class="o">/</span> <span class="n">PACK_CELL_COUNT</span> <span class="o">/</span> <span class="mi">100</span><span class="p">,</span>
             <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">max</span> <span class="o">/</span> <span class="mi">10000</span><span class="p">,</span>
             <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">min</span> <span class="o">/</span> <span class="mi">10000</span><span class="p">,</span>
             <span class="p">(</span><span class="kt">float</span><span class="p">)(</span><span class="n">max</span> <span class="o">-</span> <span class="n">min</span><span class="p">)</span> <span class="o">/</span> <span class="mi">10000</span><span class="p">);</span>
@@ -238,33 +240,33 @@
             <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span> <span class="o">+</span> <span class="n">strlen</span><span class="p">(</span><span class="n">out</span><span class="p">),</span> <span class="s">&quot;</span><span class="se">\r\n</span><span class="s">%-3s&quot;</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">);</span>
         <span class="p">}</span>
 
-        <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span> <span class="o">+</span> <span class="n">strlen</span><span class="p">(</span><span class="n">out</span><span class="p">),</span> <span class="s">&quot;[%3u %-.3fv] &quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">pack_get_voltages</span><span class="p">()[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="mi">10000</span><span class="p">);</span>
+        <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span> <span class="o">+</span> <span class="n">strlen</span><span class="p">(</span><span class="n">out</span><span class="p">),</span> <span class="s">&quot;[%3u %-.3fv] &quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">voltage_get_cells</span><span class="p">()[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="mi">10000</span><span class="p">);</span>
     <span class="p">}</span>
 
     <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span> <span class="o">+</span> <span class="n">strlen</span><span class="p">(</span><span class="n">out</span><span class="p">),</span> <span class="s">&quot;</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">_cli_temps</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">out</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">&quot;&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">sprintf</span><span class="p">(</span>
-            <span class="n">out</span><span class="p">,</span>
-            <span class="s">&quot;average.....%.1f C</span><span class="se">\r\n</span><span class="s">max.........%2u &quot;</span>
-            <span class="s">&quot;C</span><span class="se">\r\n</span><span class="s">min.........%2u C</span><span class="se">\r\n</span><span class="s">&quot;</span>
-            <span class="s">&quot;delta.......%2u C</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span>
-            <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">pack_get_mean_temperature</span><span class="p">()</span> <span class="o">/</span> <span class="mi">10</span><span class="p">,</span>
-            <span class="n">pack_get_max_temperature</span><span class="p">(),</span>
-            <span class="n">pack_get_min_temperature</span><span class="p">(),</span>
-            <span class="n">pack_get_max_temperature</span><span class="p">()</span> <span class="o">-</span> <span class="n">pack_get_min_temperature</span><span class="p">());</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">&quot;all&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">_cli_temps_all</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">out</span><span class="p">);</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="n">sprintf</span><span class="p">(</span>
-            <span class="n">out</span><span class="p">,</span>
-            <span class="s">&quot;Unknown parameter: %s</span><span class="se">\r\n</span><span class="s">&quot;</span>
-            <span class="s">&quot;valid parameters:</span><span class="se">\r\n</span><span class="s">&quot;</span>
-            <span class="s">&quot;- all: returns temperature for all cells</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span>
-            <span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
-    <span class="p">}</span>
+    <span class="c1">//if (strcmp(argv[1], &quot;&quot;) == 0) {</span>
+    <span class="c1">//    sprintf(</span>
+    <span class="c1">//        out,</span>
+    <span class="c1">//        &quot;average.....%.1f C\r\nmax.........%2u &quot;</span>
+    <span class="c1">//        &quot;C\r\nmin.........%2u C\r\n&quot;</span>
+    <span class="c1">//        &quot;delta.......%2u C\r\n&quot;,</span>
+    <span class="c1">//        (float)pack_get_mean_temperature() / 10,</span>
+    <span class="c1">//        pack_get_max_temperature(),</span>
+    <span class="c1">//        pack_get_min_temperature(),</span>
+    <span class="c1">//        pack_get_max_temperature() - pack_get_min_temperature());</span>
+    <span class="c1">//} else if (strcmp(argv[1], &quot;all&quot;) == 0) {</span>
+    <span class="c1">//    _cli_temps_all(argc, &amp;argv[1], out);</span>
+    <span class="c1">//} else {</span>
+    <span class="c1">//    sprintf(</span>
+    <span class="c1">//        out,</span>
+    <span class="c1">//        &quot;Unknown parameter: %s\r\n&quot;</span>
+    <span class="c1">//        &quot;valid parameters:\r\n&quot;</span>
+    <span class="c1">//        &quot;- all: returns temperature for all cells\r\n&quot;,</span>
+    <span class="c1">//        argv[1]);</span>
+    <span class="c1">//}</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">_cli_temps_all</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">out</span><span class="p">)</span> <span class="p">{</span>
@@ -276,7 +278,7 @@
         <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="p">(</span><span class="n">TEMP_SENSOR_COUNT</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
             <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span> <span class="o">+</span> <span class="n">strlen</span><span class="p">(</span><span class="n">out</span><span class="p">),</span> <span class="s">&quot;</span><span class="se">\r\n</span><span class="s">%-3s&quot;</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">);</span>
         <span class="p">}</span>
-        <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span> <span class="o">+</span> <span class="n">strlen</span><span class="p">(</span><span class="n">out</span><span class="p">),</span> <span class="s">&quot;[%3u %2uc] &quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">pack_get_temperatures</span><span class="p">()[</span><span class="n">i</span><span class="p">]);</span>
+        <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span> <span class="o">+</span> <span class="n">strlen</span><span class="p">(</span><span class="n">out</span><span class="p">),</span> <span class="s">&quot;[%3u %2uc] &quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">temperature_get_all</span><span class="p">()[</span><span class="n">i</span><span class="p">]);</span>
     <span class="p">}</span>
 
     <span class="n">sprintf</span><span class="p">(</span><span class="n">out</span> <span class="o">+</span> <span class="n">strlen</span><span class="p">(</span><span class="n">out</span><span class="p">),</span> <span class="s">&quot;</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">);</span>

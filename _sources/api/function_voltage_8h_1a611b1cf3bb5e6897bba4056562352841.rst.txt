@@ -1,0 +1,13 @@
+.. _exhale_function_voltage_8h_1a611b1cf3bb5e6897bba4056562352841:
+
+Function voltage_get_cell_max()
+===============================
+
+- Defined in :ref:`file_mainboard_Inc_pack_voltage.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: voltage_get_cell_max()

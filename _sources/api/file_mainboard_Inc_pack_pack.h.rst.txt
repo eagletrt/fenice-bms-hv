@@ -1,0 +1,85 @@
+
+.. _file_mainboard_Inc_pack_pack.h:
+
+File pack.h
+===========
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Inc_pack>` (``mainboard/Inc/pack``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+This file contains the functions to manage the battery pack state. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Inc/pack/pack.h``)
+------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Inc_pack_pack.h.rst
+
+
+
+Detailed Description
+--------------------
+
+Apr 11, 2019 
+
+Matteo Bonora [matteo.bonora@studenti.unitn.it] 
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``error/error.h`` (:ref:`file_mainboard_Inc_error_error.h`)
+
+- ``inttypes.h``
+
+- ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_mainboard_Src_bal_fsm.c`
+
+- :ref:`file_mainboard_Src_bms_fsm.c`
+
+- :ref:`file_mainboard_Src_cli_bms.c`
+
+- :ref:`file_mainboard_Src_pack_pack.c`
+
+- :ref:`file_mainboard_Src_peripherals_can_comm.c`
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_pack_8h_1a9d97a0ffd5453bbe2b7e55b73eb0131a`
+
+- :ref:`exhale_function_pack_8h_1a11b76b127aed2ee361e2615bd9ba6d1a`
+
+- :ref:`exhale_function_pack_8h_1a892b040f241c24a0894cd094209ecb1c`
+
+- :ref:`exhale_function_pack_8h_1a2f41a2ff4246719c3c4d066a2f399540`
+
+- :ref:`exhale_function_pack_8h_1ab2b35f6b2db327d1614bc09d976bc482`
+

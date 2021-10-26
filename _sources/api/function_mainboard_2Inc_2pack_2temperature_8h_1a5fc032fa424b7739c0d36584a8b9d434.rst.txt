@@ -1,0 +1,13 @@
+.. _exhale_function_mainboard_2Inc_2pack_2temperature_8h_1a5fc032fa424b7739c0d36584a8b9d434:
+
+Function temperature_get_max()
+==============================
+
+- Defined in :ref:`file_mainboard_Inc_pack_temperature.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: temperature_get_max()

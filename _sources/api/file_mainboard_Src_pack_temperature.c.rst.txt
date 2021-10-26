@@ -1,0 +1,86 @@
+
+.. _file_mainboard_Src_pack_temperature.c:
+
+File temperature.c
+==================
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Src_pack>` (``mainboard/Src/pack``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+Functions to manage all cell temperatures. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Src/pack/temperature.c``)
+-------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Src_pack_temperature.c.rst
+
+
+
+Detailed Description
+--------------------
+
+Apr 11, 2019 
+
+Matteo Bonora [matteo.bonora@studenti.unitn.it] 
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``error/error.h`` (:ref:`file_mainboard_Inc_error_error.h`)
+
+- ``inttypes.h``
+
+- ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
+
+- ``mainboard_config.h`` (:ref:`file_mainboard_Inc_mainboard_config.h`)
+
+- ``math.h``
+
+- ``pack/temperature.h`` (:ref:`file_mainboard_Inc_pack_temperature.h`)
+
+
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_mainboard_2Src_2pack_2temperature_8c_1a467cb9d4ca7e3a0eac6cf217ab0b77c1`
+
+- :ref:`exhale_function_mainboard_2Src_2pack_2temperature_8c_1ac047a12951f25f4c572700472f8663ea`
+
+- :ref:`exhale_function_mainboard_2Src_2pack_2temperature_8c_1a159fd7055d0d106d12d86aee9b9dab06`
+
+- :ref:`exhale_function_mainboard_2Src_2pack_2temperature_8c_1a5fc032fa424b7739c0d36584a8b9d434`
+
+- :ref:`exhale_function_mainboard_2Src_2pack_2temperature_8c_1a5150dec03dce5db1a854c2021d186798`
+
+- :ref:`exhale_function_mainboard_2Src_2pack_2temperature_8c_1abb0c1f74cbd0591c63858c57917c566e`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_mainboard_2Src_2pack_2temperature_8c_1afc42cda157138bd073855bde2445bbf2`
+

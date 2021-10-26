@@ -14,7 +14,9 @@ Directory Inc
 Subdirectories
 --------------
 
+- :ref:`dir_mainboard_Inc_energy`
 - :ref:`dir_mainboard_Inc_error`
+- :ref:`dir_mainboard_Inc_pack`
 - :ref:`dir_mainboard_Inc_peripherals`
 
 
@@ -28,16 +30,12 @@ Files
 - :ref:`file_mainboard_Inc_can.h`
 - :ref:`file_mainboard_Inc_cli_bms.h`
 - :ref:`file_mainboard_Inc_config.h`
-- :ref:`file_mainboard_Inc_current.h`
 - :ref:`file_mainboard_Inc_dma.h`
-- :ref:`file_mainboard_Inc_energy.h`
 - :ref:`file_mainboard_Inc_feedback.h`
 - :ref:`file_mainboard_Inc_fenice_config.h`
 - :ref:`file_mainboard_Inc_gpio.h`
 - :ref:`file_mainboard_Inc_main.h`
 - :ref:`file_mainboard_Inc_mainboard_config.h`
-- :ref:`file_mainboard_Inc_pack.h`
-- :ref:`file_mainboard_Inc_soc.h`
 - :ref:`file_mainboard_Inc_spi.h`
 - :ref:`file_mainboard_Inc_stm32f4xx_hal_conf.h`
 - :ref:`file_mainboard_Inc_stm32f4xx_it.h`

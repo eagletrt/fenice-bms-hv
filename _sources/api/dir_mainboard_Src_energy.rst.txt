@@ -1,0 +1,21 @@
+.. _dir_mainboard_Src_energy:
+
+
+Directory energy
+================
+
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Src>` (``mainboard/Src``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+*Directory path:* ``mainboard/Src/energy``
+
+
+Files
+-----
+
+- :ref:`file_mainboard_Src_energy_energy.c`
+- :ref:`file_mainboard_Src_energy_soc.c`
+
+

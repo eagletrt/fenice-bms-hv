@@ -3,7 +3,7 @@
 Function soc_get_energy_total()
 ===============================
 
-- Defined in :ref:`file_mainboard_Src_soc.c`
+- Defined in :ref:`file_mainboard_Src_energy_soc.c`
 
 
 Function Documentation

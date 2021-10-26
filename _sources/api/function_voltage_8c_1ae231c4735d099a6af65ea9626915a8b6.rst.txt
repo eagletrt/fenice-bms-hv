@@ -1,0 +1,13 @@
+.. _exhale_function_voltage_8c_1ae231c4735d099a6af65ea9626915a8b6:
+
+Function voltage_get_internal()
+===============================
+
+- Defined in :ref:`file_mainboard_Src_pack_voltage.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: voltage_get_internal()

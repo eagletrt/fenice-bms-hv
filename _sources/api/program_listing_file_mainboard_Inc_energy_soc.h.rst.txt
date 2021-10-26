@@ -1,0 +1,29 @@
+
+.. _program_listing_file_mainboard_Inc_energy_soc.h:
+
+Program Listing for File soc.h
+==============================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_mainboard_Inc_energy_soc.h>` (``mainboard/Inc/energy/soc.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   #pragma once
+   
+   #include "config.h"
+   #include "pack/current.h"
+   
+   void soc_init();
+   
+   void soc_sample_energy(uint32_t timestamp);
+   
+   void soc_reset_soc();
+   
+   float soc_get_soc();
+   
+   float soc_get_energy_total();
+   
+   float soc_get_energy_last_charge();

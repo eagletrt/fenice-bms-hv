@@ -1,0 +1,13 @@
+.. _exhale_function_mainboard_2Src_2pack_2temperature_8c_1a159fd7055d0d106d12d86aee9b9dab06:
+
+Function temperature_get_average()
+==================================
+
+- Defined in :ref:`file_mainboard_Src_pack_temperature.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: temperature_get_average()

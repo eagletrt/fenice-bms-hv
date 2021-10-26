@@ -1,0 +1,13 @@
+.. _exhale_variable_voltage_8c_1a366d000d6c1a0107c23d2e2383ea3191:
+
+Variable voltage
+================
+
+- Defined in :ref:`file_mainboard_Src_pack_voltage.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: voltage

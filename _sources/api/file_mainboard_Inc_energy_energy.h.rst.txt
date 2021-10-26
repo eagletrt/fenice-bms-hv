@@ -1,0 +1,88 @@
+
+.. _file_mainboard_Inc_energy_energy.h:
+
+File energy.h
+=============
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Inc_energy>` (``mainboard/Inc/energy``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+This file contains functions and utilities around energy monitoring. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Inc/energy/energy.h``)
+----------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Inc_energy_energy.h.rst
+
+
+
+Detailed Description
+--------------------
+
+May 12, 2021 
+
+Matteo Bonora [matteo.bonora@studenti.unitn.it] 
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``inttypes.h``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_mainboard_Src_energy_energy.c`
+
+- :ref:`file_mainboard_Src_energy_soc.c`
+
+- :ref:`file_mainboard_Src_super_fsm.c`
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_energy_8h_1a4c63605f712943eb97f7a669e7644d8f`
+
+- :ref:`exhale_function_energy_8h_1aa0839bab4546eda767ce6f3d7dd82ae4`
+
+- :ref:`exhale_function_energy_8h_1afa8359582449380e4021f8b97d196d8e`
+
+- :ref:`exhale_function_energy_8h_1a8150d370eb03a63ede7290859c5f1fba`
+
+- :ref:`exhale_function_energy_8h_1a98ca1607190de7a97aaec4d36d77ea87`
+
+- :ref:`exhale_function_energy_8h_1a09544ccc8f58bd4fe2a030ae944000e4`
+
+- :ref:`exhale_function_energy_8h_1a2267a2f59b88843c7471835461e5d1fb`
+
+
+Typedefs
+--------
+
+
+- :ref:`exhale_typedef_energy_8h_1a021813300c476a1b7a3dca889e3da893`
+

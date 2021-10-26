@@ -1,0 +1,65 @@
+
+.. _file_mainboard_Src_pack_pack.c:
+
+File pack.c
+===========
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Src_pack>` (``mainboard/Src/pack``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+This file contains the functions to manage the battery pack state. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Src/pack/pack.c``)
+------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Src_pack_pack.c.rst
+
+
+
+Detailed Description
+--------------------
+
+Apr 11, 2019 
+
+Matteo Bonora [matteo.bonora@studenti.unitn.it] 
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``feedback.h`` (:ref:`file_mainboard_Inc_feedback.h`)
+
+- ``pack/pack.h`` (:ref:`file_mainboard_Inc_pack_pack.h`)
+
+
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_pack_8c_1a11b76b127aed2ee361e2615bd9ba6d1a`
+
+- :ref:`exhale_function_pack_8c_1a892b040f241c24a0894cd094209ecb1c`
+
+- :ref:`exhale_function_pack_8c_1a2f41a2ff4246719c3c4d066a2f399540`
+

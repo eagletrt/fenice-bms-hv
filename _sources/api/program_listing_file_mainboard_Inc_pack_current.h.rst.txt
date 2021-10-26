@@ -1,0 +1,32 @@
+
+.. _program_listing_file_mainboard_Inc_pack_current.h:
+
+Program Listing for File current.h
+==================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_mainboard_Inc_pack_current.h>` (``mainboard/Inc/pack/current.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   #pragma once
+   
+   #include <fenice_config.h>
+   
+   enum CURRENT_SENSORS { CURRENT_SENSOR_50 = 0, CURRENT_SENSOR_300, CURRENT_SENSOR_SHUNT, CURRENT_SENSOR_NUM };
+   
+   typedef float current_t;
+   
+   void current_start_measure();
+   
+   uint32_t current_read();
+   
+   void current_zero();
+   
+   current_t current_get_current();
+   
+   current_t *current_get_current_sensors();
+   
+   current_t *current_get_zero();

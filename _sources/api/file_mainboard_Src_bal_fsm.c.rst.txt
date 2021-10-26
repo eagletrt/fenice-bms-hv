@@ -52,7 +52,7 @@ Includes
 
 - ``fenice_config.h`` (:ref:`file_mainboard_Inc_fenice_config.h`)
 
-- ``pack.h`` (:ref:`file_mainboard_Inc_pack.h`)
+- ``pack/pack.h`` (:ref:`file_mainboard_Inc_pack_pack.h`)
 
 - ``spi.h`` (:ref:`file_mainboard_Inc_spi.h`)
 

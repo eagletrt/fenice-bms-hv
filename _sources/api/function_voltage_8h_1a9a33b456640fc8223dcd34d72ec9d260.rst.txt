@@ -1,0 +1,13 @@
+.. _exhale_function_voltage_8h_1a9a33b456640fc8223dcd34d72ec9d260:
+
+Function voltage_init()
+=======================
+
+- Defined in :ref:`file_mainboard_Inc_pack_voltage.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: voltage_init()

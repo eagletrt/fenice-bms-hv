@@ -3,7 +3,7 @@
 Function soc_get_soc()
 ======================
 
-- Defined in :ref:`file_mainboard_Inc_soc.h`
+- Defined in :ref:`file_mainboard_Inc_energy_soc.h`
 
 
 Function Documentation

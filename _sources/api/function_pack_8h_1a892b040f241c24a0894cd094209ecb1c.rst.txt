@@ -3,7 +3,7 @@
 Function pack_set_precharge_end()
 =================================
 
-- Defined in :ref:`file_mainboard_Inc_pack.h`
+- Defined in :ref:`file_mainboard_Inc_pack_pack.h`
 
 
 Function Documentation

@@ -41,8 +41,6 @@ Includes
 
 - ``config.h`` (:ref:`file_mainboard_Inc_config.h`)
 
-- ``current.h`` (:ref:`file_mainboard_Inc_current.h`)
-
 - ``dma.h`` (:ref:`file_mainboard_Inc_dma.h`)
 
 - ``error/error.h`` (:ref:`file_mainboard_Inc_error_error.h`)
@@ -55,11 +53,13 @@ Includes
 
 - ``mainboard_config.h`` (:ref:`file_mainboard_Inc_mainboard_config.h`)
 
+- ``pack/current.h`` (:ref:`file_mainboard_Inc_pack_current.h`)
+
 - ``peripherals/can_comm.h`` (:ref:`file_mainboard_Inc_peripherals_can_comm.h`)
 
 - ``si8900.h`` (:ref:`file_mainboard_Inc_peripherals_si8900.h`)
 
-- ``soc.h`` (:ref:`file_mainboard_Inc_soc.h`)
+- ``soc.h`` (:ref:`file_mainboard_Inc_energy_soc.h`)
 
 - ``spi.h`` (:ref:`file_mainboard_Inc_spi.h`)
 

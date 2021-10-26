@@ -24,11 +24,6 @@ Classes and Structs
 .. toctree::
    :maxdepth: 5
 
-   structcells__t.rst
-
-.. toctree::
-   :maxdepth: 5
-
    structconfig.rst
 
 .. toctree::
@@ -50,6 +45,11 @@ Classes and Structs
    :maxdepth: 5
 
    structtemperature.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structvoltage.rst
 
 Enums
 *****
@@ -248,11 +248,6 @@ Functions
    :maxdepth: 5
 
    function_bal_8c_1ad42bcabde24aacfde9c874645e976e13.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_pack_8c_1aa61e85cd7f306656a67272edaf145f6c.rst
 
 .. toctree::
    :maxdepth: 5
@@ -727,42 +722,32 @@ Functions
 .. toctree::
    :maxdepth: 5
 
-   function_energy_8h_1af86988759d7c5601e88e260917ea5785.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_energy_8c_1af86988759d7c5601e88e260917ea5785.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_energy_8h_1a964dbfec9af37f2001217e0029b63334.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_energy_8c_1a964dbfec9af37f2001217e0029b63334.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_energy_8h_1ae0e39d06c70e5c372acd811d060b091f.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_energy_8c_1ae0e39d06c70e5c372acd811d060b091f.rst
-
-.. toctree::
-   :maxdepth: 5
-
    function_energy_8h_1a98ca1607190de7a97aaec4d36d77ea87.rst
 
 .. toctree::
    :maxdepth: 5
 
    function_energy_8c_1a98ca1607190de7a97aaec4d36d77ea87.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_energy_8h_1a09544ccc8f58bd4fe2a030ae944000e4.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_energy_8c_1a09544ccc8f58bd4fe2a030ae944000e4.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_energy_8h_1a2267a2f59b88843c7471835461e5d1fb.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_energy_8c_1a2267a2f59b88843c7471835461e5d1fb.rst
 
 .. toctree::
    :maxdepth: 5
@@ -1332,102 +1317,7 @@ Functions
 .. toctree::
    :maxdepth: 5
 
-   function_pack_8h_1a62b44ad3586608b81dce6a617b3e7f31.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_pack_8c_1a62b44ad3586608b81dce6a617b3e7f31.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_pack_8h_1a0e3de3b0a68560c145c795f7debfb95d.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_pack_8c_1a0e3de3b0a68560c145c795f7debfb95d.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_pack_8h_1a818a31883355a6379662b84884e4d8e4.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_pack_8c_1a818a31883355a6379662b84884e4d8e4.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_pack_8h_1a8449975cb2e30ea9d8a723cfbd837e6b.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_pack_8c_1a8449975cb2e30ea9d8a723cfbd837e6b.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_pack_8h_1a26d540cfe0798ce6ee7e3e1c98ebf91e.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_pack_8c_1a26d540cfe0798ce6ee7e3e1c98ebf91e.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_pack_8h_1afc77225b3417710fec24e84556825ea2.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_pack_8c_1afc77225b3417710fec24e84556825ea2.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_pack_8h_1a72b388852db07771e836901e5561503e.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_pack_8c_1a72b388852db07771e836901e5561503e.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_pack_8h_1a51f16a179823be9e0b981fa7ccdaa7dd.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_pack_8c_1a51f16a179823be9e0b981fa7ccdaa7dd.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_pack_8h_1a91acae66b5ea4b819e36a88c776baf3f.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_pack_8c_1a91acae66b5ea4b819e36a88c776baf3f.rst
-
-.. toctree::
-   :maxdepth: 5
-
    function_pack_8h_1a9d97a0ffd5453bbe2b7e55b73eb0131a.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_pack_8c_1a9d97a0ffd5453bbe2b7e55b73eb0131a.rst
 
 .. toctree::
    :maxdepth: 5
@@ -1463,31 +1353,6 @@ Functions
    :maxdepth: 5
 
    function_pack_8h_1ab2b35f6b2db327d1614bc09d976bc482.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_pack_8c_1ab2b35f6b2db327d1614bc09d976bc482.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_pack_8h_1a182c1da5d0bad07df594abc7f4d3c81d.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_pack_8c_1a6d7f45189cc82cf7a910d844fd14d7d8.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_pack_8h_1a7c06c9a1f0931d8f3b9f5fda36a8ad93.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_pack_8c_1a7c06c9a1f0931d8f3b9f5fda36a8ad93.rst
 
 .. toctree::
    :maxdepth: 5
@@ -1737,32 +1602,92 @@ Functions
 .. toctree::
    :maxdepth: 5
 
-   function_temperature_8h_1ad5f8dceaf82578550a4ae5379a4770fb.rst
+   function_mainboard_2Inc_2pack_2temperature_8h_1a467cb9d4ca7e3a0eac6cf217ab0b77c1.rst
 
 .. toctree::
    :maxdepth: 5
 
-   function_temperature_8c_1a8100629669aaaec504d11d774f1011e4.rst
+   function_mainboard_2Src_2pack_2temperature_8c_1a467cb9d4ca7e3a0eac6cf217ab0b77c1.rst
 
 .. toctree::
    :maxdepth: 5
 
-   function_temperature_8h_1a8e51dc2da655bcb0ea1690371fe10bb7.rst
+   function_mainboard_2Inc_2pack_2temperature_8h_1ac047a12951f25f4c572700472f8663ea.rst
 
 .. toctree::
    :maxdepth: 5
 
-   function_temperature_8c_1a8e51dc2da655bcb0ea1690371fe10bb7.rst
+   function_mainboard_2Src_2pack_2temperature_8c_1ac047a12951f25f4c572700472f8663ea.rst
 
 .. toctree::
    :maxdepth: 5
 
-   function_temperature_8h_1a0bed59ad24d186ed96112a5ad9d75d97.rst
+   function_mainboard_2Inc_2pack_2temperature_8h_1a159fd7055d0d106d12d86aee9b9dab06.rst
 
 .. toctree::
    :maxdepth: 5
 
-   function_temperature_8c_1a11e1b6884f668ef752078d35db919268.rst
+   function_cellboard_2Inc_2temperature_8h_1ad5f8dceaf82578550a4ae5379a4770fb.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_mainboard_2Src_2pack_2temperature_8c_1a159fd7055d0d106d12d86aee9b9dab06.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_cellboard_2Src_2temperature_8c_1a8100629669aaaec504d11d774f1011e4.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_cellboard_2Inc_2temperature_8h_1a8e51dc2da655bcb0ea1690371fe10bb7.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_cellboard_2Src_2temperature_8c_1a8e51dc2da655bcb0ea1690371fe10bb7.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_mainboard_2Inc_2pack_2temperature_8h_1a5fc032fa424b7739c0d36584a8b9d434.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_mainboard_2Src_2pack_2temperature_8c_1a5fc032fa424b7739c0d36584a8b9d434.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_mainboard_2Inc_2pack_2temperature_8h_1a5150dec03dce5db1a854c2021d186798.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_mainboard_2Src_2pack_2temperature_8c_1a5150dec03dce5db1a854c2021d186798.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_mainboard_2Inc_2pack_2temperature_8h_1abb0c1f74cbd0591c63858c57917c566e.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_mainboard_2Src_2pack_2temperature_8c_1abb0c1f74cbd0591c63858c57917c566e.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_cellboard_2Inc_2temperature_8h_1a0bed59ad24d186ed96112a5ad9d75d97.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_cellboard_2Src_2temperature_8c_1a11e1b6884f668ef752078d35db919268.rst
 
 .. toctree::
    :maxdepth: 5
@@ -1843,6 +1768,76 @@ Functions
    :maxdepth: 5
 
    function_mainboard_2Src_2stm32f4xx__it_8c_1a0d108a3468b2051548183ee5ca2158a0.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_voltage_8h_1a3ab7e8edf8fb9ef57439f4badcb59559.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_voltage_8c_1a3ab7e8edf8fb9ef57439f4badcb59559.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_voltage_8h_1a611b1cf3bb5e6897bba4056562352841.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_voltage_8c_1a611b1cf3bb5e6897bba4056562352841.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_voltage_8h_1a5e42c54ec12fab7213619c314331f3ee.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_voltage_8c_1a5e42c54ec12fab7213619c314331f3ee.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_voltage_8h_1aaa38c21bbd4f88db1f72805f472f3c41.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_voltage_8c_1aaa38c21bbd4f88db1f72805f472f3c41.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_voltage_8h_1ae231c4735d099a6af65ea9626915a8b6.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_voltage_8c_1ae231c4735d099a6af65ea9626915a8b6.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_voltage_8h_1a9a33b456640fc8223dcd34d72ec9d260.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_voltage_8c_1a9a33b456640fc8223dcd34d72ec9d260.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_voltage_8h_1ae10b086f3b0cf83be3de5c6d2992e070.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_voltage_8c_1ae10b086f3b0cf83be3de5c6d2992e070.rst
 
 Variables
 *********
@@ -1982,11 +1977,6 @@ Variables
    :maxdepth: 5
 
    variable_cli__bms_8c_1a5b79c4930a5cbbea19247cdfa1f81130.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   variable_pack_8c_1a22fb404da4d9ebc546ffb3bd5a9ad469.rst
 
 .. toctree::
    :maxdepth: 5
@@ -2431,12 +2421,22 @@ Variables
 .. toctree::
    :maxdepth: 5
 
+   variable_mainboard_2Src_2pack_2temperature_8c_1afc42cda157138bd073855bde2445bbf2.rst
+
+.. toctree::
+   :maxdepth: 5
+
    variable_cellboard_2Src_2main_8c_1a104a126b75d6326f3d7a6739d7bab444.rst
 
 .. toctree::
    :maxdepth: 5
 
    variable_can__comm_8c_1af5c6f63f23092369c69250c3c636da03.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   variable_voltage_8c_1a366d000d6c1a0107c23d2e2383ea3191.rst
 
 .. toctree::
    :maxdepth: 5
@@ -3470,6 +3470,11 @@ Defines
 .. toctree::
    :maxdepth: 5
 
+   define_mainboard_2Inc_2main_8h_1afa99ec4acc4ecb2dc3c2d05da15d0e3f.rst
+
+.. toctree::
+   :maxdepth: 5
+
    define_bal_8c_1affe776513b24d84b39af8ab0930fef7f.rst
 
 .. toctree::
@@ -3480,12 +3485,12 @@ Defines
 .. toctree::
    :maxdepth: 5
 
-   define_pack_8c_1affe776513b24d84b39af8ab0930fef7f.rst
+   define_current_8c_1a0c5bf205f2c3ac62204feb12e1d57c65.rst
 
 .. toctree::
    :maxdepth: 5
 
-   define_current_8c_1a0c5bf205f2c3ac62204feb12e1d57c65.rst
+   define_mainboard_2Inc_2main_8h_1a3acffbd305ee72dcd4593c0d8af64a4f.rst
 
 .. toctree::
    :maxdepth: 5
@@ -3496,11 +3501,6 @@ Defines
    :maxdepth: 5
 
    define_error_8c_1ac6afabdc09a49a433ee19d8a9486056d.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   define_pack_8c_1ac6afabdc09a49a433ee19d8a9486056d.rst
 
 .. toctree::
    :maxdepth: 5
@@ -4314,24 +4314,14 @@ Typedefs
 .. toctree::
    :maxdepth: 5
 
-   typedef_temperature_8h_1a77ac062b2f0d5b68b2755dc75fe485ef.rst
+   typedef_mainboard_2Inc_2pack_2temperature_8h_1a7f0e4c8e257063101aa9f4cc03644195.rst
 
 .. toctree::
    :maxdepth: 5
 
-   typedef_mainboard_2Inc_2fenice__config_8h_1a7f0e4c8e257063101aa9f4cc03644195.rst
+   typedef_cellboard_2Inc_2temperature_8h_1a77ac062b2f0d5b68b2755dc75fe485ef.rst
 
 .. toctree::
    :maxdepth: 5
 
-   typedef_cellboard_2Inc_2fenice__config_8h_1a7f0e4c8e257063101aa9f4cc03644195.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   typedef_mainboard_2Inc_2fenice__config_8h_1a919cc27d97b06cf5d67cf5a9bc181dc2.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   typedef_cellboard_2Inc_2fenice__config_8h_1a919cc27d97b06cf5d67cf5a9bc181dc2.rst
+   typedef_voltage_8h_1a919cc27d97b06cf5d67cf5a9bc181dc2.rst

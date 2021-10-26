@@ -3,7 +3,7 @@
 Function current_start_measure()
 ================================
 
-- Defined in :ref:`file_mainboard_Src_current.c`
+- Defined in :ref:`file_mainboard_Src_pack_current.c`
 
 
 Function Documentation

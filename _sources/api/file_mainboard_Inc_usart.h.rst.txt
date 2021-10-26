@@ -57,6 +57,8 @@ Included By
 
 - :ref:`file_mainboard_Src_main.c`
 
+- :ref:`file_mainboard_Src_pack_voltage.c`
+
 - :ref:`file_mainboard_Src_peripherals_si8900.c`
 
 - :ref:`file_mainboard_Src_super_fsm.c`

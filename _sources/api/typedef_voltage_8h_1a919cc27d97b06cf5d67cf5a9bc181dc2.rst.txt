@@ -1,0 +1,13 @@
+.. _exhale_typedef_voltage_8h_1a919cc27d97b06cf5d67cf5a9bc181dc2:
+
+Typedef voltage_t
+=================
+
+- Defined in :ref:`file_mainboard_Inc_pack_voltage.h`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: voltage_t

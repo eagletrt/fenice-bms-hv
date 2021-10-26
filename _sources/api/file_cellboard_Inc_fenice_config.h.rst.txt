@@ -31,7 +31,7 @@ Definition (``cellboard/Inc/fenice_config.h``)
 Detailed Description
 --------------------
 
-Oct 07, 2019 
+Oct 07, 2019
 
 Matteo Bonora [matteo.bonora@studenti.unitn.it] 
 
@@ -53,6 +53,8 @@ Includes
 Included By
 -----------
 
+
+- :ref:`file_mainboard_Inc_pack_current.h`
 
 - :ref:`file_mainboard_Src_bal_fsm.c`
 
@@ -120,15 +122,6 @@ Defines
 - :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1a90f72c040a242c1ea3bf9bf6d2413cc1`
 
 - :ref:`exhale_define_cellboard_2Inc_2fenice__config_8h_1aa398e83b4f84621e9d677b0896d72c6c`
-
-
-Typedefs
---------
-
-
-- :ref:`exhale_typedef_cellboard_2Inc_2fenice__config_8h_1a7f0e4c8e257063101aa9f4cc03644195`
-
-- :ref:`exhale_typedef_cellboard_2Inc_2fenice__config_8h_1a919cc27d97b06cf5d67cf5a9bc181dc2`
 
 
 Variables

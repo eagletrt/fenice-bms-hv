@@ -50,6 +50,8 @@ Includes
 
 - ``mainboard_config.h`` (:ref:`file_mainboard_Inc_mainboard_config.h`)
 
+- ``pack/voltage.h`` (:ref:`file_mainboard_Inc_pack_voltage.h`)
+
 - ``stdbool.h``
 
 

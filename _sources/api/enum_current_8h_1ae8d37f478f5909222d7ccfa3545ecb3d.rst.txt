@@ -3,7 +3,7 @@
 Enum CURRENT_SENSORS
 ====================
 
-- Defined in :ref:`file_mainboard_Inc_current.h`
+- Defined in :ref:`file_mainboard_Inc_pack_current.h`
 
 
 Enum Documentation

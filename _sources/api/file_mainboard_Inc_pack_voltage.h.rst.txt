@@ -1,0 +1,98 @@
+
+.. _file_mainboard_Inc_pack_voltage.h:
+
+File voltage.h
+==============
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Inc_pack>` (``mainboard/Inc/pack``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+Functions to manage all pack voltages (cells and internal) 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``mainboard/Inc/pack/voltage.h``)
+---------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_mainboard_Inc_pack_voltage.h.rst
+
+
+
+Detailed Description
+--------------------
+
+Apr 11, 2019
+
+Matteo Bonora [matteo.bonora@studenti.unitn.it] 
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``inttypes.h``
+
+- ``mainboard_config.h`` (:ref:`file_mainboard_Inc_mainboard_config.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_mainboard_Inc_bal.h`
+
+- :ref:`file_mainboard_Src_bms_fsm.c`
+
+- :ref:`file_mainboard_Src_cli_bms.c`
+
+- :ref:`file_mainboard_Src_energy_soc.c`
+
+- :ref:`file_mainboard_Src_pack_voltage.c`
+
+- :ref:`file_mainboard_Src_peripherals_can_comm.c`
+
+- :ref:`file_mainboard_Src_super_fsm.c`
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_voltage_8h_1a3ab7e8edf8fb9ef57439f4badcb59559`
+
+- :ref:`exhale_function_voltage_8h_1a611b1cf3bb5e6897bba4056562352841`
+
+- :ref:`exhale_function_voltage_8h_1a5e42c54ec12fab7213619c314331f3ee`
+
+- :ref:`exhale_function_voltage_8h_1aaa38c21bbd4f88db1f72805f472f3c41`
+
+- :ref:`exhale_function_voltage_8h_1ae231c4735d099a6af65ea9626915a8b6`
+
+- :ref:`exhale_function_voltage_8h_1a9a33b456640fc8223dcd34d72ec9d260`
+
+- :ref:`exhale_function_voltage_8h_1ae10b086f3b0cf83be3de5c6d2992e070`
+
+
+Typedefs
+--------
+
+
+- :ref:`exhale_typedef_voltage_8h_1a919cc27d97b06cf5d67cf5a9bc181dc2`
+

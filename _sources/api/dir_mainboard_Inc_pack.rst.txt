@@ -1,0 +1,23 @@
+.. _dir_mainboard_Inc_pack:
+
+
+Directory pack
+==============
+
+
+|exhale_lsh| :ref:`Parent directory <dir_mainboard_Inc>` (``mainboard/Inc``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+*Directory path:* ``mainboard/Inc/pack``
+
+
+Files
+-----
+
+- :ref:`file_mainboard_Inc_pack_current.h`
+- :ref:`file_mainboard_Inc_pack_pack.h`
+- :ref:`file_mainboard_Inc_pack_temperature.h`
+- :ref:`file_mainboard_Inc_pack_voltage.h`
+
+

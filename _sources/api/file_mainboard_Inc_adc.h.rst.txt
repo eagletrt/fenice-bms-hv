@@ -45,8 +45,6 @@ Includes
 --------
 
 
-- ``inttypes.h``
-
 - ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
 
 
@@ -57,9 +55,9 @@ Included By
 
 - :ref:`file_mainboard_Src_adc.c`
 
-- :ref:`file_mainboard_Src_current.c`
-
 - :ref:`file_mainboard_Src_main.c`
+
+- :ref:`file_mainboard_Src_pack_current.c`
 
 
 

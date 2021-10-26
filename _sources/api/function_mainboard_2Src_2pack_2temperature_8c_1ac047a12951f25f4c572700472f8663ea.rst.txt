@@ -1,0 +1,13 @@
+.. _exhale_function_mainboard_2Src_2pack_2temperature_8c_1ac047a12951f25f4c572700472f8663ea:
+
+Function temperature_get_all()
+==============================
+
+- Defined in :ref:`file_mainboard_Src_pack_temperature.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: temperature_get_all()

@@ -36,7 +36,17 @@ Directories
 .. toctree::
    :maxdepth: 5
 
+   dir_mainboard_Inc_energy.rst
+
+.. toctree::
+   :maxdepth: 5
+
    dir_mainboard_Inc_error.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir_mainboard_Inc_pack.rst
 
 .. toctree::
    :maxdepth: 5
@@ -51,7 +61,17 @@ Directories
 .. toctree::
    :maxdepth: 5
 
+   dir_mainboard_Src_energy.rst
+
+.. toctree::
+   :maxdepth: 5
+
    dir_mainboard_Src_error.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir_mainboard_Src_pack.rst
 
 .. toctree::
    :maxdepth: 5
@@ -145,12 +165,12 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file_mainboard_Src_current.c.rst
+   file_mainboard_Src_pack_current.c.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_mainboard_Inc_current.h.rst
+   file_mainboard_Inc_pack_current.h.rst
 
 .. toctree::
    :maxdepth: 5
@@ -165,12 +185,12 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file_mainboard_Src_energy.c.rst
+   file_mainboard_Src_energy_energy.c.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_mainboard_Inc_energy.h.rst
+   file_mainboard_Inc_energy_energy.h.rst
 
 .. toctree::
    :maxdepth: 5
@@ -250,12 +270,12 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file_mainboard_Src_pack.c.rst
+   file_mainboard_Src_pack_pack.c.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_mainboard_Inc_pack.h.rst
+   file_mainboard_Inc_pack_pack.h.rst
 
 .. toctree::
    :maxdepth: 5
@@ -280,12 +300,12 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file_mainboard_Src_soc.c.rst
+   file_mainboard_Src_energy_soc.c.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_mainboard_Inc_soc.h.rst
+   file_mainboard_Inc_energy_soc.h.rst
 
 .. toctree::
    :maxdepth: 5
@@ -360,7 +380,17 @@ Files
 .. toctree::
    :maxdepth: 5
 
+   file_mainboard_Src_pack_temperature.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
    file_cellboard_Src_temperature.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Inc_pack_temperature.h.rst
 
 .. toctree::
    :maxdepth: 5
@@ -386,3 +416,13 @@ Files
    :maxdepth: 5
 
    file_mainboard_Inc_usart.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Src_pack_voltage.c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_mainboard_Inc_pack_voltage.h.rst

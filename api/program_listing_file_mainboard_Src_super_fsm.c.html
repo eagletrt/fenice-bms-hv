@@ -74,10 +74,11 @@
 
 <span class="cp">#include</span> <span class="cpf">&quot;bms_fsm.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;can_comm.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;current.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;energy.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;main.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;mainboard_config.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;pack.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;pack/current.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;pack/voltage.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;soc.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;spi.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;tim.h&quot;</span><span class="cp"></span>
@@ -131,7 +132,8 @@
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">super_measure_volts</span><span class="p">(</span><span class="n">fsm</span> <span class="n">handle</span><span class="p">,</span> <span class="n">super_events</span> <span class="n">event</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">pack_update_voltages</span><span class="p">(</span><span class="o">&amp;</span><span class="n">SI8900_UART</span><span class="p">);</span>
+    <span class="n">voltage_measure</span><span class="p">(</span><span class="o">&amp;</span><span class="n">SI8900_UART</span><span class="p">);</span>
+    <span class="n">current_read</span><span class="p">();</span>
 
     <span class="n">soc_sample_energy</span><span class="p">(</span><span class="n">HAL_GetTick</span><span class="p">());</span>
 

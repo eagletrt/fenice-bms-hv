@@ -3,7 +3,7 @@
 Function energy_get_joule(energy_t)
 ===================================
 
-- Defined in :ref:`file_mainboard_Inc_energy.h`
+- Defined in :ref:`file_mainboard_Inc_energy_energy.h`
 
 
 Function Documentation

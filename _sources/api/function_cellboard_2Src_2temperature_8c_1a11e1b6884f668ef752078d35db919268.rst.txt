@@ -1,0 +1,13 @@
+.. _exhale_function_cellboard_2Src_2temperature_8c_1a11e1b6884f668ef752078d35db919268:
+
+Function temperature_read_sample(I2C_HandleTypeDef \*, uint16_t \*)
+===================================================================
+
+- Defined in :ref:`file_cellboard_Src_temperature.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: temperature_read_sample(I2C_HandleTypeDef *, uint16_t *)

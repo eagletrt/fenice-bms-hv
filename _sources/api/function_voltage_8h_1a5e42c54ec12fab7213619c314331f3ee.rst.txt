@@ -1,0 +1,13 @@
+.. _exhale_function_voltage_8h_1a5e42c54ec12fab7213619c314331f3ee:
+
+Function voltage_get_cell_min()
+===============================
+
+- Defined in :ref:`file_mainboard_Inc_pack_voltage.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: voltage_get_cell_min()

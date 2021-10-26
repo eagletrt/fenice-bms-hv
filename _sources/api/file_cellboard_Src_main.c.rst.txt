@@ -55,7 +55,7 @@ Includes
 
 - ``string.h``
 
-- ``temperature.h`` (:ref:`file_cellboard_Inc_temperature.h`)
+- ``temperature.h`` (:ref:`file_mainboard_Inc_pack_temperature.h`)
 
 
 

@@ -74,8 +74,9 @@
 
 <span class="cp">#include</span> <span class="cpf">&quot;bms_fsm.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;cli_bms.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;current.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;pack.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;pack/current.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;pack/pack.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;pack/voltage.h&quot;</span><span class="cp"></span>
 
 <span class="n">CAN_TxHeaderTypeDef</span> <span class="n">tx_header</span><span class="p">;</span>
 
@@ -89,9 +90,9 @@
     <span class="kt">uint8_t</span> <span class="n">buffer</span><span class="p">[</span><span class="n">CAN_MAX_PAYLOAD_LENGTH</span><span class="p">];</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">id</span> <span class="o">==</span> <span class="n">ID_HV_VOLTAGE</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">serialize_Primary_HV_VOLTAGE</span><span class="p">(</span>
-            <span class="n">buffer</span><span class="p">,</span> <span class="n">pack_get_int_voltage</span><span class="p">(),</span> <span class="n">pack_get_bus_voltage</span><span class="p">(),</span> <span class="n">pack_get_max_voltage</span><span class="p">(),</span> <span class="n">pack_get_min_voltage</span><span class="p">());</span>
+            <span class="n">buffer</span><span class="p">,</span> <span class="n">voltage_get_internal</span><span class="p">(),</span> <span class="n">voltage_get_bus</span><span class="p">(),</span> <span class="n">voltage_get_cell_max</span><span class="p">(),</span> <span class="n">voltage_get_cell_min</span><span class="p">());</span>
     <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">id</span> <span class="o">==</span> <span class="n">ID_HV_CURRENT</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">serialize_Primary_HV_CURRENT</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">current_get_current</span><span class="p">(),</span> <span class="n">current_get_current</span><span class="p">()</span> <span class="o">*</span> <span class="n">pack_get_bus_voltage</span><span class="p">());</span>
+        <span class="n">serialize_Primary_HV_CURRENT</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">current_get_current</span><span class="p">(),</span> <span class="n">current_get_current</span><span class="p">()</span> <span class="o">*</span> <span class="n">voltage_get_bus</span><span class="p">());</span>
     <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">id</span> <span class="o">==</span> <span class="n">ID_TS_STATUS</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">serialize_Primary_TS_STATUS</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">Primary_Ts_Status_ON</span><span class="p">);</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>

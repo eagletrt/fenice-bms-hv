@@ -1,0 +1,13 @@
+.. _exhale_function_mainboard_2Src_2pack_2temperature_8c_1a5150dec03dce5db1a854c2021d186798:
+
+Function temperature_get_min()
+==============================
+
+- Defined in :ref:`file_mainboard_Src_pack_temperature.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: temperature_get_min()

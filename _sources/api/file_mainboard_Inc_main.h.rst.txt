@@ -43,8 +43,6 @@ Includes
 
 - ``error/error.h`` (:ref:`file_mainboard_Inc_error_error.h`)
 
-- ``pack.h`` (:ref:`file_mainboard_Inc_pack.h`)
-
 - ``stm32f4xx_hal.h``
 
 
@@ -54,8 +52,6 @@ Included By
 
 
 - :ref:`file_mainboard_Inc_adc.h`
-
-- :ref:`file_mainboard_Inc_pack.h`
 
 - :ref:`file_mainboard_Inc_can.h`
 
@@ -192,6 +188,10 @@ Defines
 - :ref:`exhale_define_mainboard_2Inc_2main_8h_1a23a7287d8a29ae7030f0e30427cf2837`
 
 - :ref:`exhale_define_mainboard_2Inc_2main_8h_1a4efaabd90ea562958ac22e0b077f0d9f`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1afa99ec4acc4ecb2dc3c2d05da15d0e3f`
+
+- :ref:`exhale_define_mainboard_2Inc_2main_8h_1a3acffbd305ee72dcd4593c0d8af64a4f`
 
 - :ref:`exhale_define_mainboard_2Inc_2main_8h_1a684cc367c1fa4fa31ad4bd1e18b2a7c5`
 
