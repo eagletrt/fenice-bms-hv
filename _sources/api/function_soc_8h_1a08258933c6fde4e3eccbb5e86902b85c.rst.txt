@@ -1,0 +1,13 @@
+.. _exhale_function_soc_8h_1a08258933c6fde4e3eccbb5e86902b85c:
+
+Function soc_get_soc()
+======================
+
+- Defined in :ref:`file_mainboard_Inc_soc.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: soc_get_soc()

@@ -1,0 +1,13 @@
+.. _exhale_variable_soc_8c_1a1ecd5c0ff6ad0b442dc1f5626f7b6798:
+
+Variable soc_last_charge
+========================
+
+- Defined in :ref:`file_mainboard_Src_soc.c`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: soc_last_charge

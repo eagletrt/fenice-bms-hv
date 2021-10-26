@@ -1,0 +1,13 @@
+.. _exhale_function_energy_8c_1a76136d0ec6eb393a91137e35b86b6ffc:
+
+Function energy_load(energy_t, uint32_t, uint32_t)
+==================================================
+
+- Defined in :ref:`file_mainboard_Src_energy.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: energy_load(energy_t, uint32_t, uint32_t)

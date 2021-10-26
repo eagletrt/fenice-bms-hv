@@ -1,0 +1,13 @@
+.. _exhale_function_soc_8c_1aa0dd3f0acc2bdf12a1eae271d9ff5ec1:
+
+Function soc_get_energy_last_charge()
+=====================================
+
+- Defined in :ref:`file_mainboard_Src_soc.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: soc_get_energy_last_charge()

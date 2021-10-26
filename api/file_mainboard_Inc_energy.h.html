@@ -79,6 +79,7 @@
 <li><a class="reference internal" href="#includes" id="id3">Includes</a></li>
 <li><a class="reference internal" href="#included-by" id="id4">Included By</a></li>
 <li><a class="reference internal" href="#functions" id="id5">Functions</a></li>
+<li><a class="reference internal" href="#typedefs" id="id6">Typedefs</a></li>
 </ul>
 </div>
 <div class="section" id="definition-mainboard-inc-energy-h">
@@ -97,28 +98,35 @@
 <div class="section" id="includes">
 <h2>Includes<a class="headerlink" href="#includes" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">config.h</span></code> (<a class="reference internal" href="file_mainboard_Inc_config.h.html#file-mainboard-inc-config-h"><span class="std std-ref">File config.h</span></a>)</li>
 <li><code class="docutils literal notranslate"><span class="pre">current.h</span></code> (<a class="reference internal" href="file_mainboard_Inc_current.h.html#file-mainboard-inc-current-h"><span class="std std-ref">File current.h</span></a>)</li>
+<li><code class="docutils literal notranslate"><span class="pre">inttypes.h</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">mainboard_config.h</span></code> (<a class="reference internal" href="file_mainboard_Inc_mainboard_config.h.html#file-mainboard-inc-mainboard-config-h"><span class="std std-ref">File mainboard_config.h</span></a>)</li>
 </ul>
 </div>
 <div class="section" id="included-by">
 <h2>Included By<a class="headerlink" href="#included-by" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><a class="reference internal" href="file_mainboard_Src_cli_bms.c.html#file-mainboard-src-cli-bms-c"><span class="std std-ref">File cli_bms.c</span></a></li>
 <li><a class="reference internal" href="file_mainboard_Src_energy.c.html#file-mainboard-src-energy-c"><span class="std std-ref">File energy.c</span></a></li>
-<li><a class="reference internal" href="file_mainboard_Src_main.c.html#file-mainboard-src-main-c"><span class="std std-ref">File main.c</span></a></li>
-<li><a class="reference internal" href="file_mainboard_Src_super_fsm.c.html#file-mainboard-src-super-fsm-c"><span class="std std-ref">File super_fsm.c</span></a></li>
+<li><a class="reference internal" href="file_mainboard_Src_soc.c.html#file-mainboard-src-soc-c"><span class="std std-ref">File soc.c</span></a></li>
 </ul>
 </div>
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><a class="reference internal" href="function_energy_8h_1a513ab9d6e4978a29e736d458c0de2df8.html#exhale-function-energy-8h-1a513ab9d6e4978a29e736d458c0de2df8"><span class="std std-ref">Function energy_get_energy_last_charge()</span></a></li>
-<li><a class="reference internal" href="function_energy_8h_1a7b3add16bef5bb0f5e6c3705d4fb3bbb.html#exhale-function-energy-8h-1a7b3add16bef5bb0f5e6c3705d4fb3bbb"><span class="std std-ref">Function energy_get_energy_total()</span></a></li>
-<li><a class="reference internal" href="function_energy_8h_1a9d21f4d084a49036ad0958113db0c1e6.html#exhale-function-energy-8h-1a9d21f4d084a49036ad0958113db0c1e6"><span class="std std-ref">Function energy_get_soc()</span></a></li>
-<li><a class="reference internal" href="function_energy_8h_1a62b8b13853cf40bbb475773bd5828dd5.html#exhale-function-energy-8h-1a62b8b13853cf40bbb475773bd5828dd5"><span class="std std-ref">Function energy_init()</span></a></li>
-<li><a class="reference internal" href="function_energy_8h_1af313b1b7da0de8a095e819568f4b8d92.html#exhale-function-energy-8h-1af313b1b7da0de8a095e819568f4b8d92"><span class="std std-ref">Function energy_reset_soc()</span></a></li>
-<li><a class="reference internal" href="function_energy_8h_1aafeef7c3592552245571659689e4825e.html#exhale-function-energy-8h-1aafeef7c3592552245571659689e4825e"><span class="std std-ref">Function energy_sample_current(uint32_t)</span></a></li>
+<li><a class="reference internal" href="function_energy_8h_1a4c63605f712943eb97f7a669e7644d8f.html#exhale-function-energy-8h-1a4c63605f712943eb97f7a669e7644d8f"><span class="std std-ref">Function energy_deinit(energy_t *)</span></a></li>
+<li><a class="reference internal" href="function_energy_8h_1aa0839bab4546eda767ce6f3d7dd82ae4.html#exhale-function-energy-8h-1aa0839bab4546eda767ce6f3d7dd82ae4"><span class="std std-ref">Function energy_get_joule(energy_t)</span></a></li>
+<li><a class="reference internal" href="function_energy_8h_1afa8359582449380e4021f8b97d196d8e.html#exhale-function-energy-8h-1afa8359582449380e4021f8b97d196d8e"><span class="std std-ref">Function energy_get_wh(energy_t)</span></a></li>
+<li><a class="reference internal" href="function_energy_8h_1a8150d370eb03a63ede7290859c5f1fba.html#exhale-function-energy-8h-1a8150d370eb03a63ede7290859c5f1fba"><span class="std std-ref">Function energy_init(energy_t *)</span></a></li>
+<li><a class="reference internal" href="function_energy_8h_1a76136d0ec6eb393a91137e35b86b6ffc.html#exhale-function-energy-8h-1a76136d0ec6eb393a91137e35b86b6ffc"><span class="std std-ref">Function energy_load(energy_t, uint32_t, uint32_t)</span></a></li>
+<li><a class="reference internal" href="function_energy_8h_1a964dbfec9af37f2001217e0029b63334.html#exhale-function-energy-8h-1a964dbfec9af37f2001217e0029b63334"><span class="std std-ref">Function energy_reset_count(energy_t, uint32_t)</span></a></li>
+<li><a class="reference internal" href="function_energy_8h_1ae0e39d06c70e5c372acd811d060b091f.html#exhale-function-energy-8h-1ae0e39d06c70e5c372acd811d060b091f"><span class="std std-ref">Function energy_reset_time(energy_t, uint32_t)</span></a></li>
+<li><a class="reference internal" href="function_energy_8h_1a23e7237d095ced4662f36e8a2412e85d.html#exhale-function-energy-8h-1a23e7237d095ced4662f36e8a2412e85d"><span class="std std-ref">Function energy_sample_current(energy_t, current_t, voltage_t, uint32_t)</span></a></li>
+</ul>
+</div>
+<div class="section" id="typedefs">
+<h2>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="typedef_energy_8h_1a021813300c476a1b7a3dca889e3da893.html#exhale-typedef-energy-8h-1a021813300c476a1b7a3dca889e3da893"><span class="std std-ref">Typedef energy_t</span></a></li>
 </ul>
 </div>
 </div>

@@ -50,8 +50,6 @@ Includes
 
 - ``current.h`` (:ref:`file_mainboard_Inc_current.h`)
 
-- ``energy.h`` (:ref:`file_mainboard_Inc_energy.h`)
-
 - ``inttypes.h``
 
 - ``main.h`` (:ref:`file_mainboard_Inc_main.h`)
@@ -59,6 +57,8 @@ Includes
 - ``mainboard_config.h`` (:ref:`file_mainboard_Inc_mainboard_config.h`)
 
 - ``pack.h`` (:ref:`file_mainboard_Inc_pack.h`)
+
+- ``soc.h`` (:ref:`file_mainboard_Inc_soc.h`)
 
 - ``spi.h`` (:ref:`file_mainboard_Inc_spi.h`)
 

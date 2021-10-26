@@ -1,0 +1,13 @@
+.. _exhale_function_energy_8h_1a23e7237d095ced4662f36e8a2412e85d:
+
+Function energy_sample_current(energy_t, current_t, voltage_t, uint32_t)
+========================================================================
+
+- Defined in :ref:`file_mainboard_Inc_energy.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: energy_sample_current(energy_t, current_t, voltage_t, uint32_t)

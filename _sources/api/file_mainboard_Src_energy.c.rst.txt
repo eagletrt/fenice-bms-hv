@@ -9,7 +9,7 @@ File energy.c
 .. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
 
 
-File containing energy management functions for SoC management. 
+This file contains functions and utilities around energy and State of Charge estimation. 
 
 
 
@@ -31,7 +31,7 @@ Definition (``mainboard/Src/energy.c``)
 Detailed Description
 --------------------
 
-Sep 25, 2021
+May 12, 2021 
 
 Matteo Bonora [matteo.bonora@studenti.unitn.it] 
 
@@ -46,7 +46,9 @@ Includes
 
 - ``energy.h`` (:ref:`file_mainboard_Inc_energy.h`)
 
-- ``soc.h`` (:ref:`file_mainboard_Inc_soc.h`)
+- ``stdlib.h``
+
+- ``string.h``
 
 
 
@@ -57,46 +59,26 @@ Classes
 -------
 
 
-- :ref:`exhale_struct_structsoc__params`
+- :ref:`exhale_struct_structenergy`
 
 
 Functions
 ---------
 
 
-- :ref:`exhale_function_energy_8c_1a513ab9d6e4978a29e736d458c0de2df8`
+- :ref:`exhale_function_energy_8c_1a4c63605f712943eb97f7a669e7644d8f`
 
-- :ref:`exhale_function_energy_8c_1a7b3add16bef5bb0f5e6c3705d4fb3bbb`
+- :ref:`exhale_function_energy_8c_1aa0839bab4546eda767ce6f3d7dd82ae4`
 
-- :ref:`exhale_function_energy_8c_1a9d21f4d084a49036ad0958113db0c1e6`
+- :ref:`exhale_function_energy_8c_1afa8359582449380e4021f8b97d196d8e`
 
-- :ref:`exhale_function_energy_8c_1a62b8b13853cf40bbb475773bd5828dd5`
+- :ref:`exhale_function_energy_8c_1a8150d370eb03a63ede7290859c5f1fba`
 
-- :ref:`exhale_function_energy_8c_1af313b1b7da0de8a095e819568f4b8d92`
+- :ref:`exhale_function_energy_8c_1a76136d0ec6eb393a91137e35b86b6ffc`
 
-- :ref:`exhale_function_energy_8c_1aafeef7c3592552245571659689e4825e`
+- :ref:`exhale_function_energy_8c_1a964dbfec9af37f2001217e0029b63334`
 
+- :ref:`exhale_function_energy_8c_1ae0e39d06c70e5c372acd811d060b091f`
 
-Defines
--------
-
-
-- :ref:`exhale_define_energy_8c_1adceb0ebf47b083edc9e3f1507bca56f7`
-
-- :ref:`exhale_define_energy_8c_1a87ff531d8ae36148a87b5a85cfa62eef`
-
-- :ref:`exhale_define_energy_8c_1a8177c18ed340ab9264abc92fc7e25dde`
-
-
-Variables
----------
-
-
-- :ref:`exhale_variable_energy_8c_1a9e43ec2e7da68d7802a24f123bb30a0d`
-
-- :ref:`exhale_variable_energy_8c_1a29e86de29809135c63fb780dad514155`
-
-- :ref:`exhale_variable_energy_8c_1a409e04db659286c5d291207fa8af4fcf`
-
-- :ref:`exhale_variable_energy_8c_1a232b686d286a16d23e8f9e39d5fc346a`
+- :ref:`exhale_function_energy_8c_1a23e7237d095ced4662f36e8a2412e85d`
 

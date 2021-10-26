@@ -1,0 +1,13 @@
+.. _exhale_define_soc_8c_1a8177c18ed340ab9264abc92fc7e25dde:
+
+Define ENERGY_WRITE_INTERVAL
+============================
+
+- Defined in :ref:`file_mainboard_Src_soc.c`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: ENERGY_WRITE_INTERVAL

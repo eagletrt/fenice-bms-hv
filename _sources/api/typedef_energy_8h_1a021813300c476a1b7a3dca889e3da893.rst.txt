@@ -1,0 +1,13 @@
+.. _exhale_typedef_energy_8h_1a021813300c476a1b7a3dca889e3da893:
+
+Typedef energy_t
+================
+
+- Defined in :ref:`file_mainboard_Inc_energy.h`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: energy_t

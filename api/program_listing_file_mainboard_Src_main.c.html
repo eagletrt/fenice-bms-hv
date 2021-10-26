@@ -90,12 +90,12 @@
 <span class="cp">#include</span> <span class="cpf">&quot;cli_bms.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;config.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;current.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;energy.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;error/error.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;m95256.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;mainboard_config.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;peripherals/can_comm.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;si8900.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;soc.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;super_fsm.h&quot;</span><span class="cp"></span>
 <span class="cm">/* USER CODE END Includes */</span>
 
@@ -183,7 +183,7 @@
     <span class="n">super_fsm_init</span><span class="p">();</span>
     <span class="n">current_read</span><span class="p">();</span>
     <span class="n">current_zero</span><span class="p">();</span>
-    <span class="n">energy_init</span><span class="p">();</span>
+    <span class="n">soc_init</span><span class="p">();</span>
 
     <span class="cm">/* USER CODE END 2 */</span>
 

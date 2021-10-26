@@ -1,0 +1,13 @@
+.. _exhale_function_energy_8c_1aa0839bab4546eda767ce6f3d7dd82ae4:
+
+Function energy_get_joule(energy_t)
+===================================
+
+- Defined in :ref:`file_mainboard_Src_energy.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: energy_get_joule(energy_t)

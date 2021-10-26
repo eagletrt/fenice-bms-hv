@@ -1,0 +1,16 @@
+.. _exhale_struct_structenergy:
+
+Struct energy
+=============
+
+- Defined in :ref:`file_mainboard_Src_energy.c`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: energy
+   :members:
+   :protected-members:
+   :undoc-members:

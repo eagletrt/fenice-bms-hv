@@ -54,7 +54,7 @@ Included By
 -----------
 
 
-- :ref:`file_mainboard_Inc_energy.h`
+- :ref:`file_mainboard_Inc_soc.h`
 
 - :ref:`file_mainboard_Src_bal_fsm.c`
 

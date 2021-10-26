@@ -1,0 +1,13 @@
+.. _exhale_function_soc_8c_1a5a0887d1135eb35a7f29391f6edf847c:
+
+Function soc_get_energy_total()
+===============================
+
+- Defined in :ref:`file_mainboard_Src_soc.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: soc_get_energy_total()

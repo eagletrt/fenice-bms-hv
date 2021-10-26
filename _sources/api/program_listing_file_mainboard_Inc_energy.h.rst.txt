@@ -11,19 +11,38 @@ Program Listing for File energy.h
 .. code-block:: cpp
 
    
-   #pragma once
+   /* Define to prevent recursive inclusion -------------------------------------*/
+   #ifndef _ENERGY_H_
+   #define _ENERGY_H_
    
-   #include "config.h"
+   /* Includes ------------------------------------------------------------------*/
    #include "current.h"
+   #include "mainboard_config.h"
    
-   void energy_init();
+   #include <inttypes.h>
+   /* Exported types ------------------------------------------------------------*/
+   typedef struct energy *energy_t;
+   /* Exported constants --------------------------------------------------------*/
+   /* Exported macros -----------------------------------------------------------*/
+   /* Exported functions --------------------------------------------------------*/
    
-   void energy_sample_current(uint32_t timestamp);
+   void energy_init(energy_t *handle);
    
-   void energy_reset_soc();
+   void energy_deinit(energy_t *handle);
    
-   float energy_get_soc();
+   void energy_load(energy_t handle, uint32_t joule, uint32_t time);
    
-   float energy_get_energy_total();
+   void energy_reset_time(energy_t handle, uint32_t time);
    
-   float energy_get_energy_last_charge();
+   void energy_reset_count(energy_t handle, uint32_t time);
+   
+   void energy_sample_current(energy_t handle, current_t current, voltage_t voltage, uint32_t time);
+   
+   float energy_get_wh(energy_t handle);
+   float energy_get_joule(energy_t handle);
+   
+   /* Private types -------------------------------------------------------------*/
+   /* Private variables ---------------------------------------------------------*/
+   /* Private constants ---------------------------------------------------------*/
+   /* Private Macros -----------------------------------------------------------*/
+   #endif

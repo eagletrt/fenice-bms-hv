@@ -1,0 +1,13 @@
+.. _exhale_function_energy_8h_1a8150d370eb03a63ede7290859c5f1fba:
+
+Function energy_init(energy_t \*)
+=================================
+
+- Defined in :ref:`file_mainboard_Inc_energy.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: energy_init(energy_t *)

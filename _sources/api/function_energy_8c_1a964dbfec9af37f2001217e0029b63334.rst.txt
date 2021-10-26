@@ -1,0 +1,13 @@
+.. _exhale_function_energy_8c_1a964dbfec9af37f2001217e0029b63334:
+
+Function energy_reset_count(energy_t, uint32_t)
+===============================================
+
+- Defined in :ref:`file_mainboard_Src_energy.c`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: energy_reset_count(energy_t, uint32_t)
